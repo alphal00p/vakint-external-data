@@ -95,6 +95,15 @@ def main():
         or report["digits"] != 20000
     ):
         raise ValueError("the complete 464-projection 20,000-digit gate must pass")
+    previous = root / "manifest.json"
+    if previous.exists():
+        generated = {record["path"] for record in records}
+        for record in json.loads(previous.read_text())["files"]:
+            if record["path"] not in generated:
+                raw = (root / record["path"]).read_bytes()
+                if hashlib.sha256(raw).hexdigest() != record["sha256"]:
+                    raise ValueError(f"preserved evidence changed: {record['path']}")
+                records.append(record)
     (root / "manifest.json").write_text(
         json.dumps(
             {
