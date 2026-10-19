@@ -296,7 +296,8 @@ def coverage(loops):
             "authority": "Native ClosedArtifact replay certificate, restricted to its supported root domain",
             "certificate": {
                 "path": "ibps/rules.rrbin",
-                "predicate": "supported_root_power_bounds",
+                "predicate": "ClosedUnitMassProgram::validate_entry",
+                "conjuncts": ["supported_root_power_bounds", "total_excess_scope"],
                 "schema": "rustred-artifact-v6",
             },
         }

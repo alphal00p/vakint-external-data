@@ -35,7 +35,10 @@ stored as graph attributes. The family graph is an atlas of all four maximal
 physical parents; the complete fifteen-denominator family also contains
 auxiliary slots and is not one fifteen-edge physical topology.
 
-Native closed artifacts own their root-domain certificates. Four-loop candidate
+Native closed artifacts own their root-domain certificates. Admission uses
+`ClosedUnitMassProgram::validate_entry`, including both supported per-slot
+root-power bounds and the total-excess scope. Neither predicate alone describes
+the complete certified domain. Four-loop candidate
 programs have pointwise guarded/descent checks, without an unrestricted closure
 claim. Five-loop query predicates, owner transports, source scope and authority
 remain in the original native publication. The bounds printed in its metadata
