@@ -1,0 +1,99 @@
+digraph family {
+  graph [label="Five-loop common family: four maximal physical parents; slots are zero-based"];
+  subgraph cluster_0 {
+      graph [label="Five-loop maximal parent 32745"];
+      edge [dir=none];
+      p0v0 [label="0"];
+      p0v1 [label="1"];
+      p0v2 [label="2"];
+      p0v3 [label="3"];
+      p0v4 [label="4"];
+      p0v5 [label="5"];
+      p0v6 [label="6"];
+      p0v7 [label="7"];
+      p0v0 -> p0v1 [label="D1", common_basis_slot=0, parent_slot=0, power=1];
+      p0v2 -> p0v3 [label="D2", common_basis_slot=1, parent_slot=1, power=1];
+      p0v4 -> p0v2 [label="D3", common_basis_slot=2, parent_slot=2, power=1];
+      p0v3 -> p0v0 [label="D4", common_basis_slot=3, parent_slot=3, power=1];
+      p0v1 -> p0v4 [label="D5", common_basis_slot=4, parent_slot=4, power=1];
+      p0v6 -> p0v5 [label="D6", common_basis_slot=5, parent_slot=5, power=1];
+      p0v5 -> p0v0 [label="D7", common_basis_slot=6, parent_slot=6, power=1];
+      p0v1 -> p0v6 [label="D8", common_basis_slot=7, parent_slot=7, power=1];
+      p0v7 -> p0v2 [label="D9", common_basis_slot=8, parent_slot=8, power=1];
+      p0v3 -> p0v7 [label="D10", common_basis_slot=9, parent_slot=9, power=1];
+      p0v6 -> p0v4 [label="D12", common_basis_slot=11, parent_slot=11, power=1];
+      p0v7 -> p0v5 [label="D15", common_basis_slot=14, parent_slot=14, power=1];
+  }
+  subgraph cluster_1 {
+      graph [label="Five-loop maximal parent 31740"];
+      edge [dir=none];
+      p1v0 [label="0"];
+      p1v1 [label="1"];
+      p1v2 [label="2"];
+      p1v3 [label="3"];
+      p1v4 [label="4"];
+      p1v5 [label="5"];
+      p1v6 [label="6"];
+      p1v7 [label="7"];
+      p1v0 -> p1v1 [label="D1", common_basis_slot=0, parent_slot=0, power=1];
+      p1v3 -> p1v2 [label="D2", common_basis_slot=1, parent_slot=1, power=1];
+      p1v2 -> p1v0 [label="D3", common_basis_slot=2, parent_slot=2, power=1];
+      p1v1 -> p1v3 [label="D4", common_basis_slot=3, parent_slot=3, power=1];
+      p1v4 -> p1v0 [label="D6", common_basis_slot=5, parent_slot=5, power=1];
+      p1v1 -> p1v5 [label="D7", common_basis_slot=6, parent_slot=6, power=1];
+      p1v5 -> p1v4 [label="D8", common_basis_slot=7, parent_slot=7, power=1];
+      p1v2 -> p1v6 [label="D9", common_basis_slot=8, parent_slot=8, power=1];
+      p1v7 -> p1v3 [label="D10", common_basis_slot=9, parent_slot=9, power=1];
+      p1v6 -> p1v7 [label="D11", common_basis_slot=10, parent_slot=10, power=1];
+      p1v4 -> p1v6 [label="D12", common_basis_slot=11, parent_slot=11, power=1];
+      p1v7 -> p1v5 [label="D13", common_basis_slot=12, parent_slot=12, power=1];
+  }
+  subgraph cluster_2 {
+      graph [label="Five-loop maximal parent 30699"];
+      edge [dir=none];
+      p2v0 [label="0"];
+      p2v1 [label="1"];
+      p2v2 [label="2"];
+      p2v3 [label="3"];
+      p2v4 [label="4"];
+      p2v5 [label="5"];
+      p2v6 [label="6"];
+      p2v7 [label="7"];
+      p2v0 -> p2v1 [label="D1", common_basis_slot=0, parent_slot=0, power=1];
+      p2v3 -> p2v2 [label="D2", common_basis_slot=1, parent_slot=1, power=1];
+      p2v2 -> p2v4 [label="D3", common_basis_slot=2, parent_slot=2, power=1];
+      p2v4 -> p2v0 [label="D5", common_basis_slot=4, parent_slot=4, power=1];
+      p2v5 -> p2v6 [label="D6", common_basis_slot=5, parent_slot=5, power=1];
+      p2v3 -> p2v5 [label="D7", common_basis_slot=6, parent_slot=6, power=1];
+      p2v6 -> p2v0 [label="D8", common_basis_slot=7, parent_slot=7, power=1];
+      p2v2 -> p2v7 [label="D9", common_basis_slot=8, parent_slot=8, power=1];
+      p2v7 -> p2v1 [label="D10", common_basis_slot=9, parent_slot=9, power=1];
+      p2v4 -> p2v6 [label="D12", common_basis_slot=11, parent_slot=11, power=1];
+      p2v1 -> p2v3 [label="D14", common_basis_slot=13, parent_slot=13, power=1];
+      p2v5 -> p2v7 [label="D15", common_basis_slot=14, parent_slot=14, power=1];
+  }
+  subgraph cluster_3 {
+      graph [label="Five-loop maximal parent 30527"];
+      edge [dir=none];
+      p3v0 [label="0"];
+      p3v1 [label="1"];
+      p3v2 [label="2"];
+      p3v3 [label="3"];
+      p3v4 [label="4"];
+      p3v5 [label="5"];
+      p3v6 [label="6"];
+      p3v7 [label="7"];
+      p3v0 -> p3v1 [label="D1", common_basis_slot=0, parent_slot=0, power=1];
+      p3v3 -> p3v2 [label="D2", common_basis_slot=1, parent_slot=1, power=1];
+      p3v4 -> p3v0 [label="D3", common_basis_slot=2, parent_slot=2, power=1];
+      p3v2 -> p3v4 [label="D5", common_basis_slot=4, parent_slot=4, power=1];
+      p3v5 -> p3v0 [label="D6", common_basis_slot=5, parent_slot=5, power=1];
+      p3v3 -> p3v5 [label="D7", common_basis_slot=6, parent_slot=6, power=1];
+      p3v6 -> p3v1 [label="D10", common_basis_slot=9, parent_slot=9, power=1];
+      p3v2 -> p3v6 [label="D11", common_basis_slot=10, parent_slot=10, power=1];
+      p3v7 -> p3v4 [label="D12", common_basis_slot=11, parent_slot=11, power=1];
+      p3v6 -> p3v7 [label="D13", common_basis_slot=12, parent_slot=12, power=1];
+      p3v1 -> p3v3 [label="D14", common_basis_slot=13, parent_slot=13, power=1];
+      p3v5 -> p3v7 [label="D15", common_basis_slot=14, parent_slot=14, power=1];
+  }
+}

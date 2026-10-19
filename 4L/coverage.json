@@ -1,0 +1,12 @@
+{
+  "schema": "vakint.external-data.coverage.v1",
+  "loop_count": 4,
+  "complete_family_claim": false,
+  "cache_completion_is_coverage_certificate": false,
+  "kind": "finite-tested-candidates",
+  "authority": "Guarded descending native candidate rules; successful applications are pointwise results",
+  "certified_domains": [],
+  "evidence": "ibps/README.md",
+  "known_master_basis_complete": false,
+  "note": "Terminal catalog completeness is not arbitrary-index family closure. The completed finite cache workload does not strengthen certification."
+}
