@@ -376,9 +376,11 @@ def generate(version):
                 else []
             )
             symbolic_powers, numerical_powers = (
-                {p for p, _ in symbolic},
+                set(master.get("symbolic_powers", [])),
                 {p for p, _ in numerical},
             )
+            if not symbolic_powers <= {p for p, _ in symbolic}:
+                raise ValueError("declared exact coefficient has no symbolic payload")
             powers = sorted(symbolic_powers | numerical_powers)
             record["available_epsilon_powers"] = powers
             record["coefficients"] = [
@@ -522,12 +524,14 @@ def validate(root=None):
                 else []
             )
             symbolic_powers, numerical_powers = (
-                {p for p, _ in symbolic},
+                set(master.get("symbolic_powers", [])),
                 {p for p, _ in numerical},
             )
-            if len(symbolic_powers) != len(symbolic) or len(numerical_powers) != len(
-                numerical
-            ):
+            if not symbolic_powers <= {p for p, _ in symbolic}:
+                raise ValueError("declared exact coefficient has no symbolic payload")
+            if len({p for p, _ in symbolic}) != len(symbolic) or len(
+                numerical_powers
+            ) != len(numerical):
                 raise ValueError("duplicate epsilon coefficient")
             for coefficient in master["coefficients"]:
                 power = coefficient["epsilon_power"]

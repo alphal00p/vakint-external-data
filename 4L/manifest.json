@@ -2085,13 +2085,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -2312,13 +2312,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -2549,13 +2549,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -2796,13 +2796,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -3023,13 +3023,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -3270,13 +3270,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -3497,13 +3497,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -3983,13 +3983,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -4240,13 +4240,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -4487,13 +4487,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -4734,13 +4734,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -4991,13 +4991,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -5258,13 +5258,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -5515,13 +5515,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -6658,13 +6658,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -6895,13 +6895,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -7381,13 +7381,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -7608,13 +7608,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -7835,13 +7835,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -8072,13 +8072,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -8319,13 +8319,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 200
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 200
         }
@@ -8566,13 +8566,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -9072,13 +9072,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -9319,13 +9319,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -10472,13 +10472,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -10699,13 +10699,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -10936,13 +10936,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -11183,13 +11183,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -11410,13 +11410,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -11657,13 +11657,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -11884,13 +11884,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -12370,13 +12370,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -12627,13 +12627,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -12874,13 +12874,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -13121,13 +13121,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -13378,13 +13378,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -14531,13 +14531,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -14778,13 +14778,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 200
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 200
         }
@@ -15005,13 +15005,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -15242,13 +15242,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -15728,13 +15728,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -15975,13 +15975,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -16481,13 +16481,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -16708,13 +16708,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -16955,13 +16955,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -17182,13 +17182,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -17439,13 +17439,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -17706,13 +17706,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -17953,13 +17953,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -18200,13 +18200,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -18457,13 +18457,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }
@@ -18714,13 +18714,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         },
         {
           "epsilon_power": 1,
-          "symbolic": true,
+          "symbolic": false,
           "numerical": true,
           "significant_digits": 50
         }

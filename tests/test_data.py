@@ -120,6 +120,14 @@ class PortableDataTests(unittest.TestCase):
                     transported, [sign * coefficient for coefficient in momenta[target]]
                 )
 
+    def test_archived_numeric_fallback_is_not_an_exact_formula(self):
+        manifest = data.read_json(data.ROOT / "4L/manifest.json")
+        master = next(m for m in manifest["masters"] if m["name"] == "P5")
+        coefficient = next(c for c in master["coefficients"] if c["epsilon_power"] == 0)
+        self.assertFalse(coefficient["symbolic"])
+        self.assertTrue(coefficient["numerical"])
+        self.assertEqual(coefficient["significant_digits"], 50)
+
 
 if __name__ == "__main__":
     unittest.main()
