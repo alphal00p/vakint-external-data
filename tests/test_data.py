@@ -132,11 +132,21 @@ class PortableDataTests(unittest.TestCase):
         supplement = data.read_json(
             data.ROOT / "provenance/coefficient-supplement.json"
         )
-        self.assertEqual(len(supplement["masters"]), 22)
-        self.assertEqual(sum(len(m["coefficients"]) for m in supplement["masters"]), 25)
+        lower = [
+            m
+            for m in supplement["masters"]
+            if m["master_id"].startswith(("L2_", "L3_"))
+        ]
+        self.assertEqual(len(lower), 22)
+        self.assertEqual(sum(len(m["coefficients"]) for m in lower), 25)
+        four_loop = [
+            m for m in supplement["masters"] if m["master_id"].startswith("L4_")
+        ]
+        self.assertEqual(len(four_loop), 20)
+        self.assertEqual(sum(len(m["coefficients"]) for m in four_loop), 24)
         masters = {
             master["master_id"]: master
-            for loops in (2, 3)
+            for loops in (2, 3, 4)
             for master in data.read_json(data.ROOT / f"{loops}L/manifest.json")[
                 "masters"
             ]
@@ -155,7 +165,7 @@ class PortableDataTests(unittest.TestCase):
             ]
             if entry["path"].startswith("provenance/original-coefficients/")
         ]
-        self.assertEqual(len(preserved), 44)
+        self.assertEqual(len(preserved), 192)
         for entry in preserved:
             self.assertEqual(data.digest(data.ROOT / entry["path"]), entry["sha256"])
 

@@ -378,7 +378,7 @@
         },
         "symbolic.json": {
           "path": "masters/P2/symbolic.json",
-          "sha256": "24fd735a3c793f01e97ded297c72fa5d77587c579bd91557ea08c95a33cdc1f7"
+          "sha256": "141b9f78676e63b4aeaf6bf5b09bdffc66109f5fd4f64cb875069924a627f0cd"
         },
         "graph.dot": {
           "path": "masters/P2/graph.dot",
@@ -496,8 +496,8 @@
       "bytes": 6445
     },
     "coefficient-supplement.json": {
-      "sha256": "2234861224889a8da6e0134b01ea9dd48980398a173635ede7de4668b775d6ea",
-      "bytes": 1570
+      "sha256": "f453b06442500395c34043e237771b7ad02584aa2c57cd35a91236ff5cc629b8",
+      "bytes": 1615
     },
     "coverage.json": {
       "sha256": "b4c0d1b616d59fda6496ae99ea91b2ec555d2f12d6ee95e98d89060476dbb246",
@@ -532,8 +532,8 @@
       "bytes": 140203
     },
     "masters/P2/symbolic.json": {
-      "sha256": "24fd735a3c793f01e97ded297c72fa5d77587c579bd91557ea08c95a33cdc1f7",
-      "bytes": 21478
+      "sha256": "141b9f78676e63b4aeaf6bf5b09bdffc66109f5fd4f64cb875069924a627f0cd",
+      "bytes": 20596
     },
     "model.json": {
       "sha256": "0819ce358fdba9d9e388bee2865fa607b7d271f81f43414463215f7679a5713d",

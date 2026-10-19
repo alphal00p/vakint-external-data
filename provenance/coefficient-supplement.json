@@ -1,17 +1,2170 @@
 {
   "schema": "vakint.external-data.coefficient-supplement.v1",
   "provenance": {
-    "method": "Existing MATAD exact master expansions and master substitutions, including rational prefactors; independent DIRECT_SUBSTITUTIONS verification",
+    "method": "Validated finite coefficients from the complete existing MATAD and FMFT formula inventory; original coefficient files retained byte-for-byte under provenance/original-coefficients",
     "source_sha256": {
       "matad.rs": "4ce33a9f6c3a48b2255de820d7d3fe51eaa9c1f1ef05a86a29f0656229775f33",
-      "matad_numerics.rs": "4ce90fa0f55bf581a8ee5c714f52739736fccfc39b246cac9bcd912bd918ef57"
+      "matad_numerics.rs": "4ce90fa0f55bf581a8ee5c714f52739736fccfc39b246cac9bcd912bd918ef57",
+      "fmft_numerics.rs": "717e24caad180cf132e4a533678a0871f157207d94dd1fe755c08ed57fe84ac1"
     },
-    "hpl_reference_sha256": "d720fde95d5de1bce3b5a9a4d3510fcf36e0ed895ffcc155e6202c6042f2141e",
-    "hpl_native_values_sha256": "1f6faa919eda72fbeebe50677c0efe77ca6b685d73c49c39113bc1c593c0b35c",
-    "precision_validation": "Native-HPL symbolic evaluation, higher-precision legacy-HPL evaluation, and existing direct MATAD numerical coefficients agree at every stated precision",
-    "normalization_validation": "All existing numerical prefix coefficients checked before appending; original JSON payloads archived separately",
-    "closed_form_gamma_policy": "No Gamma-only master coefficients exported; auxiliary exp(sum((-1)^n*zeta(n)*epsilon^n/n,n=2..7)) suffices for known epsilon^4 combined with pole order3",
-    "exporter_sha256": "7ef57571a2ed61c08fffdd4072df30ab44617f9644d591b7b5a1911718e90ee5"
+    "campaigns": {
+      "two_and_three_loops": {
+        "method": "Existing MATAD exact master expansions and master substitutions, including rational prefactors; independent DIRECT_SUBSTITUTIONS verification",
+        "source_sha256": {
+          "matad.rs": "4ce33a9f6c3a48b2255de820d7d3fe51eaa9c1f1ef05a86a29f0656229775f33",
+          "matad_numerics.rs": "4ce90fa0f55bf581a8ee5c714f52739736fccfc39b246cac9bcd912bd918ef57"
+        },
+        "hpl_reference_sha256": "d720fde95d5de1bce3b5a9a4d3510fcf36e0ed895ffcc155e6202c6042f2141e",
+        "hpl_native_values_sha256": "1f6faa919eda72fbeebe50677c0efe77ca6b685d73c49c39113bc1c593c0b35c",
+        "precision_validation": "Native-HPL symbolic evaluation, higher-precision legacy-HPL evaluation, and existing direct MATAD numerical coefficients agree at every stated precision",
+        "normalization_validation": "All existing numerical prefix coefficients checked before appending; original JSON payloads archived separately",
+        "closed_form_gamma_policy": "No Gamma-only master coefficients exported; auxiliary exp(sum((-1)^n*zeta(n)*epsilon^n/n,n=2..7)) suffices for known epsilon^4 combined with pole order3",
+        "exporter_sha256": "9f3fadaa1eed0b90398d3af895e0560adf924e4a7b1d16f93ead14df5571b2b5",
+        "loop_counts": [
+          2,
+          3
+        ]
+      },
+      "four_loops": {
+        "method": "Complete FMFT numerical-lhs inventory; all finite omitted data for PR1,PR2,PR3,PR6,PR8 verified through independent exact lower-loop factorizations",
+        "source_sha256": {
+          "fmft_numerics.rs": "717e24caad180cf132e4a533678a0871f157207d94dd1fe755c08ed57fe84ac1",
+          "matad.rs": "4ce33a9f6c3a48b2255de820d7d3fe51eaa9c1f1ef05a86a29f0656229775f33",
+          "matad_numerics.rs": "4ce90fa0f55bf581a8ee5c714f52739736fccfc39b246cac9bcd912bd918ef57"
+        },
+        "known_consumer_limit": "PR3 consumer Oep(2) predates the existing PR3ep2 RHS; its T1ep4 dependency is resolved from the already available miT111 epsilon4 coefficient",
+        "factorizations": {
+          "PR1": "(-Gam(1,1)/(ep*(ep-1)))^4",
+          "PR2": "(-Gam(1,1)/(ep*(ep-1)))*miBN",
+          "PR3": "(-Gam(1,1)/(ep*(ep-1)))^2*(-miT111)",
+          "PR6": "(-Gam(1,1)/(ep*(ep-1)))*((((-2*ep+4)*-2208+(-2*ep+4)^2*1736+(-2*ep+4)^3*-718+(-2*ep+4)^4*165+(-2*ep+4)^5*-20+(-2*ep+4)^6+1152)^(-1)*Gam(1,1)^3*-16+((-2*ep+4)*-3+12)*((-2*ep+4)*2+-6)^(-1)*miD5+((-2*ep+4)*-7+(-2*ep+4)^2+12)^(-1)*-4*Gam(1,1)*miT111+((-2*ep+4)*3+-8)*((-2*ep+4)*8+-24)^(-1)*miBN)*-1)",
+          "PR8": "miT111^2",
+          "PR13": "(-Gam(1,1)/(ep*(ep-1)))*miD6"
+        },
+        "graph_certificates": [
+          {
+            "master_id": "L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p0_p0_p0_p0_p1_p1_p1_p1_p0",
+            "primitive": "PR1",
+            "graph": "4L/masters/P1/graph.dot",
+            "sha256": "85173be86c218ccf4f19335c0091b9ce4e202ec70b03d7dcbbf09a440b2394c2",
+            "blocks": [
+              {
+                "loop_axes": [
+                  0
+                ],
+                "edge_ids": [
+                  0
+                ],
+                "rows": [
+                  [
+                    1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v0",
+                    "v0"
+                  ]
+                ],
+                "reference_master_id": "L1_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4_p1",
+                "reference_graph": "1L/masters/P1/graph.dot",
+                "reference_graph_sha256": "f30255ed59d97daac1400f0d85bd50057be9bb40c8b7f12e4275c103ae710640"
+              },
+              {
+                "loop_axes": [
+                  1
+                ],
+                "edge_ids": [
+                  1
+                ],
+                "rows": [
+                  [
+                    1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v0",
+                    "v0"
+                  ]
+                ],
+                "reference_master_id": "L1_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4_p1",
+                "reference_graph": "1L/masters/P1/graph.dot",
+                "reference_graph_sha256": "f30255ed59d97daac1400f0d85bd50057be9bb40c8b7f12e4275c103ae710640"
+              },
+              {
+                "loop_axes": [
+                  2
+                ],
+                "edge_ids": [
+                  2
+                ],
+                "rows": [
+                  [
+                    1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v0",
+                    "v0"
+                  ]
+                ],
+                "reference_master_id": "L1_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4_p1",
+                "reference_graph": "1L/masters/P1/graph.dot",
+                "reference_graph_sha256": "f30255ed59d97daac1400f0d85bd50057be9bb40c8b7f12e4275c103ae710640"
+              },
+              {
+                "loop_axes": [
+                  3
+                ],
+                "edge_ids": [
+                  3
+                ],
+                "rows": [
+                  [
+                    1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v0",
+                    "v0"
+                  ]
+                ],
+                "reference_master_id": "L1_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4_p1",
+                "reference_graph": "1L/masters/P1/graph.dot",
+                "reference_graph_sha256": "f30255ed59d97daac1400f0d85bd50057be9bb40c8b7f12e4275c103ae710640"
+              }
+            ],
+            "unit_jacobian": true,
+            "unit_powers": true
+          },
+          {
+            "master_id": "L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p0_p0_p0_p1_p1_p1_p1_p1_p0",
+            "primitive": "PR2",
+            "graph": "4L/masters/P2/graph.dot",
+            "sha256": "2b858437e529fd787d47fe6023c569a25f116cdedc3b2579d70b87e4e8780f0d",
+            "blocks": [
+              {
+                "loop_axes": [
+                  0
+                ],
+                "edge_ids": [
+                  4
+                ],
+                "rows": [
+                  [
+                    1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v0",
+                    "v0"
+                  ]
+                ],
+                "reference_master_id": "L1_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4_p1",
+                "reference_graph": "1L/masters/P1/graph.dot",
+                "reference_graph_sha256": "f30255ed59d97daac1400f0d85bd50057be9bb40c8b7f12e4275c103ae710640"
+              },
+              {
+                "loop_axes": [
+                  1,
+                  2,
+                  3
+                ],
+                "edge_ids": [
+                  0,
+                  1,
+                  2,
+                  3
+                ],
+                "rows": [
+                  [
+                    0,
+                    0,
+                    1
+                  ],
+                  [
+                    1,
+                    0,
+                    0
+                  ],
+                  [
+                    1,
+                    1,
+                    -1
+                  ],
+                  [
+                    0,
+                    1,
+                    0
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v1",
+                    "v0"
+                  ],
+                  [
+                    "v0",
+                    "v1"
+                  ],
+                  [
+                    "v1",
+                    "v0"
+                  ],
+                  [
+                    "v0",
+                    "v1"
+                  ]
+                ],
+                "reference_master_id": "L3_56d4ac620f0309e551e825ce435d23ee4b58e887f2ee639e1bf14006bc9e9f93_p0_p1_p1_p1_p1_p0",
+                "reference_graph": "3L/masters/P13/graph.dot",
+                "reference_graph_sha256": "d925d57de3049373a497ff7a5943e70926894a1e8bd0a49fbec9e55bd2a3ce6b"
+              }
+            ],
+            "unit_jacobian": true,
+            "unit_powers": true
+          },
+          {
+            "master_id": "L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p0_p0_p1_p0_p1_p1_p1_p1_p0",
+            "primitive": "PR3",
+            "graph": "4L/masters/P3/graph.dot",
+            "sha256": "ff971f276bfe6787df8d3068c31cc4e6cd04dcbae71d16fc72d6d03a0c036288",
+            "blocks": [
+              {
+                "loop_axes": [
+                  0
+                ],
+                "edge_ids": [
+                  2
+                ],
+                "rows": [
+                  [
+                    1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v0",
+                    "v0"
+                  ]
+                ],
+                "reference_master_id": "L1_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4_p1",
+                "reference_graph": "1L/masters/P1/graph.dot",
+                "reference_graph_sha256": "f30255ed59d97daac1400f0d85bd50057be9bb40c8b7f12e4275c103ae710640"
+              },
+              {
+                "loop_axes": [
+                  1
+                ],
+                "edge_ids": [
+                  4
+                ],
+                "rows": [
+                  [
+                    1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v0",
+                    "v0"
+                  ]
+                ],
+                "reference_master_id": "L1_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4_p1",
+                "reference_graph": "1L/masters/P1/graph.dot",
+                "reference_graph_sha256": "f30255ed59d97daac1400f0d85bd50057be9bb40c8b7f12e4275c103ae710640"
+              },
+              {
+                "loop_axes": [
+                  2,
+                  3
+                ],
+                "edge_ids": [
+                  0,
+                  1,
+                  3
+                ],
+                "rows": [
+                  [
+                    1,
+                    1
+                  ],
+                  [
+                    1,
+                    0
+                  ],
+                  [
+                    0,
+                    1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v1",
+                    "v0"
+                  ],
+                  [
+                    "v0",
+                    "v1"
+                  ],
+                  [
+                    "v0",
+                    "v1"
+                  ]
+                ],
+                "reference_master_id": "L2_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1_p1_p1_p1",
+                "reference_graph": "2L/masters/P2/graph.dot",
+                "reference_graph_sha256": "fb5c18447c9c6778a76131876ccfacc7ffc06f7708b230b2709e28d062f51ce2"
+              }
+            ],
+            "unit_jacobian": true,
+            "unit_powers": true
+          },
+          {
+            "master_id": "L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p0_p0_p1_p1_p1_p1_p1_p1_p0",
+            "primitive": "PR6",
+            "graph": "4L/masters/P4/graph.dot",
+            "sha256": "e081ce0e8aaa28d3c3c2992d4d50d4d5f94031a5600a96a7f7537d9bfd7d9ca0",
+            "blocks": [
+              {
+                "loop_axes": [
+                  0
+                ],
+                "edge_ids": [
+                  5
+                ],
+                "rows": [
+                  [
+                    1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v0",
+                    "v0"
+                  ]
+                ],
+                "reference_master_id": "L1_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4_p1",
+                "reference_graph": "1L/masters/P1/graph.dot",
+                "reference_graph_sha256": "f30255ed59d97daac1400f0d85bd50057be9bb40c8b7f12e4275c103ae710640"
+              },
+              {
+                "loop_axes": [
+                  1,
+                  2,
+                  3
+                ],
+                "edge_ids": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "rows": [
+                  [
+                    1,
+                    1,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    1
+                  ],
+                  [
+                    1,
+                    0,
+                    0
+                  ],
+                  [
+                    1,
+                    1,
+                    -1
+                  ],
+                  [
+                    0,
+                    1,
+                    0
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v2",
+                    "v1"
+                  ],
+                  [
+                    "v1",
+                    "v0"
+                  ],
+                  [
+                    "v0",
+                    "v2"
+                  ],
+                  [
+                    "v1",
+                    "v0"
+                  ],
+                  [
+                    "v0",
+                    "v2"
+                  ]
+                ],
+                "reference_master_id": "L3_56d4ac620f0309e551e825ce435d23ee4b58e887f2ee639e1bf14006bc9e9f93_p0_p1_p1_p1_p1_p1",
+                "reference_graph": "3L/masters/P14/graph.dot",
+                "reference_graph_sha256": "816c444a7751ce799dd1a406671922800616b66a4d872ffae85646b5987f29ad"
+              }
+            ],
+            "unit_jacobian": true,
+            "unit_powers": true
+          },
+          {
+            "master_id": "L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p1_p0_p1_p0_p1_p1_p1_p1_p0",
+            "primitive": "PR8",
+            "graph": "4L/masters/P12/graph.dot",
+            "sha256": "0fa81cd0105b1abfb72807bfc031185104332e72a4a8ee9328ac8c29196f785c",
+            "blocks": [
+              {
+                "loop_axes": [
+                  0,
+                  3
+                ],
+                "edge_ids": [
+                  0,
+                  3,
+                  5
+                ],
+                "rows": [
+                  [
+                    0,
+                    1
+                  ],
+                  [
+                    1,
+                    0
+                  ],
+                  [
+                    1,
+                    -1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v1",
+                    "v0"
+                  ],
+                  [
+                    "v0",
+                    "v1"
+                  ],
+                  [
+                    "v1",
+                    "v0"
+                  ]
+                ],
+                "reference_master_id": "L2_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1_p1_p1_p1",
+                "reference_graph": "2L/masters/P2/graph.dot",
+                "reference_graph_sha256": "fb5c18447c9c6778a76131876ccfacc7ffc06f7708b230b2709e28d062f51ce2"
+              },
+              {
+                "loop_axes": [
+                  1,
+                  2
+                ],
+                "edge_ids": [
+                  1,
+                  2,
+                  4
+                ],
+                "rows": [
+                  [
+                    1,
+                    1
+                  ],
+                  [
+                    1,
+                    0
+                  ],
+                  [
+                    0,
+                    1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v2",
+                    "v0"
+                  ],
+                  [
+                    "v0",
+                    "v2"
+                  ],
+                  [
+                    "v0",
+                    "v2"
+                  ]
+                ],
+                "reference_master_id": "L2_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1_p1_p1_p1",
+                "reference_graph": "2L/masters/P2/graph.dot",
+                "reference_graph_sha256": "fb5c18447c9c6778a76131876ccfacc7ffc06f7708b230b2709e28d062f51ce2"
+              }
+            ],
+            "unit_jacobian": true,
+            "unit_powers": true
+          },
+          {
+            "master_id": "L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p0_p0_p1_p0_p0_p1_p1_p1_p0_p0",
+            "primitive": "PR1",
+            "graph": "4L/masters/P20/graph.dot",
+            "sha256": "85173be86c218ccf4f19335c0091b9ce4e202ec70b03d7dcbbf09a440b2394c2",
+            "blocks": [
+              {
+                "loop_axes": [
+                  0
+                ],
+                "edge_ids": [
+                  0
+                ],
+                "rows": [
+                  [
+                    1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v0",
+                    "v0"
+                  ]
+                ],
+                "reference_master_id": "L1_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4_p1",
+                "reference_graph": "1L/masters/P1/graph.dot",
+                "reference_graph_sha256": "f30255ed59d97daac1400f0d85bd50057be9bb40c8b7f12e4275c103ae710640"
+              },
+              {
+                "loop_axes": [
+                  1
+                ],
+                "edge_ids": [
+                  1
+                ],
+                "rows": [
+                  [
+                    1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v0",
+                    "v0"
+                  ]
+                ],
+                "reference_master_id": "L1_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4_p1",
+                "reference_graph": "1L/masters/P1/graph.dot",
+                "reference_graph_sha256": "f30255ed59d97daac1400f0d85bd50057be9bb40c8b7f12e4275c103ae710640"
+              },
+              {
+                "loop_axes": [
+                  2
+                ],
+                "edge_ids": [
+                  2
+                ],
+                "rows": [
+                  [
+                    1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v0",
+                    "v0"
+                  ]
+                ],
+                "reference_master_id": "L1_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4_p1",
+                "reference_graph": "1L/masters/P1/graph.dot",
+                "reference_graph_sha256": "f30255ed59d97daac1400f0d85bd50057be9bb40c8b7f12e4275c103ae710640"
+              },
+              {
+                "loop_axes": [
+                  3
+                ],
+                "edge_ids": [
+                  3
+                ],
+                "rows": [
+                  [
+                    1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v0",
+                    "v0"
+                  ]
+                ],
+                "reference_master_id": "L1_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4_p1",
+                "reference_graph": "1L/masters/P1/graph.dot",
+                "reference_graph_sha256": "f30255ed59d97daac1400f0d85bd50057be9bb40c8b7f12e4275c103ae710640"
+              }
+            ],
+            "unit_jacobian": true,
+            "unit_powers": true
+          },
+          {
+            "master_id": "L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p0_p0_p1_p0_p1_p1_p1_p1_p0_p0",
+            "primitive": "PR2",
+            "graph": "4L/masters/P21/graph.dot",
+            "sha256": "8180eacb7bbe0de9f3b62316619a5ba172669e1a6229019143c61d5ef08263ff",
+            "blocks": [
+              {
+                "loop_axes": [
+                  0,
+                  1,
+                  2
+                ],
+                "edge_ids": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "rows": [
+                  [
+                    0,
+                    1,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    1
+                  ],
+                  [
+                    1,
+                    0,
+                    0
+                  ],
+                  [
+                    1,
+                    -1,
+                    -1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v1",
+                    "v0"
+                  ],
+                  [
+                    "v1",
+                    "v0"
+                  ],
+                  [
+                    "v0",
+                    "v1"
+                  ],
+                  [
+                    "v1",
+                    "v0"
+                  ]
+                ],
+                "reference_master_id": "L3_56d4ac620f0309e551e825ce435d23ee4b58e887f2ee639e1bf14006bc9e9f93_p0_p1_p1_p1_p1_p0",
+                "reference_graph": "3L/masters/P13/graph.dot",
+                "reference_graph_sha256": "d925d57de3049373a497ff7a5943e70926894a1e8bd0a49fbec9e55bd2a3ce6b"
+              },
+              {
+                "loop_axes": [
+                  3
+                ],
+                "edge_ids": [
+                  0
+                ],
+                "rows": [
+                  [
+                    1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v1",
+                    "v1"
+                  ]
+                ],
+                "reference_master_id": "L1_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4_p1",
+                "reference_graph": "1L/masters/P1/graph.dot",
+                "reference_graph_sha256": "f30255ed59d97daac1400f0d85bd50057be9bb40c8b7f12e4275c103ae710640"
+              }
+            ],
+            "unit_jacobian": true,
+            "unit_powers": true
+          },
+          {
+            "master_id": "L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p0_p0_p1_p1_p0_p1_p1_p1_p0_p0",
+            "primitive": "PR3",
+            "graph": "4L/masters/P22/graph.dot",
+            "sha256": "f68f50a302b3d42199d43f6c593fcd8c00e2a255b1e22a2293593dfa46b665a9",
+            "blocks": [
+              {
+                "loop_axes": [
+                  0
+                ],
+                "edge_ids": [
+                  0
+                ],
+                "rows": [
+                  [
+                    1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v0",
+                    "v0"
+                  ]
+                ],
+                "reference_master_id": "L1_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4_p1",
+                "reference_graph": "1L/masters/P1/graph.dot",
+                "reference_graph_sha256": "f30255ed59d97daac1400f0d85bd50057be9bb40c8b7f12e4275c103ae710640"
+              },
+              {
+                "loop_axes": [
+                  1
+                ],
+                "edge_ids": [
+                  3
+                ],
+                "rows": [
+                  [
+                    1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v0",
+                    "v0"
+                  ]
+                ],
+                "reference_master_id": "L1_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4_p1",
+                "reference_graph": "1L/masters/P1/graph.dot",
+                "reference_graph_sha256": "f30255ed59d97daac1400f0d85bd50057be9bb40c8b7f12e4275c103ae710640"
+              },
+              {
+                "loop_axes": [
+                  2,
+                  3
+                ],
+                "edge_ids": [
+                  1,
+                  2,
+                  4
+                ],
+                "rows": [
+                  [
+                    1,
+                    1
+                  ],
+                  [
+                    1,
+                    0
+                  ],
+                  [
+                    0,
+                    1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v1",
+                    "v0"
+                  ],
+                  [
+                    "v0",
+                    "v1"
+                  ],
+                  [
+                    "v0",
+                    "v1"
+                  ]
+                ],
+                "reference_master_id": "L2_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1_p1_p1_p1",
+                "reference_graph": "2L/masters/P2/graph.dot",
+                "reference_graph_sha256": "fb5c18447c9c6778a76131876ccfacc7ffc06f7708b230b2709e28d062f51ce2"
+              }
+            ],
+            "unit_jacobian": true,
+            "unit_powers": true
+          },
+          {
+            "master_id": "L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p0_p0_p1_p1_p1_p1_p1_p1_p0_p0",
+            "primitive": "PR6",
+            "graph": "4L/masters/P23/graph.dot",
+            "sha256": "3f7b1b5c822bb7249a8796a1761df7649dfde727f408a7db522a7d6ff615d3b7",
+            "blocks": [
+              {
+                "loop_axes": [
+                  0,
+                  1,
+                  2
+                ],
+                "edge_ids": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5
+                ],
+                "rows": [
+                  [
+                    0,
+                    1,
+                    0
+                  ],
+                  [
+                    1,
+                    -1,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    1
+                  ],
+                  [
+                    1,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    1,
+                    -1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v1",
+                    "v0"
+                  ],
+                  [
+                    "v2",
+                    "v0"
+                  ],
+                  [
+                    "v2",
+                    "v1"
+                  ],
+                  [
+                    "v0",
+                    "v2"
+                  ],
+                  [
+                    "v2",
+                    "v1"
+                  ]
+                ],
+                "reference_master_id": "L3_56d4ac620f0309e551e825ce435d23ee4b58e887f2ee639e1bf14006bc9e9f93_p0_p1_p1_p1_p1_p1",
+                "reference_graph": "3L/masters/P14/graph.dot",
+                "reference_graph_sha256": "816c444a7751ce799dd1a406671922800616b66a4d872ffae85646b5987f29ad"
+              },
+              {
+                "loop_axes": [
+                  3
+                ],
+                "edge_ids": [
+                  0
+                ],
+                "rows": [
+                  [
+                    1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v2",
+                    "v2"
+                  ]
+                ],
+                "reference_master_id": "L1_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4_p1",
+                "reference_graph": "1L/masters/P1/graph.dot",
+                "reference_graph_sha256": "f30255ed59d97daac1400f0d85bd50057be9bb40c8b7f12e4275c103ae710640"
+              }
+            ],
+            "unit_jacobian": true,
+            "unit_powers": true
+          },
+          {
+            "master_id": "L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p0_p1_p1_p1_p1_p1_p1_p0_p0_p0",
+            "primitive": "PR8",
+            "graph": "4L/masters/P26/graph.dot",
+            "sha256": "4d3e17c6632677f347c9cdda8950048afc074f44324dda26d29ab91e0e2f6b9e",
+            "blocks": [
+              {
+                "loop_axes": [
+                  0,
+                  1
+                ],
+                "edge_ids": [
+                  2,
+                  3,
+                  5
+                ],
+                "rows": [
+                  [
+                    0,
+                    1
+                  ],
+                  [
+                    1,
+                    -1
+                  ],
+                  [
+                    1,
+                    0
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v1",
+                    "v0"
+                  ],
+                  [
+                    "v1",
+                    "v0"
+                  ],
+                  [
+                    "v0",
+                    "v1"
+                  ]
+                ],
+                "reference_master_id": "L2_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1_p1_p1_p1",
+                "reference_graph": "2L/masters/P2/graph.dot",
+                "reference_graph_sha256": "fb5c18447c9c6778a76131876ccfacc7ffc06f7708b230b2709e28d062f51ce2"
+              },
+              {
+                "loop_axes": [
+                  2,
+                  3
+                ],
+                "edge_ids": [
+                  0,
+                  1,
+                  4
+                ],
+                "rows": [
+                  [
+                    1,
+                    0
+                  ],
+                  [
+                    0,
+                    1
+                  ],
+                  [
+                    1,
+                    -1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v1",
+                    "v2"
+                  ],
+                  [
+                    "v2",
+                    "v1"
+                  ],
+                  [
+                    "v2",
+                    "v1"
+                  ]
+                ],
+                "reference_master_id": "L2_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1_p1_p1_p1",
+                "reference_graph": "2L/masters/P2/graph.dot",
+                "reference_graph_sha256": "fb5c18447c9c6778a76131876ccfacc7ffc06f7708b230b2709e28d062f51ce2"
+              }
+            ],
+            "unit_jacobian": true,
+            "unit_powers": true
+          },
+          {
+            "master_id": "L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p1_p1_p1_p1_p0_p1_p1_p1_p0_p0",
+            "primitive": "PR13",
+            "graph": "4L/masters/P33/graph.dot",
+            "sha256": "b69c0e8e26a22f9bb4b793529946901d795cd6b931c266317117c3427ce8229b",
+            "blocks": [
+              {
+                "loop_axes": [
+                  0
+                ],
+                "edge_ids": [
+                  5
+                ],
+                "rows": [
+                  [
+                    1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v0",
+                    "v0"
+                  ]
+                ],
+                "reference_master_id": "L1_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4_p1",
+                "reference_graph": "1L/masters/P1/graph.dot",
+                "reference_graph_sha256": "f30255ed59d97daac1400f0d85bd50057be9bb40c8b7f12e4275c103ae710640"
+              },
+              {
+                "loop_axes": [
+                  1,
+                  2,
+                  3
+                ],
+                "edge_ids": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  6
+                ],
+                "rows": [
+                  [
+                    1,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    1
+                  ],
+                  [
+                    1,
+                    -1,
+                    0
+                  ],
+                  [
+                    0,
+                    1,
+                    0
+                  ],
+                  [
+                    -1,
+                    1,
+                    1
+                  ],
+                  [
+                    1,
+                    0,
+                    -1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v0",
+                    "v2"
+                  ],
+                  [
+                    "v2",
+                    "v3"
+                  ],
+                  [
+                    "v3",
+                    "v0"
+                  ],
+                  [
+                    "v1",
+                    "v0"
+                  ],
+                  [
+                    "v3",
+                    "v1"
+                  ],
+                  [
+                    "v2",
+                    "v1"
+                  ]
+                ],
+                "reference_master_id": "L3_56d4ac620f0309e551e825ce435d23ee4b58e887f2ee639e1bf14006bc9e9f93_p1_p1_p1_p1_p1_p1",
+                "reference_graph": "3L/masters/P38/graph.dot",
+                "reference_graph_sha256": "3e55c23a0492368c8aa3860a1bf4781c5662f0b676fd1e7402b5dc120ac18103"
+              }
+            ],
+            "unit_jacobian": true,
+            "unit_powers": true
+          },
+          {
+            "master_id": "L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p0_p0_p0_p0_p1_p1_p1_p1_p0_p0",
+            "primitive": "PR1",
+            "graph": "4L/masters/P36/graph.dot",
+            "sha256": "85173be86c218ccf4f19335c0091b9ce4e202ec70b03d7dcbbf09a440b2394c2",
+            "blocks": [
+              {
+                "loop_axes": [
+                  0
+                ],
+                "edge_ids": [
+                  0
+                ],
+                "rows": [
+                  [
+                    1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v0",
+                    "v0"
+                  ]
+                ],
+                "reference_master_id": "L1_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4_p1",
+                "reference_graph": "1L/masters/P1/graph.dot",
+                "reference_graph_sha256": "f30255ed59d97daac1400f0d85bd50057be9bb40c8b7f12e4275c103ae710640"
+              },
+              {
+                "loop_axes": [
+                  1
+                ],
+                "edge_ids": [
+                  1
+                ],
+                "rows": [
+                  [
+                    1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v0",
+                    "v0"
+                  ]
+                ],
+                "reference_master_id": "L1_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4_p1",
+                "reference_graph": "1L/masters/P1/graph.dot",
+                "reference_graph_sha256": "f30255ed59d97daac1400f0d85bd50057be9bb40c8b7f12e4275c103ae710640"
+              },
+              {
+                "loop_axes": [
+                  2
+                ],
+                "edge_ids": [
+                  2
+                ],
+                "rows": [
+                  [
+                    1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v0",
+                    "v0"
+                  ]
+                ],
+                "reference_master_id": "L1_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4_p1",
+                "reference_graph": "1L/masters/P1/graph.dot",
+                "reference_graph_sha256": "f30255ed59d97daac1400f0d85bd50057be9bb40c8b7f12e4275c103ae710640"
+              },
+              {
+                "loop_axes": [
+                  3
+                ],
+                "edge_ids": [
+                  3
+                ],
+                "rows": [
+                  [
+                    1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v0",
+                    "v0"
+                  ]
+                ],
+                "reference_master_id": "L1_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4_p1",
+                "reference_graph": "1L/masters/P1/graph.dot",
+                "reference_graph_sha256": "f30255ed59d97daac1400f0d85bd50057be9bb40c8b7f12e4275c103ae710640"
+              }
+            ],
+            "unit_jacobian": true,
+            "unit_powers": true
+          },
+          {
+            "master_id": "L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p0_p0_p0_p1_p1_p1_p1_p1_p0_p0",
+            "primitive": "PR2",
+            "graph": "4L/masters/P37/graph.dot",
+            "sha256": "2b858437e529fd787d47fe6023c569a25f116cdedc3b2579d70b87e4e8780f0d",
+            "blocks": [
+              {
+                "loop_axes": [
+                  0
+                ],
+                "edge_ids": [
+                  4
+                ],
+                "rows": [
+                  [
+                    1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v0",
+                    "v0"
+                  ]
+                ],
+                "reference_master_id": "L1_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4_p1",
+                "reference_graph": "1L/masters/P1/graph.dot",
+                "reference_graph_sha256": "f30255ed59d97daac1400f0d85bd50057be9bb40c8b7f12e4275c103ae710640"
+              },
+              {
+                "loop_axes": [
+                  1,
+                  2,
+                  3
+                ],
+                "edge_ids": [
+                  0,
+                  1,
+                  2,
+                  3
+                ],
+                "rows": [
+                  [
+                    0,
+                    0,
+                    1
+                  ],
+                  [
+                    1,
+                    0,
+                    0
+                  ],
+                  [
+                    1,
+                    1,
+                    -1
+                  ],
+                  [
+                    0,
+                    1,
+                    0
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v1",
+                    "v0"
+                  ],
+                  [
+                    "v0",
+                    "v1"
+                  ],
+                  [
+                    "v1",
+                    "v0"
+                  ],
+                  [
+                    "v0",
+                    "v1"
+                  ]
+                ],
+                "reference_master_id": "L3_56d4ac620f0309e551e825ce435d23ee4b58e887f2ee639e1bf14006bc9e9f93_p0_p1_p1_p1_p1_p0",
+                "reference_graph": "3L/masters/P13/graph.dot",
+                "reference_graph_sha256": "d925d57de3049373a497ff7a5943e70926894a1e8bd0a49fbec9e55bd2a3ce6b"
+              }
+            ],
+            "unit_jacobian": true,
+            "unit_powers": true
+          },
+          {
+            "master_id": "L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p0_p0_p1_p0_p1_p1_p1_p1_p0_p0",
+            "primitive": "PR3",
+            "graph": "4L/masters/P38/graph.dot",
+            "sha256": "474e1f547991f97485fdaaa1ae51106805519a6af3bcb5e919dcbc0116f875b1",
+            "blocks": [
+              {
+                "loop_axes": [
+                  0
+                ],
+                "edge_ids": [
+                  2
+                ],
+                "rows": [
+                  [
+                    1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v0",
+                    "v0"
+                  ]
+                ],
+                "reference_master_id": "L1_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4_p1",
+                "reference_graph": "1L/masters/P1/graph.dot",
+                "reference_graph_sha256": "f30255ed59d97daac1400f0d85bd50057be9bb40c8b7f12e4275c103ae710640"
+              },
+              {
+                "loop_axes": [
+                  1
+                ],
+                "edge_ids": [
+                  4
+                ],
+                "rows": [
+                  [
+                    1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v0",
+                    "v0"
+                  ]
+                ],
+                "reference_master_id": "L1_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4_p1",
+                "reference_graph": "1L/masters/P1/graph.dot",
+                "reference_graph_sha256": "f30255ed59d97daac1400f0d85bd50057be9bb40c8b7f12e4275c103ae710640"
+              },
+              {
+                "loop_axes": [
+                  2,
+                  3
+                ],
+                "edge_ids": [
+                  0,
+                  1,
+                  3
+                ],
+                "rows": [
+                  [
+                    1,
+                    1
+                  ],
+                  [
+                    1,
+                    0
+                  ],
+                  [
+                    0,
+                    1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v1",
+                    "v0"
+                  ],
+                  [
+                    "v0",
+                    "v1"
+                  ],
+                  [
+                    "v0",
+                    "v1"
+                  ]
+                ],
+                "reference_master_id": "L2_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1_p1_p1_p1",
+                "reference_graph": "2L/masters/P2/graph.dot",
+                "reference_graph_sha256": "fb5c18447c9c6778a76131876ccfacc7ffc06f7708b230b2709e28d062f51ce2"
+              }
+            ],
+            "unit_jacobian": true,
+            "unit_powers": true
+          },
+          {
+            "master_id": "L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p0_p0_p1_p1_p1_p1_p1_p1_p0_p0",
+            "primitive": "PR6",
+            "graph": "4L/masters/P39/graph.dot",
+            "sha256": "a845737f134b3e3f0168e90b15b4fe8a8d0a09f6963a5f36f4169b2466c03311",
+            "blocks": [
+              {
+                "loop_axes": [
+                  0
+                ],
+                "edge_ids": [
+                  5
+                ],
+                "rows": [
+                  [
+                    1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v0",
+                    "v0"
+                  ]
+                ],
+                "reference_master_id": "L1_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4_p1",
+                "reference_graph": "1L/masters/P1/graph.dot",
+                "reference_graph_sha256": "f30255ed59d97daac1400f0d85bd50057be9bb40c8b7f12e4275c103ae710640"
+              },
+              {
+                "loop_axes": [
+                  1,
+                  2,
+                  3
+                ],
+                "edge_ids": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "rows": [
+                  [
+                    1,
+                    1,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    1
+                  ],
+                  [
+                    1,
+                    0,
+                    0
+                  ],
+                  [
+                    1,
+                    1,
+                    -1
+                  ],
+                  [
+                    0,
+                    1,
+                    0
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v1",
+                    "v2"
+                  ],
+                  [
+                    "v2",
+                    "v0"
+                  ],
+                  [
+                    "v0",
+                    "v1"
+                  ],
+                  [
+                    "v2",
+                    "v0"
+                  ],
+                  [
+                    "v0",
+                    "v1"
+                  ]
+                ],
+                "reference_master_id": "L3_56d4ac620f0309e551e825ce435d23ee4b58e887f2ee639e1bf14006bc9e9f93_p0_p1_p1_p1_p1_p1",
+                "reference_graph": "3L/masters/P14/graph.dot",
+                "reference_graph_sha256": "816c444a7751ce799dd1a406671922800616b66a4d872ffae85646b5987f29ad"
+              }
+            ],
+            "unit_jacobian": true,
+            "unit_powers": true
+          },
+          {
+            "master_id": "L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p1_p0_p1_p0_p1_p1_p1_p1_p0_p0",
+            "primitive": "PR8",
+            "graph": "4L/masters/P47/graph.dot",
+            "sha256": "9b9949120b1448180e7c86de63c712f0b7feaa4e9a27104f120266b07ebdeb1d",
+            "blocks": [
+              {
+                "loop_axes": [
+                  0,
+                  1
+                ],
+                "edge_ids": [
+                  0,
+                  3,
+                  5
+                ],
+                "rows": [
+                  [
+                    1,
+                    0
+                  ],
+                  [
+                    1,
+                    1
+                  ],
+                  [
+                    0,
+                    1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v0",
+                    "v1"
+                  ],
+                  [
+                    "v1",
+                    "v0"
+                  ],
+                  [
+                    "v0",
+                    "v1"
+                  ]
+                ],
+                "reference_master_id": "L2_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1_p1_p1_p1",
+                "reference_graph": "2L/masters/P2/graph.dot",
+                "reference_graph_sha256": "fb5c18447c9c6778a76131876ccfacc7ffc06f7708b230b2709e28d062f51ce2"
+              },
+              {
+                "loop_axes": [
+                  2,
+                  3
+                ],
+                "edge_ids": [
+                  1,
+                  2,
+                  4
+                ],
+                "rows": [
+                  [
+                    1,
+                    1
+                  ],
+                  [
+                    1,
+                    0
+                  ],
+                  [
+                    0,
+                    1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v2",
+                    "v1"
+                  ],
+                  [
+                    "v1",
+                    "v2"
+                  ],
+                  [
+                    "v1",
+                    "v2"
+                  ]
+                ],
+                "reference_master_id": "L2_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1_p1_p1_p1",
+                "reference_graph": "2L/masters/P2/graph.dot",
+                "reference_graph_sha256": "fb5c18447c9c6778a76131876ccfacc7ffc06f7708b230b2709e28d062f51ce2"
+              }
+            ],
+            "unit_jacobian": true,
+            "unit_powers": true
+          },
+          {
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p0_p0_p0_p0_p1_p1_p1_p1_p0",
+            "primitive": "PR1",
+            "graph": "4L/masters/P53/graph.dot",
+            "sha256": "85173be86c218ccf4f19335c0091b9ce4e202ec70b03d7dcbbf09a440b2394c2",
+            "blocks": [
+              {
+                "loop_axes": [
+                  0
+                ],
+                "edge_ids": [
+                  0
+                ],
+                "rows": [
+                  [
+                    1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v0",
+                    "v0"
+                  ]
+                ],
+                "reference_master_id": "L1_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4_p1",
+                "reference_graph": "1L/masters/P1/graph.dot",
+                "reference_graph_sha256": "f30255ed59d97daac1400f0d85bd50057be9bb40c8b7f12e4275c103ae710640"
+              },
+              {
+                "loop_axes": [
+                  1
+                ],
+                "edge_ids": [
+                  1
+                ],
+                "rows": [
+                  [
+                    1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v0",
+                    "v0"
+                  ]
+                ],
+                "reference_master_id": "L1_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4_p1",
+                "reference_graph": "1L/masters/P1/graph.dot",
+                "reference_graph_sha256": "f30255ed59d97daac1400f0d85bd50057be9bb40c8b7f12e4275c103ae710640"
+              },
+              {
+                "loop_axes": [
+                  2
+                ],
+                "edge_ids": [
+                  2
+                ],
+                "rows": [
+                  [
+                    1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v0",
+                    "v0"
+                  ]
+                ],
+                "reference_master_id": "L1_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4_p1",
+                "reference_graph": "1L/masters/P1/graph.dot",
+                "reference_graph_sha256": "f30255ed59d97daac1400f0d85bd50057be9bb40c8b7f12e4275c103ae710640"
+              },
+              {
+                "loop_axes": [
+                  3
+                ],
+                "edge_ids": [
+                  3
+                ],
+                "rows": [
+                  [
+                    1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v0",
+                    "v0"
+                  ]
+                ],
+                "reference_master_id": "L1_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4_p1",
+                "reference_graph": "1L/masters/P1/graph.dot",
+                "reference_graph_sha256": "f30255ed59d97daac1400f0d85bd50057be9bb40c8b7f12e4275c103ae710640"
+              }
+            ],
+            "unit_jacobian": true,
+            "unit_powers": true
+          },
+          {
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p0_p0_p0_p1_p1_p1_p1_p1_p0",
+            "primitive": "PR2",
+            "graph": "4L/masters/P54/graph.dot",
+            "sha256": "2b858437e529fd787d47fe6023c569a25f116cdedc3b2579d70b87e4e8780f0d",
+            "blocks": [
+              {
+                "loop_axes": [
+                  0
+                ],
+                "edge_ids": [
+                  4
+                ],
+                "rows": [
+                  [
+                    1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v0",
+                    "v0"
+                  ]
+                ],
+                "reference_master_id": "L1_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4_p1",
+                "reference_graph": "1L/masters/P1/graph.dot",
+                "reference_graph_sha256": "f30255ed59d97daac1400f0d85bd50057be9bb40c8b7f12e4275c103ae710640"
+              },
+              {
+                "loop_axes": [
+                  1,
+                  2,
+                  3
+                ],
+                "edge_ids": [
+                  0,
+                  1,
+                  2,
+                  3
+                ],
+                "rows": [
+                  [
+                    0,
+                    0,
+                    1
+                  ],
+                  [
+                    1,
+                    0,
+                    0
+                  ],
+                  [
+                    1,
+                    1,
+                    -1
+                  ],
+                  [
+                    0,
+                    1,
+                    0
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v1",
+                    "v0"
+                  ],
+                  [
+                    "v0",
+                    "v1"
+                  ],
+                  [
+                    "v1",
+                    "v0"
+                  ],
+                  [
+                    "v0",
+                    "v1"
+                  ]
+                ],
+                "reference_master_id": "L3_56d4ac620f0309e551e825ce435d23ee4b58e887f2ee639e1bf14006bc9e9f93_p0_p1_p1_p1_p1_p0",
+                "reference_graph": "3L/masters/P13/graph.dot",
+                "reference_graph_sha256": "d925d57de3049373a497ff7a5943e70926894a1e8bd0a49fbec9e55bd2a3ce6b"
+              }
+            ],
+            "unit_jacobian": true,
+            "unit_powers": true
+          },
+          {
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p0_p0_p1_p0_p1_p1_p1_p1_p0",
+            "primitive": "PR3",
+            "graph": "4L/masters/P55/graph.dot",
+            "sha256": "474e1f547991f97485fdaaa1ae51106805519a6af3bcb5e919dcbc0116f875b1",
+            "blocks": [
+              {
+                "loop_axes": [
+                  0
+                ],
+                "edge_ids": [
+                  2
+                ],
+                "rows": [
+                  [
+                    1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v0",
+                    "v0"
+                  ]
+                ],
+                "reference_master_id": "L1_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4_p1",
+                "reference_graph": "1L/masters/P1/graph.dot",
+                "reference_graph_sha256": "f30255ed59d97daac1400f0d85bd50057be9bb40c8b7f12e4275c103ae710640"
+              },
+              {
+                "loop_axes": [
+                  1
+                ],
+                "edge_ids": [
+                  4
+                ],
+                "rows": [
+                  [
+                    1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v0",
+                    "v0"
+                  ]
+                ],
+                "reference_master_id": "L1_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4_p1",
+                "reference_graph": "1L/masters/P1/graph.dot",
+                "reference_graph_sha256": "f30255ed59d97daac1400f0d85bd50057be9bb40c8b7f12e4275c103ae710640"
+              },
+              {
+                "loop_axes": [
+                  2,
+                  3
+                ],
+                "edge_ids": [
+                  0,
+                  1,
+                  3
+                ],
+                "rows": [
+                  [
+                    1,
+                    1
+                  ],
+                  [
+                    1,
+                    0
+                  ],
+                  [
+                    0,
+                    1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v1",
+                    "v0"
+                  ],
+                  [
+                    "v0",
+                    "v1"
+                  ],
+                  [
+                    "v0",
+                    "v1"
+                  ]
+                ],
+                "reference_master_id": "L2_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1_p1_p1_p1",
+                "reference_graph": "2L/masters/P2/graph.dot",
+                "reference_graph_sha256": "fb5c18447c9c6778a76131876ccfacc7ffc06f7708b230b2709e28d062f51ce2"
+              }
+            ],
+            "unit_jacobian": true,
+            "unit_powers": true
+          },
+          {
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p0_p0_p1_p1_p1_p1_p1_p1_p0",
+            "primitive": "PR6",
+            "graph": "4L/masters/P56/graph.dot",
+            "sha256": "a845737f134b3e3f0168e90b15b4fe8a8d0a09f6963a5f36f4169b2466c03311",
+            "blocks": [
+              {
+                "loop_axes": [
+                  0
+                ],
+                "edge_ids": [
+                  5
+                ],
+                "rows": [
+                  [
+                    1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v0",
+                    "v0"
+                  ]
+                ],
+                "reference_master_id": "L1_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4_p1",
+                "reference_graph": "1L/masters/P1/graph.dot",
+                "reference_graph_sha256": "f30255ed59d97daac1400f0d85bd50057be9bb40c8b7f12e4275c103ae710640"
+              },
+              {
+                "loop_axes": [
+                  1,
+                  2,
+                  3
+                ],
+                "edge_ids": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "rows": [
+                  [
+                    1,
+                    1,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    1
+                  ],
+                  [
+                    1,
+                    0,
+                    0
+                  ],
+                  [
+                    1,
+                    1,
+                    -1
+                  ],
+                  [
+                    0,
+                    1,
+                    0
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v1",
+                    "v2"
+                  ],
+                  [
+                    "v2",
+                    "v0"
+                  ],
+                  [
+                    "v0",
+                    "v1"
+                  ],
+                  [
+                    "v2",
+                    "v0"
+                  ],
+                  [
+                    "v0",
+                    "v1"
+                  ]
+                ],
+                "reference_master_id": "L3_56d4ac620f0309e551e825ce435d23ee4b58e887f2ee639e1bf14006bc9e9f93_p0_p1_p1_p1_p1_p1",
+                "reference_graph": "3L/masters/P14/graph.dot",
+                "reference_graph_sha256": "816c444a7751ce799dd1a406671922800616b66a4d872ffae85646b5987f29ad"
+              }
+            ],
+            "unit_jacobian": true,
+            "unit_powers": true
+          },
+          {
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p0_p1_p1_p0_p1_p1_p1_p0",
+            "primitive": "PR8",
+            "graph": "4L/masters/P61/graph.dot",
+            "sha256": "7b0540fab8486a1eac9e86d0e7168afe3efba55f602b5368d1c6c48231c340ab",
+            "blocks": [
+              {
+                "loop_axes": [
+                  0,
+                  2
+                ],
+                "edge_ids": [
+                  0,
+                  4,
+                  5
+                ],
+                "rows": [
+                  [
+                    0,
+                    1
+                  ],
+                  [
+                    1,
+                    -1
+                  ],
+                  [
+                    1,
+                    0
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v1",
+                    "v0"
+                  ],
+                  [
+                    "v1",
+                    "v0"
+                  ],
+                  [
+                    "v0",
+                    "v1"
+                  ]
+                ],
+                "reference_master_id": "L2_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1_p1_p1_p1",
+                "reference_graph": "2L/masters/P2/graph.dot",
+                "reference_graph_sha256": "fb5c18447c9c6778a76131876ccfacc7ffc06f7708b230b2709e28d062f51ce2"
+              },
+              {
+                "loop_axes": [
+                  1,
+                  3
+                ],
+                "edge_ids": [
+                  1,
+                  2,
+                  3
+                ],
+                "rows": [
+                  [
+                    1,
+                    0
+                  ],
+                  [
+                    0,
+                    1
+                  ],
+                  [
+                    1,
+                    -1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v0",
+                    "v2"
+                  ],
+                  [
+                    "v2",
+                    "v0"
+                  ],
+                  [
+                    "v2",
+                    "v0"
+                  ]
+                ],
+                "reference_master_id": "L2_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1_p1_p1_p1",
+                "reference_graph": "2L/masters/P2/graph.dot",
+                "reference_graph_sha256": "fb5c18447c9c6778a76131876ccfacc7ffc06f7708b230b2709e28d062f51ce2"
+              }
+            ],
+            "unit_jacobian": true,
+            "unit_powers": true
+          },
+          {
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p1_p1_p0_p1_p1_p1_p1_p0",
+            "primitive": "PR13",
+            "graph": "4L/masters/P64/graph.dot",
+            "sha256": "6c6b51994a90e4e2bc293f12f26344157ad9286e8f8b358ca10a498422dd3a2b",
+            "blocks": [
+              {
+                "loop_axes": [
+                  0
+                ],
+                "edge_ids": [
+                  4
+                ],
+                "rows": [
+                  [
+                    1
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v0",
+                    "v0"
+                  ]
+                ],
+                "reference_master_id": "L1_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4_p1",
+                "reference_graph": "1L/masters/P1/graph.dot",
+                "reference_graph_sha256": "f30255ed59d97daac1400f0d85bd50057be9bb40c8b7f12e4275c103ae710640"
+              },
+              {
+                "loop_axes": [
+                  1,
+                  2,
+                  3
+                ],
+                "edge_ids": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  5,
+                  6
+                ],
+                "rows": [
+                  [
+                    0,
+                    1,
+                    0
+                  ],
+                  [
+                    1,
+                    0,
+                    -1
+                  ],
+                  [
+                    0,
+                    0,
+                    1
+                  ],
+                  [
+                    -1,
+                    1,
+                    1
+                  ],
+                  [
+                    1,
+                    -1,
+                    0
+                  ],
+                  [
+                    1,
+                    0,
+                    0
+                  ]
+                ],
+                "endpoints": [
+                  [
+                    "v1",
+                    "v3"
+                  ],
+                  [
+                    "v3",
+                    "v0"
+                  ],
+                  [
+                    "v2",
+                    "v0"
+                  ],
+                  [
+                    "v3",
+                    "v2"
+                  ],
+                  [
+                    "v1",
+                    "v2"
+                  ],
+                  [
+                    "v0",
+                    "v1"
+                  ]
+                ],
+                "reference_master_id": "L3_56d4ac620f0309e551e825ce435d23ee4b58e887f2ee639e1bf14006bc9e9f93_p1_p1_p1_p1_p1_p1",
+                "reference_graph": "3L/masters/P38/graph.dot",
+                "reference_graph_sha256": "3e55c23a0492368c8aa3860a1bf4781c5662f0b676fd1e7402b5dc120ac18103"
+              }
+            ],
+            "unit_jacobian": true,
+            "unit_powers": true
+          }
+        ],
+        "validation": "200 digits verified through native-vs-legacy HPL data and existing direct MATAD tables; legacy FMFT epsilon2 RHS checked at its declared 50 digits; all 132 existing numerical and symbolic prefix coefficients retained and checked",
+        "existing_exactness_upgrades": 0,
+        "existing_exactness_explanation": "All 22 factorized masters already contain complete exact formulas through epsilon1, including PR13; no numeric-only coefficient needs an exactness upgrade",
+        "gamma_policy": "Only the bounded auxiliary normalized-Gamma expansion through epsilon7 required by finite inherited coefficients is used",
+        "exporter_sha256": "9ad5f95bd5a837207ee4b4d848f9d8d89e0de0d31f89dd97f0f5e16e584d157f",
+        "loop_counts": [
+          4
+        ]
+      }
+    }
   },
   "masters": [
     {
@@ -268,6 +2421,250 @@
       "coefficients": [
         {
           "epsilon_power": 3,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
+        }
+      ]
+    },
+    {
+      "master_id": "L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p0_p0_p0_p0_p1_p1_p1_p1_p0",
+      "coefficients": [
+        {
+          "epsilon_power": 2,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
+        }
+      ]
+    },
+    {
+      "master_id": "L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p0_p0_p0_p1_p1_p1_p1_p1_p0",
+      "coefficients": [
+        {
+          "epsilon_power": 2,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
+        },
+        {
+          "epsilon_power": 3,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
+        }
+      ]
+    },
+    {
+      "master_id": "L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p0_p0_p1_p0_p1_p1_p1_p1_p0",
+      "coefficients": [
+        {
+          "epsilon_power": 2,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
+        }
+      ]
+    },
+    {
+      "master_id": "L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p0_p0_p1_p1_p1_p1_p1_p1_p0",
+      "coefficients": [
+        {
+          "epsilon_power": 2,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
+        }
+      ]
+    },
+    {
+      "master_id": "L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p1_p0_p1_p0_p1_p1_p1_p1_p0",
+      "coefficients": [
+        {
+          "epsilon_power": 2,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
+        }
+      ]
+    },
+    {
+      "master_id": "L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p0_p0_p1_p0_p0_p1_p1_p1_p0_p0",
+      "coefficients": [
+        {
+          "epsilon_power": 2,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
+        }
+      ]
+    },
+    {
+      "master_id": "L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p0_p0_p1_p0_p1_p1_p1_p1_p0_p0",
+      "coefficients": [
+        {
+          "epsilon_power": 2,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
+        },
+        {
+          "epsilon_power": 3,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
+        }
+      ]
+    },
+    {
+      "master_id": "L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p0_p0_p1_p1_p0_p1_p1_p1_p0_p0",
+      "coefficients": [
+        {
+          "epsilon_power": 2,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
+        }
+      ]
+    },
+    {
+      "master_id": "L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p0_p0_p1_p1_p1_p1_p1_p1_p0_p0",
+      "coefficients": [
+        {
+          "epsilon_power": 2,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
+        }
+      ]
+    },
+    {
+      "master_id": "L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p0_p1_p1_p1_p1_p1_p1_p0_p0_p0",
+      "coefficients": [
+        {
+          "epsilon_power": 2,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
+        }
+      ]
+    },
+    {
+      "master_id": "L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p0_p0_p0_p0_p1_p1_p1_p1_p0_p0",
+      "coefficients": [
+        {
+          "epsilon_power": 2,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
+        }
+      ]
+    },
+    {
+      "master_id": "L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p0_p0_p0_p1_p1_p1_p1_p1_p0_p0",
+      "coefficients": [
+        {
+          "epsilon_power": 2,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
+        },
+        {
+          "epsilon_power": 3,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
+        }
+      ]
+    },
+    {
+      "master_id": "L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p0_p0_p1_p0_p1_p1_p1_p1_p0_p0",
+      "coefficients": [
+        {
+          "epsilon_power": 2,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
+        }
+      ]
+    },
+    {
+      "master_id": "L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p0_p0_p1_p1_p1_p1_p1_p1_p0_p0",
+      "coefficients": [
+        {
+          "epsilon_power": 2,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
+        }
+      ]
+    },
+    {
+      "master_id": "L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p1_p0_p1_p0_p1_p1_p1_p1_p0_p0",
+      "coefficients": [
+        {
+          "epsilon_power": 2,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
+        }
+      ]
+    },
+    {
+      "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p0_p0_p0_p0_p1_p1_p1_p1_p0",
+      "coefficients": [
+        {
+          "epsilon_power": 2,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
+        }
+      ]
+    },
+    {
+      "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p0_p0_p0_p1_p1_p1_p1_p1_p0",
+      "coefficients": [
+        {
+          "epsilon_power": 2,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
+        },
+        {
+          "epsilon_power": 3,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
+        }
+      ]
+    },
+    {
+      "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p0_p0_p1_p0_p1_p1_p1_p1_p0",
+      "coefficients": [
+        {
+          "epsilon_power": 2,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
+        }
+      ]
+    },
+    {
+      "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p0_p0_p1_p1_p1_p1_p1_p1_p0",
+      "coefficients": [
+        {
+          "epsilon_power": 2,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
+        }
+      ]
+    },
+    {
+      "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p0_p1_p1_p0_p1_p1_p1_p0",
+      "coefficients": [
+        {
+          "epsilon_power": 2,
           "symbolic": true,
           "numerical": true,
           "significant_digits": 200

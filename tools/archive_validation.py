@@ -20,6 +20,10 @@ FILES = (
     "coefficient-supplement.json",
     "coefficient-supplement-validation.json",
     "export_known_laurent_coefficients.py",
+    "coefficient-supplement-four-loop.json",
+    "coefficient-supplement-four-loop-validation.json",
+    "export_four_loop_known_coefficients.py",
+    "coefficient-supplement-serialization-validation.json",
 )
 
 
@@ -39,9 +43,20 @@ def main():
         ("validator-Cargo.lock", args.validator_source / "Cargo.lock"),
     ]
     if args.vakint_source is not None:
-        expected = json.loads(
-            (args.source / "coefficient-supplement.json").read_text()
-        )["provenance"]["source_sha256"]
+        expected = {}
+        for name in (
+            "coefficient-supplement.json",
+            "coefficient-supplement-four-loop.json",
+        ):
+            sources = json.loads((args.source / name).read_text())["provenance"][
+                "source_sha256"
+            ]
+            for filename, checksum in sources.items():
+                if filename in expected and expected[filename] != checksum:
+                    raise ValueError(
+                        f"coefficient validations disagree about source: {filename}"
+                    )
+                expected[filename] = checksum
         for name, checksum in expected.items():
             path = args.vakint_source / "src" / name
             if hashlib.sha256(path.read_bytes()).hexdigest() != checksum:

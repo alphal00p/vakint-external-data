@@ -446,14 +446,27 @@ def generate(version):
             masters.append(record)
         supplemented = [m for m in masters if m["master_id"] in supplements]
         if supplemented:
+            loop_provenance = supplement["provenance"]
+            if campaigns := loop_provenance.get("campaigns"):
+                applicable = [
+                    campaign
+                    for campaign in campaigns.values()
+                    if loops in campaign["loop_counts"]
+                ]
+                if len(applicable) != 1:
+                    raise ValueError(
+                        "supplemented loop must have one provenance campaign"
+                    )
+                loop_provenance = applicable[0]
             write_json(
                 directory / "coefficient-supplement.json",
                 {
                     **{
                         key: value
                         for key, value in supplement.items()
-                        if key != "masters"
+                        if key not in ("masters", "provenance")
                     },
+                    "provenance": loop_provenance,
                     "masters": [
                         entry
                         for entry in supplement["masters"]

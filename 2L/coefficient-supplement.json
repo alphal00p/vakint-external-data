@@ -11,7 +11,11 @@
     "precision_validation": "Native-HPL symbolic evaluation, higher-precision legacy-HPL evaluation, and existing direct MATAD numerical coefficients agree at every stated precision",
     "normalization_validation": "All existing numerical prefix coefficients checked before appending; original JSON payloads archived separately",
     "closed_form_gamma_policy": "No Gamma-only master coefficients exported; auxiliary exp(sum((-1)^n*zeta(n)*epsilon^n/n,n=2..7)) suffices for known epsilon^4 combined with pole order3",
-    "exporter_sha256": "7ef57571a2ed61c08fffdd4072df30ab44617f9644d591b7b5a1911718e90ee5"
+    "exporter_sha256": "9f3fadaa1eed0b90398d3af895e0560adf924e4a7b1d16f93ead14df5571b2b5",
+    "loop_counts": [
+      2,
+      3
+    ]
   },
   "masters": [
     {

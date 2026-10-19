@@ -1,6 +1,6 @@
 {
   "schema": "vakint.external-data.validation-evidence.v1",
-  "symbolica_revision": "2bc005909a3be71b16a3aa3e1075073be17d10c9",
+  "symbolica_revision": "b6cca776f9dce9128fcf10a724228c9445d34070",
   "hpl_convention": "Standard HPL at exp(i*pi/3); HR and HI are plain real and imaginary parts",
   "files": [
     {
@@ -68,24 +68,52 @@
     },
     {
       "path": "coefficient-supplement.json.gz",
-      "sha256": "ed2fbdbf9e15e6d3bc39aa52227ce091714852d4df8b3eb8a18ef70732ddea06",
+      "sha256": "5959dbc7225dedca7d78faf1dfb55896db6fb15eda3a08d98beec7d34f7dcdb1",
       "bytes": 1113,
-      "uncompressed_sha256": "b9ab7a04ec132509f39fac6b36e7bb44110428c2fbdf2c00f858b0741718920d",
+      "uncompressed_sha256": "3d9a1dbe9d0cd658ef61f200dced8f3f690985903390c94b6eb230de75790b81",
       "uncompressed_bytes": 8218
     },
     {
       "path": "coefficient-supplement-validation.json.gz",
-      "sha256": "6096de3cdd3d2531032796741eda578fe9eae5d3123865d59fd2b1806d9950d0",
+      "sha256": "a45b2992ccf3ae4399c3812ad6c642ec5bcda9cd276f8dadc598ecc8b3082db2",
       "bytes": 819,
-      "uncompressed_sha256": "7e7f4442e0d3eb28fdd868b73e10dc6c7037a8d852834472e0c118524cf456bd",
+      "uncompressed_sha256": "12825c1d884d9af7d49900548f6feec21bf2725bc05cc48020186a18b0ba3e8c",
       "uncompressed_bytes": 29391
     },
     {
       "path": "export_known_laurent_coefficients.py.gz",
-      "sha256": "393e680bbeb1feb98f62cd4e946a96af4f4da32020158b5f282dca8fd96effc7",
-      "bytes": 3948,
-      "uncompressed_sha256": "7ef57571a2ed61c08fffdd4072df30ab44617f9644d591b7b5a1911718e90ee5",
-      "uncompressed_bytes": 10852
+      "sha256": "5c293b282852cfe7e9a3edb686dbe9ccbe71a1089a29ec4a54b040c8de3be5c9",
+      "bytes": 4021,
+      "uncompressed_sha256": "9f3fadaa1eed0b90398d3af895e0560adf924e4a7b1d16f93ead14df5571b2b5",
+      "uncompressed_bytes": 11062
+    },
+    {
+      "path": "coefficient-supplement-four-loop.json.gz",
+      "sha256": "0b391c03d092bc5874907925709b5f67e47b4325f401a18114473c99f4f99f1f",
+      "bytes": 3869,
+      "uncompressed_sha256": "aa633f1c60010a3b17504d5ef63065d692a0e2ff79c50144e6b540238772261f",
+      "uncompressed_bytes": 64030
+    },
+    {
+      "path": "coefficient-supplement-four-loop-validation.json.gz",
+      "sha256": "dee8613898be3596e7c698739d1fb05394300624f608849262e12d5d56b43591",
+      "bytes": 3282,
+      "uncompressed_sha256": "167e4d0fd1fe2f77120c1c84d98c2beca7bf98445aa2997dba8e92e853d739a0",
+      "uncompressed_bytes": 102972
+    },
+    {
+      "path": "export_four_loop_known_coefficients.py.gz",
+      "sha256": "9c44cc6c274f20f8c9fa351aa63aa0ea7e147bc563cca66f503746f70c792751",
+      "bytes": 5636,
+      "uncompressed_sha256": "9ad5f95bd5a837207ee4b4d848f9d8d89e0de0d31f89dd97f0f5e16e584d157f",
+      "uncompressed_bytes": 16190
+    },
+    {
+      "path": "coefficient-supplement-serialization-validation.json.gz",
+      "sha256": "6a27b6f4602d5d948b8d21c19397bd22e157b785c7d522f31bde0e83d7879829",
+      "bytes": 748,
+      "uncompressed_sha256": "9466ad3649c1fbaa3d74c63cd1e16d231407f49f67aa4beefe58c2152af6bdbb",
+      "uncompressed_bytes": 10729
     },
     {
       "path": "validator-main.rs.gz",
@@ -121,6 +149,13 @@
       "bytes": 440838,
       "uncompressed_sha256": "4ce90fa0f55bf581a8ee5c714f52739736fccfc39b246cac9bcd912bd918ef57",
       "uncompressed_bytes": 988306
+    },
+    {
+      "path": "source-fmft_numerics.rs.gz",
+      "sha256": "c8769dccba1f7e361054ff2e48516c91be3e862cf14976c9496d63e7167b3f98",
+      "bytes": 32965,
+      "uncompressed_sha256": "717e24caad180cf132e4a533678a0871f157207d94dd1fe755c08ed57fe84ac1",
+      "uncompressed_bytes": 73090
     }
   ]
 }
