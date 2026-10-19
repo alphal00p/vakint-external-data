@@ -1,0 +1,91 @@
+{
+  "schema": "vakint.external-data.validation-evidence.v1",
+  "symbolica_revision": "2bc005909a3be71b16a3aa3e1075073be17d10c9",
+  "hpl_convention": "Standard HPL at exp(i*pi/3); HR and HI are plain real and imaginary parts",
+  "files": [
+    {
+      "path": "hpl-legacy-reference.json.gz",
+      "sha256": "1f2fa0b2639716a19ba4c85a1a683bad7719ffa859f4a12fdb4f39df687909a3",
+      "bytes": 4600080,
+      "uncompressed_sha256": "d720fde95d5de1bce3b5a9a4d3510fcf36e0ed895ffcc155e6202c6042f2141e",
+      "uncompressed_bytes": 18810947
+    },
+    {
+      "path": "hpl-parity-200.json.gz",
+      "sha256": "47cbe8f3017cc7ae7bd01bf50f266f4615f96625014b7eeb6023211ca54ccf92",
+      "bytes": 1955,
+      "uncompressed_sha256": "561f79305951f92b27f3527167a8fc6def1942d693ce2aee611ff71f263c49a5",
+      "uncompressed_bytes": 45515
+    },
+    {
+      "path": "hpl-values-200.tsv.gz",
+      "sha256": "e77c373739d79f1124aaa691113a76f9c5728198b5a5d92718572c748c42e5f4",
+      "bytes": 71986,
+      "uncompressed_sha256": "85862c462d3e74b63c0753a1ddda52d8ad16166e098fd20c73c3652862211893",
+      "uncompressed_bytes": 153909
+    },
+    {
+      "path": "hpl-parity-20000.json.gz",
+      "sha256": "b999bf6a02e8995d8f2c8779faa4dea98a2bb8a28f4858da90068aaf641279c0",
+      "bytes": 2694,
+      "uncompressed_sha256": "31b654a0aee09d6c8b0ffc5a5a1273e4f9acaecbcfbac27eb7b35c5bacd10c83",
+      "uncompressed_bytes": 54344
+    },
+    {
+      "path": "hpl-values-20000.tsv.gz",
+      "sha256": "d81d9a7863aa7add2bacc53a4576603118133a3a97289b6d7ace6cf4ef2b9ce5",
+      "bytes": 6074320,
+      "uncompressed_sha256": "1f6faa919eda72fbeebe50677c0efe77ca6b685d73c49c39113bc1c593c0b35c",
+      "uncompressed_bytes": 12925145
+    },
+    {
+      "path": "hpl-ginac-reference.json.gz",
+      "sha256": "27a3d49fb0a7836edbcf9f396c171cd10af9e5cd249e14b50a09452f7f78e9a0",
+      "bytes": 914,
+      "uncompressed_sha256": "26b8dd98ebe272fcfe7d95bdb8677af3787f7ae42668bc026658c484f9df766e",
+      "uncompressed_bytes": 1762
+    },
+    {
+      "path": "run_hpl_20k.py.gz",
+      "sha256": "f53a45a97ace7a61e811f826017694bb7544162fb4b6b6b5665a4572efa7a25c",
+      "bytes": 1229,
+      "uncompressed_sha256": "b5b907373860a99413139d72cbe35aff4768b83a97fa09abcad2e14fb0413efb",
+      "uncompressed_bytes": 2781
+    },
+    {
+      "path": "shared-constant-references.json.gz",
+      "sha256": "6ccb7bc9fc85dd21637db0aa42f41bd5162300cfc9d5630c76eb2cfbfc3351d2",
+      "bytes": 119016,
+      "uncompressed_sha256": "032a2e1b32dbb5b82e0765bd51a25277fe1445be05ef42705eb5ec1262df79c0",
+      "uncompressed_bytes": 425070
+    },
+    {
+      "path": "shared-constant-validation.json.gz",
+      "sha256": "3a7ce75f980bd09bb7c37f727ed50fe620bfc5e61260035e1df3258a8928cc4f",
+      "bytes": 452,
+      "uncompressed_sha256": "9d1f939af0a80642ea47a691459f664610329b80301fda75026c86357a7bcd45",
+      "uncompressed_bytes": 3483
+    },
+    {
+      "path": "validator-main.rs.gz",
+      "sha256": "aff7f80aeba999edb192cd99cc1020275e4abdb095337a236e7e163fbf0534a9",
+      "bytes": 1287,
+      "uncompressed_sha256": "0e8b27a51f90daa7a02b19d3286619a9f0d9111c55c69cb91dd2c51fbca84482",
+      "uncompressed_bytes": 3457
+    },
+    {
+      "path": "validator-Cargo.toml.gz",
+      "sha256": "c4b571370c21bbda5b59cbd3a05db607a79a9509e61826a0952b1e674437db0f",
+      "bytes": 246,
+      "uncompressed_sha256": "897c334998cb549b232d432ec4785ee39ad8be98e2c7063e792d8c1c214c3886",
+      "uncompressed_bytes": 391
+    },
+    {
+      "path": "validator-Cargo.lock.gz",
+      "sha256": "fa58e700910a932f8e920bbd8b29cb681917975d31b73abe4b575e1fb696d3f2",
+      "bytes": 5497,
+      "uncompressed_sha256": "cba830b11d7bbd97ce934bca29ddcdf9851b98621e8378fa04a05e871c30b82d",
+      "uncompressed_bytes": 20506
+    }
+  ]
+}
