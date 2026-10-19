@@ -8,10 +8,11 @@ import subprocess
 from pathlib import Path
 
 REPOSITORY = "alphal00p/vakint-external-data"
+ROOT = Path(__file__).resolve().parents[1]
 
 
 def run(*arguments):
-    return subprocess.check_output(arguments, text=True).strip()
+    return subprocess.check_output(arguments, text=True, cwd=ROOT).strip()
 
 
 def gh(*arguments):
@@ -33,6 +34,7 @@ def release(tag):
         capture_output=True,
         text=True,
         check=False,
+        cwd=ROOT,
     )
     if result.returncode == 0:
         return json.loads(result.stdout)
@@ -47,6 +49,13 @@ def main():
     args = parser.parse_args()
     directory = args.directory.resolve()
     manifest = json.loads((directory / "manifest.json").read_text())
+    source = json.loads((ROOT / "manifest.json").read_text())
+    if manifest["version"] != source["version"] or {
+        p["loop_count"]: p["manifest_sha256"] for p in manifest["loop_packs"]
+    } != {p["loop_count"]: p["manifest_sha256"] for p in source["loop_packs"]}:
+        raise RuntimeError(
+            "release assets were not built from the committed source manifest"
+        )
     version = manifest["version"]
     if run("git", "status", "--porcelain"):
         raise RuntimeError("commit the validated source tree before publishing")
