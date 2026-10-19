@@ -128,6 +128,37 @@ class PortableDataTests(unittest.TestCase):
         self.assertTrue(coefficient["numerical"])
         self.assertEqual(coefficient["significant_digits"], 50)
 
+    def test_supplemented_orders_have_explicit_capabilities_and_preserved_sources(self):
+        supplement = data.read_json(
+            data.ROOT / "provenance/coefficient-supplement.json"
+        )
+        self.assertEqual(len(supplement["masters"]), 22)
+        self.assertEqual(sum(len(m["coefficients"]) for m in supplement["masters"]), 25)
+        masters = {
+            master["master_id"]: master
+            for loops in (2, 3)
+            for master in data.read_json(data.ROOT / f"{loops}L/manifest.json")[
+                "masters"
+            ]
+        }
+        for entry in supplement["masters"]:
+            actual = {
+                c["epsilon_power"]: c
+                for c in masters[entry["master_id"]]["coefficients"]
+            }
+            for expected in entry["coefficients"]:
+                self.assertEqual(actual[expected["epsilon_power"]], expected)
+        preserved = [
+            entry
+            for entry in data.read_json(data.ROOT / "provenance/migration.json")[
+                "files"
+            ]
+            if entry["path"].startswith("provenance/original-coefficients/")
+        ]
+        self.assertEqual(len(preserved), 44)
+        for entry in preserved:
+            self.assertEqual(data.digest(data.ROOT / entry["path"]), entry["sha256"])
+
 
 if __name__ == "__main__":
     unittest.main()

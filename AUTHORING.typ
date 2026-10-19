@@ -25,6 +25,14 @@ migration receipt live in `provenance`. Do not rewrite those original records
 when publishing new producer results. Add new provenance receipts and update
 the generation tooling to select the new source explicitly.
 
+`provenance/coefficient-supplement.json` records validated Laurent orders that
+were available in authoritative master formulas but omitted from the original
+export. It extends individual master identities with explicit per-coefficient
+exactness and numerical precision. Original coefficient files are preserved in
+`provenance/original-coefficients`, and migration receipt paths are retargeted to
+those unchanged bytes. Each affected runtime loop pack includes its own slice
+of the supplement receipt. The original manifest itself is never rewritten.
+
 == Graph conventions and coverage
 
 Five-loop maximal parent graphs come from the audited physical parent incidence

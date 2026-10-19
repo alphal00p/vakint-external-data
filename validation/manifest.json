@@ -67,6 +67,27 @@
       "uncompressed_bytes": 3483
     },
     {
+      "path": "coefficient-supplement.json.gz",
+      "sha256": "ed2fbdbf9e15e6d3bc39aa52227ce091714852d4df8b3eb8a18ef70732ddea06",
+      "bytes": 1113,
+      "uncompressed_sha256": "b9ab7a04ec132509f39fac6b36e7bb44110428c2fbdf2c00f858b0741718920d",
+      "uncompressed_bytes": 8218
+    },
+    {
+      "path": "coefficient-supplement-validation.json.gz",
+      "sha256": "6096de3cdd3d2531032796741eda578fe9eae5d3123865d59fd2b1806d9950d0",
+      "bytes": 819,
+      "uncompressed_sha256": "7e7f4442e0d3eb28fdd868b73e10dc6c7037a8d852834472e0c118524cf456bd",
+      "uncompressed_bytes": 29391
+    },
+    {
+      "path": "export_known_laurent_coefficients.py.gz",
+      "sha256": "393e680bbeb1feb98f62cd4e946a96af4f4da32020158b5f282dca8fd96effc7",
+      "bytes": 3948,
+      "uncompressed_sha256": "7ef57571a2ed61c08fffdd4072df30ab44617f9644d591b7b5a1911718e90ee5",
+      "uncompressed_bytes": 10852
+    },
+    {
       "path": "validator-main.rs.gz",
       "sha256": "aff7f80aeba999edb192cd99cc1020275e4abdb095337a236e7e163fbf0534a9",
       "bytes": 1287,
@@ -86,6 +107,20 @@
       "bytes": 5497,
       "uncompressed_sha256": "cba830b11d7bbd97ce934bca29ddcdf9851b98621e8378fa04a05e871c30b82d",
       "uncompressed_bytes": 20506
+    },
+    {
+      "path": "source-matad.rs.gz",
+      "sha256": "7d235825cb9736636f392f8d5fa2729c7215d5facb44e9f047b4aac87243b8d8",
+      "bytes": 16158,
+      "uncompressed_sha256": "4ce33a9f6c3a48b2255de820d7d3fe51eaa9c1f1ef05a86a29f0656229775f33",
+      "uncompressed_bytes": 73846
+    },
+    {
+      "path": "source-matad_numerics.rs.gz",
+      "sha256": "a7203054ee5e49dda671e3c4b325f626c9f1fed93c21467276b2343918fb9fb0",
+      "bytes": 440838,
+      "uncompressed_sha256": "4ce90fa0f55bf581a8ee5c714f52739736fccfc39b246cac9bcd912bd918ef57",
+      "uncompressed_bytes": 988306
     }
   ]
 }

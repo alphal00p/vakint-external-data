@@ -329,6 +329,21 @@ def generate(version):
     if not re.fullmatch(r"v[0-9]+\.[0-9]+\.[0-9]+(?:[-+][A-Za-z0-9.-]+)?", version):
         raise ValueError("version must be an immutable vMAJOR.MINOR.PATCH tag")
     original = read_json(ROOT / "provenance/original-root/manifest.json")
+    supplement_path = ROOT / "provenance/coefficient-supplement.json"
+    supplement = read_json(supplement_path) if supplement_path.exists() else None
+    supplements = {}
+    if supplement is not None:
+        if supplement["schema"] != "vakint.external-data.coefficient-supplement.v1":
+            raise ValueError("unsupported coefficient supplement schema")
+        known = {master["master_id"] for master in original["masters"]}
+        for entry in supplement["masters"]:
+            name = entry["master_id"]
+            if name not in known or name in supplements:
+                raise ValueError("unknown or duplicate supplemented master")
+            coefficients = {c["epsilon_power"]: c for c in entry["coefficients"]}
+            if len(coefficients) != len(entry["coefficients"]):
+                raise ValueError("duplicate supplemented coefficient")
+            supplements[name] = coefficients
     parent_graphs = generate_graphs(original)
     loop_packs = []
     for loops in range(1, 6):
@@ -366,6 +381,8 @@ def generate(version):
                 "path": graph.relative_to(directory).as_posix(),
                 "sha256": digest(graph),
             }
+            for file in record["files"].values():
+                file["sha256"] = digest(checked_path(directory, file["path"]))
             symbolic = (
                 read_json(directory / record["files"]["symbolic.json"]["path"])
                 if "symbolic.json" in record["files"]
@@ -380,22 +397,70 @@ def generate(version):
                 set(master.get("symbolic_powers", [])),
                 {p for p, _ in numerical},
             )
+            added = supplements.get(master["master_id"], {})
+            original_range = set(
+                range(master["epsilon_range"][0], master["epsilon_range"][1] + 1)
+            )
+            if set(added) & original_range:
+                raise ValueError(
+                    "coefficient supplements must extend, not overwrite, original orders"
+                )
+            symbolic_powers.update(
+                power for power, item in added.items() if item["symbolic"]
+            )
             if not symbolic_powers <= {p for p, _ in symbolic}:
                 raise ValueError("declared exact coefficient has no symbolic payload")
             powers = sorted(symbolic_powers | numerical_powers)
+            if set(powers) - original_range != set(added):
+                raise ValueError(
+                    "new coefficient payloads require an explicit validated supplement"
+                )
+            for power, item in added.items():
+                if item["symbolic"] != (power in symbolic_powers) or item[
+                    "numerical"
+                ] != (power in numerical_powers):
+                    raise ValueError(
+                        "supplement availability disagrees with coefficient payloads"
+                    )
             record["available_epsilon_powers"] = powers
             record["coefficients"] = [
                 {
                     "epsilon_power": power,
                     "symbolic": power in symbolic_powers,
                     "numerical": power in numerical_powers,
-                    "significant_digits": master.get("significant_digits")
+                    "significant_digits": added.get(power, {}).get(
+                        "significant_digits", master.get("significant_digits")
+                    )
                     if power in numerical_powers
                     else None,
                 }
                 for power in powers
             ]
+            if added:
+                record["symbolic_powers"] = sorted(symbolic_powers)
+                record["epsilon_range"] = [min(powers), max(powers)]
+                record["coefficient_supplement"] = "coefficient-supplement.json"
+                record.get("fastsecdec_configuration", {}).get("generation", {})[
+                    "order"
+                ] = max(powers)
             masters.append(record)
+        supplemented = [m for m in masters if m["master_id"] in supplements]
+        if supplemented:
+            write_json(
+                directory / "coefficient-supplement.json",
+                {
+                    **{
+                        key: value
+                        for key, value in supplement.items()
+                        if key != "masters"
+                    },
+                    "masters": [
+                        entry
+                        for entry in supplement["masters"]
+                        if entry["master_id"] in {m["master_id"] for m in supplemented}
+                    ],
+                },
+            )
         write_json(directory / "coverage.json", coverage(loops))
         cache = {"available": False}
         if loops <= 4:
@@ -473,6 +538,20 @@ def generate(version):
         ROOT / "manifest.json",
         {"schema": ROOT_SCHEMA, "version": version, "loop_packs": loop_packs},
     )
+    migration_path = ROOT / "provenance/migration.json"
+    migration = read_json(migration_path)
+    for item in migration["files"]:
+        path = checked_path(ROOT, item["path"])
+        if file_record(path) != {key: item[key] for key in ("sha256", "bytes")}:
+            preserved = Path("provenance/original-coefficients") / item["source"]
+            if file_record(checked_path(ROOT, preserved.as_posix())) != {
+                key: item[key] for key in ("sha256", "bytes")
+            }:
+                raise ValueError(
+                    f"original payload was not preserved: {item['source']}"
+                )
+            item["path"] = preserved.as_posix()
+    write_json(migration_path, migration)
     print(f"Generated {version} metadata for all five loop packs")
 
 
@@ -594,6 +673,19 @@ def validate(root=None):
                 k: item[k] for k in ("sha256", "bytes")
             }:
                 raise ValueError(f"original migrated payload changed: {item['path']}")
+    evidence = root / "validation/manifest.json"
+    if evidence.exists():
+        for item in read_json(evidence)["files"]:
+            path = checked_path(evidence.parent, item["path"])
+            if file_record(path) != {key: item[key] for key in ("sha256", "bytes")}:
+                raise ValueError("compressed validation evidence checksum mismatch")
+            with gzip.open(path, "rb") as stream:
+                raw = stream.read(item["uncompressed_bytes"] + 1)
+            if (
+                len(raw) != item["uncompressed_bytes"]
+                or hashlib.sha256(raw).hexdigest() != item["uncompressed_sha256"]
+            ):
+                raise ValueError("original validation evidence checksum mismatch")
     print(json.dumps({"version": manifest["version"], "validated": counts}))
     return manifest
 

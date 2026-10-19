@@ -734,7 +734,7 @@
       "alias": "K6",
       "epsilon_range": [
         -3,
-        2
+        3
       ],
       "exact_basis_expression": "(-Gam(1,1)/(ep*(ep-1)))*(-miT111)",
       "family_sha256": "56d4ac620f0309e551e825ce435d23ee4b58e887f2ee639e1bf14006bc9e9f93",
@@ -761,7 +761,8 @@
         -1,
         0,
         1,
-        2
+        2,
+        3
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -866,7 +867,7 @@
           }
         },
         "generation": {
-          "order": 2,
+          "order": 3,
           "contraction_mode": "dots"
         }
       },
@@ -874,11 +875,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P4/numerical.json",
-          "sha256": "b298a0c80c000ae1a92daa467c6c8917c486fb6080dd0060041b7d8ac919a9dd"
+          "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb"
         },
         "symbolic.json": {
           "path": "masters/P4/symbolic.json",
-          "sha256": "367179352edaca34d2a8594c466565149ab998aa217d3225e84333381e9f1612"
+          "sha256": "f39ae2d83d7313349fa749710c9c2ba13ccf3a026009aefd43da8667f85cfa13"
         },
         "graph.dot": {
           "path": "masters/P4/graph.dot",
@@ -898,7 +899,8 @@
         -1,
         0,
         1,
-        2
+        2,
+        3
       ],
       "coefficients": [
         {
@@ -936,8 +938,15 @@
           "symbolic": true,
           "numerical": true,
           "significant_digits": 200
+        },
+        {
+          "epsilon_power": 3,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
         }
-      ]
+      ],
+      "coefficient_supplement": "coefficient-supplement.json"
     },
     {
       "alias": "K6",
@@ -1540,7 +1549,7 @@
       "alias": "K6",
       "epsilon_range": [
         -3,
-        2
+        3
       ],
       "exact_basis_expression": "(-Gam(1,1)/(ep*(ep-1)))*(-miT111)",
       "family_sha256": "56d4ac620f0309e551e825ce435d23ee4b58e887f2ee639e1bf14006bc9e9f93",
@@ -1567,7 +1576,8 @@
         -1,
         0,
         1,
-        2
+        2,
+        3
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -1672,7 +1682,7 @@
           }
         },
         "generation": {
-          "order": 2,
+          "order": 3,
           "contraction_mode": "dots"
         }
       },
@@ -1680,11 +1690,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P8/numerical.json",
-          "sha256": "b298a0c80c000ae1a92daa467c6c8917c486fb6080dd0060041b7d8ac919a9dd"
+          "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb"
         },
         "symbolic.json": {
           "path": "masters/P8/symbolic.json",
-          "sha256": "367179352edaca34d2a8594c466565149ab998aa217d3225e84333381e9f1612"
+          "sha256": "f39ae2d83d7313349fa749710c9c2ba13ccf3a026009aefd43da8667f85cfa13"
         },
         "graph.dot": {
           "path": "masters/P8/graph.dot",
@@ -1704,7 +1714,8 @@
         -1,
         0,
         1,
-        2
+        2,
+        3
       ],
       "coefficients": [
         {
@@ -1742,8 +1753,15 @@
           "symbolic": true,
           "numerical": true,
           "significant_digits": 200
+        },
+        {
+          "epsilon_power": 3,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
         }
-      ]
+      ],
+      "coefficient_supplement": "coefficient-supplement.json"
     },
     {
       "alias": "K6",
@@ -1948,7 +1966,7 @@
       "alias": "K6",
       "epsilon_range": [
         -3,
-        2
+        3
       ],
       "exact_basis_expression": "(-Gam(1,1)/(ep*(ep-1)))*(-miT111)",
       "family_sha256": "56d4ac620f0309e551e825ce435d23ee4b58e887f2ee639e1bf14006bc9e9f93",
@@ -1975,7 +1993,8 @@
         -1,
         0,
         1,
-        2
+        2,
+        3
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -2080,7 +2099,7 @@
           }
         },
         "generation": {
-          "order": 2,
+          "order": 3,
           "contraction_mode": "dots"
         }
       },
@@ -2088,11 +2107,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P10/numerical.json",
-          "sha256": "b298a0c80c000ae1a92daa467c6c8917c486fb6080dd0060041b7d8ac919a9dd"
+          "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb"
         },
         "symbolic.json": {
           "path": "masters/P10/symbolic.json",
-          "sha256": "367179352edaca34d2a8594c466565149ab998aa217d3225e84333381e9f1612"
+          "sha256": "f39ae2d83d7313349fa749710c9c2ba13ccf3a026009aefd43da8667f85cfa13"
         },
         "graph.dot": {
           "path": "masters/P10/graph.dot",
@@ -2112,7 +2131,8 @@
         -1,
         0,
         1,
-        2
+        2,
+        3
       ],
       "coefficients": [
         {
@@ -2150,8 +2170,15 @@
           "symbolic": true,
           "numerical": true,
           "significant_digits": 200
+        },
+        {
+          "epsilon_power": 3,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
         }
-      ]
+      ],
+      "coefficient_supplement": "coefficient-supplement.json"
     },
     {
       "alias": "K6",
@@ -2356,7 +2383,7 @@
       "alias": "K6",
       "epsilon_range": [
         -3,
-        2
+        3
       ],
       "exact_basis_expression": "(-Gam(1,1)/(ep*(ep-1)))*(-miT111)",
       "family_sha256": "56d4ac620f0309e551e825ce435d23ee4b58e887f2ee639e1bf14006bc9e9f93",
@@ -2383,7 +2410,8 @@
         -1,
         0,
         1,
-        2
+        2,
+        3
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -2488,7 +2516,7 @@
           }
         },
         "generation": {
-          "order": 2,
+          "order": 3,
           "contraction_mode": "dots"
         }
       },
@@ -2496,11 +2524,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P12/numerical.json",
-          "sha256": "b298a0c80c000ae1a92daa467c6c8917c486fb6080dd0060041b7d8ac919a9dd"
+          "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb"
         },
         "symbolic.json": {
           "path": "masters/P12/symbolic.json",
-          "sha256": "367179352edaca34d2a8594c466565149ab998aa217d3225e84333381e9f1612"
+          "sha256": "f39ae2d83d7313349fa749710c9c2ba13ccf3a026009aefd43da8667f85cfa13"
         },
         "graph.dot": {
           "path": "masters/P12/graph.dot",
@@ -2520,7 +2548,8 @@
         -1,
         0,
         1,
-        2
+        2,
+        3
       ],
       "coefficients": [
         {
@@ -2558,14 +2587,21 @@
           "symbolic": true,
           "numerical": true,
           "significant_digits": 200
+        },
+        {
+          "epsilon_power": 3,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
         }
-      ]
+      ],
+      "coefficient_supplement": "coefficient-supplement.json"
     },
     {
       "alias": "K6",
       "epsilon_range": [
         -3,
-        2
+        4
       ],
       "exact_basis_expression": "miBN",
       "family_sha256": "56d4ac620f0309e551e825ce435d23ee4b58e887f2ee639e1bf14006bc9e9f93",
@@ -2592,7 +2628,9 @@
         -1,
         0,
         1,
-        2
+        2,
+        3,
+        4
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -2697,7 +2735,7 @@
           }
         },
         "generation": {
-          "order": 2,
+          "order": 4,
           "contraction_mode": "dots"
         }
       },
@@ -2705,11 +2743,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P13/numerical.json",
-          "sha256": "f0971f1173211c243e4425f03cf97346cc90247092dc7e3ea889e43e79f2a070"
+          "sha256": "22cec8ec1ac3768334266d369e34b8b904f4a17ecdf6b3c81eab3d41b272329a"
         },
         "symbolic.json": {
           "path": "masters/P13/symbolic.json",
-          "sha256": "15f755b326f95f33bdb6cdaa558d2da5d3a005b2cf8afba97e6be5bfde0c1a24"
+          "sha256": "7febcf5642123985bd3ca337bd2116c9aec723c63ffc2f9bf340f1facf0d2600"
         },
         "graph.dot": {
           "path": "masters/P13/graph.dot",
@@ -2729,7 +2767,9 @@
         -1,
         0,
         1,
-        2
+        2,
+        3,
+        4
       ],
       "coefficients": [
         {
@@ -2767,14 +2807,27 @@
           "symbolic": true,
           "numerical": true,
           "significant_digits": 200
+        },
+        {
+          "epsilon_power": 3,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
+        },
+        {
+          "epsilon_power": 4,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
         }
-      ]
+      ],
+      "coefficient_supplement": "coefficient-supplement.json"
     },
     {
       "alias": "K6",
       "epsilon_range": [
         -3,
-        2
+        3
       ],
       "exact_basis_expression": "(((-2*ep+4)*-2208+(-2*ep+4)^2*1736+(-2*ep+4)^3*-718+(-2*ep+4)^4*165+(-2*ep+4)^5*-20+(-2*ep+4)^6+1152)^(-1)*Gam(1,1)^3*-16+((-2*ep+4)*-3+12)*((-2*ep+4)*2+-6)^(-1)*miD5+((-2*ep+4)*-7+(-2*ep+4)^2+12)^(-1)*-4*Gam(1,1)*miT111+((-2*ep+4)*3+-8)*((-2*ep+4)*8+-24)^(-1)*miBN)*-1",
       "family_sha256": "56d4ac620f0309e551e825ce435d23ee4b58e887f2ee639e1bf14006bc9e9f93",
@@ -2801,7 +2854,8 @@
         -1,
         0,
         1,
-        2
+        2,
+        3
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -2916,7 +2970,7 @@
           }
         },
         "generation": {
-          "order": 2,
+          "order": 3,
           "contraction_mode": "dots"
         }
       },
@@ -2924,11 +2978,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P14/numerical.json",
-          "sha256": "b3f3f46efc83f71bd11e4602c1d5b521cc08ed803581299d5c0bdbbb5fa6e88f"
+          "sha256": "7fed26d22b87a9d077a5e1d7a9680d8632821a5315e410a4ce931c760904e7dd"
         },
         "symbolic.json": {
           "path": "masters/P14/symbolic.json",
-          "sha256": "d91be2f8b49a621e61d61f4fe14693bdcad2da05c3df944215af88c52cc3f20b"
+          "sha256": "7cb8c6c7f323527fb0fbdc9e7aff6778d20b2e1daf5cd56c578f247c3b8ee1a0"
         },
         "graph.dot": {
           "path": "masters/P14/graph.dot",
@@ -2948,7 +3002,8 @@
         -1,
         0,
         1,
-        2
+        2,
+        3
       ],
       "coefficients": [
         {
@@ -2986,8 +3041,15 @@
           "symbolic": true,
           "numerical": true,
           "significant_digits": 200
+        },
+        {
+          "epsilon_power": 3,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
         }
-      ]
+      ],
+      "coefficient_supplement": "coefficient-supplement.json"
     },
     {
       "alias": "K6",
@@ -3590,7 +3652,7 @@
       "alias": "K6",
       "epsilon_range": [
         -3,
-        2
+        3
       ],
       "exact_basis_expression": "(-Gam(1,1)/(ep*(ep-1)))*(-miT111)",
       "family_sha256": "56d4ac620f0309e551e825ce435d23ee4b58e887f2ee639e1bf14006bc9e9f93",
@@ -3617,7 +3679,8 @@
         -1,
         0,
         1,
-        2
+        2,
+        3
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -3722,7 +3785,7 @@
           }
         },
         "generation": {
-          "order": 2,
+          "order": 3,
           "contraction_mode": "dots"
         }
       },
@@ -3730,11 +3793,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P18/numerical.json",
-          "sha256": "b298a0c80c000ae1a92daa467c6c8917c486fb6080dd0060041b7d8ac919a9dd"
+          "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb"
         },
         "symbolic.json": {
           "path": "masters/P18/symbolic.json",
-          "sha256": "367179352edaca34d2a8594c466565149ab998aa217d3225e84333381e9f1612"
+          "sha256": "f39ae2d83d7313349fa749710c9c2ba13ccf3a026009aefd43da8667f85cfa13"
         },
         "graph.dot": {
           "path": "masters/P18/graph.dot",
@@ -3754,7 +3817,8 @@
         -1,
         0,
         1,
-        2
+        2,
+        3
       ],
       "coefficients": [
         {
@@ -3792,8 +3856,15 @@
           "symbolic": true,
           "numerical": true,
           "significant_digits": 200
+        },
+        {
+          "epsilon_power": 3,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
         }
-      ]
+      ],
+      "coefficient_supplement": "coefficient-supplement.json"
     },
     {
       "alias": "K6",
@@ -4197,7 +4268,7 @@
       "alias": "K6",
       "epsilon_range": [
         -3,
-        2
+        4
       ],
       "exact_basis_expression": "miBN",
       "family_sha256": "56d4ac620f0309e551e825ce435d23ee4b58e887f2ee639e1bf14006bc9e9f93",
@@ -4224,7 +4295,9 @@
         -1,
         0,
         1,
-        2
+        2,
+        3,
+        4
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -4329,7 +4402,7 @@
           }
         },
         "generation": {
-          "order": 2,
+          "order": 4,
           "contraction_mode": "dots"
         }
       },
@@ -4337,11 +4410,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P21/numerical.json",
-          "sha256": "f0971f1173211c243e4425f03cf97346cc90247092dc7e3ea889e43e79f2a070"
+          "sha256": "22cec8ec1ac3768334266d369e34b8b904f4a17ecdf6b3c81eab3d41b272329a"
         },
         "symbolic.json": {
           "path": "masters/P21/symbolic.json",
-          "sha256": "15f755b326f95f33bdb6cdaa558d2da5d3a005b2cf8afba97e6be5bfde0c1a24"
+          "sha256": "7febcf5642123985bd3ca337bd2116c9aec723c63ffc2f9bf340f1facf0d2600"
         },
         "graph.dot": {
           "path": "masters/P21/graph.dot",
@@ -4361,7 +4434,9 @@
         -1,
         0,
         1,
-        2
+        2,
+        3,
+        4
       ],
       "coefficients": [
         {
@@ -4399,14 +4474,27 @@
           "symbolic": true,
           "numerical": true,
           "significant_digits": 200
+        },
+        {
+          "epsilon_power": 3,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
+        },
+        {
+          "epsilon_power": 4,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
         }
-      ]
+      ],
+      "coefficient_supplement": "coefficient-supplement.json"
     },
     {
       "alias": "K6",
       "epsilon_range": [
         -3,
-        2
+        3
       ],
       "exact_basis_expression": "(-Gam(1,1)/(ep*(ep-1)))*(-miT111)",
       "family_sha256": "56d4ac620f0309e551e825ce435d23ee4b58e887f2ee639e1bf14006bc9e9f93",
@@ -4433,7 +4521,8 @@
         -1,
         0,
         1,
-        2
+        2,
+        3
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -4538,7 +4627,7 @@
           }
         },
         "generation": {
-          "order": 2,
+          "order": 3,
           "contraction_mode": "dots"
         }
       },
@@ -4546,11 +4635,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P22/numerical.json",
-          "sha256": "b298a0c80c000ae1a92daa467c6c8917c486fb6080dd0060041b7d8ac919a9dd"
+          "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb"
         },
         "symbolic.json": {
           "path": "masters/P22/symbolic.json",
-          "sha256": "367179352edaca34d2a8594c466565149ab998aa217d3225e84333381e9f1612"
+          "sha256": "f39ae2d83d7313349fa749710c9c2ba13ccf3a026009aefd43da8667f85cfa13"
         },
         "graph.dot": {
           "path": "masters/P22/graph.dot",
@@ -4570,7 +4659,8 @@
         -1,
         0,
         1,
-        2
+        2,
+        3
       ],
       "coefficients": [
         {
@@ -4608,14 +4698,21 @@
           "symbolic": true,
           "numerical": true,
           "significant_digits": 200
+        },
+        {
+          "epsilon_power": 3,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
         }
-      ]
+      ],
+      "coefficient_supplement": "coefficient-supplement.json"
     },
     {
       "alias": "K6",
       "epsilon_range": [
         -3,
-        2
+        3
       ],
       "exact_basis_expression": "(-Gam(1,1)/(ep*(ep-1)))*(-miT111)",
       "family_sha256": "56d4ac620f0309e551e825ce435d23ee4b58e887f2ee639e1bf14006bc9e9f93",
@@ -4642,7 +4739,8 @@
         -1,
         0,
         1,
-        2
+        2,
+        3
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -4747,7 +4845,7 @@
           }
         },
         "generation": {
-          "order": 2,
+          "order": 3,
           "contraction_mode": "dots"
         }
       },
@@ -4755,11 +4853,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P23/numerical.json",
-          "sha256": "b298a0c80c000ae1a92daa467c6c8917c486fb6080dd0060041b7d8ac919a9dd"
+          "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb"
         },
         "symbolic.json": {
           "path": "masters/P23/symbolic.json",
-          "sha256": "367179352edaca34d2a8594c466565149ab998aa217d3225e84333381e9f1612"
+          "sha256": "f39ae2d83d7313349fa749710c9c2ba13ccf3a026009aefd43da8667f85cfa13"
         },
         "graph.dot": {
           "path": "masters/P23/graph.dot",
@@ -4779,7 +4877,8 @@
         -1,
         0,
         1,
-        2
+        2,
+        3
       ],
       "coefficients": [
         {
@@ -4817,14 +4916,21 @@
           "symbolic": true,
           "numerical": true,
           "significant_digits": 200
+        },
+        {
+          "epsilon_power": 3,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
         }
-      ]
+      ],
+      "coefficient_supplement": "coefficient-supplement.json"
     },
     {
       "alias": "K6",
       "epsilon_range": [
         -3,
-        2
+        3
       ],
       "exact_basis_expression": "(((-2*ep+4)*-2208+(-2*ep+4)^2*1736+(-2*ep+4)^3*-718+(-2*ep+4)^4*165+(-2*ep+4)^5*-20+(-2*ep+4)^6+1152)^(-1)*Gam(1,1)^3*-16+((-2*ep+4)*-3+12)*((-2*ep+4)*2+-6)^(-1)*miD5+((-2*ep+4)*-7+(-2*ep+4)^2+12)^(-1)*-4*Gam(1,1)*miT111+((-2*ep+4)*3+-8)*((-2*ep+4)*8+-24)^(-1)*miBN)*-1",
       "family_sha256": "56d4ac620f0309e551e825ce435d23ee4b58e887f2ee639e1bf14006bc9e9f93",
@@ -4851,7 +4957,8 @@
         -1,
         0,
         1,
-        2
+        2,
+        3
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -4966,7 +5073,7 @@
           }
         },
         "generation": {
-          "order": 2,
+          "order": 3,
           "contraction_mode": "dots"
         }
       },
@@ -4974,11 +5081,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P24/numerical.json",
-          "sha256": "b3f3f46efc83f71bd11e4602c1d5b521cc08ed803581299d5c0bdbbb5fa6e88f"
+          "sha256": "7fed26d22b87a9d077a5e1d7a9680d8632821a5315e410a4ce931c760904e7dd"
         },
         "symbolic.json": {
           "path": "masters/P24/symbolic.json",
-          "sha256": "d91be2f8b49a621e61d61f4fe14693bdcad2da05c3df944215af88c52cc3f20b"
+          "sha256": "7cb8c6c7f323527fb0fbdc9e7aff6778d20b2e1daf5cd56c578f247c3b8ee1a0"
         },
         "graph.dot": {
           "path": "masters/P24/graph.dot",
@@ -4998,7 +5105,8 @@
         -1,
         0,
         1,
-        2
+        2,
+        3
       ],
       "coefficients": [
         {
@@ -5036,8 +5144,15 @@
           "symbolic": true,
           "numerical": true,
           "significant_digits": 200
+        },
+        {
+          "epsilon_power": 3,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
         }
-      ]
+      ],
+      "coefficient_supplement": "coefficient-supplement.json"
     },
     {
       "alias": "K6",
@@ -5242,7 +5357,7 @@
       "alias": "K6",
       "epsilon_range": [
         -3,
-        2
+        3
       ],
       "exact_basis_expression": "(-Gam(1,1)/(ep*(ep-1)))*(-miT111)",
       "family_sha256": "56d4ac620f0309e551e825ce435d23ee4b58e887f2ee639e1bf14006bc9e9f93",
@@ -5269,7 +5384,8 @@
         -1,
         0,
         1,
-        2
+        2,
+        3
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -5374,7 +5490,7 @@
           }
         },
         "generation": {
-          "order": 2,
+          "order": 3,
           "contraction_mode": "dots"
         }
       },
@@ -5382,11 +5498,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P26/numerical.json",
-          "sha256": "b298a0c80c000ae1a92daa467c6c8917c486fb6080dd0060041b7d8ac919a9dd"
+          "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb"
         },
         "symbolic.json": {
           "path": "masters/P26/symbolic.json",
-          "sha256": "367179352edaca34d2a8594c466565149ab998aa217d3225e84333381e9f1612"
+          "sha256": "f39ae2d83d7313349fa749710c9c2ba13ccf3a026009aefd43da8667f85cfa13"
         },
         "graph.dot": {
           "path": "masters/P26/graph.dot",
@@ -5406,7 +5522,8 @@
         -1,
         0,
         1,
-        2
+        2,
+        3
       ],
       "coefficients": [
         {
@@ -5444,8 +5561,15 @@
           "symbolic": true,
           "numerical": true,
           "significant_digits": 200
+        },
+        {
+          "epsilon_power": 3,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
         }
-      ]
+      ],
+      "coefficient_supplement": "coefficient-supplement.json"
     },
     {
       "alias": "K6",
@@ -5650,7 +5774,7 @@
       "alias": "K6",
       "epsilon_range": [
         -3,
-        2
+        4
       ],
       "exact_basis_expression": "miBN",
       "family_sha256": "56d4ac620f0309e551e825ce435d23ee4b58e887f2ee639e1bf14006bc9e9f93",
@@ -5677,7 +5801,9 @@
         -1,
         0,
         1,
-        2
+        2,
+        3,
+        4
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -5782,7 +5908,7 @@
           }
         },
         "generation": {
-          "order": 2,
+          "order": 4,
           "contraction_mode": "dots"
         }
       },
@@ -5790,11 +5916,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P28/numerical.json",
-          "sha256": "f0971f1173211c243e4425f03cf97346cc90247092dc7e3ea889e43e79f2a070"
+          "sha256": "22cec8ec1ac3768334266d369e34b8b904f4a17ecdf6b3c81eab3d41b272329a"
         },
         "symbolic.json": {
           "path": "masters/P28/symbolic.json",
-          "sha256": "15f755b326f95f33bdb6cdaa558d2da5d3a005b2cf8afba97e6be5bfde0c1a24"
+          "sha256": "7febcf5642123985bd3ca337bd2116c9aec723c63ffc2f9bf340f1facf0d2600"
         },
         "graph.dot": {
           "path": "masters/P28/graph.dot",
@@ -5814,7 +5940,9 @@
         -1,
         0,
         1,
-        2
+        2,
+        3,
+        4
       ],
       "coefficients": [
         {
@@ -5852,14 +5980,27 @@
           "symbolic": true,
           "numerical": true,
           "significant_digits": 200
+        },
+        {
+          "epsilon_power": 3,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
+        },
+        {
+          "epsilon_power": 4,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
         }
-      ]
+      ],
+      "coefficient_supplement": "coefficient-supplement.json"
     },
     {
       "alias": "K6",
       "epsilon_range": [
         -3,
-        2
+        3
       ],
       "exact_basis_expression": "(-Gam(1,1)/(ep*(ep-1)))*(-miT111)",
       "family_sha256": "56d4ac620f0309e551e825ce435d23ee4b58e887f2ee639e1bf14006bc9e9f93",
@@ -5886,7 +6027,8 @@
         -1,
         0,
         1,
-        2
+        2,
+        3
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -5991,7 +6133,7 @@
           }
         },
         "generation": {
-          "order": 2,
+          "order": 3,
           "contraction_mode": "dots"
         }
       },
@@ -5999,11 +6141,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P29/numerical.json",
-          "sha256": "b298a0c80c000ae1a92daa467c6c8917c486fb6080dd0060041b7d8ac919a9dd"
+          "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb"
         },
         "symbolic.json": {
           "path": "masters/P29/symbolic.json",
-          "sha256": "367179352edaca34d2a8594c466565149ab998aa217d3225e84333381e9f1612"
+          "sha256": "f39ae2d83d7313349fa749710c9c2ba13ccf3a026009aefd43da8667f85cfa13"
         },
         "graph.dot": {
           "path": "masters/P29/graph.dot",
@@ -6023,7 +6165,8 @@
         -1,
         0,
         1,
-        2
+        2,
+        3
       ],
       "coefficients": [
         {
@@ -6061,14 +6204,21 @@
           "symbolic": true,
           "numerical": true,
           "significant_digits": 200
+        },
+        {
+          "epsilon_power": 3,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
         }
-      ]
+      ],
+      "coefficient_supplement": "coefficient-supplement.json"
     },
     {
       "alias": "K6",
       "epsilon_range": [
         -3,
-        2
+        3
       ],
       "exact_basis_expression": "(((-2*ep+4)*-2208+(-2*ep+4)^2*1736+(-2*ep+4)^3*-718+(-2*ep+4)^4*165+(-2*ep+4)^5*-20+(-2*ep+4)^6+1152)^(-1)*Gam(1,1)^3*-16+((-2*ep+4)*-3+12)*((-2*ep+4)*2+-6)^(-1)*miD5+((-2*ep+4)*-7+(-2*ep+4)^2+12)^(-1)*-4*Gam(1,1)*miT111+((-2*ep+4)*3+-8)*((-2*ep+4)*8+-24)^(-1)*miBN)*-1",
       "family_sha256": "56d4ac620f0309e551e825ce435d23ee4b58e887f2ee639e1bf14006bc9e9f93",
@@ -6095,7 +6245,8 @@
         -1,
         0,
         1,
-        2
+        2,
+        3
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -6210,7 +6361,7 @@
           }
         },
         "generation": {
-          "order": 2,
+          "order": 3,
           "contraction_mode": "dots"
         }
       },
@@ -6218,11 +6369,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P30/numerical.json",
-          "sha256": "b3f3f46efc83f71bd11e4602c1d5b521cc08ed803581299d5c0bdbbb5fa6e88f"
+          "sha256": "7fed26d22b87a9d077a5e1d7a9680d8632821a5315e410a4ce931c760904e7dd"
         },
         "symbolic.json": {
           "path": "masters/P30/symbolic.json",
-          "sha256": "d91be2f8b49a621e61d61f4fe14693bdcad2da05c3df944215af88c52cc3f20b"
+          "sha256": "7cb8c6c7f323527fb0fbdc9e7aff6778d20b2e1daf5cd56c578f247c3b8ee1a0"
         },
         "graph.dot": {
           "path": "masters/P30/graph.dot",
@@ -6242,7 +6393,8 @@
         -1,
         0,
         1,
-        2
+        2,
+        3
       ],
       "coefficients": [
         {
@@ -6280,8 +6432,15 @@
           "symbolic": true,
           "numerical": true,
           "significant_digits": 200
+        },
+        {
+          "epsilon_power": 3,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
         }
-      ]
+      ],
+      "coefficient_supplement": "coefficient-supplement.json"
     },
     {
       "alias": "K6",
@@ -6486,7 +6645,7 @@
       "alias": "K6",
       "epsilon_range": [
         -3,
-        2
+        3
       ],
       "exact_basis_expression": "(-Gam(1,1)/(ep*(ep-1)))*(-miT111)",
       "family_sha256": "56d4ac620f0309e551e825ce435d23ee4b58e887f2ee639e1bf14006bc9e9f93",
@@ -6513,7 +6672,8 @@
         -1,
         0,
         1,
-        2
+        2,
+        3
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -6618,7 +6778,7 @@
           }
         },
         "generation": {
-          "order": 2,
+          "order": 3,
           "contraction_mode": "dots"
         }
       },
@@ -6626,11 +6786,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P32/numerical.json",
-          "sha256": "b298a0c80c000ae1a92daa467c6c8917c486fb6080dd0060041b7d8ac919a9dd"
+          "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb"
         },
         "symbolic.json": {
           "path": "masters/P32/symbolic.json",
-          "sha256": "367179352edaca34d2a8594c466565149ab998aa217d3225e84333381e9f1612"
+          "sha256": "f39ae2d83d7313349fa749710c9c2ba13ccf3a026009aefd43da8667f85cfa13"
         },
         "graph.dot": {
           "path": "masters/P32/graph.dot",
@@ -6650,7 +6810,8 @@
         -1,
         0,
         1,
-        2
+        2,
+        3
       ],
       "coefficients": [
         {
@@ -6688,14 +6849,21 @@
           "symbolic": true,
           "numerical": true,
           "significant_digits": 200
+        },
+        {
+          "epsilon_power": 3,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
         }
-      ]
+      ],
+      "coefficient_supplement": "coefficient-supplement.json"
     },
     {
       "alias": "K6",
       "epsilon_range": [
         -3,
-        2
+        3
       ],
       "exact_basis_expression": "(-Gam(1,1)/(ep*(ep-1)))*(-miT111)",
       "family_sha256": "56d4ac620f0309e551e825ce435d23ee4b58e887f2ee639e1bf14006bc9e9f93",
@@ -6722,7 +6890,8 @@
         -1,
         0,
         1,
-        2
+        2,
+        3
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -6827,7 +6996,7 @@
           }
         },
         "generation": {
-          "order": 2,
+          "order": 3,
           "contraction_mode": "dots"
         }
       },
@@ -6835,11 +7004,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P33/numerical.json",
-          "sha256": "b298a0c80c000ae1a92daa467c6c8917c486fb6080dd0060041b7d8ac919a9dd"
+          "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb"
         },
         "symbolic.json": {
           "path": "masters/P33/symbolic.json",
-          "sha256": "367179352edaca34d2a8594c466565149ab998aa217d3225e84333381e9f1612"
+          "sha256": "f39ae2d83d7313349fa749710c9c2ba13ccf3a026009aefd43da8667f85cfa13"
         },
         "graph.dot": {
           "path": "masters/P33/graph.dot",
@@ -6859,7 +7028,8 @@
         -1,
         0,
         1,
-        2
+        2,
+        3
       ],
       "coefficients": [
         {
@@ -6897,14 +7067,21 @@
           "symbolic": true,
           "numerical": true,
           "significant_digits": 200
+        },
+        {
+          "epsilon_power": 3,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
         }
-      ]
+      ],
+      "coefficient_supplement": "coefficient-supplement.json"
     },
     {
       "alias": "K6",
       "epsilon_range": [
         -3,
-        2
+        3
       ],
       "exact_basis_expression": "(((-2*ep+4)*-2208+(-2*ep+4)^2*1736+(-2*ep+4)^3*-718+(-2*ep+4)^4*165+(-2*ep+4)^5*-20+(-2*ep+4)^6+1152)^(-1)*Gam(1,1)^3*-16+((-2*ep+4)*-3+12)*((-2*ep+4)*2+-6)^(-1)*miD5+((-2*ep+4)*-7+(-2*ep+4)^2+12)^(-1)*-4*Gam(1,1)*miT111+((-2*ep+4)*3+-8)*((-2*ep+4)*8+-24)^(-1)*miBN)*-1",
       "family_sha256": "56d4ac620f0309e551e825ce435d23ee4b58e887f2ee639e1bf14006bc9e9f93",
@@ -6931,7 +7108,8 @@
         -1,
         0,
         1,
-        2
+        2,
+        3
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -7046,7 +7224,7 @@
           }
         },
         "generation": {
-          "order": 2,
+          "order": 3,
           "contraction_mode": "dots"
         }
       },
@@ -7054,11 +7232,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P34/numerical.json",
-          "sha256": "b3f3f46efc83f71bd11e4602c1d5b521cc08ed803581299d5c0bdbbb5fa6e88f"
+          "sha256": "7fed26d22b87a9d077a5e1d7a9680d8632821a5315e410a4ce931c760904e7dd"
         },
         "symbolic.json": {
           "path": "masters/P34/symbolic.json",
-          "sha256": "d91be2f8b49a621e61d61f4fe14693bdcad2da05c3df944215af88c52cc3f20b"
+          "sha256": "7cb8c6c7f323527fb0fbdc9e7aff6778d20b2e1daf5cd56c578f247c3b8ee1a0"
         },
         "graph.dot": {
           "path": "masters/P34/graph.dot",
@@ -7078,7 +7256,8 @@
         -1,
         0,
         1,
-        2
+        2,
+        3
       ],
       "coefficients": [
         {
@@ -7116,14 +7295,21 @@
           "symbolic": true,
           "numerical": true,
           "significant_digits": 200
+        },
+        {
+          "epsilon_power": 3,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
         }
-      ]
+      ],
+      "coefficient_supplement": "coefficient-supplement.json"
     },
     {
       "alias": "K6",
       "epsilon_range": [
         -3,
-        2
+        3
       ],
       "exact_basis_expression": "(-Gam(1,1)/(ep*(ep-1)))*(-miT111)",
       "family_sha256": "56d4ac620f0309e551e825ce435d23ee4b58e887f2ee639e1bf14006bc9e9f93",
@@ -7150,7 +7336,8 @@
         -1,
         0,
         1,
-        2
+        2,
+        3
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -7255,7 +7442,7 @@
           }
         },
         "generation": {
-          "order": 2,
+          "order": 3,
           "contraction_mode": "dots"
         }
       },
@@ -7263,11 +7450,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P35/numerical.json",
-          "sha256": "b298a0c80c000ae1a92daa467c6c8917c486fb6080dd0060041b7d8ac919a9dd"
+          "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb"
         },
         "symbolic.json": {
           "path": "masters/P35/symbolic.json",
-          "sha256": "367179352edaca34d2a8594c466565149ab998aa217d3225e84333381e9f1612"
+          "sha256": "f39ae2d83d7313349fa749710c9c2ba13ccf3a026009aefd43da8667f85cfa13"
         },
         "graph.dot": {
           "path": "masters/P35/graph.dot",
@@ -7287,7 +7474,8 @@
         -1,
         0,
         1,
-        2
+        2,
+        3
       ],
       "coefficients": [
         {
@@ -7325,14 +7513,21 @@
           "symbolic": true,
           "numerical": true,
           "significant_digits": 200
+        },
+        {
+          "epsilon_power": 3,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
         }
-      ]
+      ],
+      "coefficient_supplement": "coefficient-supplement.json"
     },
     {
       "alias": "K6",
       "epsilon_range": [
         -3,
-        2
+        3
       ],
       "exact_basis_expression": "(((-2*ep+4)*-2208+(-2*ep+4)^2*1736+(-2*ep+4)^3*-718+(-2*ep+4)^4*165+(-2*ep+4)^5*-20+(-2*ep+4)^6+1152)^(-1)*Gam(1,1)^3*-16+((-2*ep+4)*-3+12)*((-2*ep+4)*2+-6)^(-1)*miD5+((-2*ep+4)*-7+(-2*ep+4)^2+12)^(-1)*-4*Gam(1,1)*miT111+((-2*ep+4)*3+-8)*((-2*ep+4)*8+-24)^(-1)*miBN)*-1",
       "family_sha256": "56d4ac620f0309e551e825ce435d23ee4b58e887f2ee639e1bf14006bc9e9f93",
@@ -7359,7 +7554,8 @@
         -1,
         0,
         1,
-        2
+        2,
+        3
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -7474,7 +7670,7 @@
           }
         },
         "generation": {
-          "order": 2,
+          "order": 3,
           "contraction_mode": "dots"
         }
       },
@@ -7482,11 +7678,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P36/numerical.json",
-          "sha256": "b3f3f46efc83f71bd11e4602c1d5b521cc08ed803581299d5c0bdbbb5fa6e88f"
+          "sha256": "7fed26d22b87a9d077a5e1d7a9680d8632821a5315e410a4ce931c760904e7dd"
         },
         "symbolic.json": {
           "path": "masters/P36/symbolic.json",
-          "sha256": "d91be2f8b49a621e61d61f4fe14693bdcad2da05c3df944215af88c52cc3f20b"
+          "sha256": "7cb8c6c7f323527fb0fbdc9e7aff6778d20b2e1daf5cd56c578f247c3b8ee1a0"
         },
         "graph.dot": {
           "path": "masters/P36/graph.dot",
@@ -7506,7 +7702,8 @@
         -1,
         0,
         1,
-        2
+        2,
+        3
       ],
       "coefficients": [
         {
@@ -7544,14 +7741,21 @@
           "symbolic": true,
           "numerical": true,
           "significant_digits": 200
+        },
+        {
+          "epsilon_power": 3,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
         }
-      ]
+      ],
+      "coefficient_supplement": "coefficient-supplement.json"
     },
     {
       "alias": "K6",
       "epsilon_range": [
         -3,
-        2
+        3
       ],
       "exact_basis_expression": "(((-2*ep+4)*-2208+(-2*ep+4)^2*1736+(-2*ep+4)^3*-718+(-2*ep+4)^4*165+(-2*ep+4)^5*-20+(-2*ep+4)^6+1152)^(-1)*Gam(1,1)^3*-16+((-2*ep+4)*-3+12)*((-2*ep+4)*2+-6)^(-1)*miD5+((-2*ep+4)*-7+(-2*ep+4)^2+12)^(-1)*-4*Gam(1,1)*miT111+((-2*ep+4)*3+-8)*((-2*ep+4)*8+-24)^(-1)*miBN)*-1",
       "family_sha256": "56d4ac620f0309e551e825ce435d23ee4b58e887f2ee639e1bf14006bc9e9f93",
@@ -7578,7 +7782,8 @@
         -1,
         0,
         1,
-        2
+        2,
+        3
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -7693,7 +7898,7 @@
           }
         },
         "generation": {
-          "order": 2,
+          "order": 3,
           "contraction_mode": "dots"
         }
       },
@@ -7701,11 +7906,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P37/numerical.json",
-          "sha256": "b3f3f46efc83f71bd11e4602c1d5b521cc08ed803581299d5c0bdbbb5fa6e88f"
+          "sha256": "7fed26d22b87a9d077a5e1d7a9680d8632821a5315e410a4ce931c760904e7dd"
         },
         "symbolic.json": {
           "path": "masters/P37/symbolic.json",
-          "sha256": "d91be2f8b49a621e61d61f4fe14693bdcad2da05c3df944215af88c52cc3f20b"
+          "sha256": "7cb8c6c7f323527fb0fbdc9e7aff6778d20b2e1daf5cd56c578f247c3b8ee1a0"
         },
         "graph.dot": {
           "path": "masters/P37/graph.dot",
@@ -7725,7 +7930,8 @@
         -1,
         0,
         1,
-        2
+        2,
+        3
       ],
       "coefficients": [
         {
@@ -7763,8 +7969,15 @@
           "symbolic": true,
           "numerical": true,
           "significant_digits": 200
+        },
+        {
+          "epsilon_power": 3,
+          "symbolic": true,
+          "numerical": true,
+          "significant_digits": 200
         }
-      ]
+      ],
+      "coefficient_supplement": "coefficient-supplement.json"
     },
     {
       "alias": "K6",
@@ -8183,6 +8396,10 @@
       "sha256": "6d0fa491f234bbe8cee9cdc4e936f97d5d2dc036abd79d3d265663fce73ef98f",
       "bytes": 22749
     },
+    "coefficient-supplement.json": {
+      "sha256": "9f91be3c6f62c6c962a96d45b763dad1a233182cd8e0b4eba89f948bd194a071",
+      "bytes": 7929
+    },
     "coverage.json": {
       "sha256": "eb4e85c5d6ae54b5450c58d68ed2d4533124200e4146e90ffb258ee63fe0b324",
       "bytes": 524
@@ -8212,12 +8429,12 @@
       "bytes": 1811
     },
     "masters/P10/numerical.json": {
-      "sha256": "b298a0c80c000ae1a92daa467c6c8917c486fb6080dd0060041b7d8ac919a9dd",
-      "bytes": 1368
+      "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb",
+      "bytes": 1604
     },
     "masters/P10/symbolic.json": {
-      "sha256": "367179352edaca34d2a8594c466565149ab998aa217d3225e84333381e9f1612",
-      "bytes": 5955
+      "sha256": "f39ae2d83d7313349fa749710c9c2ba13ccf3a026009aefd43da8667f85cfa13",
+      "bytes": 21512
     },
     "masters/P11/graph.dot": {
       "sha256": "607823e3aef05940a379b0fb277907cfbd1e4e6e4cefa17f181e0af34b3beb7c",
@@ -8236,36 +8453,36 @@
       "bytes": 1811
     },
     "masters/P12/numerical.json": {
-      "sha256": "b298a0c80c000ae1a92daa467c6c8917c486fb6080dd0060041b7d8ac919a9dd",
-      "bytes": 1368
+      "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb",
+      "bytes": 1604
     },
     "masters/P12/symbolic.json": {
-      "sha256": "367179352edaca34d2a8594c466565149ab998aa217d3225e84333381e9f1612",
-      "bytes": 5955
+      "sha256": "f39ae2d83d7313349fa749710c9c2ba13ccf3a026009aefd43da8667f85cfa13",
+      "bytes": 21512
     },
     "masters/P13/graph.dot": {
       "sha256": "d925d57de3049373a497ff7a5943e70926894a1e8bd0a49fbec9e55bd2a3ce6b",
       "bytes": 1810
     },
     "masters/P13/numerical.json": {
-      "sha256": "f0971f1173211c243e4425f03cf97346cc90247092dc7e3ea889e43e79f2a070",
-      "bytes": 1369
+      "sha256": "22cec8ec1ac3768334266d369e34b8b904f4a17ecdf6b3c81eab3d41b272329a",
+      "bytes": 1843
     },
     "masters/P13/symbolic.json": {
-      "sha256": "15f755b326f95f33bdb6cdaa558d2da5d3a005b2cf8afba97e6be5bfde0c1a24",
-      "bytes": 818
+      "sha256": "7febcf5642123985bd3ca337bd2116c9aec723c63ffc2f9bf340f1facf0d2600",
+      "bytes": 5304
     },
     "masters/P14/graph.dot": {
       "sha256": "816c444a7751ce799dd1a406671922800616b66a4d872ffae85646b5987f29ad",
       "bytes": 2187
     },
     "masters/P14/numerical.json": {
-      "sha256": "b3f3f46efc83f71bd11e4602c1d5b521cc08ed803581299d5c0bdbbb5fa6e88f",
-      "bytes": 1368
+      "sha256": "7fed26d22b87a9d077a5e1d7a9680d8632821a5315e410a4ce931c760904e7dd",
+      "bytes": 1604
     },
     "masters/P14/symbolic.json": {
-      "sha256": "d91be2f8b49a621e61d61f4fe14693bdcad2da05c3df944215af88c52cc3f20b",
-      "bytes": 8727
+      "sha256": "7cb8c6c7f323527fb0fbdc9e7aff6778d20b2e1daf5cd56c578f247c3b8ee1a0",
+      "bytes": 34479
     },
     "masters/P15/graph.dot": {
       "sha256": "607823e3aef05940a379b0fb277907cfbd1e4e6e4cefa17f181e0af34b3beb7c",
@@ -8308,12 +8525,12 @@
       "bytes": 1812
     },
     "masters/P18/numerical.json": {
-      "sha256": "b298a0c80c000ae1a92daa467c6c8917c486fb6080dd0060041b7d8ac919a9dd",
-      "bytes": 1368
+      "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb",
+      "bytes": 1604
     },
     "masters/P18/symbolic.json": {
-      "sha256": "367179352edaca34d2a8594c466565149ab998aa217d3225e84333381e9f1612",
-      "bytes": 5955
+      "sha256": "f39ae2d83d7313349fa749710c9c2ba13ccf3a026009aefd43da8667f85cfa13",
+      "bytes": 21512
     },
     "masters/P19/graph.dot": {
       "sha256": "607823e3aef05940a379b0fb277907cfbd1e4e6e4cefa17f181e0af34b3beb7c",
@@ -8356,48 +8573,48 @@
       "bytes": 1812
     },
     "masters/P21/numerical.json": {
-      "sha256": "f0971f1173211c243e4425f03cf97346cc90247092dc7e3ea889e43e79f2a070",
-      "bytes": 1369
+      "sha256": "22cec8ec1ac3768334266d369e34b8b904f4a17ecdf6b3c81eab3d41b272329a",
+      "bytes": 1843
     },
     "masters/P21/symbolic.json": {
-      "sha256": "15f755b326f95f33bdb6cdaa558d2da5d3a005b2cf8afba97e6be5bfde0c1a24",
-      "bytes": 818
+      "sha256": "7febcf5642123985bd3ca337bd2116c9aec723c63ffc2f9bf340f1facf0d2600",
+      "bytes": 5304
     },
     "masters/P22/graph.dot": {
       "sha256": "7a4ede089bf1bd1b2df824c89840f97ead3c4ef4419a4b9974dcec82b70c3c3e",
       "bytes": 1810
     },
     "masters/P22/numerical.json": {
-      "sha256": "b298a0c80c000ae1a92daa467c6c8917c486fb6080dd0060041b7d8ac919a9dd",
-      "bytes": 1368
+      "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb",
+      "bytes": 1604
     },
     "masters/P22/symbolic.json": {
-      "sha256": "367179352edaca34d2a8594c466565149ab998aa217d3225e84333381e9f1612",
-      "bytes": 5955
+      "sha256": "f39ae2d83d7313349fa749710c9c2ba13ccf3a026009aefd43da8667f85cfa13",
+      "bytes": 21512
     },
     "masters/P23/graph.dot": {
       "sha256": "7a4ede089bf1bd1b2df824c89840f97ead3c4ef4419a4b9974dcec82b70c3c3e",
       "bytes": 1810
     },
     "masters/P23/numerical.json": {
-      "sha256": "b298a0c80c000ae1a92daa467c6c8917c486fb6080dd0060041b7d8ac919a9dd",
-      "bytes": 1368
+      "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb",
+      "bytes": 1604
     },
     "masters/P23/symbolic.json": {
-      "sha256": "367179352edaca34d2a8594c466565149ab998aa217d3225e84333381e9f1612",
-      "bytes": 5955
+      "sha256": "f39ae2d83d7313349fa749710c9c2ba13ccf3a026009aefd43da8667f85cfa13",
+      "bytes": 21512
     },
     "masters/P24/graph.dot": {
       "sha256": "3afa0b653738d6921c31aa6118ac308b97c29440a7bd4e055fddc6051667b7db",
       "bytes": 2187
     },
     "masters/P24/numerical.json": {
-      "sha256": "b3f3f46efc83f71bd11e4602c1d5b521cc08ed803581299d5c0bdbbb5fa6e88f",
-      "bytes": 1368
+      "sha256": "7fed26d22b87a9d077a5e1d7a9680d8632821a5315e410a4ce931c760904e7dd",
+      "bytes": 1604
     },
     "masters/P24/symbolic.json": {
-      "sha256": "d91be2f8b49a621e61d61f4fe14693bdcad2da05c3df944215af88c52cc3f20b",
-      "bytes": 8727
+      "sha256": "7cb8c6c7f323527fb0fbdc9e7aff6778d20b2e1daf5cd56c578f247c3b8ee1a0",
+      "bytes": 34479
     },
     "masters/P25/graph.dot": {
       "sha256": "607823e3aef05940a379b0fb277907cfbd1e4e6e4cefa17f181e0af34b3beb7c",
@@ -8416,12 +8633,12 @@
       "bytes": 1811
     },
     "masters/P26/numerical.json": {
-      "sha256": "b298a0c80c000ae1a92daa467c6c8917c486fb6080dd0060041b7d8ac919a9dd",
-      "bytes": 1368
+      "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb",
+      "bytes": 1604
     },
     "masters/P26/symbolic.json": {
-      "sha256": "367179352edaca34d2a8594c466565149ab998aa217d3225e84333381e9f1612",
-      "bytes": 5955
+      "sha256": "f39ae2d83d7313349fa749710c9c2ba13ccf3a026009aefd43da8667f85cfa13",
+      "bytes": 21512
     },
     "masters/P27/graph.dot": {
       "sha256": "607823e3aef05940a379b0fb277907cfbd1e4e6e4cefa17f181e0af34b3beb7c",
@@ -8440,24 +8657,24 @@
       "bytes": 1810
     },
     "masters/P28/numerical.json": {
-      "sha256": "f0971f1173211c243e4425f03cf97346cc90247092dc7e3ea889e43e79f2a070",
-      "bytes": 1369
+      "sha256": "22cec8ec1ac3768334266d369e34b8b904f4a17ecdf6b3c81eab3d41b272329a",
+      "bytes": 1843
     },
     "masters/P28/symbolic.json": {
-      "sha256": "15f755b326f95f33bdb6cdaa558d2da5d3a005b2cf8afba97e6be5bfde0c1a24",
-      "bytes": 818
+      "sha256": "7febcf5642123985bd3ca337bd2116c9aec723c63ffc2f9bf340f1facf0d2600",
+      "bytes": 5304
     },
     "masters/P29/graph.dot": {
       "sha256": "fe8bfea88473fb2683b77916f1e7eb7293bc72864baf5b7b84f77d40bb8cf871",
       "bytes": 1811
     },
     "masters/P29/numerical.json": {
-      "sha256": "b298a0c80c000ae1a92daa467c6c8917c486fb6080dd0060041b7d8ac919a9dd",
-      "bytes": 1368
+      "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb",
+      "bytes": 1604
     },
     "masters/P29/symbolic.json": {
-      "sha256": "367179352edaca34d2a8594c466565149ab998aa217d3225e84333381e9f1612",
-      "bytes": 5955
+      "sha256": "f39ae2d83d7313349fa749710c9c2ba13ccf3a026009aefd43da8667f85cfa13",
+      "bytes": 21512
     },
     "masters/P3/graph.dot": {
       "sha256": "607823e3aef05940a379b0fb277907cfbd1e4e6e4cefa17f181e0af34b3beb7c",
@@ -8476,12 +8693,12 @@
       "bytes": 2187
     },
     "masters/P30/numerical.json": {
-      "sha256": "b3f3f46efc83f71bd11e4602c1d5b521cc08ed803581299d5c0bdbbb5fa6e88f",
-      "bytes": 1368
+      "sha256": "7fed26d22b87a9d077a5e1d7a9680d8632821a5315e410a4ce931c760904e7dd",
+      "bytes": 1604
     },
     "masters/P30/symbolic.json": {
-      "sha256": "d91be2f8b49a621e61d61f4fe14693bdcad2da05c3df944215af88c52cc3f20b",
-      "bytes": 8727
+      "sha256": "7cb8c6c7f323527fb0fbdc9e7aff6778d20b2e1daf5cd56c578f247c3b8ee1a0",
+      "bytes": 34479
     },
     "masters/P31/graph.dot": {
       "sha256": "607823e3aef05940a379b0fb277907cfbd1e4e6e4cefa17f181e0af34b3beb7c",
@@ -8500,72 +8717,72 @@
       "bytes": 1811
     },
     "masters/P32/numerical.json": {
-      "sha256": "b298a0c80c000ae1a92daa467c6c8917c486fb6080dd0060041b7d8ac919a9dd",
-      "bytes": 1368
+      "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb",
+      "bytes": 1604
     },
     "masters/P32/symbolic.json": {
-      "sha256": "367179352edaca34d2a8594c466565149ab998aa217d3225e84333381e9f1612",
-      "bytes": 5955
+      "sha256": "f39ae2d83d7313349fa749710c9c2ba13ccf3a026009aefd43da8667f85cfa13",
+      "bytes": 21512
     },
     "masters/P33/graph.dot": {
       "sha256": "fe8bfea88473fb2683b77916f1e7eb7293bc72864baf5b7b84f77d40bb8cf871",
       "bytes": 1811
     },
     "masters/P33/numerical.json": {
-      "sha256": "b298a0c80c000ae1a92daa467c6c8917c486fb6080dd0060041b7d8ac919a9dd",
-      "bytes": 1368
+      "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb",
+      "bytes": 1604
     },
     "masters/P33/symbolic.json": {
-      "sha256": "367179352edaca34d2a8594c466565149ab998aa217d3225e84333381e9f1612",
-      "bytes": 5955
+      "sha256": "f39ae2d83d7313349fa749710c9c2ba13ccf3a026009aefd43da8667f85cfa13",
+      "bytes": 21512
     },
     "masters/P34/graph.dot": {
       "sha256": "6002786deeb523485a9ffe79929d0e784adee3fc475e2efb3a079bafe716948d",
       "bytes": 2188
     },
     "masters/P34/numerical.json": {
-      "sha256": "b3f3f46efc83f71bd11e4602c1d5b521cc08ed803581299d5c0bdbbb5fa6e88f",
-      "bytes": 1368
+      "sha256": "7fed26d22b87a9d077a5e1d7a9680d8632821a5315e410a4ce931c760904e7dd",
+      "bytes": 1604
     },
     "masters/P34/symbolic.json": {
-      "sha256": "d91be2f8b49a621e61d61f4fe14693bdcad2da05c3df944215af88c52cc3f20b",
-      "bytes": 8727
+      "sha256": "7cb8c6c7f323527fb0fbdc9e7aff6778d20b2e1daf5cd56c578f247c3b8ee1a0",
+      "bytes": 34479
     },
     "masters/P35/graph.dot": {
       "sha256": "4a3e731897f4ffa78215aaa73d6a425a2d9aae2f091145a36c54e0b9b74268d4",
       "bytes": 1810
     },
     "masters/P35/numerical.json": {
-      "sha256": "b298a0c80c000ae1a92daa467c6c8917c486fb6080dd0060041b7d8ac919a9dd",
-      "bytes": 1368
+      "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb",
+      "bytes": 1604
     },
     "masters/P35/symbolic.json": {
-      "sha256": "367179352edaca34d2a8594c466565149ab998aa217d3225e84333381e9f1612",
-      "bytes": 5955
+      "sha256": "f39ae2d83d7313349fa749710c9c2ba13ccf3a026009aefd43da8667f85cfa13",
+      "bytes": 21512
     },
     "masters/P36/graph.dot": {
       "sha256": "f3f6f31a88c7b70ae38336d2c597875349ce1c445f4926896031fdfc187d9e2c",
       "bytes": 2187
     },
     "masters/P36/numerical.json": {
-      "sha256": "b3f3f46efc83f71bd11e4602c1d5b521cc08ed803581299d5c0bdbbb5fa6e88f",
-      "bytes": 1368
+      "sha256": "7fed26d22b87a9d077a5e1d7a9680d8632821a5315e410a4ce931c760904e7dd",
+      "bytes": 1604
     },
     "masters/P36/symbolic.json": {
-      "sha256": "d91be2f8b49a621e61d61f4fe14693bdcad2da05c3df944215af88c52cc3f20b",
-      "bytes": 8727
+      "sha256": "7cb8c6c7f323527fb0fbdc9e7aff6778d20b2e1daf5cd56c578f247c3b8ee1a0",
+      "bytes": 34479
     },
     "masters/P37/graph.dot": {
       "sha256": "c03a22ccb740ad6e3d97e96fba81ec70fef1c1c24f37663f38e186a6f3bfdf06",
       "bytes": 2186
     },
     "masters/P37/numerical.json": {
-      "sha256": "b3f3f46efc83f71bd11e4602c1d5b521cc08ed803581299d5c0bdbbb5fa6e88f",
-      "bytes": 1368
+      "sha256": "7fed26d22b87a9d077a5e1d7a9680d8632821a5315e410a4ce931c760904e7dd",
+      "bytes": 1604
     },
     "masters/P37/symbolic.json": {
-      "sha256": "d91be2f8b49a621e61d61f4fe14693bdcad2da05c3df944215af88c52cc3f20b",
-      "bytes": 8727
+      "sha256": "7cb8c6c7f323527fb0fbdc9e7aff6778d20b2e1daf5cd56c578f247c3b8ee1a0",
+      "bytes": 34479
     },
     "masters/P38/graph.dot": {
       "sha256": "3e55c23a0492368c8aa3860a1bf4781c5662f0b676fd1e7402b5dc120ac18103",
@@ -8584,12 +8801,12 @@
       "bytes": 1812
     },
     "masters/P4/numerical.json": {
-      "sha256": "b298a0c80c000ae1a92daa467c6c8917c486fb6080dd0060041b7d8ac919a9dd",
-      "bytes": 1368
+      "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb",
+      "bytes": 1604
     },
     "masters/P4/symbolic.json": {
-      "sha256": "367179352edaca34d2a8594c466565149ab998aa217d3225e84333381e9f1612",
-      "bytes": 5955
+      "sha256": "f39ae2d83d7313349fa749710c9c2ba13ccf3a026009aefd43da8667f85cfa13",
+      "bytes": 21512
     },
     "masters/P5/graph.dot": {
       "sha256": "607823e3aef05940a379b0fb277907cfbd1e4e6e4cefa17f181e0af34b3beb7c",
@@ -8632,12 +8849,12 @@
       "bytes": 1812
     },
     "masters/P8/numerical.json": {
-      "sha256": "b298a0c80c000ae1a92daa467c6c8917c486fb6080dd0060041b7d8ac919a9dd",
-      "bytes": 1368
+      "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb",
+      "bytes": 1604
     },
     "masters/P8/symbolic.json": {
-      "sha256": "367179352edaca34d2a8594c466565149ab998aa217d3225e84333381e9f1612",
-      "bytes": 5955
+      "sha256": "f39ae2d83d7313349fa749710c9c2ba13ccf3a026009aefd43da8667f85cfa13",
+      "bytes": 21512
     },
     "masters/P9/graph.dot": {
       "sha256": "607823e3aef05940a379b0fb277907cfbd1e4e6e4cefa17f181e0af34b3beb7c",

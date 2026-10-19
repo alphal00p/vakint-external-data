@@ -17,6 +17,9 @@ FILES = (
     "run_hpl_20k.py",
     "shared-constant-references.json",
     "shared-constant-validation.json",
+    "coefficient-supplement.json",
+    "coefficient-supplement-validation.json",
+    "export_known_laurent_coefficients.py",
 )
 
 
@@ -25,6 +28,7 @@ def main():
     parser.add_argument("source", type=Path)
     parser.add_argument("--validator-source", type=Path, required=True)
     parser.add_argument("--symbolica-revision", required=True)
+    parser.add_argument("--vakint-source", type=Path)
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1] / "validation"
     root.mkdir(exist_ok=True)
@@ -34,6 +38,17 @@ def main():
         ("validator-Cargo.toml", args.validator_source / "Cargo.toml"),
         ("validator-Cargo.lock", args.validator_source / "Cargo.lock"),
     ]
+    if args.vakint_source is not None:
+        expected = json.loads(
+            (args.source / "coefficient-supplement.json").read_text()
+        )["provenance"]["source_sha256"]
+        for name, checksum in expected.items():
+            path = args.vakint_source / "src" / name
+            if hashlib.sha256(path.read_bytes()).hexdigest() != checksum:
+                raise ValueError(
+                    f"master-formula source changed since validation: {name}"
+                )
+            source_files.append((f"source-{name}", path))
     records = []
     for name, source in source_files:
         raw = source.read_bytes()

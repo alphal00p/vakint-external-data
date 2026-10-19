@@ -13,7 +13,7 @@
     {
       "loop_count": 2,
       "manifest": "2L/manifest.json",
-      "manifest_sha256": "c496e833b471a0437516571cf150d8e4451e40ba54f581c350ceb4d202e7e459",
+      "manifest_sha256": "905d304d2f227f2a707dfaa636b22241de61a03fd74932b375ff8bd24c3b22a2",
       "archive": "vakint-external-data-v0.1.0-2L.tar.gz",
       "archive_sha256": null,
       "archive_bytes": null
@@ -21,7 +21,7 @@
     {
       "loop_count": 3,
       "manifest": "3L/manifest.json",
-      "manifest_sha256": "338a6d4e70d395290a200603cf70c628ab2a02156a5aeab1dafee35d83a24ebf",
+      "manifest_sha256": "bd835330d7f8b95619f25f7e756dae794c9caf5c3fd149a2bb1acf0c36b15aa7",
       "archive": "vakint-external-data-v0.1.0-3L.tar.gz",
       "archive_sha256": null,
       "archive_bytes": null

@@ -118,13 +118,13 @@
     },
     {
       "source": "2L/masters/P2/numerical.json",
-      "path": "2L/masters/P2/numerical.json",
+      "path": "provenance/original-coefficients/2L/masters/P2/numerical.json",
       "sha256": "eecc5b9008b18e062203ab9596cceb594ce16b792a0b18ee23e550043f928b58",
       "bytes": 120167
     },
     {
       "source": "2L/masters/P2/symbolic.json",
-      "path": "2L/masters/P2/symbolic.json",
+      "path": "provenance/original-coefficients/2L/masters/P2/symbolic.json",
       "sha256": "7a90f708566ce0174eafc4585ef5d77ad404d962f8b3f8a63ea8b929043d4221",
       "bytes": 5942
     },
@@ -406,13 +406,13 @@
     },
     {
       "source": "3L/masters/P10/numerical.json",
-      "path": "3L/masters/P10/numerical.json",
+      "path": "provenance/original-coefficients/3L/masters/P10/numerical.json",
       "sha256": "b298a0c80c000ae1a92daa467c6c8917c486fb6080dd0060041b7d8ac919a9dd",
       "bytes": 1368
     },
     {
       "source": "3L/masters/P10/symbolic.json",
-      "path": "3L/masters/P10/symbolic.json",
+      "path": "provenance/original-coefficients/3L/masters/P10/symbolic.json",
       "sha256": "367179352edaca34d2a8594c466565149ab998aa217d3225e84333381e9f1612",
       "bytes": 5955
     },
@@ -442,13 +442,13 @@
     },
     {
       "source": "3L/masters/P12/numerical.json",
-      "path": "3L/masters/P12/numerical.json",
+      "path": "provenance/original-coefficients/3L/masters/P12/numerical.json",
       "sha256": "b298a0c80c000ae1a92daa467c6c8917c486fb6080dd0060041b7d8ac919a9dd",
       "bytes": 1368
     },
     {
       "source": "3L/masters/P12/symbolic.json",
-      "path": "3L/masters/P12/symbolic.json",
+      "path": "provenance/original-coefficients/3L/masters/P12/symbolic.json",
       "sha256": "367179352edaca34d2a8594c466565149ab998aa217d3225e84333381e9f1612",
       "bytes": 5955
     },
@@ -460,13 +460,13 @@
     },
     {
       "source": "3L/masters/P13/numerical.json",
-      "path": "3L/masters/P13/numerical.json",
+      "path": "provenance/original-coefficients/3L/masters/P13/numerical.json",
       "sha256": "f0971f1173211c243e4425f03cf97346cc90247092dc7e3ea889e43e79f2a070",
       "bytes": 1369
     },
     {
       "source": "3L/masters/P13/symbolic.json",
-      "path": "3L/masters/P13/symbolic.json",
+      "path": "provenance/original-coefficients/3L/masters/P13/symbolic.json",
       "sha256": "15f755b326f95f33bdb6cdaa558d2da5d3a005b2cf8afba97e6be5bfde0c1a24",
       "bytes": 818
     },
@@ -478,13 +478,13 @@
     },
     {
       "source": "3L/masters/P14/numerical.json",
-      "path": "3L/masters/P14/numerical.json",
+      "path": "provenance/original-coefficients/3L/masters/P14/numerical.json",
       "sha256": "b3f3f46efc83f71bd11e4602c1d5b521cc08ed803581299d5c0bdbbb5fa6e88f",
       "bytes": 1368
     },
     {
       "source": "3L/masters/P14/symbolic.json",
-      "path": "3L/masters/P14/symbolic.json",
+      "path": "provenance/original-coefficients/3L/masters/P14/symbolic.json",
       "sha256": "d91be2f8b49a621e61d61f4fe14693bdcad2da05c3df944215af88c52cc3f20b",
       "bytes": 8727
     },
@@ -550,13 +550,13 @@
     },
     {
       "source": "3L/masters/P18/numerical.json",
-      "path": "3L/masters/P18/numerical.json",
+      "path": "provenance/original-coefficients/3L/masters/P18/numerical.json",
       "sha256": "b298a0c80c000ae1a92daa467c6c8917c486fb6080dd0060041b7d8ac919a9dd",
       "bytes": 1368
     },
     {
       "source": "3L/masters/P18/symbolic.json",
-      "path": "3L/masters/P18/symbolic.json",
+      "path": "provenance/original-coefficients/3L/masters/P18/symbolic.json",
       "sha256": "367179352edaca34d2a8594c466565149ab998aa217d3225e84333381e9f1612",
       "bytes": 5955
     },
@@ -622,13 +622,13 @@
     },
     {
       "source": "3L/masters/P21/numerical.json",
-      "path": "3L/masters/P21/numerical.json",
+      "path": "provenance/original-coefficients/3L/masters/P21/numerical.json",
       "sha256": "f0971f1173211c243e4425f03cf97346cc90247092dc7e3ea889e43e79f2a070",
       "bytes": 1369
     },
     {
       "source": "3L/masters/P21/symbolic.json",
-      "path": "3L/masters/P21/symbolic.json",
+      "path": "provenance/original-coefficients/3L/masters/P21/symbolic.json",
       "sha256": "15f755b326f95f33bdb6cdaa558d2da5d3a005b2cf8afba97e6be5bfde0c1a24",
       "bytes": 818
     },
@@ -640,13 +640,13 @@
     },
     {
       "source": "3L/masters/P22/numerical.json",
-      "path": "3L/masters/P22/numerical.json",
+      "path": "provenance/original-coefficients/3L/masters/P22/numerical.json",
       "sha256": "b298a0c80c000ae1a92daa467c6c8917c486fb6080dd0060041b7d8ac919a9dd",
       "bytes": 1368
     },
     {
       "source": "3L/masters/P22/symbolic.json",
-      "path": "3L/masters/P22/symbolic.json",
+      "path": "provenance/original-coefficients/3L/masters/P22/symbolic.json",
       "sha256": "367179352edaca34d2a8594c466565149ab998aa217d3225e84333381e9f1612",
       "bytes": 5955
     },
@@ -658,13 +658,13 @@
     },
     {
       "source": "3L/masters/P23/numerical.json",
-      "path": "3L/masters/P23/numerical.json",
+      "path": "provenance/original-coefficients/3L/masters/P23/numerical.json",
       "sha256": "b298a0c80c000ae1a92daa467c6c8917c486fb6080dd0060041b7d8ac919a9dd",
       "bytes": 1368
     },
     {
       "source": "3L/masters/P23/symbolic.json",
-      "path": "3L/masters/P23/symbolic.json",
+      "path": "provenance/original-coefficients/3L/masters/P23/symbolic.json",
       "sha256": "367179352edaca34d2a8594c466565149ab998aa217d3225e84333381e9f1612",
       "bytes": 5955
     },
@@ -676,13 +676,13 @@
     },
     {
       "source": "3L/masters/P24/numerical.json",
-      "path": "3L/masters/P24/numerical.json",
+      "path": "provenance/original-coefficients/3L/masters/P24/numerical.json",
       "sha256": "b3f3f46efc83f71bd11e4602c1d5b521cc08ed803581299d5c0bdbbb5fa6e88f",
       "bytes": 1368
     },
     {
       "source": "3L/masters/P24/symbolic.json",
-      "path": "3L/masters/P24/symbolic.json",
+      "path": "provenance/original-coefficients/3L/masters/P24/symbolic.json",
       "sha256": "d91be2f8b49a621e61d61f4fe14693bdcad2da05c3df944215af88c52cc3f20b",
       "bytes": 8727
     },
@@ -712,13 +712,13 @@
     },
     {
       "source": "3L/masters/P26/numerical.json",
-      "path": "3L/masters/P26/numerical.json",
+      "path": "provenance/original-coefficients/3L/masters/P26/numerical.json",
       "sha256": "b298a0c80c000ae1a92daa467c6c8917c486fb6080dd0060041b7d8ac919a9dd",
       "bytes": 1368
     },
     {
       "source": "3L/masters/P26/symbolic.json",
-      "path": "3L/masters/P26/symbolic.json",
+      "path": "provenance/original-coefficients/3L/masters/P26/symbolic.json",
       "sha256": "367179352edaca34d2a8594c466565149ab998aa217d3225e84333381e9f1612",
       "bytes": 5955
     },
@@ -748,13 +748,13 @@
     },
     {
       "source": "3L/masters/P28/numerical.json",
-      "path": "3L/masters/P28/numerical.json",
+      "path": "provenance/original-coefficients/3L/masters/P28/numerical.json",
       "sha256": "f0971f1173211c243e4425f03cf97346cc90247092dc7e3ea889e43e79f2a070",
       "bytes": 1369
     },
     {
       "source": "3L/masters/P28/symbolic.json",
-      "path": "3L/masters/P28/symbolic.json",
+      "path": "provenance/original-coefficients/3L/masters/P28/symbolic.json",
       "sha256": "15f755b326f95f33bdb6cdaa558d2da5d3a005b2cf8afba97e6be5bfde0c1a24",
       "bytes": 818
     },
@@ -766,13 +766,13 @@
     },
     {
       "source": "3L/masters/P29/numerical.json",
-      "path": "3L/masters/P29/numerical.json",
+      "path": "provenance/original-coefficients/3L/masters/P29/numerical.json",
       "sha256": "b298a0c80c000ae1a92daa467c6c8917c486fb6080dd0060041b7d8ac919a9dd",
       "bytes": 1368
     },
     {
       "source": "3L/masters/P29/symbolic.json",
-      "path": "3L/masters/P29/symbolic.json",
+      "path": "provenance/original-coefficients/3L/masters/P29/symbolic.json",
       "sha256": "367179352edaca34d2a8594c466565149ab998aa217d3225e84333381e9f1612",
       "bytes": 5955
     },
@@ -802,13 +802,13 @@
     },
     {
       "source": "3L/masters/P30/numerical.json",
-      "path": "3L/masters/P30/numerical.json",
+      "path": "provenance/original-coefficients/3L/masters/P30/numerical.json",
       "sha256": "b3f3f46efc83f71bd11e4602c1d5b521cc08ed803581299d5c0bdbbb5fa6e88f",
       "bytes": 1368
     },
     {
       "source": "3L/masters/P30/symbolic.json",
-      "path": "3L/masters/P30/symbolic.json",
+      "path": "provenance/original-coefficients/3L/masters/P30/symbolic.json",
       "sha256": "d91be2f8b49a621e61d61f4fe14693bdcad2da05c3df944215af88c52cc3f20b",
       "bytes": 8727
     },
@@ -838,13 +838,13 @@
     },
     {
       "source": "3L/masters/P32/numerical.json",
-      "path": "3L/masters/P32/numerical.json",
+      "path": "provenance/original-coefficients/3L/masters/P32/numerical.json",
       "sha256": "b298a0c80c000ae1a92daa467c6c8917c486fb6080dd0060041b7d8ac919a9dd",
       "bytes": 1368
     },
     {
       "source": "3L/masters/P32/symbolic.json",
-      "path": "3L/masters/P32/symbolic.json",
+      "path": "provenance/original-coefficients/3L/masters/P32/symbolic.json",
       "sha256": "367179352edaca34d2a8594c466565149ab998aa217d3225e84333381e9f1612",
       "bytes": 5955
     },
@@ -856,13 +856,13 @@
     },
     {
       "source": "3L/masters/P33/numerical.json",
-      "path": "3L/masters/P33/numerical.json",
+      "path": "provenance/original-coefficients/3L/masters/P33/numerical.json",
       "sha256": "b298a0c80c000ae1a92daa467c6c8917c486fb6080dd0060041b7d8ac919a9dd",
       "bytes": 1368
     },
     {
       "source": "3L/masters/P33/symbolic.json",
-      "path": "3L/masters/P33/symbolic.json",
+      "path": "provenance/original-coefficients/3L/masters/P33/symbolic.json",
       "sha256": "367179352edaca34d2a8594c466565149ab998aa217d3225e84333381e9f1612",
       "bytes": 5955
     },
@@ -874,13 +874,13 @@
     },
     {
       "source": "3L/masters/P34/numerical.json",
-      "path": "3L/masters/P34/numerical.json",
+      "path": "provenance/original-coefficients/3L/masters/P34/numerical.json",
       "sha256": "b3f3f46efc83f71bd11e4602c1d5b521cc08ed803581299d5c0bdbbb5fa6e88f",
       "bytes": 1368
     },
     {
       "source": "3L/masters/P34/symbolic.json",
-      "path": "3L/masters/P34/symbolic.json",
+      "path": "provenance/original-coefficients/3L/masters/P34/symbolic.json",
       "sha256": "d91be2f8b49a621e61d61f4fe14693bdcad2da05c3df944215af88c52cc3f20b",
       "bytes": 8727
     },
@@ -892,13 +892,13 @@
     },
     {
       "source": "3L/masters/P35/numerical.json",
-      "path": "3L/masters/P35/numerical.json",
+      "path": "provenance/original-coefficients/3L/masters/P35/numerical.json",
       "sha256": "b298a0c80c000ae1a92daa467c6c8917c486fb6080dd0060041b7d8ac919a9dd",
       "bytes": 1368
     },
     {
       "source": "3L/masters/P35/symbolic.json",
-      "path": "3L/masters/P35/symbolic.json",
+      "path": "provenance/original-coefficients/3L/masters/P35/symbolic.json",
       "sha256": "367179352edaca34d2a8594c466565149ab998aa217d3225e84333381e9f1612",
       "bytes": 5955
     },
@@ -910,13 +910,13 @@
     },
     {
       "source": "3L/masters/P36/numerical.json",
-      "path": "3L/masters/P36/numerical.json",
+      "path": "provenance/original-coefficients/3L/masters/P36/numerical.json",
       "sha256": "b3f3f46efc83f71bd11e4602c1d5b521cc08ed803581299d5c0bdbbb5fa6e88f",
       "bytes": 1368
     },
     {
       "source": "3L/masters/P36/symbolic.json",
-      "path": "3L/masters/P36/symbolic.json",
+      "path": "provenance/original-coefficients/3L/masters/P36/symbolic.json",
       "sha256": "d91be2f8b49a621e61d61f4fe14693bdcad2da05c3df944215af88c52cc3f20b",
       "bytes": 8727
     },
@@ -928,13 +928,13 @@
     },
     {
       "source": "3L/masters/P37/numerical.json",
-      "path": "3L/masters/P37/numerical.json",
+      "path": "provenance/original-coefficients/3L/masters/P37/numerical.json",
       "sha256": "b3f3f46efc83f71bd11e4602c1d5b521cc08ed803581299d5c0bdbbb5fa6e88f",
       "bytes": 1368
     },
     {
       "source": "3L/masters/P37/symbolic.json",
-      "path": "3L/masters/P37/symbolic.json",
+      "path": "provenance/original-coefficients/3L/masters/P37/symbolic.json",
       "sha256": "d91be2f8b49a621e61d61f4fe14693bdcad2da05c3df944215af88c52cc3f20b",
       "bytes": 8727
     },
@@ -964,13 +964,13 @@
     },
     {
       "source": "3L/masters/P4/numerical.json",
-      "path": "3L/masters/P4/numerical.json",
+      "path": "provenance/original-coefficients/3L/masters/P4/numerical.json",
       "sha256": "b298a0c80c000ae1a92daa467c6c8917c486fb6080dd0060041b7d8ac919a9dd",
       "bytes": 1368
     },
     {
       "source": "3L/masters/P4/symbolic.json",
-      "path": "3L/masters/P4/symbolic.json",
+      "path": "provenance/original-coefficients/3L/masters/P4/symbolic.json",
       "sha256": "367179352edaca34d2a8594c466565149ab998aa217d3225e84333381e9f1612",
       "bytes": 5955
     },
@@ -1036,13 +1036,13 @@
     },
     {
       "source": "3L/masters/P8/numerical.json",
-      "path": "3L/masters/P8/numerical.json",
+      "path": "provenance/original-coefficients/3L/masters/P8/numerical.json",
       "sha256": "b298a0c80c000ae1a92daa467c6c8917c486fb6080dd0060041b7d8ac919a9dd",
       "bytes": 1368
     },
     {
       "source": "3L/masters/P8/symbolic.json",
-      "path": "3L/masters/P8/symbolic.json",
+      "path": "provenance/original-coefficients/3L/masters/P8/symbolic.json",
       "sha256": "367179352edaca34d2a8594c466565149ab998aa217d3225e84333381e9f1612",
       "bytes": 5955
     },
