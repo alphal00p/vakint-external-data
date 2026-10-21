@@ -1,0 +1,15 @@
+{
+  "schema": "vakint.pr11d.portable-bundle-verification.v1",
+  "accepted": true,
+  "symbol": "PR11dep0",
+  "validated_significant_digits": 20000,
+  "stored_significant_digits": 20008,
+  "payload_sha256": "b58a3494c327cf858ca12da7abad2cef2bcba7f1f308e496be5fa8916b264f94",
+  "provenance_manifest_sha256": "333888a1f764e9c9932de0bed909c284d536fc39c78d86d8218b834441c70843",
+  "checked_portable_files": 1397,
+  "two_refinement_interval_convolutions_replayed": true,
+  "complete_independent_DE_validation": false,
+  "AMFlow_20000_digit_comparison_claimed": false,
+  "native_or_Mathematica_execution": false,
+  "seconds": 45.03846264898311
+}

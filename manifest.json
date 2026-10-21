@@ -29,7 +29,7 @@
     {
       "loop_count": 4,
       "manifest": "4L/manifest.json",
-      "manifest_sha256": "ac55b26176949fc69b7182edf507f4a7b1015f2cb225d0f2127f827b2afd412d",
+      "manifest_sha256": "1b72a52ab8361901d3b3c792412dff6053e32aee7d67ec7ff478ea17ca01a2d1",
       "archive": "vakint-external-data-v0.1.1-4L.tar.gz",
       "archive_sha256": null,
       "archive_bytes": null

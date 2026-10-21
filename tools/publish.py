@@ -2,10 +2,12 @@
 """Publish a checked immutable release, then update the data-latest manifest."""
 
 import argparse
+import copy
 import hashlib
 import json
 import subprocess
 from pathlib import Path
+from urllib.parse import quote
 
 REPOSITORY = "alphal00p/vakint-external-data"
 ROOT = Path(__file__).resolve().parents[1]
@@ -19,18 +21,9 @@ def gh(*arguments):
     return run("gh", *arguments, "--repo", REPOSITORY)
 
 
-def release(tag):
+def query(*arguments):
     result = subprocess.run(
-        [
-            "gh",
-            "release",
-            "view",
-            tag,
-            "--repo",
-            REPOSITORY,
-            "--json",
-            "isDraft,tagName",
-        ],
+        ["gh", *arguments],
         capture_output=True,
         text=True,
         check=False,
@@ -38,9 +31,101 @@ def release(tag):
     )
     if result.returncode == 0:
         return json.loads(result.stdout)
-    if "not found" not in result.stderr.lower():
+    if not any(marker in result.stderr.lower() for marker in ("not found", "http 404")):
         raise RuntimeError(result.stderr.strip())
     return None
+
+
+def release(tag):
+    return query(
+        "release",
+        "view",
+        tag,
+        "--repo",
+        REPOSITORY,
+        "--json",
+        "isDraft,tagName,targetCommitish",
+    )
+
+
+def check_release_target(version, commit, current):
+    """A pre-existing tag or resumed draft must describe this exact source commit."""
+    endpoint = f"repos/{REPOSITORY}"
+    reference = query("api", f"{endpoint}/git/ref/tags/{quote(version, safe='')}")
+    if reference is None:
+        if current is None:
+            return
+        target = current.get("targetCommitish", "")
+        resolved = (
+            query("api", f"{endpoint}/commits/{quote(target, safe='')}")
+            if target
+            else None
+        )
+        if resolved is None or resolved.get("sha") != commit:
+            raise RuntimeError(
+                "existing release draft does not target the committed source HEAD"
+            )
+        return
+    target = reference["object"]
+    seen = set()
+    while target["type"] == "tag":
+        if target["sha"] in seen or len(seen) >= 16:
+            raise RuntimeError("invalid or excessively nested immutable release tag")
+        seen.add(target["sha"])
+        annotated = query("api", f"{endpoint}/git/tags/{target['sha']}")
+        if annotated is None:
+            raise RuntimeError("annotated immutable release tag could not be resolved")
+        target = annotated["object"]
+    if target["type"] != "commit" or target["sha"] != commit:
+        raise RuntimeError(
+            "existing immutable release tag does not target the committed source HEAD"
+        )
+
+
+def checked_assets(directory, manifest, source):
+    """Allow only generated archive identities to differ from committed metadata."""
+    identity = copy.deepcopy(manifest)
+    for pack in identity["loop_packs"]:
+        pack["archive_sha256"] = None
+        pack["archive_bytes"] = None
+    if (
+        source.get("schema") != "vakint.external-data.v1"
+        or [p["loop_count"] for p in source["loop_packs"]] != list(range(1, 6))
+        or identity != source
+    ):
+        raise RuntimeError(
+            "release assets were not built from the committed source manifest"
+        )
+    archives = []
+    checksums = {}
+    for pack in manifest["loop_packs"]:
+        name = pack["archive"]
+        if (
+            name
+            != f"vakint-external-data-{manifest['version']}-{pack['loop_count']}L.tar.gz"
+        ):
+            raise RuntimeError(f"unexpected release archive name: {name}")
+        archive = directory / name
+        if archive.is_symlink() or not archive.is_file():
+            raise RuntimeError(f"release archive is not a regular file: {archive}")
+        with archive.open("rb") as stream:
+            actual = hashlib.file_digest(stream, "sha256").hexdigest()
+        if (
+            actual != pack["archive_sha256"]
+            or archive.stat().st_size != pack["archive_bytes"]
+        ):
+            raise RuntimeError(f"release archive differs from manifest: {archive}")
+        checksums[name] = actual
+        archives.append(str(archive))
+    checksums["manifest.json"] = hashlib.sha256(
+        (directory / "manifest.json").read_bytes()
+    ).hexdigest()
+    expected = "".join(f"{checksums[name]}  {name}\n" for name in sorted(checksums))
+    if (directory / "SHA256SUMS").read_text() != expected:
+        raise RuntimeError(
+            "SHA256SUMS differs from the complete release asset inventory"
+        )
+    return archives
 
 
 def main():
@@ -50,32 +135,17 @@ def main():
     directory = args.directory.resolve()
     manifest = json.loads((directory / "manifest.json").read_text())
     source = json.loads((ROOT / "manifest.json").read_text())
-    if manifest["version"] != source["version"] or {
-        p["loop_count"]: p["manifest_sha256"] for p in manifest["loop_packs"]
-    } != {p["loop_count"]: p["manifest_sha256"] for p in source["loop_packs"]}:
-        raise RuntimeError(
-            "release assets were not built from the committed source manifest"
-        )
+    archives = checked_assets(directory, manifest, source)
     version = manifest["version"]
     if run("git", "status", "--porcelain"):
         raise RuntimeError("commit the validated source tree before publishing")
     commit = run("git", "rev-parse", "HEAD")
-    archives = []
-    for pack in manifest["loop_packs"]:
-        archive = directory / pack["archive"]
-        with archive.open("rb") as stream:
-            actual = hashlib.file_digest(stream, "sha256").hexdigest()
-        if (
-            actual != pack["archive_sha256"]
-            or archive.stat().st_size != pack["archive_bytes"]
-        ):
-            raise RuntimeError(f"release archive differs from manifest: {archive}")
-        archives.append(str(archive))
     current = release(version)
     if current is not None and not current["isDraft"]:
         raise RuntimeError(
             f"immutable release {version} already published; do not overwrite it"
         )
+    check_release_target(version, commit, current)
     if current is None:
         gh(
             "release",

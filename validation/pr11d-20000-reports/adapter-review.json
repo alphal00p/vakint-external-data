@@ -1,0 +1,109 @@
+{
+  "schema": "vakint.pr11d.external-precision-adapter-independent-review.v1",
+  "accepted": true,
+  "status": "passed_for_final_adapter_code_and_bounded_tests",
+  "reviewer": "/root/cache_audit/bessel_validator_review/production_b_output/accepted_binding",
+  "findings": [],
+  "artifact_sha256": {
+    "/shared/codex-1/vakint_rustred/vakint-external-data/tools/precision_supplement.py": "c9958c16cb83fcd8e824cc05c5c0bc3b4a3948be261584ae330b04159cdb24d5",
+    "/shared/codex-1/vakint_rustred/vakint-external-data/tests/test_precision_supplement.py": "bc114a7eb6cec2d2d4c3edf4f96e235ef6ffed5ae2f612b998cf3c5e55189f2a",
+    "/shared/codex-1/vakint_rustred/vakint-external-data/tests/test_pr11_precision_source.py": "bbe93dc22cc61422d5983f41aaceb022b4763ace6babb534b636d081ef400b21",
+    "/shared/codex-1/vakint_rustred/vakint-external-data/validation/pr11d-20000-reports/external-adapter-admission.json": "22e47322e1d860a48fff60a95fa87949e066bd432f3425b18c0c76782eaf4316",
+    "/shared/codex-1/vakint_rustred/vakint-external-data/validation/pr11d-20000/proof-index.json": "24d191de0c46d6352fa097980a5f8532a89b6b1c25dda3781202677ce465203a",
+    "/shared/codex-1/vakint_rustred/vakint-external-data/validation/pr11d-20000/verify_bundle.py": "1cf290b886aeff1a80c34a39daf64f16fb647c89f5e22cc5610126f1bbf31ce7",
+    "/shared/codex-1/vakint_rustred/vakint-external-data/validation/pr11d-20000/periods.json": "b58a3494c327cf858ca12da7abad2cef2bcba7f1f308e496be5fa8916b264f94",
+    "/shared/codex-1/vakint_rustred/vakint-external-data/validation/pr11d-20000/validation.json": "423d61d3334c8335edcddab4d5356522b355cd9a6961fde64e7a4d4267ecf3ca",
+    "/shared/codex-1/vakint_rustred/workspace/validation/release-readiness/pr11-supplement-preparation/proposal.json": "6b94335076bcbc08d75b44d367bee15959a6d5122e93549d8b9b99b234b89ed6",
+    "/shared/codex-1/vakint_rustred/vakint-external-data/tools/data.py": "0e0bb5c7f0a9200d30e733c24e5bca51430e839edf3842e558877e2cf18bc42b"
+  },
+  "baseline_git_commit": "aca9b1d324044165c2981213a920d6828d679dc0",
+  "baseline_precision_supplement_sha256": "292b4477a4092c4137b49e2ca846bc2ac9ec734ebb334d6f8de86008edd7139d",
+  "legacy_AST_invariance": {
+    "coefficients": true,
+    "validate_oracle_coverage": true,
+    "loop_slice": true,
+    "validate_master": true,
+    "accepts_producer_binding": true,
+    "validate_loop": true,
+    "extracted_legacy_Bessel_acceptance_block": true
+  },
+  "final_delta_review": "Reviewed final formatting plus nonempty-string path guard and finite/nonzero/exact-stored-digit center guard; all14 independent bounded controls rerun on the final adapter hash.",
+  "independent_controls": {
+    "passed": 14,
+    "actual_scientific_verifier_executed": false,
+    "fixtures": "Actual sealed payload,index and verifier bytes in isolated temporary directories; verifier execution mocked.",
+    "controls": [
+      "accepted finite epsilon0 projection preserves center and20008 stored digits",
+      "reject accepted:false result",
+      "reject missing refinement-convolution acceptance",
+      "reject complete-independent-DE overstatement",
+      "reject AMFlow20000 overstatement",
+      "reject native/Mathematica execution overstatement",
+      "reject incorrect stored-digit result",
+      "reject incorrect payload hash result",
+      "reject absolute descriptor path",
+      "reject parent traversal",
+      "reject internal parent traversal",
+      "reject backslash path",
+      "reject in-root ancestor directory symlink",
+      "private verifier copy equals authenticated bytes and uses exact Python -I -B CLI with300-second timeout"
+    ]
+  },
+  "focused_tests_independently_run": {
+    "command": [
+      "/shared/codex-1/vakint_rustred/workspace/precision-periods/bessel/venv/bin/python",
+      "-B",
+      "tests/test_pr11_precision_source.py",
+      "-q"
+    ],
+    "tests": 9,
+    "passed": true,
+    "actual_verifier_or_engine_called": false
+  },
+  "author_reported_checks_not_rerun_here": {
+    "existing_and_new_precision_tests": 27,
+    "passed": true,
+    "ruff_clean": true
+  },
+  "trust_review": {
+    "fixed_verifier_sha256": "1cf290b886aeff1a80c34a39daf64f16fb647c89f5e22cc5610126f1bbf31ce7",
+    "code_selected_by_untrusted_metadata": false,
+    "authenticated_verifier_bytes_executed_from_private_copy": true,
+    "isolated_python_no_source_tree_imports": true,
+    "bounded_plaintext_descriptor_bytes_and_hashes": true,
+    "all_descriptor_paths_screened_for_escape_and_symlinks": true,
+    "outer_payload_validation_match_indexed_paths_and_bytes": true,
+    "fixed_verifier_owns_gzip_stored_raw_checksums_and_scientific_read_set": true,
+    "post_verification_outer_artifacts_reauthenticated": true,
+    "duplicate_JSON_keys_rejected": true,
+    "fixed_result_scope_and_claims_required": true
+  },
+  "projection_review": {
+    "physical_target_match": "Unique existing4L master_id with exact family_sha256,ordered powers,and direct vakint::{}::PR11d basis; canonical scientific identity is checked by the fixed verifier.",
+    "coefficient": "epsilon0 only",
+    "symbol": "PR11dep0",
+    "numerical_only": true,
+    "FMFT_to_FMFTandMATAD_scope": "Only the accepted finite epsilon0 period; finiteness and equality proof belong to the fixed verifier.",
+    "single_Wick_sign": "Center is copied unchanged; no second sign applied.",
+    "stored_digits": "Derived from finite nonzero Decimal center and required equal20008.",
+    "generic_capability_and_error_owners_preserved": true
+  },
+  "source_runtime_boundary": {
+    "source_validation": "load_source dispatches the additional source only when the root source supplement exists.",
+    "runtime": "validate_loop/validate_master/loop_slice are unchanged and do not invoke the source-only verifier or require validation/pr11d-20000.",
+    "runtime_stage_generate_or_full_release_validation_reviewed": false
+  },
+  "actual_copied_bundle_admission_evidence": {
+    "path": "/shared/codex-1/vakint_rustred/vakint-external-data/validation/pr11d-20000-reports/external-adapter-admission.json",
+    "sha256": "22e47322e1d860a48fff60a95fa87949e066bd432f3425b18c0c76782eaf4316",
+    "adapter_hash_matches": true,
+    "reported_seconds": 43.4587725790916,
+    "execution_owner": "parent staging agent; result and bindings inspected, scientific replay not rerun by this reviewer"
+  },
+  "scope_limits": [
+    "This receipt approves adapter code and bounded tests, not the final release transaction or generated runtime file set.",
+    "Full portable scientific verification is delegated to the fixed independently approved verifier; no native,HPL,Mathematica,or expensive scientific replay was invoked by this reviewer.",
+    "The source retains explicit incomplete independent DE validation and practical AMFlow crosscheck scope; no extra scientific claim is introduced.",
+    "Existing runtime/tools/README and producer files were not modified by this reviewer."
+  ]
+}

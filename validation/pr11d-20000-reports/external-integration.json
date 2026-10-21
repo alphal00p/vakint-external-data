@@ -1,0 +1,88 @@
+{
+  "schema": "vakint.pr11d.external-supplement-integration.v1",
+  "accepted_for_external_source_staging": true,
+  "public_native_API_and_release_gates": "owned by root; not claimed here",
+  "version": "v0.1.1",
+  "direct_aliases": [
+    {
+      "master_id": "L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p2_p1_p1_p1_p1_p1_p1_p1_p0",
+      "name": "P17",
+      "coefficient": {
+        "epsilon_power": 0,
+        "symbolic": false,
+        "numerical": true,
+        "significant_digits": 20000,
+        "stored_significant_digits": 20008,
+        "absolute_error": "3.3489120584697589184106699319561242E-20008",
+        "error_quality": "bounded"
+      },
+      "epsilon_one_significant_digits": 200
+    },
+    {
+      "master_id": "L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p2_p1_p1_p1_p1_p1_p1_p1_p0_p0",
+      "name": "P52",
+      "coefficient": {
+        "epsilon_power": 0,
+        "symbolic": false,
+        "numerical": true,
+        "significant_digits": 20000,
+        "stored_significant_digits": 20008,
+        "absolute_error": "3.3489120584697589184106699319561242E-20008",
+        "error_quality": "bounded"
+      },
+      "epsilon_one_significant_digits": 200
+    },
+    {
+      "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p1_p0_p1_p1_p1_p1_p1_p0",
+      "name": "P74",
+      "coefficient": {
+        "epsilon_power": 0,
+        "symbolic": false,
+        "numerical": true,
+        "significant_digits": 20000,
+        "stored_significant_digits": 20008,
+        "absolute_error": "3.3489120584697589184106699319561242E-20008",
+        "error_quality": "bounded"
+      },
+      "epsilon_one_significant_digits": 200
+    }
+  ],
+  "legacy_Bessel_entries_byte_identical": 8,
+  "legacy_Bessel_upgraded_cells_unchanged": 16,
+  "all_71_other_four_loop_master_records_unchanged": true,
+  "all_unselected_target_rows_byte_preserved": true,
+  "other_four_loop_payload_inventory_records_unchanged": true,
+  "other_loop_manifests_byte_identical": [
+    1,
+    2,
+    3,
+    5
+  ],
+  "producer_update_receipt_unchanged": true,
+  "four_loop_changed_payload_paths": [
+    "masters/P17/numerical.json",
+    "masters/P17/symbolic.json",
+    "masters/P52/numerical.json",
+    "masters/P52/symbolic.json",
+    "masters/P74/numerical.json",
+    "masters/P74/symbolic.json",
+    "numerical-precision-supplement.json"
+  ],
+  "source_proof_outside_runtime_packs": true,
+  "source_bundle_index_sha256": "24d191de0c46d6352fa097980a5f8532a89b6b1c25dda3781202677ce465203a",
+  "root_manifest_sha256": "4fdd7e84c537aa6fe3c2866c347051f382f8692dbdafe8fa06c377553ac3509a",
+  "four_loop_manifest_sha256": "1b72a52ab8361901d3b3c792412dff6053e32aee7d67ec7ff478ea17ca01a2d1",
+  "source_supplement_sha256": "e9777c7c0722292fbc9ff0674d352643674f091700902df3a95a37e12c50b0e3",
+  "loop_supplement_sha256": "e9777c7c0722292fbc9ff0674d352643674f091700902df3a95a37e12c50b0e3",
+  "fixed_adapter_admission_sha256": "22e47322e1d860a48fff60a95fa87949e066bd432f3425b18c0c76782eaf4316",
+  "independent_adapter_review_sha256": "66e61fadabdde5ab0487f9ff94cc7b761947b8f0c129ea99affad9e138b5a43f",
+  "validation": {
+    "full_data_validate": "PASS all five packs after generate v0.1.1, including actual fixed scientific replay",
+    "focused_precision_unittests": 27,
+    "full_stdlib_unittests": 47,
+    "ruff_format_and_check": "PASS",
+    "git_diff_check": "PASS"
+  },
+  "commits_push_tags_or_releases_performed": false,
+  "runtime_snapshot_frozen_for_root": true
+}

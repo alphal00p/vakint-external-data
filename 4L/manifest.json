@@ -5030,11 +5030,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P17/numerical.json",
-          "sha256": "76af128590f58a49fafb3b9a63e02915a4bacfd56266ef1ecff04f0ac6298203"
+          "sha256": "18f0b0489b6400eedccee0dcd4ade8ff65733ca4bad97929b21be93dc0555dbf"
         },
         "symbolic.json": {
           "path": "masters/P17/symbolic.json",
-          "sha256": "76af128590f58a49fafb3b9a63e02915a4bacfd56266ef1ecff04f0ac6298203"
+          "sha256": "18f0b0489b6400eedccee0dcd4ade8ff65733ca4bad97929b21be93dc0555dbf"
         },
         "graph.dot": {
           "path": "masters/P17/graph.dot",
@@ -5057,6 +5057,7 @@
         1
       ],
       "producer_update": "producer-update.json",
+      "numerical_precision_supplement": "numerical-precision-supplement.json",
       "coefficients": [
         {
           "epsilon_power": -4,
@@ -5086,7 +5087,10 @@
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "3.3489120584697589184106699319561242E-20008",
+          "error_quality": "bounded"
         },
         {
           "epsilon_power": 1,
@@ -13607,11 +13611,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P52/numerical.json",
-          "sha256": "76af128590f58a49fafb3b9a63e02915a4bacfd56266ef1ecff04f0ac6298203"
+          "sha256": "18f0b0489b6400eedccee0dcd4ade8ff65733ca4bad97929b21be93dc0555dbf"
         },
         "symbolic.json": {
           "path": "masters/P52/symbolic.json",
-          "sha256": "76af128590f58a49fafb3b9a63e02915a4bacfd56266ef1ecff04f0ac6298203"
+          "sha256": "18f0b0489b6400eedccee0dcd4ade8ff65733ca4bad97929b21be93dc0555dbf"
         },
         "graph.dot": {
           "path": "masters/P52/graph.dot",
@@ -13634,6 +13638,7 @@
         1
       ],
       "producer_update": "producer-update.json",
+      "numerical_precision_supplement": "numerical-precision-supplement.json",
       "coefficients": [
         {
           "epsilon_power": -4,
@@ -13663,7 +13668,10 @@
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "3.3489120584697589184106699319561242E-20008",
+          "error_quality": "bounded"
         },
         {
           "epsilon_power": 1,
@@ -19044,11 +19052,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P74/numerical.json",
-          "sha256": "76af128590f58a49fafb3b9a63e02915a4bacfd56266ef1ecff04f0ac6298203"
+          "sha256": "18f0b0489b6400eedccee0dcd4ade8ff65733ca4bad97929b21be93dc0555dbf"
         },
         "symbolic.json": {
           "path": "masters/P74/symbolic.json",
-          "sha256": "76af128590f58a49fafb3b9a63e02915a4bacfd56266ef1ecff04f0ac6298203"
+          "sha256": "18f0b0489b6400eedccee0dcd4ade8ff65733ca4bad97929b21be93dc0555dbf"
         },
         "graph.dot": {
           "path": "masters/P74/graph.dot",
@@ -19071,6 +19079,7 @@
         1
       ],
       "producer_update": "producer-update.json",
+      "numerical_precision_supplement": "numerical-precision-supplement.json",
       "coefficients": [
         {
           "epsilon_power": -4,
@@ -19100,7 +19109,10 @@
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "3.3489120584697589184106699319561242E-20008",
+          "error_quality": "bounded"
         },
         {
           "epsilon_power": 1,
@@ -58650,12 +58662,12 @@
       "bytes": 3059
     },
     "masters/P17/numerical.json": {
-      "sha256": "76af128590f58a49fafb3b9a63e02915a4bacfd56266ef1ecff04f0ac6298203",
-      "bytes": 558
+      "sha256": "18f0b0489b6400eedccee0dcd4ade8ff65733ca4bad97929b21be93dc0555dbf",
+      "bytes": 20363
     },
     "masters/P17/symbolic.json": {
-      "sha256": "76af128590f58a49fafb3b9a63e02915a4bacfd56266ef1ecff04f0ac6298203",
-      "bytes": 558
+      "sha256": "18f0b0489b6400eedccee0dcd4ade8ff65733ca4bad97929b21be93dc0555dbf",
+      "bytes": 20363
     },
     "masters/P18/graph.dot": {
       "sha256": "7f641f99cee8aa1c8036515179a6fab35912e4470a3bc73e1e6f91538943f43b",
@@ -59118,12 +59130,12 @@
       "bytes": 3060
     },
     "masters/P52/numerical.json": {
-      "sha256": "76af128590f58a49fafb3b9a63e02915a4bacfd56266ef1ecff04f0ac6298203",
-      "bytes": 558
+      "sha256": "18f0b0489b6400eedccee0dcd4ade8ff65733ca4bad97929b21be93dc0555dbf",
+      "bytes": 20363
     },
     "masters/P52/symbolic.json": {
-      "sha256": "76af128590f58a49fafb3b9a63e02915a4bacfd56266ef1ecff04f0ac6298203",
-      "bytes": 558
+      "sha256": "18f0b0489b6400eedccee0dcd4ade8ff65733ca4bad97929b21be93dc0555dbf",
+      "bytes": 20363
     },
     "masters/P53/graph.dot": {
       "sha256": "6d6bb4fb3ae520c0d63c3ffd799938c1560540e2da54e4ae5ee4706123b88393",
@@ -59406,12 +59418,12 @@
       "bytes": 3061
     },
     "masters/P74/numerical.json": {
-      "sha256": "76af128590f58a49fafb3b9a63e02915a4bacfd56266ef1ecff04f0ac6298203",
-      "bytes": 558
+      "sha256": "18f0b0489b6400eedccee0dcd4ade8ff65733ca4bad97929b21be93dc0555dbf",
+      "bytes": 20363
     },
     "masters/P74/symbolic.json": {
-      "sha256": "76af128590f58a49fafb3b9a63e02915a4bacfd56266ef1ecff04f0ac6298203",
-      "bytes": 558
+      "sha256": "18f0b0489b6400eedccee0dcd4ade8ff65733ca4bad97929b21be93dc0555dbf",
+      "bytes": 20363
     },
     "masters/P8/graph.dot": {
       "sha256": "07161001b8438fbba6237a6b488207659d23f5ad50231f64d4337151fb1d1b08",
@@ -59442,8 +59454,8 @@
       "bytes": 6697
     },
     "numerical-precision-supplement.json": {
-      "sha256": "99c887ed81a800a3d9d34f6ce531c5714f9f5368dc44423265c93d97b71b00ec",
-      "bytes": 42038
+      "sha256": "e9777c7c0722292fbc9ff0674d352643674f091700902df3a95a37e12c50b0e3",
+      "bytes": 51787
     },
     "producer-update.json": {
       "sha256": "2a046bbc807edab92c1a6d859a2d30c6b46be567a6e00cea3eb165f89554de34",

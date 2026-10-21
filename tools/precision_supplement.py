@@ -5,6 +5,9 @@ from __future__ import annotations
 
 import hashlib
 import json
+import subprocess
+import sys
+import tempfile
 from decimal import Decimal, InvalidOperation, localcontext
 from fractions import Fraction
 from pathlib import Path
@@ -14,6 +17,13 @@ import data
 SCHEMA = "vakint.external-data.numerical-precision-supplement.v1"
 RECEIPT = "provenance/numerical-precision-supplement.json"
 LOOP_RECEIPT = "numerical-precision-supplement.json"
+PR11_SOURCE_ID = "pr11d-transport-20000"
+PR11_SOURCE_KIND = "vakint.pr11d.bounded-transport-20000.v1"
+# Independently reviewed final implementation, including the actual production
+# chain and scientific read-set trust pins. Bundle metadata cannot replace it.
+PR11_VERIFIER_SHA256 = (
+    "1cf290b886aeff1a80c34a39daf64f16fb647c89f5e22cc5610126f1bbf31ce7"
+)
 CAPABILITY_FIELDS = {
     "epsilon_power",
     "symbolic",
@@ -191,21 +201,8 @@ def validate_oracle_coverage(root, provenance, archive):
         )
 
 
-def load_source(root=data.ROOT):
-    root = Path(root)
-    path = root / RECEIPT
-    if not path.exists():
-        return None
-    update = data.read_json(path)
-    provenance = update.get("provenance", {})
-    checked = {}
-    for name in ["payload", "validation", "previous_producer_update"]:
-        reference = provenance[name]
-        file = data.checked_path(root, reference["path"])
-        if data.digest(file) != reference["sha256"]:
-            raise ValueError(f"numerical precision provenance changed: {name}")
-        checked[name] = data.read_json(file)
-    payload, validation = checked["payload"], checked["validation"]
+def _load_bessel_source(root, provenance, payload, validation):
+    """Keep the legacy proof and oracle requirements independent of new sources."""
     if (
         payload["validation_sha256"] != provenance["validation"]["sha256"]
         or validation.get("accepted") is not True
@@ -238,7 +235,265 @@ def load_source(root=data.ROOT):
     ):
         raise ValueError("independent numerical precision validation is incomplete")
     validate_oracle_coverage(root, provenance, archive)
-    authoritative = {row["symbol"]: row for row in payload["constants"]}
+    return payload["constants"]
+
+
+def _pr11_path(root, relative):
+    if not isinstance(relative, str) or not relative:
+        raise ValueError("invalid PR11 proof path")
+    path = data.checked_path(root, relative)
+    current = root
+    for component in Path(relative).parts:
+        current /= component
+        if current.is_symlink():
+            raise ValueError("PR11 proof paths must not contain symlinks")
+    return path
+
+
+def _pr11_artifact(root, reference):
+    if (
+        not isinstance(reference, dict)
+        or set(reference) not in ({"path", "sha256"}, {"path", "sha256", "bytes"})
+        or not isinstance(reference["path"], str)
+        or not isinstance(reference["sha256"], str)
+        or len(reference["sha256"]) != 64
+        or any(c not in "0123456789abcdef" for c in reference["sha256"])
+        or (
+            "bytes" in reference
+            and (type(reference["bytes"]) is not int or reference["bytes"] < 1)
+        )
+    ):
+        raise ValueError("invalid PR11 plaintext artifact descriptor")
+    path = _pr11_path(root, reference["path"])
+    with path.open("rb") as stream:
+        contents = stream.read(16 * 1024 * 1024 + 1)
+    if (
+        len(contents) > 16 * 1024 * 1024
+        or hashlib.sha256(contents).hexdigest() != reference["sha256"]
+        or ("bytes" in reference and len(contents) != reference["bytes"])
+    ):
+        raise ValueError("PR11 plaintext artifact checksum or size differs")
+    return path, contents
+
+
+def _unique_json(items):
+    result = {}
+    for key, value in items:
+        if key in result:
+            raise ValueError("duplicate PR11 JSON key")
+        result[key] = value
+    return result
+
+
+def _verify_pr11_bundle(directory, index_name, verifier):
+    # Execute the authenticated bytes from a private copy, not a path that could
+    # be replaced between its hash check and Python opening it. Isolated mode
+    # excludes source-tree imports and Python environment overrides.
+    with tempfile.TemporaryDirectory(prefix="vakint-pr11-verifier-") as temporary:
+        script = Path(temporary) / "verify_bundle.py"
+        script.write_bytes(verifier)
+        try:
+            result = subprocess.run(
+                [
+                    sys.executable,
+                    "-I",
+                    "-B",
+                    str(script),
+                    str(directory),
+                    "--index",
+                    index_name,
+                ],
+                check=True,
+                capture_output=True,
+                text=True,
+                timeout=300,
+            )
+        except (subprocess.CalledProcessError, subprocess.TimeoutExpired) as error:
+            raise ValueError("PR11 standalone proof verification failed") from error
+    return json.loads(result.stdout, object_pairs_hook=_unique_json)
+
+
+def _load_pr11_source(root, reference):
+    """Admit only the sealed finite period through its fixed scientific verifier."""
+    if (
+        not isinstance(reference, dict)
+        or set(reference) != {"kind", "payload", "validation", "proof_manifest"}
+        or reference["kind"] != PR11_SOURCE_KIND
+    ):
+        raise ValueError("invalid additional numerical precision source adapter")
+    root = Path(root)
+    artifacts = {
+        name: _pr11_artifact(root, reference[name])
+        for name in ["payload", "validation", "proof_manifest"]
+    }
+    index_path, index_bytes = artifacts["proof_manifest"]
+    directory = index_path.parent
+    index = json.loads(index_bytes, object_pairs_hook=_unique_json)
+    if index.get("schema") != "vakint.pr11d.portable-proof-index.v1":
+        raise ValueError("unsupported PR11 proof index")
+    for name in ["payload", "validation"]:
+        indexed = index["artifacts"][name]
+        path, contents = _pr11_artifact(directory, indexed)
+        if path != artifacts[name][0] or contents != artifacts[name][1]:
+            raise ValueError("PR11 outer artifact differs from proof index")
+    implementation = index["implementations"]["verify_bundle"]
+    if implementation["sha256"] != PR11_VERIFIER_SHA256:
+        raise ValueError(
+            "PR11 verifier is not the independently accepted implementation"
+        )
+    _, verifier = _pr11_artifact(directory, implementation)
+    for descriptors in [index["files"], index["artifacts"], index["implementations"]]:
+        for descriptor in descriptors.values():
+            _pr11_path(directory, descriptor["path"])
+    # The fixed verifier authenticates all stored and decoded proof bytes and
+    # replays both final interval convolutions, rounding, physical identities,
+    # normalization and the complete typed scientific read-set. Gzip descriptor
+    # sha256 fields identify decoded content, not compressed bytes.
+    verified = _verify_pr11_bundle(directory, index_path.name, verifier)
+    if (
+        verified.get("schema") != "vakint.pr11d.portable-bundle-verification.v1"
+        or verified.get("accepted") is not True
+        or verified.get("payload_sha256") != reference["payload"]["sha256"]
+        or verified.get("provenance_manifest_sha256")
+        != index["artifacts"]["provenance_manifest"]["sha256"]
+        or verified.get("validated_significant_digits") != 20000
+        or verified.get("stored_significant_digits") != 20008
+        or verified.get("two_refinement_interval_convolutions_replayed") is not True
+        or verified.get("complete_independent_DE_validation") is not False
+        or verified.get("AMFlow_20000_digit_comparison_claimed") is not False
+        or verified.get("native_or_Mathematica_execution") is not False
+    ):
+        raise ValueError("PR11 scientific verification result differs")
+    for name, (path, contents) in artifacts.items():
+        if _pr11_artifact(root, reference[name]) != (path, contents):
+            raise ValueError("PR11 artifact changed during verification")
+    payload = json.loads(artifacts["payload"][1], object_pairs_hook=_unique_json)
+    if payload.get("schema") != "vakint.pr11d.validated-periods.v1" or set(
+        payload.get("constants", {})
+    ) != {"PR11dep0"}:
+        raise ValueError("unsupported PR11 finite-period payload")
+    row = payload["constants"]["PR11dep0"]
+    if (
+        row["symbol"] != "PR11dep0"
+        or row["master_basis"] != "vakint::PR11d"
+        or type(row["epsilon_power"]) is not int
+        or row["epsilon_power"] != 0
+        or row["normalization"] != "FMFT"
+        or row["unit_mass_squared"] != "1"
+        or row["error_quality"] != "rigorous-bound"
+        or row["Minkowski_overall_sign"] != -1
+        or row["validated_significant_digits"] != 20000
+        or row["stored_significant_digits"] != 20008
+        or any(type(power) is not int for power in row["ordered_powers"])
+    ):
+        raise ValueError("PR11 finite-period scope differs")
+    masters = data.read_json(root / "4L/manifest.json")["masters"]
+    target = [master for master in masters if master["master_id"] == row["master_id"]]
+    if (
+        len(target) != 1
+        or target[0]["family_sha256"] != row["family_sha256"]
+        or target[0]["powers"] != row["ordered_powers"]
+        or target[0]["exact_basis_expression"] != "vakint::{}::PR11d"
+    ):
+        raise ValueError("PR11 physical target is not an existing direct period alias")
+    if not isinstance(row["value"], str) or not row["value"]:
+        raise ValueError("PR11 published center must be a decimal string")
+    number = Decimal(row["value"])
+    stored = len(number.as_tuple().digits)
+    if (
+        not number.is_finite()
+        or number.is_zero()
+        or stored != row["stored_significant_digits"]
+    ):
+        raise ValueError("PR11 published center has inconsistent stored precision")
+    # Finiteness authenticates FMFT/native equality only at epsilon zero. The
+    # published center already includes the single Wick sign; never apply it again.
+    return [
+        {
+            "symbol": row["symbol"],
+            "master_basis": row["master_basis"],
+            "epsilon_power": 0,
+            "normalization": "FMFTandMATAD",
+            "significant_digits": row["validated_significant_digits"],
+            "stored_significant_digits": stored,
+            "numerical_value": row["value"],
+            "validation": {"absolute_error_bound": row["absolute_error_upper_bound"]},
+        }
+    ]
+
+
+def _index_source_rows(source_id, rows):
+    authoritative = {}
+    for row in rows:
+        if (
+            not isinstance(row, dict)
+            or not isinstance(row.get("symbol"), str)
+            or not row["symbol"]
+        ):
+            raise ValueError("invalid authoritative numerical precision source row")
+        key = source_id, row["symbol"]
+        if key in authoritative:
+            raise ValueError("duplicate authoritative numerical precision source row")
+        authoritative[key] = row
+    return authoritative
+
+
+def _source_key(source, additional):
+    if (
+        not isinstance(source, dict)
+        or set(source)
+        not in (
+            {"symbol", "numerical_sha256"},
+            {"source_id", "symbol", "numerical_sha256"},
+        )
+        or not isinstance(source.get("symbol"), str)
+        or not source["symbol"]
+    ):
+        raise ValueError("invalid numerical precision source selection")
+    source_id = None
+    if "source_id" in source:
+        source_id = source["source_id"]
+        if not isinstance(source_id, str) or source_id not in additional:
+            raise ValueError("unknown numerical precision source id")
+    return source_id, source["symbol"]
+
+
+def load_source(root=data.ROOT):
+    root = Path(root)
+    path = root / RECEIPT
+    if not path.exists():
+        return None
+    update = data.read_json(path)
+    provenance = update.get("provenance", {})
+    checked = {}
+    for name in ["payload", "validation", "previous_producer_update"]:
+        reference = provenance[name]
+        file = data.checked_path(root, reference["path"])
+        if data.digest(file) != reference["sha256"]:
+            raise ValueError(f"numerical precision provenance changed: {name}")
+        checked[name] = data.read_json(file)
+    authoritative = _index_source_rows(
+        None,
+        _load_bessel_source(
+            root, provenance, checked["payload"], checked["validation"]
+        ),
+    )
+    additional = provenance.get("additional_sources", {})
+    if not isinstance(additional, dict) or additional.keys() - {PR11_SOURCE_ID}:
+        raise ValueError("invalid or unknown additional numerical precision source")
+    used = set()
+    for entry in update["masters"].values():
+        for row in entry["coefficients"]:
+            source = entry["sources"][str(row["epsilon_power"])]
+            used.add(_source_key(source, additional)[0])
+    if additional.keys() - used:
+        raise ValueError("unused additional numerical precision source")
+    for source_id, reference in additional.items():
+        # This fixed dispatch has one reserved additional source. Source text
+        # cannot select imports, callbacks, or a fallback to the Bessel rows.
+        authoritative.update(
+            _index_source_rows(source_id, _load_pr11_source(root, reference))
+        )
     for entry in update["masters"].values():
         if accepted := entry.get("accepted_symbolic"):
             archived = data.checked_path(root, accepted["archive"])
@@ -257,7 +512,12 @@ def load_source(root=data.ROOT):
                 raise ValueError("preserved numerical precision payload changed")
         for row in entry["coefficients"]:
             source = entry["sources"][str(row["epsilon_power"])]
-            original = authoritative[source["symbol"]]
+            key = _source_key(source, additional)
+            if key not in authoritative:
+                raise ValueError("unknown authoritative numerical precision symbol")
+            if key[0] == PR11_SOURCE_ID and row["symbolic"] is not False:
+                raise ValueError("PR11 finite-period precision remains numerical-only")
+            original = authoritative[key]
             if (
                 original["master_basis"]
                 != entry["exact_basis_expression"].replace("::{}::", "::")

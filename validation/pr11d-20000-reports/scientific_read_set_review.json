@@ -1,0 +1,160 @@
+{
+  "schema": "vakint.pr11d.independent-final-scientific-readset-review.v1",
+  "status": "passed_for_frozen_final_scientific_proof_read_set",
+  "accepted": true,
+  "approved_for_exact_policy_hardpin": true,
+  "approved_proof_read_set_path": "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/accepted20000/proof-read-set-final-v1.json",
+  "approved_proof_read_set_sha256": "5c737067b24ef4c65a739ff5c9da558a63349a49e23b6799da824a27fe889aa8",
+  "approved_read_set_status": "complete_current_scientific_proof_read_set",
+  "approved_builder_sha256": "2c5595a2fbaec7c13b5bb939b7981158cf1ee759bcbbf71b6cd2cb61ff25bf42",
+  "scope": "Exact final mathematical/source/admission file union, typed JSON roles, required pointer/path/hash edges and catalog scopes for the actual completed A/B projections. Includes exact frozen-byte materialization for one changed active source. This approves the read-set digest, not numerical publication or future implementation/execution authority.",
+  "checks": {
+    "required_logical_files": 1390,
+    "required_materialized_bytes": 2990004489,
+    "required_owner_digest_path_base_target_edges": 6365,
+    "consumed_JSON_pointers": 151,
+    "justified_informational_scope_pointers": 1053,
+    "independently_reconstructed_union_equals_policy_exactly": true,
+    "current_typed_semantic_records_checked": 25,
+    "draft_required_files_preserved_byte_identically": 1195,
+    "new_actual_completion_required_files": 195,
+    "required_draft_files_removed_or_digest_changed": 0,
+    "draft_root_admissions_reclassified_as_retained_upstream_inputs": 2,
+    "draft_owner_edges_reexpressed_by_actual_chain_maps": 2844,
+    "all_relocated_reference_target_and_digest_pairs_remain_required": true,
+    "all_other_draft_nodes_unchanged": true,
+    "copied_P13_P14_payloads_require_exact_sibling_paths": 8,
+    "selected_4L_family_indices": [
+      1
+    ],
+    "selected_4L_master_indices": [
+      2,
+      4,
+      5,
+      6,
+      7,
+      10,
+      14
+    ],
+    "whole_original_catalog_and_receipt_bytes_retained": true,
+    "no_genuine_current_dependency_waived_as_historical": true,
+    "strict_RFC6901_negative_controls_passed": [
+      "missing initial slash",
+      "trailing tilde",
+      "invalid tilde escape",
+      "negative index",
+      "leading-zero index",
+      "append index",
+      "out-of-bounds index",
+      "scalar traversal"
+    ]
+  },
+  "actual_profile_roles": [
+    {
+      "profile": "A",
+      "projection_sha256": "26478a0fe626f60123ae5d28dd3a44a9f5a7a0c0da8b7e7351ec4a2e1d7f70ef",
+      "actual_execution_sha256": "c0eaeeb01cc4dec73828e8948b26ddcee744fcd9e71c6768ccdad71aa6a95dd4",
+      "actual_initial_sha256": "e68d82518214ffae10879beb129001c7233552d69e2b544c0a17fe2dc9a6d447",
+      "actual_initial_admission_sha256": "257375fba2d1dc7994d638faaaa4d684433ee64501bde988e3bb4f8809086895",
+      "final_boundary_sha256": "22d97e5a4356c3b9e8b28aef03ee47eee3fb5ec1c13c1d41022887e58e3b92c5",
+      "epsilon_orders": [
+        -5,
+        -4,
+        -3,
+        -2,
+        -1,
+        0
+      ],
+      "raw_basis_dimension": 42,
+      "jets": 6,
+      "working_bits": 69099,
+      "serialization_decimal_digits": 20808,
+      "approximation_not_exact": true
+    },
+    {
+      "profile": "B",
+      "projection_sha256": "c56b758f313c7ef6336f727aad6d3a00ac545cff79d92c15d844117d0ea7a353",
+      "actual_execution_sha256": "faeaf82baaf840eba8472c4e51b4dedbfa6da04eff63811280269caf0faf9d80",
+      "actual_initial_sha256": "c789f3587d02ecd3d9ca9ee0eb699120aa209c5bee88901c32d5c22068dc37b9",
+      "actual_initial_admission_sha256": "cc49014f84a66cfa68ae921ac71bf07010a8dacf76844f49de03029c4809a547",
+      "final_boundary_sha256": "c24087dab054e037562ddd321f286944c311115ecd7db177d1087ff4e5aad889",
+      "epsilon_orders": [
+        -5,
+        -4,
+        -3,
+        -2,
+        -1,
+        0
+      ],
+      "raw_basis_dimension": 42,
+      "jets": 6,
+      "working_bits": 69099,
+      "serialization_decimal_digits": 20808,
+      "approximation_not_exact": true
+    }
+  ],
+  "byte_materialization_override": {
+    "logical_policy_path": "/shared/codex-1/vakint_rustred/gammaloop_vakint_rustred/crates/vakint/src/lib.rs",
+    "unchanged_required_sha256": "257df086de7f3135faafd3bc7bbd288d66a6d62eb5ee646ae6b50c06ea7531e1",
+    "physical_snapshot_path": "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/accepted20000/frozen-source-preimages/vakint-lib.rs",
+    "physical_snapshot_sha256": "257df086de7f3135faafd3bc7bbd288d66a6d62eb5ee646ae6b50c06ea7531e1",
+    "physical_snapshot_bytes": 305025,
+    "exactly_one_explicit_mapping": true,
+    "logical_policy_path_or_hash_rewritten": false,
+    "arbitrary_same_hash_fallback_permitted": false,
+    "active_source_left_unchanged": true,
+    "interpretation": "Delivery materialization of the already-required original bytes. This creates no new mathematical dependency, changes no source identity, and does not authorize altered bytes.",
+    "packer_must_authenticate_snapshot_against_existing_policy_hash": true,
+    "packer_override_implementation_review_is_separate": true
+  },
+  "scientific_scope_preserved": {
+    "exact_target_relations_independently_proved": 3,
+    "DE_rows_independently_proved": 21,
+    "DE_rows_still_trusting_external_Kira": 21,
+    "complete_independent_DE_validation": false,
+    "remaining_scope": [
+      "listed coupled X8 DE rows",
+      "PR9 source reduction/compression not audited by this replay",
+      "boundary factorization/normalization and transport require their separate certificates"
+    ],
+    "AMFlow": "Optional development-only practical100-digit independent ordinary-solver crosscheck; shared exact equations, startup and endpoint, validated-digits estimate, no20k or independent-boundary-source claim.",
+    "finite_projection_values_are_approximations_not_exact_constants": true,
+    "source_cap_promoted_by_read_set_or_this_review": false
+  },
+  "cycle_and_review_roles": {
+    "future_payload_and_final_verifier_review_not_mathematical_readset_roots": true,
+    "verify_bundle_and_assemble_are_separate_authenticated_implementation_roles": true,
+    "final_A_B_numeric_review_outputs_are_redundant_validation_evidence_not_new_numerical_inputs": true,
+    "reason": "Final numerical gates are recomputed from already-required exact actual projection inputs. Final implementation review and actual standalone bundle acceptance remain separate; adding their outputs as science inputs would create gratuitous review/hash cycles."
+  },
+  "remaining_separate_acceptance": [
+    "Final numerical A/B convolution, refinement, rounding and publication gates.",
+    "Final verifier and assembler implementation changes, including exact policy/execution hardpins.",
+    "Packer physical-source override implementation review and actual standalone portable bundle replay.",
+    "External-data publication and runtime integration acceptance."
+  ],
+  "accepted_for_period_publication": false,
+  "numerical_or_mathematical_source_algorithms_rerun": false,
+  "native_or_HPL_or_transport_or_Mathematica_execution": false,
+  "parent_owned_files_modified": false,
+  "source_and_review_sha256": {
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/accepted20000/proof-read-set-final-v1.json": "5c737067b24ef4c65a739ff5c9da558a63349a49e23b6799da824a27fe889aa8",
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/accepted20000/build_read_set.py": "2c5595a2fbaec7c13b5bb939b7981158cf1ee759bcbbf71b6cd2cb61ff25bf42",
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/accepted20000/read-set-draft-v4.json": "0228f7a1ce165ac0d6f13a3242c1a38f50d5b2bc1cfa044b12659d9ee4b3bea2",
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/accepted20000/read-set-review/structure-scope-review-v4.json": "3993535183d002f4bfef36d3d5785968f65fcf869699c01b5878340c6aed11b7",
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/accepted20000/read-set-review/audit_final_semantics.py": "fb91f281e254aac0ad1e6ca86b90608da9c997cb68b5c849794753e31eb5a50e",
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/accepted20000/read-set-review/final-semantic-union-audit.json": "fe398017e9a5b5ab99e3aac403d1a2a7daab93751de8deb4ff88d73b0f7a9f4d",
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/accepted20000/read-set-review/final-secondary/audit.py": "6492c4f6714255eda75356f9a3031f1597dc864e08f226eac1275e892f356246",
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/accepted20000/read-set-review/final-secondary/review.json": "b2906410f26210b676961cd2935523de548ad60cf86f357aa836009c94d88fd5",
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/accepted20000/read-set-review/final-secondary/audit_materialized_v1.py": "cff226d482236a2910e9f8cd1737fdfed0ef9211ff85b325d835b3f67b7adc30",
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/accepted20000/read-set-review/final-secondary/review-materialized-v1.json": "3b05bf3abd85bd20b2173e0d46c2ef870b3254c6eacff48549e802f9d89942f8",
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/accepted20000/frozen-source-preimages/vakint-lib.rs": "257df086de7f3135faafd3bc7bbd288d66a6d62eb5ee646ae6b50c06ea7531e1",
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/helper/portable-verifier-review/typed-policy-review/review.json": "fccec195734a7bdcb327ef5404cf564699481675bfbbbf271048f3384f9a6575",
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/ancestor-flows/rpf-v11-chain-acceptance-v1/production-A-accepted.json": "c0eaeeb01cc4dec73828e8948b26ddcee744fcd9e71c6768ccdad71aa6a95dd4",
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/ancestor-flows/rpf-v11-chain-acceptance-v1/production-B-accepted.json": "faeaf82baaf840eba8472c4e51b4dedbfa6da04eff63811280269caf0faf9d80",
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/hierarchy-transport/x8-production-A-finite-20000.json": "26478a0fe626f60123ae5d28dd3a44a9f5a7a0c0da8b7e7351ec4a2e1d7f70ef",
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/hierarchy-transport/x8-production-B-finite-20008.json": "c56b758f313c7ef6336f727aad6d3a00ac545cff79d92c15d844117d0ea7a353",
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/kira-identity-audit/REPLAY_RECEIPT.json": "50a8e1b8ddfa550876016d329eae8e0fe952c345fdafadcb5e0825dc868181e2",
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/amflow-oracle/acceptance.json": "af1521ef875f6e92f83597f9f445b69778c2391c997a82d7becff50b95a839a8"
+  }
+}

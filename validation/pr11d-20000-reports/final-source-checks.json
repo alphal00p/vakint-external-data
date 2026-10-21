@@ -1,0 +1,67 @@
+{
+  "schema": "vakint.pr11d.external-source-final-checks.v1",
+  "accepted": true,
+  "runtime_and_owned_source_files_frozen": true,
+  "integration_receipt": {
+    "path": "validation/pr11d-20000-reports/external-integration.json",
+    "sha256": "7e992b1cec569007b03591c8b185ef92543b78b6b25b7ef2cc46944bc09d4536"
+  },
+  "independent_adapter_review": {
+    "path": "validation/pr11d-20000-reports/adapter-review.json",
+    "sha256": "66e61fadabdde5ab0487f9ff94cc7b761947b8f0c129ea99affad9e138b5a43f"
+  },
+  "commands": [
+    {
+      "command": "python3 -m unittest discover -s tests -p \"*precision*.py\" -v",
+      "result": "PASS 27 tests"
+    },
+    {
+      "command": "python3 -m unittest discover -s tests",
+      "result": "PASS 47 tests"
+    },
+    {
+      "command": "ruff format --check tools/precision_supplement.py tests/test_precision_supplement.py tests/test_pr11_precision_source.py",
+      "result": "PASS"
+    },
+    {
+      "command": "ruff check tools/precision_supplement.py tests/test_precision_supplement.py tests/test_pr11_precision_source.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python3 tools/data.py generate --version v0.1.1",
+      "result": "PASS generated all five loop packs"
+    },
+    {
+      "command": "python3 tools/data.py validate",
+      "result": "PASS all five loop packs, actual PR11 fixed-verifier proof replay and legacy Bessel evidence checks"
+    },
+    {
+      "command": "/shared/codex-1/vakint_rustred/workspace/precision-periods/bessel/venv/bin/python -B tools/verify_bessel_archive.py --replay-balls",
+      "result": "PASS four accepted Bessel coefficient records and both Arb enclosures; corrected oracle coverage retained"
+    },
+    {
+      "command": "git diff --check",
+      "result": "PASS"
+    }
+  ],
+  "artifact_sha256": {
+    "tools/precision_supplement.py": "c9958c16cb83fcd8e824cc05c5c0bc3b4a3948be261584ae330b04159cdb24d5",
+    "tests/test_precision_supplement.py": "bc114a7eb6cec2d2d4c3edf4f96e235ef6ffed5ae2f612b998cf3c5e55189f2a",
+    "tests/test_pr11_precision_source.py": "bbe93dc22cc61422d5983f41aaceb022b4763ace6babb534b636d081ef400b21",
+    "AUTHORING.typ": "999f6c64599a820a3d82e647077991677d734ae0a8b7b9bae1afe591d6cbd804",
+    "manifest.json": "4fdd7e84c537aa6fe3c2866c347051f382f8692dbdafe8fa06c377553ac3509a",
+    "4L/manifest.json": "1b72a52ab8361901d3b3c792412dff6053e32aee7d67ec7ff478ea17ca01a2d1",
+    "provenance/numerical-precision-supplement.json": "e9777c7c0722292fbc9ff0674d352643674f091700902df3a95a37e12c50b0e3",
+    "4L/numerical-precision-supplement.json": "e9777c7c0722292fbc9ff0674d352643674f091700902df3a95a37e12c50b0e3",
+    "validation/pr11d-20000/proof-index.json": "24d191de0c46d6352fa097980a5f8532a89b6b1c25dda3781202677ce465203a"
+  },
+  "scientific_scope": {
+    "epsilon_zero_only": true,
+    "validated_significant_digits": 20000,
+    "stored_significant_digits": 20008,
+    "complete_independent_DE_validation": false,
+    "AMFlow_20000_digit_comparison_claimed": false
+  },
+  "native_public_API_catalog_and_release_actions": "Root-owned; their separate acceptance receipts are not replaced by this source integration receipt.",
+  "commit_push_tag_or_release_performed_by_integrator": false
+}

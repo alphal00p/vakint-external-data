@@ -95,7 +95,32 @@ The Bessel upgrade supplies PR4 and PR4d at epsilon orders zero and one with
 20,000 validated digits and 20,008 stored digits. Its bounded absolute errors
 include rounding to the published decimal center. Earlier producer receipts
 remain unchanged; the new receipt explicitly supersedes their selected rows.
-PR11d and all other coefficients retain their existing capabilities.
+The PR11d finite coefficient now has the same 20,000 validated and 20,008 stored
+digits for the three existing direct aliases P17, P52 and P74. Its positive
+outward error includes published-center rounding. It remains numerical-only;
+epsilon one retains its 200-digit capability and all negative exact-zero rows
+remain unchanged. `PR11dep0` resolves this existing master coefficient and is
+not an additional `constants.json` entry.
+
+The cumulative supplement retains the original Bessel provenance unchanged.
+Its optional `provenance.additional_sources` map declares the fixed PR11 source
+adapter, and the three epsilon-zero selections carry its explicit `source_id`.
+Selections without that field retain the legacy Bessel source. Unknown or unused
+sources and duplicate authoritative rows are rejected. The PR11 before-images
+and former complete supplement are preserved separately in
+`provenance/numerical-precision-pr11d-before`.
+
+The source-only `validation/pr11d-20000` bundle contains the immutable
+`proof-index.json`, period, acceptance, scientific read-set and compressed proof
+objects. Source validation runs the independently reviewed, fixed-SHA standard
+library verifier; an `accepted` flag alone cannot admit data. It authenticates
+both compressed and original bytes, replays the two final interval convolutions,
+and checks the physical target, finite normalization equality and rounding cell.
+The accepted scope retains 21 independently proved differential-equation rows
+and 21 rows trusting the recorded external Kira derivation; the practical AMFlow
+crosscheck is not a 20,000-digit certificate. These proof files stay outside loop
+packs, whose loading continues to use authenticated coefficient bounds without
+requiring the source validation directory or invoking a numerical engine.
 
 The complete accepted Bessel proof archive is under `validation/bessel-20000`.
 `python3 tools/verify_bessel_archive.py` checks its hashes using the standard

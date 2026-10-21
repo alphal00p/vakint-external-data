@@ -1,0 +1,62 @@
+{
+  "schema": "vakint.pr11d.adjacent-delivery-validation-reports.v1",
+  "scope": "Independent validation outputs and human report, deliberately outside the mathematical input read-set to avoid implementation-review cycles. Their acceptance does not enlarge the explicit differential-equation or AMFlow independence scope.",
+  "reports": {
+    "numeric_A": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/helper/production-final-numeric-review/A/review.json",
+      "sha256": "deb83607dbdf14bf7fd28504b374b31b4143c76b2dd269d9f23e5d47ec866834",
+      "bytes": 9298
+    },
+    "numeric_B": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/helper/production-final-numeric-review/B/review.json",
+      "sha256": "7e76b99b1e615c8232cf22ce5e138ebbe1e426df203404300dd19467ea1581af",
+      "bytes": 8039
+    },
+    "dual_profile": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/helper/production-final-numeric-review/dual/review.json",
+      "sha256": "6b20d5663f82e32981db748c2d756a67aba1c02c094e0c4560587236fe0a1ad9",
+      "bytes": 10423
+    },
+    "final_verifier_implementation": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/helper/portable-verifier-review/final-implementation-v1/review.json",
+      "sha256": "6b20de7e799c51afa220d3996bb5dda2b476817b14a25cd33776af3fed085d2a",
+      "bytes": 8489
+    },
+    "final_builder_implementation": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/helper/final-builder-review/final-implementation-v1/review.json",
+      "sha256": "d3e135aae086f3c58873573eba38278e70da5c46d5f59cdfb0ccc793d1f2d5e1",
+      "bytes": 6665
+    },
+    "scientific_read_set": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/accepted20000/read-set-review/final-policy-review-v1.json",
+      "sha256": "d071d81726116dc480170f78a0eb2ed91f90107059a49b32198dfe5ff0f39f5c",
+      "bytes": 10668
+    },
+    "portable_verifier_actual_stdout": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/precision-periods/bessel/portable-proof/final-pack-run-v1/portable-verifier.stdout.json",
+      "sha256": "2a97c0a2980bf84532179d6ac273d0626cc6f599096dad328db00230b0d5e258",
+      "bytes": 638
+    },
+    "human_numerical_report": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/PR11D_VALIDATION_REPORT_FINAL.md",
+      "sha256": "5da718df146b9159445af539a93da237838574aa569fd3681023b7502036bc0c",
+      "bytes": 6219
+    },
+    "final_bundle_delivery": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/precision-periods/bessel/portable-proof/delivery-v1.json",
+      "sha256": "334cae19c5e1d3061011acb2d00c516cec5b6b41980424e4c1d0de21adf8d666",
+      "bytes": 8294
+    },
+    "independent_actual_archive_admission": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/precision-periods/bessel/portable-proof/independent-review/final-bundle-v1/admission.json",
+      "sha256": "addd4165d398ec2afda48e139bdfd72a674cb157ad1defcb782708ab9d996a0d",
+      "bytes": 3754
+    }
+  },
+  "index": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/precision-periods/bessel/portable-proof/pr11d-20000-v1/proof-index.json",
+    "sha256": "24d191de0c46d6352fa097980a5f8532a89b6b1c25dda3781202677ce465203a",
+    "bytes": 694892
+  },
+  "final_independent_actual_bundle_review": "accepted_actual_portable_bundle_and_independent_archive_replay"
+}

@@ -1,0 +1,26 @@
+{
+  "schema": "vakint.pr11d.packing-source-materialization.v1",
+  "source_overrides": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/precision-periods/bessel/portable-proof/final-source-overrides-v1.json",
+    "sha256": "0fdda8d99aa4c00a12a189719fcaf1e18c9c4128e1f6c83659b479556ae64e16"
+  },
+  "materializations": {
+    "/shared/codex-1/vakint_rustred/gammaloop_vakint_rustred/crates/vakint/src/lib.rs": {
+      "physical_path": "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/accepted20000/frozen-source-preimages/vakint-lib.rs",
+      "sha256": "257df086de7f3135faafd3bc7bbd288d66a6d62eb5ee646ae6b50c06ea7531e1",
+      "bytes": 305025
+    }
+  },
+  "approved_scientific_policy_sha256": "5c737067b24ef4c65a739ff5c9da558a63349a49e23b6799da824a27fe889aa8",
+  "recovery": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/accepted20000/frozen-source-preimages/recovery.json",
+    "sha256": "d37e7c73969effe5b48afeb81f824d571fe2fc2a750811602a4b682675bcec68"
+  },
+  "policy_review": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/accepted20000/read-set-review/final-policy-review-v1.json",
+    "sha256": "d071d81726116dc480170f78a0eb2ed91f90107059a49b32198dfe5ff0f39f5c"
+  },
+  "logical_provenance_and_checksums_changed": false,
+  "active_source_files_changed": false,
+  "scope": "Packing-input materialization only. Physical bytes authenticate to original immutable logical SHA; no scientific acceptance or precision promotion."
+}

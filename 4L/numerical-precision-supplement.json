@@ -14,7 +14,7 @@
       "path": "provenance/numerical-precision-before/producer-update.json",
       "sha256": "71883b23d86aef06bd08724b304b2234fa169ea45ec276e4180361b134979308"
     },
-    "scope": "PR4/PR4d epsilon 0 and 1 numerical precision only; exact symbolic formulas from the accepted producer commit are preserved. Other numerical coefficients and PR11d remain unchanged.",
+    "scope": "PR4/PR4d epsilon 0 and 1 retain their accepted 20,000-digit numerical precision and independently accepted exact symbolic formulas. PR11d epsilon 0 for its three existing direct aliases has 20,000 validated digits and 20,008 stored digits from the sealed bounded transport proof. PR11d epsilon 1 and every other numerical coefficient remain unchanged; a finite period name does not promote symbolic exactness.",
     "error_bound_includes_published_center_rounding": true,
     "runtime_requires_mathematica": false,
     "oracle_coverage_addendum": {
@@ -24,7 +24,24 @@
       "validation_sha256": "d20600edb6b5cb3dc2210b65eebb3ed547e02f652cc771e796ceba634697b125",
       "note": "The frozen original oracle list checked 45 of 46 required integration anchors and the unused point 15/16. This additive correction independently checks K0/K1 at the missing actual shifted-interval center 1 (20,400 reference digits; 20,422 digits of agreement). Original rigorous Arb certificates, public coefficient bytes, and the 20,000-digit caps remain unchanged."
     },
-    "accepted_symbolic_commit": "277e8768b37bb97141c45444f5fb94fa18177dc7"
+    "accepted_symbolic_commit": "277e8768b37bb97141c45444f5fb94fa18177dc7",
+    "additional_sources": {
+      "pr11d-transport-20000": {
+        "kind": "vakint.pr11d.bounded-transport-20000.v1",
+        "payload": {
+          "path": "validation/pr11d-20000/periods.json",
+          "sha256": "b58a3494c327cf858ca12da7abad2cef2bcba7f1f308e496be5fa8916b264f94"
+        },
+        "validation": {
+          "path": "validation/pr11d-20000/validation.json",
+          "sha256": "423d61d3334c8335edcddab4d5356522b355cd9a6961fde64e7a4d4267ecf3ca"
+        },
+        "proof_manifest": {
+          "path": "validation/pr11d-20000/proof-index.json",
+          "sha256": "24d191de0c46d6352fa097980a5f8532a89b6b1c25dda3781202677ce465203a"
+        }
+      }
+    }
   },
   "masters": {
     "L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p0_p1_p1_p0_p0_p1_p1_p1_p0": {
@@ -553,6 +570,144 @@
         "sha256": "2ba11cfbeeeed744e568d61496cdfc378b155fb84c4ef5f9345d780463f54a7a",
         "archive": "provenance/accepted-symbolic-277e/4L/masters/P68/symbolic.json",
         "contents": "[\n  [\n    -4,\n    \"0\"\n  ],\n  [\n    -3,\n    \"-7/6\"\n  ],\n  [\n    -2,\n    \"-215/48\"\n  ],\n  [\n    -1,\n    \"-7/18*𝜋^2+-965/96\"\n  ],\n  [\n    0,\n    \"-215/144*𝜋^2+-2155/192+14/9*symbolica::zeta(3)+19/6*vakint::K5Moment(1)+75/8*vakint::K5Moment(3)\"\n  ],\n  [\n    1,\n    \"-7/90*𝜋^4+-929/60*vakint::K5Moment(1)+-965/288*𝜋^2+1185/16*vakint::K5Moment(3)+19/6*vakint::K5LogMoment(1)+215/36*symbolica::zeta(3)+3829/128+75/8*vakint::K5LogMoment(3)\"\n  ]\n]\n"
+      }
+    },
+    "L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p2_p1_p1_p1_p1_p1_p1_p1_p0": {
+      "loop_count": 4,
+      "exact_basis_expression": "vakint::{}::PR11d",
+      "coefficients": [
+        {
+          "epsilon_power": 0,
+          "symbolic": false,
+          "numerical": true,
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "3.3489120584697589184106699319561242E-20008",
+          "error_quality": "bounded"
+        }
+      ],
+      "sources": {
+        "0": {
+          "source_id": "pr11d-transport-20000",
+          "symbol": "PR11dep0",
+          "numerical_sha256": "817a10393b091e8a6b80720daa4311580ee292802cc2fdad52510fd85d3c83c0"
+        }
+      },
+      "files": {
+        "numerical.json": {
+          "path": "masters/P17/numerical.json",
+          "sha256": "18f0b0489b6400eedccee0dcd4ade8ff65733ca4bad97929b21be93dc0555dbf"
+        },
+        "symbolic.json": {
+          "path": "masters/P17/symbolic.json",
+          "sha256": "18f0b0489b6400eedccee0dcd4ade8ff65733ca4bad97929b21be93dc0555dbf"
+        }
+      },
+      "previous_files": {
+        "numerical.json": {
+          "path": "masters/P17/numerical.json",
+          "archive": "provenance/numerical-precision-pr11d-before/4L/masters/P17/numerical.json",
+          "sha256": "76af128590f58a49fafb3b9a63e02915a4bacfd56266ef1ecff04f0ac6298203",
+          "contents": "[\n  [\n    -4,\n    \"0\"\n  ],\n  [\n    -3,\n    \"0\"\n  ],\n  [\n    -2,\n    \"0\"\n  ],\n  [\n    -1,\n    \"0\"\n  ],\n  [\n    0,\n    \"-2.9064862886431126418192064351134863596782176535462219023092834442535187458072825449540375390106618502822819005705059288342047994599070794144678829393459867675780909057460449671002709551753805130444880e+0\"\n  ],\n  [\n    1,\n    \"2.2316303041902347386921004891487453960048272561991706022288928737870954228738024971359502967249764952143727561914495827604282126626651980716470589063660692675760450583996183062094769418035372626781290e+1\"\n  ]\n]\n"
+        },
+        "symbolic.json": {
+          "path": "masters/P17/symbolic.json",
+          "archive": "provenance/numerical-precision-pr11d-before/4L/masters/P17/symbolic.json",
+          "sha256": "76af128590f58a49fafb3b9a63e02915a4bacfd56266ef1ecff04f0ac6298203",
+          "contents": "[\n  [\n    -4,\n    \"0\"\n  ],\n  [\n    -3,\n    \"0\"\n  ],\n  [\n    -2,\n    \"0\"\n  ],\n  [\n    -1,\n    \"0\"\n  ],\n  [\n    0,\n    \"-2.9064862886431126418192064351134863596782176535462219023092834442535187458072825449540375390106618502822819005705059288342047994599070794144678829393459867675780909057460449671002709551753805130444880e+0\"\n  ],\n  [\n    1,\n    \"2.2316303041902347386921004891487453960048272561991706022288928737870954228738024971359502967249764952143727561914495827604282126626651980716470589063660692675760450583996183062094769418035372626781290e+1\"\n  ]\n]\n"
+        }
+      }
+    },
+    "L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p2_p1_p1_p1_p1_p1_p1_p1_p0_p0": {
+      "loop_count": 4,
+      "exact_basis_expression": "vakint::{}::PR11d",
+      "coefficients": [
+        {
+          "epsilon_power": 0,
+          "symbolic": false,
+          "numerical": true,
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "3.3489120584697589184106699319561242E-20008",
+          "error_quality": "bounded"
+        }
+      ],
+      "sources": {
+        "0": {
+          "source_id": "pr11d-transport-20000",
+          "symbol": "PR11dep0",
+          "numerical_sha256": "817a10393b091e8a6b80720daa4311580ee292802cc2fdad52510fd85d3c83c0"
+        }
+      },
+      "files": {
+        "numerical.json": {
+          "path": "masters/P52/numerical.json",
+          "sha256": "18f0b0489b6400eedccee0dcd4ade8ff65733ca4bad97929b21be93dc0555dbf"
+        },
+        "symbolic.json": {
+          "path": "masters/P52/symbolic.json",
+          "sha256": "18f0b0489b6400eedccee0dcd4ade8ff65733ca4bad97929b21be93dc0555dbf"
+        }
+      },
+      "previous_files": {
+        "numerical.json": {
+          "path": "masters/P52/numerical.json",
+          "archive": "provenance/numerical-precision-pr11d-before/4L/masters/P52/numerical.json",
+          "sha256": "76af128590f58a49fafb3b9a63e02915a4bacfd56266ef1ecff04f0ac6298203",
+          "contents": "[\n  [\n    -4,\n    \"0\"\n  ],\n  [\n    -3,\n    \"0\"\n  ],\n  [\n    -2,\n    \"0\"\n  ],\n  [\n    -1,\n    \"0\"\n  ],\n  [\n    0,\n    \"-2.9064862886431126418192064351134863596782176535462219023092834442535187458072825449540375390106618502822819005705059288342047994599070794144678829393459867675780909057460449671002709551753805130444880e+0\"\n  ],\n  [\n    1,\n    \"2.2316303041902347386921004891487453960048272561991706022288928737870954228738024971359502967249764952143727561914495827604282126626651980716470589063660692675760450583996183062094769418035372626781290e+1\"\n  ]\n]\n"
+        },
+        "symbolic.json": {
+          "path": "masters/P52/symbolic.json",
+          "archive": "provenance/numerical-precision-pr11d-before/4L/masters/P52/symbolic.json",
+          "sha256": "76af128590f58a49fafb3b9a63e02915a4bacfd56266ef1ecff04f0ac6298203",
+          "contents": "[\n  [\n    -4,\n    \"0\"\n  ],\n  [\n    -3,\n    \"0\"\n  ],\n  [\n    -2,\n    \"0\"\n  ],\n  [\n    -1,\n    \"0\"\n  ],\n  [\n    0,\n    \"-2.9064862886431126418192064351134863596782176535462219023092834442535187458072825449540375390106618502822819005705059288342047994599070794144678829393459867675780909057460449671002709551753805130444880e+0\"\n  ],\n  [\n    1,\n    \"2.2316303041902347386921004891487453960048272561991706022288928737870954228738024971359502967249764952143727561914495827604282126626651980716470589063660692675760450583996183062094769418035372626781290e+1\"\n  ]\n]\n"
+        }
+      }
+    },
+    "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p1_p0_p1_p1_p1_p1_p1_p0": {
+      "loop_count": 4,
+      "exact_basis_expression": "vakint::{}::PR11d",
+      "coefficients": [
+        {
+          "epsilon_power": 0,
+          "symbolic": false,
+          "numerical": true,
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "3.3489120584697589184106699319561242E-20008",
+          "error_quality": "bounded"
+        }
+      ],
+      "sources": {
+        "0": {
+          "source_id": "pr11d-transport-20000",
+          "symbol": "PR11dep0",
+          "numerical_sha256": "817a10393b091e8a6b80720daa4311580ee292802cc2fdad52510fd85d3c83c0"
+        }
+      },
+      "files": {
+        "numerical.json": {
+          "path": "masters/P74/numerical.json",
+          "sha256": "18f0b0489b6400eedccee0dcd4ade8ff65733ca4bad97929b21be93dc0555dbf"
+        },
+        "symbolic.json": {
+          "path": "masters/P74/symbolic.json",
+          "sha256": "18f0b0489b6400eedccee0dcd4ade8ff65733ca4bad97929b21be93dc0555dbf"
+        }
+      },
+      "previous_files": {
+        "numerical.json": {
+          "path": "masters/P74/numerical.json",
+          "archive": "provenance/numerical-precision-pr11d-before/4L/masters/P74/numerical.json",
+          "sha256": "76af128590f58a49fafb3b9a63e02915a4bacfd56266ef1ecff04f0ac6298203",
+          "contents": "[\n  [\n    -4,\n    \"0\"\n  ],\n  [\n    -3,\n    \"0\"\n  ],\n  [\n    -2,\n    \"0\"\n  ],\n  [\n    -1,\n    \"0\"\n  ],\n  [\n    0,\n    \"-2.9064862886431126418192064351134863596782176535462219023092834442535187458072825449540375390106618502822819005705059288342047994599070794144678829393459867675780909057460449671002709551753805130444880e+0\"\n  ],\n  [\n    1,\n    \"2.2316303041902347386921004891487453960048272561991706022288928737870954228738024971359502967249764952143727561914495827604282126626651980716470589063660692675760450583996183062094769418035372626781290e+1\"\n  ]\n]\n"
+        },
+        "symbolic.json": {
+          "path": "masters/P74/symbolic.json",
+          "archive": "provenance/numerical-precision-pr11d-before/4L/masters/P74/symbolic.json",
+          "sha256": "76af128590f58a49fafb3b9a63e02915a4bacfd56266ef1ecff04f0ac6298203",
+          "contents": "[\n  [\n    -4,\n    \"0\"\n  ],\n  [\n    -3,\n    \"0\"\n  ],\n  [\n    -2,\n    \"0\"\n  ],\n  [\n    -1,\n    \"0\"\n  ],\n  [\n    0,\n    \"-2.9064862886431126418192064351134863596782176535462219023092834442535187458072825449540375390106618502822819005705059288342047994599070794144678829393459867675780909057460449671002709551753805130444880e+0\"\n  ],\n  [\n    1,\n    \"2.2316303041902347386921004891487453960048272561991706022288928737870954228738024971359502967249764952143727561914495827604282126626651980716470589063660692675760450583996183062094769418035372626781290e+1\"\n  ]\n]\n"
+        }
       }
     }
   }

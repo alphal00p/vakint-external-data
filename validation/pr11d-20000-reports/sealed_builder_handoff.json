@@ -1,0 +1,58 @@
+{
+  "schema": "vakint.pr11d.sealed-packing-handoff.v1",
+  "status": "builder_accepted_awaiting_portable_pack_and_verifier",
+  "payload": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/accepted20000/sealed-production-v1/periods.json",
+    "sha256": "b58a3494c327cf858ca12da7abad2cef2bcba7f1f308e496be5fa8916b264f94",
+    "bytes": 62946
+  },
+  "validation": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/accepted20000/sealed-production-v1/validation.json",
+    "sha256": "423d61d3334c8335edcddab4d5356522b355cd9a6961fde64e7a4d4267ecf3ca",
+    "bytes": 22689
+  },
+  "provenance_manifest": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/accepted20000/sealed-production-v1/provenance-manifest.json",
+    "sha256": "333888a1f764e9c9932de0bed909c284d536fc39c78d86d8218b834441c70843",
+    "bytes": 283490
+  },
+  "proof_read_set": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/accepted20000/proof-read-set-final-v1.json",
+    "sha256": "5c737067b24ef4c65a739ff5c9da558a63349a49e23b6799da824a27fe889aa8",
+    "bytes": 6072056
+  },
+  "verify_bundle": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/accepted20000/verify_bundle.py",
+    "sha256": "1cf290b886aeff1a80c34a39daf64f16fb647c89f5e22cc5610126f1bbf31ce7",
+    "bytes": 35390
+  },
+  "assemble": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/accepted20000/assemble.py",
+    "sha256": "6b1700f5f7cb8093de47622b75951e43a5dc5c1b087e28474062fcb4cd9ce9d1",
+    "bytes": 17024
+  },
+  "relative_references": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/accepted20000/relative-references.json",
+    "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "bytes": 3
+  },
+  "builder_implementation_review": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/helper/final-builder-review/final-implementation-v1/review.json",
+    "sha256": "d3e135aae086f3c58873573eba38278e70da5c46d5f59cdfb0ccc793d1f2d5e1",
+    "bytes": 6665
+  },
+  "verifier_implementation_review": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/helper/portable-verifier-review/final-implementation-v1/review.json",
+    "sha256": "6b20de7e799c51afa220d3996bb5dda2b476817b14a25cd33776af3fed085d2a",
+    "bytes": 8489
+  },
+  "scientific_read_set_review": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/accepted20000/read-set-review/final-policy-review-v1.json",
+    "sha256": "d071d81726116dc480170f78a0eb2ed91f90107059a49b32198dfe5ff0f39f5c",
+    "bytes": 10668
+  },
+  "public_source_precision_cap_unchanged": 200,
+  "validated_digits": 20000,
+  "stored_digits": 20008,
+  "scope": "Finite primitive PR11dep0 only. All individual other coefficient limits and explicit inherited exact-DE/oracle scopes are retained."
+}

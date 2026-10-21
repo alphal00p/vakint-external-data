@@ -1,0 +1,35 @@
+{
+  "schema": "vakint.portable-proof-independent-data-engineering-review.v6",
+  "accepted": true,
+  "scope": "Explicit logical-to-physical source materialization with unchanged original manifest hashes and logical bundle identities. Storage preflight only; no scientific or numerical policy admission.",
+  "source_sha256": {
+    "pack_proof.py": "55319dbbae9406dec2cd9229565d78e50fdbef30a378746d190ba9a04a7c1409",
+    "test_pack_proof.py": "d1c7b77720bd480ee6849c78d81059e3bab29b3d6ad32d6928e19484f2a208b0",
+    "prior_packer_snapshot": "3a67572e7ee42cd44bb9e71de4136d6dd9486e237d485cac81f5243dfdc6f4ea"
+  },
+  "materialization_contract": {
+    "keys_are_strict_subset_of_original_manifest": true,
+    "both_paths_pass_existing_policy": true,
+    "physical_bytes_match_unchanged_manifest_SHA": true,
+    "all_seven_top_original_paths_excluded": true,
+    "size_and_copy_and_final_checks_use_physical_source": true,
+    "index_and_provenance_and_object_names_stay_logical": true,
+    "no_search_fallback_or_recursive_remapping": true,
+    "CLI_map_hash_authenticated": true,
+    "source_files_preserved": true
+  },
+  "verification": {
+    "existing_tests_passed": 27,
+    "existing_unit_suite_only": true,
+    "source_hashes_unchanged_before_after": true,
+    "production_archive_rerun": false,
+    "numerical_or_scientific_verifier_executed": false,
+    "source_code_or_science_evidence_modified": false
+  },
+  "prior_review_sha256": "b13bb2ed98ca35c4bfceec661609c69ae7cae9c59b376a72ed0a532a6c21ffb5",
+  "report_sha256": {
+    "SOURCE_MATERIALIZATION_DELTA_REVIEW.md": "ed571bf1580f051161cb76c408fe04dc8bf22e3ab3752af78c48e320043f16e0",
+    "existing-suite-materialization.log": "b0bc442f74bb72b1f5132cdc3f6f7f9b9c5d6c88f20a0903b13377a0a23f3091"
+  },
+  "numerical_capability_promoted": false
+}

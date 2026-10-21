@@ -158,6 +158,189 @@ class PrecisionSupplementTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "changed accepted exact"):
             precision.validate_master(self.update, self.master, self.root)
 
+    def source_fixture(self):
+        update = copy.deepcopy(self.update)
+        entry = update["masters"][self.identity]
+        rows = []
+        values = dict(data.read_json(self.root / "4L/masters/P6/numerical.json"))
+        for row in entry["coefficients"]:
+            power = row["epsilon_power"]
+            symbol = f"fixture_ep{power}"
+            entry["sources"][str(power)]["symbol"] = symbol
+            rows.append(
+                {
+                    "symbol": symbol,
+                    "master_basis": "vakint::PR4",
+                    "epsilon_power": power,
+                    "normalization": "FMFTandMATAD",
+                    "significant_digits": row["significant_digits"],
+                    "stored_significant_digits": row["stored_significant_digits"],
+                    "numerical_value": values[power],
+                    "validation": {"absolute_error_bound": row["absolute_error"]},
+                }
+            )
+        for name, previous in entry["previous_files"].items():
+            previous["archive"] = f"provenance/previous/{name}"
+            path = self.root / previous["archive"]
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(previous["contents"])
+        update["provenance"] = {}
+        for name, contents in [
+            ("payload", {"constants": rows}),
+            ("validation", {}),
+            ("previous_producer_update", {}),
+        ]:
+            relative = f"provenance/{name}.json"
+            path = self.root / relative
+            data.write_json(path, contents)
+            update["provenance"][name] = {"path": relative, "sha256": data.digest(path)}
+        return update, rows
+
+    def additional_reference(self):
+        return {
+            "kind": precision.PR11_SOURCE_KIND,
+            "payload": {"path": "missing-payload.json", "sha256": "0" * 64},
+            "validation": {"path": "missing-validation.json", "sha256": "0" * 64},
+            "proof_manifest": {"path": "missing-proof.json", "sha256": "0" * 64},
+        }
+
+    def load_fixture(self, update, rows):
+        data.write_json(self.root / precision.RECEIPT, update)
+        # These tests isolate selection after acceptance; real Bessel acceptance
+        # is exercised against its immutable archive in the tests below.
+        with patch.object(precision, "_load_bessel_source", return_value=rows):
+            return precision.load_source(self.root)
+
+    def test_missing_source_id_keeps_the_legacy_source_selection(self):
+        update, rows = self.source_fixture()
+        with patch.object(precision, "_load_pr11_source") as additional:
+            self.assertEqual(self.load_fixture(update, rows), update)
+            update["provenance"]["additional_sources"] = {}
+            self.assertEqual(self.load_fixture(update, rows), update)
+            additional.assert_not_called()
+
+    def test_authoritative_symbols_are_scoped_to_the_selected_source(self):
+        update, rows = self.source_fixture()
+        entry = update["masters"][self.identity]
+        rows[1]["symbol"] = rows[0]["symbol"]
+        entry["sources"]["1"].update(
+            source_id=precision.PR11_SOURCE_ID, symbol=rows[0]["symbol"]
+        )
+        update["provenance"]["additional_sources"] = {
+            precision.PR11_SOURCE_ID: self.additional_reference()
+        }
+        # Only the adapter is stubbed: two accepted sources may use the same
+        # symbol without either source silently replacing the other.
+        with patch.object(precision, "_load_pr11_source", return_value=[rows[1]]):
+            self.assertEqual(self.load_fixture(update, rows[:1]), update)
+
+    def test_duplicate_authoritative_rows_and_unknown_symbols_are_rejected(self):
+        update, rows = self.source_fixture()
+        with self.assertRaisesRegex(ValueError, "duplicate authoritative"):
+            self.load_fixture(update, [*rows, rows[0]])
+        update["masters"][self.identity]["sources"]["0"]["symbol"] = "missing"
+        with self.assertRaisesRegex(ValueError, "unknown authoritative"):
+            self.load_fixture(update, rows)
+
+    def test_explicit_unknown_or_null_source_never_falls_back_to_bessel(self):
+        original, rows = self.source_fixture()
+        for source_id in [precision.PR11_SOURCE_ID, "unknown", "", None, True, []]:
+            update = copy.deepcopy(original)
+            update["masters"][self.identity]["sources"]["0"]["source_id"] = source_id
+            with (
+                self.subTest(source_id=source_id),
+                self.assertRaisesRegex(
+                    ValueError, "unknown numerical precision source id"
+                ),
+            ):
+                self.load_fixture(update, rows)
+
+    def test_malformed_unknown_and_unused_source_declarations_are_rejected(self):
+        original, rows = self.source_fixture()
+        for additional in [None, [], False, {"unknown": self.additional_reference()}]:
+            update = copy.deepcopy(original)
+            update["provenance"]["additional_sources"] = additional
+            with (
+                self.subTest(additional=additional),
+                self.assertRaisesRegex(
+                    ValueError, "additional numerical precision source"
+                ),
+            ):
+                self.load_fixture(update, rows)
+        update = copy.deepcopy(original)
+        update["provenance"]["additional_sources"] = {
+            precision.PR11_SOURCE_ID: self.additional_reference()
+        }
+        with (
+            patch.object(precision, "_load_pr11_source") as adapter,
+            self.assertRaisesRegex(ValueError, "unused additional"),
+        ):
+            self.load_fixture(update, rows)
+        adapter.assert_not_called()
+
+    def test_pr11_accepted_flags_do_not_replace_the_scientific_verifier(self):
+        update, rows = self.source_fixture()
+        update["masters"][self.identity]["sources"]["0"]["source_id"] = (
+            precision.PR11_SOURCE_ID
+        )
+        reference = self.additional_reference()
+        # Existing, hash-consistent evidence with an accepted flag is still
+        # insufficient; it must never activate the reserved scientific adapter.
+        for name in ["payload", "validation", "proof_manifest"]:
+            path = self.root / reference[name]["path"]
+            data.write_json(path, {"accepted": True, "constants": rows})
+            reference[name]["sha256"] = data.digest(path)
+        update["provenance"]["additional_sources"] = {
+            precision.PR11_SOURCE_ID: reference
+        }
+        with self.assertRaisesRegex(ValueError, "unsupported PR11 proof index"):
+            self.load_fixture(update, rows)
+        for kind in [
+            "bessel",
+            "python:accept_all",
+            "vakint.pr11d.validated-periods.v1",
+        ]:
+            reference["kind"] = kind
+            with (
+                self.subTest(kind=kind),
+                self.assertRaisesRegex(
+                    ValueError, "invalid additional numerical precision source adapter"
+                ),
+            ):
+                self.load_fixture(update, rows)
+
+    def test_pr11_period_name_does_not_promote_symbolic_exactness(self):
+        update, rows = self.source_fixture()
+        entry = update["masters"][self.identity]
+        entry["sources"]["0"]["source_id"] = precision.PR11_SOURCE_ID
+        entry["coefficients"][0]["symbolic"] = True
+        update["provenance"]["additional_sources"] = {
+            precision.PR11_SOURCE_ID: self.additional_reference()
+        }
+        with (
+            patch.object(precision, "_load_pr11_source", return_value=rows),
+            self.assertRaisesRegex(ValueError, "remains numerical-only"),
+        ):
+            self.load_fixture(update, rows)
+
+    def test_incomplete_source_records_and_extra_selection_fields_are_rejected(self):
+        update, rows = self.source_fixture()
+        source = update["masters"][self.identity]["sources"]["0"]
+        source["fallback"] = "bessel"
+        with self.assertRaisesRegex(ValueError, "invalid numerical precision source"):
+            self.load_fixture(update, rows)
+        del source["fallback"]
+        source["source_id"] = precision.PR11_SOURCE_ID
+        for reference in [{}, None, {"kind": "arbitrary"}]:
+            update["provenance"]["additional_sources"] = {
+                precision.PR11_SOURCE_ID: reference
+            }
+            with (
+                self.subTest(reference=reference),
+                self.assertRaisesRegex(ValueError, "invalid additional"),
+            ):
+                self.load_fixture(update, rows)
+
 
 class OracleCoverageCorrectionTests(unittest.TestCase):
     def setUp(self):
@@ -166,6 +349,38 @@ class OracleCoverageCorrectionTests(unittest.TestCase):
 
     def test_addendum_completes_the_actual_required_anchor_set(self):
         precision.validate_oracle_coverage(data.ROOT, self.provenance, self.archive)
+
+    def test_complete_legacy_source_still_loads_without_any_data_changes(self):
+        receipt = data.ROOT / precision.RECEIPT
+        original = receipt.read_bytes()
+        payload = data.read_json(data.ROOT / self.provenance["payload"]["path"])
+        validation = data.read_json(data.ROOT / self.provenance["validation"]["path"])
+        self.assertEqual(
+            precision._load_bessel_source(
+                data.ROOT, self.provenance, payload, validation
+            ),
+            payload["constants"],
+        )
+        self.assertEqual(receipt.read_bytes(), original)
+
+    def test_extracted_bessel_acceptance_retains_all_original_flags(self):
+        payload = data.read_json(data.ROOT / self.provenance["payload"]["path"])
+        validation = data.read_json(data.ROOT / self.provenance["validation"]["path"])
+        for field in [
+            "accepted",
+            "full_gap_free_partitions",
+            "complete_infinity_tails",
+            "source_pins_unchanged",
+            "unique_rounding_cells",
+        ]:
+            invalid = {**validation, field: False}
+            with (
+                self.subTest(field=field),
+                self.assertRaisesRegex(ValueError, "acceptance is incomplete"),
+            ):
+                precision._load_bessel_source(
+                    data.ROOT, self.provenance, payload, invalid
+                )
 
     def test_missing_addendum_and_wrong_original_payload_are_rejected(self):
         missing = copy.deepcopy(self.provenance)

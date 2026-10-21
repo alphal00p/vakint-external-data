@@ -1,0 +1,21 @@
+{
+  "schema": "vakint.pr11d.actual-portable-verifier-invocation.v1",
+  "command": [
+    "/nix/store/0r6k8xa2kgqyp3r4v2w7yrb80ma2iawm-python3-3.13.12/bin/python3",
+    "-I",
+    "-B",
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/bessel/portable-proof/pr11d-20000-v1/verify_bundle.py",
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/bessel/portable-proof/pr11d-20000-v1",
+    "--index",
+    "proof-index.json"
+  ],
+  "python_version": "3.13.12",
+  "index_sha256": "24d191de0c46d6352fa097980a5f8532a89b6b1c25dda3781202677ce465203a",
+  "fixed_approved_verifier_sha256": "1cf290b886aeff1a80c34a39daf64f16fb647c89f5e22cc5610126f1bbf31ce7",
+  "returncode": 0,
+  "stdout_sha256": "2a97c0a2980bf84532179d6ac273d0626cc6f599096dad328db00230b0d5e258",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "elapsed_seconds": 45.161472988897,
+  "original_developer_paths_used_for_source_inputs": false,
+  "native_or_Mathematica_executed": false
+}

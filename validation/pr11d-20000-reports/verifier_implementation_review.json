@@ -1,0 +1,95 @@
+{
+  "schema": "vakint.pr11d.final-portable-verifier-independent-implementation-review.v1",
+  "status": "passed_for_frozen_final_portable_verifier_implementation",
+  "accepted": true,
+  "approved_for_assembler_verifier_sha256_update": true,
+  "approved_verifier_sha256": "1cf290b886aeff1a80c34a39daf64f16fb647c89f5e22cc5610126f1bbf31ce7",
+  "immutable_source_snapshot": "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/helper/portable-verifier-review/final-implementation-v1/verifier-source.py",
+  "approved_scientific_proof_read_set_sha256": "5c737067b24ef4c65a739ff5c9da558a63349a49e23b6799da824a27fe889aa8",
+  "independent_policy_review_sha256": "d071d81726116dc480170f78a0eb2ed91f90107059a49b32198dfe5ff0f39f5c",
+  "approved_completed_execution_receipts": [
+    {
+      "profile": "A",
+      "execution_sha256": "c0eaeeb01cc4dec73828e8948b26ddcee744fcd9e71c6768ccdad71aa6a95dd4",
+      "initial_sha256": "e68d82518214ffae10879beb129001c7233552d69e2b544c0a17fe2dc9a6d447",
+      "final_boundary_sha256": "22d97e5a4356c3b9e8b28aef03ee47eee3fb5ec1c13c1d41022887e58e3b92c5"
+    },
+    {
+      "profile": "B",
+      "execution_sha256": "faeaf82baaf840eba8472c4e51b4dedbfa6da04eff63811280269caf0faf9d80",
+      "initial_sha256": "c789f3587d02ecd3d9ca9ee0eb699120aa209c5bee88901c32d5c22068dc37b9",
+      "final_boundary_sha256": "c24087dab054e037562ddd321f286944c311115ecd7db177d1087ff4e5aad889"
+    }
+  ],
+  "constant_metadata_delta_review_path": "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/helper/portable-verifier-review/final-implementation-v1/constant-delta-review.json",
+  "constant_metadata_delta_review_sha256": "eefac487df947d87ce371292f3993022ce7cd17144a42d5a6e945929ace8318c",
+  "fresh_math_storage_review_path": "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/helper/portable-verifier-review/final-implementation-v1/math-storage/review.json",
+  "fresh_math_storage_review_sha256": "2629771b222890b9aa78cf0f03970d26da0eddb60b86beab5951d996bee69713",
+  "exact_delta_from_reviewed2144": "Only the two genuine completed execution hardpins, the independently approved final policy hardpin, and the additional master_basis=vakint::PR11d requirement; all other ASTs including integer arithmetic, Fraction publication gates and typed-policy/storage guards are unchanged.",
+  "final_direct_gate_controls": {
+    "positive": 3,
+    "negative": 8
+  },
+  "fresh_arithmetic_controls": {
+    "integer_interval_cases": 608,
+    "invalid_cases_per_parser": 13,
+    "convolution_cases": 80,
+    "includes_full_42_state_six_jet_toy": true,
+    "scaled_containment_cases": 500,
+    "actual_projection_arithmetic_pass_cases": 1,
+    "actual_projection_arithmetic_rejections": 3,
+    "decimal_cell_acceptances": 160,
+    "decimal_cell_boundary_rejections": 160,
+    "actual_final_relative_gate_toys": 20,
+    "separate_component_width_rejections": 4,
+    "published_error_gate_rejections": 1
+  },
+  "fresh_storage_controls": {
+    "required_checks": 52,
+    "stored_and_decoded_hash_and_length_binding": true,
+    "canonical_header_and_exact_descriptor_fields": true,
+    "all_descriptor_classes_preflighted": true,
+    "gzip_crc_isize_truncation_members_trailing_data_checked": true,
+    "exact_65536byte_member_boundary_with_next_chunk_extra_data_checked": true,
+    "inflation_false_declared64bytes_rejected_at65outputbytes": true,
+    "six_aliases_preflight_once": true,
+    "keep_true_reauthenticates_changed_bytes": true,
+    "global_decoded_limit_all_descriptor_classes_metadata_only": true,
+    "executed_source_pin_match_and_mismatch_checked": true
+  },
+  "source_and_fixture_sha256": {
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/helper/portable-verifier-review/final-implementation-v1/verifier-source.py": "1cf290b886aeff1a80c34a39daf64f16fb647c89f5e22cc5610126f1bbf31ce7",
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/helper/portable-verifier-review/final-implementation-v1/constant-delta-review.json": "eefac487df947d87ce371292f3993022ce7cd17144a42d5a6e945929ace8318c",
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/helper/portable-verifier-review/final-implementation-v1/math-storage/review.json": "2629771b222890b9aa78cf0f03970d26da0eddb60b86beab5951d996bee69713",
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/helper/portable-verifier-review/final-implementation-v1/seal_review.py": "4905902d243cf9dea3f399bd90d066f5bcb517b49d55c641956a376d7c402c38",
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/helper/portable-verifier-review/integer-inline-review/verifier-2144d132a120.py": "2144d132a120a5c87c5fec38aa18b425112f295a139b835e87aa27a1eec4569b",
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/accepted20000/read-set-review/final-policy-review-v1.json": "d071d81726116dc480170f78a0eb2ed91f90107059a49b32198dfe5ff0f39f5c",
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/accepted20000/proof-read-set-final-v1.json": "5c737067b24ef4c65a739ff5c9da558a63349a49e23b6799da824a27fe889aa8",
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/ancestor-flows/rpf-v11-chain-acceptance-v1/review/review.json": "20006e5f6ed2850280c346f40c942f69e713cd7752c9271494fc707d96e87f41",
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/ancestor-flows/rpf-v11-chain-acceptance-v1/production-A-accepted.json": "c0eaeeb01cc4dec73828e8948b26ddcee744fcd9e71c6768ccdad71aa6a95dd4",
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/ancestor-flows/rpf-v11-chain-acceptance-v1/production-B-accepted.json": "faeaf82baaf840eba8472c4e51b4dedbfa6da04eff63811280269caf0faf9d80",
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/accepted20000/frozen-source-preimages/vakint-lib.rs": "257df086de7f3135faafd3bc7bbd288d66a6d62eb5ee646ae6b50c06ea7531e1",
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/helper/portable-verifier-review/final-implementation-v1/audit_constants.py": "7b4344b96d57b1fb72dc22449647ca841e8690fe235bce99f1495de8d02df272",
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/helper/portable-verifier-review/final-implementation-v1/math-storage/verifier-snapshot.py": "1cf290b886aeff1a80c34a39daf64f16fb647c89f5e22cc5610126f1bbf31ce7",
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/helper/portable-verifier-review/final-implementation-v1/math-storage/math_controls.py": "1e52cc6c5fd38420e4c6c3374471a128b9739eb75d37a17f14bda1f0a4b5ee93",
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/helper/portable-verifier-review/final-implementation-v1/math-storage/storage_controls.py": "d1aa653ed5d3b356b41c71ad73e1b451feb00c43d0dd8fd318264102c38b225f",
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/helper/portable-verifier-review/final-implementation-v1/math-storage/math-controls.json": "57ce5701490b23d8f52a9b84f04eb1d93057bac134612943cd9dd8bf1ef17525",
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/pr11d/helper/portable-verifier-review/final-implementation-v1/math-storage/controls-1cf290b886ae.json": "bc549720f40386c03b50574a67210b0e81d7794febd0d4b430dc97c0c9ede3e5"
+  },
+  "old_draft_receipts_active_source_pin_roots": false,
+  "historical_review_hashes_for_context_only": {
+    "typed_policy_guard_component": "fccec195734a7bdcb327ef5404cf564699481675bfbbbf271048f3384f9a6575",
+    "integer_inline_component": "a6b73ab245f030452f8f95aebf525a9032c474b92dc9197bd3d0c22061353ffb"
+  },
+  "scope": "Approves this exact final standalone verifier implementation and its exact policy/completed-execution authority constants. The approved policy classification remains the separately authenticated d071 review. Fresh fixtures use only the immutable final source and do not replace an actual standalone bundle run.",
+  "remaining_required_actions": [
+    "Update and independently check the final assembler verifier pin and fixed-source resolver delta.",
+    "Build and run the actual portable bundle with this exact verifier before publication."
+  ],
+  "actual_full_bundle_execution_claimed": false,
+  "actual_source_graph_scan_repeated": false,
+  "native_HPL_preparer_transport_or_Mathematica_run": false,
+  "producer_files_modified_by_reviewer": false,
+  "publication_approved_by_this_implementation_receipt": false,
+  "source_precision_cap_changed_by_this_review": false
+}
