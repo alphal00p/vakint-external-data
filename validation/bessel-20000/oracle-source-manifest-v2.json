@@ -1,0 +1,11 @@
+{
+  "schema": "vakint.precision-periods.independent-oracle-sources.v2",
+  "captured_unix": 1792594378.011754,
+  "source_sha256": {
+    "mathematica_series_seeds.wl": "98eded94d39a7e6b1225b00eb023fb9f8acfd452b9cf791490f589ff579fbe41",
+    "mathematica-builtin-seeds.json": "9f7a64760dc2bf525c509cea87fd55c0a099e23fec1d64c553951f602e3cda7d",
+    "wolfram_one_thread.py": "6551142d15c38061fd17f7d97d67d8386f63fe7cb95989a912260c13f2e9443b",
+    "wolfram_one_thread.wl": "12b870d2278f8c417917a05dff3e7aa18fd888a0ac73633f962b300d24504318"
+  },
+  "method": "Reuse already completed nativeMathematica BesselK anchors; independent Mathematica FrobeniusK0/K1 series forremaininganchors, with2z/log10 guarddigits andexplicitfactorialtailtarget. CompareallagainstArbc ertifiedBessel inputs."
+}

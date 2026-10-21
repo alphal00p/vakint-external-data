@@ -79,6 +79,46 @@ A source-tree update is not a release. An unreleased manifest version may be
 committed and pushed without creating tags, uploading assets or changing
 `data-latest`. Run the release workflow only when explicitly requested.
 
+=== Validated numerical precision upgrades
+
+Numerical precision upgrades are selected by
+`provenance/numerical-precision-supplement.json`, after the original coefficient
+supplements and producer update. Its loop slices authenticate both preserved
+previous payloads and replacement files, and verify that every unselected
+epsilon row stays unchanged. They cannot introduce orders or replace exact
+formulas. The coefficient records retain the validated digit limit separately
+from stored digits, with a decimal `absolute_error` and `error_quality`.
+
+The Bessel upgrade supplies PR4 and PR4d at epsilon orders zero and one with
+20,000 validated digits and 20,008 stored digits. Its bounded absolute errors
+include rounding to the published decimal center. Earlier producer receipts
+remain unchanged; the new receipt explicitly supersedes their selected rows.
+PR11d and all other coefficients retain their existing capabilities.
+
+The complete accepted Bessel proof archive is under `validation/bessel-20000`.
+`python3 tools/verify_bessel_archive.py` checks its hashes using the standard
+library. With `python-flint==0.9.0`, add `--replay-balls` to recheck the two
+independent partitions, remainder bounds and exact reconstruction. Neither
+command requires Mathematica or modifies accepted results. Archived Mathematica
+sources and values document the independent development validation only.
+For a replay of the original 98 recorded independent input comparisons, run
+`validation/bessel-20000/portable_validate.py --output PATH` with a new directory
+outside the archived bundle. Its original accepted verifier reproduces both
+the payload and acceptance receipt byte for byte; `REPRODUCE.md` in that
+preserved producer bundle documents its inputs and optional dependencies.
+
+The original independent reference list included the unused point 15/16 instead
+of the actual first shifted-interval center 1. It therefore covered 45 of the
+46 required Taylor anchors. The sealed additive correction in
+`validation/bessel-20000-anchor-one` supplies independent K0/K1 references at 1,
+computed at 20,400 decimal digits and agreeing with Arb through 20,422 digits.
+The original certificate, bounded Arb integration, public coefficient bytes,
+and 20,000-digit capabilities remain unchanged. The precision supplement links
+the correction explicitly, and validation checks the actual required point sets.
+`validate_anchor_one.py` in the addendum replays this check without Mathematica;
+run it in a copied development directory because it rewrites its local receipt.
+The original portable replay alone does not include this additive check.
+
 == Graph conventions and coverage
 
 Five-loop maximal parent graphs come from the audited physical parent incidence

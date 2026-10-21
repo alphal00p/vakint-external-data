@@ -1,0 +1,20 @@
+digraph topology {
+  graph [label="L5_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b_p0_p1_p1_p1_m1_p1_p1_p1_p0_p1_p1_p1_m1_p0_m2"];
+  edge [dir=none];
+  graph [family_powers="[0, 1, 1, 1, -1, 1, 1, 1, 0, 1, 1, 1, -1, 0, -2]", common_basis_slots="zero-based", routing="[[1, 0, 0, 0, 0], [1, 0, -1, 0, 0], [1, 0, 0, -1, 0], [1, 0, 0, 0, -1], [1, -1, 0, 0, 0]]"];
+  v0 [label="0"];
+  v3 [label="3"];
+  v4 [label="4"];
+  v6 [label="6"];
+  v7 [label="7"];
+  v6 -> v7 [label="D2", common_basis_slot=1, parent_slot=5, power=1];
+  v7 -> v0 [label="D3", common_basis_slot=2, parent_slot=6, power=1];
+  v0 -> v6 [label="D4", common_basis_slot=3, parent_slot=7, power=1];
+  v3 -> v0 [label="D6", common_basis_slot=5, parent_slot=3, power=1];
+  v0 -> v4 [label="D7", common_basis_slot=6, parent_slot=4, power=1];
+  v4 -> v3 [label="D8", common_basis_slot=7, parent_slot=1, power=1];
+  v6 -> v4 [label="D10", common_basis_slot=9, parent_slot=11, power=1];
+  v7 -> v4 [label="D11", common_basis_slot=10, parent_slot=8, power=1];
+  v3 -> v7 [label="D12", common_basis_slot=11, parent_slot=9, power=1];
+  graph [numerator_factors="[[4, 1], [12, 1], [14, 2]]"];
+}

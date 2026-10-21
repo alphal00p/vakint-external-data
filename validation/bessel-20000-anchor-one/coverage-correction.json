@@ -1,0 +1,16 @@
+{
+  "schema": "vakint.precision-periods.oracle-coverage-correction.v1",
+  "original_accepted_validation_sha256": "273ba5a53bbad2b6c83d049800a4fcd7d8e1880bb0d626a0605b9f748eb52add",
+  "original_constants_sha256": "7e36a55cb2ca9361bb945e693bc80a70ba354c70b5b0ef740ca02c8c240f0197",
+  "original_portable_bundle_manifest_sha256": "2337be93a3678c31eadb21f3633113cfaca49f76278b072ca0be9489aa49c473",
+  "original_bundle_unchanged": true,
+  "correction": "The independent reference point list had 15/16 instead of the first shifted-interval center 1. Rigorous Arb integration, Cauchy bounds and the accepted rounded numbers were unaffected. A fresh independent Mathematica series evaluation at 1 now supplies the missing K0/K1 reference.",
+  "correct_required_anchor_count": 46,
+  "originally_checked_required_anchor_count": 45,
+  "supplemental_actual_anchor": "1",
+  "spare_historical_anchor": "15/16",
+  "supplemental_source_sha256": "b93a4e4487444b070030fa1e57f5daca46a350203470b7e1bea748a43e0209b5",
+  "supplemental_values_sha256": "e11ea4ff27cf7f822c7e4ef0f6f37e15479e247ba4c8f5a67063d700a6031324",
+  "reference_decimal_digits": 20400,
+  "corrected_higher_guard_oracle_receipt_sha256": "d0166a5d7830abf423cea14d6e09a3ec151ec7326b49e69303aa96e3b97fe7ef"
+}

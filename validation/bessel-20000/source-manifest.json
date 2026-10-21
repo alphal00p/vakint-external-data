@@ -1,0 +1,38 @@
+{
+  "schema": "vakint.precision-periods.bessel-source.v1",
+  "captured_unix": 1792593167.7853281,
+  "python": "3.13.12 (main, Feb  3 2026, 17:53:27) [GCC 15.2.0]",
+  "source_sha256": {
+    "wolfram_one_thread.py": "6551142d15c38061fd17f7d97d67d8386f63fe7cb95989a912260c13f2e9443b",
+    "reconstruct.py": "e8452d9942c7b832b3350c6764d4dd6bda018d65fd5b6acf53862374149b670f",
+    "moments_taylor.py": "f9f616dcee1c1e9323398da9b37257369d4f5e71880926c6cdc5a8be2022806f",
+    "mathematica_seeds.wl": "778a9a584d43b6f896ff5b95a564be2c379bf59d2bd95f6c75b1d7e1aeaa9ebd",
+    "wolfram_one_thread.wl": "12b870d2278f8c417917a05dff3e7aa18fd888a0ac73633f962b300d24504318",
+    "parallel_moments.py": "1f253e8d25d9c418f5539123b3324baa6bf80bc2bb37a851e41277393449db52",
+    "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR4-three-anchor-independent-MMA-replay-source-v1/root-exact-matrix-and-required-first-jet-depth-adoption-v1.json": "425be66a4efed6b18ff3047f73af8386b225f4ff274d29763f9e1ba3083483c1",
+    "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR4-three-anchor-existing-program-inverse-exact-v2/exact-output-v1/exact-native-candidate/exact-shift-and-valuations.json": "660b9e0c6debdabd739fbb92ab9d9da700bdd6025f10b3b79082f48c2af7d531",
+    "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR4-K5-first-jet-stage200-pilot-source-v1/root-actual-basis-only-stage200-adoption-v1.json": "e831c3be67ba1cd29cd116bb0684a292ce6598bdc7b7fb145b3246c498783b2c"
+  },
+  "dependencies": [
+    "python-flint==0.9.0",
+    "mpmath==1.4.1"
+  ],
+  "production_profiles": {
+    "a": {
+      "digits": 20000,
+      "guard": 180,
+      "partition": "0..1 Frobenius; 1*(3/2)^n Taylor"
+    },
+    "b": {
+      "digits": 20000,
+      "guard": 260,
+      "partition": "0..3/4 Frobenius; 3/4..5/4 Taylor h1/4; then5/4*(3/2)^n Taylor"
+    }
+  },
+  "resource_limit": {
+    "workers": 4,
+    "max_expected_rss_gib": 32,
+    "threads_each": 1
+  },
+  "validation": "independently shifted partitions + rigorous Arb arithmetic/Cauchy tails + independent Mathematica20,120-digit Bessel and elementary input checks + previous nativeMathematica200-digit moment receipts"
+}

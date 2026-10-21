@@ -270,6 +270,9 @@ def generate_graphs(original):
         target = ROOT / f"{loops}L/graphs/{family['sha256']}.dot"
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(ROOT / maximal["directory"] / "graph.dot", target)
+    from five_loop_graphs import generate_five_loop_graphs
+
+    generate_five_loop_graphs(original)
     return graph_references
 
 
@@ -364,7 +367,9 @@ def producer_coefficients(update, known, *, original_windows=False):
             if original_windows:
                 first, last = known[identity]["epsilon_range"]
                 if not first <= power <= last:
-                    raise ValueError("producer updates cannot replace supplemented orders")
+                    raise ValueError(
+                        "producer updates cannot replace supplemented orders"
+                    )
             coefficients[power] = {
                 "epsilon_power": power,
                 "symbolic": symbolic,
@@ -375,7 +380,7 @@ def producer_coefficients(update, known, *, original_windows=False):
     return result
 
 
-def check_producer_payload(entry, master, coefficients, symbolic, numerical):
+def check_producer_payload(entry, master, coefficients, symbolic, numerical, root=ROOT):
     for power, item in coefficients.items():
         if item["symbolic"] and power not in symbolic:
             raise ValueError("producer exact coefficient has no symbolic payload")
@@ -391,14 +396,31 @@ def check_producer_payload(entry, master, coefficients, symbolic, numerical):
     if not isinstance(files, dict):
         raise ValueError("invalid producer payload file bindings")
     for name, expected in files.items():
-        if name not in master["files"] or expected != master["files"][name]:
+        if name not in master["files"]:
             raise ValueError("producer payload file binding differs from master")
+        if expected != master["files"][name]:
+            from graph_migration import accepts_producer_binding
+            from precision_supplement import (
+                accepts_producer_binding as accepts_precision_binding,
+            )
+
+            accepted = (
+                accepts_producer_binding(expected, master, root)
+                if name == "graph.dot"
+                else accepts_precision_binding(expected, master, name, root)
+            )
+            if not accepted:
+                raise ValueError("producer payload file binding differs from master")
 
 
 def generate(version):
     if not re.fullmatch(r"v[0-9]+\.[0-9]+\.[0-9]+(?:[-+][A-Za-z0-9.-]+)?", version):
         raise ValueError("version must be an immutable vMAJOR.MINOR.PATCH tag")
     original = read_json(ROOT / "provenance/original-root/manifest.json")
+    from graph_migration import RECEIPT, validate as validate_graph_migration
+
+    if (ROOT / RECEIPT).exists():
+        validate_graph_migration()
     producer_path = ROOT / "provenance/producer-update.json"
     producer = read_json(producer_path) if producer_path.exists() else None
     known = {master["master_id"]: master for master in original["masters"]}
@@ -407,6 +429,10 @@ def generate(version):
         if producer is not None
         else {}
     )
+    import precision_supplement
+
+    precision_update = precision_supplement.load_source(ROOT)
+    precision_updates = precision_supplement.coefficients(precision_update, known)
     supplement_path = ROOT / "provenance/coefficient-supplement.json"
     supplement = read_json(supplement_path) if supplement_path.exists() else None
     supplements = {}
@@ -425,6 +451,9 @@ def generate(version):
     loop_packs = []
     for loops in range(1, 6):
         directory = ROOT / f"{loops}L"
+        loop_precision = precision_supplement.loop_slice(precision_update, loops)
+        if loop_precision is not None:
+            write_json(directory / precision_supplement.LOOP_RECEIPT, loop_precision)
         families = []
         for family in original["families"]:
             if len(family["loop_momenta"]) != loops:
@@ -444,6 +473,7 @@ def generate(version):
             if master["loop_count"] != loops:
                 continue
             record = relative_paths(copy.deepcopy(master), loops)
+            record["model"] = "model.json"
             record["kind"] = (
                 "known-master"
                 if master["status"] == "accepted"
@@ -535,6 +565,23 @@ def generate(version):
                     if item["numerical"]
                 ]
                 record["significant_digits"] = min(digits) if digits else None
+            precision_changed = precision_updates.get(master["master_id"], {})
+            if precision_changed:
+                for power, row in precision_changed.items():
+                    if power not in capabilities or capabilities[power]["symbolic"]:
+                        raise ValueError(
+                            "numerical precision upgrade cannot add orders or replace exact formulas"
+                        )
+                    capabilities[power] = row
+                precision_supplement.validate_master(precision_update, record, ROOT)
+                record["numerical_precision_supplement"] = (
+                    precision_supplement.LOOP_RECEIPT
+                )
+                record["significant_digits"] = min(
+                    row["significant_digits"]
+                    for row in capabilities.values()
+                    if row["numerical"]
+                )
             record["coefficients"] = [capabilities[power] for power in powers]
             record["available_epsilon_powers"] = powers
             record["kind"] = "known-master" if powers else "uncomputed-terminal"
@@ -555,7 +602,11 @@ def generate(version):
             write_json(
                 directory / "producer-update.json",
                 {
-                    **{key: value for key, value in producer.items() if key != "masters"},
+                    **{
+                        key: value
+                        for key, value in producer.items()
+                        if key != "masters"
+                    },
                     "masters": loop_updates,
                 },
             )
@@ -653,6 +704,10 @@ def generate(version):
         }
         if loop_updates:
             manifest["producer_update"] = "producer-update.json"
+        if loop_precision is not None:
+            manifest["numerical_precision_supplement"] = (
+                precision_supplement.LOOP_RECEIPT
+            )
         write_json(directory / "manifest.json", manifest)
         loop_packs.append(
             {
@@ -673,10 +728,20 @@ def generate(version):
     for item in migration["files"]:
         path = checked_path(ROOT, item["path"])
         if file_record(path) != {key: item[key] for key in ("sha256", "bytes")}:
-            preserved = Path("provenance/original-coefficients") / item["source"]
-            if file_record(checked_path(ROOT, preserved.as_posix())) != {
-                key: item[key] for key in ("sha256", "bytes")
-            }:
+            preserved = next(
+                (
+                    relative / item["source"]
+                    for relative in (
+                        Path("provenance/original-coefficients"),
+                        Path("provenance/native-graphs/original"),
+                    )
+                    if (ROOT / relative / item["source"]).exists()
+                    and file_record(ROOT / relative / item["source"])
+                    == {key: item[key] for key in ("sha256", "bytes")}
+                ),
+                None,
+            )
+            if preserved is None:
                 raise ValueError(
                     f"original payload was not preserved: {item['source']}"
                 )
@@ -687,6 +752,12 @@ def generate(version):
 
 def validate(root=None):
     root = ROOT if root is None else root
+    from graph_migration import RECEIPT, validate as validate_graph_migration
+    from precision_supplement import load_source as validate_precision_source
+
+    if (root / RECEIPT).exists():
+        validate_graph_migration(root)
+    validate_precision_source(root)
     manifest = read_json(root / "manifest.json")
     if manifest["schema"] != ROOT_SCHEMA:
         raise ValueError("unsupported root schema")
@@ -765,25 +836,50 @@ def validate(root=None):
                     "uncomputed terminal advertises available coefficients"
                 )
             checked_path(path.parent, master["parent_graph"]).read_bytes()
+        from precision_supplement import validate_loop as validate_precision_loop
+
+        precision_updates = validate_precision_loop(path.parent, loop["masters"])
+        for identity, rows in precision_updates.items():
+            master = next(
+                master for master in loop["masters"] if master["master_id"] == identity
+            )
+            actual = {row["epsilon_power"]: row for row in master["coefficients"]}
+            if any(actual.get(power) != row for power, row in rows.items()):
+                raise ValueError(
+                    "numerical precision capabilities disagree with loop manifest"
+                )
         if update_path := loop.get("producer_update"):
             update = read_json(checked_path(path.parent, update_path))
             known = {master["master_id"]: master for master in loop["masters"]}
             for identity, coefficients in producer_coefficients(update, known).items():
                 master = known[identity]
-                actual = {item["epsilon_power"]: item for item in master["coefficients"]}
-                if any(actual.get(power) != item for power, item in coefficients.items()):
-                    raise ValueError("producer capabilities disagree with loop manifest")
+                coefficients.update(precision_updates.get(identity, {}))
+                actual = {
+                    item["epsilon_power"]: item for item in master["coefficients"]
+                }
+                if any(
+                    actual.get(power) != item for power, item in coefficients.items()
+                ):
+                    raise ValueError(
+                        "producer capabilities disagree with loop manifest"
+                    )
                 symbolic = (
                     read_json(path.parent / master["files"]["symbolic.json"]["path"])
-                    if "symbolic.json" in master["files"] else []
+                    if "symbolic.json" in master["files"]
+                    else []
                 )
                 numerical = (
                     read_json(path.parent / master["files"]["numerical.json"]["path"])
-                    if "numerical.json" in master["files"] else []
+                    if "numerical.json" in master["files"]
+                    else []
                 )
                 check_producer_payload(
-                    update["masters"][identity], master, coefficients,
-                    dict(symbolic), dict(numerical),
+                    update["masters"][identity],
+                    master,
+                    coefficients,
+                    dict(symbolic),
+                    dict(numerical),
+                    root,
                 )
         if loop["cache"]["available"]:
             metadata = read_json(path.parent / loop["cache"]["metadata"])

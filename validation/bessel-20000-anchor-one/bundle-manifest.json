@@ -1,0 +1,10 @@
+{
+  "schema": "vakint.bessel-oracle-coverage-addendum.bundle.v1",
+  "files_sha256": {
+    "coverage-correction.json": "46169c0898cd09406c0ffbda54545ed6add602298da7e77e14131c7f5fb7de4d",
+    "mathematica-anchor-one.json": "e11ea4ff27cf7f822c7e4ef0f6f37e15479e247ba4c8f5a67063d700a6031324",
+    "mathematica_anchor_one.wl": "b93a4e4487444b070030fa1e57f5daca46a350203470b7e1bea748a43e0209b5",
+    "validate_anchor_one.py": "d09b1b00391b358fabc5795af7aa12f8de3ad1cd30640490c0092a19cd82771a",
+    "validation.json": "d20600edb6b5cb3dc2210b65eebb3ed547e02f652cc771e796ceba634697b125"
+  }
+}

@@ -1,0 +1,686 @@
+{
+  "schema": "vakint.precision-periods.independent-Mathematica-input-validation.v1",
+  "complete": true,
+  "bessel_anchor_count": 46,
+  "minimum_agreed_decimal_digits": 20120,
+  "working_decimal_digits": 20120,
+  "checks": [
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 15,
+      "denominator": 16,
+      "agreed_decimal_digits_lower_bound": 20129
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 15,
+      "denominator": 16,
+      "agreed_decimal_digits_lower_bound": 20133
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 5,
+      "denominator": 4,
+      "agreed_decimal_digits_lower_bound": 20129
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 5,
+      "denominator": 4,
+      "agreed_decimal_digits_lower_bound": 20129
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 25,
+      "denominator": 16,
+      "agreed_decimal_digits_lower_bound": 20129
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 25,
+      "denominator": 16,
+      "agreed_decimal_digits_lower_bound": 20129
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 15,
+      "denominator": 8,
+      "agreed_decimal_digits_lower_bound": 20132
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 15,
+      "denominator": 8,
+      "agreed_decimal_digits_lower_bound": 20121
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 75,
+      "denominator": 32,
+      "agreed_decimal_digits_lower_bound": 20129
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 75,
+      "denominator": 32,
+      "agreed_decimal_digits_lower_bound": 20129
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 45,
+      "denominator": 16,
+      "agreed_decimal_digits_lower_bound": 20129
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 45,
+      "denominator": 16,
+      "agreed_decimal_digits_lower_bound": 20129
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 225,
+      "denominator": 64,
+      "agreed_decimal_digits_lower_bound": 20128
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 225,
+      "denominator": 64,
+      "agreed_decimal_digits_lower_bound": 20130
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 135,
+      "denominator": 32,
+      "agreed_decimal_digits_lower_bound": 20130
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 135,
+      "denominator": 32,
+      "agreed_decimal_digits_lower_bound": 20130
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 675,
+      "denominator": 128,
+      "agreed_decimal_digits_lower_bound": 20129
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 675,
+      "denominator": 128,
+      "agreed_decimal_digits_lower_bound": 20129
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 405,
+      "denominator": 64,
+      "agreed_decimal_digits_lower_bound": 20129
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 405,
+      "denominator": 64,
+      "agreed_decimal_digits_lower_bound": 20129
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 2025,
+      "denominator": 256,
+      "agreed_decimal_digits_lower_bound": 20127
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 2025,
+      "denominator": 256,
+      "agreed_decimal_digits_lower_bound": 20128
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 1215,
+      "denominator": 128,
+      "agreed_decimal_digits_lower_bound": 20126
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 1215,
+      "denominator": 128,
+      "agreed_decimal_digits_lower_bound": 20120
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 6075,
+      "denominator": 512,
+      "agreed_decimal_digits_lower_bound": 20125
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 6075,
+      "denominator": 512,
+      "agreed_decimal_digits_lower_bound": 20125
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 3645,
+      "denominator": 256,
+      "agreed_decimal_digits_lower_bound": 20128
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 3645,
+      "denominator": 256,
+      "agreed_decimal_digits_lower_bound": 20128
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 18225,
+      "denominator": 1024,
+      "agreed_decimal_digits_lower_bound": 20130
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 18225,
+      "denominator": 1024,
+      "agreed_decimal_digits_lower_bound": 20130
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 10935,
+      "denominator": 512,
+      "agreed_decimal_digits_lower_bound": 20130
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 10935,
+      "denominator": 512,
+      "agreed_decimal_digits_lower_bound": 20130
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 54675,
+      "denominator": 2048,
+      "agreed_decimal_digits_lower_bound": 20128
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 54675,
+      "denominator": 2048,
+      "agreed_decimal_digits_lower_bound": 20129
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 32805,
+      "denominator": 1024,
+      "agreed_decimal_digits_lower_bound": 20124
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 32805,
+      "denominator": 1024,
+      "agreed_decimal_digits_lower_bound": 20124
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 164025,
+      "denominator": 4096,
+      "agreed_decimal_digits_lower_bound": 20127
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 164025,
+      "denominator": 4096,
+      "agreed_decimal_digits_lower_bound": 20127
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 98415,
+      "denominator": 2048,
+      "agreed_decimal_digits_lower_bound": 20126
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 98415,
+      "denominator": 2048,
+      "agreed_decimal_digits_lower_bound": 20128
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 492075,
+      "denominator": 8192,
+      "agreed_decimal_digits_lower_bound": 20128
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 492075,
+      "denominator": 8192,
+      "agreed_decimal_digits_lower_bound": 20128
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 295245,
+      "denominator": 4096,
+      "agreed_decimal_digits_lower_bound": 20127
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 295245,
+      "denominator": 4096,
+      "agreed_decimal_digits_lower_bound": 20127
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 1476225,
+      "denominator": 16384,
+      "agreed_decimal_digits_lower_bound": 20128
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 1476225,
+      "denominator": 16384,
+      "agreed_decimal_digits_lower_bound": 20128
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 885735,
+      "denominator": 8192,
+      "agreed_decimal_digits_lower_bound": 20126
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 885735,
+      "denominator": 8192,
+      "agreed_decimal_digits_lower_bound": 20126
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 4428675,
+      "denominator": 32768,
+      "agreed_decimal_digits_lower_bound": 20133
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 4428675,
+      "denominator": 32768,
+      "agreed_decimal_digits_lower_bound": 20130
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 2657205,
+      "denominator": 16384,
+      "agreed_decimal_digits_lower_bound": 20139
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 2657205,
+      "denominator": 16384,
+      "agreed_decimal_digits_lower_bound": 20138
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 13286025,
+      "denominator": 65536,
+      "agreed_decimal_digits_lower_bound": 20140
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 13286025,
+      "denominator": 65536,
+      "agreed_decimal_digits_lower_bound": 20141
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 7971615,
+      "denominator": 32768,
+      "agreed_decimal_digits_lower_bound": 20142
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 7971615,
+      "denominator": 32768,
+      "agreed_decimal_digits_lower_bound": 20142
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 39858075,
+      "denominator": 131072,
+      "agreed_decimal_digits_lower_bound": 20135
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 39858075,
+      "denominator": 131072,
+      "agreed_decimal_digits_lower_bound": 20134
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 23914845,
+      "denominator": 65536,
+      "agreed_decimal_digits_lower_bound": 20147
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 23914845,
+      "denominator": 65536,
+      "agreed_decimal_digits_lower_bound": 20148
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 119574225,
+      "denominator": 262144,
+      "agreed_decimal_digits_lower_bound": 20147
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 119574225,
+      "denominator": 262144,
+      "agreed_decimal_digits_lower_bound": 20145
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 71744535,
+      "denominator": 131072,
+      "agreed_decimal_digits_lower_bound": 20144
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 71744535,
+      "denominator": 131072,
+      "agreed_decimal_digits_lower_bound": 20144
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 358722675,
+      "denominator": 524288,
+      "agreed_decimal_digits_lower_bound": 20143
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 358722675,
+      "denominator": 524288,
+      "agreed_decimal_digits_lower_bound": 20142
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 215233605,
+      "denominator": 262144,
+      "agreed_decimal_digits_lower_bound": 20141
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 215233605,
+      "denominator": 262144,
+      "agreed_decimal_digits_lower_bound": 20141
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 1076168025,
+      "denominator": 1048576,
+      "agreed_decimal_digits_lower_bound": 20148
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 1076168025,
+      "denominator": 1048576,
+      "agreed_decimal_digits_lower_bound": 20148
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 645700815,
+      "denominator": 524288,
+      "agreed_decimal_digits_lower_bound": 20136
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 645700815,
+      "denominator": 524288,
+      "agreed_decimal_digits_lower_bound": 20136
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 3228504075,
+      "denominator": 2097152,
+      "agreed_decimal_digits_lower_bound": 20137
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 3228504075,
+      "denominator": 2097152,
+      "agreed_decimal_digits_lower_bound": 20137
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 1937102445,
+      "denominator": 1048576,
+      "agreed_decimal_digits_lower_bound": 20138
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 1937102445,
+      "denominator": 1048576,
+      "agreed_decimal_digits_lower_bound": 20138
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 9685512225,
+      "denominator": 4194304,
+      "agreed_decimal_digits_lower_bound": 20130
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 9685512225,
+      "denominator": 4194304,
+      "agreed_decimal_digits_lower_bound": 20130
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 5811307335,
+      "denominator": 2097152,
+      "agreed_decimal_digits_lower_bound": 20141
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 5811307335,
+      "denominator": 2097152,
+      "agreed_decimal_digits_lower_bound": 20141
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 29056536675,
+      "denominator": 8388608,
+      "agreed_decimal_digits_lower_bound": 20130
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 29056536675,
+      "denominator": 8388608,
+      "agreed_decimal_digits_lower_bound": 20130
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 17433922005,
+      "denominator": 4194304,
+      "agreed_decimal_digits_lower_bound": 20137
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 17433922005,
+      "denominator": 4194304,
+      "agreed_decimal_digits_lower_bound": 20137
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 87169610025,
+      "denominator": 16777216,
+      "agreed_decimal_digits_lower_bound": 20148
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 87169610025,
+      "denominator": 16777216,
+      "agreed_decimal_digits_lower_bound": 20148
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 52301766015,
+      "denominator": 8388608,
+      "agreed_decimal_digits_lower_bound": 20140
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 52301766015,
+      "denominator": 8388608,
+      "agreed_decimal_digits_lower_bound": 20140
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 261508830075,
+      "denominator": 33554432,
+      "agreed_decimal_digits_lower_bound": 20137
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 261508830075,
+      "denominator": 33554432,
+      "agreed_decimal_digits_lower_bound": 20137
+    },
+    {
+      "kind": "BesselK",
+      "order": 0,
+      "numerator": 156905298045,
+      "denominator": 16777216,
+      "agreed_decimal_digits_lower_bound": 20134
+    },
+    {
+      "kind": "BesselK",
+      "order": 1,
+      "numerator": 156905298045,
+      "denominator": 16777216,
+      "agreed_decimal_digits_lower_bound": 20135
+    },
+    {
+      "kind": "constant",
+      "name": "EulerGamma",
+      "agreed_decimal_digits_lower_bound": 20133
+    },
+    {
+      "kind": "constant",
+      "name": "pi",
+      "agreed_decimal_digits_lower_bound": 20134
+    },
+    {
+      "kind": "constant",
+      "name": "zeta2",
+      "agreed_decimal_digits_lower_bound": 20132
+    },
+    {
+      "kind": "constant",
+      "name": "zeta3",
+      "agreed_decimal_digits_lower_bound": 20131
+    },
+    {
+      "kind": "constant",
+      "name": "zeta4",
+      "agreed_decimal_digits_lower_bound": 20131
+    },
+    {
+      "kind": "constant",
+      "name": "zeta5",
+      "agreed_decimal_digits_lower_bound": 20133
+    }
+  ],
+  "source_sha256": "17f9787754fd5cd7b2c15a2ffe528d6ffa38b4f1cde99ac4c16c949e3361d212",
+  "validator_sha256": "bef19d15d3c8da7fbbb43868ff48fe5505070f10968903a40ff827cccc9ecadd",
+  "scope": "Independent Mathematica and FLINT/Arb special-function inputs; complete moment proof also requires Cauchy/infinity bounds and shifted-partition checks."
+}

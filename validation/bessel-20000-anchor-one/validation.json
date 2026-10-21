@@ -1,0 +1,18 @@
+{
+  "accepted": true,
+  "supplemental_required_anchor_count": 1,
+  "checks": [
+    {
+      "order": 0,
+      "argument": "1",
+      "agreed_decimal_digits_lower_bound": 20422
+    },
+    {
+      "order": 1,
+      "argument": "1",
+      "agreed_decimal_digits_lower_bound": 20422
+    }
+  ],
+  "coverage_correction_sha256": "46169c0898cd09406c0ffbda54545ed6add602298da7e77e14131c7f5fb7de4d",
+  "validator_sha256": "d09b1b00391b358fabc5795af7aa12f8de3ad1cd30640490c0092a19cd82771a"
+}
