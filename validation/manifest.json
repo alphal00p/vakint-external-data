@@ -4470,6 +4470,118 @@
       "uncompressed_bytes": 6897
     },
     {
+      "bytes": 23567,
+      "path": "producer-update-v0.1.1-PR14-v22-20261021-v1-1613f030f2e0acc3e0bfb2b6ea417ddeb258da4e6cfc0d52ff831ff1660dcb2f.json.gz",
+      "sha256": "1155152774235a3e1284a761a4c37c29cfa414560f764729c64c93e82b05bc15",
+      "uncompressed_bytes": 330228,
+      "uncompressed_sha256": "1613f030f2e0acc3e0bfb2b6ea417ddeb258da4e6cfc0d52ff831ff1660dcb2f"
+    },
+    {
+      "bytes": 3537,
+      "path": "producer-update-v0.1.1-PR14-v22-20261021-v1-2911116a5e954f388a4c05d1602bb0a8e9d51ea5f92bc4e1c57eaadcb8bab2a1.json.gz",
+      "sha256": "e17c2facc14ab20b878eab993b37983d476ff04bafe0808bb2e5e1d460299261",
+      "uncompressed_bytes": 42303,
+      "uncompressed_sha256": "2911116a5e954f388a4c05d1602bb0a8e9d51ea5f92bc4e1c57eaadcb8bab2a1"
+    },
+    {
+      "bytes": 12641,
+      "path": "producer-update-v0.1.1-PR14-v22-20261021-v1-31d7b4581fdc80c0e874695d866af451f17ee60a850ea78a437d84fc3df6fd2a.json.gz",
+      "sha256": "48bd7a5c479e7f3e27ecd75a11d6caf0f164f456db500486db6cc6fff7d357bb",
+      "uncompressed_bytes": 53573,
+      "uncompressed_sha256": "31d7b4581fdc80c0e874695d866af451f17ee60a850ea78a437d84fc3df6fd2a"
+    },
+    {
+      "bytes": 800,
+      "path": "producer-update-v0.1.1-PR14-v22-20261021-v1-373c18374e5c352985e0520ba28f29323d41537a513adb6d5d7c24bc93fb2d3a.json.gz",
+      "sha256": "2dbd042702f35a5d2f5aa5297f83c1c47e5ab7dd9e60fcfa527510793f965a69",
+      "uncompressed_bytes": 1651,
+      "uncompressed_sha256": "373c18374e5c352985e0520ba28f29323d41537a513adb6d5d7c24bc93fb2d3a"
+    },
+    {
+      "bytes": 2049,
+      "path": "producer-update-v0.1.1-PR14-v22-20261021-v1-439b2444cd3e1c308e6c45f8a9fe97f12256ac10f4fa5f9d123dc43aecba2973.json.gz",
+      "sha256": "4b573dbf6db3c90e1802e1f30ab67fb3e6bed3da4975ba0eb92943942f840b97",
+      "uncompressed_bytes": 22226,
+      "uncompressed_sha256": "439b2444cd3e1c308e6c45f8a9fe97f12256ac10f4fa5f9d123dc43aecba2973"
+    },
+    {
+      "bytes": 40141,
+      "path": "producer-update-v0.1.1-PR14-v22-20261021-v1-596a6cb80609524a3d50831844f87e008ce7149fbcf88abc43472fb4fdcc18d7.json.gz",
+      "sha256": "af7a3f97bf4e3eb7a9ef97124e4a958d7498f0ab85cad731b062f236189618e2",
+      "uncompressed_bytes": 939447,
+      "uncompressed_sha256": "596a6cb80609524a3d50831844f87e008ce7149fbcf88abc43472fb4fdcc18d7"
+    },
+    {
+      "bytes": 34128,
+      "path": "producer-update-v0.1.1-PR14-v22-20261021-v1-6220bd2118d6032363c399aa0cdc1ec1900e704cda5d1463a00a9935e33dc274.json.gz",
+      "sha256": "61fb90af38ddab904c8acb3d3164b8898d93872965dd2c83bd76c5fb68e1f384",
+      "uncompressed_bytes": 116338,
+      "uncompressed_sha256": "6220bd2118d6032363c399aa0cdc1ec1900e704cda5d1463a00a9935e33dc274"
+    },
+    {
+      "bytes": 1093,
+      "path": "producer-update-v0.1.1-PR14-v22-20261021-v1-842acaa9d1e198d927be064ad52d039293ff32f774a794ed85459f519a9e2333.json.gz",
+      "sha256": "9297128ebe4e662074265dbf559ff28e579d5cafbe2c25d5a6181ac16286d137",
+      "uncompressed_bytes": 7442,
+      "uncompressed_sha256": "842acaa9d1e198d927be064ad52d039293ff32f774a794ed85459f519a9e2333"
+    },
+    {
+      "bytes": 796,
+      "path": "producer-update-v0.1.1-PR14-v22-20261021-v1-8c805c45cf5c70d5abb679439d17981b92bfbb086651262bcf7ae8964bb3b5f6.json.gz",
+      "sha256": "3d8020c47079adbfbe9f2d35882d3e4aff64d29ba3e341e44cb492c92429b19f",
+      "uncompressed_bytes": 1647,
+      "uncompressed_sha256": "8c805c45cf5c70d5abb679439d17981b92bfbb086651262bcf7ae8964bb3b5f6"
+    },
+    {
+      "bytes": 61372,
+      "path": "producer-update-v0.1.1-PR14-v22-20261021-v1-aea7f81bdda8636777d9e327facb451aa6d2bdebec51f2e72ade88c3bb25a80b.json.gz",
+      "sha256": "1c6c0087123f68b2128fbee6c9c6a90dbcc59678e359c7bedee2c1d03fc46b5d",
+      "uncompressed_bytes": 544230,
+      "uncompressed_sha256": "aea7f81bdda8636777d9e327facb451aa6d2bdebec51f2e72ade88c3bb25a80b"
+    },
+    {
+      "bytes": 4470,
+      "path": "producer-update-v0.1.1-PR14-v22-20261021-v1-b1acdf0f9996c4f1ee1de9a2df6fcc23b0eda580a48a6c7bc20edca9ac77361f.json.gz",
+      "sha256": "9da0ab29edbb26566c1585f511e098091072510d1d509f6679ee42146662d136",
+      "uncompressed_bytes": 69023,
+      "uncompressed_sha256": "b1acdf0f9996c4f1ee1de9a2df6fcc23b0eda580a48a6c7bc20edca9ac77361f"
+    },
+    {
+      "bytes": 7187,
+      "path": "producer-update-v0.1.1-PR14-v22-20261021-v1-b764493c4920b9437084a0e79f6a62984c01c466ce0fb616eb446cc159a3f94a.json.gz",
+      "sha256": "b5f4a22b3c9ec773fccafe614ebcd5c3db3eccbae89ab639968ae2dde553a962",
+      "uncompressed_bytes": 95387,
+      "uncompressed_sha256": "b764493c4920b9437084a0e79f6a62984c01c466ce0fb616eb446cc159a3f94a"
+    },
+    {
+      "bytes": 868,
+      "path": "producer-update-v0.1.1-PR14-v22-20261021-v1-c1a43ca89eb7486a91c86324b1a76dfa09fa87149db10dc4fc17a5a571373013.json.gz",
+      "sha256": "f719dbe4216fc246a1a9f9d74f92c6244654c94431f9e2156cf3e71eae206a46",
+      "uncompressed_bytes": 2060,
+      "uncompressed_sha256": "c1a43ca89eb7486a91c86324b1a76dfa09fa87149db10dc4fc17a5a571373013"
+    },
+    {
+      "bytes": 14139,
+      "path": "producer-update-v0.1.1-PR14-v22-20261021-v1-e3a385a2fb9a36ec69e7fe310b84c59a977d68edc9b7882b23080cb2260f0758.json.gz",
+      "sha256": "6ee3150fe35a32834e677f58d82b49a163260dde5b7f2f49069e960070b8af60",
+      "uncompressed_bytes": 343632,
+      "uncompressed_sha256": "e3a385a2fb9a36ec69e7fe310b84c59a977d68edc9b7882b23080cb2260f0758"
+    },
+    {
+      "bytes": 3531,
+      "path": "producer-update-v0.1.1-PR14-v22-20261021-v1-eb6806bf3885dd2e6b79a9180fa958f73d9e795ded27f54c7d4ccd1c67064380.json.gz",
+      "sha256": "699505b58fee77955b81dcb82ce7a858cb325a659a2d947bdbb7390e472ca022",
+      "uncompressed_bytes": 42303,
+      "uncompressed_sha256": "eb6806bf3885dd2e6b79a9180fa958f73d9e795ded27f54c7d4ccd1c67064380"
+    },
+    {
+      "bytes": 745,
+      "path": "producer-update-v0.1.1-PR14-v22-20261021-v1-efe5b9f0f8401cbc10f12c08b5071dc76e49d3fd150d239dd44a47a478830843.json.gz",
+      "sha256": "df8e32524e35e0df090c90a808f53ea1ab3b265a2cc8269e291226eb178caebe",
+      "uncompressed_bytes": 1716,
+      "uncompressed_sha256": "efe5b9f0f8401cbc10f12c08b5071dc76e49d3fd150d239dd44a47a478830843"
+    },
+    {
       "path": "producer-update-v0.1.1-PR4-v21-20261021-v1-1c02b431f51d3168e1532d44f2e92d122c6f1250e6e453a3836d7ea292479b1b.json.gz",
       "sha256": "4f27c4063c41acbeaa69cd17668bf5fff5e91d707d8bbaceb6462dfacbbf5d14",
       "bytes": 3910,

@@ -27,7 +27,7 @@ Prepared 1L–4L caches complete a declared finite workload; this does not certi
 arbitrary-index IBP coverage. See `coverage.json` and `cache.json` in each pack.
 
 The unreleased `v0.1.1` source update contains 739 numerical coefficient rows:
-675 have exact symbolic expressions and 64 retain numerical fallbacks. These
+677 have exact symbolic expressions and 62 retain numerical fallbacks. These
 counts include 49 additional orders preserved from the previous export.
 The 1L and 2L masters have 20,000 validated digits. The 3L and 4L numerical
 coefficients provide 200 digits except the three-loop D6 master at 2,000 and
@@ -47,6 +47,10 @@ bindings in `4L/constants.json` carry independently integrated, bounded
 the `EulerGamma-log(2)` shift. These are finite capabilities, not arbitrary
 precision evaluators. The independent symbolic and numerical payloads retain
 their own availability and provenance.
+The two newly accepted PR14 epsilon-one formulas include nine generic
+`vakint::GPLReal`/`vakint::GPLImag` components outside the currently qualified
+native alphabet. Their own 200-digit checks used independent 400-digit
+whole-component bindings; this does not add production runtime support.
 No new release or change to `data-latest` accompanies this source update.
 
 Run `python3 tools/data.py validate` to verify payloads, coefficient availability,

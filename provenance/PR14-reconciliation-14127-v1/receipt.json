@@ -1,0 +1,25 @@
+{
+  "schema": "vakint.external-data.PR14-reconciliation.v1",
+  "actual_remote_base_commit": "14127cddc0c414434fbe93ca323bd4640d4b7e13",
+  "accepted_E677_sync": {
+    "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/external-data-PR14-v22-repository-update-source-v1/sync-output-v1/qualification.json",
+    "sha256": "d1ec0066f3c04d5d43c314c60ab361b8160506cdeafe2eb724ce06e996e33784"
+  },
+  "accepted_E677_Root_adoption": {
+    "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/external-data-PR14-v22-repository-update-source-v1/root-actual-E677-source-sync-adoption-v1.json",
+    "sha256": "6e0b691976e0c44d34a0073ecacda8f2ab4cff13377ae45da28897e1450c36dd"
+  },
+  "adopted_remote_observation": {
+    "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/external-data-remote14127-readonly-comparison-source-v2/root-actual-readonly-remote-comparison-adoption-v1.json",
+    "sha256": "ce6a60d8f41d501d015c07eca606d8e4f5068877bf1ae3cfba9b3c49554d801a"
+  },
+  "current_preimages": "provenance/PR14-reconciliation-14127-v1-before/history.json",
+  "copied_old277_archives_are_historical_accepted_source_evidence": true,
+  "selected_masters": [
+    "L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p1_p0_p1_p1_p1_p1_p1_p1_p0_p0",
+    "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p0_p1_p1_p1_p1_p1_p1_p1_p0"
+  ],
+  "epsilon_power_replaced_only": 1,
+  "remote_graph_precision_constants_and_tool_contracts_preserved": true,
+  "remote_precision_caps_preservation_not_new_scientific_adoption": true
+}

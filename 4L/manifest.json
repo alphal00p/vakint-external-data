@@ -8298,7 +8298,8 @@
         -3,
         -2,
         -1,
-        0
+        0,
+        1
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -8454,7 +8455,7 @@
         },
         "symbolic.json": {
           "path": "masters/P31/symbolic.json",
-          "sha256": "afd95b744211c5d1ebe3809de0fff3fb8186287900ea313d160abb87cc5fc109"
+          "sha256": "842acaa9d1e198d927be064ad52d039293ff32f774a794ed85459f519a9e2333"
         },
         "graph.dot": {
           "path": "masters/P31/graph.dot",
@@ -8510,7 +8511,7 @@
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 200
         }
@@ -14907,7 +14908,8 @@
         -3,
         -2,
         -1,
-        0
+        0,
+        1
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -15063,7 +15065,7 @@
         },
         "symbolic.json": {
           "path": "masters/P58/symbolic.json",
-          "sha256": "afd95b744211c5d1ebe3809de0fff3fb8186287900ea313d160abb87cc5fc109"
+          "sha256": "842acaa9d1e198d927be064ad52d039293ff32f774a794ed85459f519a9e2333"
         },
         "graph.dot": {
           "path": "masters/P58/graph.dot",
@@ -15119,7 +15121,7 @@
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 200
         }
@@ -58844,8 +58846,8 @@
       "bytes": 1369
     },
     "masters/P31/symbolic.json": {
-      "sha256": "afd95b744211c5d1ebe3809de0fff3fb8186287900ea313d160abb87cc5fc109",
-      "bytes": 1968
+      "sha256": "842acaa9d1e198d927be064ad52d039293ff32f774a794ed85459f519a9e2333",
+      "bytes": 7442
     },
     "masters/P32/graph.dot": {
       "sha256": "eebc7a290914a9a07d27a6d418de78e337d46e2b22eb5524fdca7eeeaec27875",
@@ -59192,8 +59194,8 @@
       "bytes": 1369
     },
     "masters/P58/symbolic.json": {
-      "sha256": "afd95b744211c5d1ebe3809de0fff3fb8186287900ea313d160abb87cc5fc109",
-      "bytes": 1968
+      "sha256": "842acaa9d1e198d927be064ad52d039293ff32f774a794ed85459f519a9e2333",
+      "bytes": 7442
     },
     "masters/P59/graph.dot": {
       "sha256": "7be16c8c4dc83ab46cb3ebccd7e05733dcda2ee7cf21d9f94c661729bba3d4e0",
@@ -59444,8 +59446,8 @@
       "bytes": 42038
     },
     "producer-update.json": {
-      "sha256": "bbaee6d0e09e285485f6f4cf3483b46747bd87a29b9c6132ed15579999e9b37e",
-      "bytes": 383795
+      "sha256": "2a046bbc807edab92c1a6d859a2d30c6b46be567a6e00cea3eb165f89554de34",
+      "bytes": 387704
     }
   },
   "producer_update": "producer-update.json",

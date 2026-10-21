@@ -1,0 +1,78 @@
+{
+  "schema": "vakint.external-data.producer-update-history.v1",
+  "previous_source_version": "v0.1.1",
+  "previous_source_commit": "277e8768b37bb97141c45444f5fb94fa18177dc7",
+  "files": [
+    {
+      "previous_path": "1L/manifest.json",
+      "preserved_path": "provenance/producer-update-v0.1.1-PR14-v22-20261021-v1-before/1L/manifest.json",
+      "sha256": "43e8a3a43b0bd32537e06a367cd3f7782b716074abbae053f40221e1ec6ca6cd"
+    },
+    {
+      "previous_path": "1L/producer-update.json",
+      "preserved_path": "provenance/producer-update-v0.1.1-PR14-v22-20261021-v1-before/1L/producer-update.json",
+      "sha256": "de7db29c80edc577be61503f62500d0e727d94fffa6ed04cd42ec48b480bd483"
+    },
+    {
+      "previous_path": "2L/manifest.json",
+      "preserved_path": "provenance/producer-update-v0.1.1-PR14-v22-20261021-v1-before/2L/manifest.json",
+      "sha256": "371fd021b0a898316a536778f2b8a0ccc0217d35fdfa4db0a0cc7607bc468d73"
+    },
+    {
+      "previous_path": "2L/producer-update.json",
+      "preserved_path": "provenance/producer-update-v0.1.1-PR14-v22-20261021-v1-before/2L/producer-update.json",
+      "sha256": "e7c37dc5f53299698b5168897f9d8a876bad64f2a9b62bdfaf5073475dba03e4"
+    },
+    {
+      "previous_path": "3L/manifest.json",
+      "preserved_path": "provenance/producer-update-v0.1.1-PR14-v22-20261021-v1-before/3L/manifest.json",
+      "sha256": "e81e0065908c5dea4f26e1991bfadb711c2964f9f1f8515095836449e4943c02"
+    },
+    {
+      "previous_path": "3L/producer-update.json",
+      "preserved_path": "provenance/producer-update-v0.1.1-PR14-v22-20261021-v1-before/3L/producer-update.json",
+      "sha256": "0886a569bf2b3fdd8b2029d7eecd54ab8197d74cbd77418f075c71899273a4d9"
+    },
+    {
+      "previous_path": "4L/manifest.json",
+      "preserved_path": "provenance/producer-update-v0.1.1-PR14-v22-20261021-v1-before/4L/manifest.json",
+      "sha256": "08bdb012b36b8ca9c64e13db3990be967e605dda882fc12c5fea679d32923857"
+    },
+    {
+      "previous_path": "4L/masters/P31/symbolic.json",
+      "preserved_path": "provenance/producer-update-v0.1.1-PR14-v22-20261021-v1-before/4L/masters/P31/symbolic.json",
+      "sha256": "afd95b744211c5d1ebe3809de0fff3fb8186287900ea313d160abb87cc5fc109"
+    },
+    {
+      "previous_path": "4L/masters/P58/symbolic.json",
+      "preserved_path": "provenance/producer-update-v0.1.1-PR14-v22-20261021-v1-before/4L/masters/P58/symbolic.json",
+      "sha256": "afd95b744211c5d1ebe3809de0fff3fb8186287900ea313d160abb87cc5fc109"
+    },
+    {
+      "previous_path": "4L/producer-update.json",
+      "preserved_path": "provenance/producer-update-v0.1.1-PR14-v22-20261021-v1-before/4L/producer-update.json",
+      "sha256": "bbaee6d0e09e285485f6f4cf3483b46747bd87a29b9c6132ed15579999e9b37e"
+    },
+    {
+      "previous_path": "README.md",
+      "preserved_path": "provenance/producer-update-v0.1.1-PR14-v22-20261021-v1-before/README.md",
+      "sha256": "f53c722b023983e1b19aa1ec4730585785adbf8a9dcf1e0e946fd335214c5db1"
+    },
+    {
+      "previous_path": "manifest.json",
+      "preserved_path": "provenance/producer-update-v0.1.1-PR14-v22-20261021-v1-before/manifest.json",
+      "sha256": "8287c58c3d98f0209575d7744db46d0b3e9207ff040fad6d3bf58565e52cf139"
+    },
+    {
+      "previous_path": "provenance/producer-update.json",
+      "preserved_path": "provenance/producer-update-v0.1.1-PR14-v22-20261021-v1-before/provenance/producer-update.json",
+      "sha256": "518d5a041e434a66abad517e4aa32da1476c892f00b0bcc8f425eccbf0379cf7"
+    },
+    {
+      "previous_path": "validation/manifest.json",
+      "preserved_path": "provenance/producer-update-v0.1.1-PR14-v22-20261021-v1-before/validation/manifest.json",
+      "sha256": "fcccc2d5d46b82efd0d4c9956201be13f6d433c93362d2ee2b4050638d8c5b76"
+    }
+  ],
+  "no_original_or_supplement_provenance_rewritten": true
+}
