@@ -1,0 +1,15 @@
+{
+  "schema": "vakint.bessel-high-guard.production-source.v1",
+  "digits": 20200,
+  "primary_working_digits": 20380,
+  "validation_working_digits": 20460,
+  "created_unix": 1792598622.4302192,
+  "source_sha256": {
+    "produce.py": "a6009495e5432e754e38d20bc1481e24c69add2dc1809dfe32674405f8bf291f",
+    "moments_taylor.py": "f9f616dcee1c1e9323398da9b37257369d4f5e71880926c6cdc5a8be2022806f",
+    "reconstruct.py": "4d49f8d65899bec3d217625565d43a6603e083a4bf69236c88a0a7c211ba2565",
+    "source-receipts/exact-shift-and-valuations.json": "660b9e0c6debdabd739fbb92ab9d9da700bdd6025f10b3b79082f48c2af7d531",
+    "source-receipts/root-exact-map-adoption.json": "425be66a4efed6b18ff3047f73af8386b225f4ff274d29763f9e1ba3083483c1",
+    "source-receipts/root-mathematica200-adoption.json": "e831c3be67ba1cd29cd116bb0684a292ce6598bdc7b7fb145b3246c498783b2c"
+  }
+}

@@ -65,11 +65,13 @@ def coefficients(update, known):
                 or digits < 1
                 or type(stored) is not int
                 or stored < digits
-                or row["symbolic"] is not False
+                or type(row["symbolic"]) is not bool
                 or row["numerical"] is not True
                 or row["error_quality"] != "bounded"
             ):
                 raise ValueError("invalid numerical precision capability")
+            if row["symbolic"] and not entry.get("accepted_symbolic"):
+                raise ValueError("exact formulas require an accepted symbolic source")
             try:
                 bound = Decimal(row["absolute_error"])
             except (InvalidOperation, TypeError, ValueError) as error:
@@ -238,6 +240,14 @@ def load_source(root=data.ROOT):
     validate_oracle_coverage(root, provenance, archive)
     authoritative = {row["symbol"]: row for row in payload["constants"]}
     for entry in update["masters"].values():
+        if accepted := entry.get("accepted_symbolic"):
+            archived = data.checked_path(root, accepted["archive"])
+            if (
+                data.digest(archived) != accepted["sha256"]
+                or archived.read_text() != accepted["contents"]
+                or accepted["source_commit"] != provenance["accepted_symbolic_commit"]
+            ):
+                raise ValueError("accepted exact symbolic source changed")
         for previous in entry["previous_files"].values():
             archived = data.checked_path(root, previous["archive"])
             if (
@@ -313,13 +323,20 @@ def validate_master(update, master, root=data.ROOT):
                 "numerical precision upgrade changed unselected epsilon rows"
             )
         current_rows[name] = new_map
+    accepted = entry.get("accepted_symbolic")
+    if accepted is not None and (
+        accepted["path"] != entry["files"]["symbolic.json"]["path"]
+        or text_digest(accepted["contents"]) != accepted["sha256"]
+        or accepted["sha256"] != entry["files"]["symbolic.json"]["sha256"]
+        or dict(json.loads(accepted["contents"])) != current_rows["symbolic.json"]
+    ):
+        raise ValueError("numerical upgrade changed accepted exact symbolic formulas")
     for power, row in selected.items():
         value = current_rows["numerical.json"][power]
         source = entry["sources"][str(power)]
         if (
-            current_rows["symbolic.json"][power] != value
-            or text_digest(value) != source["numerical_sha256"]
-        ):
+            not row["symbolic"] and current_rows["symbolic.json"][power] != value
+        ) or text_digest(value) != source["numerical_sha256"]:
             raise ValueError("numerical precision value differs from accepted source")
         with localcontext() as context:
             context.prec = row["stored_significant_digits"] + 50

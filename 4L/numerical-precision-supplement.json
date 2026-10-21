@@ -14,7 +14,7 @@
       "path": "provenance/numerical-precision-before/producer-update.json",
       "sha256": "71883b23d86aef06bd08724b304b2234fa169ea45ec276e4180361b134979308"
     },
-    "scope": "Only PR4/PR4d epsilon 0 and 1; other coefficients and PR11d remain unchanged.",
+    "scope": "PR4/PR4d epsilon 0 and 1 numerical precision only; exact symbolic formulas from the accepted producer commit are preserved. Other numerical coefficients and PR11d remain unchanged.",
     "error_bound_includes_published_center_rounding": true,
     "runtime_requires_mathematica": false,
     "oracle_coverage_addendum": {
@@ -23,7 +23,8 @@
       "correction_sha256": "46169c0898cd09406c0ffbda54545ed6add602298da7e77e14131c7f5fb7de4d",
       "validation_sha256": "d20600edb6b5cb3dc2210b65eebb3ed547e02f652cc771e796ceba634697b125",
       "note": "The frozen original oracle list checked 45 of 46 required integration anchors and the unused point 15/16. This additive correction independently checks K0/K1 at the missing actual shifted-interval center 1 (20,400 reference digits; 20,422 digits of agreement). Original rigorous Arb certificates, public coefficient bytes, and the 20,000-digit caps remain unchanged."
-    }
+    },
+    "accepted_symbolic_commit": "277e8768b37bb97141c45444f5fb94fa18177dc7"
   },
   "masters": {
     "L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p0_p1_p1_p0_p0_p1_p1_p1_p0": {
@@ -33,7 +34,7 @@
       "coefficients": [
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 20000,
           "stored_significant_digits": 20008,
@@ -42,7 +43,7 @@
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 20000,
           "stored_significant_digits": 20008,
@@ -67,7 +68,7 @@
         },
         "symbolic.json": {
           "path": "masters/P6/symbolic.json",
-          "sha256": "8a833563a4783d34e260c0ea18b4caa703c7d4e3ab23906913a489b79667e547"
+          "sha256": "92181fe30eb495068fc1b875fc979f73843740f9b945130e71a5a645982dee83"
         }
       },
       "previous_files": {
@@ -83,6 +84,13 @@
           "archive": "provenance/numerical-precision-before/4L/masters/P6/symbolic.json",
           "contents": "[\n  [\n    -4,\n    \"5/2\"\n  ],\n  [\n    -3,\n    \"35/3\"\n  ],\n  [\n    -2,\n    \"4565/144+5/6*𝜋^2\"\n  ],\n  [\n    -1,\n    \"-10/3*symbolica::zeta(3)+35/9*𝜋^2+58345/864\"\n  ],\n  [\n    0,\n    \"2.4205011795464380401497871726548464059349578903462029340866550346255944720618640822369344388591627485258816217202187445044061610127360820496743756777649694954535038244630521052227345829290846579124990e+2\"\n  ],\n  [\n    1,\n    \"8.0539356980484714806569188577471546264034539424982885757825220766937814459253380463148256501268165648419183446503570789899139974129714132205598086314166679287793507770975264228253248739135575746523219e+2\"\n  ]\n]\n"
         }
+      },
+      "accepted_symbolic": {
+        "source_commit": "277e8768b37bb97141c45444f5fb94fa18177dc7",
+        "path": "masters/P6/symbolic.json",
+        "sha256": "92181fe30eb495068fc1b875fc979f73843740f9b945130e71a5a645982dee83",
+        "archive": "provenance/accepted-symbolic-277e/4L/masters/P6/symbolic.json",
+        "contents": "[\n  [\n    -4,\n    \"5/2\"\n  ],\n  [\n    -3,\n    \"35/3\"\n  ],\n  [\n    -2,\n    \"4565/144+5/6*𝜋^2\"\n  ],\n  [\n    -1,\n    \"-10/3*symbolica::zeta(3)+35/9*𝜋^2+58345/864\"\n  ],\n  [\n    0,\n    \"-107/6*vakint::K5Moment(1)+-140/9*symbolica::zeta(3)+1/6*𝜋^4+4565/432*𝜋^2+525/8*vakint::K5Moment(3)+932645/5184\"\n  ],\n  [\n    1,\n    \"-10/9*symbolica::zeta(3)*𝜋^2+-107/6*vakint::K5LogMoment(1)+-11389/36*vakint::K5Moment(1)+-2*symbolica::zeta(5)+-4565/108*symbolica::zeta(3)+13475/16*vakint::K5Moment(3)+28936285/31104+525/8*vakint::K5LogMoment(3)+58345/2592*𝜋^2+7/9*𝜋^4\"\n  ]\n]\n"
       }
     },
     "L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p0_p3_p1_p0_p0_p1_p1_p1_p0": {
@@ -92,7 +100,7 @@
       "coefficients": [
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 20000,
           "stored_significant_digits": 20008,
@@ -101,7 +109,7 @@
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 20000,
           "stored_significant_digits": 20008,
@@ -126,7 +134,7 @@
         },
         "symbolic.json": {
           "path": "masters/P11/symbolic.json",
-          "sha256": "0356167fb711f4a52b2f3223e9dae64bd0623ec7c18a0377b063537385a27dbb"
+          "sha256": "2ba11cfbeeeed744e568d61496cdfc378b155fb84c4ef5f9345d780463f54a7a"
         }
       },
       "previous_files": {
@@ -142,6 +150,13 @@
           "archive": "provenance/numerical-precision-before/4L/masters/P11/symbolic.json",
           "contents": "[\n  [\n    -4,\n    \"0\"\n  ],\n  [\n    -3,\n    \"-7/6\"\n  ],\n  [\n    -2,\n    \"-215/48\"\n  ],\n  [\n    -1,\n    \"-7/18*𝜋^2+-965/96\"\n  ],\n  [\n    0,\n    \"-1.5493368092575709193442653275474471557939250538174974074071187151437904085659351574754534317889063980805438601123345665706849751584517928021185614327782059492702524920790240371944321122356374481292854e+1\"\n  ],\n  [\n    1,\n    \"-1.0814476548488341355588400831411755987745295007990109179230645520318859936115767156381728154794222796447999200134864272669576535129099066273864465710574721044120169130832027625938444285620917515551044e+2\"\n  ]\n]\n"
         }
+      },
+      "accepted_symbolic": {
+        "source_commit": "277e8768b37bb97141c45444f5fb94fa18177dc7",
+        "path": "masters/P11/symbolic.json",
+        "sha256": "2ba11cfbeeeed744e568d61496cdfc378b155fb84c4ef5f9345d780463f54a7a",
+        "archive": "provenance/accepted-symbolic-277e/4L/masters/P11/symbolic.json",
+        "contents": "[\n  [\n    -4,\n    \"0\"\n  ],\n  [\n    -3,\n    \"-7/6\"\n  ],\n  [\n    -2,\n    \"-215/48\"\n  ],\n  [\n    -1,\n    \"-7/18*𝜋^2+-965/96\"\n  ],\n  [\n    0,\n    \"-215/144*𝜋^2+-2155/192+14/9*symbolica::zeta(3)+19/6*vakint::K5Moment(1)+75/8*vakint::K5Moment(3)\"\n  ],\n  [\n    1,\n    \"-7/90*𝜋^4+-929/60*vakint::K5Moment(1)+-965/288*𝜋^2+1185/16*vakint::K5Moment(3)+19/6*vakint::K5LogMoment(1)+215/36*symbolica::zeta(3)+3829/128+75/8*vakint::K5LogMoment(3)\"\n  ]\n]\n"
       }
     },
     "L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p0_p1_p1_p0_p1_p0_p1_p1_p0_p0": {
@@ -151,7 +166,7 @@
       "coefficients": [
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 20000,
           "stored_significant_digits": 20008,
@@ -160,7 +175,7 @@
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 20000,
           "stored_significant_digits": 20008,
@@ -185,7 +200,7 @@
         },
         "symbolic.json": {
           "path": "masters/P24/symbolic.json",
-          "sha256": "8a833563a4783d34e260c0ea18b4caa703c7d4e3ab23906913a489b79667e547"
+          "sha256": "92181fe30eb495068fc1b875fc979f73843740f9b945130e71a5a645982dee83"
         }
       },
       "previous_files": {
@@ -201,6 +216,13 @@
           "archive": "provenance/numerical-precision-before/4L/masters/P24/symbolic.json",
           "contents": "[\n  [\n    -4,\n    \"5/2\"\n  ],\n  [\n    -3,\n    \"35/3\"\n  ],\n  [\n    -2,\n    \"4565/144+5/6*𝜋^2\"\n  ],\n  [\n    -1,\n    \"-10/3*symbolica::zeta(3)+35/9*𝜋^2+58345/864\"\n  ],\n  [\n    0,\n    \"2.4205011795464380401497871726548464059349578903462029340866550346255944720618640822369344388591627485258816217202187445044061610127360820496743756777649694954535038244630521052227345829290846579124990e+2\"\n  ],\n  [\n    1,\n    \"8.0539356980484714806569188577471546264034539424982885757825220766937814459253380463148256501268165648419183446503570789899139974129714132205598086314166679287793507770975264228253248739135575746523219e+2\"\n  ]\n]\n"
         }
+      },
+      "accepted_symbolic": {
+        "source_commit": "277e8768b37bb97141c45444f5fb94fa18177dc7",
+        "path": "masters/P24/symbolic.json",
+        "sha256": "92181fe30eb495068fc1b875fc979f73843740f9b945130e71a5a645982dee83",
+        "archive": "provenance/accepted-symbolic-277e/4L/masters/P24/symbolic.json",
+        "contents": "[\n  [\n    -4,\n    \"5/2\"\n  ],\n  [\n    -3,\n    \"35/3\"\n  ],\n  [\n    -2,\n    \"4565/144+5/6*𝜋^2\"\n  ],\n  [\n    -1,\n    \"-10/3*symbolica::zeta(3)+35/9*𝜋^2+58345/864\"\n  ],\n  [\n    0,\n    \"-107/6*vakint::K5Moment(1)+-140/9*symbolica::zeta(3)+1/6*𝜋^4+4565/432*𝜋^2+525/8*vakint::K5Moment(3)+932645/5184\"\n  ],\n  [\n    1,\n    \"-10/9*symbolica::zeta(3)*𝜋^2+-107/6*vakint::K5LogMoment(1)+-11389/36*vakint::K5Moment(1)+-2*symbolica::zeta(5)+-4565/108*symbolica::zeta(3)+13475/16*vakint::K5Moment(3)+28936285/31104+525/8*vakint::K5LogMoment(3)+58345/2592*𝜋^2+7/9*𝜋^4\"\n  ]\n]\n"
       }
     },
     "L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p0_p3_p1_p0_p1_p0_p1_p1_p0_p0": {
@@ -210,7 +232,7 @@
       "coefficients": [
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 20000,
           "stored_significant_digits": 20008,
@@ -219,7 +241,7 @@
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 20000,
           "stored_significant_digits": 20008,
@@ -244,7 +266,7 @@
         },
         "symbolic.json": {
           "path": "masters/P29/symbolic.json",
-          "sha256": "0356167fb711f4a52b2f3223e9dae64bd0623ec7c18a0377b063537385a27dbb"
+          "sha256": "2ba11cfbeeeed744e568d61496cdfc378b155fb84c4ef5f9345d780463f54a7a"
         }
       },
       "previous_files": {
@@ -260,6 +282,13 @@
           "archive": "provenance/numerical-precision-before/4L/masters/P29/symbolic.json",
           "contents": "[\n  [\n    -4,\n    \"0\"\n  ],\n  [\n    -3,\n    \"-7/6\"\n  ],\n  [\n    -2,\n    \"-215/48\"\n  ],\n  [\n    -1,\n    \"-7/18*𝜋^2+-965/96\"\n  ],\n  [\n    0,\n    \"-1.5493368092575709193442653275474471557939250538174974074071187151437904085659351574754534317889063980805438601123345665706849751584517928021185614327782059492702524920790240371944321122356374481292854e+1\"\n  ],\n  [\n    1,\n    \"-1.0814476548488341355588400831411755987745295007990109179230645520318859936115767156381728154794222796447999200134864272669576535129099066273864465710574721044120169130832027625938444285620917515551044e+2\"\n  ]\n]\n"
         }
+      },
+      "accepted_symbolic": {
+        "source_commit": "277e8768b37bb97141c45444f5fb94fa18177dc7",
+        "path": "masters/P29/symbolic.json",
+        "sha256": "2ba11cfbeeeed744e568d61496cdfc378b155fb84c4ef5f9345d780463f54a7a",
+        "archive": "provenance/accepted-symbolic-277e/4L/masters/P29/symbolic.json",
+        "contents": "[\n  [\n    -4,\n    \"0\"\n  ],\n  [\n    -3,\n    \"-7/6\"\n  ],\n  [\n    -2,\n    \"-215/48\"\n  ],\n  [\n    -1,\n    \"-7/18*𝜋^2+-965/96\"\n  ],\n  [\n    0,\n    \"-215/144*𝜋^2+-2155/192+14/9*symbolica::zeta(3)+19/6*vakint::K5Moment(1)+75/8*vakint::K5Moment(3)\"\n  ],\n  [\n    1,\n    \"-7/90*𝜋^4+-929/60*vakint::K5Moment(1)+-965/288*𝜋^2+1185/16*vakint::K5Moment(3)+19/6*vakint::K5LogMoment(1)+215/36*symbolica::zeta(3)+3829/128+75/8*vakint::K5LogMoment(3)\"\n  ]\n]\n"
       }
     },
     "L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p0_p1_p1_p0_p0_p1_p1_p1_p0_p0": {
@@ -269,7 +298,7 @@
       "coefficients": [
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 20000,
           "stored_significant_digits": 20008,
@@ -278,7 +307,7 @@
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 20000,
           "stored_significant_digits": 20008,
@@ -303,7 +332,7 @@
         },
         "symbolic.json": {
           "path": "masters/P41/symbolic.json",
-          "sha256": "8a833563a4783d34e260c0ea18b4caa703c7d4e3ab23906913a489b79667e547"
+          "sha256": "92181fe30eb495068fc1b875fc979f73843740f9b945130e71a5a645982dee83"
         }
       },
       "previous_files": {
@@ -319,6 +348,13 @@
           "archive": "provenance/numerical-precision-before/4L/masters/P41/symbolic.json",
           "contents": "[\n  [\n    -4,\n    \"5/2\"\n  ],\n  [\n    -3,\n    \"35/3\"\n  ],\n  [\n    -2,\n    \"4565/144+5/6*𝜋^2\"\n  ],\n  [\n    -1,\n    \"-10/3*symbolica::zeta(3)+35/9*𝜋^2+58345/864\"\n  ],\n  [\n    0,\n    \"2.4205011795464380401497871726548464059349578903462029340866550346255944720618640822369344388591627485258816217202187445044061610127360820496743756777649694954535038244630521052227345829290846579124990e+2\"\n  ],\n  [\n    1,\n    \"8.0539356980484714806569188577471546264034539424982885757825220766937814459253380463148256501268165648419183446503570789899139974129714132205598086314166679287793507770975264228253248739135575746523219e+2\"\n  ]\n]\n"
         }
+      },
+      "accepted_symbolic": {
+        "source_commit": "277e8768b37bb97141c45444f5fb94fa18177dc7",
+        "path": "masters/P41/symbolic.json",
+        "sha256": "92181fe30eb495068fc1b875fc979f73843740f9b945130e71a5a645982dee83",
+        "archive": "provenance/accepted-symbolic-277e/4L/masters/P41/symbolic.json",
+        "contents": "[\n  [\n    -4,\n    \"5/2\"\n  ],\n  [\n    -3,\n    \"35/3\"\n  ],\n  [\n    -2,\n    \"4565/144+5/6*𝜋^2\"\n  ],\n  [\n    -1,\n    \"-10/3*symbolica::zeta(3)+35/9*𝜋^2+58345/864\"\n  ],\n  [\n    0,\n    \"-107/6*vakint::K5Moment(1)+-140/9*symbolica::zeta(3)+1/6*𝜋^4+4565/432*𝜋^2+525/8*vakint::K5Moment(3)+932645/5184\"\n  ],\n  [\n    1,\n    \"-10/9*symbolica::zeta(3)*𝜋^2+-107/6*vakint::K5LogMoment(1)+-11389/36*vakint::K5Moment(1)+-2*symbolica::zeta(5)+-4565/108*symbolica::zeta(3)+13475/16*vakint::K5Moment(3)+28936285/31104+525/8*vakint::K5LogMoment(3)+58345/2592*𝜋^2+7/9*𝜋^4\"\n  ]\n]\n"
       }
     },
     "L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p0_p3_p1_p0_p0_p1_p1_p1_p0_p0": {
@@ -328,7 +364,7 @@
       "coefficients": [
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 20000,
           "stored_significant_digits": 20008,
@@ -337,7 +373,7 @@
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 20000,
           "stored_significant_digits": 20008,
@@ -362,7 +398,7 @@
         },
         "symbolic.json": {
           "path": "masters/P46/symbolic.json",
-          "sha256": "0356167fb711f4a52b2f3223e9dae64bd0623ec7c18a0377b063537385a27dbb"
+          "sha256": "2ba11cfbeeeed744e568d61496cdfc378b155fb84c4ef5f9345d780463f54a7a"
         }
       },
       "previous_files": {
@@ -378,6 +414,13 @@
           "archive": "provenance/numerical-precision-before/4L/masters/P46/symbolic.json",
           "contents": "[\n  [\n    -4,\n    \"0\"\n  ],\n  [\n    -3,\n    \"-7/6\"\n  ],\n  [\n    -2,\n    \"-215/48\"\n  ],\n  [\n    -1,\n    \"-7/18*𝜋^2+-965/96\"\n  ],\n  [\n    0,\n    \"-1.5493368092575709193442653275474471557939250538174974074071187151437904085659351574754534317889063980805438601123345665706849751584517928021185614327782059492702524920790240371944321122356374481292854e+1\"\n  ],\n  [\n    1,\n    \"-1.0814476548488341355588400831411755987745295007990109179230645520318859936115767156381728154794222796447999200134864272669576535129099066273864465710574721044120169130832027625938444285620917515551044e+2\"\n  ]\n]\n"
         }
+      },
+      "accepted_symbolic": {
+        "source_commit": "277e8768b37bb97141c45444f5fb94fa18177dc7",
+        "path": "masters/P46/symbolic.json",
+        "sha256": "2ba11cfbeeeed744e568d61496cdfc378b155fb84c4ef5f9345d780463f54a7a",
+        "archive": "provenance/accepted-symbolic-277e/4L/masters/P46/symbolic.json",
+        "contents": "[\n  [\n    -4,\n    \"0\"\n  ],\n  [\n    -3,\n    \"-7/6\"\n  ],\n  [\n    -2,\n    \"-215/48\"\n  ],\n  [\n    -1,\n    \"-7/18*𝜋^2+-965/96\"\n  ],\n  [\n    0,\n    \"-215/144*𝜋^2+-2155/192+14/9*symbolica::zeta(3)+19/6*vakint::K5Moment(1)+75/8*vakint::K5Moment(3)\"\n  ],\n  [\n    1,\n    \"-7/90*𝜋^4+-929/60*vakint::K5Moment(1)+-965/288*𝜋^2+1185/16*vakint::K5Moment(3)+19/6*vakint::K5LogMoment(1)+215/36*symbolica::zeta(3)+3829/128+75/8*vakint::K5LogMoment(3)\"\n  ]\n]\n"
       }
     },
     "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p0_p0_p1_p1_p1_p0_p1_p0": {
@@ -387,7 +430,7 @@
       "coefficients": [
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 20000,
           "stored_significant_digits": 20008,
@@ -396,7 +439,7 @@
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 20000,
           "stored_significant_digits": 20008,
@@ -421,7 +464,7 @@
         },
         "symbolic.json": {
           "path": "masters/P59/symbolic.json",
-          "sha256": "8a833563a4783d34e260c0ea18b4caa703c7d4e3ab23906913a489b79667e547"
+          "sha256": "92181fe30eb495068fc1b875fc979f73843740f9b945130e71a5a645982dee83"
         }
       },
       "previous_files": {
@@ -437,6 +480,13 @@
           "archive": "provenance/numerical-precision-before/4L/masters/P59/symbolic.json",
           "contents": "[\n  [\n    -4,\n    \"5/2\"\n  ],\n  [\n    -3,\n    \"35/3\"\n  ],\n  [\n    -2,\n    \"4565/144+5/6*𝜋^2\"\n  ],\n  [\n    -1,\n    \"-10/3*symbolica::zeta(3)+35/9*𝜋^2+58345/864\"\n  ],\n  [\n    0,\n    \"2.4205011795464380401497871726548464059349578903462029340866550346255944720618640822369344388591627485258816217202187445044061610127360820496743756777649694954535038244630521052227345829290846579124990e+2\"\n  ],\n  [\n    1,\n    \"8.0539356980484714806569188577471546264034539424982885757825220766937814459253380463148256501268165648419183446503570789899139974129714132205598086314166679287793507770975264228253248739135575746523219e+2\"\n  ]\n]\n"
         }
+      },
+      "accepted_symbolic": {
+        "source_commit": "277e8768b37bb97141c45444f5fb94fa18177dc7",
+        "path": "masters/P59/symbolic.json",
+        "sha256": "92181fe30eb495068fc1b875fc979f73843740f9b945130e71a5a645982dee83",
+        "archive": "provenance/accepted-symbolic-277e/4L/masters/P59/symbolic.json",
+        "contents": "[\n  [\n    -4,\n    \"5/2\"\n  ],\n  [\n    -3,\n    \"35/3\"\n  ],\n  [\n    -2,\n    \"4565/144+5/6*𝜋^2\"\n  ],\n  [\n    -1,\n    \"-10/3*symbolica::zeta(3)+35/9*𝜋^2+58345/864\"\n  ],\n  [\n    0,\n    \"-107/6*vakint::K5Moment(1)+-140/9*symbolica::zeta(3)+1/6*𝜋^4+4565/432*𝜋^2+525/8*vakint::K5Moment(3)+932645/5184\"\n  ],\n  [\n    1,\n    \"-10/9*symbolica::zeta(3)*𝜋^2+-107/6*vakint::K5LogMoment(1)+-11389/36*vakint::K5Moment(1)+-2*symbolica::zeta(5)+-4565/108*symbolica::zeta(3)+13475/16*vakint::K5Moment(3)+28936285/31104+525/8*vakint::K5LogMoment(3)+58345/2592*𝜋^2+7/9*𝜋^4\"\n  ]\n]\n"
       }
     },
     "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p3_p0_p0_p1_p1_p1_p0_p1_p0": {
@@ -446,7 +496,7 @@
       "coefficients": [
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 20000,
           "stored_significant_digits": 20008,
@@ -455,7 +505,7 @@
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 20000,
           "stored_significant_digits": 20008,
@@ -480,7 +530,7 @@
         },
         "symbolic.json": {
           "path": "masters/P68/symbolic.json",
-          "sha256": "0356167fb711f4a52b2f3223e9dae64bd0623ec7c18a0377b063537385a27dbb"
+          "sha256": "2ba11cfbeeeed744e568d61496cdfc378b155fb84c4ef5f9345d780463f54a7a"
         }
       },
       "previous_files": {
@@ -496,6 +546,13 @@
           "archive": "provenance/numerical-precision-before/4L/masters/P68/symbolic.json",
           "contents": "[\n  [\n    -4,\n    \"0\"\n  ],\n  [\n    -3,\n    \"-7/6\"\n  ],\n  [\n    -2,\n    \"-215/48\"\n  ],\n  [\n    -1,\n    \"-7/18*𝜋^2+-965/96\"\n  ],\n  [\n    0,\n    \"-1.5493368092575709193442653275474471557939250538174974074071187151437904085659351574754534317889063980805438601123345665706849751584517928021185614327782059492702524920790240371944321122356374481292854e+1\"\n  ],\n  [\n    1,\n    \"-1.0814476548488341355588400831411755987745295007990109179230645520318859936115767156381728154794222796447999200134864272669576535129099066273864465710574721044120169130832027625938444285620917515551044e+2\"\n  ]\n]\n"
         }
+      },
+      "accepted_symbolic": {
+        "source_commit": "277e8768b37bb97141c45444f5fb94fa18177dc7",
+        "path": "masters/P68/symbolic.json",
+        "sha256": "2ba11cfbeeeed744e568d61496cdfc378b155fb84c4ef5f9345d780463f54a7a",
+        "archive": "provenance/accepted-symbolic-277e/4L/masters/P68/symbolic.json",
+        "contents": "[\n  [\n    -4,\n    \"0\"\n  ],\n  [\n    -3,\n    \"-7/6\"\n  ],\n  [\n    -2,\n    \"-215/48\"\n  ],\n  [\n    -1,\n    \"-7/18*𝜋^2+-965/96\"\n  ],\n  [\n    0,\n    \"-215/144*𝜋^2+-2155/192+14/9*symbolica::zeta(3)+19/6*vakint::K5Moment(1)+75/8*vakint::K5Moment(3)\"\n  ],\n  [\n    1,\n    \"-7/90*𝜋^4+-929/60*vakint::K5Moment(1)+-965/288*𝜋^2+1185/16*vakint::K5Moment(3)+19/6*vakint::K5LogMoment(1)+215/36*symbolica::zeta(3)+3829/128+75/8*vakint::K5LogMoment(3)\"\n  ]\n]\n"
       }
     }
   }

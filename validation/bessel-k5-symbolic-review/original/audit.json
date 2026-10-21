@@ -1,0 +1,371 @@
+{
+  "schema": "vakint.independent-upstream-moment-binding-audit.v1",
+  "accepted": true,
+  "upstream_commit": "277e8768b37bb97141c45444f5fb94fa18177dc7",
+  "logarithmic_moment_factor": 3,
+  "mapping": {
+    "B1": "vakint::K5Moment(1)",
+    "B3": "vakint::K5Moment(3)",
+    "J1": "vakint::K5LogMoment(1)",
+    "J3": "vakint::K5LogMoment(3)"
+  },
+  "normalization": "FMFTandMATAD, d=4-2epsilon, unit mass squared, Minkowski denominators",
+  "proof": {
+    "dimension_shift": "-16 exp(gamma e)/Gamma(1-e) [g1(e) kappa1(e)+g3(e) kappa3(e)] + b(e) T1(e)^4",
+    "kappa_jet": "kappa_k(0)=B_k; kappa_k_prime(0)=J_k=3 integral r^k(log(r)+gamma-log(2)) K0(r)^5 dr",
+    "prefactor_linear_coefficient": 0,
+    "T1_fourth": "e^-4 (1-e)^-4 exp[4 sum_{n>=2} (-1)^n zeta(n)e^n/n]",
+    "exact_method": "Independent sparse rational polynomial and formal rational epsilon-series arithmetic; no imported producer implementation, numerical fitting, or PR4 alias lookup",
+    "dimension_shift_rational_jets": {
+      "PR4": {
+        "g1": [
+          "107/96",
+          "11389/576"
+        ],
+        "g3": [
+          "-525/128",
+          "-13475/256"
+        ],
+        "b_through_5": [
+          "5/2",
+          "5/3",
+          "5/144",
+          "625/864",
+          "289445/5184",
+          "15574045/31104"
+        ]
+      },
+      "PR4d": {
+        "g1": [
+          "-19/96",
+          "929/960"
+        ],
+        "g3": [
+          "-75/128",
+          "-1185/256"
+        ],
+        "b_through_5": [
+          "0",
+          "-7/6",
+          "3/16",
+          "83/96",
+          "1301/192",
+          "11999/384"
+        ]
+      }
+    },
+    "representative_polynomials": {
+      "PR4": {
+        "0": {
+          "1": "932645/5184",
+          "zeta3": "-140/9",
+          "pi^2": "4565/432",
+          "pi^4": "1/6",
+          "B3": "525/8",
+          "B1": "-107/6"
+        },
+        "1": {
+          "1": "28936285/31104",
+          "zeta5": "-2",
+          "zeta3": "-4565/108",
+          "pi^2": "58345/2592",
+          "pi^2*zeta3": "-10/9",
+          "pi^4": "7/9",
+          "J3": "525/8",
+          "B3": "13475/16",
+          "J1": "-107/6",
+          "B1": "-11389/36"
+        }
+      },
+      "PR4d": {
+        "0": {
+          "1": "-2155/192",
+          "zeta3": "14/9",
+          "pi^2": "-215/144",
+          "B3": "75/8",
+          "B1": "19/6"
+        },
+        "1": {
+          "1": "3829/128",
+          "zeta3": "215/36",
+          "pi^2": "-965/288",
+          "pi^4": "-7/90",
+          "J3": "75/8",
+          "B3": "1185/16",
+          "J1": "19/6",
+          "B1": "-929/60"
+        }
+      },
+      "PR4singleDot": {
+        "0": {
+          "1": "3451/64",
+          "zeta3": "-20/3",
+          "pi^2": "155/48",
+          "pi^4": "1/10",
+          "B3": "315/8",
+          "B1": "-107/10"
+        },
+        "1": {
+          "1": "53025/128",
+          "zeta5": "-6/5",
+          "zeta3": "-155/12",
+          "pi^2": "485/96",
+          "pi^2*zeta3": "-2/3",
+          "pi^4": "1/3",
+          "J3": "315/8",
+          "B3": "7245/16",
+          "J1": "-107/10",
+          "B1": "-3511/20"
+        }
+      }
+    }
+  },
+  "exact_formula_checks": [
+    {
+      "master": "P6",
+      "epsilon_power": 0,
+      "basis": "PR4",
+      "exact_difference": {}
+    },
+    {
+      "master": "P6",
+      "epsilon_power": 1,
+      "basis": "PR4",
+      "exact_difference": {}
+    },
+    {
+      "master": "P24",
+      "epsilon_power": 0,
+      "basis": "PR4",
+      "exact_difference": {}
+    },
+    {
+      "master": "P24",
+      "epsilon_power": 1,
+      "basis": "PR4",
+      "exact_difference": {}
+    },
+    {
+      "master": "P41",
+      "epsilon_power": 0,
+      "basis": "PR4",
+      "exact_difference": {}
+    },
+    {
+      "master": "P41",
+      "epsilon_power": 1,
+      "basis": "PR4",
+      "exact_difference": {}
+    },
+    {
+      "master": "P59",
+      "epsilon_power": 0,
+      "basis": "PR4",
+      "exact_difference": {}
+    },
+    {
+      "master": "P59",
+      "epsilon_power": 1,
+      "basis": "PR4",
+      "exact_difference": {}
+    },
+    {
+      "master": "P11",
+      "epsilon_power": 0,
+      "basis": "PR4d",
+      "exact_difference": {}
+    },
+    {
+      "master": "P11",
+      "epsilon_power": 1,
+      "basis": "PR4d",
+      "exact_difference": {}
+    },
+    {
+      "master": "P29",
+      "epsilon_power": 0,
+      "basis": "PR4d",
+      "exact_difference": {}
+    },
+    {
+      "master": "P29",
+      "epsilon_power": 1,
+      "basis": "PR4d",
+      "exact_difference": {}
+    },
+    {
+      "master": "P46",
+      "epsilon_power": 0,
+      "basis": "PR4d",
+      "exact_difference": {}
+    },
+    {
+      "master": "P46",
+      "epsilon_power": 1,
+      "basis": "PR4d",
+      "exact_difference": {}
+    },
+    {
+      "master": "P68",
+      "epsilon_power": 0,
+      "basis": "PR4d",
+      "exact_difference": {}
+    },
+    {
+      "master": "P68",
+      "epsilon_power": 1,
+      "basis": "PR4d",
+      "exact_difference": {}
+    },
+    {
+      "master": "P9",
+      "epsilon_power": 0,
+      "basis": "PR4singleDot",
+      "exact_difference": {}
+    },
+    {
+      "master": "P9",
+      "epsilon_power": 1,
+      "basis": "PR4singleDot",
+      "exact_difference": {}
+    },
+    {
+      "master": "P28",
+      "epsilon_power": 0,
+      "basis": "PR4singleDot",
+      "exact_difference": {}
+    },
+    {
+      "master": "P28",
+      "epsilon_power": 1,
+      "basis": "PR4singleDot",
+      "exact_difference": {}
+    },
+    {
+      "master": "P44",
+      "epsilon_power": 0,
+      "basis": "PR4singleDot",
+      "exact_difference": {}
+    },
+    {
+      "master": "P44",
+      "epsilon_power": 1,
+      "basis": "PR4singleDot",
+      "exact_difference": {}
+    },
+    {
+      "master": "P66",
+      "epsilon_power": 0,
+      "basis": "PR4singleDot",
+      "exact_difference": {}
+    },
+    {
+      "master": "P66",
+      "epsilon_power": 1,
+      "basis": "PR4singleDot",
+      "exact_difference": {}
+    }
+  ],
+  "numerical_checks": [
+    {
+      "master": "P6",
+      "epsilon_power": 0,
+      "profile": "a",
+      "stored_digits_identical": 20208,
+      "accepted_precision": 20200,
+      "value_prefix": "242.050117954643804014978717265484640593495789034620293408665503462559447206186408",
+      "relative_accuracy_bits": 67149
+    },
+    {
+      "master": "P6",
+      "epsilon_power": 1,
+      "profile": "a",
+      "stored_digits_identical": 20208,
+      "accepted_precision": 20200,
+      "value_prefix": "805.393569804847148065691885774715462640345394249828857578252207669378144592533804",
+      "relative_accuracy_bits": 67147
+    },
+    {
+      "master": "P11",
+      "epsilon_power": 0,
+      "profile": "a",
+      "stored_digits_identical": 20208,
+      "accepted_precision": 20200,
+      "value_prefix": "-15.493368092575709193442653275474471557939250538174974074071187151437904085659351",
+      "relative_accuracy_bits": 67148
+    },
+    {
+      "master": "P11",
+      "epsilon_power": 1,
+      "profile": "a",
+      "stored_digits_identical": 20208,
+      "accepted_precision": 20200,
+      "value_prefix": "-108.14476548488341355588400831411755987745295007990109179230645520318859936115767",
+      "relative_accuracy_bits": 67148
+    },
+    {
+      "master": "P6",
+      "epsilon_power": 0,
+      "profile": "b",
+      "stored_digits_identical": 20208,
+      "accepted_precision": 20200,
+      "value_prefix": "242.050117954643804014978717265484640593495789034620293408665503462559447206186408",
+      "relative_accuracy_bits": 67148
+    },
+    {
+      "master": "P6",
+      "epsilon_power": 1,
+      "profile": "b",
+      "stored_digits_identical": 20208,
+      "accepted_precision": 20200,
+      "value_prefix": "805.393569804847148065691885774715462640345394249828857578252207669378144592533804",
+      "relative_accuracy_bits": 67147
+    },
+    {
+      "master": "P11",
+      "epsilon_power": 0,
+      "profile": "b",
+      "stored_digits_identical": 20208,
+      "accepted_precision": 20200,
+      "value_prefix": "-15.493368092575709193442653275474471557939250538174974074071187151437904085659351",
+      "relative_accuracy_bits": 67147
+    },
+    {
+      "master": "P11",
+      "epsilon_power": 1,
+      "profile": "b",
+      "stored_digits_identical": 20208,
+      "accepted_precision": 20200,
+      "value_prefix": "-108.14476548488341355588400831411755987745295007990109179230645520318859936115767",
+      "relative_accuracy_bits": 67147
+    }
+  ],
+  "limits": [
+    "This audit accepts symbol-to-certified-moment bindings and finite/epsilon-one formula parity. It does not assert arbitrary-precision runtime capability for finite stored moment payloads.",
+    "Published moment-source certification is consumed with pinned hashes; expensive quadrature is not repeated."
+  ],
+  "input_sha256": {
+    "git:277e8768b37bb97141c45444f5fb94fa18177dc7:provenance/producer-update.json": "518d5a041e434a66abad517e4aa32da1476c892f00b0bcc8f425eccbf0379cf7",
+    "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR4-direct10-acceptance-publication-source-v1/publication-output-v1/publication.json": "611ada0bb6de92033e47eaeac543ef4ac37c022660fcf633fe05d842b96ee100",
+    "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR4-direct10-acceptance-publication-source-v1/plan.json": "f5f222806cda2d3f68cf5598e1063b21ef6ded60976d73f5ac221f622dd043f7",
+    "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR4-direct10-acceptance-publication-source-v1/independent-period-definitions.json": "7b22def2f9895013018daee6467e9e955d4892812741c8997028a011cb842b39",
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/bessel/high-guard/source-receipts/exact-shift-and-valuations.json": "660b9e0c6debdabd739fbb92ab9d9da700bdd6025f10b3b79082f48c2af7d531",
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/bessel/high-guard/validation.json": "1f641d1ddca038481e44cb4ce2d7bcc5d765faac4c5a765ea3a8dfc456d6bca4",
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/bessel/high-guard/constants20200.json": "bc9afa66faaaf01afef7ee4e90c2cc1a13691aa4cc8d674e3f39ce688c9afa31",
+    "git:277e8768b37bb97141c45444f5fb94fa18177dc7:4L/masters/P6/symbolic.json": "92181fe30eb495068fc1b875fc979f73843740f9b945130e71a5a645982dee83",
+    "git:277e8768b37bb97141c45444f5fb94fa18177dc7:4L/masters/P24/symbolic.json": "92181fe30eb495068fc1b875fc979f73843740f9b945130e71a5a645982dee83",
+    "git:277e8768b37bb97141c45444f5fb94fa18177dc7:4L/masters/P41/symbolic.json": "92181fe30eb495068fc1b875fc979f73843740f9b945130e71a5a645982dee83",
+    "git:277e8768b37bb97141c45444f5fb94fa18177dc7:4L/masters/P59/symbolic.json": "92181fe30eb495068fc1b875fc979f73843740f9b945130e71a5a645982dee83",
+    "git:277e8768b37bb97141c45444f5fb94fa18177dc7:4L/masters/P11/symbolic.json": "2ba11cfbeeeed744e568d61496cdfc378b155fb84c4ef5f9345d780463f54a7a",
+    "git:277e8768b37bb97141c45444f5fb94fa18177dc7:4L/masters/P29/symbolic.json": "2ba11cfbeeeed744e568d61496cdfc378b155fb84c4ef5f9345d780463f54a7a",
+    "git:277e8768b37bb97141c45444f5fb94fa18177dc7:4L/masters/P46/symbolic.json": "2ba11cfbeeeed744e568d61496cdfc378b155fb84c4ef5f9345d780463f54a7a",
+    "git:277e8768b37bb97141c45444f5fb94fa18177dc7:4L/masters/P68/symbolic.json": "2ba11cfbeeeed744e568d61496cdfc378b155fb84c4ef5f9345d780463f54a7a",
+    "git:277e8768b37bb97141c45444f5fb94fa18177dc7:4L/masters/P9/symbolic.json": "9e9a5851c1760ca2639e66e6cd21f348e58656e69e81d5d464fbcf2319c52602",
+    "git:277e8768b37bb97141c45444f5fb94fa18177dc7:4L/masters/P28/symbolic.json": "9e9a5851c1760ca2639e66e6cd21f348e58656e69e81d5d464fbcf2319c52602",
+    "git:277e8768b37bb97141c45444f5fb94fa18177dc7:4L/masters/P44/symbolic.json": "9e9a5851c1760ca2639e66e6cd21f348e58656e69e81d5d464fbcf2319c52602",
+    "git:277e8768b37bb97141c45444f5fb94fa18177dc7:4L/masters/P66/symbolic.json": "9e9a5851c1760ca2639e66e6cd21f348e58656e69e81d5d464fbcf2319c52602",
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/bessel/high-guard/profile-a.json": "9c0adae05e8ee77633df29bb86dd2a76caac4f3f9875985fe8b027d52c4b2609",
+    "/shared/codex-1/vakint_rustred/workspace/precision-periods/bessel/high-guard/profile-b.json": "6ff0f7b384670f03b9c06c4a66d66debc02b250d93c8ebd2b4c74a8c335faca4"
+  },
+  "audit_script_sha256": "689369531fd91d29aad98fcbe7598f38b58bb844e1d3cbf42e4d05cc36409f9d"
+}

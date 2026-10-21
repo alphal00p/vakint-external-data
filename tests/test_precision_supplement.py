@@ -133,6 +133,31 @@ class PrecisionSupplementTests(unittest.TestCase):
             with self.subTest(field=field), self.assertRaises(ValueError):
                 precision.coefficients(update, {self.identity: self.master})
 
+    def test_numerical_upgrade_preserves_independently_accepted_exact_formulas(self):
+        entry = self.update["masters"][self.identity]
+        relative = entry["files"]["symbolic.json"]["path"]
+        path = self.root / "4L" / relative
+        data.write_json(path, [[-1, "2"], [0, "K5Moment(1)"], [1, "K5LogMoment(1)"]])
+        checksum = data.digest(path)
+        entry["accepted_symbolic"] = {
+            "path": relative,
+            "sha256": checksum,
+            "contents": path.read_text(),
+        }
+        entry["files"]["symbolic.json"]["sha256"] = checksum
+        self.master["files"]["symbolic.json"]["sha256"] = checksum
+        for row in entry["coefficients"]:
+            row["symbolic"] = True
+        precision.validate_master(self.update, self.master, self.root)
+        data.write_json(
+            path, [[-1, "2"], [0, "invented_formula"], [1, "K5LogMoment(1)"]]
+        )
+        changed = data.digest(path)
+        entry["files"]["symbolic.json"]["sha256"] = changed
+        self.master["files"]["symbolic.json"]["sha256"] = changed
+        with self.assertRaisesRegex(ValueError, "changed accepted exact"):
+            precision.validate_master(self.update, self.master, self.root)
+
 
 class OracleCoverageCorrectionTests(unittest.TestCase):
     def setUp(self):

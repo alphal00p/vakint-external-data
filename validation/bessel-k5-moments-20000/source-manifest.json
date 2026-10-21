@@ -1,0 +1,20 @@
+{
+  "schema": "vakint.upstream-K5-moment-binding.sources.v1",
+  "upstream_revision": "277e8768b37bb97141c45444f5fb94fa18177dc7",
+  "input_sha256": {
+    "P6-symbolic-upstream277e876.json": "92181fe30eb495068fc1b875fc979f73843740f9b945130e71a5a645982dee83",
+    "P11-symbolic-upstream277e876.json": "2ba11cfbeeeed744e568d61496cdfc378b155fb84c4ef5f9345d780463f54a7a",
+    "independent-period-definitions.json": "7b22def2f9895013018daee6467e9e955d4892812741c8997028a011cb842b39",
+    "high-guard-validation.json": "1f641d1ddca038481e44cb4ce2d7bcc5d765faac4c5a765ea3a8dfc456d6bca4",
+    "high-guard-profile-a.json": "9c0adae05e8ee77633df29bb86dd2a76caac4f3f9875985fe8b027d52c4b2609",
+    "high-guard-profile-b.json": "6ff0f7b384670f03b9c06c4a66d66debc02b250d93c8ebd2b4c74a8c335faca4"
+  },
+  "normalization": "Bessel integrals onpositive real axis; K5LogMoment includesfactor3 andlog(t)+EulerGamma-log2",
+  "accepted_high_guard_receipt_sha256": "1f641d1ddca038481e44cb4ce2d7bcc5d765faac4c5a765ea3a8dfc456d6bca4",
+  "reused_rounding_support": {
+    "original_path": "../high-guard/validate.py",
+    "original_sha256": "549d06b2fd3ea1fd34ff358f6a8acc3f6d45589488dbf0e8ac05304ddf8de451",
+    "copy": "rounding_support.py",
+    "copy_sha256": "549d06b2fd3ea1fd34ff358f6a8acc3f6d45589488dbf0e8ac05304ddf8de451"
+  }
+}

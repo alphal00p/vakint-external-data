@@ -1,0 +1,22 @@
+{
+  "schema": "vakint.K5-independent-primitive-export.bundle.v1",
+  "files_sha256": {
+    "export.py": "90721c69104b44f6a307257dad5979472aec57c0f6e4095781069ab1c5b32576",
+    "rounding_support.py": "549d06b2fd3ea1fd34ff358f6a8acc3f6d45589488dbf0e8ac05304ddf8de451",
+    "source-manifest.json": "ca8576d30940ebdca18dc3721135e0a50777321d6f02068921ef0ba4dfc9d117",
+    "constants.json": "69249a7cbeab04185fbc689fb66d44c5cd6134d36a42a285ce0c6c7f14ce6165",
+    "validation.json": "e7fd341f193fcec2d1496de2cd4afb26610dc09593f39aa32a103787189ddcc0",
+    "portable_replay.py": "0e847fd578417d744105adc46d8d85b97656f9ef8d9a52a396734e8bff7284c3",
+    "README.md": "8ab1e9ca74e299c2f405b51069dfa3e40727cb2b5fdcdcab4a2101c94d57c2ed",
+    "inputs/P11-symbolic-upstream277e876.json": "2ba11cfbeeeed744e568d61496cdfc378b155fb84c4ef5f9345d780463f54a7a",
+    "inputs/P6-symbolic-upstream277e876.json": "92181fe30eb495068fc1b875fc979f73843740f9b945130e71a5a645982dee83",
+    "inputs/high-guard-profile-a.json": "9c0adae05e8ee77633df29bb86dd2a76caac4f3f9875985fe8b027d52c4b2609",
+    "inputs/high-guard-profile-b.json": "6ff0f7b384670f03b9c06c4a66d66debc02b250d93c8ebd2b4c74a8c335faca4",
+    "inputs/high-guard-validation.json": "1f641d1ddca038481e44cb4ce2d7bcc5d765faac4c5a765ea3a8dfc456d6bca4",
+    "inputs/independent-period-definitions.json": "7b22def2f9895013018daee6467e9e955d4892812741c8997028a011cb842b39"
+  },
+  "replay_expected_sha256": {
+    "constants.json": "69249a7cbeab04185fbc689fb66d44c5cd6134d36a42a285ce0c6c7f14ce6165",
+    "validation.json": "e7fd341f193fcec2d1496de2cd4afb26610dc09593f39aa32a103787189ddcc0"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "schema": "vakint.K5-independent-primitive-export.v1",
+  "accepted": true,
+  "scope": "Direct finite primitive data format adaptation from already accepted interval integration, not new moment computation",
+  "no_master_alias_inversion": true,
+  "source_manifest_sha256": "ca8576d30940ebdca18dc3721135e0a50777321d6f02068921ef0ba4dfc9d117",
+  "payload_sha256": "69249a7cbeab04185fbc689fb66d44c5cd6134d36a42a285ce0c6c7f14ce6165",
+  "checks": [
+    {
+      "symbol": "vakint::K5Moment(1)",
+      "accepted_moment": "B1",
+      "both_partitions_overlap": true,
+      "stored_rounding_unique": true,
+      "validated_significant_digits": 20000,
+      "available_precision": "FixedPrecision(20000)",
+      "absolute_error": "1.96316796308740478739727037106E-20009"
+    },
+    {
+      "symbol": "vakint::K5LogMoment(1)",
+      "accepted_moment": "J1",
+      "both_partitions_overlap": true,
+      "stored_rounding_unique": true,
+      "validated_significant_digits": 20000,
+      "available_precision": "FixedPrecision(20000)",
+      "absolute_error": "7.32916835282132041131273286610E-20009"
+    },
+    {
+      "symbol": "vakint::K5Moment(3)",
+      "accepted_moment": "B3",
+      "both_partitions_overlap": true,
+      "stored_rounding_unique": true,
+      "validated_significant_digits": 20000,
+      "available_precision": "FixedPrecision(20000)",
+      "absolute_error": "4.81777141791285783168461761024E-20010"
+    },
+    {
+      "symbol": "vakint::K5LogMoment(3)",
+      "accepted_moment": "J3",
+      "both_partitions_overlap": true,
+      "stored_rounding_unique": true,
+      "validated_significant_digits": 20000,
+      "available_precision": "FixedPrecision(20000)",
+      "absolute_error": "4.48949896650376143807272831547E-20009"
+    }
+  ],
+  "producer_sha256": "90721c69104b44f6a307257dad5979472aec57c0f6e4095781069ab1c5b32576",
+  "primitive_cap_digits": 20000,
+  "whole_PR11d_accuracy_claimed": false
+}

@@ -1,0 +1,411 @@
+{
+  "complete": true,
+  "bessel_anchor_count": 47,
+  "required_production_anchor_count": 46,
+  "checks": [
+    {
+      "identity": "K0(15/16)",
+      "agreed_decimal_digits_lower_bound": 20422
+    },
+    {
+      "identity": "K1(15/16)",
+      "agreed_decimal_digits_lower_bound": 20421
+    },
+    {
+      "identity": "K0(5/4)",
+      "agreed_decimal_digits_lower_bound": 20421
+    },
+    {
+      "identity": "K1(5/4)",
+      "agreed_decimal_digits_lower_bound": 20421
+    },
+    {
+      "identity": "K0(25/16)",
+      "agreed_decimal_digits_lower_bound": 20422
+    },
+    {
+      "identity": "K1(25/16)",
+      "agreed_decimal_digits_lower_bound": 20421
+    },
+    {
+      "identity": "K0(15/8)",
+      "agreed_decimal_digits_lower_bound": 20421
+    },
+    {
+      "identity": "K1(15/8)",
+      "agreed_decimal_digits_lower_bound": 20422
+    },
+    {
+      "identity": "K0(75/32)",
+      "agreed_decimal_digits_lower_bound": 20420
+    },
+    {
+      "identity": "K1(75/32)",
+      "agreed_decimal_digits_lower_bound": 20421
+    },
+    {
+      "identity": "K0(45/16)",
+      "agreed_decimal_digits_lower_bound": 20420
+    },
+    {
+      "identity": "K1(45/16)",
+      "agreed_decimal_digits_lower_bound": 20421
+    },
+    {
+      "identity": "K0(225/64)",
+      "agreed_decimal_digits_lower_bound": 20420
+    },
+    {
+      "identity": "K1(225/64)",
+      "agreed_decimal_digits_lower_bound": 20420
+    },
+    {
+      "identity": "K0(135/32)",
+      "agreed_decimal_digits_lower_bound": 20420
+    },
+    {
+      "identity": "K1(135/32)",
+      "agreed_decimal_digits_lower_bound": 20420
+    },
+    {
+      "identity": "K0(675/128)",
+      "agreed_decimal_digits_lower_bound": 20419
+    },
+    {
+      "identity": "K1(675/128)",
+      "agreed_decimal_digits_lower_bound": 20420
+    },
+    {
+      "identity": "K0(405/64)",
+      "agreed_decimal_digits_lower_bound": 20419
+    },
+    {
+      "identity": "K1(405/64)",
+      "agreed_decimal_digits_lower_bound": 20419
+    },
+    {
+      "identity": "K0(2025/256)",
+      "agreed_decimal_digits_lower_bound": 20418
+    },
+    {
+      "identity": "K1(2025/256)",
+      "agreed_decimal_digits_lower_bound": 20418
+    },
+    {
+      "identity": "K0(1215/128)",
+      "agreed_decimal_digits_lower_bound": 20421
+    },
+    {
+      "identity": "K1(1215/128)",
+      "agreed_decimal_digits_lower_bound": 20419
+    },
+    {
+      "identity": "K0(6075/512)",
+      "agreed_decimal_digits_lower_bound": 20417
+    },
+    {
+      "identity": "K1(6075/512)",
+      "agreed_decimal_digits_lower_bound": 20416
+    },
+    {
+      "identity": "K0(3645/256)",
+      "agreed_decimal_digits_lower_bound": 20416
+    },
+    {
+      "identity": "K1(3645/256)",
+      "agreed_decimal_digits_lower_bound": 20415
+    },
+    {
+      "identity": "K0(18225/1024)",
+      "agreed_decimal_digits_lower_bound": 20414
+    },
+    {
+      "identity": "K1(18225/1024)",
+      "agreed_decimal_digits_lower_bound": 20414
+    },
+    {
+      "identity": "K0(10935/512)",
+      "agreed_decimal_digits_lower_bound": 20412
+    },
+    {
+      "identity": "K1(10935/512)",
+      "agreed_decimal_digits_lower_bound": 20413
+    },
+    {
+      "identity": "K0(54675/2048)",
+      "agreed_decimal_digits_lower_bound": 20410
+    },
+    {
+      "identity": "K1(54675/2048)",
+      "agreed_decimal_digits_lower_bound": 20409
+    },
+    {
+      "identity": "K0(32805/1024)",
+      "agreed_decimal_digits_lower_bound": 20427
+    },
+    {
+      "identity": "K1(32805/1024)",
+      "agreed_decimal_digits_lower_bound": 20426
+    },
+    {
+      "identity": "K0(164025/4096)",
+      "agreed_decimal_digits_lower_bound": 20423
+    },
+    {
+      "identity": "K1(164025/4096)",
+      "agreed_decimal_digits_lower_bound": 20423
+    },
+    {
+      "identity": "K0(98415/2048)",
+      "agreed_decimal_digits_lower_bound": 20420
+    },
+    {
+      "identity": "K1(98415/2048)",
+      "agreed_decimal_digits_lower_bound": 20419
+    },
+    {
+      "identity": "K0(492075/8192)",
+      "agreed_decimal_digits_lower_bound": 20414
+    },
+    {
+      "identity": "K1(492075/8192)",
+      "agreed_decimal_digits_lower_bound": 20414
+    },
+    {
+      "identity": "K0(295245/4096)",
+      "agreed_decimal_digits_lower_bound": 20428
+    },
+    {
+      "identity": "K1(295245/4096)",
+      "agreed_decimal_digits_lower_bound": 20428
+    },
+    {
+      "identity": "K0(1476225/16384)",
+      "agreed_decimal_digits_lower_bound": 20420
+    },
+    {
+      "identity": "K1(1476225/16384)",
+      "agreed_decimal_digits_lower_bound": 20420
+    },
+    {
+      "identity": "K0(885735/8192)",
+      "agreed_decimal_digits_lower_bound": 20412
+    },
+    {
+      "identity": "K1(885735/8192)",
+      "agreed_decimal_digits_lower_bound": 20412
+    },
+    {
+      "identity": "K0(4428675/32768)",
+      "agreed_decimal_digits_lower_bound": 20420
+    },
+    {
+      "identity": "K1(4428675/32768)",
+      "agreed_decimal_digits_lower_bound": 20419
+    },
+    {
+      "identity": "K0(2657205/16384)",
+      "agreed_decimal_digits_lower_bound": 20427
+    },
+    {
+      "identity": "K1(2657205/16384)",
+      "agreed_decimal_digits_lower_bound": 20427
+    },
+    {
+      "identity": "K0(13286025/65536)",
+      "agreed_decimal_digits_lower_bound": 20410
+    },
+    {
+      "identity": "K1(13286025/65536)",
+      "agreed_decimal_digits_lower_bound": 20409
+    },
+    {
+      "identity": "K0(7971615/32768)",
+      "agreed_decimal_digits_lower_bound": 20412
+    },
+    {
+      "identity": "K1(7971615/32768)",
+      "agreed_decimal_digits_lower_bound": 20411
+    },
+    {
+      "identity": "K0(39858075/131072)",
+      "agreed_decimal_digits_lower_bound": 20425
+    },
+    {
+      "identity": "K1(39858075/131072)",
+      "agreed_decimal_digits_lower_bound": 20424
+    },
+    {
+      "identity": "K0(23914845/65536)",
+      "agreed_decimal_digits_lower_bound": 20417
+    },
+    {
+      "identity": "K1(23914845/65536)",
+      "agreed_decimal_digits_lower_bound": 20417
+    },
+    {
+      "identity": "K0(119574225/262144)",
+      "agreed_decimal_digits_lower_bound": 20415
+    },
+    {
+      "identity": "K1(119574225/262144)",
+      "agreed_decimal_digits_lower_bound": 20415
+    },
+    {
+      "identity": "K0(71744535/131072)",
+      "agreed_decimal_digits_lower_bound": 20414
+    },
+    {
+      "identity": "K1(71744535/131072)",
+      "agreed_decimal_digits_lower_bound": 20414
+    },
+    {
+      "identity": "K0(358722675/524288)",
+      "agreed_decimal_digits_lower_bound": 20412
+    },
+    {
+      "identity": "K1(358722675/524288)",
+      "agreed_decimal_digits_lower_bound": 20412
+    },
+    {
+      "identity": "K0(215233605/262144)",
+      "agreed_decimal_digits_lower_bound": 20410
+    },
+    {
+      "identity": "K1(215233605/262144)",
+      "agreed_decimal_digits_lower_bound": 20410
+    },
+    {
+      "identity": "K0(1076168025/1048576)",
+      "agreed_decimal_digits_lower_bound": 20418
+    },
+    {
+      "identity": "K1(1076168025/1048576)",
+      "agreed_decimal_digits_lower_bound": 20418
+    },
+    {
+      "identity": "K0(645700815/524288)",
+      "agreed_decimal_digits_lower_bound": 20425
+    },
+    {
+      "identity": "K1(645700815/524288)",
+      "agreed_decimal_digits_lower_bound": 20425
+    },
+    {
+      "identity": "K0(3228504075/2097152)",
+      "agreed_decimal_digits_lower_bound": 20426
+    },
+    {
+      "identity": "K1(3228504075/2097152)",
+      "agreed_decimal_digits_lower_bound": 20427
+    },
+    {
+      "identity": "K0(1937102445/1048576)",
+      "agreed_decimal_digits_lower_bound": 20427
+    },
+    {
+      "identity": "K1(1937102445/1048576)",
+      "agreed_decimal_digits_lower_bound": 20427
+    },
+    {
+      "identity": "K0(9685512225/4194304)",
+      "agreed_decimal_digits_lower_bound": 20419
+    },
+    {
+      "identity": "K1(9685512225/4194304)",
+      "agreed_decimal_digits_lower_bound": 20420
+    },
+    {
+      "identity": "K0(5811307335/2097152)",
+      "agreed_decimal_digits_lower_bound": 20411
+    },
+    {
+      "identity": "K1(5811307335/2097152)",
+      "agreed_decimal_digits_lower_bound": 20412
+    },
+    {
+      "identity": "K0(29056536675/8388608)",
+      "agreed_decimal_digits_lower_bound": 20418
+    },
+    {
+      "identity": "K1(29056536675/8388608)",
+      "agreed_decimal_digits_lower_bound": 20419
+    },
+    {
+      "identity": "K0(17433922005/4194304)",
+      "agreed_decimal_digits_lower_bound": 20427
+    },
+    {
+      "identity": "K1(17433922005/4194304)",
+      "agreed_decimal_digits_lower_bound": 20426
+    },
+    {
+      "identity": "K0(87169610025/16777216)",
+      "agreed_decimal_digits_lower_bound": 20420
+    },
+    {
+      "identity": "K1(87169610025/16777216)",
+      "agreed_decimal_digits_lower_bound": 20418
+    },
+    {
+      "identity": "K0(52301766015/8388608)",
+      "agreed_decimal_digits_lower_bound": 20430
+    },
+    {
+      "identity": "K1(52301766015/8388608)",
+      "agreed_decimal_digits_lower_bound": 20429
+    },
+    {
+      "identity": "K0(261508830075/33554432)",
+      "agreed_decimal_digits_lower_bound": 20426
+    },
+    {
+      "identity": "K1(261508830075/33554432)",
+      "agreed_decimal_digits_lower_bound": 20426
+    },
+    {
+      "identity": "K0(156905298045/16777216)",
+      "agreed_decimal_digits_lower_bound": 20424
+    },
+    {
+      "identity": "K1(156905298045/16777216)",
+      "agreed_decimal_digits_lower_bound": 20424
+    },
+    {
+      "identity": "K0(1)",
+      "agreed_decimal_digits_lower_bound": 20422
+    },
+    {
+      "identity": "K1(1)",
+      "agreed_decimal_digits_lower_bound": 20422
+    },
+    {
+      "identity": "EulerGamma",
+      "agreed_decimal_digits_lower_bound": 20401
+    },
+    {
+      "identity": "pi",
+      "agreed_decimal_digits_lower_bound": 20406
+    },
+    {
+      "identity": "zeta2",
+      "agreed_decimal_digits_lower_bound": 20405
+    },
+    {
+      "identity": "zeta3",
+      "agreed_decimal_digits_lower_bound": 20411
+    },
+    {
+      "identity": "zeta4",
+      "agreed_decimal_digits_lower_bound": 20405
+    },
+    {
+      "identity": "zeta5",
+      "agreed_decimal_digits_lower_bound": 20416
+    }
+  ],
+  "minimum_agreed_decimal_digits": 20401,
+  "source_sha256": "763b9a70e5aaff4cd8c3656bfa8884d81f73d9bf56a31c08a15a10866d1baa7d",
+  "supplemental_anchor_sha256": "e11ea4ff27cf7f822c7e4ef0f6f37e15479e247ba4c8f5a67063d700a6031324",
+  "validator_sha256": "a780a5acf0b50c425ac55e99effc62680fded47fd64c912dbab03faffa7f9aa3"
+}

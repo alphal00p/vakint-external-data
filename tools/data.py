@@ -417,7 +417,8 @@ def generate(version):
     if not re.fullmatch(r"v[0-9]+\.[0-9]+\.[0-9]+(?:[-+][A-Za-z0-9.-]+)?", version):
         raise ValueError("version must be an immutable vMAJOR.MINOR.PATCH tag")
     original = read_json(ROOT / "provenance/original-root/manifest.json")
-    from graph_migration import RECEIPT, validate as validate_graph_migration
+    from graph_migration import RECEIPT
+    from graph_migration import validate as validate_graph_migration
 
     if (ROOT / RECEIPT).exists():
         validate_graph_migration()
@@ -430,6 +431,14 @@ def generate(version):
         else {}
     )
     import precision_supplement
+    from finite_constants import (
+        binding as constant_binding,
+    )
+    from finite_constants import (
+        validate_source as validate_constant_source,
+    )
+
+    validate_constant_source(ROOT)
 
     precision_update = precision_supplement.load_source(ROOT)
     precision_updates = precision_supplement.coefficients(precision_update, known)
@@ -568,9 +577,12 @@ def generate(version):
             precision_changed = precision_updates.get(master["master_id"], {})
             if precision_changed:
                 for power, row in precision_changed.items():
-                    if power not in capabilities or capabilities[power]["symbolic"]:
+                    if (
+                        power not in capabilities
+                        or row["symbolic"] != capabilities[power]["symbolic"]
+                    ):
                         raise ValueError(
-                            "numerical precision upgrade cannot add orders or replace exact formulas"
+                            "numerical precision upgrade cannot add orders or change symbolic availability"
                         )
                     capabilities[power] = row
                 precision_supplement.validate_master(precision_update, record, ROOT)
@@ -708,6 +720,8 @@ def generate(version):
             manifest["numerical_precision_supplement"] = (
                 precision_supplement.LOOP_RECEIPT
             )
+        if constants := constant_binding(directory):
+            manifest["constant_bindings"] = constants
         write_json(directory / "manifest.json", manifest)
         loop_packs.append(
             {
@@ -752,12 +766,20 @@ def generate(version):
 
 def validate(root=None):
     root = ROOT if root is None else root
-    from graph_migration import RECEIPT, validate as validate_graph_migration
+    from finite_constants import (
+        binding as constant_binding,
+    )
+    from finite_constants import (
+        validate_source as validate_constant_source,
+    )
+    from graph_migration import RECEIPT
+    from graph_migration import validate as validate_graph_migration
     from precision_supplement import load_source as validate_precision_source
 
     if (root / RECEIPT).exists():
         validate_graph_migration(root)
     validate_precision_source(root)
+    validate_constant_source(root)
     manifest = read_json(root / "manifest.json")
     if manifest["schema"] != ROOT_SCHEMA:
         raise ValueError("unsupported root schema")
@@ -788,6 +810,10 @@ def validate(root=None):
         for name, expected in loop["files"].items():
             if file_record(checked_path(path.parent, name)) != expected:
                 raise ValueError(f"payload checksum/size mismatch: {name}")
+        if loop.get("constant_bindings") != constant_binding(path.parent):
+            raise ValueError(
+                "finite constant manifest binding differs from its payload"
+            )
         for master in loop["masters"]:
             for value in master["files"].values():
                 if digest(checked_path(path.parent, value["path"])) != value["sha256"]:

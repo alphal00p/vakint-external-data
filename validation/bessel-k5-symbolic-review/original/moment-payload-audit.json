@@ -1,0 +1,76 @@
+{
+  "schema": "vakint.independent-K5-export-audit.v1",
+  "accepted": true,
+  "payload_sha256": "69249a7cbeab04185fbc689fb66d44c5cd6134d36a42a285ce0c6c7f14ce6165",
+  "export_validation_sha256": "e7fd341f193fcec2d1496de2cd4afb26610dc09593f39aa32a103787189ddcc0",
+  "audit_script_sha256": "30895494a4ae345979ef2b1bfd2d3be2af00ab530fc56fd54188c60481ea651c",
+  "formula_audit_script_sha256": "689369531fd91d29aad98fcbe7598f38b58bb844e1d3cbf42e4d05cc36409f9d",
+  "checks": [
+    {
+      "symbol": "vakint::K5Moment(1)",
+      "sealed_moment": "B1",
+      "profile": "a",
+      "stored_rounding_unique": true,
+      "published_absolute_error_contains_full_source_ball": true,
+      "validated_significant_digits": 20000
+    },
+    {
+      "symbol": "vakint::K5Moment(1)",
+      "sealed_moment": "B1",
+      "profile": "b",
+      "stored_rounding_unique": true,
+      "published_absolute_error_contains_full_source_ball": true,
+      "validated_significant_digits": 20000
+    },
+    {
+      "symbol": "vakint::K5LogMoment(1)",
+      "sealed_moment": "J1",
+      "profile": "a",
+      "stored_rounding_unique": true,
+      "published_absolute_error_contains_full_source_ball": true,
+      "validated_significant_digits": 20000
+    },
+    {
+      "symbol": "vakint::K5LogMoment(1)",
+      "sealed_moment": "J1",
+      "profile": "b",
+      "stored_rounding_unique": true,
+      "published_absolute_error_contains_full_source_ball": true,
+      "validated_significant_digits": 20000
+    },
+    {
+      "symbol": "vakint::K5Moment(3)",
+      "sealed_moment": "B3",
+      "profile": "a",
+      "stored_rounding_unique": true,
+      "published_absolute_error_contains_full_source_ball": true,
+      "validated_significant_digits": 20000
+    },
+    {
+      "symbol": "vakint::K5Moment(3)",
+      "sealed_moment": "B3",
+      "profile": "b",
+      "stored_rounding_unique": true,
+      "published_absolute_error_contains_full_source_ball": true,
+      "validated_significant_digits": 20000
+    },
+    {
+      "symbol": "vakint::K5LogMoment(3)",
+      "sealed_moment": "J3",
+      "profile": "a",
+      "stored_rounding_unique": true,
+      "published_absolute_error_contains_full_source_ball": true,
+      "validated_significant_digits": 20000
+    },
+    {
+      "symbol": "vakint::K5LogMoment(3)",
+      "sealed_moment": "J3",
+      "profile": "b",
+      "stored_rounding_unique": true,
+      "published_absolute_error_contains_full_source_ball": true,
+      "validated_significant_digits": 20000
+    }
+  ],
+  "finite_source_cap": 20000,
+  "no_master_alias_inversion": true
+}

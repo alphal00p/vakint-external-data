@@ -1,0 +1,194 @@
+{
+  "PSLQ_or_rational_independence_or_completeness_claim": false,
+  "accepted_actual_basis_only": true,
+  "accepted_significant_digits": 200,
+  "actual_guard": {
+    "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR4-K5-first-jet-stage200-pilot-source-v1/controller-v1/guard.json",
+    "sha256": "16eca1ac74b39bfcd5dade7b511e6e7ce2bc90c0c163b883f7142402555eabf6"
+  },
+  "actual_observer_window": {
+    "first_unix": 1792578837.8532357,
+    "last_unix": 1792581085.1031852,
+    "max_actual_read_gap_seconds": 0.417024612,
+    "maximum_reserve_bytes": 60848397517,
+    "minimum_MemAvailable_bytes": 145910738944,
+    "no_reserve_breach": true,
+    "records_including_bracketing_samples": 8990,
+    "source_mutable_running_log_not_falsely_frozen": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/independent-host-memory-observer-v9/active-observer/actual-memory-reads.jsonl"
+  },
+  "actual_performance": {
+    "OS_pool_size_not_algorithm_thread_or_CPU_concurrency": true,
+    "admitted_cpu_ids": [
+      9
+    ],
+    "all_GNU_CPU_seconds_div_wall_below1": true,
+    "comparison_not_a_digits_only_scaling_law": true,
+    "four_child_wall_seconds_sum": 2239.656678368803,
+    "guard_peak_tree_RSS_bytes": 288985088,
+    "max_created_OS_threads": 399,
+    "measured_guard_time_ratio_200_vs50": 18.814476957641155,
+    "native_integrand_evaluations": 513156,
+    "native_quadrature_seconds_sum": 2204.392878,
+    "profiles": [
+      {
+        "GNU_time": {
+          "elapsed_seconds": "1164.97",
+          "exit_code": "0",
+          "max_single_process_rss_kib": "211504",
+          "system_seconds": "3.82",
+          "user_seconds": "1139.35"
+        },
+        "MaxMemoryUsed_bytes": 98795048,
+        "cpu_seconds_div_wall": 0.9812774247695105,
+        "method": "r_GlobalAdaptive",
+        "native_integrand_evaluations": 189308,
+        "native_quadrature_seconds": 1153.232195,
+        "wall_seconds": 1164.9814528939314,
+        "working_digits": 260
+      },
+      {
+        "GNU_time": {
+          "elapsed_seconds": "792.76",
+          "exit_code": "0",
+          "max_single_process_rss_kib": "264620",
+          "system_seconds": "2.15",
+          "user_seconds": "782.55"
+        },
+        "MaxMemoryUsed_bytes": 149300904,
+        "cpu_seconds_div_wall": 0.9898271778665879,
+        "method": "r_GlobalAdaptive",
+        "native_integrand_evaluations": 151691,
+        "native_quadrature_seconds": 785.37539,
+        "wall_seconds": 792.7646538169356,
+        "working_digits": 320
+      },
+      {
+        "GNU_time": {
+          "elapsed_seconds": "93.55",
+          "exit_code": "0",
+          "max_single_process_rss_kib": "263524",
+          "system_seconds": "2.30",
+          "user_seconds": "88.77"
+        },
+        "MaxMemoryUsed_bytes": 149300704,
+        "cpu_seconds_div_wall": 0.9733732117097587,
+        "method": "u_DoubleExponential",
+        "native_integrand_evaluations": 79331,
+        "native_quadrature_seconds": 85.929989,
+        "wall_seconds": 93.5612352018943,
+        "working_digits": 260
+      },
+      {
+        "GNU_time": {
+          "elapsed_seconds": "188.34",
+          "exit_code": "0",
+          "max_single_process_rss_kib": "263572",
+          "system_seconds": "2.51",
+          "user_seconds": "182.18"
+        },
+        "MaxMemoryUsed_bytes": 149301128,
+        "cpu_seconds_div_wall": 0.9805715458047508,
+        "method": "u_DoubleExponential",
+        "native_integrand_evaluations": 92826,
+        "native_quadrature_seconds": 179.855304,
+        "wall_seconds": 188.34933645604178,
+        "working_digits": 320
+      }
+    ],
+    "stage50_guard_seconds": 119.42476081848145,
+    "total_guard_seconds": 2246.9144105911255
+  },
+  "actual_qualification": {
+    "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR4-K5-first-jet-stage200-pilot-source-v1/pilot-output-v1/qualification.json",
+    "sha256": "86620815341bebbb61204ca0c4f96628c94e3f54281786ce45184f21288641eb"
+  },
+  "all_source_and_actual_peer_file_pins_reverified": true,
+  "approved_by_root": true,
+  "basis_values": [
+    {
+      "coefficient": "2.4965992507497653561840017811514997432406114327981162232729101382421014141270463045039463065513848490719149809661694601513097224876903263021145007802783958528017767830808778998673517886242037452233704E+0",
+      "definition": {
+        "definition": "integral_0_infinity(t^k*BesselK(0,t)^5*(3*(log(t)+EulerGamma-log(2)))^jet)",
+        "id": "K5-k1-jet0",
+        "jet": 0,
+        "k": 1,
+        "kind": "target",
+        "n": 5
+      },
+      "exact_zero_claim": false,
+      "id": "K5-k1-jet0",
+      "numerically_stable_significant_digits": 200
+    },
+    {
+      "coefficient": "-2.1768819884003447659469698750324973201438537608297077462220781647201587385343501458899124645702358304401110865464903061906505336083254888974429256659610069219743166265180509198345515135071890368709110E+1",
+      "definition": {
+        "definition": "integral_0_infinity(t^k*BesselK(0,t)^5*(3*(log(t)+EulerGamma-log(2)))^jet)",
+        "id": "K5-k1-jet1",
+        "jet": 1,
+        "k": 1,
+        "kind": "target",
+        "n": 5
+      },
+      "exact_zero_claim": false,
+      "id": "K5-k1-jet1",
+      "numerically_stable_significant_digits": 200
+    },
+    {
+      "coefficient": "7.3674026854568782847575802163999932518605594236563681984224677515023292997863150685305710035215501929363385357734463063848333377760203094618836363129394655644799413351912718317244613863795199147564177E-2",
+      "definition": {
+        "definition": "integral_0_infinity(t^k*BesselK(0,t)^5*(3*(log(t)+EulerGamma-log(2)))^jet)",
+        "id": "K5-k3-jet0",
+        "jet": 0,
+        "k": 3,
+        "kind": "target",
+        "n": 5
+      },
+      "exact_zero_claim": false,
+      "id": "K5-k3-jet0",
+      "numerically_stable_significant_digits": 200
+    },
+    {
+      "coefficient": "-2.6215419500796067041382319352186897670443878664713516327733429482111423423489943107489325028341071277327051015476025478954319258519226729528874604966568641115047423205591448317179701777162129884508315E-1",
+      "definition": {
+        "definition": "integral_0_infinity(t^k*BesselK(0,t)^5*(3*(log(t)+EulerGamma-log(2)))^jet)",
+        "id": "K5-k3-jet1",
+        "jet": 1,
+        "k": 3,
+        "kind": "target",
+        "n": 5
+      },
+      "exact_zero_claim": false,
+      "id": "K5-k3-jet1",
+      "numerically_stable_significant_digits": 200
+    }
+  ],
+  "checks": {
+    "cross_method_cross_work": 24,
+    "native_Mellin_control": 16,
+    "strict200_rounding_cells": 16
+  },
+  "exact_matrix_firstjet_depth_adoption": {
+    "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR4-three-anchor-independent-MMA-replay-source-v1/root-exact-matrix-and-required-first-jet-depth-adoption-v1.json",
+    "sha256": "425be66a4efed6b18ff3047f73af8386b225f4ff274d29763f9e1ba3083483c1"
+  },
+  "independent_actual_audit": {
+    "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR4-K5-first-jet-stage200-pilot-source-v1/peer-independent-actual-56-gate-K5-first-jet-stage200-audit-pr4-v1.json",
+    "sha256": "69dfa259106caac264257aaca72007965408785b2782e878373cf40aaac9b5c2"
+  },
+  "limitations": [
+    "Only four independently defined Bk/Jk supporting basis constants at200 significant digits are audited.",
+    "Two variable representations and NIntegrate strategies share native Mathematica BesselK/Gamma; they are not independent specialfunction libraries.",
+    "Analytic tail inequalities plus safety allowances and measured refinement error provide numerical evidence, not a rigorous quadrature interval proof.",
+    "No rational independence, minimality, complete modular/gamma basis, wider precision or nativeSymbolica Bessel accuracy follows.",
+    "No fourdimensional master coefficient, symbolic reconstruction, principalprecision upgrade or publication accepted."
+  ],
+  "master_coefficient_or_principal_precision_or_publication_accepted": false,
+  "numerical_evidence_not_interval_proof": true,
+  "reverified_file_count": 139,
+  "reviewed_unix": 1792583291.3546607,
+  "schema": "vacuum-masters.root-basis-only-stage200-adoption.v1",
+  "source_plan": {
+    "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR4-K5-first-jet-stage200-pilot-source-v1/plan.json",
+    "sha256": "95ffc065d5090e72e6a3b160a1cd372939a3a2f6fef6acf0fbeb7bc7cfc61277"
+  }
+}

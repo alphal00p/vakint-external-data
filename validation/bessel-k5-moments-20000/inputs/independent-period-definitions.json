@@ -1,0 +1,39 @@
+{
+  "Root_actual_auxiliary215_and_own200_acceptance": {
+    "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR4-direct10-own200-validation-source-v2/root-actual-own200-and-auxiliary215-adoption-v1.json",
+    "sha256": "9c616cfdfd9ffbd13b055de18b21422437722cdb57d26082f7ef8241910e2072"
+  },
+  "auxiliary215_existing_refinement_evidence": {
+    "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR4-direct10-own200-validation-source-v2/validation-output-v1/auxiliary215-evidence.json",
+    "sha256": "dbae1a982635d6b1b048d83c5dcdda1b8826f65785afd84890135d300e68de98"
+  },
+  "definitions": {
+    "K5LogMoment": "3*Integral[t^k*BesselK(0,t)^5*(log(t)+EulerGamma-log(2)),{t,0,infinity}], k=1,3",
+    "K5Moment": "Integral[t^k*BesselK(0,t)^5,{t,0,infinity}], k=1,3"
+  },
+  "empirical_numerical_evidence_not_interval_proof": true,
+  "existing_basis_only_stage200_adoption": {
+    "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR4-K5-first-jet-stage200-pilot-source-v1/root-actual-basis-only-stage200-adoption-v1.json",
+    "sha256": "e831c3be67ba1cd29cd116bb0684a292ce6598bdc7b7fb145b3246c498783b2c"
+  },
+  "independent_integral_definitions_not_target_coefficient_renaming": true,
+  "integration_interval": "0<t<infinity",
+  "integration_variable": "t",
+  "k_values": [
+    1,
+    3
+  ],
+  "logarithmic_factor": "log(t)+EulerGamma-log(2)",
+  "logarithmic_moment_factor": 3,
+  "modified_Bessel_function": "K_0(t)",
+  "native_atoms": {
+    "B1": "vakint::K5Moment(1)",
+    "B3": "vakint::K5Moment(3)",
+    "J1": "vakint::K5LogMoment(1)",
+    "J3": "vakint::K5LogMoment(3)"
+  },
+  "no_generic_Vakint_evaluator_or_principal_numerical_stage_installation": true,
+  "no_period_independence_or_minimality_theorem": true,
+  "normalization_of_master_coefficients": "FMFTandMATAD, d=4-2epsilon, unit mass squared, Minkowski denominators",
+  "schema": "vacuum-masters.PR4-K5-independent-period-definitions.v1"
+}

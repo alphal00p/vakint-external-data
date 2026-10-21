@@ -86,7 +86,9 @@ Numerical precision upgrades are selected by
 supplements and producer update. Its loop slices authenticate both preserved
 previous payloads and replacement files, and verify that every unselected
 epsilon row stays unchanged. They cannot introduce orders or replace exact
-formulas. The coefficient records retain the validated digit limit separately
+formulas. An accepted exact-symbolic update can coexist with a numerical
+precision upgrade only when its complete symbolic payload matches the preserved
+upstream source. The coefficient records retain the validated digit limit separately
 from stored digits, with a decimal `absolute_error` and `error_quality`.
 
 The Bessel upgrade supplies PR4 and PR4d at epsilon orders zero and one with
@@ -118,6 +120,16 @@ the correction explicitly, and validation checks the actual required point sets.
 `validate_anchor_one.py` in the addendum replays this check without Mathematica;
 run it in a copied development directory because it rewrites its local receipt.
 The original portable replay alone does not include this additive check.
+
+Snapshot-local finite primitive periods are recorded in an optional
+`constants.json` per loop pack, authenticated both by `constant_bindings` and
+the ordinary file inventory. Every record retains its exact definition,
+validated precision, outward absolute error, and provenance. The source receipt
+in `provenance/finite-constant-bindings.json` verifies that runtime records are
+an exact schema projection of the accepted direct-moment payload. The sealed
+high-guard integration and direct-moment export bundles under `validation/`
+make those bounds independently replayable. Their larger internal precision
+does not promote any public coefficient or primitive cap above 20,000 digits.
 
 == Graph conventions and coverage
 

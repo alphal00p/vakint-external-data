@@ -1,0 +1,10 @@
+{
+  "schema": "vakint.bessel-high-guard.oracle-source.v1",
+  "requested_oracle_digits": 20400,
+  "created_unix": 1792598494.7542737,
+  "source_sha256": {
+    "mathematica_seeds.wl": "776db050a2da4d82f2a8af506869d945b513396cef3e19956dde2a4a0cb0f7e5",
+    "wolfram_one_thread.py": "6551142d15c38061fd17f7d97d67d8386f63fe7cb95989a912260c13f2e9443b",
+    "wolfram_one_thread.wl": "12b870d2278f8c417917a05dff3e7aa18fd888a0ac73633f962b300d24504318"
+  }
+}
