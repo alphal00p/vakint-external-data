@@ -1,0 +1,128 @@
+{
+  "schema": "vakint.external-data.producer-update-history.v1",
+  "previous_source_version": "v0.1.1",
+  "previous_source_commit": "88ed8448c0d82f0019de11ddc7d96e392cbec591",
+  "files": [
+    {
+      "previous_path": "1L/manifest.json",
+      "preserved_path": "provenance/producer-update-v0.1.1-PR4-v21-20261021-v1-before/1L/manifest.json",
+      "sha256": "795b05292ad97b60cc203ea1ae3de2fa58bfbff22c4dd87ed812d0a81ecd8232"
+    },
+    {
+      "previous_path": "1L/producer-update.json",
+      "preserved_path": "provenance/producer-update-v0.1.1-PR4-v21-20261021-v1-before/1L/producer-update.json",
+      "sha256": "d9820709b1eb361b1cca8de2aaebf16eaf36de378605d663a31d28808ab3efa1"
+    },
+    {
+      "previous_path": "2L/manifest.json",
+      "preserved_path": "provenance/producer-update-v0.1.1-PR4-v21-20261021-v1-before/2L/manifest.json",
+      "sha256": "dc4bfd7d589363961ebcbfc2d773bd6e184f0a10327a5bf7906f96505d186602"
+    },
+    {
+      "previous_path": "2L/producer-update.json",
+      "preserved_path": "provenance/producer-update-v0.1.1-PR4-v21-20261021-v1-before/2L/producer-update.json",
+      "sha256": "4ad2e6411dd0e6d981f520e61af43597681f56da2c794ecadce327b42690b384"
+    },
+    {
+      "previous_path": "3L/manifest.json",
+      "preserved_path": "provenance/producer-update-v0.1.1-PR4-v21-20261021-v1-before/3L/manifest.json",
+      "sha256": "f780dc8e30872f6860b5c07aa296528b0685c2583366bb63414782c493c82987"
+    },
+    {
+      "previous_path": "3L/producer-update.json",
+      "preserved_path": "provenance/producer-update-v0.1.1-PR4-v21-20261021-v1-before/3L/producer-update.json",
+      "sha256": "0e8e589f8c76c9e856177b175dac7d61ae282ace6bc3c9f9cebbf3018bd0a95c"
+    },
+    {
+      "previous_path": "4L/manifest.json",
+      "preserved_path": "provenance/producer-update-v0.1.1-PR4-v21-20261021-v1-before/4L/manifest.json",
+      "sha256": "9c023ab3fa5cd876a729585f931e51d7b1a6fe2fb4123e97d59f3e9cc6605bbf"
+    },
+    {
+      "previous_path": "4L/masters/P11/symbolic.json",
+      "preserved_path": "provenance/producer-update-v0.1.1-PR4-v21-20261021-v1-before/4L/masters/P11/symbolic.json",
+      "sha256": "265032de05dd74cbedb47e3cdf189272e85f51ccd032226d41b2e5e454e56bb1"
+    },
+    {
+      "previous_path": "4L/masters/P24/symbolic.json",
+      "preserved_path": "provenance/producer-update-v0.1.1-PR4-v21-20261021-v1-before/4L/masters/P24/symbolic.json",
+      "sha256": "3680f3cf24970253fadcec964e55a225655797dc4c5990fc01b98cddf0ac7207"
+    },
+    {
+      "previous_path": "4L/masters/P28/symbolic.json",
+      "preserved_path": "provenance/producer-update-v0.1.1-PR4-v21-20261021-v1-before/4L/masters/P28/symbolic.json",
+      "sha256": "f63ac1fbe845a9206f28179c0d68efef0c2af7fe427876d45d1205aff86f5817"
+    },
+    {
+      "previous_path": "4L/masters/P29/symbolic.json",
+      "preserved_path": "provenance/producer-update-v0.1.1-PR4-v21-20261021-v1-before/4L/masters/P29/symbolic.json",
+      "sha256": "265032de05dd74cbedb47e3cdf189272e85f51ccd032226d41b2e5e454e56bb1"
+    },
+    {
+      "previous_path": "4L/masters/P41/symbolic.json",
+      "preserved_path": "provenance/producer-update-v0.1.1-PR4-v21-20261021-v1-before/4L/masters/P41/symbolic.json",
+      "sha256": "3680f3cf24970253fadcec964e55a225655797dc4c5990fc01b98cddf0ac7207"
+    },
+    {
+      "previous_path": "4L/masters/P44/symbolic.json",
+      "preserved_path": "provenance/producer-update-v0.1.1-PR4-v21-20261021-v1-before/4L/masters/P44/symbolic.json",
+      "sha256": "f63ac1fbe845a9206f28179c0d68efef0c2af7fe427876d45d1205aff86f5817"
+    },
+    {
+      "previous_path": "4L/masters/P46/symbolic.json",
+      "preserved_path": "provenance/producer-update-v0.1.1-PR4-v21-20261021-v1-before/4L/masters/P46/symbolic.json",
+      "sha256": "265032de05dd74cbedb47e3cdf189272e85f51ccd032226d41b2e5e454e56bb1"
+    },
+    {
+      "previous_path": "4L/masters/P59/symbolic.json",
+      "preserved_path": "provenance/producer-update-v0.1.1-PR4-v21-20261021-v1-before/4L/masters/P59/symbolic.json",
+      "sha256": "3680f3cf24970253fadcec964e55a225655797dc4c5990fc01b98cddf0ac7207"
+    },
+    {
+      "previous_path": "4L/masters/P6/symbolic.json",
+      "preserved_path": "provenance/producer-update-v0.1.1-PR4-v21-20261021-v1-before/4L/masters/P6/symbolic.json",
+      "sha256": "3680f3cf24970253fadcec964e55a225655797dc4c5990fc01b98cddf0ac7207"
+    },
+    {
+      "previous_path": "4L/masters/P66/symbolic.json",
+      "preserved_path": "provenance/producer-update-v0.1.1-PR4-v21-20261021-v1-before/4L/masters/P66/symbolic.json",
+      "sha256": "f63ac1fbe845a9206f28179c0d68efef0c2af7fe427876d45d1205aff86f5817"
+    },
+    {
+      "previous_path": "4L/masters/P68/symbolic.json",
+      "preserved_path": "provenance/producer-update-v0.1.1-PR4-v21-20261021-v1-before/4L/masters/P68/symbolic.json",
+      "sha256": "265032de05dd74cbedb47e3cdf189272e85f51ccd032226d41b2e5e454e56bb1"
+    },
+    {
+      "previous_path": "4L/masters/P9/symbolic.json",
+      "preserved_path": "provenance/producer-update-v0.1.1-PR4-v21-20261021-v1-before/4L/masters/P9/symbolic.json",
+      "sha256": "f63ac1fbe845a9206f28179c0d68efef0c2af7fe427876d45d1205aff86f5817"
+    },
+    {
+      "previous_path": "4L/producer-update.json",
+      "preserved_path": "provenance/producer-update-v0.1.1-PR4-v21-20261021-v1-before/4L/producer-update.json",
+      "sha256": "8a726dea0ebcfe638eba640845cb2bf7d010e07b13881a54343be4ecfbaae70e"
+    },
+    {
+      "previous_path": "README.md",
+      "preserved_path": "provenance/producer-update-v0.1.1-PR4-v21-20261021-v1-before/README.md",
+      "sha256": "5fd6318dba08cee64a0667969785d545ccd61f1f2f9eee0cabeca26a0a934928"
+    },
+    {
+      "previous_path": "manifest.json",
+      "preserved_path": "provenance/producer-update-v0.1.1-PR4-v21-20261021-v1-before/manifest.json",
+      "sha256": "f5dd3405948710234cd101cda84cb46aaccff1c4781ac85adbdc4ddee3174864"
+    },
+    {
+      "previous_path": "provenance/producer-update.json",
+      "preserved_path": "provenance/producer-update-v0.1.1-PR4-v21-20261021-v1-before/provenance/producer-update.json",
+      "sha256": "71883b23d86aef06bd08724b304b2234fa169ea45ec276e4180361b134979308"
+    },
+    {
+      "previous_path": "validation/manifest.json",
+      "preserved_path": "provenance/producer-update-v0.1.1-PR4-v21-20261021-v1-before/validation/manifest.json",
+      "sha256": "43f3a299877a19a52f30bf4bef6b81fc8f70a8388d2ced1d7216e23e5dc8ecd8"
+    }
+  ],
+  "no_original_or_supplement_provenance_rewritten": true
+}

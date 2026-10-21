@@ -6,20 +6,41 @@
       "sha256": "f2992d7479b2a48c088c4e380f70c9fbf542a322bc20d32f5838af7e36508ccc"
     },
     "symbolic_coverage": {
-      "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/coverage-v20.json",
-      "sha256": "158503bb03e6fa1eb59149d347a446eb2572320c8fdbf01c102947146b4a3f7d"
+      "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/coverage-v21.json",
+      "sha256": "6c6f242c565c44bc199794f0359f9bd4e8dea6258472dcdef552a8bfb610c8dc"
     },
     "symbolic_overlays": {
-      "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/current-symbolic-overlays-v4.json",
-      "sha256": "dedc1b98d237211597c32ef21ebdfa1323d1afb6946bf0e179a2d3c520dc1272"
+      "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/current-symbolic-overlays-v5.json",
+      "sha256": "1c02b431f51d3168e1532d44f2e92d122c6f1250e6e453a3836d7ea292479b1b"
     },
     "source_intake": {
-      "path": "/shared/codex-2/vacuum_masters/MASTERS/logs/external-data-results-release-20261021-v2/intake.json",
-      "sha256": "6c03a325c0ff208761bc2b45899044e27424aefe4dbd0663396f01372ca690fa"
+      "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/external-data-PR4-v21-repository-update-source-v1/intake.json",
+      "sha256": "66d7687085aafbe4b39eb6202b685353354d3e94473ac392ec35858d3d2a9523"
     },
     "release_policy": "repository_only_no_tag_assets_or_latest_update",
     "retained_supplemented_coefficients": 49,
-    "numerical_accuracy_evidence_not_interval_proof": true
+    "numerical_accuracy_evidence_not_interval_proof": true,
+    "previous_producer_update": {
+      "path": "provenance/producer-update-v0.1.1-PR4-v21-20261021-v1-before/provenance/producer-update.json",
+      "sha256": "71883b23d86aef06bd08724b304b2234fa169ea45ec276e4180361b134979308"
+    },
+    "actual_PR4_publication": {
+      "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR4-direct10-acceptance-publication-source-v1/publication-output-v1/publication.json",
+      "sha256": "611ada0bb6de92033e47eaeac543ef4ac37c022660fcf633fe05d842b96ee100"
+    },
+    "actual_PR4_publication_audit": {
+      "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR4-direct10-acceptance-publication-source-v1/peer-independent-actual-principal-publication-file-audit-pr4-v1.json",
+      "sha256": "d184addb0d6e0f8ee21e8b2547e55a9d5f38fcfdb08ac61f8cb7c40a43c734d2"
+    },
+    "Root_actual_PR4_publication_adoption": {
+      "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR4-direct10-acceptance-publication-source-v1/root-actual-principal-publication-adoption-v1.json",
+      "sha256": "a15b2d9aa7561d56c8c9f444bfb96385cb5a4025e709f82a66476425a7e2cd45"
+    },
+    "pending_native_period_evaluator": [
+      "vakint::K5Moment(k)",
+      "vakint::K5LogMoment(k)"
+    ],
+    "new_PR4_exact_cells": 24
   },
   "masters": {
     "L2_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1_p0_p1_p1": {
