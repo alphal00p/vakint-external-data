@@ -1,0 +1,225 @@
+{
+  "schema": "vakint.external-data.producer-update.v1",
+  "provenance": {
+    "numerical_coverage": {
+      "path": "/shared/codex-2/vacuum_masters/MASTERS/coverage-stages-v17.json",
+      "sha256": "f2992d7479b2a48c088c4e380f70c9fbf542a322bc20d32f5838af7e36508ccc"
+    },
+    "symbolic_coverage": {
+      "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/coverage-v20.json",
+      "sha256": "158503bb03e6fa1eb59149d347a446eb2572320c8fdbf01c102947146b4a3f7d"
+    },
+    "symbolic_overlays": {
+      "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/current-symbolic-overlays-v4.json",
+      "sha256": "dedc1b98d237211597c32ef21ebdfa1323d1afb6946bf0e179a2d3c520dc1272"
+    },
+    "source_intake": {
+      "path": "/shared/codex-2/vacuum_masters/MASTERS/logs/external-data-results-release-20261021-v2/intake.json",
+      "sha256": "6c03a325c0ff208761bc2b45899044e27424aefe4dbd0663396f01372ca690fa"
+    },
+    "release_policy": "repository_only_no_tag_assets_or_latest_update",
+    "retained_supplemented_coefficients": 49,
+    "numerical_accuracy_evidence_not_interval_proof": true
+  },
+  "masters": {
+    "L2_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1_p0_p1_p1": {
+      "coefficients": [
+        {
+          "epsilon_power": -2,
+          "numerical": true,
+          "significant_digits": 20000,
+          "symbolic": true
+        },
+        {
+          "epsilon_power": -1,
+          "numerical": true,
+          "significant_digits": 20000,
+          "symbolic": true
+        },
+        {
+          "epsilon_power": 0,
+          "numerical": true,
+          "significant_digits": 20000,
+          "symbolic": true
+        },
+        {
+          "epsilon_power": 1,
+          "numerical": true,
+          "significant_digits": 20000,
+          "symbolic": true
+        },
+        {
+          "epsilon_power": 2,
+          "numerical": true,
+          "significant_digits": 20000,
+          "symbolic": true
+        },
+        {
+          "epsilon_power": 3,
+          "numerical": true,
+          "significant_digits": 20000,
+          "symbolic": true
+        }
+      ],
+      "files": {
+        "numerical.json": {
+          "path": "masters/P1/numerical.json",
+          "sha256": "8529e9e8135248da69f542acd65026b3fe5cf3bf33bcfab33faffd57e9749c0a"
+        },
+        "symbolic.json": {
+          "path": "masters/P1/symbolic.json",
+          "sha256": "8ccd6def581567d7a52516ceecc556883b8bbaae0937914af06406fe89e46da8"
+        },
+        "graph.dot": {
+          "path": "masters/P1/graph.dot",
+          "sha256": "977c5622a208cce9269d665165911d1a6ed3fe7cedc47c8d8fb05dbdde46ec5b"
+        }
+      },
+      "source_numerical": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/2L/L2_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1_p0_p1_p1/L2_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1_p0_p1_p1_computed.json",
+        "sha256": "8529e9e8135248da69f542acd65026b3fe5cf3bf33bcfab33faffd57e9749c0a"
+      },
+      "source_symbolic": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/2L/L2_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1_p0_p1_p1/L2_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1_p0_p1_p1_symbolic.json",
+        "sha256": "8ccd6def581567d7a52516ceecc556883b8bbaae0937914af06406fe89e46da8"
+      },
+      "source_stage_digits": 20000,
+      "source_validation": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/2L/L2_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1_p0_p1_p1/artifacts/L2_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1_p0_p1_p1_validation.json",
+        "sha256": "daac179733afde2eca04c11ab41ef40dff0a2c08a4171d16bd0a43a80d8bc7c6"
+      },
+      "symbolic_acceptance": {
+        "-1": {
+          "path": "/shared/codex-2/vacuum_masters/MASTERS/2L/L2_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1_p0_p1_p1/artifacts/pslq/factorized-two-loop-warmup-v1/acceptance.json",
+          "sha256": "fcbcf7444481525d4f720dead804774fb210784ef75c8626f2310fa025848a11"
+        },
+        "-2": {
+          "path": "/shared/codex-2/vacuum_masters/MASTERS/2L/L2_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1_p0_p1_p1/artifacts/pslq/factorized-two-loop-warmup-v1/acceptance.json",
+          "sha256": "fcbcf7444481525d4f720dead804774fb210784ef75c8626f2310fa025848a11"
+        },
+        "0": {
+          "path": "/shared/codex-2/vacuum_masters/MASTERS/2L/L2_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1_p0_p1_p1/artifacts/pslq/factorized-two-loop-warmup-v1/acceptance.json",
+          "sha256": "fcbcf7444481525d4f720dead804774fb210784ef75c8626f2310fa025848a11"
+        },
+        "1": {
+          "path": "/shared/codex-2/vacuum_masters/MASTERS/2L/L2_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1_p0_p1_p1/artifacts/pslq/factorized-two-loop-warmup-v1/acceptance.json",
+          "sha256": "fcbcf7444481525d4f720dead804774fb210784ef75c8626f2310fa025848a11"
+        },
+        "2": {
+          "path": "/shared/codex-2/vacuum_masters/MASTERS/2L/L2_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1_p0_p1_p1/artifacts/pslq/factorized-two-loop-warmup-v1/acceptance.json",
+          "sha256": "fcbcf7444481525d4f720dead804774fb210784ef75c8626f2310fa025848a11"
+        },
+        "3": {
+          "path": "/shared/codex-2/vacuum_masters/MASTERS/2L/L2_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1_p0_p1_p1/artifacts/pslq/factorized-two-loop-warmup-v1/acceptance.json",
+          "sha256": "fcbcf7444481525d4f720dead804774fb210784ef75c8626f2310fa025848a11"
+        }
+      },
+      "before_payload_archives": {},
+      "rowwise_window_merge_not_whole_file_equivalence": true,
+      "retained_extra_coefficients": []
+    },
+    "L2_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1_p1_p1_p1": {
+      "coefficients": [
+        {
+          "epsilon_power": -2,
+          "numerical": true,
+          "significant_digits": 20000,
+          "symbolic": true
+        },
+        {
+          "epsilon_power": -1,
+          "numerical": true,
+          "significant_digits": 20000,
+          "symbolic": true
+        },
+        {
+          "epsilon_power": 0,
+          "numerical": true,
+          "significant_digits": 20000,
+          "symbolic": true
+        },
+        {
+          "epsilon_power": 1,
+          "numerical": true,
+          "significant_digits": 20000,
+          "symbolic": true
+        },
+        {
+          "epsilon_power": 2,
+          "numerical": true,
+          "significant_digits": 20000,
+          "symbolic": true
+        },
+        {
+          "epsilon_power": 3,
+          "numerical": true,
+          "significant_digits": 20000,
+          "symbolic": true
+        }
+      ],
+      "files": {
+        "numerical.json": {
+          "path": "masters/P2/numerical.json",
+          "sha256": "bff9cfe1d0b73ba99b152ac7062651914fb09b62965ef9eb108e6e60893c9823"
+        },
+        "symbolic.json": {
+          "path": "masters/P2/symbolic.json",
+          "sha256": "141b9f78676e63b4aeaf6bf5b09bdffc66109f5fd4f64cb875069924a627f0cd"
+        },
+        "graph.dot": {
+          "path": "masters/P2/graph.dot",
+          "sha256": "fb5c18447c9c6778a76131876ccfacc7ffc06f7708b230b2709e28d062f51ce2"
+        }
+      },
+      "source_numerical": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/2L/L2_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1_p1_p1_p1/L2_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1_p1_p1_p1_computed.json",
+        "sha256": "eecc5b9008b18e062203ab9596cceb594ce16b792a0b18ee23e550043f928b58"
+      },
+      "source_symbolic": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/2L/L2_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1_p1_p1_p1/L2_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1_p1_p1_p1_symbolic.json",
+        "sha256": "7a90f708566ce0174eafc4585ef5d77ad404d962f8b3f8a63ea8b929043d4221"
+      },
+      "source_stage_digits": 20000,
+      "source_validation": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/2L/L2_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1_p1_p1_p1/artifacts/L2_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1_p1_p1_p1_validation.json",
+        "sha256": "c398560f382f33c4cf2036efe61946dc34e5231fdd42e53920747212d597314b"
+      },
+      "symbolic_acceptance": {
+        "-1": {
+          "path": "/shared/codex-2/vacuum_masters/MASTERS/2L/L2_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1_p1_p1_p1/artifacts/pslq/irreducible-two-loop-warmup-v1/acceptance.json",
+          "sha256": "144ed0d46ce2d7cbc97eb2f14d885e60b308ae9d0d306c02f2449b9915aba77a"
+        },
+        "-2": {
+          "path": "/shared/codex-2/vacuum_masters/MASTERS/2L/L2_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1_p1_p1_p1/artifacts/pslq/irreducible-two-loop-warmup-v1/acceptance.json",
+          "sha256": "144ed0d46ce2d7cbc97eb2f14d885e60b308ae9d0d306c02f2449b9915aba77a"
+        },
+        "0": {
+          "path": "/shared/codex-2/vacuum_masters/MASTERS/2L/L2_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1_p1_p1_p1/artifacts/pslq/irreducible-two-loop-warmup-v1/acceptance.json",
+          "sha256": "144ed0d46ce2d7cbc97eb2f14d885e60b308ae9d0d306c02f2449b9915aba77a"
+        },
+        "1": {
+          "path": "/shared/codex-2/vacuum_masters/MASTERS/2L/L2_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1_p1_p1_p1/artifacts/pslq/irreducible-two-loop-warmup-v1/acceptance.json",
+          "sha256": "144ed0d46ce2d7cbc97eb2f14d885e60b308ae9d0d306c02f2449b9915aba77a"
+        },
+        "2": {
+          "path": "/shared/codex-2/vacuum_masters/MASTERS/2L/L2_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1_p1_p1_p1/artifacts/pslq/irreducible-two-loop-warmup-v1/acceptance.json",
+          "sha256": "144ed0d46ce2d7cbc97eb2f14d885e60b308ae9d0d306c02f2449b9915aba77a"
+        },
+        "3": {
+          "path": "/shared/codex-2/vacuum_masters/MASTERS/2L/L2_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1_p1_p1_p1/artifacts/pslq/irreducible-two-loop-warmup-v1/acceptance.json",
+          "sha256": "144ed0d46ce2d7cbc97eb2f14d885e60b308ae9d0d306c02f2449b9915aba77a"
+        }
+      },
+      "before_payload_archives": {},
+      "rowwise_window_merge_not_whole_file_equivalence": true,
+      "retained_extra_coefficients": [
+        {
+          "epsilon_power": 4,
+          "numerical": true,
+          "significant_digits": 20000,
+          "symbolic": true
+        }
+      ]
+    }
+  }
+}

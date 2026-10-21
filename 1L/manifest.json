@@ -1,6 +1,6 @@
 {
   "schema": "vakint.external-data.loop.v1",
-  "version": "v0.1.0",
+  "version": "v0.1.1",
   "loop_count": 1,
   "dimension": "4-2*epsilon",
   "normalization": "FMFTandMATAD",
@@ -143,6 +143,7 @@
         3,
         4
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -1,
@@ -253,6 +254,11 @@
     "model.json": {
       "sha256": "8f85b6684e358122cdd568f9ea0624e3e88db9f6e1e08987d46318a8c126ecc6",
       "bytes": 3761
+    },
+    "producer-update.json": {
+      "sha256": "d9820709b1eb361b1cca8de2aaebf16eaf36de378605d663a31d28808ab3efa1",
+      "bytes": 5667
     }
-  }
+  },
+  "producer_update": "producer-update.json"
 }

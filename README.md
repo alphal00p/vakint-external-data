@@ -26,6 +26,16 @@ Their nominal epsilon ranges are provenance, not available numerical data.
 Prepared 1L–4L caches complete a declared finite workload; this does not certify
 arbitrary-index IBP coverage. See `coverage.json` and `cache.json` in each pack.
 
+The unreleased `v0.1.1` source update contains 739 numerical coefficient rows:
+651 have exact symbolic expressions and 88 retain numerical fallbacks. These
+counts include 49 additional orders preserved from the previous export.
+The 1L and 2L masters have 20,000 validated digits; all 3L and 4L masters have
+200, with the three-loop D6 master at 2,000. Per-coefficient manifest entries
+record the actual precision, including the separately validated extra orders.
+Some exact expressions require the corresponding Vakint period evaluator;
+symbolic availability alone does not imply unlimited numerical precision.
+No new release or change to `data-latest` accompanies this source update.
+
 Run `python3 tools/data.py validate` to verify payloads, coefficient availability,
 cache completion receipts and migration hashes. Release and authorship
 instructions are in [AUTHORING.typ](AUTHORING.typ).

@@ -1,6 +1,6 @@
 {
   "schema": "vakint.external-data.loop.v1",
-  "version": "v0.1.0",
+  "version": "v0.1.1",
   "loop_count": 4,
   "dimension": "4-2*epsilon",
   "normalization": "FMFTandMATAD",
@@ -1126,6 +1126,7 @@
         1,
         2
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
@@ -1366,6 +1367,7 @@
         2,
         3
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
@@ -1610,6 +1612,7 @@
         1,
         2
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
@@ -1858,6 +1861,7 @@
         1,
         2
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
@@ -1929,12 +1933,14 @@
       "name": "P5",
       "directory": "masters/P5",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
         -2,
-        -1
+        -1,
+        0,
+        1
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -2076,11 +2082,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P5/numerical.json",
-          "sha256": "f24081c2870b3dd1f0fe18b118bb709ee9d534d4c53579218704c36f7ddafe19"
+          "sha256": "7e8237e6ca07a0b377eabc358041e2bb8201a755a960b35b46efee07cf8ceb96"
         },
         "symbolic.json": {
           "path": "masters/P5/symbolic.json",
-          "sha256": "6bfbb265e4b6e2fa5570d696370218260ba232008ff0f62ad91358d7ad53e45b"
+          "sha256": "d25c90befa6c823f963030fa6a71ca53e216d0dd46150d20cf1c990ca7192aac"
         },
         "graph.dot": {
           "path": "masters/P5/graph.dot",
@@ -2102,42 +2108,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -2166,7 +2173,7 @@
       "name": "P6",
       "directory": "masters/P6",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
@@ -2303,11 +2310,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P6/numerical.json",
-          "sha256": "156fab86a6788128d9a0bb4137de283f4340a01b50fa3196f346b4309f4c4416"
+          "sha256": "8e8c7836dba2d45e78c3212204ac61aa84a87323f4decd2363e4c7264023b15f"
         },
         "symbolic.json": {
           "path": "masters/P6/symbolic.json",
-          "sha256": "30b440c609154baaaeabaac01320b0af44fe4e9adccb6887074ab3f850e442d8"
+          "sha256": "3680f3cf24970253fadcec964e55a225655797dc4c5990fc01b98cddf0ac7207"
         },
         "graph.dot": {
           "path": "masters/P6/graph.dot",
@@ -2329,42 +2336,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -2393,12 +2401,13 @@
       "name": "P7",
       "directory": "masters/P7",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
         -2,
-        -1
+        -1,
+        0
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -2540,11 +2549,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P7/numerical.json",
-          "sha256": "760baefe07f72349c6aa6774bd8229f354ade7048701a19941e70de537bb3ccb"
+          "sha256": "f4c86bbac40dd8e255670ea10938dc6709b130a0a61e27f576c656b6042f3f5b"
         },
         "symbolic.json": {
           "path": "masters/P7/symbolic.json",
-          "sha256": "c806a4da1c1916c7b0345ed37b24ec066784ad2915bc972517af3a05b98a9002"
+          "sha256": "66abb96f15ac1095561dcc5fa3d441e58c1e8ec2313d0f97b30b706ff0c30378"
         },
         "graph.dot": {
           "path": "masters/P7/graph.dot",
@@ -2566,42 +2575,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -2630,7 +2640,7 @@
       "name": "P8",
       "directory": "masters/P8",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
@@ -2787,11 +2797,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P8/numerical.json",
-          "sha256": "2762261b3a5a19ee200e51a4327f30933fd0ac54a4dfc831ee9fd8bc237646ef"
+          "sha256": "a3cee580f24889b7a617c6da12bf14a7238584a17314aef8cf4f4867a0dbedae"
         },
         "symbolic.json": {
           "path": "masters/P8/symbolic.json",
-          "sha256": "0bcff7fce77a2c44b274aa1911e1699e89ba3f4d5f2d6ec28ee6982756a125ab"
+          "sha256": "03ee573b5237b8cc35f632bbac15dab5717d605b8cc004a9edd0ede9037db8d8"
         },
         "graph.dot": {
           "path": "masters/P8/graph.dot",
@@ -2813,42 +2823,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -2877,7 +2888,7 @@
       "name": "P9",
       "directory": "masters/P9",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
@@ -3014,11 +3025,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P9/numerical.json",
-          "sha256": "21491c492dd20ade8751d9847bc0d7710dc8fc2744e5c9dd19cafd7c2322c3fe"
+          "sha256": "b63da98aa1027f4dcc65c6da9bc2a897e7e9806accebb42db9f7c5d93d1890fc"
         },
         "symbolic.json": {
           "path": "masters/P9/symbolic.json",
-          "sha256": "84d2338edb42601bdf70ca64a1790daa29dfb803c25d4c110398f9565e816521"
+          "sha256": "f63ac1fbe845a9206f28179c0d68efef0c2af7fe427876d45d1205aff86f5817"
         },
         "graph.dot": {
           "path": "masters/P9/graph.dot",
@@ -3040,42 +3051,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -3104,7 +3116,7 @@
       "name": "P10",
       "directory": "masters/P10",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
@@ -3261,11 +3273,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P10/numerical.json",
-          "sha256": "fcced3d2a92fb049af70e346e098257b66d76f99558d29c4a945bdcf403cbcbf"
+          "sha256": "fe2464d088622409213b8f545eb1a0be13303df967bde5e2287428b0c313ea13"
         },
         "symbolic.json": {
           "path": "masters/P10/symbolic.json",
-          "sha256": "5a830b578b5a6ec09208cd476703a34ddea1416b9c0bc78f2966fad66077dcf5"
+          "sha256": "a687bb06d3681ed690f31848deab2d494972f8b094c1be52f5a8d1166e7bca7a"
         },
         "graph.dot": {
           "path": "masters/P10/graph.dot",
@@ -3287,42 +3299,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -3351,7 +3364,7 @@
       "name": "P11",
       "directory": "masters/P11",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
@@ -3488,11 +3501,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P11/numerical.json",
-          "sha256": "cc90811a0e411717784fe89b430d4cd9592c25cfee90bf7508dffef9ff957b84"
+          "sha256": "05ab196c88cfc7ef52f3cf801d75723acdf844cdf4b9d61889058fee008cdefc"
         },
         "symbolic.json": {
           "path": "masters/P11/symbolic.json",
-          "sha256": "8bbdcd65fb8833da80837b67bc48d9d083cb0a02d14928146c56523d13c8e7a7"
+          "sha256": "265032de05dd74cbedb47e3cdf189272e85f51ccd032226d41b2e5e454e56bb1"
         },
         "graph.dot": {
           "path": "masters/P11/graph.dot",
@@ -3514,42 +3527,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -3755,6 +3769,7 @@
         1,
         2
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
@@ -3826,7 +3841,7 @@
       "name": "P13",
       "directory": "masters/P13",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
@@ -3983,11 +3998,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P13/numerical.json",
-          "sha256": "3d7d03e2391e19882a27834b07f037762be93eb8de6c83723247855839487610"
+          "sha256": "c6728adc83e5acdcb60df90912ed5abad2b676ce009707b2729ba26f443cabef"
         },
         "symbolic.json": {
           "path": "masters/P13/symbolic.json",
-          "sha256": "31fa6dab3bf116d0b86708814874df4121596c5fdc89def3ea8957b160436189"
+          "sha256": "74aeaaa776f4f9e9ca76925a15cda53adc63820f1ee673c5b905d0f842977006"
         },
         "graph.dot": {
           "path": "masters/P13/graph.dot",
@@ -4009,42 +4024,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -4073,7 +4089,7 @@
       "name": "P14",
       "directory": "masters/P14",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
@@ -4240,11 +4256,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P14/numerical.json",
-          "sha256": "33c6ee29cfe4647a57254954e12ba60f285fe970310222e5fa11c5a947f257f5"
+          "sha256": "45b26c51b6d516daa558ec58b4118704d740cbeca57dc607d31ca2c43dea8594"
         },
         "symbolic.json": {
           "path": "masters/P14/symbolic.json",
-          "sha256": "d51ccdddb7d2673f66f6cb798374d09b2fbb25b20e15ce1bbbdc0694d68d7ac2"
+          "sha256": "15ee7fc2e6dc23ac7bfe8dbc204949cd34d02de7b136a252cf3c212f8a26a8aa"
         },
         "graph.dot": {
           "path": "masters/P14/graph.dot",
@@ -4266,42 +4282,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -4330,7 +4347,7 @@
       "name": "P15",
       "directory": "masters/P15",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
@@ -4487,11 +4504,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P15/numerical.json",
-          "sha256": "eb3908031912e6421886715ea53ba937549123251a5f4780dd8e8b8c52ed3d02"
+          "sha256": "42a71b1b5dc3de13fc74d4711fa05afa8d9bb1df29144b311e6852be448c35ad"
         },
         "symbolic.json": {
           "path": "masters/P15/symbolic.json",
-          "sha256": "dd7132c957cf9c3d20185c92889c1269ecf1f641307896901aeec9753ace06a0"
+          "sha256": "492a38fe26a0963a74007493def03f39c39200403f7a9f9e9c8214f6dd836872"
         },
         "graph.dot": {
           "path": "masters/P15/graph.dot",
@@ -4513,42 +4530,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -4577,7 +4595,7 @@
       "name": "P16",
       "directory": "masters/P16",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
@@ -4734,11 +4752,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P16/numerical.json",
-          "sha256": "958a87d90ce7fc1ca0302bc43d273e2139394619bf8e6737dad7aab6d814d68e"
+          "sha256": "2ec3f5b1937b4540ca4029435146a5278e0318fcdcbb200ee1f68650f1413d91"
         },
         "symbolic.json": {
           "path": "masters/P16/symbolic.json",
-          "sha256": "3737bd1b2cb3729f37d33689025b93dd76c1805fe976641a83adcbd7f8d3fc68"
+          "sha256": "28bfa5c4536a700b6c0b7b16f4be3eca833964c79e5f4829e3936a6ddc8478ee"
         },
         "graph.dot": {
           "path": "masters/P16/graph.dot",
@@ -4760,42 +4778,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -4824,7 +4843,7 @@
       "name": "P17",
       "directory": "masters/P17",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
@@ -4991,11 +5010,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P17/numerical.json",
-          "sha256": "c455c2de8c84f2e9cb5f55a2525517682e27664fe17e4c26d7ee68d78c1e7db9"
+          "sha256": "76af128590f58a49fafb3b9a63e02915a4bacfd56266ef1ecff04f0ac6298203"
         },
         "symbolic.json": {
           "path": "masters/P17/symbolic.json",
-          "sha256": "c455c2de8c84f2e9cb5f55a2525517682e27664fe17e4c26d7ee68d78c1e7db9"
+          "sha256": "76af128590f58a49fafb3b9a63e02915a4bacfd56266ef1ecff04f0ac6298203"
         },
         "graph.dot": {
           "path": "masters/P17/graph.dot",
@@ -5017,42 +5036,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -5081,7 +5101,7 @@
       "name": "P18",
       "directory": "masters/P18",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
@@ -5258,11 +5278,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P18/numerical.json",
-          "sha256": "37711d6f4e320ad06f86e5e3e4b251bba38cf0a36f1a520f8ef1180ee4190680"
+          "sha256": "151d80d08963be6a4aba3d7111160ed3c74bbe59024ddef263a0381cdaced2b2"
         },
         "symbolic.json": {
           "path": "masters/P18/symbolic.json",
-          "sha256": "37711d6f4e320ad06f86e5e3e4b251bba38cf0a36f1a520f8ef1180ee4190680"
+          "sha256": "151d80d08963be6a4aba3d7111160ed3c74bbe59024ddef263a0381cdaced2b2"
         },
         "graph.dot": {
           "path": "masters/P18/graph.dot",
@@ -5284,42 +5304,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -5348,12 +5369,13 @@
       "name": "P19",
       "directory": "masters/P19",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
         -2,
-        -1
+        -1,
+        0
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -5515,11 +5537,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P19/numerical.json",
-          "sha256": "dbf39e3f54d8913bf57448ea344f5acd77d6b2738da889127b27f8ecee45ba71"
+          "sha256": "12a75068d8eabd45a100a3014deb25d62687a016f407699962f097fa0d1b40c7"
         },
         "symbolic.json": {
           "path": "masters/P19/symbolic.json",
-          "sha256": "dbf39e3f54d8913bf57448ea344f5acd77d6b2738da889127b27f8ecee45ba71"
+          "sha256": "081ca4e2af336161f1c5fbb660159b76b48b1b65aea19b77fad4c4e42ef1f32b"
         },
         "graph.dot": {
           "path": "masters/P19/graph.dot",
@@ -5541,42 +5563,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -5762,6 +5785,7 @@
         1,
         2
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
@@ -6002,6 +6026,7 @@
         2,
         3
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
@@ -6246,6 +6271,7 @@
         1,
         2
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
@@ -6494,6 +6520,7 @@
         1,
         2
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
@@ -6565,7 +6592,7 @@
       "name": "P24",
       "directory": "masters/P24",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
@@ -6702,11 +6729,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P24/numerical.json",
-          "sha256": "156fab86a6788128d9a0bb4137de283f4340a01b50fa3196f346b4309f4c4416"
+          "sha256": "8e8c7836dba2d45e78c3212204ac61aa84a87323f4decd2363e4c7264023b15f"
         },
         "symbolic.json": {
           "path": "masters/P24/symbolic.json",
-          "sha256": "30b440c609154baaaeabaac01320b0af44fe4e9adccb6887074ab3f850e442d8"
+          "sha256": "3680f3cf24970253fadcec964e55a225655797dc4c5990fc01b98cddf0ac7207"
         },
         "graph.dot": {
           "path": "masters/P24/graph.dot",
@@ -6728,42 +6755,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -6792,12 +6820,13 @@
       "name": "P25",
       "directory": "masters/P25",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
         -2,
-        -1
+        -1,
+        0
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -6939,11 +6968,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P25/numerical.json",
-          "sha256": "760baefe07f72349c6aa6774bd8229f354ade7048701a19941e70de537bb3ccb"
+          "sha256": "f4c86bbac40dd8e255670ea10938dc6709b130a0a61e27f576c656b6042f3f5b"
         },
         "symbolic.json": {
           "path": "masters/P25/symbolic.json",
-          "sha256": "c806a4da1c1916c7b0345ed37b24ec066784ad2915bc972517af3a05b98a9002"
+          "sha256": "66abb96f15ac1095561dcc5fa3d441e58c1e8ec2313d0f97b30b706ff0c30378"
         },
         "graph.dot": {
           "path": "masters/P25/graph.dot",
@@ -6965,42 +6994,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -7206,6 +7236,7 @@
         1,
         2
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
@@ -7277,7 +7308,7 @@
       "name": "P27",
       "directory": "masters/P27",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
@@ -7434,11 +7465,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P27/numerical.json",
-          "sha256": "3d7d03e2391e19882a27834b07f037762be93eb8de6c83723247855839487610"
+          "sha256": "c6728adc83e5acdcb60df90912ed5abad2b676ce009707b2729ba26f443cabef"
         },
         "symbolic.json": {
           "path": "masters/P27/symbolic.json",
-          "sha256": "31fa6dab3bf116d0b86708814874df4121596c5fdc89def3ea8957b160436189"
+          "sha256": "74aeaaa776f4f9e9ca76925a15cda53adc63820f1ee673c5b905d0f842977006"
         },
         "graph.dot": {
           "path": "masters/P27/graph.dot",
@@ -7460,42 +7491,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -7524,7 +7556,7 @@
       "name": "P28",
       "directory": "masters/P28",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
@@ -7661,11 +7693,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P28/numerical.json",
-          "sha256": "21491c492dd20ade8751d9847bc0d7710dc8fc2744e5c9dd19cafd7c2322c3fe"
+          "sha256": "b63da98aa1027f4dcc65c6da9bc2a897e7e9806accebb42db9f7c5d93d1890fc"
         },
         "symbolic.json": {
           "path": "masters/P28/symbolic.json",
-          "sha256": "84d2338edb42601bdf70ca64a1790daa29dfb803c25d4c110398f9565e816521"
+          "sha256": "f63ac1fbe845a9206f28179c0d68efef0c2af7fe427876d45d1205aff86f5817"
         },
         "graph.dot": {
           "path": "masters/P28/graph.dot",
@@ -7687,42 +7719,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -7751,7 +7784,7 @@
       "name": "P29",
       "directory": "masters/P29",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
@@ -7888,11 +7921,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P29/numerical.json",
-          "sha256": "cc90811a0e411717784fe89b430d4cd9592c25cfee90bf7508dffef9ff957b84"
+          "sha256": "05ab196c88cfc7ef52f3cf801d75723acdf844cdf4b9d61889058fee008cdefc"
         },
         "symbolic.json": {
           "path": "masters/P29/symbolic.json",
-          "sha256": "8bbdcd65fb8833da80837b67bc48d9d083cb0a02d14928146c56523d13c8e7a7"
+          "sha256": "265032de05dd74cbedb47e3cdf189272e85f51ccd032226d41b2e5e454e56bb1"
         },
         "graph.dot": {
           "path": "masters/P29/graph.dot",
@@ -7914,42 +7947,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -7978,12 +8012,14 @@
       "name": "P30",
       "directory": "masters/P30",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
         -2,
-        -1
+        -1,
+        0,
+        1
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -8125,11 +8161,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P30/numerical.json",
-          "sha256": "f24081c2870b3dd1f0fe18b118bb709ee9d534d4c53579218704c36f7ddafe19"
+          "sha256": "7e8237e6ca07a0b377eabc358041e2bb8201a755a960b35b46efee07cf8ceb96"
         },
         "symbolic.json": {
           "path": "masters/P30/symbolic.json",
-          "sha256": "6bfbb265e4b6e2fa5570d696370218260ba232008ff0f62ad91358d7ad53e45b"
+          "sha256": "d25c90befa6c823f963030fa6a71ca53e216d0dd46150d20cf1c990ca7192aac"
         },
         "graph.dot": {
           "path": "masters/P30/graph.dot",
@@ -8151,42 +8187,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -8220,7 +8257,8 @@
         -4,
         -3,
         -2,
-        -1
+        -1,
+        0
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -8376,7 +8414,7 @@
         },
         "symbolic.json": {
           "path": "masters/P31/symbolic.json",
-          "sha256": "3ce9d44433e7caa464e715ef07a9aa519e516843df47de37e1bdc000b4cbafc1"
+          "sha256": "afd95b744211c5d1ebe3809de0fff3fb8186287900ea313d160abb87cc5fc109"
         },
         "graph.dot": {
           "path": "masters/P31/graph.dot",
@@ -8398,6 +8436,7 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
@@ -8425,7 +8464,7 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 200
         },
@@ -8462,7 +8501,7 @@
       "name": "P32",
       "directory": "masters/P32",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
@@ -8619,11 +8658,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P32/numerical.json",
-          "sha256": "2762261b3a5a19ee200e51a4327f30933fd0ac54a4dfc831ee9fd8bc237646ef"
+          "sha256": "a3cee580f24889b7a617c6da12bf14a7238584a17314aef8cf4f4867a0dbedae"
         },
         "symbolic.json": {
           "path": "masters/P32/symbolic.json",
-          "sha256": "0bcff7fce77a2c44b274aa1911e1699e89ba3f4d5f2d6ec28ee6982756a125ab"
+          "sha256": "03ee573b5237b8cc35f632bbac15dab5717d605b8cc004a9edd0ede9037db8d8"
         },
         "graph.dot": {
           "path": "masters/P32/graph.dot",
@@ -8645,42 +8684,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -8894,6 +8934,7 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
@@ -8958,7 +8999,7 @@
       "name": "P34",
       "directory": "masters/P34",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
@@ -9125,11 +9166,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P34/numerical.json",
-          "sha256": "38980531a1a44366c00a3dacb306c50e908385e560f93662b6b5ee4573848be2"
+          "sha256": "ca34f366847788ea7a2a53dd24c1f534789af4b8fdce3bae0781ac6a419e30a2"
         },
         "symbolic.json": {
           "path": "masters/P34/symbolic.json",
-          "sha256": "11b4f9aa8f65565556d8190c09e6356aa73c3ea4250d1388bcd5ad406ea5760d"
+          "sha256": "7ec252b5bbca4e56012d64b8fae5e924a74b0fe17c9c1e7f33decc135ad826d7"
         },
         "graph.dot": {
           "path": "masters/P34/graph.dot",
@@ -9151,42 +9192,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -9215,7 +9257,7 @@
       "name": "P35",
       "directory": "masters/P35",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
@@ -9372,11 +9414,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P35/numerical.json",
-          "sha256": "958a87d90ce7fc1ca0302bc43d273e2139394619bf8e6737dad7aab6d814d68e"
+          "sha256": "2ec3f5b1937b4540ca4029435146a5278e0318fcdcbb200ee1f68650f1413d91"
         },
         "symbolic.json": {
           "path": "masters/P35/symbolic.json",
-          "sha256": "3737bd1b2cb3729f37d33689025b93dd76c1805fe976641a83adcbd7f8d3fc68"
+          "sha256": "28bfa5c4536a700b6c0b7b16f4be3eca833964c79e5f4829e3936a6ddc8478ee"
         },
         "graph.dot": {
           "path": "masters/P35/graph.dot",
@@ -9398,42 +9440,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -9619,6 +9662,7 @@
         1,
         2
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
@@ -9859,6 +9903,7 @@
         2,
         3
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
@@ -10103,6 +10148,7 @@
         1,
         2
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
@@ -10351,6 +10397,7 @@
         1,
         2
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
@@ -10422,12 +10469,14 @@
       "name": "P40",
       "directory": "masters/P40",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
         -2,
-        -1
+        -1,
+        0,
+        1
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -10569,11 +10618,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P40/numerical.json",
-          "sha256": "f24081c2870b3dd1f0fe18b118bb709ee9d534d4c53579218704c36f7ddafe19"
+          "sha256": "7e8237e6ca07a0b377eabc358041e2bb8201a755a960b35b46efee07cf8ceb96"
         },
         "symbolic.json": {
           "path": "masters/P40/symbolic.json",
-          "sha256": "6bfbb265e4b6e2fa5570d696370218260ba232008ff0f62ad91358d7ad53e45b"
+          "sha256": "d25c90befa6c823f963030fa6a71ca53e216d0dd46150d20cf1c990ca7192aac"
         },
         "graph.dot": {
           "path": "masters/P40/graph.dot",
@@ -10595,42 +10644,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -10659,7 +10709,7 @@
       "name": "P41",
       "directory": "masters/P41",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
@@ -10796,11 +10846,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P41/numerical.json",
-          "sha256": "156fab86a6788128d9a0bb4137de283f4340a01b50fa3196f346b4309f4c4416"
+          "sha256": "8e8c7836dba2d45e78c3212204ac61aa84a87323f4decd2363e4c7264023b15f"
         },
         "symbolic.json": {
           "path": "masters/P41/symbolic.json",
-          "sha256": "30b440c609154baaaeabaac01320b0af44fe4e9adccb6887074ab3f850e442d8"
+          "sha256": "3680f3cf24970253fadcec964e55a225655797dc4c5990fc01b98cddf0ac7207"
         },
         "graph.dot": {
           "path": "masters/P41/graph.dot",
@@ -10822,42 +10872,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -10886,12 +10937,13 @@
       "name": "P42",
       "directory": "masters/P42",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
         -2,
-        -1
+        -1,
+        0
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -11033,11 +11085,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P42/numerical.json",
-          "sha256": "760baefe07f72349c6aa6774bd8229f354ade7048701a19941e70de537bb3ccb"
+          "sha256": "f4c86bbac40dd8e255670ea10938dc6709b130a0a61e27f576c656b6042f3f5b"
         },
         "symbolic.json": {
           "path": "masters/P42/symbolic.json",
-          "sha256": "c806a4da1c1916c7b0345ed37b24ec066784ad2915bc972517af3a05b98a9002"
+          "sha256": "66abb96f15ac1095561dcc5fa3d441e58c1e8ec2313d0f97b30b706ff0c30378"
         },
         "graph.dot": {
           "path": "masters/P42/graph.dot",
@@ -11059,42 +11111,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -11123,7 +11176,7 @@
       "name": "P43",
       "directory": "masters/P43",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
@@ -11280,11 +11333,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P43/numerical.json",
-          "sha256": "2762261b3a5a19ee200e51a4327f30933fd0ac54a4dfc831ee9fd8bc237646ef"
+          "sha256": "a3cee580f24889b7a617c6da12bf14a7238584a17314aef8cf4f4867a0dbedae"
         },
         "symbolic.json": {
           "path": "masters/P43/symbolic.json",
-          "sha256": "0bcff7fce77a2c44b274aa1911e1699e89ba3f4d5f2d6ec28ee6982756a125ab"
+          "sha256": "03ee573b5237b8cc35f632bbac15dab5717d605b8cc004a9edd0ede9037db8d8"
         },
         "graph.dot": {
           "path": "masters/P43/graph.dot",
@@ -11306,42 +11359,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -11370,7 +11424,7 @@
       "name": "P44",
       "directory": "masters/P44",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
@@ -11507,11 +11561,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P44/numerical.json",
-          "sha256": "21491c492dd20ade8751d9847bc0d7710dc8fc2744e5c9dd19cafd7c2322c3fe"
+          "sha256": "b63da98aa1027f4dcc65c6da9bc2a897e7e9806accebb42db9f7c5d93d1890fc"
         },
         "symbolic.json": {
           "path": "masters/P44/symbolic.json",
-          "sha256": "84d2338edb42601bdf70ca64a1790daa29dfb803c25d4c110398f9565e816521"
+          "sha256": "f63ac1fbe845a9206f28179c0d68efef0c2af7fe427876d45d1205aff86f5817"
         },
         "graph.dot": {
           "path": "masters/P44/graph.dot",
@@ -11533,42 +11587,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -11597,7 +11652,7 @@
       "name": "P45",
       "directory": "masters/P45",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
@@ -11754,11 +11809,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P45/numerical.json",
-          "sha256": "fcced3d2a92fb049af70e346e098257b66d76f99558d29c4a945bdcf403cbcbf"
+          "sha256": "fe2464d088622409213b8f545eb1a0be13303df967bde5e2287428b0c313ea13"
         },
         "symbolic.json": {
           "path": "masters/P45/symbolic.json",
-          "sha256": "5a830b578b5a6ec09208cd476703a34ddea1416b9c0bc78f2966fad66077dcf5"
+          "sha256": "a687bb06d3681ed690f31848deab2d494972f8b094c1be52f5a8d1166e7bca7a"
         },
         "graph.dot": {
           "path": "masters/P45/graph.dot",
@@ -11780,42 +11835,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -11844,7 +11900,7 @@
       "name": "P46",
       "directory": "masters/P46",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
@@ -11981,11 +12037,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P46/numerical.json",
-          "sha256": "cc90811a0e411717784fe89b430d4cd9592c25cfee90bf7508dffef9ff957b84"
+          "sha256": "05ab196c88cfc7ef52f3cf801d75723acdf844cdf4b9d61889058fee008cdefc"
         },
         "symbolic.json": {
           "path": "masters/P46/symbolic.json",
-          "sha256": "8bbdcd65fb8833da80837b67bc48d9d083cb0a02d14928146c56523d13c8e7a7"
+          "sha256": "265032de05dd74cbedb47e3cdf189272e85f51ccd032226d41b2e5e454e56bb1"
         },
         "graph.dot": {
           "path": "masters/P46/graph.dot",
@@ -12007,42 +12063,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -12248,6 +12305,7 @@
         1,
         2
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
@@ -12319,7 +12377,7 @@
       "name": "P48",
       "directory": "masters/P48",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
@@ -12476,11 +12534,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P48/numerical.json",
-          "sha256": "3d7d03e2391e19882a27834b07f037762be93eb8de6c83723247855839487610"
+          "sha256": "c6728adc83e5acdcb60df90912ed5abad2b676ce009707b2729ba26f443cabef"
         },
         "symbolic.json": {
           "path": "masters/P48/symbolic.json",
-          "sha256": "31fa6dab3bf116d0b86708814874df4121596c5fdc89def3ea8957b160436189"
+          "sha256": "74aeaaa776f4f9e9ca76925a15cda53adc63820f1ee673c5b905d0f842977006"
         },
         "graph.dot": {
           "path": "masters/P48/graph.dot",
@@ -12502,42 +12560,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -12566,7 +12625,7 @@
       "name": "P49",
       "directory": "masters/P49",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
@@ -12733,11 +12792,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P49/numerical.json",
-          "sha256": "33c6ee29cfe4647a57254954e12ba60f285fe970310222e5fa11c5a947f257f5"
+          "sha256": "45b26c51b6d516daa558ec58b4118704d740cbeca57dc607d31ca2c43dea8594"
         },
         "symbolic.json": {
           "path": "masters/P49/symbolic.json",
-          "sha256": "d51ccdddb7d2673f66f6cb798374d09b2fbb25b20e15ce1bbbdc0694d68d7ac2"
+          "sha256": "15ee7fc2e6dc23ac7bfe8dbc204949cd34d02de7b136a252cf3c212f8a26a8aa"
         },
         "graph.dot": {
           "path": "masters/P49/graph.dot",
@@ -12759,42 +12818,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -12823,7 +12883,7 @@
       "name": "P50",
       "directory": "masters/P50",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
@@ -12980,11 +13040,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P50/numerical.json",
-          "sha256": "eb3908031912e6421886715ea53ba937549123251a5f4780dd8e8b8c52ed3d02"
+          "sha256": "42a71b1b5dc3de13fc74d4711fa05afa8d9bb1df29144b311e6852be448c35ad"
         },
         "symbolic.json": {
           "path": "masters/P50/symbolic.json",
-          "sha256": "dd7132c957cf9c3d20185c92889c1269ecf1f641307896901aeec9753ace06a0"
+          "sha256": "492a38fe26a0963a74007493def03f39c39200403f7a9f9e9c8214f6dd836872"
         },
         "graph.dot": {
           "path": "masters/P50/graph.dot",
@@ -13006,42 +13066,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -13070,7 +13131,7 @@
       "name": "P51",
       "directory": "masters/P51",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
@@ -13227,11 +13288,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P51/numerical.json",
-          "sha256": "958a87d90ce7fc1ca0302bc43d273e2139394619bf8e6737dad7aab6d814d68e"
+          "sha256": "2ec3f5b1937b4540ca4029435146a5278e0318fcdcbb200ee1f68650f1413d91"
         },
         "symbolic.json": {
           "path": "masters/P51/symbolic.json",
-          "sha256": "3737bd1b2cb3729f37d33689025b93dd76c1805fe976641a83adcbd7f8d3fc68"
+          "sha256": "28bfa5c4536a700b6c0b7b16f4be3eca833964c79e5f4829e3936a6ddc8478ee"
         },
         "graph.dot": {
           "path": "masters/P51/graph.dot",
@@ -13253,42 +13314,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -13317,7 +13379,7 @@
       "name": "P52",
       "directory": "masters/P52",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
@@ -13484,11 +13546,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P52/numerical.json",
-          "sha256": "c455c2de8c84f2e9cb5f55a2525517682e27664fe17e4c26d7ee68d78c1e7db9"
+          "sha256": "76af128590f58a49fafb3b9a63e02915a4bacfd56266ef1ecff04f0ac6298203"
         },
         "symbolic.json": {
           "path": "masters/P52/symbolic.json",
-          "sha256": "c455c2de8c84f2e9cb5f55a2525517682e27664fe17e4c26d7ee68d78c1e7db9"
+          "sha256": "76af128590f58a49fafb3b9a63e02915a4bacfd56266ef1ecff04f0ac6298203"
         },
         "graph.dot": {
           "path": "masters/P52/graph.dot",
@@ -13510,42 +13572,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -13731,6 +13794,7 @@
         1,
         2
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
@@ -13971,6 +14035,7 @@
         2,
         3
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
@@ -14215,6 +14280,7 @@
         1,
         2
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
@@ -14463,6 +14529,7 @@
         1,
         2
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
@@ -14534,12 +14601,14 @@
       "name": "P57",
       "directory": "masters/P57",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
         -2,
-        -1
+        -1,
+        0,
+        1
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -14681,11 +14750,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P57/numerical.json",
-          "sha256": "f24081c2870b3dd1f0fe18b118bb709ee9d534d4c53579218704c36f7ddafe19"
+          "sha256": "7e8237e6ca07a0b377eabc358041e2bb8201a755a960b35b46efee07cf8ceb96"
         },
         "symbolic.json": {
           "path": "masters/P57/symbolic.json",
-          "sha256": "6bfbb265e4b6e2fa5570d696370218260ba232008ff0f62ad91358d7ad53e45b"
+          "sha256": "d25c90befa6c823f963030fa6a71ca53e216d0dd46150d20cf1c990ca7192aac"
         },
         "graph.dot": {
           "path": "masters/P57/graph.dot",
@@ -14707,42 +14776,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -14776,7 +14846,8 @@
         -4,
         -3,
         -2,
-        -1
+        -1,
+        0
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -14932,7 +15003,7 @@
         },
         "symbolic.json": {
           "path": "masters/P58/symbolic.json",
-          "sha256": "3ce9d44433e7caa464e715ef07a9aa519e516843df47de37e1bdc000b4cbafc1"
+          "sha256": "afd95b744211c5d1ebe3809de0fff3fb8186287900ea313d160abb87cc5fc109"
         },
         "graph.dot": {
           "path": "masters/P58/graph.dot",
@@ -14954,6 +15025,7 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
@@ -14981,7 +15053,7 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 200
         },
@@ -15018,7 +15090,7 @@
       "name": "P59",
       "directory": "masters/P59",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
@@ -15155,11 +15227,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P59/numerical.json",
-          "sha256": "156fab86a6788128d9a0bb4137de283f4340a01b50fa3196f346b4309f4c4416"
+          "sha256": "8e8c7836dba2d45e78c3212204ac61aa84a87323f4decd2363e4c7264023b15f"
         },
         "symbolic.json": {
           "path": "masters/P59/symbolic.json",
-          "sha256": "30b440c609154baaaeabaac01320b0af44fe4e9adccb6887074ab3f850e442d8"
+          "sha256": "3680f3cf24970253fadcec964e55a225655797dc4c5990fc01b98cddf0ac7207"
         },
         "graph.dot": {
           "path": "masters/P59/graph.dot",
@@ -15181,42 +15253,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -15245,12 +15318,13 @@
       "name": "P60",
       "directory": "masters/P60",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
         -2,
-        -1
+        -1,
+        0
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -15392,11 +15466,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P60/numerical.json",
-          "sha256": "760baefe07f72349c6aa6774bd8229f354ade7048701a19941e70de537bb3ccb"
+          "sha256": "f4c86bbac40dd8e255670ea10938dc6709b130a0a61e27f576c656b6042f3f5b"
         },
         "symbolic.json": {
           "path": "masters/P60/symbolic.json",
-          "sha256": "c806a4da1c1916c7b0345ed37b24ec066784ad2915bc972517af3a05b98a9002"
+          "sha256": "66abb96f15ac1095561dcc5fa3d441e58c1e8ec2313d0f97b30b706ff0c30378"
         },
         "graph.dot": {
           "path": "masters/P60/graph.dot",
@@ -15418,42 +15492,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -15659,6 +15734,7 @@
         1,
         2
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
@@ -15730,7 +15806,7 @@
       "name": "P62",
       "directory": "masters/P62",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
@@ -15887,11 +15963,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P62/numerical.json",
-          "sha256": "3d7d03e2391e19882a27834b07f037762be93eb8de6c83723247855839487610"
+          "sha256": "c6728adc83e5acdcb60df90912ed5abad2b676ce009707b2729ba26f443cabef"
         },
         "symbolic.json": {
           "path": "masters/P62/symbolic.json",
-          "sha256": "31fa6dab3bf116d0b86708814874df4121596c5fdc89def3ea8957b160436189"
+          "sha256": "74aeaaa776f4f9e9ca76925a15cda53adc63820f1ee673c5b905d0f842977006"
         },
         "graph.dot": {
           "path": "masters/P62/graph.dot",
@@ -15913,42 +15989,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -15977,7 +16054,7 @@
       "name": "P63",
       "directory": "masters/P63",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
@@ -16134,11 +16211,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P63/numerical.json",
-          "sha256": "2762261b3a5a19ee200e51a4327f30933fd0ac54a4dfc831ee9fd8bc237646ef"
+          "sha256": "a3cee580f24889b7a617c6da12bf14a7238584a17314aef8cf4f4867a0dbedae"
         },
         "symbolic.json": {
           "path": "masters/P63/symbolic.json",
-          "sha256": "0bcff7fce77a2c44b274aa1911e1699e89ba3f4d5f2d6ec28ee6982756a125ab"
+          "sha256": "03ee573b5237b8cc35f632bbac15dab5717d605b8cc004a9edd0ede9037db8d8"
         },
         "graph.dot": {
           "path": "masters/P63/graph.dot",
@@ -16160,42 +16237,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -16409,6 +16487,7 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
@@ -16473,7 +16552,7 @@
       "name": "P65",
       "directory": "masters/P65",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
@@ -16640,11 +16719,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P65/numerical.json",
-          "sha256": "38980531a1a44366c00a3dacb306c50e908385e560f93662b6b5ee4573848be2"
+          "sha256": "ca34f366847788ea7a2a53dd24c1f534789af4b8fdce3bae0781ac6a419e30a2"
         },
         "symbolic.json": {
           "path": "masters/P65/symbolic.json",
-          "sha256": "11b4f9aa8f65565556d8190c09e6356aa73c3ea4250d1388bcd5ad406ea5760d"
+          "sha256": "7ec252b5bbca4e56012d64b8fae5e924a74b0fe17c9c1e7f33decc135ad826d7"
         },
         "graph.dot": {
           "path": "masters/P65/graph.dot",
@@ -16666,42 +16745,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -16730,7 +16810,7 @@
       "name": "P66",
       "directory": "masters/P66",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
@@ -16867,11 +16947,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P66/numerical.json",
-          "sha256": "21491c492dd20ade8751d9847bc0d7710dc8fc2744e5c9dd19cafd7c2322c3fe"
+          "sha256": "b63da98aa1027f4dcc65c6da9bc2a897e7e9806accebb42db9f7c5d93d1890fc"
         },
         "symbolic.json": {
           "path": "masters/P66/symbolic.json",
-          "sha256": "84d2338edb42601bdf70ca64a1790daa29dfb803c25d4c110398f9565e816521"
+          "sha256": "f63ac1fbe845a9206f28179c0d68efef0c2af7fe427876d45d1205aff86f5817"
         },
         "graph.dot": {
           "path": "masters/P66/graph.dot",
@@ -16893,42 +16973,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -16957,7 +17038,7 @@
       "name": "P67",
       "directory": "masters/P67",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
@@ -17114,11 +17195,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P67/numerical.json",
-          "sha256": "eb3908031912e6421886715ea53ba937549123251a5f4780dd8e8b8c52ed3d02"
+          "sha256": "42a71b1b5dc3de13fc74d4711fa05afa8d9bb1df29144b311e6852be448c35ad"
         },
         "symbolic.json": {
           "path": "masters/P67/symbolic.json",
-          "sha256": "dd7132c957cf9c3d20185c92889c1269ecf1f641307896901aeec9753ace06a0"
+          "sha256": "492a38fe26a0963a74007493def03f39c39200403f7a9f9e9c8214f6dd836872"
         },
         "graph.dot": {
           "path": "masters/P67/graph.dot",
@@ -17140,42 +17221,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -17204,7 +17286,7 @@
       "name": "P68",
       "directory": "masters/P68",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
@@ -17341,11 +17423,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P68/numerical.json",
-          "sha256": "cc90811a0e411717784fe89b430d4cd9592c25cfee90bf7508dffef9ff957b84"
+          "sha256": "05ab196c88cfc7ef52f3cf801d75723acdf844cdf4b9d61889058fee008cdefc"
         },
         "symbolic.json": {
           "path": "masters/P68/symbolic.json",
-          "sha256": "8bbdcd65fb8833da80837b67bc48d9d083cb0a02d14928146c56523d13c8e7a7"
+          "sha256": "265032de05dd74cbedb47e3cdf189272e85f51ccd032226d41b2e5e454e56bb1"
         },
         "graph.dot": {
           "path": "masters/P68/graph.dot",
@@ -17367,42 +17449,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -17431,7 +17514,7 @@
       "name": "P69",
       "directory": "masters/P69",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
@@ -17598,11 +17681,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P69/numerical.json",
-          "sha256": "33c6ee29cfe4647a57254954e12ba60f285fe970310222e5fa11c5a947f257f5"
+          "sha256": "45b26c51b6d516daa558ec58b4118704d740cbeca57dc607d31ca2c43dea8594"
         },
         "symbolic.json": {
           "path": "masters/P69/symbolic.json",
-          "sha256": "d51ccdddb7d2673f66f6cb798374d09b2fbb25b20e15ce1bbbdc0694d68d7ac2"
+          "sha256": "15ee7fc2e6dc23ac7bfe8dbc204949cd34d02de7b136a252cf3c212f8a26a8aa"
         },
         "graph.dot": {
           "path": "masters/P69/graph.dot",
@@ -17624,42 +17707,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -17688,7 +17772,7 @@
       "name": "P70",
       "directory": "masters/P70",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
@@ -17865,11 +17949,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P70/numerical.json",
-          "sha256": "45fc0963b4ab447fddf8191a51f1480df334c5978046ccc0e8918b7864f8afe4"
+          "sha256": "6bd1724f58f6c73f049b27f3d3a3f0e22ef7faac8a4f4b8f92d68a4fa903aaf1"
         },
         "symbolic.json": {
           "path": "masters/P70/symbolic.json",
-          "sha256": "45fc0963b4ab447fddf8191a51f1480df334c5978046ccc0e8918b7864f8afe4"
+          "sha256": "6bd1724f58f6c73f049b27f3d3a3f0e22ef7faac8a4f4b8f92d68a4fa903aaf1"
         },
         "graph.dot": {
           "path": "masters/P70/graph.dot",
@@ -17891,42 +17975,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -17955,7 +18040,7 @@
       "name": "P71",
       "directory": "masters/P71",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
@@ -18112,11 +18197,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P71/numerical.json",
-          "sha256": "958a87d90ce7fc1ca0302bc43d273e2139394619bf8e6737dad7aab6d814d68e"
+          "sha256": "2ec3f5b1937b4540ca4029435146a5278e0318fcdcbb200ee1f68650f1413d91"
         },
         "symbolic.json": {
           "path": "masters/P71/symbolic.json",
-          "sha256": "3737bd1b2cb3729f37d33689025b93dd76c1805fe976641a83adcbd7f8d3fc68"
+          "sha256": "28bfa5c4536a700b6c0b7b16f4be3eca833964c79e5f4829e3936a6ddc8478ee"
         },
         "graph.dot": {
           "path": "masters/P71/graph.dot",
@@ -18138,42 +18223,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -18202,7 +18288,7 @@
       "name": "P72",
       "directory": "masters/P72",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
@@ -18359,11 +18445,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P72/numerical.json",
-          "sha256": "fcced3d2a92fb049af70e346e098257b66d76f99558d29c4a945bdcf403cbcbf"
+          "sha256": "fe2464d088622409213b8f545eb1a0be13303df967bde5e2287428b0c313ea13"
         },
         "symbolic.json": {
           "path": "masters/P72/symbolic.json",
-          "sha256": "5a830b578b5a6ec09208cd476703a34ddea1416b9c0bc78f2966fad66077dcf5"
+          "sha256": "a687bb06d3681ed690f31848deab2d494972f8b094c1be52f5a8d1166e7bca7a"
         },
         "graph.dot": {
           "path": "masters/P72/graph.dot",
@@ -18385,42 +18471,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -18449,12 +18536,13 @@
       "name": "P73",
       "directory": "masters/P73",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
         -2,
-        -1
+        -1,
+        0
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -18616,11 +18704,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P73/numerical.json",
-          "sha256": "dbf39e3f54d8913bf57448ea344f5acd77d6b2738da889127b27f8ecee45ba71"
+          "sha256": "12a75068d8eabd45a100a3014deb25d62687a016f407699962f097fa0d1b40c7"
         },
         "symbolic.json": {
           "path": "masters/P73/symbolic.json",
-          "sha256": "dbf39e3f54d8913bf57448ea344f5acd77d6b2738da889127b27f8ecee45ba71"
+          "sha256": "081ca4e2af336161f1c5fbb660159b76b48b1b65aea19b77fad4c4e42ef1f32b"
         },
         "graph.dot": {
           "path": "masters/P73/graph.dot",
@@ -18642,42 +18730,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     },
@@ -18706,7 +18795,7 @@
       "name": "P74",
       "directory": "masters/P74",
       "status": "accepted",
-      "significant_digits": 50,
+      "significant_digits": 200,
       "symbolic_powers": [
         -4,
         -3,
@@ -18873,11 +18962,11 @@
       "files": {
         "numerical.json": {
           "path": "masters/P74/numerical.json",
-          "sha256": "c455c2de8c84f2e9cb5f55a2525517682e27664fe17e4c26d7ee68d78c1e7db9"
+          "sha256": "76af128590f58a49fafb3b9a63e02915a4bacfd56266ef1ecff04f0ac6298203"
         },
         "symbolic.json": {
           "path": "masters/P74/symbolic.json",
-          "sha256": "c455c2de8c84f2e9cb5f55a2525517682e27664fe17e4c26d7ee68d78c1e7db9"
+          "sha256": "76af128590f58a49fafb3b9a63e02915a4bacfd56266ef1ecff04f0ac6298203"
         },
         "graph.dot": {
           "path": "masters/P74/graph.dot",
@@ -18899,42 +18988,43 @@
         0,
         1
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         },
         {
           "epsilon_power": 1,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 50
+          "significant_digits": 200
         }
       ]
     }
@@ -58386,24 +58476,24 @@
       "bytes": 2877
     },
     "masters/P10/numerical.json": {
-      "sha256": "fcced3d2a92fb049af70e346e098257b66d76f99558d29c4a945bdcf403cbcbf",
-      "bytes": 364
+      "sha256": "fe2464d088622409213b8f545eb1a0be13303df967bde5e2287428b0c313ea13",
+      "bytes": 964
     },
     "masters/P10/symbolic.json": {
-      "sha256": "5a830b578b5a6ec09208cd476703a34ddea1416b9c0bc78f2966fad66077dcf5",
-      "bytes": 313
+      "sha256": "a687bb06d3681ed690f31848deab2d494972f8b094c1be52f5a8d1166e7bca7a",
+      "bytes": 613
     },
     "masters/P11/graph.dot": {
       "sha256": "6bdecb1e39e1213699308380535b0d6b4b0269be5bfff30a70e81ea4f095006e",
       "bytes": 2119
     },
     "masters/P11/numerical.json": {
-      "sha256": "cc90811a0e411717784fe89b430d4cd9592c25cfee90bf7508dffef9ff957b84",
-      "bytes": 421
+      "sha256": "05ab196c88cfc7ef52f3cf801d75723acdf844cdf4b9d61889058fee008cdefc",
+      "bytes": 1171
     },
     "masters/P11/symbolic.json": {
-      "sha256": "8bbdcd65fb8833da80837b67bc48d9d083cb0a02d14928146c56523d13c8e7a7",
-      "bytes": 287
+      "sha256": "265032de05dd74cbedb47e3cdf189272e85f51ccd032226d41b2e5e454e56bb1",
+      "bytes": 587
     },
     "masters/P12/graph.dot": {
       "sha256": "0fa81cd0105b1abfb72807bfc031185104332e72a4a8ee9328ac8c29196f785c",
@@ -58422,84 +58512,84 @@
       "bytes": 2873
     },
     "masters/P13/numerical.json": {
-      "sha256": "3d7d03e2391e19882a27834b07f037762be93eb8de6c83723247855839487610",
-      "bytes": 469
+      "sha256": "c6728adc83e5acdcb60df90912ed5abad2b676ce009707b2729ba26f443cabef",
+      "bytes": 1369
     },
     "masters/P13/symbolic.json": {
-      "sha256": "31fa6dab3bf116d0b86708814874df4121596c5fdc89def3ea8957b160436189",
-      "bytes": 686
+      "sha256": "74aeaaa776f4f9e9ca76925a15cda53adc63820f1ee673c5b905d0f842977006",
+      "bytes": 986
     },
     "masters/P14/graph.dot": {
       "sha256": "92ea21fe6ae8c4fd4d5db90a5de56d92ad159b0730a2818392e7293327f0c403",
       "bytes": 3251
     },
     "masters/P14/numerical.json": {
-      "sha256": "33c6ee29cfe4647a57254954e12ba60f285fe970310222e5fa11c5a947f257f5",
-      "bytes": 311
+      "sha256": "45b26c51b6d516daa558ec58b4118704d740cbeca57dc607d31ca2c43dea8594",
+      "bytes": 761
     },
     "masters/P14/symbolic.json": {
-      "sha256": "d51ccdddb7d2673f66f6cb798374d09b2fbb25b20e15ce1bbbdc0694d68d7ac2",
-      "bytes": 277
+      "sha256": "15ee7fc2e6dc23ac7bfe8dbc204949cd34d02de7b136a252cf3c212f8a26a8aa",
+      "bytes": 577
     },
     "masters/P15/graph.dot": {
       "sha256": "465868eefe448dc72594dc0f9b5e5fb9b1a917c65ff71f4b06964bfd7e9b2704",
       "bytes": 2874
     },
     "masters/P15/numerical.json": {
-      "sha256": "eb3908031912e6421886715ea53ba937549123251a5f4780dd8e8b8c52ed3d02",
-      "bytes": 471
+      "sha256": "42a71b1b5dc3de13fc74d4711fa05afa8d9bb1df29144b311e6852be448c35ad",
+      "bytes": 1371
     },
     "masters/P15/symbolic.json": {
-      "sha256": "dd7132c957cf9c3d20185c92889c1269ecf1f641307896901aeec9753ace06a0",
-      "bytes": 634
+      "sha256": "492a38fe26a0963a74007493def03f39c39200403f7a9f9e9c8214f6dd836872",
+      "bytes": 934
     },
     "masters/P16/graph.dot": {
       "sha256": "fd769b6b566526af14649d0a0308381ccb63331d57a119c4d803baa9fddbf470",
       "bytes": 2873
     },
     "masters/P16/numerical.json": {
-      "sha256": "958a87d90ce7fc1ca0302bc43d273e2139394619bf8e6737dad7aab6d814d68e",
-      "bytes": 471
+      "sha256": "2ec3f5b1937b4540ca4029435146a5278e0318fcdcbb200ee1f68650f1413d91",
+      "bytes": 1371
     },
     "masters/P16/symbolic.json": {
-      "sha256": "3737bd1b2cb3729f37d33689025b93dd76c1805fe976641a83adcbd7f8d3fc68",
-      "bytes": 681
+      "sha256": "28bfa5c4536a700b6c0b7b16f4be3eca833964c79e5f4829e3936a6ddc8478ee",
+      "bytes": 981
     },
     "masters/P17/graph.dot": {
       "sha256": "92ea21fe6ae8c4fd4d5db90a5de56d92ad159b0730a2818392e7293327f0c403",
       "bytes": 3251
     },
     "masters/P17/numerical.json": {
-      "sha256": "c455c2de8c84f2e9cb5f55a2525517682e27664fe17e4c26d7ee68d78c1e7db9",
-      "bytes": 258
+      "sha256": "76af128590f58a49fafb3b9a63e02915a4bacfd56266ef1ecff04f0ac6298203",
+      "bytes": 558
     },
     "masters/P17/symbolic.json": {
-      "sha256": "c455c2de8c84f2e9cb5f55a2525517682e27664fe17e4c26d7ee68d78c1e7db9",
-      "bytes": 258
+      "sha256": "76af128590f58a49fafb3b9a63e02915a4bacfd56266ef1ecff04f0ac6298203",
+      "bytes": 558
     },
     "masters/P18/graph.dot": {
       "sha256": "9e4b1fad319680a2c6c5e3f900551d1340f2206d86a87c94c0fa766076d4b444",
       "bytes": 3629
     },
     "masters/P18/numerical.json": {
-      "sha256": "37711d6f4e320ad06f86e5e3e4b251bba38cf0a36f1a520f8ef1180ee4190680",
-      "bytes": 258
+      "sha256": "151d80d08963be6a4aba3d7111160ed3c74bbe59024ddef263a0381cdaced2b2",
+      "bytes": 558
     },
     "masters/P18/symbolic.json": {
-      "sha256": "37711d6f4e320ad06f86e5e3e4b251bba38cf0a36f1a520f8ef1180ee4190680",
-      "bytes": 258
+      "sha256": "151d80d08963be6a4aba3d7111160ed3c74bbe59024ddef263a0381cdaced2b2",
+      "bytes": 558
     },
     "masters/P19/graph.dot": {
       "sha256": "e2979f4c79b3c8c9c09e60392f91df89173c5a26610f649da0f6f4ba688198d2",
       "bytes": 3250
     },
     "masters/P19/numerical.json": {
-      "sha256": "dbf39e3f54d8913bf57448ea344f5acd77d6b2738da889127b27f8ecee45ba71",
-      "bytes": 258
+      "sha256": "12a75068d8eabd45a100a3014deb25d62687a016f407699962f097fa0d1b40c7",
+      "bytes": 558
     },
     "masters/P19/symbolic.json": {
-      "sha256": "dbf39e3f54d8913bf57448ea344f5acd77d6b2738da889127b27f8ecee45ba71",
-      "bytes": 258
+      "sha256": "081ca4e2af336161f1c5fbb660159b76b48b1b65aea19b77fad4c4e42ef1f32b",
+      "bytes": 394
     },
     "masters/P2/graph.dot": {
       "sha256": "2b858437e529fd787d47fe6023c569a25f116cdedc3b2579d70b87e4e8780f0d",
@@ -58566,24 +58656,24 @@
       "bytes": 2119
     },
     "masters/P24/numerical.json": {
-      "sha256": "156fab86a6788128d9a0bb4137de283f4340a01b50fa3196f346b4309f4c4416",
-      "bytes": 469
+      "sha256": "8e8c7836dba2d45e78c3212204ac61aa84a87323f4decd2363e4c7264023b15f",
+      "bytes": 1369
     },
     "masters/P24/symbolic.json": {
-      "sha256": "30b440c609154baaaeabaac01320b0af44fe4e9adccb6887074ab3f850e442d8",
-      "bytes": 325
+      "sha256": "3680f3cf24970253fadcec964e55a225655797dc4c5990fc01b98cddf0ac7207",
+      "bytes": 625
     },
     "masters/P25/graph.dot": {
       "sha256": "779fe9577576d97e616bcf3d210effeea96eac7089bc838b5ef1ea0501210663",
       "bytes": 2497
     },
     "masters/P25/numerical.json": {
-      "sha256": "760baefe07f72349c6aa6774bd8229f354ade7048701a19941e70de537bb3ccb",
-      "bytes": 469
+      "sha256": "f4c86bbac40dd8e255670ea10938dc6709b130a0a61e27f576c656b6042f3f5b",
+      "bytes": 1369
     },
     "masters/P25/symbolic.json": {
-      "sha256": "c806a4da1c1916c7b0345ed37b24ec066784ad2915bc972517af3a05b98a9002",
-      "bytes": 707
+      "sha256": "66abb96f15ac1095561dcc5fa3d441e58c1e8ec2313d0f97b30b706ff0c30378",
+      "bytes": 992
     },
     "masters/P26/graph.dot": {
       "sha256": "4d3e17c6632677f347c9cdda8950048afc074f44324dda26d29ab91e0e2f6b9e",
@@ -58602,36 +58692,36 @@
       "bytes": 2874
     },
     "masters/P27/numerical.json": {
-      "sha256": "3d7d03e2391e19882a27834b07f037762be93eb8de6c83723247855839487610",
-      "bytes": 469
+      "sha256": "c6728adc83e5acdcb60df90912ed5abad2b676ce009707b2729ba26f443cabef",
+      "bytes": 1369
     },
     "masters/P27/symbolic.json": {
-      "sha256": "31fa6dab3bf116d0b86708814874df4121596c5fdc89def3ea8957b160436189",
-      "bytes": 686
+      "sha256": "74aeaaa776f4f9e9ca76925a15cda53adc63820f1ee673c5b905d0f842977006",
+      "bytes": 986
     },
     "masters/P28/graph.dot": {
       "sha256": "db17476e479dfcc9b417d466ce486fcd7ec98c291f5d92d2fec3e55cb19d18c4",
       "bytes": 2119
     },
     "masters/P28/numerical.json": {
-      "sha256": "21491c492dd20ade8751d9847bc0d7710dc8fc2744e5c9dd19cafd7c2322c3fe",
-      "bytes": 469
+      "sha256": "b63da98aa1027f4dcc65c6da9bc2a897e7e9806accebb42db9f7c5d93d1890fc",
+      "bytes": 1369
     },
     "masters/P28/symbolic.json": {
-      "sha256": "84d2338edb42601bdf70ca64a1790daa29dfb803c25d4c110398f9565e816521",
-      "bytes": 367
+      "sha256": "f63ac1fbe845a9206f28179c0d68efef0c2af7fe427876d45d1205aff86f5817",
+      "bytes": 667
     },
     "masters/P29/graph.dot": {
       "sha256": "db17476e479dfcc9b417d466ce486fcd7ec98c291f5d92d2fec3e55cb19d18c4",
       "bytes": 2119
     },
     "masters/P29/numerical.json": {
-      "sha256": "cc90811a0e411717784fe89b430d4cd9592c25cfee90bf7508dffef9ff957b84",
-      "bytes": 421
+      "sha256": "05ab196c88cfc7ef52f3cf801d75723acdf844cdf4b9d61889058fee008cdefc",
+      "bytes": 1171
     },
     "masters/P29/symbolic.json": {
-      "sha256": "8bbdcd65fb8833da80837b67bc48d9d083cb0a02d14928146c56523d13c8e7a7",
-      "bytes": 287
+      "sha256": "265032de05dd74cbedb47e3cdf189272e85f51ccd032226d41b2e5e454e56bb1",
+      "bytes": 587
     },
     "masters/P3/graph.dot": {
       "sha256": "ff971f276bfe6787df8d3068c31cc4e6cd04dcbae71d16fc72d6d03a0c036288",
@@ -58650,12 +58740,12 @@
       "bytes": 2496
     },
     "masters/P30/numerical.json": {
-      "sha256": "f24081c2870b3dd1f0fe18b118bb709ee9d534d4c53579218704c36f7ddafe19",
-      "bytes": 470
+      "sha256": "7e8237e6ca07a0b377eabc358041e2bb8201a755a960b35b46efee07cf8ceb96",
+      "bytes": 1370
     },
     "masters/P30/symbolic.json": {
-      "sha256": "6bfbb265e4b6e2fa5570d696370218260ba232008ff0f62ad91358d7ad53e45b",
-      "bytes": 315
+      "sha256": "d25c90befa6c823f963030fa6a71ca53e216d0dd46150d20cf1c990ca7192aac",
+      "bytes": 465
     },
     "masters/P31/graph.dot": {
       "sha256": "a2ddbec9827d4132eaffa61ddf5e19078c9492730dc598401b769a8820f363af",
@@ -58666,20 +58756,20 @@
       "bytes": 1369
     },
     "masters/P31/symbolic.json": {
-      "sha256": "3ce9d44433e7caa464e715ef07a9aa519e516843df47de37e1bdc000b4cbafc1",
-      "bytes": 989
+      "sha256": "afd95b744211c5d1ebe3809de0fff3fb8186287900ea313d160abb87cc5fc109",
+      "bytes": 1968
     },
     "masters/P32/graph.dot": {
       "sha256": "d262907421a4e2a9c336519084320036bd45b2e3960e6d6ead86dad9bbc8e81b",
       "bytes": 2873
     },
     "masters/P32/numerical.json": {
-      "sha256": "2762261b3a5a19ee200e51a4327f30933fd0ac54a4dfc831ee9fd8bc237646ef",
-      "bytes": 469
+      "sha256": "a3cee580f24889b7a617c6da12bf14a7238584a17314aef8cf4f4867a0dbedae",
+      "bytes": 1369
     },
     "masters/P32/symbolic.json": {
-      "sha256": "0bcff7fce77a2c44b274aa1911e1699e89ba3f4d5f2d6ec28ee6982756a125ab",
-      "bytes": 716
+      "sha256": "03ee573b5237b8cc35f632bbac15dab5717d605b8cc004a9edd0ede9037db8d8",
+      "bytes": 1016
     },
     "masters/P33/graph.dot": {
       "sha256": "b69c0e8e26a22f9bb4b793529946901d795cd6b931c266317117c3427ce8229b",
@@ -58698,24 +58788,24 @@
       "bytes": 3251
     },
     "masters/P34/numerical.json": {
-      "sha256": "38980531a1a44366c00a3dacb306c50e908385e560f93662b6b5ee4573848be2",
-      "bytes": 365
+      "sha256": "ca34f366847788ea7a2a53dd24c1f534789af4b8fdce3bae0781ac6a419e30a2",
+      "bytes": 965
     },
     "masters/P34/symbolic.json": {
-      "sha256": "11b4f9aa8f65565556d8190c09e6356aa73c3ea4250d1388bcd5ad406ea5760d",
-      "bytes": 660
+      "sha256": "7ec252b5bbca4e56012d64b8fae5e924a74b0fe17c9c1e7f33decc135ad826d7",
+      "bytes": 960
     },
     "masters/P35/graph.dot": {
       "sha256": "d262907421a4e2a9c336519084320036bd45b2e3960e6d6ead86dad9bbc8e81b",
       "bytes": 2873
     },
     "masters/P35/numerical.json": {
-      "sha256": "958a87d90ce7fc1ca0302bc43d273e2139394619bf8e6737dad7aab6d814d68e",
-      "bytes": 471
+      "sha256": "2ec3f5b1937b4540ca4029435146a5278e0318fcdcbb200ee1f68650f1413d91",
+      "bytes": 1371
     },
     "masters/P35/symbolic.json": {
-      "sha256": "3737bd1b2cb3729f37d33689025b93dd76c1805fe976641a83adcbd7f8d3fc68",
-      "bytes": 681
+      "sha256": "28bfa5c4536a700b6c0b7b16f4be3eca833964c79e5f4829e3936a6ddc8478ee",
+      "bytes": 981
     },
     "masters/P36/graph.dot": {
       "sha256": "85173be86c218ccf4f19335c0091b9ce4e202ec70b03d7dcbbf09a440b2394c2",
@@ -58782,84 +58872,84 @@
       "bytes": 2494
     },
     "masters/P40/numerical.json": {
-      "sha256": "f24081c2870b3dd1f0fe18b118bb709ee9d534d4c53579218704c36f7ddafe19",
-      "bytes": 470
+      "sha256": "7e8237e6ca07a0b377eabc358041e2bb8201a755a960b35b46efee07cf8ceb96",
+      "bytes": 1370
     },
     "masters/P40/symbolic.json": {
-      "sha256": "6bfbb265e4b6e2fa5570d696370218260ba232008ff0f62ad91358d7ad53e45b",
-      "bytes": 315
+      "sha256": "d25c90befa6c823f963030fa6a71ca53e216d0dd46150d20cf1c990ca7192aac",
+      "bytes": 465
     },
     "masters/P41/graph.dot": {
       "sha256": "99270f92ad5d6a252c95189f1105fe03d2388d9758548a07861183050f103452",
       "bytes": 2118
     },
     "masters/P41/numerical.json": {
-      "sha256": "156fab86a6788128d9a0bb4137de283f4340a01b50fa3196f346b4309f4c4416",
-      "bytes": 469
+      "sha256": "8e8c7836dba2d45e78c3212204ac61aa84a87323f4decd2363e4c7264023b15f",
+      "bytes": 1369
     },
     "masters/P41/symbolic.json": {
-      "sha256": "30b440c609154baaaeabaac01320b0af44fe4e9adccb6887074ab3f850e442d8",
-      "bytes": 325
+      "sha256": "3680f3cf24970253fadcec964e55a225655797dc4c5990fc01b98cddf0ac7207",
+      "bytes": 625
     },
     "masters/P42/graph.dot": {
       "sha256": "0901c99e72c4fe669310e44d7efb4c89e731e7f620b4dfc8bb9b936da709b116",
       "bytes": 2495
     },
     "masters/P42/numerical.json": {
-      "sha256": "760baefe07f72349c6aa6774bd8229f354ade7048701a19941e70de537bb3ccb",
-      "bytes": 469
+      "sha256": "f4c86bbac40dd8e255670ea10938dc6709b130a0a61e27f576c656b6042f3f5b",
+      "bytes": 1369
     },
     "masters/P42/symbolic.json": {
-      "sha256": "c806a4da1c1916c7b0345ed37b24ec066784ad2915bc972517af3a05b98a9002",
-      "bytes": 707
+      "sha256": "66abb96f15ac1095561dcc5fa3d441e58c1e8ec2313d0f97b30b706ff0c30378",
+      "bytes": 992
     },
     "masters/P43/graph.dot": {
       "sha256": "0a10da973378fee9dc27effcac9192737047a9e2577f740699a360f661c8f51d",
       "bytes": 2875
     },
     "masters/P43/numerical.json": {
-      "sha256": "2762261b3a5a19ee200e51a4327f30933fd0ac54a4dfc831ee9fd8bc237646ef",
-      "bytes": 469
+      "sha256": "a3cee580f24889b7a617c6da12bf14a7238584a17314aef8cf4f4867a0dbedae",
+      "bytes": 1369
     },
     "masters/P43/symbolic.json": {
-      "sha256": "0bcff7fce77a2c44b274aa1911e1699e89ba3f4d5f2d6ec28ee6982756a125ab",
-      "bytes": 716
+      "sha256": "03ee573b5237b8cc35f632bbac15dab5717d605b8cc004a9edd0ede9037db8d8",
+      "bytes": 1016
     },
     "masters/P44/graph.dot": {
       "sha256": "99270f92ad5d6a252c95189f1105fe03d2388d9758548a07861183050f103452",
       "bytes": 2118
     },
     "masters/P44/numerical.json": {
-      "sha256": "21491c492dd20ade8751d9847bc0d7710dc8fc2744e5c9dd19cafd7c2322c3fe",
-      "bytes": 469
+      "sha256": "b63da98aa1027f4dcc65c6da9bc2a897e7e9806accebb42db9f7c5d93d1890fc",
+      "bytes": 1369
     },
     "masters/P44/symbolic.json": {
-      "sha256": "84d2338edb42601bdf70ca64a1790daa29dfb803c25d4c110398f9565e816521",
-      "bytes": 367
+      "sha256": "f63ac1fbe845a9206f28179c0d68efef0c2af7fe427876d45d1205aff86f5817",
+      "bytes": 667
     },
     "masters/P45/graph.dot": {
       "sha256": "0a10da973378fee9dc27effcac9192737047a9e2577f740699a360f661c8f51d",
       "bytes": 2875
     },
     "masters/P45/numerical.json": {
-      "sha256": "fcced3d2a92fb049af70e346e098257b66d76f99558d29c4a945bdcf403cbcbf",
-      "bytes": 364
+      "sha256": "fe2464d088622409213b8f545eb1a0be13303df967bde5e2287428b0c313ea13",
+      "bytes": 964
     },
     "masters/P45/symbolic.json": {
-      "sha256": "5a830b578b5a6ec09208cd476703a34ddea1416b9c0bc78f2966fad66077dcf5",
-      "bytes": 313
+      "sha256": "a687bb06d3681ed690f31848deab2d494972f8b094c1be52f5a8d1166e7bca7a",
+      "bytes": 613
     },
     "masters/P46/graph.dot": {
       "sha256": "99270f92ad5d6a252c95189f1105fe03d2388d9758548a07861183050f103452",
       "bytes": 2118
     },
     "masters/P46/numerical.json": {
-      "sha256": "cc90811a0e411717784fe89b430d4cd9592c25cfee90bf7508dffef9ff957b84",
-      "bytes": 421
+      "sha256": "05ab196c88cfc7ef52f3cf801d75723acdf844cdf4b9d61889058fee008cdefc",
+      "bytes": 1171
     },
     "masters/P46/symbolic.json": {
-      "sha256": "8bbdcd65fb8833da80837b67bc48d9d083cb0a02d14928146c56523d13c8e7a7",
-      "bytes": 287
+      "sha256": "265032de05dd74cbedb47e3cdf189272e85f51ccd032226d41b2e5e454e56bb1",
+      "bytes": 587
     },
     "masters/P47/graph.dot": {
       "sha256": "9b9949120b1448180e7c86de63c712f0b7feaa4e9a27104f120266b07ebdeb1d",
@@ -58878,72 +58968,72 @@
       "bytes": 2874
     },
     "masters/P48/numerical.json": {
-      "sha256": "3d7d03e2391e19882a27834b07f037762be93eb8de6c83723247855839487610",
-      "bytes": 469
+      "sha256": "c6728adc83e5acdcb60df90912ed5abad2b676ce009707b2729ba26f443cabef",
+      "bytes": 1369
     },
     "masters/P48/symbolic.json": {
-      "sha256": "31fa6dab3bf116d0b86708814874df4121596c5fdc89def3ea8957b160436189",
-      "bytes": 686
+      "sha256": "74aeaaa776f4f9e9ca76925a15cda53adc63820f1ee673c5b905d0f842977006",
+      "bytes": 986
     },
     "masters/P49/graph.dot": {
       "sha256": "11589d4738642188547d4391e9630c6ff53b3b8984f8f3a975f58697b1e87111",
       "bytes": 3252
     },
     "masters/P49/numerical.json": {
-      "sha256": "33c6ee29cfe4647a57254954e12ba60f285fe970310222e5fa11c5a947f257f5",
-      "bytes": 311
+      "sha256": "45b26c51b6d516daa558ec58b4118704d740cbeca57dc607d31ca2c43dea8594",
+      "bytes": 761
     },
     "masters/P49/symbolic.json": {
-      "sha256": "d51ccdddb7d2673f66f6cb798374d09b2fbb25b20e15ce1bbbdc0694d68d7ac2",
-      "bytes": 277
+      "sha256": "15ee7fc2e6dc23ac7bfe8dbc204949cd34d02de7b136a252cf3c212f8a26a8aa",
+      "bytes": 577
     },
     "masters/P5/graph.dot": {
       "sha256": "5f68258ca4cb7801e0824e397572eb0cafaae2ba151fffc8d274143f2db7d9a0",
       "bytes": 2496
     },
     "masters/P5/numerical.json": {
-      "sha256": "f24081c2870b3dd1f0fe18b118bb709ee9d534d4c53579218704c36f7ddafe19",
-      "bytes": 470
+      "sha256": "7e8237e6ca07a0b377eabc358041e2bb8201a755a960b35b46efee07cf8ceb96",
+      "bytes": 1370
     },
     "masters/P5/symbolic.json": {
-      "sha256": "6bfbb265e4b6e2fa5570d696370218260ba232008ff0f62ad91358d7ad53e45b",
-      "bytes": 315
+      "sha256": "d25c90befa6c823f963030fa6a71ca53e216d0dd46150d20cf1c990ca7192aac",
+      "bytes": 465
     },
     "masters/P50/graph.dot": {
       "sha256": "a8e101fd11c43d9032fd0d565fd7a915ecce971684594952a7bc4e5e24913ff8",
       "bytes": 2873
     },
     "masters/P50/numerical.json": {
-      "sha256": "eb3908031912e6421886715ea53ba937549123251a5f4780dd8e8b8c52ed3d02",
-      "bytes": 471
+      "sha256": "42a71b1b5dc3de13fc74d4711fa05afa8d9bb1df29144b311e6852be448c35ad",
+      "bytes": 1371
     },
     "masters/P50/symbolic.json": {
-      "sha256": "dd7132c957cf9c3d20185c92889c1269ecf1f641307896901aeec9753ace06a0",
-      "bytes": 634
+      "sha256": "492a38fe26a0963a74007493def03f39c39200403f7a9f9e9c8214f6dd836872",
+      "bytes": 934
     },
     "masters/P51/graph.dot": {
       "sha256": "b9afc64bc643e6c59a2772b7acde42012519f23a89fc6dd48126dfc2755e12a1",
       "bytes": 2874
     },
     "masters/P51/numerical.json": {
-      "sha256": "958a87d90ce7fc1ca0302bc43d273e2139394619bf8e6737dad7aab6d814d68e",
-      "bytes": 471
+      "sha256": "2ec3f5b1937b4540ca4029435146a5278e0318fcdcbb200ee1f68650f1413d91",
+      "bytes": 1371
     },
     "masters/P51/symbolic.json": {
-      "sha256": "3737bd1b2cb3729f37d33689025b93dd76c1805fe976641a83adcbd7f8d3fc68",
-      "bytes": 681
+      "sha256": "28bfa5c4536a700b6c0b7b16f4be3eca833964c79e5f4829e3936a6ddc8478ee",
+      "bytes": 981
     },
     "masters/P52/graph.dot": {
       "sha256": "11589d4738642188547d4391e9630c6ff53b3b8984f8f3a975f58697b1e87111",
       "bytes": 3252
     },
     "masters/P52/numerical.json": {
-      "sha256": "c455c2de8c84f2e9cb5f55a2525517682e27664fe17e4c26d7ee68d78c1e7db9",
-      "bytes": 258
+      "sha256": "76af128590f58a49fafb3b9a63e02915a4bacfd56266ef1ecff04f0ac6298203",
+      "bytes": 558
     },
     "masters/P52/symbolic.json": {
-      "sha256": "c455c2de8c84f2e9cb5f55a2525517682e27664fe17e4c26d7ee68d78c1e7db9",
-      "bytes": 258
+      "sha256": "76af128590f58a49fafb3b9a63e02915a4bacfd56266ef1ecff04f0ac6298203",
+      "bytes": 558
     },
     "masters/P53/graph.dot": {
       "sha256": "85173be86c218ccf4f19335c0091b9ce4e202ec70b03d7dcbbf09a440b2394c2",
@@ -58998,12 +59088,12 @@
       "bytes": 2498
     },
     "masters/P57/numerical.json": {
-      "sha256": "f24081c2870b3dd1f0fe18b118bb709ee9d534d4c53579218704c36f7ddafe19",
-      "bytes": 470
+      "sha256": "7e8237e6ca07a0b377eabc358041e2bb8201a755a960b35b46efee07cf8ceb96",
+      "bytes": 1370
     },
     "masters/P57/symbolic.json": {
-      "sha256": "6bfbb265e4b6e2fa5570d696370218260ba232008ff0f62ad91358d7ad53e45b",
-      "bytes": 315
+      "sha256": "d25c90befa6c823f963030fa6a71ca53e216d0dd46150d20cf1c990ca7192aac",
+      "bytes": 465
     },
     "masters/P58/graph.dot": {
       "sha256": "0c3fe77e36df3c746d20556d695ea784d6996565ed8c4203012f11dad5ec79ba",
@@ -59014,44 +59104,44 @@
       "bytes": 1369
     },
     "masters/P58/symbolic.json": {
-      "sha256": "3ce9d44433e7caa464e715ef07a9aa519e516843df47de37e1bdc000b4cbafc1",
-      "bytes": 989
+      "sha256": "afd95b744211c5d1ebe3809de0fff3fb8186287900ea313d160abb87cc5fc109",
+      "bytes": 1968
     },
     "masters/P59/graph.dot": {
       "sha256": "a468ff9fb00cd3c1dcac984c7f73c6876cc1ecc0d473c338322e0b591a6635bc",
       "bytes": 2119
     },
     "masters/P59/numerical.json": {
-      "sha256": "156fab86a6788128d9a0bb4137de283f4340a01b50fa3196f346b4309f4c4416",
-      "bytes": 469
+      "sha256": "8e8c7836dba2d45e78c3212204ac61aa84a87323f4decd2363e4c7264023b15f",
+      "bytes": 1369
     },
     "masters/P59/symbolic.json": {
-      "sha256": "30b440c609154baaaeabaac01320b0af44fe4e9adccb6887074ab3f850e442d8",
-      "bytes": 325
+      "sha256": "3680f3cf24970253fadcec964e55a225655797dc4c5990fc01b98cddf0ac7207",
+      "bytes": 625
     },
     "masters/P6/graph.dot": {
       "sha256": "6bdecb1e39e1213699308380535b0d6b4b0269be5bfff30a70e81ea4f095006e",
       "bytes": 2119
     },
     "masters/P6/numerical.json": {
-      "sha256": "156fab86a6788128d9a0bb4137de283f4340a01b50fa3196f346b4309f4c4416",
-      "bytes": 469
+      "sha256": "8e8c7836dba2d45e78c3212204ac61aa84a87323f4decd2363e4c7264023b15f",
+      "bytes": 1369
     },
     "masters/P6/symbolic.json": {
-      "sha256": "30b440c609154baaaeabaac01320b0af44fe4e9adccb6887074ab3f850e442d8",
-      "bytes": 325
+      "sha256": "3680f3cf24970253fadcec964e55a225655797dc4c5990fc01b98cddf0ac7207",
+      "bytes": 625
     },
     "masters/P60/graph.dot": {
       "sha256": "d6143e15cc06b9f0e791376c4c9cd4a790245510b30b2468bddddc3fc016a229",
       "bytes": 2497
     },
     "masters/P60/numerical.json": {
-      "sha256": "760baefe07f72349c6aa6774bd8229f354ade7048701a19941e70de537bb3ccb",
-      "bytes": 469
+      "sha256": "f4c86bbac40dd8e255670ea10938dc6709b130a0a61e27f576c656b6042f3f5b",
+      "bytes": 1369
     },
     "masters/P60/symbolic.json": {
-      "sha256": "c806a4da1c1916c7b0345ed37b24ec066784ad2915bc972517af3a05b98a9002",
-      "bytes": 707
+      "sha256": "66abb96f15ac1095561dcc5fa3d441e58c1e8ec2313d0f97b30b706ff0c30378",
+      "bytes": 992
     },
     "masters/P61/graph.dot": {
       "sha256": "7b0540fab8486a1eac9e86d0e7168afe3efba55f602b5368d1c6c48231c340ab",
@@ -59070,24 +59160,24 @@
       "bytes": 2875
     },
     "masters/P62/numerical.json": {
-      "sha256": "3d7d03e2391e19882a27834b07f037762be93eb8de6c83723247855839487610",
-      "bytes": 469
+      "sha256": "c6728adc83e5acdcb60df90912ed5abad2b676ce009707b2729ba26f443cabef",
+      "bytes": 1369
     },
     "masters/P62/symbolic.json": {
-      "sha256": "31fa6dab3bf116d0b86708814874df4121596c5fdc89def3ea8957b160436189",
-      "bytes": 686
+      "sha256": "74aeaaa776f4f9e9ca76925a15cda53adc63820f1ee673c5b905d0f842977006",
+      "bytes": 986
     },
     "masters/P63/graph.dot": {
       "sha256": "ad0c6397db256f26cbec444fe325cc60deb7b6a01e33dcf29fac439fa0327574",
       "bytes": 2875
     },
     "masters/P63/numerical.json": {
-      "sha256": "2762261b3a5a19ee200e51a4327f30933fd0ac54a4dfc831ee9fd8bc237646ef",
-      "bytes": 469
+      "sha256": "a3cee580f24889b7a617c6da12bf14a7238584a17314aef8cf4f4867a0dbedae",
+      "bytes": 1369
     },
     "masters/P63/symbolic.json": {
-      "sha256": "0bcff7fce77a2c44b274aa1911e1699e89ba3f4d5f2d6ec28ee6982756a125ab",
-      "bytes": 716
+      "sha256": "03ee573b5237b8cc35f632bbac15dab5717d605b8cc004a9edd0ede9037db8d8",
+      "bytes": 1016
     },
     "masters/P64/graph.dot": {
       "sha256": "6c6b51994a90e4e2bc293f12f26344157ad9286e8f8b358ca10a498422dd3a2b",
@@ -59106,160 +59196,165 @@
       "bytes": 3252
     },
     "masters/P65/numerical.json": {
-      "sha256": "38980531a1a44366c00a3dacb306c50e908385e560f93662b6b5ee4573848be2",
-      "bytes": 365
+      "sha256": "ca34f366847788ea7a2a53dd24c1f534789af4b8fdce3bae0781ac6a419e30a2",
+      "bytes": 965
     },
     "masters/P65/symbolic.json": {
-      "sha256": "11b4f9aa8f65565556d8190c09e6356aa73c3ea4250d1388bcd5ad406ea5760d",
-      "bytes": 660
+      "sha256": "7ec252b5bbca4e56012d64b8fae5e924a74b0fe17c9c1e7f33decc135ad826d7",
+      "bytes": 960
     },
     "masters/P66/graph.dot": {
       "sha256": "a468ff9fb00cd3c1dcac984c7f73c6876cc1ecc0d473c338322e0b591a6635bc",
       "bytes": 2119
     },
     "masters/P66/numerical.json": {
-      "sha256": "21491c492dd20ade8751d9847bc0d7710dc8fc2744e5c9dd19cafd7c2322c3fe",
-      "bytes": 469
+      "sha256": "b63da98aa1027f4dcc65c6da9bc2a897e7e9806accebb42db9f7c5d93d1890fc",
+      "bytes": 1369
     },
     "masters/P66/symbolic.json": {
-      "sha256": "84d2338edb42601bdf70ca64a1790daa29dfb803c25d4c110398f9565e816521",
-      "bytes": 367
+      "sha256": "f63ac1fbe845a9206f28179c0d68efef0c2af7fe427876d45d1205aff86f5817",
+      "bytes": 667
     },
     "masters/P67/graph.dot": {
       "sha256": "ad0c6397db256f26cbec444fe325cc60deb7b6a01e33dcf29fac439fa0327574",
       "bytes": 2875
     },
     "masters/P67/numerical.json": {
-      "sha256": "eb3908031912e6421886715ea53ba937549123251a5f4780dd8e8b8c52ed3d02",
-      "bytes": 471
+      "sha256": "42a71b1b5dc3de13fc74d4711fa05afa8d9bb1df29144b311e6852be448c35ad",
+      "bytes": 1371
     },
     "masters/P67/symbolic.json": {
-      "sha256": "dd7132c957cf9c3d20185c92889c1269ecf1f641307896901aeec9753ace06a0",
-      "bytes": 634
+      "sha256": "492a38fe26a0963a74007493def03f39c39200403f7a9f9e9c8214f6dd836872",
+      "bytes": 934
     },
     "masters/P68/graph.dot": {
       "sha256": "a468ff9fb00cd3c1dcac984c7f73c6876cc1ecc0d473c338322e0b591a6635bc",
       "bytes": 2119
     },
     "masters/P68/numerical.json": {
-      "sha256": "cc90811a0e411717784fe89b430d4cd9592c25cfee90bf7508dffef9ff957b84",
-      "bytes": 421
+      "sha256": "05ab196c88cfc7ef52f3cf801d75723acdf844cdf4b9d61889058fee008cdefc",
+      "bytes": 1171
     },
     "masters/P68/symbolic.json": {
-      "sha256": "8bbdcd65fb8833da80837b67bc48d9d083cb0a02d14928146c56523d13c8e7a7",
-      "bytes": 287
+      "sha256": "265032de05dd74cbedb47e3cdf189272e85f51ccd032226d41b2e5e454e56bb1",
+      "bytes": 587
     },
     "masters/P69/graph.dot": {
       "sha256": "1a7ca1e3e415613119ba575e519f6924ef09657c6dbbc5a19509a961a5fdf0e9",
       "bytes": 3251
     },
     "masters/P69/numerical.json": {
-      "sha256": "33c6ee29cfe4647a57254954e12ba60f285fe970310222e5fa11c5a947f257f5",
-      "bytes": 311
+      "sha256": "45b26c51b6d516daa558ec58b4118704d740cbeca57dc607d31ca2c43dea8594",
+      "bytes": 761
     },
     "masters/P69/symbolic.json": {
-      "sha256": "d51ccdddb7d2673f66f6cb798374d09b2fbb25b20e15ce1bbbdc0694d68d7ac2",
-      "bytes": 277
+      "sha256": "15ee7fc2e6dc23ac7bfe8dbc204949cd34d02de7b136a252cf3c212f8a26a8aa",
+      "bytes": 577
     },
     "masters/P7/graph.dot": {
       "sha256": "5513e60a3b128ebf1404f43fe994fd356d7d3e8095cec630902abedd8e0e3e29",
       "bytes": 2498
     },
     "masters/P7/numerical.json": {
-      "sha256": "760baefe07f72349c6aa6774bd8229f354ade7048701a19941e70de537bb3ccb",
-      "bytes": 469
+      "sha256": "f4c86bbac40dd8e255670ea10938dc6709b130a0a61e27f576c656b6042f3f5b",
+      "bytes": 1369
     },
     "masters/P7/symbolic.json": {
-      "sha256": "c806a4da1c1916c7b0345ed37b24ec066784ad2915bc972517af3a05b98a9002",
-      "bytes": 707
+      "sha256": "66abb96f15ac1095561dcc5fa3d441e58c1e8ec2313d0f97b30b706ff0c30378",
+      "bytes": 992
     },
     "masters/P70/graph.dot": {
       "sha256": "a56632069683b620566adf19e5bb9a3aec3690d88f38c8986befa63e5b1b5935",
       "bytes": 3630
     },
     "masters/P70/numerical.json": {
-      "sha256": "45fc0963b4ab447fddf8191a51f1480df334c5978046ccc0e8918b7864f8afe4",
-      "bytes": 258
+      "sha256": "6bd1724f58f6c73f049b27f3d3a3f0e22ef7faac8a4f4b8f92d68a4fa903aaf1",
+      "bytes": 558
     },
     "masters/P70/symbolic.json": {
-      "sha256": "45fc0963b4ab447fddf8191a51f1480df334c5978046ccc0e8918b7864f8afe4",
-      "bytes": 258
+      "sha256": "6bd1724f58f6c73f049b27f3d3a3f0e22ef7faac8a4f4b8f92d68a4fa903aaf1",
+      "bytes": 558
     },
     "masters/P71/graph.dot": {
       "sha256": "49c3f7da3ea47a5398e1819fec56d3fbc740530149b37fcbcbd600a147efb0f3",
       "bytes": 2874
     },
     "masters/P71/numerical.json": {
-      "sha256": "958a87d90ce7fc1ca0302bc43d273e2139394619bf8e6737dad7aab6d814d68e",
-      "bytes": 471
+      "sha256": "2ec3f5b1937b4540ca4029435146a5278e0318fcdcbb200ee1f68650f1413d91",
+      "bytes": 1371
     },
     "masters/P71/symbolic.json": {
-      "sha256": "3737bd1b2cb3729f37d33689025b93dd76c1805fe976641a83adcbd7f8d3fc68",
-      "bytes": 681
+      "sha256": "28bfa5c4536a700b6c0b7b16f4be3eca833964c79e5f4829e3936a6ddc8478ee",
+      "bytes": 981
     },
     "masters/P72/graph.dot": {
       "sha256": "0377dcb121c7890be27bf4d6d777dea84243d3aa29e1bb6b809d359030ccb490",
       "bytes": 2874
     },
     "masters/P72/numerical.json": {
-      "sha256": "fcced3d2a92fb049af70e346e098257b66d76f99558d29c4a945bdcf403cbcbf",
-      "bytes": 364
+      "sha256": "fe2464d088622409213b8f545eb1a0be13303df967bde5e2287428b0c313ea13",
+      "bytes": 964
     },
     "masters/P72/symbolic.json": {
-      "sha256": "5a830b578b5a6ec09208cd476703a34ddea1416b9c0bc78f2966fad66077dcf5",
-      "bytes": 313
+      "sha256": "a687bb06d3681ed690f31848deab2d494972f8b094c1be52f5a8d1166e7bca7a",
+      "bytes": 613
     },
     "masters/P73/graph.dot": {
       "sha256": "1a7ca1e3e415613119ba575e519f6924ef09657c6dbbc5a19509a961a5fdf0e9",
       "bytes": 3251
     },
     "masters/P73/numerical.json": {
-      "sha256": "dbf39e3f54d8913bf57448ea344f5acd77d6b2738da889127b27f8ecee45ba71",
-      "bytes": 258
+      "sha256": "12a75068d8eabd45a100a3014deb25d62687a016f407699962f097fa0d1b40c7",
+      "bytes": 558
     },
     "masters/P73/symbolic.json": {
-      "sha256": "dbf39e3f54d8913bf57448ea344f5acd77d6b2738da889127b27f8ecee45ba71",
-      "bytes": 258
+      "sha256": "081ca4e2af336161f1c5fbb660159b76b48b1b65aea19b77fad4c4e42ef1f32b",
+      "bytes": 394
     },
     "masters/P74/graph.dot": {
       "sha256": "0881686299be350043b485cd9f0002ec44e7df74f3db7d37bc3b22ef0bcb4409",
       "bytes": 3253
     },
     "masters/P74/numerical.json": {
-      "sha256": "c455c2de8c84f2e9cb5f55a2525517682e27664fe17e4c26d7ee68d78c1e7db9",
-      "bytes": 258
+      "sha256": "76af128590f58a49fafb3b9a63e02915a4bacfd56266ef1ecff04f0ac6298203",
+      "bytes": 558
     },
     "masters/P74/symbolic.json": {
-      "sha256": "c455c2de8c84f2e9cb5f55a2525517682e27664fe17e4c26d7ee68d78c1e7db9",
-      "bytes": 258
+      "sha256": "76af128590f58a49fafb3b9a63e02915a4bacfd56266ef1ecff04f0ac6298203",
+      "bytes": 558
     },
     "masters/P8/graph.dot": {
       "sha256": "89647a609893b640e533293ad327a79edd52224cd9099ba6b733c0e60dde4ae1",
       "bytes": 2877
     },
     "masters/P8/numerical.json": {
-      "sha256": "2762261b3a5a19ee200e51a4327f30933fd0ac54a4dfc831ee9fd8bc237646ef",
-      "bytes": 469
+      "sha256": "a3cee580f24889b7a617c6da12bf14a7238584a17314aef8cf4f4867a0dbedae",
+      "bytes": 1369
     },
     "masters/P8/symbolic.json": {
-      "sha256": "0bcff7fce77a2c44b274aa1911e1699e89ba3f4d5f2d6ec28ee6982756a125ab",
-      "bytes": 716
+      "sha256": "03ee573b5237b8cc35f632bbac15dab5717d605b8cc004a9edd0ede9037db8d8",
+      "bytes": 1016
     },
     "masters/P9/graph.dot": {
       "sha256": "6bdecb1e39e1213699308380535b0d6b4b0269be5bfff30a70e81ea4f095006e",
       "bytes": 2119
     },
     "masters/P9/numerical.json": {
-      "sha256": "21491c492dd20ade8751d9847bc0d7710dc8fc2744e5c9dd19cafd7c2322c3fe",
-      "bytes": 469
+      "sha256": "b63da98aa1027f4dcc65c6da9bc2a897e7e9806accebb42db9f7c5d93d1890fc",
+      "bytes": 1369
     },
     "masters/P9/symbolic.json": {
-      "sha256": "84d2338edb42601bdf70ca64a1790daa29dfb803c25d4c110398f9565e816521",
-      "bytes": 367
+      "sha256": "f63ac1fbe845a9206f28179c0d68efef0c2af7fe427876d45d1205aff86f5817",
+      "bytes": 667
     },
     "model.json": {
       "sha256": "0819ce358fdba9d9e388bee2865fa607b7d271f81f43414463215f7679a5713d",
       "bytes": 6981
+    },
+    "producer-update.json": {
+      "sha256": "8a726dea0ebcfe638eba640845cb2bf7d010e07b13881a54343be4ecfbaae70e",
+      "bytes": 366910
     }
-  }
+  },
+  "producer_update": "producer-update.json"
 }

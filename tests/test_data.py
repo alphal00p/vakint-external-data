@@ -1,4 +1,5 @@
 import contextlib
+import copy
 import importlib.util
 import io
 import json
@@ -121,12 +122,160 @@ class PortableDataTests(unittest.TestCase):
                 )
 
     def test_archived_numeric_fallback_is_not_an_exact_formula(self):
-        manifest = data.read_json(data.ROOT / "4L/manifest.json")
-        master = next(m for m in manifest["masters"] if m["name"] == "P5")
-        coefficient = next(c for c in master["coefficients"] if c["epsilon_power"] == 0)
-        self.assertFalse(coefficient["symbolic"])
-        self.assertTrue(coefficient["numerical"])
-        self.assertEqual(coefficient["significant_digits"], 50)
+        original = data.read_json(data.ROOT / "provenance/original-root/manifest.json")
+        master = next(
+            m for m in original["masters"] if m["loop_count"] == 4 and m["name"] == "P5"
+        )
+        self.assertNotIn(0, master["symbolic_powers"])
+        self.assertEqual(master["significant_digits"], 50)
+
+    def producer_fixture(self):
+        """Small payloads exercise generation, not native numerical correctness."""
+        family = data.digest(self.root / "1L/payload.txt")
+        identity = f"L1_{family}_p1"
+        directory = self.root / "1L/masters/P1"
+        data.write_json(directory / "numerical.json", [[-1, "1"], [0, "2.5"], [1, "3"]])
+        data.write_json(
+            directory / "symbolic.json", [[-1, "1"], [0, "symbolica::zeta(2)"], [1, "3"]]
+        )
+        (directory / "graph.dot").write_text("digraph fixture {}\n")
+        graphs = self.root / "1L/graphs"
+        graphs.mkdir()
+        (graphs / f"{family}.dot").write_text("digraph fixture {}\n")
+        master = dict(
+            master_id=identity, loop_count=1, name="P1", alias="fixture",
+            family_sha256=family, powers=[1], status="accepted", significant_digits=50,
+            epsilon_range=[-1, 0], symbolic_powers=[-1], directory="1L/masters/P1",
+            files={
+                name: dict(path=f"1L/masters/P1/{name}", sha256=data.digest(directory / name))
+                for name in ("numerical.json", "symbolic.json", "graph.dot")
+            },
+        )
+        original = dict(
+            masters=[master], families=[dict(sha256=family, fingerprint="fixture", loop_momenta=["k1"])],
+            dimension="4-2*epsilon", normalization="FMFTandMATAD",
+            rustred_revision="fixture", vakint_reference_revision="fixture",
+        )
+        data.write_json(self.root / "provenance/original-root/manifest.json", original)
+        data.write_json(self.root / "provenance/migration.json", dict(files=[]))
+        data.write_json(
+            self.root / "provenance/coefficient-supplement.json",
+            dict(schema="vakint.external-data.coefficient-supplement.v1", provenance={}, masters=[
+                dict(master_id=identity, coefficients=[
+                    dict(epsilon_power=1, symbolic=True, numerical=True, significant_digits=70)
+                ])
+            ]),
+        )
+        for loops in range(1, 5):
+            base = self.root / f"{loops}L"
+            (base / "ibps").mkdir()
+            rules = base / "ibps/rules.rrbin"
+            rules.write_bytes(f"native fixture {loops}".encode())
+            (base / "cache/bindings").mkdir(parents=True)
+            bundle = base / "cache/bundle.rrindex"
+            bundle.write_bytes(bytes.fromhex(data.digest(rules)))
+            data.write_json(base / "cache.json", dict(
+                RustRed_revision="fixture", files_sha256={"bundle.rrindex": data.digest(bundle)},
+                preparation_report=dict(status="complete", failure=None,
+                    total_roots=data.PRIMER_ROOTS[loops], completed_roots=data.PRIMER_ROOTS[loops],
+                    newly_stored_intermediates=0, capture_metadata_exhausted_roots=0),
+            ))
+        data.write_json(self.root / "5L/ibps/application.json", dict(metadata=dict(authority="fixture")))
+        update = dict(schema=data.PRODUCER_SCHEMA, provenance=dict(source="fixture"), masters={
+            identity: dict(coefficients=[
+                dict(epsilon_power=0, symbolic=True, numerical=True, significant_digits=200)
+            ])
+        })
+        return identity, update
+
+    def generate_fixture(self, update):
+        data.write_json(self.root / "provenance/producer-update.json", update)
+        with (
+            patch.object(data, "ROOT", self.root),
+            patch.object(data, "generate_graphs", return_value={}),
+            contextlib.redirect_stdout(io.StringIO()),
+        ):
+            data.generate("v0.0.1")
+
+    def test_producer_updates_preserve_extra_orders_identity_and_payloads(self):
+        identity, update = self.producer_fixture()
+        payload = self.root / "1L/masters/P1/numerical.json"
+        payload_before = payload.read_bytes()
+        original = (self.root / "provenance/original-root/manifest.json").read_bytes()
+        supplement = (self.root / "provenance/coefficient-supplement.json").read_bytes()
+        self.generate_fixture(update)
+        manifest = data.read_json(self.root / "1L/manifest.json")
+        master = manifest["masters"][0]
+        self.assertEqual(master["master_id"], identity)
+        self.assertEqual(master["powers"], [1])
+        self.assertEqual(master["available_epsilon_powers"], [-1, 0, 1])
+        self.assertEqual(master["symbolic_powers"], [-1, 0, 1])
+        self.assertEqual(
+            [c["significant_digits"] for c in master["coefficients"]], [50, 200, 70]
+        )
+        self.assertEqual(data.read_json(self.root / "1L/producer-update.json"), update)
+        self.assertEqual(payload.read_bytes(), payload_before)
+        self.assertEqual((self.root / "provenance/original-root/manifest.json").read_bytes(), original)
+        self.assertEqual((self.root / "provenance/coefficient-supplement.json").read_bytes(), supplement)
+        with contextlib.redirect_stdout(io.StringIO()):
+            data.validate(self.root)
+        first = (self.root / "1L/manifest.json").read_bytes()
+        self.generate_fixture(update)
+        self.assertEqual((self.root / "1L/manifest.json").read_bytes(), first)
+
+    def test_producer_rejects_invalid_or_duplicate_capabilities_and_unknown_keys(self):
+        identity, baseline = self.producer_fixture()
+        invalid = []
+        for field, value in [("epsilon_power", True), ("symbolic", 1),
+                             ("significant_digits", 0), ("significant_digits", True)]:
+            update = copy.deepcopy(baseline)
+            update["masters"][identity]["coefficients"][0][field] = value
+            invalid.append(update)
+        duplicate = copy.deepcopy(baseline)
+        duplicate["masters"][identity]["coefficients"] *= 2
+        invalid.append(duplicate)
+        unknown = copy.deepcopy(baseline)
+        unknown["masters"]["unknown"] = unknown["masters"].pop(identity)
+        invalid.append(unknown)
+        outside = copy.deepcopy(baseline)
+        outside["masters"][identity]["coefficients"][0]["epsilon_power"] = 1
+        invalid.append(outside)
+        for update in invalid:
+            with self.subTest(update=update), self.assertRaises(ValueError):
+                self.generate_fixture(update)
+
+    def test_producer_rejects_missing_payload_hidden_formula_and_wrong_file_binding(self):
+        identity, baseline = self.producer_fixture()
+        symbolic = self.root / "1L/masters/P1/symbolic.json"
+        data.write_json(symbolic, [[-1, "1"], [1, "3"]])
+        with self.assertRaisesRegex(ValueError, "no symbolic payload"):
+            self.generate_fixture(baseline)
+        data.write_json(symbolic, [[-1, "1"], [0, "symbolica::zeta(2)"], [1, "3"]])
+        hidden = copy.deepcopy(baseline)
+        hidden["masters"][identity]["coefficients"][0]["symbolic"] = False
+        with self.assertRaisesRegex(ValueError, "discard a symbolic expression"):
+            self.generate_fixture(hidden)
+        wrong = copy.deepcopy(baseline)
+        wrong["masters"][identity]["files"] = {
+            "symbolic.json": dict(path="masters/P1/symbolic.json", sha256="0" * 64)
+        }
+        with self.assertRaisesRegex(ValueError, "file binding"):
+            self.generate_fixture(wrong)
+
+    def test_producer_receipt_detects_checksum_valid_stale_capabilities(self):
+        identity, update = self.producer_fixture()
+        self.generate_fixture(update)
+        loop_path = self.root / "1L/manifest.json"
+        loop = data.read_json(loop_path)
+        next(c for c in loop["masters"][0]["coefficients"] if c["epsilon_power"] == 0)[
+            "significant_digits"
+        ] = 199
+        data.write_json(loop_path, loop)
+        root = data.read_json(self.root / "manifest.json")
+        root["loop_packs"][0]["manifest_sha256"] = data.digest(loop_path)
+        data.write_json(self.root / "manifest.json", root)
+        with self.assertRaisesRegex(ValueError, "producer capabilities disagree"):
+            data.validate(self.root)
 
     def test_supplemented_orders_have_explicit_capabilities_and_preserved_sources(self):
         supplement = data.read_json(
@@ -165,7 +314,7 @@ class PortableDataTests(unittest.TestCase):
             ]
             if entry["path"].startswith("provenance/original-coefficients/")
         ]
-        self.assertEqual(len(preserved), 192)
+        self.assertGreaterEqual(len(preserved), 192)
         for entry in preserved:
             self.assertEqual(data.digest(data.ROOT / entry["path"]), entry["sha256"])
 

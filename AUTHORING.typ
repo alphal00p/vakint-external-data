@@ -33,6 +33,52 @@ exactness and numerical precision. Original coefficient files are preserved in
 those unchanged bytes. Each affected runtime loop pack includes its own slice
 of the supplement receipt. The original manifest itself is never rewritten.
 
+=== New accepted producer results
+
+`provenance/producer-update.json` explicitly selects newer accepted results,
+using `vakint.external-data.producer-update.v1`, a `provenance` object containing
+the producer's source hashes and acceptance evidence, and a `masters` dictionary
+keyed by the unchanged full `master_id`. Each value has a `coefficients` array:
+
+```json
+{
+  "epsilon_power": 0,
+  "symbolic": true,
+  "numerical": true,
+  "significant_digits": 200
+}
+```
+
+Boolean capability fields are explicit. A numerical entry needs a positive
+integer validated precision; a symbolic-only entry uses null precision. Do not
+infer accuracy from string length or exactness from the presence of a string in
+`symbolic.json`: that file also contains numerical fallbacks. An optional
+entry-level `files` map uses the same loop-relative path and SHA-256 records as
+the master manifest, binding the newly selected payload bytes. Other source and
+evidence fields remain in the receipt.
+
+Generation applies this cumulative selection after the immutable original
+metadata and coefficient supplements. Updates replace capabilities only within
+the original epsilon window; the existing 49 supplemented orders, with their
+own precision and symbolic information, remain intact. Exact formulas must have
+a symbolic payload, numerical flags must match actual rows, and a numerical-only
+symbolic-file row must equal its numerical-file string. Every updated loop pack
+receives its own `producer-update.json` slice, checked against its manifest by
+validation. Stable names, full identities, aliases, graphs, IBPs and caches are
+not recreated from the producer's directory names.
+
+Preserve original coefficients and migration hashes before replacing payloads;
+the original manifest and supplement receipts remain unchanged. Archive new
+producer receipts under new evidence names, retaining earlier validation
+archives. Exact relations containing independent period symbols remain symbolic
+even when that period needs a separate evaluator or precision-limited data.
+Native parser, period-resolution and numerical compatibility checks are distinct
+from this metadata update; do not discard exact mathematics to pass them.
+
+A source-tree update is not a release. An unreleased manifest version may be
+committed and pushed without creating tags, uploading assets or changing
+`data-latest`. Run the release workflow only when explicitly requested.
+
 == Graph conventions and coverage
 
 Five-loop maximal parent graphs come from the audited physical parent incidence

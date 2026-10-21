@@ -17,6 +17,7 @@ from pathlib import Path, PurePosixPath
 ROOT = Path(__file__).resolve().parents[1]
 ROOT_SCHEMA = "vakint.external-data.v1"
 LOOP_SCHEMA = "vakint.external-data.loop.v1"
+PRODUCER_SCHEMA = "vakint.external-data.producer-update.v1"
 PRIMER_ROOTS = {1: 5, 2: 77, 3: 2320, 4: 164352}
 
 
@@ -325,17 +326,93 @@ def coverage(loops):
     }
 
 
+def producer_coefficients(update, known, *, original_windows=False):
+    """Read explicit capabilities; expression spelling never establishes exactness."""
+    if (
+        update.get("schema") != PRODUCER_SCHEMA
+        or not isinstance(update.get("provenance"), dict)
+        or not isinstance(update.get("masters"), dict)
+    ):
+        raise ValueError("unsupported producer update schema or structure")
+    result = {}
+    for identity, entry in update["masters"].items():
+        if identity not in known or not isinstance(entry, dict):
+            raise ValueError("unknown producer-update master identity")
+        if entry.get("master_id", identity) != identity:
+            raise ValueError("producer-update master identity disagrees with its key")
+        rows = entry.get("coefficients")
+        if not isinstance(rows, list) or not rows:
+            raise ValueError("producer-update master needs coefficient records")
+        coefficients = {}
+        for row in rows:
+            if not isinstance(row, dict):
+                raise ValueError("invalid producer coefficient record")
+            power = row.get("epsilon_power")
+            symbolic, numerical = row.get("symbolic"), row.get("numerical")
+            digits = row.get("significant_digits")
+            if (
+                type(power) is not int
+                or type(symbolic) is not bool
+                or type(numerical) is not bool
+                or not (symbolic or numerical)
+                or (numerical and (type(digits) is not int or digits < 1))
+                or (not numerical and digits is not None)
+            ):
+                raise ValueError("invalid producer coefficient capability")
+            if power in coefficients:
+                raise ValueError("duplicate producer coefficient power")
+            if original_windows:
+                first, last = known[identity]["epsilon_range"]
+                if not first <= power <= last:
+                    raise ValueError("producer updates cannot replace supplemented orders")
+            coefficients[power] = {
+                "epsilon_power": power,
+                "symbolic": symbolic,
+                "numerical": numerical,
+                "significant_digits": digits,
+            }
+        result[identity] = coefficients
+    return result
+
+
+def check_producer_payload(entry, master, coefficients, symbolic, numerical):
+    for power, item in coefficients.items():
+        if item["symbolic"] and power not in symbolic:
+            raise ValueError("producer exact coefficient has no symbolic payload")
+        if item["numerical"] != (power in numerical):
+            raise ValueError("producer numerical availability disagrees with payload")
+        if (
+            not item["symbolic"]
+            and power in symbolic
+            and symbolic[power] != numerical[power]
+        ):
+            raise ValueError("producer update would discard a symbolic expression")
+    files = entry.get("files", {})
+    if not isinstance(files, dict):
+        raise ValueError("invalid producer payload file bindings")
+    for name, expected in files.items():
+        if name not in master["files"] or expected != master["files"][name]:
+            raise ValueError("producer payload file binding differs from master")
+
+
 def generate(version):
     if not re.fullmatch(r"v[0-9]+\.[0-9]+\.[0-9]+(?:[-+][A-Za-z0-9.-]+)?", version):
         raise ValueError("version must be an immutable vMAJOR.MINOR.PATCH tag")
     original = read_json(ROOT / "provenance/original-root/manifest.json")
+    producer_path = ROOT / "provenance/producer-update.json"
+    producer = read_json(producer_path) if producer_path.exists() else None
+    known = {master["master_id"]: master for master in original["masters"]}
+    updates = (
+        producer_coefficients(producer, known, original_windows=True)
+        if producer is not None
+        else {}
+    )
     supplement_path = ROOT / "provenance/coefficient-supplement.json"
     supplement = read_json(supplement_path) if supplement_path.exists() else None
     supplements = {}
     if supplement is not None:
         if supplement["schema"] != "vakint.external-data.coefficient-supplement.v1":
             raise ValueError("unsupported coefficient supplement schema")
-        known = {master["master_id"] for master in original["masters"]}
         for entry in supplement["masters"]:
             name = entry["master_id"]
             if name not in known or name in supplements:
@@ -423,8 +500,8 @@ def generate(version):
                         "supplement availability disagrees with coefficient payloads"
                     )
             record["available_epsilon_powers"] = powers
-            record["coefficients"] = [
-                {
+            capabilities = {
+                power: {
                     "epsilon_power": power,
                     "symbolic": power in symbolic_powers,
                     "numerical": power in numerical_powers,
@@ -435,7 +512,32 @@ def generate(version):
                     else None,
                 }
                 for power in powers
-            ]
+            }
+            changed = updates.get(master["master_id"], {})
+            if changed:
+                check_producer_payload(
+                    producer["masters"][master["master_id"]],
+                    record,
+                    changed,
+                    dict(symbolic),
+                    dict(numerical),
+                )
+                capabilities.update(changed)
+                symbolic_powers = {
+                    power for power, item in capabilities.items() if item["symbolic"]
+                }
+                powers = sorted(capabilities)
+                record["symbolic_powers"] = sorted(symbolic_powers)
+                record["producer_update"] = "producer-update.json"
+                digits = [
+                    item["significant_digits"]
+                    for item in capabilities.values()
+                    if item["numerical"]
+                ]
+                record["significant_digits"] = min(digits) if digits else None
+            record["coefficients"] = [capabilities[power] for power in powers]
+            record["available_epsilon_powers"] = powers
+            record["kind"] = "known-master" if powers else "uncomputed-terminal"
             if added:
                 record["symbolic_powers"] = sorted(symbolic_powers)
                 record["epsilon_range"] = [min(powers), max(powers)]
@@ -444,6 +546,19 @@ def generate(version):
                     "order"
                 ] = max(powers)
             masters.append(record)
+        loop_updates = {
+            identity: entry
+            for identity, entry in (producer or {}).get("masters", {}).items()
+            if known[identity]["loop_count"] == loops
+        }
+        if loop_updates:
+            write_json(
+                directory / "producer-update.json",
+                {
+                    **{key: value for key, value in producer.items() if key != "masters"},
+                    "masters": loop_updates,
+                },
+            )
         supplemented = [m for m in masters if m["master_id"] in supplements]
         if supplemented:
             loop_provenance = supplement["provenance"]
@@ -536,6 +651,8 @@ def generate(version):
                 if p.is_file() and p != directory / "manifest.json"
             },
         }
+        if loop_updates:
+            manifest["producer_update"] = "producer-update.json"
         write_json(directory / "manifest.json", manifest)
         loop_packs.append(
             {
@@ -648,6 +765,26 @@ def validate(root=None):
                     "uncomputed terminal advertises available coefficients"
                 )
             checked_path(path.parent, master["parent_graph"]).read_bytes()
+        if update_path := loop.get("producer_update"):
+            update = read_json(checked_path(path.parent, update_path))
+            known = {master["master_id"]: master for master in loop["masters"]}
+            for identity, coefficients in producer_coefficients(update, known).items():
+                master = known[identity]
+                actual = {item["epsilon_power"]: item for item in master["coefficients"]}
+                if any(actual.get(power) != item for power, item in coefficients.items()):
+                    raise ValueError("producer capabilities disagree with loop manifest")
+                symbolic = (
+                    read_json(path.parent / master["files"]["symbolic.json"]["path"])
+                    if "symbolic.json" in master["files"] else []
+                )
+                numerical = (
+                    read_json(path.parent / master["files"]["numerical.json"]["path"])
+                    if "numerical.json" in master["files"] else []
+                )
+                check_producer_payload(
+                    update["masters"][identity], master, coefficients,
+                    dict(symbolic), dict(numerical),
+                )
         if loop["cache"]["available"]:
             metadata = read_json(path.parent / loop["cache"]["metadata"])
             report = metadata["preparation_report"]

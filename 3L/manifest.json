@@ -1,6 +1,6 @@
 {
   "schema": "vakint.external-data.loop.v1",
-  "version": "v0.1.0",
+  "version": "v0.1.1",
   "loop_count": 3,
   "dimension": "4-2*epsilon",
   "normalization": "FMFTandMATAD",
@@ -293,6 +293,7 @@
         1,
         2
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -3,
@@ -492,6 +493,7 @@
         1,
         2
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -3,
@@ -691,6 +693,7 @@
         1,
         2
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -3,
@@ -902,6 +905,7 @@
         2,
         3
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -3,
@@ -1108,6 +1112,7 @@
         1,
         2
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -3,
@@ -1307,6 +1312,7 @@
         1,
         2
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -3,
@@ -1506,6 +1512,7 @@
         1,
         2
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -3,
@@ -1717,6 +1724,7 @@
         2,
         3
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -3,
@@ -1923,6 +1931,7 @@
         1,
         2
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -3,
@@ -2134,6 +2143,7 @@
         2,
         3
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -3,
@@ -2340,6 +2350,7 @@
         1,
         2
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -3,
@@ -2551,6 +2562,7 @@
         2,
         3
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -3,
@@ -2771,6 +2783,7 @@
         3,
         4
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -3,
@@ -3005,6 +3018,7 @@
         2,
         3
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -3,
@@ -3211,6 +3225,7 @@
         1,
         2
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -3,
@@ -3410,6 +3425,7 @@
         1,
         2
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -3,
@@ -3609,6 +3625,7 @@
         1,
         2
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -3,
@@ -3820,6 +3837,7 @@
         2,
         3
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -3,
@@ -4026,6 +4044,7 @@
         1,
         2
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -3,
@@ -4225,6 +4244,7 @@
         1,
         2
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -3,
@@ -4438,6 +4458,7 @@
         3,
         4
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -3,
@@ -4662,6 +4683,7 @@
         2,
         3
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -3,
@@ -4880,6 +4902,7 @@
         2,
         3
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -3,
@@ -5108,6 +5131,7 @@
         2,
         3
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -3,
@@ -5314,6 +5338,7 @@
         1,
         2
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -3,
@@ -5525,6 +5550,7 @@
         2,
         3
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -3,
@@ -5731,6 +5757,7 @@
         1,
         2
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -3,
@@ -5944,6 +5971,7 @@
         3,
         4
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -3,
@@ -6168,6 +6196,7 @@
         2,
         3
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -3,
@@ -6396,6 +6425,7 @@
         2,
         3
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -3,
@@ -6602,6 +6632,7 @@
         1,
         2
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -3,
@@ -6813,6 +6844,7 @@
         2,
         3
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -3,
@@ -7031,6 +7063,7 @@
         2,
         3
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -3,
@@ -7259,6 +7292,7 @@
         2,
         3
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -3,
@@ -7477,6 +7511,7 @@
         2,
         3
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -3,
@@ -7705,6 +7740,7 @@
         2,
         3
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -3,
@@ -7933,6 +7969,7 @@
         2,
         3
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -3,
@@ -8003,7 +8040,7 @@
       "name": "P38",
       "directory": "masters/P38",
       "status": "accepted",
-      "significant_digits": 200,
+      "significant_digits": 2000,
       "symbolic_powers": [
         -3,
         -2,
@@ -8143,7 +8180,7 @@
       "files": {
         "numerical.json": {
           "path": "masters/P38/numerical.json",
-          "sha256": "a5c87af8f4d53069a0d4b56e637f181e233bfd523b7b5883f26d0ca52852d62f"
+          "sha256": "431b57c83c531f71b2ef36a2ecf18bd0596eeb48a137e4ddbb8e45589f29ad90"
         },
         "symbolic.json": {
           "path": "masters/P38/symbolic.json",
@@ -8169,42 +8206,43 @@
         1,
         2
       ],
+      "producer_update": "producer-update.json",
       "coefficients": [
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 2000
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 2000
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 2000
         },
         {
           "epsilon_power": 0,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 2000
         },
         {
           "epsilon_power": 1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 2000
         },
         {
           "epsilon_power": 2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 2000
         }
       ]
     }
@@ -8789,8 +8827,8 @@
       "bytes": 2563
     },
     "masters/P38/numerical.json": {
-      "sha256": "a5c87af8f4d53069a0d4b56e637f181e233bfd523b7b5883f26d0ca52852d62f",
-      "bytes": 964
+      "sha256": "431b57c83c531f71b2ef36a2ecf18bd0596eeb48a137e4ddbb8e45589f29ad90",
+      "bytes": 8164
     },
     "masters/P38/symbolic.json": {
       "sha256": "54254d33ee69402517934b192cfa3bea904909d254296e8d37c95eb985aeba9e",
@@ -8871,6 +8909,11 @@
     "model.json": {
       "sha256": "0819ce358fdba9d9e388bee2865fa607b7d271f81f43414463215f7679a5713d",
       "bytes": 6981
+    },
+    "producer-update.json": {
+      "sha256": "0e8e589f8c76c9e856177b175dac7d61ae282ace6bc3c9f9cebbf3018bd0a95c",
+      "bytes": 188107
     }
-  }
+  },
+  "producer_update": "producer-update.json"
 }

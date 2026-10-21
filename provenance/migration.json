@@ -946,7 +946,7 @@
     },
     {
       "source": "3L/masters/P38/numerical.json",
-      "path": "3L/masters/P38/numerical.json",
+      "path": "provenance/original-coefficients/3L/masters/P38/numerical.json",
       "sha256": "a5c87af8f4d53069a0d4b56e637f181e233bfd523b7b5883f26d0ca52852d62f",
       "bytes": 964
     },
