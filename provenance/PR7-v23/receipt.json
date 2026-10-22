@@ -1,0 +1,29 @@
+{
+  "schema": "vakint.external-data.PR7-four-epsilon1-source-sync.v1",
+  "base_commit": "aca9b1d324044165c2981213a920d6828d679dc0",
+  "actual_local_publication": {
+    "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR7-direct-analytic-four-entry-publication-source-v1/publication-output-v1/publication.json",
+    "sha256": "5dd2e14c5572f35c7efa5abc5677f0493420dd836f79d259d4e714c76c0da31f"
+  },
+  "Root_local_publication_adoption": {
+    "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR7-direct-analytic-four-entry-publication-source-v1/root-actual-four-current-symbolic-publication-adoption-v1.json",
+    "sha256": "3057d1ea2fc16dcc01214a24ffc94de90c8d57e65ee588a322c4d8bc852adb20"
+  },
+  "selected_masters": [
+    "L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p0_p1_p1_p0_p1_p1_p1_p1_p0",
+    "L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p0_p1_p1_p0_p1_p1_p1_p1_p0_p0",
+    "L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p0_p1_p1_p0_p1_p1_p1_p1_p0_p0",
+    "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p0_p0_p1_p1_p1_p1_p1_p0"
+  ],
+  "epsilon_power_replaced_only": 1,
+  "symbolic_validation_digits": 200,
+  "method": "direct_analytic_dimensional_shift_not_PSLQ",
+  "previous_payloads": "provenance/PR7-v23-aca9-before/history.json",
+  "portable_proof_index": {
+    "path": "provenance/PR7-v23/portable-proof-index.json",
+    "sha256": "1681493638ec302a27a5326bdb23572df308b3c1775c291d3713f7136c899d33"
+  },
+  "numerical_ref_graph_IBP_cache_model_and_bounded_constants_unchanged": true,
+  "empirical_D2_validation_not_an_interval_bound_or_runtime_binding": true,
+  "no_commit_push_tag_release_assets_or_data_latest_change": true
+}

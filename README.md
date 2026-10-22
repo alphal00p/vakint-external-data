@@ -28,7 +28,7 @@ Prepared 1L–4L caches complete a declared finite workload; this does not certi
 arbitrary-index IBP coverage. See `coverage.json` and `cache.json` in each pack.
 
 The `v0.1.1` dataset contains 739 numerical coefficient rows:
-677 have exact symbolic expressions and 62 retain numerical fallbacks. These
+681 have exact symbolic expressions and 58 retain numerical fallbacks. These
 counts include 49 additional orders preserved from the previous export.
 The numerical fallback rows have 20,000 validated digits at 1L and 2L. Most
 3L and 4L fallbacks provide 200 digits; exceptions include the three-loop D6
@@ -64,6 +64,16 @@ The PR14 epsilon-one formulas use `vakint::GPLReal`/`vakint::GPLImag` components
 supported by the updated Vakint/Symbolica evaluator. Independent 400-digit
 component references and a separate 20,000-digit bounded-kernel validation
 accompany their qualification.
+
+The four PR7 epsilon-one expressions are direct analytic dimensional-shift
+results, validated against their own 200-digit numerical coefficients. The
+independent D2 integral `vakint::PR7D2` is documented in
+`4L/provenance/PR7-v23/independent-D2-period.json`; its 215-digit RustFlow
+validation uses an empirical refinement model, with an independent
+Mathematica check at 50 digits. This update adds no runtime binding or
+evaluator for that symbol and preserves all existing numerical precision
+upgrades and the four bounded 20,000-digit constant bindings. No new
+release or change to `data-latest` accompanies this source update.
 
 Run `python3 tools/data.py validate` to verify payloads, coefficient availability,
 cache completion receipts and migration hashes. Release and authorship

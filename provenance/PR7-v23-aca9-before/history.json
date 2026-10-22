@@ -1,0 +1,118 @@
+{
+  "schema": "vakint.external-data.preimage-history.v1",
+  "base_commit": "aca9b1d324044165c2981213a920d6828d679dc0",
+  "files": [
+    {
+      "path": "1L/manifest.json",
+      "preserved_path": "provenance/PR7-v23-aca9-before/1L/manifest.json",
+      "sha256": "97ab177e53ee977cca165d6402ade2d2a7b47e297e79d1fc0da025bbbfb90729",
+      "git_blob_sha1": "fe1253d048dd0f4430b1b5ec775ac057b7b4c185",
+      "mode": "100644"
+    },
+    {
+      "path": "1L/producer-update.json",
+      "preserved_path": "provenance/PR7-v23-aca9-before/1L/producer-update.json",
+      "sha256": "72c60cca9cc4faa82473d014c78f958835c98165bd91562f5ce2d5300fec61a1",
+      "git_blob_sha1": "54aac0f777cd0200941a1399a0a89b240b4a6b18",
+      "mode": "100644"
+    },
+    {
+      "path": "2L/manifest.json",
+      "preserved_path": "provenance/PR7-v23-aca9-before/2L/manifest.json",
+      "sha256": "8a324377ddb14bcde6cd3057c23781f392b31f90a3b8470160984f44b560fc92",
+      "git_blob_sha1": "7411c26184cf362627cdffcc0a2839f52db71b55",
+      "mode": "100644"
+    },
+    {
+      "path": "2L/producer-update.json",
+      "preserved_path": "provenance/PR7-v23-aca9-before/2L/producer-update.json",
+      "sha256": "88568016356183cada3f1b5a10623d9f8f10036cc213892a19fee211744e2cab",
+      "git_blob_sha1": "eb0ed7447661f7da5195df20a063d0fb9ab7a0fe",
+      "mode": "100644"
+    },
+    {
+      "path": "3L/manifest.json",
+      "preserved_path": "provenance/PR7-v23-aca9-before/3L/manifest.json",
+      "sha256": "06cd9fa8e68c44534f7efb04adaad3dd73768b0b1574608ce30bce1c3507007f",
+      "git_blob_sha1": "4a2a0621040810f57b6c6ce78db20a4c607f36c6",
+      "mode": "100644"
+    },
+    {
+      "path": "3L/producer-update.json",
+      "preserved_path": "provenance/PR7-v23-aca9-before/3L/producer-update.json",
+      "sha256": "9ce97605821a9840845a839fc7ed71653a85e396213f0fd6ebd725d3fe438a6a",
+      "git_blob_sha1": "acef12443dcd0c787b3a6eafb6062410dba385a7",
+      "mode": "100644"
+    },
+    {
+      "path": "4L/manifest.json",
+      "preserved_path": "provenance/PR7-v23-aca9-before/4L/manifest.json",
+      "sha256": "ac55b26176949fc69b7182edf507f4a7b1015f2cb225d0f2127f827b2afd412d",
+      "git_blob_sha1": "2e0b539fff80099ba8913dfb2e264c3f8b75250c",
+      "mode": "100644"
+    },
+    {
+      "path": "4L/masters/P25/symbolic.json",
+      "preserved_path": "provenance/PR7-v23-aca9-before/4L/masters/P25/symbolic.json",
+      "sha256": "66abb96f15ac1095561dcc5fa3d441e58c1e8ec2313d0f97b30b706ff0c30378",
+      "git_blob_sha1": "6218d43ddb16000a4c65937e004f037b5ee1fa42",
+      "mode": "100644"
+    },
+    {
+      "path": "4L/masters/P42/symbolic.json",
+      "preserved_path": "provenance/PR7-v23-aca9-before/4L/masters/P42/symbolic.json",
+      "sha256": "66abb96f15ac1095561dcc5fa3d441e58c1e8ec2313d0f97b30b706ff0c30378",
+      "git_blob_sha1": "6218d43ddb16000a4c65937e004f037b5ee1fa42",
+      "mode": "100644"
+    },
+    {
+      "path": "4L/masters/P60/symbolic.json",
+      "preserved_path": "provenance/PR7-v23-aca9-before/4L/masters/P60/symbolic.json",
+      "sha256": "66abb96f15ac1095561dcc5fa3d441e58c1e8ec2313d0f97b30b706ff0c30378",
+      "git_blob_sha1": "6218d43ddb16000a4c65937e004f037b5ee1fa42",
+      "mode": "100644"
+    },
+    {
+      "path": "4L/masters/P7/symbolic.json",
+      "preserved_path": "provenance/PR7-v23-aca9-before/4L/masters/P7/symbolic.json",
+      "sha256": "66abb96f15ac1095561dcc5fa3d441e58c1e8ec2313d0f97b30b706ff0c30378",
+      "git_blob_sha1": "6218d43ddb16000a4c65937e004f037b5ee1fa42",
+      "mode": "100644"
+    },
+    {
+      "path": "4L/producer-update.json",
+      "preserved_path": "provenance/PR7-v23-aca9-before/4L/producer-update.json",
+      "sha256": "2a046bbc807edab92c1a6d859a2d30c6b46be567a6e00cea3eb165f89554de34",
+      "git_blob_sha1": "988cc86162ee8212b969dbc1f7a0459940e27753",
+      "mode": "100644"
+    },
+    {
+      "path": "README.md",
+      "preserved_path": "provenance/PR7-v23-aca9-before/README.md",
+      "sha256": "6c91c2bb4e5bcd8186d4fc33900c693795e5ffee44fdd67bcbff98311c9a5ecd",
+      "git_blob_sha1": "24e6698a61b5712edd50364129fb27bae31e07cf",
+      "mode": "100644"
+    },
+    {
+      "path": "manifest.json",
+      "preserved_path": "provenance/PR7-v23-aca9-before/manifest.json",
+      "sha256": "f7ab9d6d202b886ee27c58e0f54dbe016572d3578a10765d44ca64fe81a05168",
+      "git_blob_sha1": "ab1d3d762e4f18ee1eb839431b4e92c4d3c5db8e",
+      "mode": "100644"
+    },
+    {
+      "path": "provenance/producer-update.json",
+      "preserved_path": "provenance/PR7-v23-aca9-before/provenance/producer-update.json",
+      "sha256": "7e72846e9158f302afc455a0bba9b193f529f1889a3c8ca06a0a0641985a42f0",
+      "git_blob_sha1": "96f9b0ae548a67dc2e0449e68280fb184438e05c",
+      "mode": "100644"
+    },
+    {
+      "path": "validation/manifest.json",
+      "preserved_path": "provenance/PR7-v23-aca9-before/validation/manifest.json",
+      "sha256": "838d7eba5caa2041b8e90e7e77656e7c6dea61ef56202a12f97819c24aa75f88",
+      "git_blob_sha1": "8950552888d04ba249cba33983bb334315c2ad16",
+      "mode": "100644"
+    }
+  ]
+}

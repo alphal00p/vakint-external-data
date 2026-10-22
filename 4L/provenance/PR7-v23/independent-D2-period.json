@@ -1,0 +1,48 @@
+{
+  "Bessel_integral_definition": "16 integral_0^infinity r [K0(r)^4 F2(r)+K0(r)^3 F3(r)] dr; Fn(r)=integral_0^r s I0(s) K0(s)^n ds",
+  "mathematical_definition": {
+    "Minkowski_six_propagator_sign": 1,
+    "definition": "convergent exact-D2 PR7 sunrise-bubble integral; never a difference involving the unknown D4 coefficient",
+    "dimension": 2,
+    "family_sha256": "693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1",
+    "loops": 4,
+    "measure": "product(d^2k/pi) in Euclidean space",
+    "powers": [
+      0,
+      0,
+      1,
+      1,
+      0,
+      1,
+      1,
+      1,
+      1,
+      0
+    ],
+    "symbol": "vakint::PR7D2",
+    "unit_mass_squared": 1
+  },
+  "no_numeric_center_or_interval_bound_exported_by_this_definition": true,
+  "radial_integral_definition": "P=integral_0^infinity S(z) B(z)/(1+z) dz, with S the D=2 massive sunrise and B the D=2 unit-mass bubble, normalized by one d^2k/pi per loop",
+  "role": "independently_defined_convergent_D2_graph_integral_not_a_D4_coefficient_alias",
+  "runtime": {
+    "evaluator_installed": false,
+    "existing_four_bounded_20000_digit_constant_bindings_unchanged": true,
+    "numerical_binding_provided": false
+  },
+  "schema": "vakint.external-data.independent-D2-period-definition.v1",
+  "symbol": "vakint::PR7D2",
+  "validation_provenance": {
+    "error_quality": "empirical_refinement_model_not_interval_bounded",
+    "exact_export_Root_acceptance_sha256": "dd4182ae97841d78967cae6d83b7e341b7b3cb7ddd64f68dfe2f97581e84f140",
+    "independent_Mathematica_check_digits": 50,
+    "independent_RustFlow_period_source_cap": 215,
+    "local_symbolic_publication_adoption_sha256": "3057d1ea2fc16dcc01214a24ffc94de90c8d57e65ee588a322c4d8bc852adb20",
+    "period_Root_acceptance_sha256": "e674edbffa1ae99594aaa1714565f385a5e92ffd04f2ae99b64c823791affb8c",
+    "symbolic_coefficient_validation_digits": 200,
+    "portable_proof_index": {
+      "path": "provenance/PR7-v23/portable-proof-index.json",
+      "sha256": "1681493638ec302a27a5326bdb23572df308b3c1775c291d3713f7136c899d33"
+    }
+  }
+}

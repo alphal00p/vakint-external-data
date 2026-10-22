@@ -6,12 +6,12 @@
       "sha256": "f2992d7479b2a48c088c4e380f70c9fbf542a322bc20d32f5838af7e36508ccc"
     },
     "symbolic_coverage": {
-      "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/coverage-v22.json",
-      "sha256": "1613f030f2e0acc3e0bfb2b6ea417ddeb258da4e6cfc0d52ff831ff1660dcb2f"
+      "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/coverage-v23.json",
+      "sha256": "e50b2ecca8b082aa9862c2ed9f24dea5f74f64bcf7793e43d045e896c777125f"
     },
     "symbolic_overlays": {
-      "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/current-symbolic-overlays-v6.json",
-      "sha256": "b1acdf0f9996c4f1ee1de9a2df6fcc23b0eda580a48a6c7bc20edca9ac77361f"
+      "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/current-symbolic-overlays-v7.json",
+      "sha256": "7b75bcfa193f01948a7e61c13e231d8b355859c307a41cded65a74e45553ae02"
     },
     "source_intake": {
       "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/external-data-PR14-v22-repository-update-source-v1/intake.json",
@@ -21,8 +21,8 @@
     "retained_supplemented_coefficients": 49,
     "numerical_accuracy_evidence_not_interval_proof": true,
     "previous_producer_update": {
-      "path": "provenance/producer-update-v0.1.1-PR14-v22-20261021-v1-before/provenance/producer-update.json",
-      "sha256": "518d5a041e434a66abad517e4aa32da1476c892f00b0bcc8f425eccbf0379cf7"
+      "path": "provenance/PR7-v23-83cd-before/provenance/producer-update.json",
+      "sha256": "7e72846e9158f302afc455a0bba9b193f529f1889a3c8ca06a0a0641985a42f0"
     },
     "actual_PR4_publication": {
       "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR4-direct10-acceptance-publication-source-v1/publication-output-v1/publication.json",
@@ -72,6 +72,47 @@
       "remote_published_finite_K5_caps_preserved": 20000,
       "no_new_independent_period_or_coefficient_precision_validation_by_this_reconciliation": true,
       "nine_PR14_GPL_alphabet_gaps_remain": true
+    },
+    "actual_PR7_publication": {
+      "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR7-direct-analytic-four-entry-publication-source-v1/publication-output-v1/publication.json",
+      "sha256": "5dd2e14c5572f35c7efa5abc5677f0493420dd836f79d259d4e714c76c0da31f"
+    },
+    "actual_PR7_publication_audit": {
+      "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR7-direct-analytic-four-entry-publication-source-v1/peer-independent-actual-four-epsilon1-file-publication-audit-pr11-v1.json",
+      "sha256": "7ac5eda95fa2772e4467ac0f54f6026f7e814e42ff14129505cb08d7924ee0f9"
+    },
+    "Root_actual_PR7_publication_adoption": {
+      "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR7-direct-analytic-four-entry-publication-source-v1/root-actual-four-current-symbolic-publication-adoption-v1.json",
+      "sha256": "3057d1ea2fc16dcc01214a24ffc94de90c8d57e65ee588a322c4d8bc852adb20"
+    },
+    "new_PR7_exact_cells": 4,
+    "PR7D2_runtime_evaluator_pending": true,
+    "PR7_direct_analytic_validation": {
+      "symbolic_coefficient_digits": 200,
+      "independent_D2_RustFlow_source_cap": 215,
+      "independent_D2_Mathematica_check_digits": 50,
+      "empirical_refinement_not_interval_bound": true,
+      "runtime_binding_provided": false,
+      "period_definition": {
+        "path": "4L/provenance/PR7-v23/independent-D2-period.json",
+        "sha256": "43dd9fd09075b8b679a99365ddd49e44a335b6455af730a980a5af511e910a71"
+      },
+      "portable_proof_index": {
+        "path": "provenance/PR7-v23/portable-proof-index.json",
+        "sha256": "1681493638ec302a27a5326bdb23572df308b3c1775c291d3713f7136c899d33"
+      }
+    },
+    "PR7_fresh83cd_reconciliation": {
+      "base_commit": "83cd193f9cfabebbe092c2452dc09a0961b9e1a2",
+      "actual_readonly_intake": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/external-data-PR7-fresh83cd-intake-source-v2/intake-output-v1/qualification.json",
+        "sha256": "2805f233e71b3a89fc8c6ed3f68ebcbe99a6c9043a3a65c44e338bce545121e0"
+      },
+      "Root_actual_readonly_intake_adoption": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/external-data-PR7-fresh83cd-intake-source-v2/root-actual-fresh83cd-readonly-intake-adoption-v1.json",
+        "sha256": "1ce9213d1309be3d530103124e505de5a4e62063caf71dbb45412a99203568ff"
+      },
+      "remote_38_rows_at20000_6_at2000_695_at200_preserved": true
     }
   },
   "masters": {
