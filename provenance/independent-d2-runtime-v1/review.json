@@ -1,0 +1,28 @@
+{
+  "accepted": true,
+  "independent_exact_arithmetic": "fractions.Fraction; no Decimal arithmetic rounding",
+  "records": [
+    {
+      "symbol": "vakint::PR7D2",
+      "cap": 215,
+      "exact_center_and_error_projection": true,
+      "authority": "empirical, not interval bounded"
+    },
+    {
+      "symbol": "vakint::PR10D2",
+      "cap": 215,
+      "exact_center_and_error_projection": true,
+      "authority": "empirical, not interval bounded"
+    },
+    {
+      "symbol": "vakint::PR15D2",
+      "cap": 215,
+      "exact_center_and_error_projection": true,
+      "authority": "empirical, not interval bounded"
+    }
+  ],
+  "source_projection_sha256": "7247d65cf208a1ba92ce5916b6196abe9068c6e83174a40da73fbe4d48e81c91",
+  "previous_K5_records_unchanged": true,
+  "prior_numerical_coefficient_files_unchanged": true,
+  "scope": "Independent exact arithmetic review of existing accepted empirical periods; no new precision or interval-proof claim."
+}

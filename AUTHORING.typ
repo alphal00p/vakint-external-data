@@ -156,6 +156,25 @@ high-guard integration and direct-moment export bundles under `validation/`
 make those bounds independently replayable. Their larger internal precision
 does not promote any public coefficient or primitive cap above 20,000 digits.
 
+The additive `provenance/independent-d2-runtime-v1` selection supplies
+`PR7D2`, `PR10D2` and `PR15D2` from independently defined convergent D2
+integrals. Their 215-digit source caps are empirical refinement capabilities,
+with `error_quality: "estimated"`; they are not interval certificates or
+arbitrary-precision evaluators. The stored high-guard centers do not raise those
+caps. `tools/d2_constants.py` authenticates the archived acceptance, validation
+and profile inputs and reproduces the runtime schema projection using only the
+standard library. It reads no D4 master coefficients and performs no new
+numerical integration. PR10D2 and PR15D2 retain an error envelope covering both
+accepted profile neighborhoods about the published center. Definitions use
+positive Euclidean unit-mass conventions directly, with no extra Minkowski sign.
+
+The finite-constant receipt's optional `additional_sources` selects this fixed
+adapter. Unknown adapters, changed centers, errors, definitions or source caps
+fail validation. Original four K5 records are retained exactly, and the former
+runtime payload, receipt and manifests are preserved as byte-exact before-images.
+The selected D2 values and their error metadata are carried in the ordinary
+authenticated `4L/constants.json`; consumers do not execute the source verifier.
+
 == Graph conventions and coverage
 
 Five-loop maximal parent graphs come from the audited physical parent incidence

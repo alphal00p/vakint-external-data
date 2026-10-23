@@ -3,7 +3,7 @@
   "loop_count": 4,
   "runtime_payload": {
     "path": "4L/constants.json",
-    "sha256": "17b5a1fd3c70f20ce6ce2459ea53865c07c164f479199de68f487cbf072da189"
+    "sha256": "9c2b7d773c97c00899c3cf462c8fe62034db0f949d5cd3f93469d7dfb2da6102"
   },
   "source_payload": {
     "path": "validation/bessel-k5-moments-20000/constants.json",
@@ -31,5 +31,11 @@
   "symbolic_review": {
     "path": "validation/bessel-k5-symbolic-review/original/audit.json",
     "sha256": "e7bc59803f8d873218122e28732236ae309bf21fbaec2aa625154bf0112ec41e"
+  },
+  "additional_sources": {
+    "independent-d2-v1": {
+      "path": "provenance/independent-d2-runtime-v1/projection.json",
+      "sha256": "c24631c270a70a20a4012ed504c6c11101c2b469be3467c85fc6c02bf3e272b5"
+    }
   }
 }

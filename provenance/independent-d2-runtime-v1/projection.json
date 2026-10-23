@@ -1,0 +1,42 @@
+{
+  "schema": "vakint.external-data.independent-d2-runtime-projection.v1",
+  "accepted": true,
+  "no_new_numerical_calculation": true,
+  "no_master_coefficient_inversion": true,
+  "all_errors_estimated_not_bounded": true,
+  "readset": [
+    {
+      "path": "provenance/PR7-v23/portable-proof-index.json",
+      "sha256": "1681493638ec302a27a5326bdb23572df308b3c1775c291d3713f7136c899d33"
+    },
+    {
+      "path": "4L/provenance/PR7-v23/independent-D2-period.json",
+      "sha256": "43dd9fd09075b8b679a99365ddd49e44a335b6455af730a980a5af511e910a71"
+    },
+    {
+      "path": "provenance/PR10-PR15-v24/portable-proof-index.json",
+      "sha256": "52c8be0a6fe4a6c347047ff52458004e9149fdfefea0efc9797bf6c21613b41b"
+    },
+    {
+      "path": "4L/provenance/PR10-PR15-v24/independent-D2-periods-v1.json",
+      "sha256": "ac0f8f72e34660f873d17b4227e5aa5eb0f293592364cb9213f93c241f918c0c"
+    }
+  ],
+  "source_payload": {
+    "path": "provenance/independent-d2-runtime-v1/constants-d2.json",
+    "sha256": "7247d65cf208a1ba92ce5916b6196abe9068c6e83174a40da73fbe4d48e81c91"
+  },
+  "previous_runtime_payload": {
+    "path": "provenance/independent-d2-runtime-v1/before/4L/constants.json",
+    "sha256": "17b5a1fd3c70f20ce6ce2459ea53865c07c164f479199de68f487cbf072da189"
+  },
+  "previous_binding_receipt": {
+    "path": "provenance/independent-d2-runtime-v1/before/provenance/finite-constant-bindings.json",
+    "sha256": "297fa5a7fab74f948adbb4f6b7b8e53fad710b00138bb38e032c635386d17639"
+  },
+  "derivation": "tools/d2_constants.py replays the fixed authenticated source projection; no numerical engine",
+  "independent_review": {
+    "path": "provenance/independent-d2-runtime-v1/review.json",
+    "sha256": "70cfabf27fe1ee6c7b63bcb11c9753f62a174b58d2ee5412f8192a0f340f24a2"
+  }
+}

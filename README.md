@@ -104,10 +104,10 @@ results, validated against their own 200-digit numerical coefficients. The
 independent D2 integral `vakint::PR7D2` is documented in
 `4L/provenance/PR7-v23/independent-D2-period.json`; its 215-digit RustFlow
 validation uses an empirical refinement model, with an independent
-Mathematica check at 50 digits. This update adds no runtime binding or
-evaluator for that symbol and preserves all existing numerical precision
-upgrades and the four bounded 20,000-digit constant bindings. No new
-release or change to `data-latest` accompanies this source update.
+Mathematica check at 50 digits. The additive runtime projection now supplies
+this independently defined period as a finite 215-digit binding with an
+explicitly estimated error. It preserves all existing numerical precision
+upgrades and the four bounded 20,000-digit constant bindings.
 
 Run `python3 tools/data.py validate` to verify payloads, coefficient availability,
 cache completion receipts and migration hashes. Release and authorship
@@ -117,6 +117,11 @@ The eleven PR10/PR9d/combination-B finite expressions are direct analytic result
 independently checked against their own 200-digit numerical coefficients.
 Their positive Euclidean D2 periods `vakint::PR10D2` and `vakint::PR15D2`
 are defined in `4L/provenance/PR10-PR15-v24/independent-D2-periods-v1.json`,
-with independent 215-digit empirical evidence. This update installs no
-numerical binding or evaluator and preserves every existing numerical
-precision, extra order and bounded constant payload. No new release is created.
+with independent 215-digit empirical evidence. The additive runtime projection
+supplies these positive Euclidean periods as finite 215-digit bindings with
+estimated errors covering both accepted profile neighborhoods. These are not
+interval certificates or arbitrary-precision evaluators. Every existing
+numerical coefficient, extra order and bounded constant record is preserved.
+The reproducible projection and exact before-images are under
+[`provenance/independent-d2-runtime-v1`](provenance/independent-d2-runtime-v1).
+This source update does not itself create a release.

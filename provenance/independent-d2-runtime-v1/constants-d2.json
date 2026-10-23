@@ -1,0 +1,1220 @@
+[
+  {
+    "symbol": "vakint::PR7D2",
+    "value": "4.34699941246345353780888004627284687618165473397728625394481104364915727853359596246608531729375429135575174638425420624907586512954910098820758865965226242403750539464661637768763602866395029215058069237629373385815753984816398194491394891850899837456728635202363968763490540751232688880973215915179968465820728925554701685052411065459540724052642592394572532502467",
+    "significant_digits": 215,
+    "absolute_error": "4.346999412463453537808880046272846876181655171313708200376641403586089354691388318214809203003889837721887469834912393122766264544653465903935442019248509246013136920241650531753536305243982143292260830483232800962447304273569906093621567557292391328795976974988617322782845421066369397855059870820971899191573620386485578274997642344672271682636989087601057712313009156420618771598274990064455361724814338770375035486714354925735809741730325001121393500949283592887032322274220912828951362975444490150868945821118777781E-235",
+    "error_quality": "estimated",
+    "definition": "16 integral_0^infinity r [K0(r)^4 F2(r)+K0(r)^3 F3(r)] dr; Fn(r)=integral_0^r s I0(s) K0(s)^n ds",
+    "provenance": {
+      "source_kind": "independent convergent D2 integral; no master coefficient inversion",
+      "error_authority": "accepted two-profile empirical refinement; not an interval certificate",
+      "definition_metadata": {
+        "Minkowski_six_propagator_sign": 1,
+        "definition": "convergent exact-D2 PR7 sunrise-bubble integral; never a difference involving the unknown D4 coefficient",
+        "dimension": 2,
+        "family_sha256": "693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1",
+        "loops": 4,
+        "measure": "product(d^2k/pi) in Euclidean space",
+        "powers": [
+          0,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "symbol": "vakint::PR7D2",
+        "unit_mass_squared": 1
+      },
+      "definition": {
+        "path": "4L/provenance/PR7-v23/independent-D2-period.json",
+        "sha256": "43dd9fd09075b8b679a99365ddd49e44a335b6455af730a980a5af511e910a71"
+      },
+      "portable_proof_index": {
+        "path": "provenance/PR7-v23/portable-proof-index.json",
+        "sha256": "1681493638ec302a27a5326bdb23572df308b3c1775c291d3713f7136c899d33"
+      },
+      "acceptance": {
+        "path": "validation/producer-update-PR7-v23-e674edbffa1ae99594aaa1714565f385a5e92ffd04f2ae99b64c823791affb8c.json.gz",
+        "sha256": "ec204879231a562268290f9b421529b15559421993f8bf56e9c79ffad6f1b329",
+        "bytes": 1465,
+        "uncompressed_sha256": "e674edbffa1ae99594aaa1714565f385a5e92ffd04f2ae99b64c823791affb8c",
+        "uncompressed_bytes": 3423
+      },
+      "validation": {
+        "path": "validation/producer-update-PR7-v23-df95a3db99dcfb6c8e4fa6cc52ed825e97a2bb294c13bc7d63bfd72c8af69126.json.gz",
+        "sha256": "8f3797a89e8639d5a2c3e1c9c12b6e62df88f41c40f87fed69990db2070bf8ae",
+        "bytes": 1484,
+        "uncompressed_sha256": "df95a3db99dcfb6c8e4fa6cc52ed825e97a2bb294c13bc7d63bfd72c8af69126",
+        "uncompressed_bytes": 4252
+      },
+      "center_profile": {
+        "path": "validation/producer-update-PR7-v23-6de3108e2092eb57baaab2e8f3e0d09c7320b323058f10218f40250f7918ad36.json.gz",
+        "sha256": "d870d80a0d27ba67495ecc6b13adc27b6ee7dc84bc7465de160f52226692f2f4",
+        "bytes": 5052,
+        "uncompressed_sha256": "6de3108e2092eb57baaab2e8f3e0d09c7320b323058f10218f40250f7918ad36",
+        "uncompressed_bytes": 33849
+      },
+      "center_json_pointer": "/endpoint_periods/0/0",
+      "error_json_pointer": "/combined_empirical_model_abs",
+      "independent_Bessel_check_digits": 50,
+      "accepted_significant_digits": 215,
+      "stored_digits_do_not_extend_source_cap": true
+    }
+  },
+  {
+    "symbol": "vakint::PR10D2",
+    "value": "1.01895690619090112144950059682967773827620040598472003854900105254056898544869105701474076283783111936900573219847163985801920122131086382883005524552072238217286838920572501229569691583155423644927307977475527476290306762348833542055100169187526882329040014756608853663045667744162182952729212789096590333875929456535764160675910864826079819829031137933848060422779",
+    "significant_digits": 215,
+    "absolute_error": "1.0189569061909011214495005968296777382770871016442669682128896303887541062893687810796351577257691297224292802325895758107632400561693436395172045620266194340386441840288685703385453030195803673713159103836895187036614625006613931046011994606637090597303637991626695278E-232",
+    "error_quality": "estimated",
+    "definition": "pi^(-4) integral over four d^2 k_E measures of the scalar unit-mass catalog topology specified by the pinned ordered denominators and signed indices, with q_E^2+1 denominators and no coupling/symmetry factor",
+    "provenance": {
+      "source_kind": "independent convergent D2 integral; no master coefficient inversion",
+      "error_authority": "accepted two-profile empirical refinement; not an interval certificate",
+      "definition_metadata": {
+        "A": 7,
+        "Gamma_factor": "Gamma(A-4)/product(Gamma(a_e))",
+        "U_G": "(x+y)*(a+b)*(c*d+c*e+d*e)+(a+b)*x*y*(d+e)+(x+y)*a*b*(c+e)+x*y*a*b",
+        "active_physical_denominators": [
+          {
+            "family_slot_index_base0": 1,
+            "positive_Euclidean_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ],
+              "constant": "1"
+            },
+            "positive_Euclidean_rule": "Replace Minkowski scalar products by Euclidean scalar products and use q_E^2+1; D_M = -(q_E^2+1) under Wick rotation.",
+            "power": 1,
+            "stored_Minkowski_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            }
+          },
+          {
+            "family_slot_index_base0": 3,
+            "positive_Euclidean_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1"
+              ],
+              "constant": "1"
+            },
+            "positive_Euclidean_rule": "Replace Minkowski scalar products by Euclidean scalar products and use q_E^2+1; D_M = -(q_E^2+1) under Wick rotation.",
+            "power": 1,
+            "stored_Minkowski_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1"
+              ],
+              "constant": "-1"
+            }
+          },
+          {
+            "family_slot_index_base0": 4,
+            "positive_Euclidean_denominator": {
+              "coefficients": [
+                "1",
+                "0",
+                "-2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0"
+              ],
+              "constant": "1"
+            },
+            "positive_Euclidean_rule": "Replace Minkowski scalar products by Euclidean scalar products and use q_E^2+1; D_M = -(q_E^2+1) under Wick rotation.",
+            "power": 1,
+            "stored_Minkowski_denominator": {
+              "coefficients": [
+                "1",
+                "0",
+                "-2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            }
+          },
+          {
+            "family_slot_index_base0": 5,
+            "positive_Euclidean_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "-2",
+                "0",
+                "1",
+                "0",
+                "0"
+              ],
+              "constant": "1"
+            },
+            "positive_Euclidean_rule": "Replace Minkowski scalar products by Euclidean scalar products and use q_E^2+1; D_M = -(q_E^2+1) under Wick rotation.",
+            "power": 1,
+            "stored_Minkowski_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "-2",
+                "0",
+                "1",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            }
+          },
+          {
+            "family_slot_index_base0": 6,
+            "positive_Euclidean_denominator": {
+              "coefficients": [
+                "1",
+                "0",
+                "-2",
+                "-2",
+                "0",
+                "0",
+                "0",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "1"
+            },
+            "positive_Euclidean_rule": "Replace Minkowski scalar products by Euclidean scalar products and use q_E^2+1; D_M = -(q_E^2+1) under Wick rotation.",
+            "power": 1,
+            "stored_Minkowski_denominator": {
+              "coefficients": [
+                "1",
+                "0",
+                "-2",
+                "-2",
+                "0",
+                "0",
+                "0",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "-1"
+            }
+          },
+          {
+            "family_slot_index_base0": 7,
+            "positive_Euclidean_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "-2",
+                "-2",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "1"
+            },
+            "positive_Euclidean_rule": "Replace Minkowski scalar products by Euclidean scalar products and use q_E^2+1; D_M = -(q_E^2+1) under Wick rotation.",
+            "power": 1,
+            "stored_Minkowski_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "-2",
+                "-2",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "-1"
+            }
+          },
+          {
+            "family_slot_index_base0": 8,
+            "positive_Euclidean_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "1"
+            },
+            "positive_Euclidean_rule": "Replace Minkowski scalar products by Euclidean scalar products and use q_E^2+1; D_M = -(q_E^2+1) under Wick rotation.",
+            "power": 1,
+            "stored_Minkowski_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "-1"
+            }
+          }
+        ],
+        "dimension": 2,
+        "family_fingerprint_utf8_sha256": "eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7",
+        "graph_parameter_to_family_slot": {
+          "a": 4,
+          "b": 6,
+          "c": 7,
+          "d": 3,
+          "e": 5,
+          "x": 8,
+          "y": 1
+        },
+        "loop_count": 4,
+        "mass_scaling": "(mUV^2)^(4-A)",
+        "momentum_measure": "product over four loops of d^2 k_E / pi",
+        "no_coupling_or_symmetry_factor": true,
+        "ordered_family": {
+          "aliases": [
+            "4L_h"
+          ],
+          "coordinate_index_base": 0,
+          "coordinates": [
+            {
+              "kind": "loop_loop",
+              "left": 0,
+              "right": 0
+            },
+            {
+              "kind": "loop_loop",
+              "left": 0,
+              "right": 1
+            },
+            {
+              "kind": "loop_loop",
+              "left": 0,
+              "right": 2
+            },
+            {
+              "kind": "loop_loop",
+              "left": 0,
+              "right": 3
+            },
+            {
+              "kind": "loop_loop",
+              "left": 1,
+              "right": 1
+            },
+            {
+              "kind": "loop_loop",
+              "left": 1,
+              "right": 2
+            },
+            {
+              "kind": "loop_loop",
+              "left": 1,
+              "right": 3
+            },
+            {
+              "kind": "loop_loop",
+              "left": 2,
+              "right": 2
+            },
+            {
+              "kind": "loop_loop",
+              "left": 2,
+              "right": 3
+            },
+            {
+              "kind": "loop_loop",
+              "left": 3,
+              "right": 3
+            }
+          ],
+          "denominator_convention": "constant + sum_j coefficients[j] * coordinates[j]",
+          "denominators": [
+            {
+              "coefficients": [
+                "1",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "1",
+                "0",
+                "-2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "-2",
+                "0",
+                "1",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "1",
+                "0",
+                "-2",
+                "-2",
+                "0",
+                "0",
+                "0",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "-2",
+                "-2",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "1",
+                "-2",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            }
+          ],
+          "dimension": "rustred::{}::d",
+          "external_momenta": [],
+          "fingerprint": "rustred-integral-family-v2;N18:symbolica_integral;L4;2:k1;2:k2;2:k3;2:k4;E0;P1;1:d;Q4,0,10;M;RY1,1;I+1;X1;Y1,1;I+1;X0;D10;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I+2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I+2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I+2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;G0;U10;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;",
+          "graph": "graphs/eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7.dot",
+          "loop_momenta": [
+            "k1",
+            "k2",
+            "k3",
+            "k4"
+          ],
+          "power_shifts": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "sha256": "eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7"
+        },
+        "positive_Euclidean_definition": "pi^(-4) integral over four d^2 k_E measures of the scalar unit-mass catalog topology specified by the pinned ordered denominators and signed indices, with q_E^2+1 denominators and no coupling/symmetry factor",
+        "positive_Euclidean_parametric_definition": "Gamma(A-4)/product(Gamma(a_e)) times the projective positive-simplex integral of product(x_e^(a_e-1))/U_G(x), with A=sum(a_e), physical a_e>0, sum(x_e)=1, and U_G from the pinned topology.",
+        "projective_simplex_constraint": "sum(x_e)=1 with x_e>=0",
+        "scalar_numerator": "1",
+        "signed_index_tuple": [
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "total_physical_propagator_power": 7,
+        "unit_mass_squared": true
+      },
+      "definition": {
+        "path": "4L/provenance/PR10-PR15-v24/independent-D2-periods-v1.json",
+        "sha256": "ac0f8f72e34660f873d17b4227e5aa5eb0f293592364cb9213f93c241f918c0c"
+      },
+      "portable_proof_index": {
+        "path": "provenance/PR10-PR15-v24/portable-proof-index.json",
+        "sha256": "52c8be0a6fe4a6c347047ff52458004e9149fdfefea0efc9797bf6c21613b41b"
+      },
+      "acceptance": {
+        "path": "validation/producer-update-PR10-PR15-v24-25cce0adaf135f7ff29c83ed4bf64e04994d9bff1d2e921176dfc50ed2ec73a8.json.gz",
+        "sha256": "50f2545a42fca0756182e3383755547ad494232f450dfb72e07291f575df79a5",
+        "bytes": 2805,
+        "uncompressed_sha256": "25cce0adaf135f7ff29c83ed4bf64e04994d9bff1d2e921176dfc50ed2ec73a8",
+        "uncompressed_bytes": 10330
+      },
+      "validation": {
+        "path": "validation/producer-update-PR10-PR15-v24-9149e424e32cf3f7ca0af21f4a8e21e86cc6e40f63939fbdf761d64d987fc03d.json.gz",
+        "sha256": "c4af7815e48a791937e6a431553637493736a9fb4320f0e74eebb422f677b678",
+        "bytes": 2651,
+        "uncompressed_sha256": "9149e424e32cf3f7ca0af21f4a8e21e86cc6e40f63939fbdf761d64d987fc03d",
+        "uncompressed_bytes": 8744
+      },
+      "center_json_pointer": "/periods/0/current_independent_auxiliary_evidence/qualified_bindings/1/center",
+      "error_rule": "max_i(abs(chosen_center-center_i)+error_upper_i)",
+      "accepted_significant_digits": 215,
+      "stored_digits_do_not_extend_source_cap": true
+    }
+  },
+  {
+    "symbol": "vakint::PR15D2",
+    "value": "0.320802344482058660064999011886922597158677710879746260260342223558273559008742271423984751552730749969224787439073777629187867921690886544081858222147291563670525122396202907283475039914582587342831508254227193477944737706654910571083054951624212305628318636389213721481418024586514151325116552490521868331234797876494365826467539840973081439956849235351730828475692",
+    "significant_digits": 215,
+    "absolute_error": "1.0000000000000000000000000000000000000006908247942949529101312129307930290794016856506502651265173898064970614193329089871982358665999651177700275857669057222434277303223976988678579614781532557793048493347296726360115856306953987951804284785119807290650532511506995323E-232",
+    "error_quality": "estimated",
+    "definition": "pi^(-4) integral over four d^2 k_E measures of the scalar unit-mass catalog topology specified by the pinned ordered denominators and signed indices, with q_E^2+1 denominators and no coupling/symmetry factor",
+    "provenance": {
+      "source_kind": "independent convergent D2 integral; no master coefficient inversion",
+      "error_authority": "accepted two-profile empirical refinement; not an interval certificate",
+      "definition_metadata": {
+        "A": 8,
+        "Gamma_factor": "Gamma(A-4)/product(Gamma(a_e))",
+        "U_G": "(x+y)*((c+d+e+f)*((b+d+f)*(a+e+f)-f^2)-(d+f)^2*(a+e+f)-(e+f)^2*(b+d+f)+2*(d+f)*(e+f)*f)+x*y*((b+d+f)*(a+e+f)-f^2)",
+        "active_physical_denominators": [
+          {
+            "family_slot_index_base0": 1,
+            "positive_Euclidean_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ],
+              "constant": "1"
+            },
+            "positive_Euclidean_rule": "Replace Minkowski scalar products by Euclidean scalar products and use q_E^2+1; D_M = -(q_E^2+1) under Wick rotation.",
+            "power": 1,
+            "stored_Minkowski_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            }
+          },
+          {
+            "family_slot_index_base0": 2,
+            "positive_Euclidean_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0"
+              ],
+              "constant": "1"
+            },
+            "positive_Euclidean_rule": "Replace Minkowski scalar products by Euclidean scalar products and use q_E^2+1; D_M = -(q_E^2+1) under Wick rotation.",
+            "power": 1,
+            "stored_Minkowski_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            }
+          },
+          {
+            "family_slot_index_base0": 3,
+            "positive_Euclidean_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1"
+              ],
+              "constant": "1"
+            },
+            "positive_Euclidean_rule": "Replace Minkowski scalar products by Euclidean scalar products and use q_E^2+1; D_M = -(q_E^2+1) under Wick rotation.",
+            "power": 1,
+            "stored_Minkowski_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1"
+              ],
+              "constant": "-1"
+            }
+          },
+          {
+            "family_slot_index_base0": 4,
+            "positive_Euclidean_denominator": {
+              "coefficients": [
+                "1",
+                "0",
+                "-2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0"
+              ],
+              "constant": "1"
+            },
+            "positive_Euclidean_rule": "Replace Minkowski scalar products by Euclidean scalar products and use q_E^2+1; D_M = -(q_E^2+1) under Wick rotation.",
+            "power": 1,
+            "stored_Minkowski_denominator": {
+              "coefficients": [
+                "1",
+                "0",
+                "-2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            }
+          },
+          {
+            "family_slot_index_base0": 5,
+            "positive_Euclidean_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "-2",
+                "0",
+                "1",
+                "0",
+                "0"
+              ],
+              "constant": "1"
+            },
+            "positive_Euclidean_rule": "Replace Minkowski scalar products by Euclidean scalar products and use q_E^2+1; D_M = -(q_E^2+1) under Wick rotation.",
+            "power": 1,
+            "stored_Minkowski_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "-2",
+                "0",
+                "1",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            }
+          },
+          {
+            "family_slot_index_base0": 6,
+            "positive_Euclidean_denominator": {
+              "coefficients": [
+                "1",
+                "0",
+                "-2",
+                "-2",
+                "0",
+                "0",
+                "0",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "1"
+            },
+            "positive_Euclidean_rule": "Replace Minkowski scalar products by Euclidean scalar products and use q_E^2+1; D_M = -(q_E^2+1) under Wick rotation.",
+            "power": 1,
+            "stored_Minkowski_denominator": {
+              "coefficients": [
+                "1",
+                "0",
+                "-2",
+                "-2",
+                "0",
+                "0",
+                "0",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "-1"
+            }
+          },
+          {
+            "family_slot_index_base0": 7,
+            "positive_Euclidean_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "-2",
+                "-2",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "1"
+            },
+            "positive_Euclidean_rule": "Replace Minkowski scalar products by Euclidean scalar products and use q_E^2+1; D_M = -(q_E^2+1) under Wick rotation.",
+            "power": 1,
+            "stored_Minkowski_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "-2",
+                "-2",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "-1"
+            }
+          },
+          {
+            "family_slot_index_base0": 8,
+            "positive_Euclidean_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "1"
+            },
+            "positive_Euclidean_rule": "Replace Minkowski scalar products by Euclidean scalar products and use q_E^2+1; D_M = -(q_E^2+1) under Wick rotation.",
+            "power": 1,
+            "stored_Minkowski_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "-1"
+            }
+          }
+        ],
+        "dimension": 2,
+        "family_fingerprint_utf8_sha256": "eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7",
+        "graph_parameter_to_family_slot": {
+          "a": 8,
+          "b": 5,
+          "c": 3,
+          "d": 7,
+          "e": 2,
+          "f": 1,
+          "x": 6,
+          "y": 4
+        },
+        "loop_count": 4,
+        "mass_scaling": "(mUV^2)^(4-A)",
+        "momentum_measure": "product over four loops of d^2 k_E / pi",
+        "no_coupling_or_symmetry_factor": true,
+        "ordered_family": {
+          "aliases": [
+            "4L_h"
+          ],
+          "coordinate_index_base": 0,
+          "coordinates": [
+            {
+              "kind": "loop_loop",
+              "left": 0,
+              "right": 0
+            },
+            {
+              "kind": "loop_loop",
+              "left": 0,
+              "right": 1
+            },
+            {
+              "kind": "loop_loop",
+              "left": 0,
+              "right": 2
+            },
+            {
+              "kind": "loop_loop",
+              "left": 0,
+              "right": 3
+            },
+            {
+              "kind": "loop_loop",
+              "left": 1,
+              "right": 1
+            },
+            {
+              "kind": "loop_loop",
+              "left": 1,
+              "right": 2
+            },
+            {
+              "kind": "loop_loop",
+              "left": 1,
+              "right": 3
+            },
+            {
+              "kind": "loop_loop",
+              "left": 2,
+              "right": 2
+            },
+            {
+              "kind": "loop_loop",
+              "left": 2,
+              "right": 3
+            },
+            {
+              "kind": "loop_loop",
+              "left": 3,
+              "right": 3
+            }
+          ],
+          "denominator_convention": "constant + sum_j coefficients[j] * coordinates[j]",
+          "denominators": [
+            {
+              "coefficients": [
+                "1",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "1",
+                "0",
+                "-2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "-2",
+                "0",
+                "1",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "1",
+                "0",
+                "-2",
+                "-2",
+                "0",
+                "0",
+                "0",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "-2",
+                "-2",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "1",
+                "-2",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            }
+          ],
+          "dimension": "rustred::{}::d",
+          "external_momenta": [],
+          "fingerprint": "rustred-integral-family-v2;N18:symbolica_integral;L4;2:k1;2:k2;2:k3;2:k4;E0;P1;1:d;Q4,0,10;M;RY1,1;I+1;X1;Y1,1;I+1;X0;D10;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I+2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I+2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I+2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;G0;U10;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;",
+          "graph": "graphs/eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7.dot",
+          "loop_momenta": [
+            "k1",
+            "k2",
+            "k3",
+            "k4"
+          ],
+          "power_shifts": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "sha256": "eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7"
+        },
+        "positive_Euclidean_definition": "pi^(-4) integral over four d^2 k_E measures of the scalar unit-mass catalog topology specified by the pinned ordered denominators and signed indices, with q_E^2+1 denominators and no coupling/symmetry factor",
+        "positive_Euclidean_parametric_definition": "Gamma(A-4)/product(Gamma(a_e)) times the projective positive-simplex integral of product(x_e^(a_e-1))/U_G(x), with A=sum(a_e), physical a_e>0, sum(x_e)=1, and U_G from the pinned topology.",
+        "projective_simplex_constraint": "sum(x_e)=1 with x_e>=0",
+        "scalar_numerator": "1",
+        "signed_index_tuple": [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "total_physical_propagator_power": 8,
+        "unit_mass_squared": true
+      },
+      "definition": {
+        "path": "4L/provenance/PR10-PR15-v24/independent-D2-periods-v1.json",
+        "sha256": "ac0f8f72e34660f873d17b4227e5aa5eb0f293592364cb9213f93c241f918c0c"
+      },
+      "portable_proof_index": {
+        "path": "provenance/PR10-PR15-v24/portable-proof-index.json",
+        "sha256": "52c8be0a6fe4a6c347047ff52458004e9149fdfefea0efc9797bf6c21613b41b"
+      },
+      "acceptance": {
+        "path": "validation/producer-update-PR10-PR15-v24-25cce0adaf135f7ff29c83ed4bf64e04994d9bff1d2e921176dfc50ed2ec73a8.json.gz",
+        "sha256": "50f2545a42fca0756182e3383755547ad494232f450dfb72e07291f575df79a5",
+        "bytes": 2805,
+        "uncompressed_sha256": "25cce0adaf135f7ff29c83ed4bf64e04994d9bff1d2e921176dfc50ed2ec73a8",
+        "uncompressed_bytes": 10330
+      },
+      "validation": {
+        "path": "validation/producer-update-PR10-PR15-v24-9149e424e32cf3f7ca0af21f4a8e21e86cc6e40f63939fbdf761d64d987fc03d.json.gz",
+        "sha256": "c4af7815e48a791937e6a431553637493736a9fb4320f0e74eebb422f677b678",
+        "bytes": 2651,
+        "uncompressed_sha256": "9149e424e32cf3f7ca0af21f4a8e21e86cc6e40f63939fbdf761d64d987fc03d",
+        "uncompressed_bytes": 8744
+      },
+      "center_json_pointer": "/periods/1/current_independent_auxiliary_evidence/qualified_bindings/1/center",
+      "error_rule": "max_i(abs(chosen_center-center_i)+error_upper_i)",
+      "accepted_significant_digits": 215,
+      "stored_digits_do_not_extend_source_cap": true
+    }
+  }
+]

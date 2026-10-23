@@ -1,0 +1,35 @@
+{
+  "schema": "vakint.external-data.finite-constant-bindings.v1",
+  "loop_count": 4,
+  "runtime_payload": {
+    "path": "4L/constants.json",
+    "sha256": "17b5a1fd3c70f20ce6ce2459ea53865c07c164f479199de68f487cbf072da189"
+  },
+  "source_payload": {
+    "path": "validation/bessel-k5-moments-20000/constants.json",
+    "sha256": "69249a7cbeab04185fbc689fb66d44c5cd6134d36a42a285ce0c6c7f14ce6165"
+  },
+  "validation": {
+    "path": "validation/bessel-k5-moments-20000/validation.json",
+    "sha256": "e7fd341f193fcec2d1496de2cd4afb26610dc09593f39aa32a103787189ddcc0"
+  },
+  "bundles": [
+    {
+      "path": "validation/bessel-high-guard-proof/bundle-manifest.json",
+      "sha256": "debb8f2759ff4db1b15bb4828c82922458e26476d2524896925e4ffbdf832950"
+    },
+    {
+      "path": "validation/bessel-k5-moments-20000/bundle-manifest.json",
+      "sha256": "67c8c21217c7fba420eca5eac938081247bfff067d91eb2400fd18a7715ce104"
+    },
+    {
+      "path": "validation/bessel-k5-symbolic-review/bundle-manifest.json",
+      "sha256": "fddd06363c085a15a7abd1d3f4711f8eecd354abdc07b8aa838d1b5ba3de88d9"
+    }
+  ],
+  "projection": "Exact decimal/error strings and definitions retained; casing and object layout only. Runtime cap remains20000.",
+  "symbolic_review": {
+    "path": "validation/bessel-k5-symbolic-review/original/audit.json",
+    "sha256": "e7bc59803f8d873218122e28732236ae309bf21fbaec2aa625154bf0112ec41e"
+  }
+}
