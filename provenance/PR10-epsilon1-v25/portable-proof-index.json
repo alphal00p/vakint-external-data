@@ -1,0 +1,879 @@
+{
+  "schema": "vakint.external-data.portable-producer-evidence-index.v1",
+  "base_commit": "cb52c789af88e96de009d8fbf11bd792f3391d63",
+  "source_path_names_are_historical_only": true,
+  "archives": [
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-four-entry-symbolic-publication-source-v1/root-actual-four-epsilon1-symbolic-publication-adoption-v1.json",
+        "sha256": "147e7a121a507c87516369979e827b65e32ceccb604a8bc165045a00a36c02d8"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-147e7a121a507c87516369979e827b65e32ceccb604a8bc165045a00a36c02d8.json.gz",
+        "sha256": "1a7bab55302151639983e883505c082acff5328674e0bf737bfe9c1245874824",
+        "bytes": 1252,
+        "uncompressed_sha256": "147e7a121a507c87516369979e827b65e32ceccb604a8bc165045a00a36c02d8",
+        "uncompressed_bytes": 3402
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/external-data-PR10-epsilon1-workflow-preparation-v1/workflow.prepared.json",
+        "sha256": "7a7e7236eadfe09943385f86edcb2bdb85d8341c768bab4bfb2e985d324f5598"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-7a7e7236eadfe09943385f86edcb2bdb85d8341c768bab4bfb2e985d324f5598.json.gz",
+        "sha256": "7794a97d7ca8d674df27dfec1a6f1358a6f0d713eab4d324494cc89d7d004700",
+        "bytes": 3990,
+        "uncompressed_sha256": "7a7e7236eadfe09943385f86edcb2bdb85d8341c768bab4bfb2e985d324f5598",
+        "uncompressed_bytes": 13338
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-four-entry-symbolic-publication-source-v1/publication-output-v1/publication.json",
+        "sha256": "10d42bf0f690f4015355cd9a1a876f5487b84d6efb4e09df6d29fc9bf3b355a8"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-10d42bf0f690f4015355cd9a1a876f5487b84d6efb4e09df6d29fc9bf3b355a8.json.gz",
+        "sha256": "5dc6313fd2113d8adbada24cd9c0f2a0ba56f62cd264ed9b62c32622862c0480",
+        "bytes": 40018,
+        "uncompressed_sha256": "10d42bf0f690f4015355cd9a1a876f5487b84d6efb4e09df6d29fc9bf3b355a8",
+        "uncompressed_bytes": 937591
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-four-entry-symbolic-publication-source-v1/controller-v1/guard.json",
+        "sha256": "e0a711e6e04d0651c25b89f70bdc350e799a55a43cfb72144dfccd896ef1a23e"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-e0a711e6e04d0651c25b89f70bdc350e799a55a43cfb72144dfccd896ef1a23e.json.gz",
+        "sha256": "fbc824570013daf73a2b813fa215234722e31518cb6765e463d309e35fed8205",
+        "bytes": 772,
+        "uncompressed_sha256": "e0a711e6e04d0651c25b89f70bdc350e799a55a43cfb72144dfccd896ef1a23e",
+        "uncompressed_bytes": 1642
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-four-entry-symbolic-publication-source-v1/peer-independent-actual-four-epsilon1-publication-metadata-resources-generic-v1.json",
+        "sha256": "888f0ad684205ff03c07195729e0ea3794c6812fcfc38ae3a0530a29b6c2d24c"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-888f0ad684205ff03c07195729e0ea3794c6812fcfc38ae3a0530a29b6c2d24c.json.gz",
+        "sha256": "4fdac240134cfa439deeb6906d96f94fa8c37a1fd0b163b14b5b6c4af53d71f0",
+        "bytes": 2902,
+        "uncompressed_sha256": "888f0ad684205ff03c07195729e0ea3794c6812fcfc38ae3a0530a29b6c2d24c",
+        "uncompressed_bytes": 7656
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-dimensional-recurrence-own200-validation-source-v2/root-actual-four-PR10-epsilon1-direct-analytic-own200-adoption-v1.json",
+        "sha256": "5741b46d7d8e789ea927a44a53fabe1afbb36d3b42398b479885c942330997af"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-5741b46d7d8e789ea927a44a53fabe1afbb36d3b42398b479885c942330997af.json.gz",
+        "sha256": "9bc64990b6d3bbfbfaba36d49e38aa4cc70c923e86466f9fd760a0093b571322",
+        "bytes": 1412,
+        "uncompressed_sha256": "5741b46d7d8e789ea927a44a53fabe1afbb36d3b42398b479885c942330997af",
+        "uncompressed_bytes": 3592
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-four-entry-symbolic-publication-source-v1/root-postterminal-empty-pgrp-census-v1.json",
+        "sha256": "48367ce747699db3b56622fdae104c95924013f4f5540fe186026c8c81eac474"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-48367ce747699db3b56622fdae104c95924013f4f5540fe186026c8c81eac474.json.gz",
+        "sha256": "39097f2170e3cfc60bad8d900f5b0caaf4ea30cf7c4807a966d26141116c08a6",
+        "bytes": 339,
+        "uncompressed_sha256": "48367ce747699db3b56622fdae104c95924013f4f5540fe186026c8c81eac474",
+        "uncompressed_bytes": 447
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/coverage-v25.json",
+        "sha256": "25707f3e9d611f53fd6ef0e61de04e45f55188cfb02098f92c10ee301573bf8a"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-25707f3e9d611f53fd6ef0e61de04e45f55188cfb02098f92c10ee301573bf8a.json.gz",
+        "sha256": "ac6e86cc99427112c7f576cc3b31d48a96a8d58b8def99cbc4541a070a78da53",
+        "bytes": 44743,
+        "uncompressed_sha256": "25707f3e9d611f53fd6ef0e61de04e45f55188cfb02098f92c10ee301573bf8a",
+        "uncompressed_bytes": 476186
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/current-symbolic-overlays-v9.json",
+        "sha256": "8829ba6f5e41a7797c3b8e76167200f49389889f3a9d2ab87a98db87c5757732"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-8829ba6f5e41a7797c3b8e76167200f49389889f3a9d2ab87a98db87c5757732.json.gz",
+        "sha256": "8b881c84f74ba51aeefdf2aba4339faa101df804b123710f352917e5c06b3d94",
+        "bytes": 7063,
+        "uncompressed_sha256": "8829ba6f5e41a7797c3b8e76167200f49389889f3a9d2ab87a98db87c5757732",
+        "uncompressed_bytes": 126021
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-four-entry-symbolic-publication-source-v1/independent-D2-Taylor01-period-registry-v2.json",
+        "sha256": "65094ef3b32c0aa8ae12df158c9f7d1046bcec6c0fe9aaa724f486efeb9617b7"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-65094ef3b32c0aa8ae12df158c9f7d1046bcec6c0fe9aaa724f486efeb9617b7.json.gz",
+        "sha256": "01929e1bf7d1282c7f86739b4059cc8377efea685b317dbac85e4eb48feba85d",
+        "bytes": 13092,
+        "uncompressed_sha256": "65094ef3b32c0aa8ae12df158c9f7d1046bcec6c0fe9aaa724f486efeb9617b7",
+        "uncompressed_bytes": 166590
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-four-entry-symbolic-publication-source-v1/publication-output-v1/accepted-symbolic-census.json",
+        "sha256": "30e0e78a6d193820795c0b16a5f63704439df5245d50e3031db87e3ac600da12"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-30e0e78a6d193820795c0b16a5f63704439df5245d50e3031db87e3ac600da12.json.gz",
+        "sha256": "c5a7418e35efb813b363f956bfaa0352017b938f07d1fe39aea008849c53dc1d",
+        "bytes": 19967,
+        "uncompressed_sha256": "30e0e78a6d193820795c0b16a5f63704439df5245d50e3031db87e3ac600da12",
+        "uncompressed_bytes": 129644
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-dimensional-recurrence-own200-validation-source-v2/observation-output-v1/qualification.json",
+        "sha256": "39692bdfb12f368a613867a0d3fecaea458043da083a0db9e8cd2994a41f5200"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-39692bdfb12f368a613867a0d3fecaea458043da083a0db9e8cd2994a41f5200.json.gz",
+        "sha256": "25575669e089b346dcc79d90b278750cece0d415fb3b8a3c77afc17de7a1a407",
+        "bytes": 1222,
+        "uncompressed_sha256": "39692bdfb12f368a613867a0d3fecaea458043da083a0db9e8cd2994a41f5200",
+        "uncompressed_bytes": 3880
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-dimensional-recurrence-own200-validation-source-v2/controller-v1/guard.json",
+        "sha256": "718810a9adcd46acc6c72caf17751c8746fdfe6b6ee463efa4f16d0154896a5a"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-718810a9adcd46acc6c72caf17751c8746fdfe6b6ee463efa4f16d0154896a5a.json.gz",
+        "sha256": "212d9425adea18658018db0ebae0a27489a3560b99f10b6a06652b0165d7cdb0",
+        "bytes": 780,
+        "uncompressed_sha256": "718810a9adcd46acc6c72caf17751c8746fdfe6b6ee463efa4f16d0154896a5a",
+        "uncompressed_bytes": 1644
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-independent-actual-DR200-review-v1/peer-independent-actual-DR200-science-audit-v1.json",
+        "sha256": "6e36c836ded051df5203a872c3b1b6d601eedd921a4fa6f57e6215a5ed2ead7e"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-6e36c836ded051df5203a872c3b1b6d601eedd921a4fa6f57e6215a5ed2ead7e.json.gz",
+        "sha256": "8b2c12eb72ef4009613e355c08f4323baeca949c004edf4a1cba6ef02ee43599",
+        "bytes": 4655,
+        "uncompressed_sha256": "6e36c836ded051df5203a872c3b1b6d601eedd921a4fa6f57e6215a5ed2ead7e",
+        "uncompressed_bytes": 21433
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-dimensional-recurrence-own200-validation-source-v2/peer-independent-actual-DR-own200-resource-binding-sunset-metadata-v1.json",
+        "sha256": "6451fcdd350dbe0d8c4798c9b4b6a0e7cf6050d1e4705f9b4ca0c62eac4d2b85"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-6451fcdd350dbe0d8c4798c9b4b6a0e7cf6050d1e4705f9b4ca0c62eac4d2b85.json.gz",
+        "sha256": "1698292a8d0ab272b3627151641aadde61f699defb9b4b2192c7e8a6941933a6",
+        "bytes": 6024,
+        "uncompressed_sha256": "6451fcdd350dbe0d8c4798c9b4b6a0e7cf6050d1e4705f9b4ca0c62eac4d2b85",
+        "uncompressed_bytes": 28278
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-dimensional-recurrence-own200-validation-source-v2/observation-output-v1/fixed-DR-public-expression.json",
+        "sha256": "c28265e7939cb8c44800d829bf85146a18ff1249ec13ca209f2a5c4cf81233fa"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-c28265e7939cb8c44800d829bf85146a18ff1249ec13ca209f2a5c4cf81233fa.json.gz",
+        "sha256": "b4c8ac74db706f962d6eca1af0ead8a70285b0e9130aba0ea15d6df4f56a81ad",
+        "bytes": 22851,
+        "uncompressed_sha256": "c28265e7939cb8c44800d829bf85146a18ff1249ec13ca209f2a5c4cf81233fa",
+        "uncompressed_bytes": 300662
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-dimensional-recurrence-own200-validation-source-v2/observation-output-v1/dimensional-recurrence-own200-validation.json",
+        "sha256": "2bbf092686f62eeee095172d981e533fac5c9d67c4ac9b21f351866fe89c6875"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-2bbf092686f62eeee095172d981e533fac5c9d67c4ac9b21f351866fe89c6875.json.gz",
+        "sha256": "1b15adcd7f9382e6574e29c0a0599b1a1462feccbabaffea1f93cf6c4964fb19",
+        "bytes": 834555,
+        "uncompressed_sha256": "2bbf092686f62eeee095172d981e533fac5c9d67c4ac9b21f351866fe89c6875",
+        "uncompressed_bytes": 3417534
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-dimensional-recurrence-own200-validation-source-v2/root-postterminal-empty-pgrp-census-v1.json",
+        "sha256": "7761dc6e07bd14f5656086974126fb0b3cef7e66eb957a41e3d0e8e65c733010"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-7761dc6e07bd14f5656086974126fb0b3cef7e66eb957a41e3d0e8e65c733010.json.gz",
+        "sha256": "a9c72b323bf11e08ff8d98b24b1a323c32b2887b4207e05516b76626e975a25d",
+        "bytes": 376,
+        "uncompressed_sha256": "7761dc6e07bd14f5656086974126fb0b3cef7e66eb957a41e3d0e8e65c733010",
+        "uncompressed_bytes": 510
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p1_p0_p1_p1_p1_p1_p1_p1_p0/artifacts/pslq/PR10-direct-analytic-epsilon1-stage200-v1/acceptance.json",
+        "sha256": "64c336b99540ed131b92b8b43c61ef7f026d13c5ec6a9ed4a958a2b553ce1cba"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-64c336b99540ed131b92b8b43c61ef7f026d13c5ec6a9ed4a958a2b553ce1cba.json.gz",
+        "sha256": "572465e05eca3c0c8495413cbf52f84a2a58e1d5b1b8338d6fa32d1efc8eced6",
+        "bytes": 12246,
+        "uncompressed_sha256": "64c336b99540ed131b92b8b43c61ef7f026d13c5ec6a9ed4a958a2b553ce1cba",
+        "uncompressed_bytes": 147899
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p1_p0_p1_p1_p1_p1_p1_p1_p0/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p1_p0_p1_p1_p1_p1_p1_p1_p0_symbolic.json",
+        "sha256": "92415beef17aec86199b4f299d8f4e83f503464e214d0b9a4dedf4536c7b3805"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-92415beef17aec86199b4f299d8f4e83f503464e214d0b9a4dedf4536c7b3805.json.gz",
+        "sha256": "d320889929e52a3d88ddaae1e67ff88fc86941aa450c9b8e9c20454988f4c4a7",
+        "bytes": 3082,
+        "uncompressed_sha256": "92415beef17aec86199b4f299d8f4e83f503464e214d0b9a4dedf4536c7b3805",
+        "uncompressed_bytes": 25545
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p1_p0_p1_p1_p1_p1_p1_p1_p0/artifacts/pslq/PR10-direct-analytic-epsilon1-stage200-v1/expression-evidence.json",
+        "sha256": "eb16e823d204a50e6946710cd58cad8172a3c05953374cd9f6e7f1f01aadad1e"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-eb16e823d204a50e6946710cd58cad8172a3c05953374cd9f6e7f1f01aadad1e.json.gz",
+        "sha256": "06ec4e2dfd47dc634fd2058eb2bc8d6809743708079d886f4b33a264bab72b2e",
+        "bytes": 7807,
+        "uncompressed_sha256": "eb16e823d204a50e6946710cd58cad8172a3c05953374cd9f6e7f1f01aadad1e",
+        "uncompressed_bytes": 71810
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p1_p0_p1_p1_p1_p1_p1_p1_p0/artifacts/pslq/PR10-direct-analytic-epsilon1-stage200-v1/period-definitions.json",
+        "sha256": "65094ef3b32c0aa8ae12df158c9f7d1046bcec6c0fe9aaa724f486efeb9617b7"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-65094ef3b32c0aa8ae12df158c9f7d1046bcec6c0fe9aaa724f486efeb9617b7.json.gz",
+        "sha256": "01929e1bf7d1282c7f86739b4059cc8377efea685b317dbac85e4eb48feba85d",
+        "bytes": 13092,
+        "uncompressed_sha256": "65094ef3b32c0aa8ae12df158c9f7d1046bcec6c0fe9aaa724f486efeb9617b7",
+        "uncompressed_bytes": 166590
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p1_p0_p1_p1_p1_p1_p1_p1_p0/artifacts/pslq/PR10-direct-analytic-epsilon1-stage200-v1/native-expanded-current-symbolic.json",
+        "sha256": "92415beef17aec86199b4f299d8f4e83f503464e214d0b9a4dedf4536c7b3805"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-92415beef17aec86199b4f299d8f4e83f503464e214d0b9a4dedf4536c7b3805.json.gz",
+        "sha256": "d320889929e52a3d88ddaae1e67ff88fc86941aa450c9b8e9c20454988f4c4a7",
+        "bytes": 3082,
+        "uncompressed_sha256": "92415beef17aec86199b4f299d8f4e83f503464e214d0b9a4dedf4536c7b3805",
+        "uncompressed_bytes": 25545
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-dimensional-recurrence-own200-validation-source-v2/observation-output-v1/fixed-exact-DR-public-expression-frozen-before-heldout.json",
+        "sha256": "3e2c9d5b89af0132f3283483c0a28e4c1b38f2deca18f271219484e4cde1bd5c"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-3e2c9d5b89af0132f3283483c0a28e4c1b38f2deca18f271219484e4cde1bd5c.json.gz",
+        "sha256": "54b375ca9b36a29e3ae8168536de45d541b1e346bc356a085a69c1c038d840db",
+        "bytes": 599,
+        "uncompressed_sha256": "3e2c9d5b89af0132f3283483c0a28e4c1b38f2deca18f271219484e4cde1bd5c",
+        "uncompressed_bytes": 1309
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-auxiliary215-preserved-pair-direction-replay-source-v2/root-actual-E10-E15-delta0to2-auxiliary215-adoption-v1.json",
+        "sha256": "65313cb7fc0357e956e3d6537cb036ef443d289e06a8c21129d9e58415d1b6ba"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-65313cb7fc0357e956e3d6537cb036ef443d289e06a8c21129d9e58415d1b6ba.json.gz",
+        "sha256": "f9be7144639da28310c3704457af28bc5881db19ff785efb0628a46a5f2c92bd",
+        "bytes": 3001,
+        "uncompressed_sha256": "65313cb7fc0357e956e3d6537cb036ef443d289e06a8c21129d9e58415d1b6ba",
+        "uncompressed_bytes": 9158
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR7-D2-first-jet215-preserved-A-fresh-B-source-v1/root-actual-independent-P7-firstjet215-adoption-v1.json",
+        "sha256": "d1b7b26dead0ff100185736b1efda50cb92ca503012a25c7ad75915b3f8750c6"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-d1b7b26dead0ff100185736b1efda50cb92ca503012a25c7ad75915b3f8750c6.json.gz",
+        "sha256": "624b6427b28c001e9e155c544eedc18d6e54597b282a7d989bc91c16c590fe97",
+        "bytes": 4231,
+        "uncompressed_sha256": "d1b7b26dead0ff100185736b1efda50cb92ca503012a25c7ad75915b3f8750c6",
+        "uncompressed_bytes": 12154
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-known75-two-row-numerical-append-source-v1/root-actual-known75-complete-source-bank-adoption-v1.json",
+        "sha256": "9766cf9c80907bd5473f8ea4b1806ac81502380d1eb4739cdb96d279dd2f91f2"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-9766cf9c80907bd5473f8ea4b1806ac81502380d1eb4739cdb96d279dd2f91f2.json.gz",
+        "sha256": "f06deff7ee2897f45c42afd7b7a05599b9f5498057aa60cc7b10b75cc09c3e3b",
+        "bytes": 2077,
+        "uncompressed_sha256": "9766cf9c80907bd5473f8ea4b1806ac81502380d1eb4739cdb96d279dd2f91f2",
+        "uncompressed_bytes": 9731
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-four-entry-symbolic-publication-source-v1/rejected-finder-history.json",
+        "sha256": "a8b3a388a1d10f46e6aa92d3e3fc020ffb5c1566b06df8cb996e7ab93be7bf54"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-a8b3a388a1d10f46e6aa92d3e3fc020ffb5c1566b06df8cb996e7ab93be7bf54.json.gz",
+        "sha256": "6e0280a6d366cf18a4d291c156236d3dfc1ea6c429b5f2cd71f7f62068a82b14",
+        "bytes": 1202,
+        "uncompressed_sha256": "a8b3a388a1d10f46e6aa92d3e3fc020ffb5c1566b06df8cb996e7ab93be7bf54",
+        "uncompressed_bytes": 4741
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-independent-finder-diagnosis-v1/peer-independent-actual-finder-prefix-error-diagnosis-v1.json",
+        "sha256": "5370707e555baf10a9bcc2e92588c8f7adb7dca8ea934c84cfc4044227894c35"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-5370707e555baf10a9bcc2e92588c8f7adb7dca8ea934c84cfc4044227894c35.json.gz",
+        "sha256": "b2b606d594925147dc399f27a8654f97673fda32d4601e7ac24fee4a9b5af119",
+        "bytes": 8116,
+        "uncompressed_sha256": "5370707e555baf10a9bcc2e92588c8f7adb7dca8ea934c84cfc4044227894c35",
+        "uncompressed_bytes": 56043
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-source-span-PSLQ-source-v1/plan.json",
+        "sha256": "ccf39c51e478f3fcddfefffe524e477627923b3ff152156f5a5820d827555754"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-ccf39c51e478f3fcddfefffe524e477627923b3ff152156f5a5820d827555754.json.gz",
+        "sha256": "b7a1d483aea04bc47ee1cde6f06ea5a7b1e115b5bb28c6dc474e69a1851ecafa",
+        "bytes": 117192,
+        "uncompressed_sha256": "ccf39c51e478f3fcddfefffe524e477627923b3ff152156f5a5820d827555754",
+        "uncompressed_bytes": 521634
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-source-span-PSLQ-source-v1/controller-v1/guard.json",
+        "sha256": "65cfaa04146638429c9434efeef79b8aa1affc802f11007c41861c751ce21fc0"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-65cfaa04146638429c9434efeef79b8aa1affc802f11007c41861c751ce21fc0.json.gz",
+        "sha256": "ac2aef28366700b28a81b46c660d07bc9d7b13fc831e5defa0e37c287c31ffe3",
+        "bytes": 771,
+        "uncompressed_sha256": "65cfaa04146638429c9434efeef79b8aa1affc802f11007c41861c751ce21fc0",
+        "uncompressed_bytes": 1576
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-source-span-PSLQ-source-v1/observation-output-v1/qualification.json",
+        "sha256": "00aaffadc0312c8db16fd4feeef9fe91f1e13c9e8cec12b94f679a34c7871def"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-00aaffadc0312c8db16fd4feeef9fe91f1e13c9e8cec12b94f679a34c7871def.json.gz",
+        "sha256": "f2e50ef87eee45933e6e0976621454b290340fc87871585e0f8f7a5d91fd7ea8",
+        "bytes": 1863,
+        "uncompressed_sha256": "00aaffadc0312c8db16fd4feeef9fe91f1e13c9e8cec12b94f679a34c7871def",
+        "uncompressed_bytes": 6038
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-source-span-PSLQ-source-v1/observation-output-v1/request-manifest.json",
+        "sha256": "6becc2e8c4c60d4eb23cae788e521f9b528c75882d1c310d69d97f207735a7a9"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-6becc2e8c4c60d4eb23cae788e521f9b528c75882d1c310d69d97f207735a7a9.json.gz",
+        "sha256": "4d43c8bcc47d098e656a9413cf0f6af8dc2d491b741fe0ed0285f2aaba7bcf8e",
+        "bytes": 5773,
+        "uncompressed_sha256": "6becc2e8c4c60d4eb23cae788e521f9b528c75882d1c310d69d97f207735a7a9",
+        "uncompressed_bytes": 21806
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-source-span-PSLQ-source-v1/observation-output-v1/private-height-scalar-audit.json",
+        "sha256": "48209d37f8673d57a3941dba4ed328ca7566a43e298f1814a0643c95b7d755d9"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-48209d37f8673d57a3941dba4ed328ca7566a43e298f1814a0643c95b7d755d9.json.gz",
+        "sha256": "f5c283b7f56e3821cbd3405b1d1e1793b4c6ccc4c80c5b240ed96e4ed5d95191",
+        "bytes": 421,
+        "uncompressed_sha256": "48209d37f8673d57a3941dba4ed328ca7566a43e298f1814a0643c95b7d755d9",
+        "uncompressed_bytes": 840
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-source-span-PSLQ-source-v1/observation-output-v1/Symbolica/frozen-profile-results.json",
+        "sha256": "cc79d38b44bc70ac5565eb7ce1d1b873efbe925f2600fc4647bf010c6b078950"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-cc79d38b44bc70ac5565eb7ce1d1b873efbe925f2600fc4647bf010c6b078950.json.gz",
+        "sha256": "6d5df84e43875330d1927207ec1d6c5b2b2415b14071ad38c7a22773c8525b8e",
+        "bytes": 1422,
+        "uncompressed_sha256": "cc79d38b44bc70ac5565eb7ce1d1b873efbe925f2600fc4647bf010c6b078950",
+        "uncompressed_bytes": 6103
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-source-span-PSLQ-source-v1/observation-output-v1/Symbolica/result-0.json",
+        "sha256": "71761f75c34c3c811dff78fafcaadcf43c7c4eb25138505992345c1570f43b70"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-71761f75c34c3c811dff78fafcaadcf43c7c4eb25138505992345c1570f43b70.json.gz",
+        "sha256": "2c65915370963e2d0c234e52a37deb3b47dfac3c5afb0a48fae348c7376acd1b",
+        "bytes": 1310,
+        "uncompressed_sha256": "71761f75c34c3c811dff78fafcaadcf43c7c4eb25138505992345c1570f43b70",
+        "uncompressed_bytes": 3357
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-source-span-PSLQ-source-v1/observation-output-v1/Symbolica/result-1.json",
+        "sha256": "bc6fa2bc099b5ee6d48f20d8816f257a34c90eba14739a735410f577617bf74b"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-bc6fa2bc099b5ee6d48f20d8816f257a34c90eba14739a735410f577617bf74b.json.gz",
+        "sha256": "7f4de44e4d4bb49f1cd5afa6a65ea3ed334072749537f5b2d424f5d3a3975d07",
+        "bytes": 1302,
+        "uncompressed_sha256": "bc6fa2bc099b5ee6d48f20d8816f257a34c90eba14739a735410f577617bf74b",
+        "uncompressed_bytes": 3336
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-source-span-PSLQ-source-v1/observation-output-v1/Symbolica/outcome-0.json",
+        "sha256": "76714c40e97cc70e16b7f4b7310a6198129ace58ddbbabd8ee94cfed858ec5c0"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-76714c40e97cc70e16b7f4b7310a6198129ace58ddbbabd8ee94cfed858ec5c0.json.gz",
+        "sha256": "5f26003c18b48b98a317710e0094a6fa481ed4d967702e4f6f330783376817e4",
+        "bytes": 772,
+        "uncompressed_sha256": "76714c40e97cc70e16b7f4b7310a6198129ace58ddbbabd8ee94cfed858ec5c0",
+        "uncompressed_bytes": 2240
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-source-span-PSLQ-source-v1/observation-output-v1/Symbolica/outcome-1.json",
+        "sha256": "dfb7525226399571cda109a6ae9f9ce9cf67a69037f11d4aa6a80bdbaf4aa16c"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-dfb7525226399571cda109a6ae9f9ce9cf67a69037f11d4aa6a80bdbaf4aa16c.json.gz",
+        "sha256": "2e29363143e41f70367faabce91d482e2bc3b226212eb5be8159f26e2bdeb315",
+        "bytes": 771,
+        "uncompressed_sha256": "dfb7525226399571cda109a6ae9f9ce9cf67a69037f11d4aa6a80bdbaf4aa16c",
+        "uncompressed_bytes": 2230
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-source-span-PSLQ-source-v1/observation-output-v1/Mathematica/frozen-profile-results.json",
+        "sha256": "8aed37700e69426f186e1b62640f0fcc554363b71531df381da204bd35f8200f"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-8aed37700e69426f186e1b62640f0fcc554363b71531df381da204bd35f8200f.json.gz",
+        "sha256": "2b2a1a81514ac6cddd6e313c4a4a57db3c69a064ace4c8f4b8b2905a3023a773",
+        "bytes": 1404,
+        "uncompressed_sha256": "8aed37700e69426f186e1b62640f0fcc554363b71531df381da204bd35f8200f",
+        "uncompressed_bytes": 6025
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-source-span-PSLQ-source-v1/observation-output-v1/Mathematica/result-0.json",
+        "sha256": "e51cfcb975355d7d2d1ec15968c8c28951ab287b43a3d3b34e71dfa9258fff53"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-e51cfcb975355d7d2d1ec15968c8c28951ab287b43a3d3b34e71dfa9258fff53.json.gz",
+        "sha256": "18f42556b22fb6d3942fde9ebc54917d648b87c5798ef60fe60a0ff2a060b524",
+        "bytes": 1527,
+        "uncompressed_sha256": "e51cfcb975355d7d2d1ec15968c8c28951ab287b43a3d3b34e71dfa9258fff53",
+        "uncompressed_bytes": 3690
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-source-span-PSLQ-source-v1/observation-output-v1/Mathematica/result-1.json",
+        "sha256": "66c1680fe9627e797d6183f1b12aecb7668cab0d0bf6868ed6ee977e41ae7fee"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-66c1680fe9627e797d6183f1b12aecb7668cab0d0bf6868ed6ee977e41ae7fee.json.gz",
+        "sha256": "68406fc1fc52d08e38fddd939c07b78bf1de47dcf624d2421c4bd1cc31383e24",
+        "bytes": 1514,
+        "uncompressed_sha256": "66c1680fe9627e797d6183f1b12aecb7668cab0d0bf6868ed6ee977e41ae7fee",
+        "uncompressed_bytes": 3682
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-source-span-PSLQ-source-v1/observation-output-v1/Mathematica/outcome-0.json",
+        "sha256": "9f4a7c37ed9d1b49a8b2749ed226789822b665701b7dc4653b3984eff83127fe"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-9f4a7c37ed9d1b49a8b2749ed226789822b665701b7dc4653b3984eff83127fe.json.gz",
+        "sha256": "7e314d3d4bcf53b695ad06ad35a28e50167d5a5bed2641246811b3768286fcd8",
+        "bytes": 738,
+        "uncompressed_sha256": "9f4a7c37ed9d1b49a8b2749ed226789822b665701b7dc4653b3984eff83127fe",
+        "uncompressed_bytes": 2201
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-source-span-PSLQ-source-v1/observation-output-v1/Mathematica/outcome-1.json",
+        "sha256": "2ef0ab9f06c082e8ed476d625040e50380bac0cdf2ede8d746b3ee6e626bd52c"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-2ef0ab9f06c082e8ed476d625040e50380bac0cdf2ede8d746b3ee6e626bd52c.json.gz",
+        "sha256": "a5be9217d522a87a5292fa87cb111e8615785e699a9f96b2ddf29042093cd4ac",
+        "bytes": 730,
+        "uncompressed_sha256": "2ef0ab9f06c082e8ed476d625040e50380bac0cdf2ede8d746b3ee6e626bd52c",
+        "uncompressed_bytes": 2189
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p0_p1_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/pslq/PR10-direct-analytic-epsilon1-stage200-v1/acceptance.json",
+        "sha256": "0260da2a3e6e3c964081b20994b3a4a387e2e0ea48122dd608bd936c8964ca2e"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-0260da2a3e6e3c964081b20994b3a4a387e2e0ea48122dd608bd936c8964ca2e.json.gz",
+        "sha256": "e747e45eae9c1154312c4a32da2bd4e06c55ce3ae762b5d9cc959e4dd6be2a31",
+        "bytes": 12251,
+        "uncompressed_sha256": "0260da2a3e6e3c964081b20994b3a4a387e2e0ea48122dd608bd936c8964ca2e",
+        "uncompressed_bytes": 147899
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p0_p1_p1_p1_p1_p1_p1_p1_p0_p0/L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p0_p1_p1_p1_p1_p1_p1_p1_p0_p0_symbolic.json",
+        "sha256": "92415beef17aec86199b4f299d8f4e83f503464e214d0b9a4dedf4536c7b3805"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-92415beef17aec86199b4f299d8f4e83f503464e214d0b9a4dedf4536c7b3805.json.gz",
+        "sha256": "d320889929e52a3d88ddaae1e67ff88fc86941aa450c9b8e9c20454988f4c4a7",
+        "bytes": 3082,
+        "uncompressed_sha256": "92415beef17aec86199b4f299d8f4e83f503464e214d0b9a4dedf4536c7b3805",
+        "uncompressed_bytes": 25545
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p0_p1_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/pslq/PR10-direct-analytic-epsilon1-stage200-v1/expression-evidence.json",
+        "sha256": "fd772babf288036efd2226eb544744b19325e24ae6f36f7b86bb86067367ca71"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-fd772babf288036efd2226eb544744b19325e24ae6f36f7b86bb86067367ca71.json.gz",
+        "sha256": "9fde965ea82964c4aab30fe9de4aa10be5752c3ac6453c6cd12f326fb1df682e",
+        "bytes": 7808,
+        "uncompressed_sha256": "fd772babf288036efd2226eb544744b19325e24ae6f36f7b86bb86067367ca71",
+        "uncompressed_bytes": 71810
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p0_p1_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/pslq/PR10-direct-analytic-epsilon1-stage200-v1/period-definitions.json",
+        "sha256": "65094ef3b32c0aa8ae12df158c9f7d1046bcec6c0fe9aaa724f486efeb9617b7"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-65094ef3b32c0aa8ae12df158c9f7d1046bcec6c0fe9aaa724f486efeb9617b7.json.gz",
+        "sha256": "01929e1bf7d1282c7f86739b4059cc8377efea685b317dbac85e4eb48feba85d",
+        "bytes": 13092,
+        "uncompressed_sha256": "65094ef3b32c0aa8ae12df158c9f7d1046bcec6c0fe9aaa724f486efeb9617b7",
+        "uncompressed_bytes": 166590
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p0_p1_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/pslq/PR10-direct-analytic-epsilon1-stage200-v1/native-expanded-current-symbolic.json",
+        "sha256": "92415beef17aec86199b4f299d8f4e83f503464e214d0b9a4dedf4536c7b3805"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-92415beef17aec86199b4f299d8f4e83f503464e214d0b9a4dedf4536c7b3805.json.gz",
+        "sha256": "d320889929e52a3d88ddaae1e67ff88fc86941aa450c9b8e9c20454988f4c4a7",
+        "bytes": 3082,
+        "uncompressed_sha256": "92415beef17aec86199b4f299d8f4e83f503464e214d0b9a4dedf4536c7b3805",
+        "uncompressed_bytes": 25545
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p1_p0_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/pslq/PR10-direct-analytic-epsilon1-stage200-v1/acceptance.json",
+        "sha256": "1aa880e7b3a8a540b0299072de30c14fdcda824ef87fa16c5f0758bb9f4fb3f7"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-1aa880e7b3a8a540b0299072de30c14fdcda824ef87fa16c5f0758bb9f4fb3f7.json.gz",
+        "sha256": "d59e4899c89a039340eab14705b443caee6e603ad05a9bac6a95f1d941862eb5",
+        "bytes": 12259,
+        "uncompressed_sha256": "1aa880e7b3a8a540b0299072de30c14fdcda824ef87fa16c5f0758bb9f4fb3f7",
+        "uncompressed_bytes": 147899
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p1_p0_p1_p1_p1_p1_p1_p1_p0_p0/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p1_p0_p1_p1_p1_p1_p1_p1_p0_p0_symbolic.json",
+        "sha256": "92415beef17aec86199b4f299d8f4e83f503464e214d0b9a4dedf4536c7b3805"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-92415beef17aec86199b4f299d8f4e83f503464e214d0b9a4dedf4536c7b3805.json.gz",
+        "sha256": "d320889929e52a3d88ddaae1e67ff88fc86941aa450c9b8e9c20454988f4c4a7",
+        "bytes": 3082,
+        "uncompressed_sha256": "92415beef17aec86199b4f299d8f4e83f503464e214d0b9a4dedf4536c7b3805",
+        "uncompressed_bytes": 25545
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p1_p0_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/pslq/PR10-direct-analytic-epsilon1-stage200-v1/expression-evidence.json",
+        "sha256": "2729afd42ed2dc357b467da57ac73e2210ca567c18c4f6ec3bf8960e1b60528b"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-2729afd42ed2dc357b467da57ac73e2210ca567c18c4f6ec3bf8960e1b60528b.json.gz",
+        "sha256": "c77f72a9639291ed42edde7b572ea513b50c042139b60035d69fb471652d893c",
+        "bytes": 7809,
+        "uncompressed_sha256": "2729afd42ed2dc357b467da57ac73e2210ca567c18c4f6ec3bf8960e1b60528b",
+        "uncompressed_bytes": 71810
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p1_p0_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/pslq/PR10-direct-analytic-epsilon1-stage200-v1/period-definitions.json",
+        "sha256": "65094ef3b32c0aa8ae12df158c9f7d1046bcec6c0fe9aaa724f486efeb9617b7"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-65094ef3b32c0aa8ae12df158c9f7d1046bcec6c0fe9aaa724f486efeb9617b7.json.gz",
+        "sha256": "01929e1bf7d1282c7f86739b4059cc8377efea685b317dbac85e4eb48feba85d",
+        "bytes": 13092,
+        "uncompressed_sha256": "65094ef3b32c0aa8ae12df158c9f7d1046bcec6c0fe9aaa724f486efeb9617b7",
+        "uncompressed_bytes": 166590
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p1_p0_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/pslq/PR10-direct-analytic-epsilon1-stage200-v1/native-expanded-current-symbolic.json",
+        "sha256": "92415beef17aec86199b4f299d8f4e83f503464e214d0b9a4dedf4536c7b3805"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-92415beef17aec86199b4f299d8f4e83f503464e214d0b9a4dedf4536c7b3805.json.gz",
+        "sha256": "d320889929e52a3d88ddaae1e67ff88fc86941aa450c9b8e9c20454988f4c4a7",
+        "bytes": 3082,
+        "uncompressed_sha256": "92415beef17aec86199b4f299d8f4e83f503464e214d0b9a4dedf4536c7b3805",
+        "uncompressed_bytes": 25545
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p0_p1_p1_p1_p1_p1_p1_p0/artifacts/pslq/PR10-direct-analytic-epsilon1-stage200-v1/acceptance.json",
+        "sha256": "f8347ec906b1636cd38f901e892fb0baa6343011ee2f0c147fe9d4316b973673"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-f8347ec906b1636cd38f901e892fb0baa6343011ee2f0c147fe9d4316b973673.json.gz",
+        "sha256": "36dd6678fb3cf2ca075b0b5794a0b0caa555620bdf8eb597c31d8535bd3f305b",
+        "bytes": 12251,
+        "uncompressed_sha256": "f8347ec906b1636cd38f901e892fb0baa6343011ee2f0c147fe9d4316b973673",
+        "uncompressed_bytes": 147899
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p0_p1_p1_p1_p1_p1_p1_p0/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p0_p1_p1_p1_p1_p1_p1_p0_symbolic.json",
+        "sha256": "92415beef17aec86199b4f299d8f4e83f503464e214d0b9a4dedf4536c7b3805"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-92415beef17aec86199b4f299d8f4e83f503464e214d0b9a4dedf4536c7b3805.json.gz",
+        "sha256": "d320889929e52a3d88ddaae1e67ff88fc86941aa450c9b8e9c20454988f4c4a7",
+        "bytes": 3082,
+        "uncompressed_sha256": "92415beef17aec86199b4f299d8f4e83f503464e214d0b9a4dedf4536c7b3805",
+        "uncompressed_bytes": 25545
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p0_p1_p1_p1_p1_p1_p1_p0/artifacts/pslq/PR10-direct-analytic-epsilon1-stage200-v1/expression-evidence.json",
+        "sha256": "6fe6cf869a92d66fd10f480e9f531938f6c8ea093e216b7c84daf1d0b3986577"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-6fe6cf869a92d66fd10f480e9f531938f6c8ea093e216b7c84daf1d0b3986577.json.gz",
+        "sha256": "16e8fb91893146587c29e34913da03a3320cde9d512cb7226656c16d48d7087f",
+        "bytes": 7808,
+        "uncompressed_sha256": "6fe6cf869a92d66fd10f480e9f531938f6c8ea093e216b7c84daf1d0b3986577",
+        "uncompressed_bytes": 71810
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p0_p1_p1_p1_p1_p1_p1_p0/artifacts/pslq/PR10-direct-analytic-epsilon1-stage200-v1/period-definitions.json",
+        "sha256": "65094ef3b32c0aa8ae12df158c9f7d1046bcec6c0fe9aaa724f486efeb9617b7"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-65094ef3b32c0aa8ae12df158c9f7d1046bcec6c0fe9aaa724f486efeb9617b7.json.gz",
+        "sha256": "01929e1bf7d1282c7f86739b4059cc8377efea685b317dbac85e4eb48feba85d",
+        "bytes": 13092,
+        "uncompressed_sha256": "65094ef3b32c0aa8ae12df158c9f7d1046bcec6c0fe9aaa724f486efeb9617b7",
+        "uncompressed_bytes": 166590
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p0_p1_p1_p1_p1_p1_p1_p0/artifacts/pslq/PR10-direct-analytic-epsilon1-stage200-v1/native-expanded-current-symbolic.json",
+        "sha256": "92415beef17aec86199b4f299d8f4e83f503464e214d0b9a4dedf4536c7b3805"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-92415beef17aec86199b4f299d8f4e83f503464e214d0b9a4dedf4536c7b3805.json.gz",
+        "sha256": "d320889929e52a3d88ddaae1e67ff88fc86941aa450c9b8e9c20454988f4c4a7",
+        "bytes": 3082,
+        "uncompressed_sha256": "92415beef17aec86199b4f299d8f4e83f503464e214d0b9a4dedf4536c7b3805",
+        "uncompressed_bytes": 25545
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/external-data-PR10-PR15-v24-symbolic-only-apply-preparation-v1/intake.prepared.json",
+        "sha256": "e9f45dd11bd737c9465cdad40111bd19bf217fa59f2a1ea0def7e2ca60509a58"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-e9f45dd11bd737c9465cdad40111bd19bf217fa59f2a1ea0def7e2ca60509a58.json.gz",
+        "sha256": "2618bec957c444e5593eb111555d9a917c89b15bfa6c32d728cbbe1039ea4952",
+        "bytes": 11674,
+        "uncompressed_sha256": "e9f45dd11bd737c9465cdad40111bd19bf217fa59f2a1ea0def7e2ca60509a58",
+        "uncompressed_bytes": 115491
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-residual-found-full-expression-bridge-source-v1/root-actual-recurrence-assisted-full-expression-recognition-adoption-v1.json",
+        "sha256": "7e9bb38a8043b7abeb173812972e911c8c53d5a002cdb564b9ada2223294e572"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-7e9bb38a8043b7abeb173812972e911c8c53d5a002cdb564b9ada2223294e572.json.gz",
+        "sha256": "09c74997dc64a8932069f2e92ab3e9c6aa53bcd98eb1a3cc4761f0e8534b07a2",
+        "bytes": 1506,
+        "uncompressed_sha256": "7e9bb38a8043b7abeb173812972e911c8c53d5a002cdb564b9ada2223294e572",
+        "uncompressed_bytes": 4277
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-residual-found-full-expression-bridge-source-v1/observation-output-v1/qualification.json",
+        "sha256": "2245e48559737124d8718b0219af88624e582e7ac1b9aa22253f060f31105e9e"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-2245e48559737124d8718b0219af88624e582e7ac1b9aa22253f060f31105e9e.json.gz",
+        "sha256": "cc3f5ad844c946ef1facdbe00395f89276359b81e156f3902b97822e8eb0c376",
+        "bytes": 1327,
+        "uncompressed_sha256": "2245e48559737124d8718b0219af88624e582e7ac1b9aa22253f060f31105e9e",
+        "uncompressed_bytes": 4133
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-residual-found-full-expression-bridge-source-v1/observation-output-v1/reconstructed-from-residual-PSLQ.json",
+        "sha256": "014075dbf3ffa39e6c39373a8c6d94e4c2afdc27e608fbd5e4d3575624577f8d"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-014075dbf3ffa39e6c39373a8c6d94e4c2afdc27e608fbd5e4d3575624577f8d.json.gz",
+        "sha256": "8d677b18dcad3f6f1b0488fdd4f9694b4fd07da8a96a967aa6c0e21401f5650d",
+        "bytes": 11378,
+        "uncompressed_sha256": "014075dbf3ffa39e6c39373a8c6d94e4c2afdc27e608fbd5e4d3575624577f8d",
+        "uncompressed_bytes": 130549
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-residual-found-full-expression-bridge-source-v1/observation-output-v1/found-full-expression-DR200-binding.json",
+        "sha256": "7caa84884680154840eb7f7a804704afe42f5084d1fbd173f4d2d6bbb63fd8dc"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-7caa84884680154840eb7f7a804704afe42f5084d1fbd173f4d2d6bbb63fd8dc.json.gz",
+        "sha256": "0940e577a34838bf9f800e705ec99bb6dc4013214ecc67eb8973eafc62ae8754",
+        "bytes": 4248,
+        "uncompressed_sha256": "7caa84884680154840eb7f7a804704afe42f5084d1fbd173f4d2d6bbb63fd8dc",
+        "uncompressed_bytes": 50023
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-residual-found-full-expression-bridge-source-v1/peer-independent-actual-full-expression-bridge-native-science-protocol-v1.json",
+        "sha256": "87ae53615174e137406afd135f8f9760c776ad3c7ea1affc2904a5913cb43df2"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-87ae53615174e137406afd135f8f9760c776ad3c7ea1affc2904a5913cb43df2.json.gz",
+        "sha256": "588858fb4d8737d5aa0046f0195c37d2d1f9335859d54d13b4f8fb7419df5f22",
+        "bytes": 3043,
+        "uncompressed_sha256": "87ae53615174e137406afd135f8f9760c776ad3c7ea1affc2904a5913cb43df2",
+        "uncompressed_bytes": 9761
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-residual-found-full-expression-bridge-source-v1/peer-independent-actual-full-expression-bridge-resource-observer-census-v1.json",
+        "sha256": "5d3703755fcd0d51956fbc78e83b13572923b70917c2b575d03b774acda81b7c"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-5d3703755fcd0d51956fbc78e83b13572923b70917c2b575d03b774acda81b7c.json.gz",
+        "sha256": "efc3a7653b231ee4a4966b54373989c701e484ef912559e9622fbebb3dc4be6c",
+        "bytes": 2787,
+        "uncompressed_sha256": "5d3703755fcd0d51956fbc78e83b13572923b70917c2b575d03b774acda81b7c",
+        "uncompressed_bytes": 8921
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-five-vector-residual-recognition-source-v2/root-actual-five-vector-partial-period-recognition-adoption-v1.json",
+        "sha256": "b279e441d59f99f130a352228eb5c01b7bd7f14af8db071a83faba36c6768449"
+      },
+      "portable_archive": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-b279e441d59f99f130a352228eb5c01b7bd7f14af8db071a83faba36c6768449.json.gz",
+        "sha256": "855cea727baf526d52e8e3290a75a5a93627ac89a0ce893265b1746c110fe7c6",
+        "bytes": 1438,
+        "uncompressed_sha256": "b279e441d59f99f130a352228eb5c01b7bd7f14af8db071a83faba36c6768449",
+        "uncompressed_bytes": 4077
+      }
+    }
+  ],
+  "resolution": "Resolve portable_archive.path from repository root; verify compressed and uncompressed SHA256. Original absolute paths are provenance only."
+}

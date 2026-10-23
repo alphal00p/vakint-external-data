@@ -1,0 +1,96 @@
+{
+  "schema": "vakint.external-data.PR10-epsilon1-four-symbolic-sync.v1",
+  "base_commit": "cb52c789af88e96de009d8fbf11bd792f3391d63",
+  "selected_master_ids": [
+    "L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p1_p0_p1_p1_p1_p1_p1_p1_p0",
+    "L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p0_p1_p1_p1_p1_p1_p1_p1_p0_p0",
+    "L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p1_p0_p1_p1_p1_p1_p1_p1_p0_p0",
+    "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p0_p1_p1_p1_p1_p1_p1_p0"
+  ],
+  "epsilon_power_replaced_only": 1,
+  "local_publication_adoption": {
+    "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-four-entry-symbolic-publication-source-v1/root-actual-four-epsilon1-symbolic-publication-adoption-v1.json",
+    "sha256": "147e7a121a507c87516369979e827b65e32ceccb604a8bc165045a00a36c02d8"
+  },
+  "symbolic_validation_digits": 200,
+  "mathematical_method": "direct_analytic_with_later_recurrence_assisted_residual_recognition",
+  "recurrence_assisted_recognition": {
+    "Root_adoption": {
+      "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-residual-found-full-expression-bridge-source-v1/root-actual-recurrence-assisted-full-expression-recognition-adoption-v1.json",
+      "sha256": "7e9bb38a8043b7abeb173812972e911c8c53d5a002cdb564b9ada2223294e572"
+    },
+    "qualification": {
+      "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-residual-found-full-expression-bridge-source-v1/observation-output-v1/qualification.json",
+      "sha256": "2245e48559737124d8718b0219af88624e582e7ac1b9aa22253f060f31105e9e"
+    },
+    "constructed_full_expression": {
+      "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-residual-found-full-expression-bridge-source-v1/observation-output-v1/reconstructed-from-residual-PSLQ.json",
+      "sha256": "014075dbf3ffa39e6c39373a8c6d94e4c2afdc27e608fbd5e4d3575624577f8d"
+    },
+    "exact_full200_identity_binding": {
+      "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-residual-found-full-expression-bridge-source-v1/observation-output-v1/found-full-expression-DR200-binding.json",
+      "sha256": "7caa84884680154840eb7f7a804704afe42f5084d1fbd173f4d2d6bbb63fd8dc"
+    },
+    "independent_science_review": {
+      "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-residual-found-full-expression-bridge-source-v1/peer-independent-actual-full-expression-bridge-native-science-protocol-v1.json",
+      "sha256": "87ae53615174e137406afd135f8f9760c776ad3c7ea1affc2904a5913cb43df2"
+    },
+    "independent_resource_review": {
+      "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-residual-found-full-expression-bridge-source-v1/peer-independent-actual-full-expression-bridge-resource-observer-census-v1.json",
+      "sha256": "5d3703755fcd0d51956fbc78e83b13572923b70917c2b575d03b774acda81b7c"
+    },
+    "partial_recognition_Root_adoption": {
+      "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-epsilon1-five-vector-residual-recognition-source-v2/root-actual-five-vector-partial-period-recognition-adoption-v1.json",
+      "sha256": "b279e441d59f99f130a352228eb5c01b7bd7f14af8db071a83faba36c6768449"
+    },
+    "normalized_residual_relation": [
+      "8",
+      "189",
+      "27",
+      "-274",
+      "-30"
+    ],
+    "effective_residual_search_digits": [
+      100,
+      110
+    ],
+    "original_target_exposure_digits": [
+      140,
+      150
+    ],
+    "original_target_validated_digits": 200,
+    "known_lower_expression_fixed_by_exact_recurrence": true,
+    "canonical_native_full_expression_identity_binds_existing_DR200_checks": true,
+    "blind_full_coefficient_discovery": false,
+    "principal_symbolic_count_change_from_recognition": 0,
+    "published_direct_analytic_provenance_preserved": true
+  },
+  "period_definitions": {
+    "path": "4L/provenance/PR10-epsilon1-v25/independent-D2-Taylor01-period-registry-v2.json",
+    "sha256": "242211f4a7278303df58c8ee6405d839b95eb67f5d6db468cff4caca04b416e7"
+  },
+  "portable_proof_index": {
+    "path": "provenance/PR10-epsilon1-v25/portable-proof-index.json",
+    "sha256": "3d10e05f328295d7956ba7cd92aac6565e6058d1c6943836a31bed6864013876"
+  },
+  "before_counts": {
+    "numerical": 739,
+    "symbolic": 692,
+    "fallback": 47,
+    "extra_orders": 49
+  },
+  "after_counts": {
+    "numerical": 739,
+    "symbolic": 696,
+    "fallback": 43,
+    "extra_orders": 49
+  },
+  "numerical_precision_counts": {
+    "20000": 38,
+    "200": 695,
+    "2000": 6
+  },
+  "numerical_extra_order_graph_IBP_cache_constants_and_evaluator_payloads_unchanged": true,
+  "requires_existing_generator_validation_and_tests_before_publication": true,
+  "no_Git_network_tag_release_pack_assets_or_latest_action": true
+}

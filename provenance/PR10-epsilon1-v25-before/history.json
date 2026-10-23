@@ -1,0 +1,48 @@
+{
+  "schema": "vakint.external-data.preimage-history.v1",
+  "base_commit": "cb52c789af88e96de009d8fbf11bd792f3391d63",
+  "files": [
+    {
+      "path": "4L/masters/P13/symbolic.json",
+      "preserved_path": "provenance/PR10-epsilon1-v25-before/4L/masters/P13/symbolic.json",
+      "sha256": "62911455a95606956fb6c2ea389f8f6a5ca2f43f6518e3d4491bb6807b5261cf",
+      "mode": 420
+    },
+    {
+      "path": "4L/masters/P27/symbolic.json",
+      "preserved_path": "provenance/PR10-epsilon1-v25-before/4L/masters/P27/symbolic.json",
+      "sha256": "62911455a95606956fb6c2ea389f8f6a5ca2f43f6518e3d4491bb6807b5261cf",
+      "mode": 420
+    },
+    {
+      "path": "4L/masters/P48/symbolic.json",
+      "preserved_path": "provenance/PR10-epsilon1-v25-before/4L/masters/P48/symbolic.json",
+      "sha256": "62911455a95606956fb6c2ea389f8f6a5ca2f43f6518e3d4491bb6807b5261cf",
+      "mode": 420
+    },
+    {
+      "path": "4L/masters/P62/symbolic.json",
+      "preserved_path": "provenance/PR10-epsilon1-v25-before/4L/masters/P62/symbolic.json",
+      "sha256": "62911455a95606956fb6c2ea389f8f6a5ca2f43f6518e3d4491bb6807b5261cf",
+      "mode": 420
+    },
+    {
+      "path": "README.md",
+      "preserved_path": "provenance/PR10-epsilon1-v25-before/README.md",
+      "sha256": "0c03b19536f3cd4ddba8162c8f082dd027c34a5390acad66489c62845b1d4bf4",
+      "mode": 420
+    },
+    {
+      "path": "provenance/producer-update.json",
+      "preserved_path": "provenance/PR10-epsilon1-v25-before/provenance/producer-update.json",
+      "sha256": "a9d41972366a6d91f51d387faa59e2d2a01ca5b1acc264bf3e02910a2d148645",
+      "mode": 420
+    },
+    {
+      "path": "validation/manifest.json",
+      "preserved_path": "provenance/PR10-epsilon1-v25-before/validation/manifest.json",
+      "sha256": "27f54ec26f2a00953e7c17530abc3295e9aa29f6103f28e2013491a6f083acde",
+      "mode": 420
+    }
+  ]
+}
