@@ -210,6 +210,27 @@ Keep optional intermediate-capture diagnostics. The existing four-loop receipt
 records one capture-metadata exhaustion and 41790 skipped native records; all
 selected roots are complete. Caches do not establish stronger IBP coverage.
 
+Five-loop saved-application caches use one `cache/prepared.rrcache.gz` file and
+`format: "rustred.saved-application-cache-file.v1"`. Its loop cache record carries
+the native compressed/decoded BLAKE3 identity, decoded SHA256 and complete
+semantic binding; the ordinary file inventory authenticates compressed SHA256.
+`cache.json` uses `vakint.external-data.saved-cache.v1`, with `strict: true`, the
+original `preparation_report`, authenticated `workload` path/SHA256, and final
+build wall time including load, preparation and compaction. `tools/saved_cache.py`
+checks the selected-root completion, disjoint held-out inputs, at most ten hours,
+one gzip member, CRC, decoded size/hash and matching native framing. It reproduces
+Vakint's field-length-prefixed semantic digest over the exact application bytes,
+dimension, normalization, family fingerprints and signed catalogue identities.
+Release labels, graph presentation and numerical coefficients do not enter it.
+
+The compressed file is limited to 95 MiB and decoded framing/payload to 1 GiB.
+Above the 50 MiB target, `size_exception` must bind a measured comparison and show
+at least twenty percent improvement in either the quadratic median IBP time or
+the tuning-suite geometric mean against the best file at or below 50 MiB.
+Native RustRed validation is separately required for BLAKE3, Symbolica state,
+solver ownership, exact coefficients, guards and cold/warm parity. The Python
+source checks never establish new algebraic authority or campaign coverage.
+
 == Authoring and releases
 
 The tooling needs Python 3.11 or newer and only its standard library. Generate
@@ -221,6 +242,12 @@ python3 tools/data.py validate
 python3 -m unittest discover -s tests
 python3 tools/data.py pack --output /absolute/workspace/releases/v0.1.0
 ```
+
+For a current five-loop publication, use `python3 tools/data.py set-version
+--version vMAJOR.MINOR.PATCH` after completing intentional data changes. This
+validates the checkout and changes only root/loop release identities and hashes,
+preserving all accepted payloads and the current five-loop catalogue. Do not use
+the historical all-loop `generate` command to replace a current publication.
 
 The first migration additionally uses `tools/data.py migrate --source
 /path/to/vakint/artifacts --vakint-source /path/to/vakint`. It refuses to replace

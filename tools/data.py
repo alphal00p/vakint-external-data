@@ -912,7 +912,11 @@ def validate(root=None):
                     dict(numerical),
                     root,
                 )
-        if loop["cache"]["available"]:
+        if loop["cache"]["available"] and loop["loop_count"] == 5:
+            from saved_cache import validate as validate_saved_cache
+
+            validate_saved_cache(path.parent, loop)
+        elif loop["cache"]["available"]:
             metadata = read_json(path.parent / loop["cache"]["metadata"])
             report = metadata["preparation_report"]
             if (
@@ -1018,6 +1022,29 @@ def pack(output):
     )
 
 
+def set_version(version):
+    """Change only release identities; never regenerate accepted scientific data."""
+    if not re.fullmatch(r"v(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)", version):
+        raise ValueError("release version must be vMAJOR.MINOR.PATCH")
+    manifest = validate()
+    if any(pack["archive_sha256"] is not None or pack["archive_bytes"] is not None
+           for pack in manifest["loop_packs"]):
+        raise ValueError("set-version requires a source checkout, not release metadata")
+    staged = []
+    for pack in manifest["loop_packs"]:
+        path = checked_path(ROOT, pack["manifest"])
+        loop = read_json(path)
+        loop["version"] = version
+        staged.append((path, loop))
+    for (path, loop), pack in zip(staged, manifest["loop_packs"], strict=True):
+        write_json(path, loop)
+        pack["manifest_sha256"] = digest(path)
+        pack["archive"] = f"vakint-external-data-{version}-{loop['loop_count']}L.tar.gz"
+    manifest["version"] = version
+    write_json(ROOT / "manifest.json", manifest)
+    return manifest
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     commands = parser.add_subparsers(dest="command", required=True)
@@ -1026,6 +1053,8 @@ def main():
     migration.add_argument("--vakint-source", type=Path, required=True)
     generation = commands.add_parser("generate")
     generation.add_argument("--version", required=True)
+    versioning = commands.add_parser("set-version")
+    versioning.add_argument("--version", required=True)
     commands.add_parser("validate")
     packing = commands.add_parser("pack")
     packing.add_argument("--output", type=Path, required=True)
@@ -1034,6 +1063,8 @@ def main():
         migrate(args.source, args.vakint_source)
     elif args.command == "generate":
         generate(args.version)
+    elif args.command == "set-version":
+        set_version(args.version)
     elif args.command == "validate":
         validate()
     elif args.command == "pack":

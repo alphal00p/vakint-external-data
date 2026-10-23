@@ -107,6 +107,29 @@ class PortableDataTests(unittest.TestCase):
             )
         )
 
+    def test_version_update_preserves_all_scientific_payloads_and_current_five_loop(self):
+        before = {
+            p.relative_to(self.root).as_posix(): p.read_bytes()
+            for p in self.root.rglob("*") if p.is_file()
+        }
+        with patch.object(data, "ROOT", self.root), contextlib.redirect_stdout(io.StringIO()):
+            changed = data.set_version("v0.1.2")
+            data.validate(self.root)
+        self.assertEqual(changed["version"], "v0.1.2")
+        for pack in changed["loop_packs"]:
+            self.assertEqual(pack["archive"], f"vakint-external-data-v0.1.2-{pack['loop_count']}L.tar.gz")
+            old = json.loads(before[pack["manifest"]])
+            new = data.read_json(self.root / pack["manifest"])
+            old["version"] = "v0.1.2"
+            self.assertEqual(new, old)
+        for name, payload in before.items():
+            if not name.endswith("manifest.json"):
+                self.assertEqual((self.root / name).read_bytes(), payload)
+        with patch.object(data, "ROOT", self.root):
+            for version in ("latest", "v0.01.2", "v0.1.2/../5L", "0.1.2"):
+                with self.subTest(version=version), self.assertRaises(ValueError):
+                    data.set_version(version)
+
     def test_generated_five_loop_graphs_have_exact_slot_incidence(self):
         momenta, parents, witnesses = data.five_loop_definitions()
         self.assertEqual(len(momenta), 15)
