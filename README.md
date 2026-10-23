@@ -2,9 +2,10 @@
 
 Versioned native RustRed reductions, master-integral Laurent coefficients and
 graphs, and prepared reduction caches for
-[Vakint](https://github.com/alphal00p/gammaloop/tree/vakint_rustred/crates/vakint).
-The data originates in Vakint's former `artifacts` directory; original payloads
-and their migration checksums are retained.
+[Vakint](https://github.com/alphal00p/gammaloop/tree/6cdaa993ee9b413189ae077a8f783de6223cc42e/crates/vakint).
+The data originates in Vakint's former `artifacts` directory. Original lower-loop
+payloads and migration checksums are retained; previous five-loop publications
+remain available through Git history.
 
 Each release has separate `1L` through `5L` compressed packs. Loading a maximum
 loop count installs all packs up to that count. `data-latest` points to the
@@ -21,11 +22,44 @@ and is validated without network access. Source manifests leave archive hashes
 unset; release manifests contain them. All loop-manifest paths are relative to
 their loop directory.
 
-1L–4L contain 115 computed masters in total. The 905 declared 5L campaign
+1L–4L contain 115 computed masters in total. The 640 declared 5L campaign
 terminals have graphs and exact identities, but **no computed coefficients**.
-Their nominal epsilon ranges are provenance, not available numerical data.
+The five-loop graph files retain the complete numerator, propagator powers,
+mass terms and explicit loop-momentum basis. Their names `P1` through `P640`
+are assigned anew for this publication; match integrals by their family-qualified
+signed index tuples, not by names from older releases. No five-loop cache or
+epsilon coefficients are included.
 Prepared 1L–4L caches complete a declared finite workload; this does not certify
 arbitrary-index IBP coverage. See `coverage.json` and `cache.json` in each pack.
+
+The current five-loop source is recorded in
+[`5L/provenance/current-publication.json`](5L/provenance/current-publication.json),
+and its admitted starting queries remain in the native application package.
+The rank and power-difference maxima summarize those predicates; they do not
+assert coverage of every index tuple below the maxima. Historical records under
+`provenance/original-root` are immutable migration evidence and do not define the
+current five-loop basis.
+
+Load the new five-loop source checkout explicitly, without downloading an older
+release:
+
+```python
+engine.load_external_data("/path/to/vakint-external-data", max_loop_count=5)
+```
+
+Five-loop evaluation is symbolic until numerical coefficients are supplied.
+The compatible consumer is the
+[`five-loop-640-loader-acceptance` branch](https://github.com/alphal00p/gammaloop/tree/five-loop-640-loader-acceptance),
+pinned above to its tested commit. It includes native loading of the compressed
+terminal maps; the current dataset records the corresponding RustRed revision.
+
+For a subsequent five-loop refresh, use `tools/replace_five_loop.py stage` with
+the exported native application and its native terminal definitions, validate
+the staged pack, and then use its explicit `install` command with an external
+backup directory. This preserves all 1L–4L payloads and their root-manifest
+entries. The historical all-loop `tools/data.py generate` command refuses to
+overwrite a current five-loop publication. Staging and installing a source
+update do not publish a GitHub release or change `data-latest`.
 
 The `v0.1.1` dataset contains 739 numerical coefficient rows:
 692 have exact symbolic expressions and 47 retain numerical fallbacks. These

@@ -40,14 +40,6 @@
       "canonical_sha256": "d2628bb5672b18807039be6f9218c07701cfcb80320458277cda2b9f0ef47bd1",
       "model_fingerprint": "67fadf2679bc2baf07722d9e7690708b7e565ca8d3dcc30b295b0d16bd302ca2",
       "source": "migrated payload"
-    },
-    {
-      "path": "5L/model.json",
-      "original": "provenance/native-graphs/original/5L/model.json",
-      "original_sha256": "0819ce358fdba9d9e388bee2865fa607b7d271f81f43414463215f7679a5713d",
-      "canonical_sha256": "d2628bb5672b18807039be6f9218c07701cfcb80320458277cda2b9f0ef47bd1",
-      "model_fingerprint": "67fadf2679bc2baf07722d9e7690708b7e565ca8d3dcc30b295b0d16bd302ca2",
-      "source": "derived from 4L/model.json"
     }
   ],
   "graphs": [

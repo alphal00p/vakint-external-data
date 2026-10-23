@@ -1,0 +1,19 @@
+{
+  "schema": "vakint.external-data.current-five-loop.v1",
+  "application": "ibps/application.json",
+  "terminal_definitions": "terminal-definitions.json",
+  "source_manifest_blake3": "dc5ef670d7ce9f060700ffcc37f421cc9da4bb5f1be44f5c5ab9f273368057c1",
+  "source_scope_binding": "de1391c89ff7e81253a6dfadd9e10599fb6f27e69b64023a2a19b0fa1d4adb00",
+  "source_generation": 119,
+  "terminal_count": 640,
+  "naming": "P1..Pn in lexicographic full-family-fingerprint/signed-index order; native identities remain family-qualified",
+  "rustred_revision": "a39dfbc6fb01a9bf5e912c37b866941531e6361b",
+  "vakint_revision": "6cdaa993ee9b413189ae077a8f783de6223cc42e",
+  "consumer_rustred_revision": "52c7463686b4b716fa1e9051d5093b7586c5da27",
+  "application_sha256": "976d574c4ad8b4021ac7a1914c624095a77f5975b98e243c7a20a9396a86ff03",
+  "terminal_definitions_sha256": "3510ceb7c1990a8e3197fc8f3e9df7869d91c78eb3fed76fcd671ca051c7c6d0",
+  "graph_model_fingerprint": "67fadf2679bc2baf07722d9e7690708b7e565ca8d3dcc30b295b0d16bd302ca2",
+  "numerical_work_performed": false,
+  "cache_available": false,
+  "minimality_claim": false
+}

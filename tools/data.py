@@ -414,6 +414,11 @@ def check_producer_payload(entry, master, coefficients, symbolic, numerical, roo
 
 
 def generate(version):
+    if (ROOT / "5L/provenance/current-publication.json").exists():
+        raise ValueError(
+            "current five-loop publication installed; historical generate would replace it. "
+            "Use tools/replace_five_loop.py for a scoped five-loop update."
+        )
     if not re.fullmatch(r"v[0-9]+\.[0-9]+\.[0-9]+(?:[-+][A-Za-z0-9.-]+)?", version):
         raise ValueError("version must be an immutable vMAJOR.MINOR.PATCH tag")
     original = read_json(ROOT / "provenance/original-root/manifest.json")

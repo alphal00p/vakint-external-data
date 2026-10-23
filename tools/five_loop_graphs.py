@@ -83,7 +83,7 @@ def select_witness(master, witnesses):
     return min(candidates, key=lambda w: (len(w["source_slots"]), w["sector"]))
 
 
-def canonical_graph(master, momenta, parents, witnesses, fingerprint):
+def canonical_graph(master, momenta, parents, witnesses, fingerprint, display_name=None):
     """Retain the census witness while choosing actual graph chords as coordinates.
 
     A source-family momentum transforms by ``witness.routing`` into the parent
@@ -181,7 +181,7 @@ def canonical_graph(master, momenta, parents, witnesses, fingerprint):
         for endpoint in ("source", "target")
     ]
     attrs = {
-        "feynkit_name": master["master_id"],
+        "feynkit_name": display_name or master["master_id"],
         "model_fingerprint": fingerprint,
         "symmetry_factor": 1,
         "overall_factor": "1",
@@ -201,6 +201,9 @@ def canonical_graph(master, momenta, parents, witnesses, fingerprint):
         "census_sector": witness["sector"],
         "numerator_factors": json.dumps(numerator_factors),
     }
+    if display_name is not None:
+        attrs["label"] = display_name
+        attrs["master_id"] = master["master_id"]
 
     def attributes(values):
         return ", ".join(
@@ -245,6 +248,11 @@ def canonical_graph(master, momenta, parents, witnesses, fingerprint):
 
 
 def generate_five_loop_graphs(original, root=data.ROOT, check=False):
+    if (Path(root) / "5L/provenance/current-publication.json").exists():
+        raise ValueError(
+            "current five-loop publication installed; use tools/replace_five_loop.py "
+            "instead of the historical graph migration"
+        )
     momenta, parents, witnesses = data.five_loop_definitions()
     family = next(f for f in original["families"] if len(f["loop_momenta"]) == 5)
     if len(family["denominators"]) != len(momenta):
@@ -265,7 +273,7 @@ def generate_five_loop_graphs(original, root=data.ROOT, check=False):
                 "five-loop census and authenticated family denominators differ"
             )
     root = Path(root)
-    # All 905 contractions have valence <=10; reuse the existing scalar model.
+    # The authenticated five-loop contractions fit the existing scalar model.
     model = root / "4L/model.json"
     fingerprint = re.search(
         r'model_fingerprint="([0-9a-f]{64})"',

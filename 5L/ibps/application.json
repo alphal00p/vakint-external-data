@@ -3,35 +3,38 @@
   "metadata": {
     "authority": "inherits the saved owners and published terminal substitutions; no certification upgrade",
     "coefficient_convention": "stored unit mass and common formal loop measure; external mass and measure factors remain caller-owned",
-    "empty_starting_domains": 41,
+    "empty_starting_domains": 54,
     "family_closure_claim": false,
     "family_fingerprint": "rustred-integral-family-v2;N27:tide_five_loop_common_basis;L5;2:k1;2:k2;2:k3;2:k4;2:k5;E0;P1;1:d;Q5,0,15;M;RY1,1;I+1;X1;Y1,1;I+1;X0;D15;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I+2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;G0;U15;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;",
     "global_termination_claim": false,
     "inherited_equation_authority": null,
     "minimality_claim": false,
     "native_generated_data": true,
-    "nonempty_starting_domains": 763,
+    "nonempty_starting_domains": 758,
     "normalization_profile": "conservative-v1",
     "numerical_master_values": false,
+    "owner_preparation": "on_first_use",
     "physical_arity": 15,
+    "preparation_workers": 16,
     "publication_assurance": "trusted_saved_scope",
     "publication_verification_mode": "inventory",
     "raw_terminals": 939,
-    "relation_authority": "finite ordinary IBP equations with exact normalization",
-    "remaining_terminals": 905,
-    "source_generation": 54,
+    "relation_authority": "finite ordinary IBPs, independently replayed localized dimensional-pair ordinary-source certificates and optional verified same-d symmetries; no shifted-dimension runtime masters or numerical values; inherits exact published terminal substitutions and guards under a content-bound source authority; retained maps are not newly regenerated ordinary-IBP proofs",
+    "remaining_terminals": 640,
+    "source_generation": 119,
     "source_keys_checked": 939,
-    "source_manifest_blake3": "da8831a23327002e27b0f49397cee34d3aef1f4d0b7815ca6d5e22f196f25e0f",
-    "source_query_count": 804,
+    "source_kind": "saved-walk",
+    "source_manifest_blake3": "dc5ef670d7ce9f060700ffcc37f421cc9da4bb5f1be44f5c5ab9f273368057c1",
+    "source_query_count": 812,
     "source_scope": {
       "amendments": "inputs/amendments.json",
-      "max_starting_d": 9,
-      "max_starting_rank": 11,
+      "max_starting_d": 10,
+      "max_starting_rank": 6,
       "meaning": "bounds over the recorded starting domains, not every integral with these R/D values; generated descendants are unrestricted",
       "queries": "inputs/queries.json",
-      "starting_queries": 804
+      "starting_queries": 812
     },
-    "source_scope_binding": "e7f99e32ce29fdc0f743730e9cae1c6c4b5d921584761f3f8c13320f2786f374"
+    "source_scope_binding": "de1391c89ff7e81253a6dfadd9e10599fb6f27e69b64023a2a19b0fa1d4adb00"
   },
   "payloads": [
     {
@@ -953,8 +956,8 @@
     }
   ],
   "queries": {
-    "blake3": "7aa68ae3431b1053d1c0165b2f573a386e59919958f5474b8a811e2fd4847376",
-    "bytes": 252631,
+    "blake3": "a89c593a2e492f12a1a365202dee06033b1a35cb485618c0d414371af7568f62",
+    "bytes": 254969,
     "path": "queries.json"
   },
   "schema": "rustred.saved-application.v1",
@@ -964,8 +967,56 @@
     "path": "selection.json"
   },
   "terminal_maps": {
-    "blake3": "9dcdca7699c1daa3aac3f494af75f982d0e133ce63990cd509ac3bd999220873",
-    "bytes": 80758329,
+    "blake3": "82247ff6d7c1566161b1a20f093ba5ee4dfc0c2b7bb11058fbef2e5a84741ca4",
+    "bytes": 581031505,
+    "chunks": [
+      {
+        "blake3": "456475e1ff90a3eb00231137ea242e592b2e740d5badd8d43417f73c6a8f72e0",
+        "bytes": 33554432,
+        "path": "objects/82247ff6d7c1566161b1a20f093ba5ee4dfc0c2b7bb11058fbef2e5a84741ca4.00000.rrbin.gz.part"
+      },
+      {
+        "blake3": "057ed6d6b399fe231e5e59dd3b7d3f66d04ce7f8ef5b5ccec7bcd954cdc9437d",
+        "bytes": 33554432,
+        "path": "objects/82247ff6d7c1566161b1a20f093ba5ee4dfc0c2b7bb11058fbef2e5a84741ca4.00001.rrbin.gz.part"
+      },
+      {
+        "blake3": "1b64c2a3c881753f6b1416cf23dc1c30472db36f188540e427edfab7116845ef",
+        "bytes": 33554432,
+        "path": "objects/82247ff6d7c1566161b1a20f093ba5ee4dfc0c2b7bb11058fbef2e5a84741ca4.00002.rrbin.gz.part"
+      },
+      {
+        "blake3": "4e2199d013164f8e3e585c5e8fd7878eab9aefb2794aa0857d46f02bd2f7b23c",
+        "bytes": 33554432,
+        "path": "objects/82247ff6d7c1566161b1a20f093ba5ee4dfc0c2b7bb11058fbef2e5a84741ca4.00003.rrbin.gz.part"
+      },
+      {
+        "blake3": "d0cf938b85aeb47b47006b44f945653722b4da45661a9f935246bf59ebfbaec3",
+        "bytes": 33554432,
+        "path": "objects/82247ff6d7c1566161b1a20f093ba5ee4dfc0c2b7bb11058fbef2e5a84741ca4.00004.rrbin.gz.part"
+      },
+      {
+        "blake3": "04e62d13948d2739b996d69c750c196ad10eacd82b2fdef7399680900eab9a98",
+        "bytes": 33554432,
+        "path": "objects/82247ff6d7c1566161b1a20f093ba5ee4dfc0c2b7bb11058fbef2e5a84741ca4.00005.rrbin.gz.part"
+      },
+      {
+        "blake3": "b9adaa6f78885064b7de4f3dacd261a7cbf347d2da607c39c17862118617f3b2",
+        "bytes": 33554432,
+        "path": "objects/82247ff6d7c1566161b1a20f093ba5ee4dfc0c2b7bb11058fbef2e5a84741ca4.00006.rrbin.gz.part"
+      },
+      {
+        "blake3": "c8f88bc752774a2e8659061f8cf952e2972066cb75887f5f08d462124c4e1e36",
+        "bytes": 33554432,
+        "path": "objects/82247ff6d7c1566161b1a20f093ba5ee4dfc0c2b7bb11058fbef2e5a84741ca4.00007.rrbin.gz.part"
+      },
+      {
+        "blake3": "aec987d32576ecee8a8df158b96a5a98e126c03f6a2d143b639fe528aa619bf1",
+        "bytes": 6893203,
+        "path": "objects/82247ff6d7c1566161b1a20f093ba5ee4dfc0c2b7bb11058fbef2e5a84741ca4.00008.rrbin.gz.part"
+      }
+    ],
+    "encoding": "gzip-chunks-v1",
     "path": "terminal-maps.rrbin"
   }
 }

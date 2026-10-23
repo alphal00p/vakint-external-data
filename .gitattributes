@@ -1,0 +1,2 @@
+# Native compressed payload chunks are binary even when a chunk's prefix has no NUL.
+*.rrbin.gz.part binary
