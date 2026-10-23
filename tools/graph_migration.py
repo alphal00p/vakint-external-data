@@ -21,13 +21,21 @@ def sha256_text(value):
 def accepts_producer_binding(expected, master, root=data.ROOT):
     """An original producer graph binding remains valid only through this receipt."""
     directory = Path(root) / f"{master['loop_count']}L"
+    from model_identity import accepts_graph, context
+
+    identity = context(root)
+    actual = master["files"]["graph.dot"]
+    relative = f"{master['loop_count']}L/{actual['path']}"
+    if expected["path"] == actual["path"] and accepts_graph(
+        root, relative, expected["sha256"], actual["sha256"], identity
+    ):
+        return True
     receipt_path = directory / "graph-migration.json"
     if not receipt_path.exists():
         return False
     receipt = data.read_json(receipt_path)
     if receipt["schema"] != SCHEMA:
         raise ValueError("unsupported native graph migration receipt")
-    actual = master["files"]["graph.dot"]
     for record in receipt["graphs"]:
         if record["path"] != actual["path"]:
             continue
@@ -37,9 +45,11 @@ def accepts_producer_binding(expected, master, root=data.ROOT):
         return (
             expected["path"] == actual["path"]
             and expected["sha256"] == record["original_sha256"]
-            and actual["sha256"] == record["canonical_sha256"]
+            and (actual["sha256"] == record["canonical_sha256"] or accepts_graph(
+                root, relative, record["canonical_sha256"], actual["sha256"], identity
+            ))
             and data.digest(data.checked_path(directory, actual["path"]))
-            == record["canonical_sha256"]
+            == actual["sha256"]
         )
     return False
 
@@ -141,13 +151,19 @@ def migrate(native_artifacts, root=data.ROOT):
 
 def validate(root=data.ROOT):
     root = Path(root)
+    from model_identity import accepts_graph, validate as validate_identity
+
+    identity = validate_identity(root)
     receipt = data.read_json(root / RECEIPT)
     if receipt["schema"] != SCHEMA:
         raise ValueError("unsupported native graph migration receipt")
     for record in receipt["models"] + receipt["graphs"]:
         if (
-            data.digest(data.checked_path(root, record["path"]))
-            != record["canonical_sha256"]
+            (data.digest(data.checked_path(root, record["path"]))
+            != record["canonical_sha256"] and not accepts_graph(
+                root, record["path"], record["canonical_sha256"],
+                data.digest(data.checked_path(root, record["path"])), identity
+            ))
             or data.digest(data.checked_path(root, record["original"]))
             != record["original_sha256"]
         ):

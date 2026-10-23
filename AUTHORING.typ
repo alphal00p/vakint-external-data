@@ -195,6 +195,26 @@ current publication after verifying every existing DOT against its exact routing
 witness and the unchanged scalar model. It does not regenerate payloads or use
 the historical all-loop catalogue generator.
 
+The additive `provenance/native-graph-identity-v2/migration.json` adapts the saved
+DOTs to the maintained native FeynKit model and momentum notation. Model JSON
+bytes remain unchanged. The two native model fingerprints changed because
+neutral charge fields now serialize as exact rational strings, a scalar's absent
+right-handed hypercharge serializes as null, and three exact formulas print in
+canonical order. The preserved old/new model preimages and native proof identify
+all six representation changes; no mass, coupling, interaction or ordering changes.
+
+Only `model_fingerprint` and the saved DOT's `numerator`, `numerator_prefactor`
+and `projector` attributes can change. The latter use the native parsed-expression
+mapping from `FeynKit::Momentum`, `FeynKit::LoopMomentum` and
+`FeynKit::ExternalMomentum` to `gammalooprs::Q`, `gammalooprs::K` and
+`gammalooprs::P`, preserving every argument, representation and index. Native
+inverse renaming is exact for all 147 changed expressions. The proof covers 755
+external master graphs, their eight byte-identical family aliases and 41 additional
+vendored checks. Old DOTs and historical migration/producer receipts are preserved.
+The source validator replays only this fixed, authenticated projection; native
+runtime loading still requires the current model fingerprint and tensor interface.
+It does not enable a legacy fingerprint bypass or rewrite family/IBP identities.
+
 Native closed artifacts own their root-domain certificates. Admission uses
 `ClosedUnitMassProgram::validate_entry`, including both supported per-slot
 root-power bounds and the total-excess scope. Neither predicate alone describes
@@ -232,6 +252,14 @@ one gzip member, CRC, decoded size/hash and matching native framing. It reproduc
 Vakint's field-length-prefixed semantic digest over the exact application bytes,
 dimension, normalization, family fingerprints and signed catalogue identities.
 Release labels, graph presentation and numerical coefficients do not enter it.
+
+The native preparation profile must explicitly select `unresolved_policy:
+"reject"`, `entry_coverage: "advisory"` and the
+`complete-native-declared-terminals` root postcondition. Its canonical root list
+records a boolean `coverage_admitted` separately. False coverage does not reject
+a safely completed root or strengthen the saved campaign's certification. Any
+unknown leaf still fails strict preparation; only complete, guarded native
+records may be published or satisfy strict lookups.
 
 The compressed file is limited to 95 MiB and decoded framing/payload to 1 GiB.
 Above the 50 MiB target, `size_exception` must bind a measured comparison and show

@@ -1,0 +1,346 @@
+[
+  {
+    "label": "vendored-1L",
+    "source_sha256": "d7e113a7e3fb019045e4c1436e03eeb3b49da85de1234f7ed1e110416079215e",
+    "old_blake3": "b5455343bcd738affc9576f49c296cfb3e5f4c08c9b0f5779d076699a77bdbd8",
+    "new_blake3": "109aa62f4f49a115fba675e216f4066efa3f480b620eaf04bf218e9a25e05c82",
+    "changes": [
+      {
+        "path": "/particles/0/charge",
+        "kind": "changed",
+        "old": 0.0,
+        "new": "0"
+      },
+      {
+        "path": "/particles/0/y_charge",
+        "kind": "changed",
+        "old": 0,
+        "new": "0"
+      },
+      {
+        "path": "/particles/0/y_charge_right",
+        "kind": "added",
+        "new": null
+      },
+      {
+        "path": "/propagators/0/denominator",
+        "kind": "changed",
+        "old": "-mUV^2+P(idx(1,1))^2",
+        "new": "(P(idx(1,1)))^2+-1*mUV^2"
+      },
+      {
+        "path": "/couplings/0/expression",
+        "kind": "changed",
+        "old": "-𝑖*g",
+        "new": "(-𝑖)*g"
+      },
+      {
+        "path": "/couplings/1/expression",
+        "kind": "changed",
+        "old": "-𝑖*lam",
+        "new": "(-𝑖)*lam"
+      }
+    ]
+  },
+  {
+    "label": "vendored-2L",
+    "source_sha256": "d2628bb5672b18807039be6f9218c07701cfcb80320458277cda2b9f0ef47bd1",
+    "old_blake3": "67fadf2679bc2baf07722d9e7690708b7e565ca8d3dcc30b295b0d16bd302ca2",
+    "new_blake3": "33e1a05ba506e56b808f4a3318338cf0a02c4761d3d6523c07989f955faeebeb",
+    "changes": [
+      {
+        "path": "/particles/0/charge",
+        "kind": "changed",
+        "old": 0.0,
+        "new": "0"
+      },
+      {
+        "path": "/particles/0/y_charge",
+        "kind": "changed",
+        "old": 0,
+        "new": "0"
+      },
+      {
+        "path": "/particles/0/y_charge_right",
+        "kind": "added",
+        "new": null
+      },
+      {
+        "path": "/propagators/0/denominator",
+        "kind": "changed",
+        "old": "-mUV^2+P(idx(1,1))^2",
+        "new": "(P(idx(1,1)))^2+-1*mUV^2"
+      },
+      {
+        "path": "/couplings/0/expression",
+        "kind": "changed",
+        "old": "-𝑖*g",
+        "new": "(-𝑖)*g"
+      },
+      {
+        "path": "/couplings/1/expression",
+        "kind": "changed",
+        "old": "-𝑖*lam",
+        "new": "(-𝑖)*lam"
+      }
+    ]
+  },
+  {
+    "label": "vendored-3L",
+    "source_sha256": "d2628bb5672b18807039be6f9218c07701cfcb80320458277cda2b9f0ef47bd1",
+    "old_blake3": "67fadf2679bc2baf07722d9e7690708b7e565ca8d3dcc30b295b0d16bd302ca2",
+    "new_blake3": "33e1a05ba506e56b808f4a3318338cf0a02c4761d3d6523c07989f955faeebeb",
+    "changes": [
+      {
+        "path": "/particles/0/charge",
+        "kind": "changed",
+        "old": 0.0,
+        "new": "0"
+      },
+      {
+        "path": "/particles/0/y_charge",
+        "kind": "changed",
+        "old": 0,
+        "new": "0"
+      },
+      {
+        "path": "/particles/0/y_charge_right",
+        "kind": "added",
+        "new": null
+      },
+      {
+        "path": "/propagators/0/denominator",
+        "kind": "changed",
+        "old": "-mUV^2+P(idx(1,1))^2",
+        "new": "(P(idx(1,1)))^2+-1*mUV^2"
+      },
+      {
+        "path": "/couplings/0/expression",
+        "kind": "changed",
+        "old": "-𝑖*g",
+        "new": "(-𝑖)*g"
+      },
+      {
+        "path": "/couplings/1/expression",
+        "kind": "changed",
+        "old": "-𝑖*lam",
+        "new": "(-𝑖)*lam"
+      }
+    ]
+  },
+  {
+    "label": "external-1L",
+    "source_sha256": "d7e113a7e3fb019045e4c1436e03eeb3b49da85de1234f7ed1e110416079215e",
+    "old_blake3": "b5455343bcd738affc9576f49c296cfb3e5f4c08c9b0f5779d076699a77bdbd8",
+    "new_blake3": "109aa62f4f49a115fba675e216f4066efa3f480b620eaf04bf218e9a25e05c82",
+    "changes": [
+      {
+        "path": "/particles/0/charge",
+        "kind": "changed",
+        "old": 0.0,
+        "new": "0"
+      },
+      {
+        "path": "/particles/0/y_charge",
+        "kind": "changed",
+        "old": 0,
+        "new": "0"
+      },
+      {
+        "path": "/particles/0/y_charge_right",
+        "kind": "added",
+        "new": null
+      },
+      {
+        "path": "/propagators/0/denominator",
+        "kind": "changed",
+        "old": "-mUV^2+P(idx(1,1))^2",
+        "new": "(P(idx(1,1)))^2+-1*mUV^2"
+      },
+      {
+        "path": "/couplings/0/expression",
+        "kind": "changed",
+        "old": "-𝑖*g",
+        "new": "(-𝑖)*g"
+      },
+      {
+        "path": "/couplings/1/expression",
+        "kind": "changed",
+        "old": "-𝑖*lam",
+        "new": "(-𝑖)*lam"
+      }
+    ]
+  },
+  {
+    "label": "external-2L",
+    "source_sha256": "d2628bb5672b18807039be6f9218c07701cfcb80320458277cda2b9f0ef47bd1",
+    "old_blake3": "67fadf2679bc2baf07722d9e7690708b7e565ca8d3dcc30b295b0d16bd302ca2",
+    "new_blake3": "33e1a05ba506e56b808f4a3318338cf0a02c4761d3d6523c07989f955faeebeb",
+    "changes": [
+      {
+        "path": "/particles/0/charge",
+        "kind": "changed",
+        "old": 0.0,
+        "new": "0"
+      },
+      {
+        "path": "/particles/0/y_charge",
+        "kind": "changed",
+        "old": 0,
+        "new": "0"
+      },
+      {
+        "path": "/particles/0/y_charge_right",
+        "kind": "added",
+        "new": null
+      },
+      {
+        "path": "/propagators/0/denominator",
+        "kind": "changed",
+        "old": "-mUV^2+P(idx(1,1))^2",
+        "new": "(P(idx(1,1)))^2+-1*mUV^2"
+      },
+      {
+        "path": "/couplings/0/expression",
+        "kind": "changed",
+        "old": "-𝑖*g",
+        "new": "(-𝑖)*g"
+      },
+      {
+        "path": "/couplings/1/expression",
+        "kind": "changed",
+        "old": "-𝑖*lam",
+        "new": "(-𝑖)*lam"
+      }
+    ]
+  },
+  {
+    "label": "external-3L",
+    "source_sha256": "d2628bb5672b18807039be6f9218c07701cfcb80320458277cda2b9f0ef47bd1",
+    "old_blake3": "67fadf2679bc2baf07722d9e7690708b7e565ca8d3dcc30b295b0d16bd302ca2",
+    "new_blake3": "33e1a05ba506e56b808f4a3318338cf0a02c4761d3d6523c07989f955faeebeb",
+    "changes": [
+      {
+        "path": "/particles/0/charge",
+        "kind": "changed",
+        "old": 0.0,
+        "new": "0"
+      },
+      {
+        "path": "/particles/0/y_charge",
+        "kind": "changed",
+        "old": 0,
+        "new": "0"
+      },
+      {
+        "path": "/particles/0/y_charge_right",
+        "kind": "added",
+        "new": null
+      },
+      {
+        "path": "/propagators/0/denominator",
+        "kind": "changed",
+        "old": "-mUV^2+P(idx(1,1))^2",
+        "new": "(P(idx(1,1)))^2+-1*mUV^2"
+      },
+      {
+        "path": "/couplings/0/expression",
+        "kind": "changed",
+        "old": "-𝑖*g",
+        "new": "(-𝑖)*g"
+      },
+      {
+        "path": "/couplings/1/expression",
+        "kind": "changed",
+        "old": "-𝑖*lam",
+        "new": "(-𝑖)*lam"
+      }
+    ]
+  },
+  {
+    "label": "external-4L",
+    "source_sha256": "d2628bb5672b18807039be6f9218c07701cfcb80320458277cda2b9f0ef47bd1",
+    "old_blake3": "67fadf2679bc2baf07722d9e7690708b7e565ca8d3dcc30b295b0d16bd302ca2",
+    "new_blake3": "33e1a05ba506e56b808f4a3318338cf0a02c4761d3d6523c07989f955faeebeb",
+    "changes": [
+      {
+        "path": "/particles/0/charge",
+        "kind": "changed",
+        "old": 0.0,
+        "new": "0"
+      },
+      {
+        "path": "/particles/0/y_charge",
+        "kind": "changed",
+        "old": 0,
+        "new": "0"
+      },
+      {
+        "path": "/particles/0/y_charge_right",
+        "kind": "added",
+        "new": null
+      },
+      {
+        "path": "/propagators/0/denominator",
+        "kind": "changed",
+        "old": "-mUV^2+P(idx(1,1))^2",
+        "new": "(P(idx(1,1)))^2+-1*mUV^2"
+      },
+      {
+        "path": "/couplings/0/expression",
+        "kind": "changed",
+        "old": "-𝑖*g",
+        "new": "(-𝑖)*g"
+      },
+      {
+        "path": "/couplings/1/expression",
+        "kind": "changed",
+        "old": "-𝑖*lam",
+        "new": "(-𝑖)*lam"
+      }
+    ]
+  },
+  {
+    "label": "external-5L",
+    "source_sha256": "d2628bb5672b18807039be6f9218c07701cfcb80320458277cda2b9f0ef47bd1",
+    "old_blake3": "67fadf2679bc2baf07722d9e7690708b7e565ca8d3dcc30b295b0d16bd302ca2",
+    "new_blake3": "33e1a05ba506e56b808f4a3318338cf0a02c4761d3d6523c07989f955faeebeb",
+    "changes": [
+      {
+        "path": "/particles/0/charge",
+        "kind": "changed",
+        "old": 0.0,
+        "new": "0"
+      },
+      {
+        "path": "/particles/0/y_charge",
+        "kind": "changed",
+        "old": 0,
+        "new": "0"
+      },
+      {
+        "path": "/particles/0/y_charge_right",
+        "kind": "added",
+        "new": null
+      },
+      {
+        "path": "/propagators/0/denominator",
+        "kind": "changed",
+        "old": "-mUV^2+P(idx(1,1))^2",
+        "new": "(P(idx(1,1)))^2+-1*mUV^2"
+      },
+      {
+        "path": "/couplings/0/expression",
+        "kind": "changed",
+        "old": "-𝑖*g",
+        "new": "(-𝑖)*g"
+      },
+      {
+        "path": "/couplings/1/expression",
+        "kind": "changed",
+        "old": "-𝑖*lam",
+        "new": "(-𝑖)*lam"
+      }
+    ]
+  }
+]

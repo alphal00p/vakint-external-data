@@ -1,0 +1,14 @@
+[
+  {
+    "head": "gammalooprs::Q",
+    "canonical_typed_vector": "gammalooprs::{spenso::rank1,spenso::tensor,spenso::component-labels:subscript,spenso::tensor-label:q}::Q(0,spenso::{spenso::representation,spenso::self_dual}::mink(gammalooprs::{}::dim))"
+  },
+  {
+    "head": "gammalooprs::K",
+    "canonical_typed_vector": "gammalooprs::{spenso::rank1,spenso::tensor,spenso::component-labels:subscript,spenso::tensor-label:k}::K(0,spenso::{spenso::representation,spenso::self_dual}::mink(gammalooprs::{}::dim))"
+  },
+  {
+    "head": "gammalooprs::P",
+    "canonical_typed_vector": "gammalooprs::{spenso::rank1,spenso::tensor,spenso::component-labels:subscript,spenso::tensor-label:p}::P(0,spenso::{spenso::representation,spenso::self_dual}::mink(gammalooprs::{}::dim))"
+  }
+]

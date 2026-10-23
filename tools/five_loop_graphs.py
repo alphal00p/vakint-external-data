@@ -62,7 +62,7 @@ def disjoint_sets(size):
     return find, join
 
 
-def denominator(row):
+def denominator(row, momentum_head="FeynKit::LoopMomentum"):
     """Minkowski D=q²-m² in native Spenso scalar-product notation."""
     terms = ["-UFO::mUV^2"]
     for i, left in enumerate(row):
@@ -70,7 +70,7 @@ def denominator(row):
             coefficient = left * row[j] * (1 if i == j else 2)
             if coefficient:
                 arguments = ",".join(
-                    f"FeynKit::LoopMomentum({axis},spenso::mink(gammalooprs::dim))"
+                    f"{momentum_head}({axis},spenso::mink(gammalooprs::dim))"
                     for axis in (i, j)
                 )
                 terms.append(f"({coefficient})*spenso::dot({arguments})")
@@ -83,7 +83,8 @@ def select_witness(master, witnesses):
     return min(candidates, key=lambda w: (len(w["source_slots"]), w["sector"]))
 
 
-def canonical_graph(master, momenta, parents, witnesses, fingerprint, display_name=None):
+def canonical_graph(master, momenta, parents, witnesses, fingerprint, display_name=None,
+                    momentum_head="FeynKit::LoopMomentum"):
     """Retain the census witness while choosing actual graph chords as coordinates.
 
     A source-family momentum transforms by ``witness.routing`` into the parent
@@ -160,7 +161,7 @@ def canonical_graph(master, momenta, parents, witnesses, fingerprint, display_na
     numerator_factors = [[i, -power] for i, power in enumerate(powers) if power < 0]
     numerator = (
         "*".join(
-            f"{denominator(source_rows[slot])}^{power}"
+            f"{denominator(source_rows[slot], momentum_head)}^{power}"
             for slot, power in numerator_factors
         )
         or "1"

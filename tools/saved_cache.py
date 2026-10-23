@@ -124,6 +124,47 @@ def check_gzip(path, identity, decoded_sha256):
         raise ValueError("saved cache decoded identity or native framing differs")
 
 
+def validate_native_profile(profile, selected):
+    if (
+        not isinstance(profile, dict)
+        or profile.get("strict") is not True
+        or profile.get("unresolved_policy") != "reject"
+        or profile.get("entry_coverage") != "advisory"
+        or profile.get("required_root_postcondition")
+        != "complete-native-declared-terminals"
+    ):
+        raise ValueError(
+            "saved cache native profile lacks the strict completion policy"
+        )
+    expected = sorted({tuple(root["powers"]) for root in selected})
+    roots = profile.get("roots")
+    if not isinstance(roots, list) or len(roots) != len(expected):
+        raise ValueError(
+            "saved cache native profile roots differ from selected workload"
+        )
+    actual = []
+    for root in roots:
+        if (
+            not isinstance(root, dict)
+            or set(root) != {"namespace", "powers", "coverage_admitted"}
+            or not integer(root["namespace"], 0, 0)
+            or not isinstance(root["powers"], list)
+            or len(root["powers"]) != 15
+            or any(
+                not integer(power, -(1 << 63), (1 << 63) - 1)
+                for power in root["powers"]
+            )
+            or type(root["coverage_admitted"]) is not bool
+        ):
+            raise ValueError("invalid saved cache native profile root")
+        # Recorded coverage is evidence only; false does not weaken completion.
+        actual.append(tuple(root["powers"]))
+    if actual != expected:
+        raise ValueError(
+            "saved cache native profile roots differ from selected workload"
+        )
+
+
 def validate(directory, manifest):
     cache = manifest["cache"]
     if manifest["loop_count"] != 5 or cache.get("format") != FORMAT:
@@ -186,6 +227,7 @@ def validate(directory, manifest):
     if sets[2] & (sets[0] | sets[1]):
         raise ValueError("held-out cache inputs overlap training or tuning")
     report = metadata["preparation_report"]
+    validate_native_profile(report.get("native_profile"), selected)
     elapsed = metadata.get("final_build_elapsed_seconds")
     if (
         report.get("status") != "complete"
@@ -194,7 +236,6 @@ def validate(directory, manifest):
         or type(report.get("total_roots")) is not int
         or report.get("completed_roots") != len(selected)
         or report.get("total_roots") != len(selected)
-        or report.get("native_profile", {}).get("strict") is not True
         or type(elapsed) not in (int, float)
         or not math.isfinite(elapsed)
         or not 0 <= elapsed <= 36000

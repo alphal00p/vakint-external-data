@@ -1,0 +1,14 @@
+[
+  {
+    "head": "FeynKit::Momentum",
+    "canonical_typed_vector": "FeynKit::{spenso::tensor,spenso::rank1}::Momentum(0,spenso::{spenso::representation,spenso::self_dual}::mink(gammalooprs::{}::dim))"
+  },
+  {
+    "head": "FeynKit::LoopMomentum",
+    "canonical_typed_vector": "FeynKit::{spenso::tensor,spenso::rank1}::LoopMomentum(0,spenso::{spenso::representation,spenso::self_dual}::mink(gammalooprs::{}::dim))"
+  },
+  {
+    "head": "FeynKit::ExternalMomentum",
+    "canonical_typed_vector": "FeynKit::{spenso::tensor,spenso::rank1}::ExternalMomentum(0,spenso::{spenso::representation,spenso::self_dual}::mink(gammalooprs::{}::dim))"
+  }
+]

@@ -1,0 +1,133 @@
+{
+  "schema": "vakint-feynkit-model-identity-migration-proof-v1",
+  "status": "passed",
+  "scope": {
+    "external_master_graphs": 755,
+    "additional_vendored_graph_checks": 41,
+    "total_native_import_and_semantic_roundtrips": 796,
+    "unique_numerator_expressions": 147,
+    "modified_dot_attributes": [
+      "model_fingerprint",
+      "numerator",
+      "numerator_prefactor",
+      "projector"
+    ],
+    "family_or_ibp_rewrites": false
+  },
+  "producers": {
+    "old_owner_revision": "8ab99b3e0198f5986d68db9bfb1f5b8a17ed2278",
+    "old_symbolica_revision": "9a3abbeaac5c6499048bc4600a348762f356cec9",
+    "new_owner_revision": "e846b584ef31f9e35dc7df0b2bb1d096cb66d6eb",
+    "new_symbolica_revision": "9c8623ecb800baca621afbe9dffa930a3a4bfbe7",
+    "external_source_revision": "d243f9972d022850e32eca4e75ec66830e60be9f",
+    "old_host": {
+      "path": "workspace/precision-python-binary-input-final/symbolica.so",
+      "sha256": "4bdf36f9072bd737d948691bd8eae35aef254ca516238ddcaa887cc8b1331e74",
+      "bytes": 120387224
+    },
+    "new_host": {
+      "path": "workspace/5l-push/gallery-python/lib/python3.14/site-packages/vakint_hepkit_standalone.so",
+      "sha256": "eca8c7ae2a020f3bd780cde9b7561494278f5946f68a1375eb0da74c31ed00fc",
+      "bytes": 209340808
+    }
+  },
+  "model_proof": {
+    "hash_algorithm": "BLAKE3 of ordered compact canonical ModelDefinition JSON",
+    "old_hashes_reproduced_from_authenticated_model_json": true,
+    "new_hashes_reproduced_from_native_Model_to_json": true,
+    "exhaustive_changes_per_model": 6,
+    "changes": [
+      "neutral scalar charge 0.0 to exact rational string 0",
+      "explicit hypercharge 0 to exact rational string 0",
+      "absent right-handed hypercharge represented as null for scalar",
+      "propagator quadratic printed in canonical order",
+      "first exact imaginary coupling parenthesized",
+      "second exact imaginary coupling parenthesized"
+    ],
+    "exact_native_expression_equalities": true,
+    "masses_rules_particle_and_parameter_ordering_unchanged": true
+  },
+  "momentum_proof": {
+    "replacement_kind": "parsed Symbolica expression head patterns preserving every argument",
+    "inverse_rename_exact_for_every_changed_expression": true,
+    "no_expansion_or_numerical_samples": true,
+    "maximum_atom_storage_growth_bytes": 0,
+    "native_old_and_new_heads_have_rank_one_and_tensor_attributes": true,
+    "same_minkowski_representation_and_dimension": true,
+    "new_extra_attributes_only_control_printing": [
+      "spenso::component-labels:subscript",
+      "spenso::tensor-label:q",
+      "spenso::tensor-label:k",
+      "spenso::tensor-label:p"
+    ]
+  },
+  "graph_proof": {
+    "original_model_and_master_DOT_sha256_checked_against_manifest": true,
+    "source_basis_and_half_edge_order_unchanged": true,
+    "source_incidence_slots_particles_powers_unchanged": true,
+    "exact_all_source_numerator_prefactor_projector_and_overall_factor_equalities": true,
+    "native_typed_admission_and_DOT_JSON_roundtrip": true
+  },
+  "evidence": [
+    {
+      "path": "workspace/5l-push/graph-fingerprint/preimage-comparison.json",
+      "sha256": "6a8f86301b3e0b69ae7cfd7e98a2a7c0650d13d56ccc352eb55e5819e351a469",
+      "bytes": 9027
+    },
+    {
+      "path": "workspace/5l-push/graph-fingerprint/native-expression-mapping.json",
+      "sha256": "0044a4636777ccec4728ffced19e356133bab64efd4ccc1b397b6f3f10ce8d3e",
+      "bytes": 940880
+    },
+    {
+      "path": "workspace/5l-push/graph-fingerprint/semantic-migration-validation.json",
+      "sha256": "d90275b3421b2417d61b7dccb1911541b2f80a96086eb979a6b76493ea57f507",
+      "bytes": 351663
+    },
+    {
+      "path": "workspace/5l-push/graph-fingerprint/validate_migration.py",
+      "sha256": "f6bf242ef085a7e7e924f9f974f3a65cf3e60e24e423d2ad2cdf74b71bbb0a68",
+      "bytes": 8079
+    },
+    {
+      "path": "workspace/5l-push/graph-fingerprint/old-native-vector-attributes.json",
+      "sha256": "830535ad645a43a0586becb387a1e3b1a9732798cac1cbe09fcf6fbea858f6af",
+      "bytes": 645
+    },
+    {
+      "path": "workspace/5l-push/graph-fingerprint/new-native-vector-attributes.json",
+      "sha256": "2ab467714d0502d75bd42d15dabd58d59694fc81e64eac91a64310932502815f",
+      "bytes": 777
+    },
+    {
+      "path": "workspace/5l-push/graph-fingerprint/vendored-1L-old.json",
+      "sha256": "3ba794cc363cd9dfede49c4a087d989cf625c29a47fd8fd49bbe0d00093a07d5",
+      "bytes": 1896
+    },
+    {
+      "path": "workspace/5l-push/graph-fingerprint/vendored-1L-new.json",
+      "sha256": "3211b940302f0a6e54c14fc2918c735f6c7b858d57f84c537a75ddee0f9aa1da",
+      "bytes": 1928
+    },
+    {
+      "path": "workspace/5l-push/graph-fingerprint/external-2L-old.json",
+      "sha256": "02e5ba2cb97afd567b8a87a419620fa28dee4fdc4a26b958a265b1e8b56a2614",
+      "bytes": 3310
+    },
+    {
+      "path": "workspace/5l-push/graph-fingerprint/external-2L-new.json",
+      "sha256": "d81ee9dd4987d3070e0f632029ee5d419c3fc2bd8903cb05ac2364af33824b6f",
+      "bytes": 3342
+    },
+    {
+      "path": "workspace/5l-push/graph-fingerprint/b3.rs",
+      "sha256": "d6679fc6d4e78bc173cf02d7fa66034a9f7060225afe010c3408b225711adde9",
+      "bytes": 187
+    },
+    {
+      "path": "workspace/5l-push/graph-fingerprint/b3",
+      "sha256": "f276c33011006b764dc8a29edae2d2812065b24ba3e81826c7094d6844f52916",
+      "bytes": 4619504
+    }
+  ]
+}

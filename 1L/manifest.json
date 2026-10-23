@@ -125,7 +125,7 @@
         },
         "graph.dot": {
           "path": "masters/P1/graph.dot",
-          "sha256": "04497dfa677dc3584502a729c89d9c995256cb04e1caea7dd148348947c3b7ae"
+          "sha256": "1667a9d7e1a2ae60857016f9002d06675c0bf267b14f85cc864db59f52b80eb4"
         }
       },
       "acceptance_sha256": {
@@ -236,7 +236,7 @@
       "bytes": 2738
     },
     "graphs/e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4.dot": {
-      "sha256": "04497dfa677dc3584502a729c89d9c995256cb04e1caea7dd148348947c3b7ae",
+      "sha256": "1667a9d7e1a2ae60857016f9002d06675c0bf267b14f85cc864db59f52b80eb4",
       "bytes": 815
     },
     "ibps/rules.rrbin": {
@@ -244,7 +244,7 @@
       "bytes": 2790
     },
     "masters/P1/graph.dot": {
-      "sha256": "04497dfa677dc3584502a729c89d9c995256cb04e1caea7dd148348947c3b7ae",
+      "sha256": "1667a9d7e1a2ae60857016f9002d06675c0bf267b14f85cc864db59f52b80eb4",
       "bytes": 815
     },
     "masters/P1/numerical.json": {

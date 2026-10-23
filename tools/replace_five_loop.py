@@ -133,6 +133,9 @@ def graph_census(root):
 def validate_graph_bindings(directory, manifest, root):
     """Check catalogue/model bindings and the saved exact routing/power projection."""
     directory, root = Path(directory), Path(root)
+    from model_identity import accepts_graph, context
+
+    identity = context(root)
     model = data.checked_path(directory, "model.json")
     if manifest["files"].get("model.json") != data.file_record(model):
         raise ValueError("five-loop model is absent from its authenticated inventory")
@@ -164,9 +167,13 @@ def validate_graph_bindings(directory, manifest, root):
         if data.digest(path) != graph["sha256"]:
             raise ValueError("five-loop master graph hash differs")
         expected = five_loop_graphs.canonical_graph(
-            master, momenta, parents, witnesses, fingerprint, display_name=master["name"]
+            master, momenta, parents, witnesses, fingerprint, display_name=master["name"],
+            momentum_head=receipt.get("graph_momentum_head", "FeynKit::LoopMomentum"),
         )
-        if path.read_text() != expected:
+        if path.read_text() != expected and not accepts_graph(
+            root, path.relative_to(root).as_posix(), hashlib.sha256(expected.encode()).hexdigest(),
+            graph["sha256"], identity
+        ):
             raise ValueError("five-loop graph differs from its authenticated routing witness")
 
 
@@ -245,6 +252,12 @@ def stage(root, application, definitions_path, output, expected=None,
     shutil.copyfile(root / "4L/model.json", output / "model.json")
     model_source = (root / "4L/masters/P1/graph.dot").read_text()
     fingerprint = re.search(r'model_fingerprint="([0-9a-f]{64})"', model_source)[1]
+    # New publications use the current native rank-one head; existing saved
+    # publications retain their recorded dialect and explicit migration proof.
+    momentum_head = "gammalooprs::K" if fingerprint in {
+        "109aa62f4f49a115fba675e216f4066efa3f480b620eaf04bf218e9a25e05c82",
+        "33e1a05ba506e56b808f4a3318338cf0a02c4761d3d6523c07989f955faeebeb",
+    } else "FeynKit::LoopMomentum"
     graphs = output / "graphs"
     graphs.mkdir()
     for parent in parents:
@@ -255,7 +268,8 @@ def stage(root, application, definitions_path, output, expected=None,
         graph = output / record["directory"] / "graph.dot"
         graph.parent.mkdir(parents=True)
         graph.write_text(five_loop_graphs.canonical_graph(
-            record, momenta, parents, witnesses, fingerprint, display_name=record["name"]))
+            record, momenta, parents, witnesses, fingerprint, display_name=record["name"],
+            momentum_head=momentum_head))
         record["files"] = {"graph.dot": {
             "path": graph.relative_to(output).as_posix(), "sha256": data.digest(graph)}}
         record["model"] = "model.json"
@@ -291,6 +305,7 @@ def stage(root, application, definitions_path, output, expected=None,
         "application_sha256": data.digest(application / "application.json"),
         "terminal_definitions_sha256": data.digest(output / "terminal-definitions.json"),
         "graph_model_fingerprint": fingerprint, "numerical_work_performed": False,
+        "graph_momentum_head": momentum_head,
         "cache_available": False, "minimality_claim": False,
     }
     data.write_json(output / CURRENT, receipt)
