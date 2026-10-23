@@ -106,6 +106,109 @@ def validate_family(family, momenta):
             raise ValueError("native family denominators differ from the graph census")
 
 
+def graph_annotations(master, witnesses):
+    """Project physical powers from native indices, independently of DOT parsing."""
+    witness = five_loop_graphs.select_witness(master, witnesses)
+    physical = sorted(
+        (target, source, master["powers"][source])
+        for source, target in zip(witness["source_slots"], witness["target_slots"])
+        if master["powers"][source] > 0
+    )
+    return {
+        "edge_powers": [[edge, power] for edge, (_, _, power) in enumerate(physical)],
+        "family_powers": list(master["powers"]),
+        "graph_edge_to_family_slot": [[edge, source] for edge, (_, source, _) in enumerate(physical)],
+    }
+
+
+def graph_census(root):
+    previous = data.ROOT
+    try:
+        data.ROOT = Path(root)
+        return data.five_loop_definitions()
+    finally:
+        data.ROOT = previous
+
+
+def validate_graph_bindings(directory, manifest, root):
+    """Check catalogue/model bindings and the saved exact routing/power projection."""
+    directory, root = Path(directory), Path(root)
+    model = data.checked_path(directory, "model.json")
+    if manifest["files"].get("model.json") != data.file_record(model):
+        raise ValueError("five-loop model is absent from its authenticated inventory")
+    if model.read_bytes() != data.checked_path(root, "4L/model.json").read_bytes():
+        raise ValueError("five-loop model differs from the authenticated scalar source")
+    receipt = data.read_json(directory / CURRENT)
+    if receipt.get("schema") != SCHEMA:
+        raise ValueError("unsupported current five-loop publication receipt")
+    definitions_path = data.checked_path(directory, receipt["terminal_definitions"])
+    application_path = data.checked_path(directory, receipt["application"])
+    if (data.digest(definitions_path) != receipt["terminal_definitions_sha256"]
+            or data.digest(application_path) != receipt["application_sha256"]):
+        raise ValueError("graph bindings differ from the authenticated publication inputs")
+    _, declared = terminal_records(data.read_json(definitions_path), receipt["terminal_count"])
+    if [(r["master_id"], r["name"], r["powers"]) for r in manifest["masters"]] != [
+            (r["master_id"], r["name"], r["powers"]) for r in declared]:
+        raise ValueError("graph bindings differ from the native terminal catalogue")
+    fingerprint = receipt["graph_model_fingerprint"]
+    momenta, parents, witnesses = graph_census(root)
+    for family in manifest["families"]:
+        validate_family(family, momenta)
+    for master in manifest["masters"]:
+        if master.get("model") != "model.json":
+            raise ValueError("five-loop master lacks its authenticated model binding")
+        if master.get("graph_definition") != graph_annotations(master, witnesses):
+            raise ValueError("five-loop graph powers differ from the native terminal projection")
+        graph = master["files"]["graph.dot"]
+        path = data.checked_path(directory, graph["path"])
+        if data.digest(path) != graph["sha256"]:
+            raise ValueError("five-loop master graph hash differs")
+        expected = five_loop_graphs.canonical_graph(
+            master, momenta, parents, witnesses, fingerprint, display_name=master["name"]
+        )
+        if path.read_text() != expected:
+            raise ValueError("five-loop graph differs from its authenticated routing witness")
+
+
+def bind_graph_metadata(root):
+    """Enrich the current publication metadata without regenerating any payload."""
+    root = Path(root)
+    directory = root / "5L"
+    release = data.read_json(root / "manifest.json")
+    manifest = data.read_json(directory / "manifest.json")
+    pack = next(pack for pack in release["loop_packs"] if pack["loop_count"] == 5)
+    if data.digest(directory / "manifest.json") != pack["manifest_sha256"]:
+        raise ValueError("current five-loop manifest hash differs")
+    before = inventory(directory)
+    before.pop("manifest.json")
+    if before != manifest["files"]:
+        raise ValueError("current five-loop payload inventory differs")
+    lower = lower_snapshot(root)
+    _, _, witnesses = graph_census(root)
+    for master in manifest["masters"]:
+        annotations = graph_annotations(master, witnesses)
+        if (master.get("model", "model.json") != "model.json"
+                or master.get("graph_definition", annotations) != annotations):
+            raise ValueError("refusing to replace different existing graph metadata")
+        master["model"] = "model.json"
+        master["graph_definition"] = annotations
+    # Validate every model, graph and physical-power projection before writing.
+    validate_graph_bindings(directory, manifest, root)
+    data.write_json(directory / "manifest.json", manifest)
+    pack["manifest_sha256"] = data.digest(directory / "manifest.json")
+    data.write_json(root / "manifest.json", release)
+    after = inventory(directory)
+    after.pop("manifest.json")
+    if after != before or lower_snapshot(root) != lower:
+        raise ValueError("graph metadata binding changed a scientific payload")
+    return {
+        "masters": len(manifest["masters"]), "payload_files_unchanged": len(before),
+        "model_sha256": data.digest(directory / "model.json"),
+        "model_fingerprint": data.read_json(directory / CURRENT)["graph_model_fingerprint"],
+        "manifest_sha256": pack["manifest_sha256"], "lower_packs_unchanged": True,
+    }
+
+
 def stage(root, application, definitions_path, output, expected=None,
           rustred_revision=None, vakint_revision=None, consumer_rustred_revision=None):
     root, application, output = map(lambda p: Path(p).resolve(), (root, application, output))
@@ -155,6 +258,8 @@ def stage(root, application, definitions_path, output, expected=None,
             record, momenta, parents, witnesses, fingerprint, display_name=record["name"]))
         record["files"] = {"graph.dot": {
             "path": graph.relative_to(output).as_posix(), "sha256": data.digest(graph)}}
+        record["model"] = "model.json"
+        record["graph_definition"] = graph_annotations(record, witnesses)
     for family in families:
         family["coordinate_index_base"] = 0
         family["denominator_convention"] = "Minkowski q^2-mUV^2; stored unit mass squared"
@@ -212,14 +317,14 @@ def stage(root, application, definitions_path, output, expected=None,
         "files": inventory(output),
     }
     data.write_json(output / "manifest.json", manifest)
-    validate_stage(output)
+    validate_stage(output, root)
     if lower_snapshot(root) != before:
         raise ValueError("lower-loop packs changed during staging")
     return {"masters": len(records), "files": len(manifest["files"]),
             "manifest_sha256": data.digest(output / "manifest.json"), "directory": str(output)}
 
 
-def validate_stage(directory):
+def validate_stage(directory, root=data.ROOT):
     directory = Path(directory)
     manifest = data.read_json(directory / "manifest.json")
     actual = inventory(directory)
@@ -246,12 +351,13 @@ def validate_stage(directory):
         if data.digest(data.checked_path(directory, graph["path"])) != graph["sha256"]:
             raise ValueError("master graph binding differs from its native graph")
         data.checked_path(directory, master["parent_graph"]).read_bytes()
+    validate_graph_bindings(directory, manifest, root)
     return manifest
 
 
 def install(root, staged, backup):
     root, staged, backup = map(lambda p: Path(p).resolve(), (root, staged, backup))
-    manifest = validate_stage(staged)
+    manifest = validate_stage(staged, root)
     before = lower_snapshot(root)
     release = data.read_json(root / "manifest.json")
     if manifest["version"] != release["version"]:
@@ -314,6 +420,7 @@ def main():
     installation.add_argument("--backup", type=Path, required=True)
     checking = commands.add_parser("validate")
     checking.add_argument("directory", type=Path)
+    commands.add_parser("bind-graphs")
     args = parser.parse_args()
     if args.command == "stage":
         result = stage(args.root, args.application, args.terminal_definitions, args.output,
@@ -321,8 +428,10 @@ def main():
                        args.consumer_rustred_revision)
     elif args.command == "install":
         result = install(args.root, args.staged, args.backup)
+    elif args.command == "bind-graphs":
+        result = bind_graph_metadata(args.root)
     else:
-        result = {"masters": len(validate_stage(args.directory)["masters"])}
+        result = {"masters": len(validate_stage(args.directory, args.root)["masters"])}
     print(json.dumps(result, indent=2))
 
 

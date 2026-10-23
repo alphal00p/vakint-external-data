@@ -185,6 +185,16 @@ stored as graph attributes. The family graph is an atlas of all four maximal
 physical parents; the complete fifteen-denominator family also contains
 auxiliary slots and is not one fifteen-edge physical topology.
 
+Every current five-loop terminal also declares `model: "model.json"`, bound by
+the loop file inventory. Its `graph_definition.edge_powers` and
+`graph_edge_to_family_slot` are projected from the native signed tuple and the
+saved census witness, rather than inferred from a graph label. The graph loader
+cross-checks these powers against the native diagram before returning a master.
+`tools/replace_five_loop.py bind-graphs` upgrades these metadata bindings on a
+current publication after verifying every existing DOT against its exact routing
+witness and the unchanged scalar model. It does not regenerate payloads or use
+the historical all-loop catalogue generator.
+
 Native closed artifacts own their root-domain certificates. Admission uses
 `ClosedUnitMassProgram::validate_entry`, including both supported per-slot
 root-power bounds and the total-excess scope. Neither predicate alone describes

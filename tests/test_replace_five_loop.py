@@ -78,7 +78,57 @@ class FiveLoopReplacementTests(unittest.TestCase):
         self.assertEqual(manifest["cache"], {"available": False})
         self.assertEqual(manifest["masters"][0]["coefficients"], [])
         self.assertEqual(set(manifest["masters"][0]["files"]), {"graph.dot"})
+        master = manifest["masters"][0]
+        self.assertEqual(master["model"], "model.json")
+        self.assertIn(master["model"], manifest["files"])
+        self.assertEqual(master["graph_definition"]["family_powers"], master["powers"])
+        for (edge, power), (mapped_edge, slot) in zip(
+            master["graph_definition"]["edge_powers"],
+            master["graph_definition"]["graph_edge_to_family_slot"],
+            strict=True,
+        ):
+            self.assertEqual(edge, mapped_edge)
+            self.assertEqual(power, master["powers"][slot])
+            self.assertGreater(power, 0)
         self.assertEqual(before, refresh.lower_snapshot(self.root))
+
+    def test_model_and_physical_power_bindings_are_required(self):
+        for mutation in ("missing-model", "wrong-model", "wrong-power"):
+            staged = self.stage(mutation)
+            manifest = data.read_json(staged / "manifest.json")
+            master = manifest["masters"][0]
+            if mutation == "missing-model":
+                del master["model"]
+            elif mutation == "wrong-model":
+                master["model"] = "another-model.json"
+            else:
+                master["graph_definition"]["edge_powers"][0][1] += 1
+            data.write_json(staged / "manifest.json", manifest)
+            with self.subTest(mutation=mutation), self.assertRaises(ValueError):
+                refresh.validate_stage(staged, self.root)
+
+    def test_scoped_metadata_binding_preserves_current_payload_and_is_idempotent(self):
+        staged = self.stage()
+        refresh.install(self.root, staged, self.base / "backup-metadata")
+        manifest = data.read_json(self.root / "5L/manifest.json")
+        for master in manifest["masters"]:
+            del master["model"]
+            del master["graph_definition"]
+        data.write_json(self.root / "5L/manifest.json", manifest)
+        release = data.read_json(self.root / "manifest.json")
+        release["loop_packs"][-1]["manifest_sha256"] = data.digest(self.root / "5L/manifest.json")
+        data.write_json(self.root / "manifest.json", release)
+        before = refresh.inventory(self.root / "5L")
+        before.pop("manifest.json")
+        lower = refresh.lower_snapshot(self.root)
+        first = refresh.bind_graph_metadata(self.root)
+        self.assertEqual(first, refresh.bind_graph_metadata(self.root))
+        after = refresh.inventory(self.root / "5L")
+        after.pop("manifest.json")
+        self.assertEqual(before, after)
+        self.assertEqual(lower, refresh.lower_snapshot(self.root))
+        self.assertEqual(first["masters"], 1)
+        refresh.validate_stage(self.root / "5L", self.root)
 
     def test_native_key_order_is_deterministic_and_duplicate_rejected(self):
         values = copy.deepcopy(self.definitions)

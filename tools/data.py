@@ -819,6 +819,10 @@ def validate(root=None):
             raise ValueError(
                 "finite constant manifest binding differs from its payload"
             )
+        if loop["loop_count"] == 5 and (path.parent / "provenance/current-publication.json").exists():
+            from replace_five_loop import validate_graph_bindings
+
+            validate_graph_bindings(path.parent, loop, root)
         for master in loop["masters"]:
             for value in master["files"].values():
                 if digest(checked_path(path.parent, value["path"])) != value["sha256"]:
