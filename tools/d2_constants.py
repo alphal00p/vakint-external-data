@@ -343,27 +343,217 @@ def _derive(root):
     return records, readset
 
 
+def derive_taylor01(root):
+    """Project only the two newly accepted first Taylor coefficients."""
+    with localcontext() as context:
+        context.prec = 2000
+        return _derive_taylor01(root)
+
+
+def _derive_taylor01(root):
+    definition_path = (
+        "4L/provenance/PR10-epsilon1-v25/"
+        "independent-D2-Taylor01-period-registry-v2.json"
+    )
+    producer_index_path = "provenance/PR10-epsilon1-v25/portable-proof-index.json"
+    index_path = (
+        "provenance/independent-d2-taylor01-runtime-v2/portable-proof-index.json"
+    )
+    definition = json.loads(data.checked_path(root, definition_path).read_bytes())
+    producer_index = json.loads(
+        data.checked_path(root, producer_index_path).read_bytes()
+    )
+    index = json.loads(data.checked_path(root, index_path).read_bytes())
+    if definition["portable_validation_proof_index"] != reference(
+        root, producer_index_path
+    ):
+        raise ValueError("independent D2 Taylor source authentication differs")
+    records = []
+    for symbol, name, slot in [
+        ("vakint::PR10D2Eps1", "E10", 2),
+        ("vakint::PR7D2Eps1", "P7", 5),
+    ]:
+        periods = [p for p in definition["periods"] if p["public_symbol"] == symbol]
+        if len(periods) != 1:
+            raise ValueError("independent D2 Taylor identities differ")
+        period = periods[0]
+        key = f"{name}_delta1"
+        if not (
+            period["Taylor_order"] == 1
+            and period["coefficient_key"] == key
+            and period["accepted_source_cap"] == 215
+            and period["Taylor_coefficient_not_factorial_scaled_derivative"]
+            and period["independently_defined_integral_not_target_remainder"]
+            and period["public_atom"]["readable"] == symbol
+        ):
+            raise ValueError("independent D2 Taylor source acceptance differs")
+        accepted, accepted_ref = archive(
+            root,
+            producer_index,
+            period["independent_auxiliary215_Root_adoption"]["sha256"],
+        )
+        validation, validation_ref = archive(
+            root, index, period["full_unrounded_error_owner"]["sha256"]
+        )
+        if name == "E10":
+            acceptance_flag = "accepted_actual_E10_E15_Taylor0through2_auxiliary215"
+            validation_flag = "two_fresh_numerical_profiles_validated_at215"
+            profile_refs = accepted["original_independent_profiles"]
+            profile_schema = (
+                "vacuum-masters.D2-delta0to2-auxiliary215-geometric8-native-profile.v1"
+            )
+            validation_schema = (
+                "vacuum-masters.D2-jets-auxiliary215-two-profile-validation.v1"
+            )
+            acceptance_schema = (
+                "vacuum-masters.Root-E10-E15-order2-auxiliary215-adoption.v1"
+            )
+            empirical_flag = "numerical_accuracy_evidence_not_interval_proof"
+            profile_ids = ["jet2-A-W280", "jet2-B-W340"]
+        else:
+            acceptance_flag = "accepted_actual_independent_P7_Taylor0through1_auxiliary215"
+            validation_flag = "two_fresh_physical_and_source_sensitivity_profiles_passed"
+            profile_refs = accepted["profiles"]
+            profile_schema = "vacuum-masters.PR7-firstjet215-consumer-native-profile.v1"
+            validation_schema = "vacuum-masters.PR7-firstjet215-two-profile-validation.v1"
+            acceptance_schema = "vacuum-masters.root-actual-independent-P7-firstjet215-adoption.v1"
+            empirical_flag = "empirical_numerical_evidence_not_interval_proof"
+            profile_ids = ["jet1-A-W280", "jet1-B-W340"]
+        if not (
+            accepted["schema"] == acceptance_schema
+            and accepted[acceptance_flag] is True
+            and accepted[empirical_flag] is True
+            and accepted["accepted_auxiliary_significant_digits"] == 215
+            and accepted["actual_validation"] == period["full_unrounded_error_owner"]
+            and validation["schema"] == validation_schema
+            and validation["auxiliary_digits"] == 215
+            and validation["empirical_not_interval_proof"] is True
+            and validation[validation_flag] is True
+            and validation["native_weighted_seed_errors_and_full_vector_source_identities_checked"]
+            and validation["primal_dual_matching_and_atomic_native_checkpoint_receipts_checked"]
+            and len(profile_refs) == 2
+        ):
+            raise ValueError("independent D2 Taylor source acceptance differs")
+        evidence = [e for e in validation["coefficient_evidence"] if e["key"] == key]
+        if len(evidence) != 1:
+            raise ValueError("independent D2 Taylor coefficient evidence differs")
+        evidence = evidence[0]
+        center = Decimal(evidence["raw_center"])
+        profiles = []
+        neighborhoods = []
+        for position, profile_ref in enumerate(profile_refs):
+            profile, portable_ref = archive(root, index, profile_ref["sha256"])
+            model = profile["coefficient_models"][slot]
+            if not (
+                profile["schema"] == profile_schema
+                and profile["profile_id"] == profile_ids[position]
+                and profile["auxiliary_target_digits"] == 215
+                and profile["unknown_period_or_D4_target_value_used"] is False
+                and profile["empirical_not_interval_proof"] is True
+                and profile["atomic_checkpoint_native_exact_disk_readback_passed"]
+                and profile["finite_working_reconstruction_rounding_propagated"]
+                and model["period"] == name
+                and model["delta_order"] == 1
+                and model["slot"] == slot
+                and model["empirical_not_interval_proof"] is True
+                and Decimal(model["center"][1]) == 0
+                and Decimal(model["total_empirical_error_abs"][1]) == 0
+            ):
+                raise ValueError("independent D2 Taylor profile differs")
+            profile_center = Decimal(model["center"][0])
+            profile_error = Decimal(model["total_empirical_error_abs"][0])
+            if not (
+                profile_center.is_finite()
+                and profile_error.is_finite()
+                and profile_error > 0
+            ):
+                raise ValueError("independent D2 Taylor decimal differs")
+            profiles.append((profile_center, profile_error))
+            neighborhoods.append(
+                {
+                    "profile_id": profile["profile_id"],
+                    "source": portable_ref,
+                    "center_json_pointer": f"/coefficient_models/{slot}/center/0",
+                    "error_json_pointer": f"/coefficient_models/{slot}/total_empirical_error_abs/0",
+                }
+            )
+        estimate = max(abs(center - c) + e for c, e in profiles)
+        cell = evidence["strict215_cell"]
+        if not (
+            center == profiles[1][0]
+            and Decimal(evidence["crossprofile_difference"])
+            == abs(profiles[0][0] - profiles[1][0])
+            and validation["strict215_rounding_cells"][key] == cell
+            and (name != "E10" or accepted["strict215_rounding_cells"][key] == cell)
+            and rounded_significant(center - estimate, 215) == Decimal(cell)
+            and rounded_significant(center + estimate, 215) == Decimal(cell)
+            and estimate < abs(center) * Decimal("1e-215")
+        ):
+            raise ValueError("independent D2 Taylor finite cap differs")
+        records.append(
+            {
+                "symbol": symbol,
+                "value": str(center),
+                "significant_digits": 215,
+                "absolute_error": str(estimate),
+                "error_quality": "estimated",
+                "definition": period["mathematical_definition"]
+                + "; "
+                + period["portable_integral_definition"]["positive_Euclidean_definition"],
+                "provenance": {
+                    "source_kind": "independent convergent D2 integral Taylor coefficient; no master coefficient inversion",
+                    "error_authority": "both accepted full empirical profile neighborhoods; not an interval certificate",
+                    "definition_metadata": period,
+                    "definition": reference(root, definition_path),
+                    "producer_portable_proof_index": reference(root, producer_index_path),
+                    "portable_proof_index": reference(root, index_path),
+                    "acceptance": accepted_ref,
+                    "validation": validation_ref,
+                    "coefficient_key": key,
+                    "center_json_pointer": f"/coefficient_evidence/{slot}/raw_center",
+                    "profile_neighborhoods": neighborhoods,
+                    "error_rule": "max_i(abs(chosen_B_center-center_i)+total_empirical_error_abs_i)",
+                    "accepted_significant_digits": 215,
+                    "stored_digits_do_not_extend_source_cap": True,
+                },
+            }
+        )
+    return records, [
+        reference(root, path)
+        for path in [definition_path, producer_index_path, index_path]
+    ]
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("root", type=Path)
     parser.add_argument("output", type=Path)
+    parser.add_argument("--adapter", choices=["d2-v1", "taylor01-v2"], default="d2-v1")
     args = parser.parse_args()
     with localcontext() as context:
         context.prec = 2000
-        records, readset = derive(args.root)
+        records, readset = (
+            derive(args.root) if args.adapter == "d2-v1" else derive_taylor01(args.root)
+        )
+    filename = "constants-d2.json" if args.adapter == "d2-v1" else "constants-d2-taylor01.json"
+    schema = (
+        "vakint.external-data.independent-d2-runtime-projection.v1"
+        if args.adapter == "d2-v1"
+        else "vakint.external-data.independent-d2-taylor01-runtime-projection.v2"
+    )
     args.output.mkdir(parents=True, exist_ok=True)
-    (args.output / "constants-d2.json").write_text(json.dumps(records, indent=2) + "\n")
+    (args.output / filename).write_text(json.dumps(records, indent=2) + "\n")
     (args.output / "projection.json").write_text(
         json.dumps(
             {
-                "schema": "vakint.external-data.independent-d2-runtime-projection.v1",
+                "schema": schema,
                 "accepted": True,
                 "no_new_numerical_calculation": True,
                 "no_master_coefficient_inversion": True,
                 "all_errors_estimated_not_bounded": True,
                 "readset": readset,
                 "output_sha256": digest(
-                    (args.output / "constants-d2.json").read_bytes()
+                    (args.output / filename).read_bytes()
                 ),
                 "script_sha256": digest(Path(__file__).read_bytes()),
             },

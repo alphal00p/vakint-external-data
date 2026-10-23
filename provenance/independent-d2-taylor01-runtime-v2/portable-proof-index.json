@@ -1,0 +1,86 @@
+{
+  "schema": "vakint.external-data.independent-d2-taylor01-runtime-proof-index.v2",
+  "source_path_names_are_historical_only": true,
+  "archives": [
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-auxiliary215-preserved-pair-direction-replay-source-v2/metadata-output-v1/preserved-delta0to2-auxiliary215-validation.json",
+        "sha256": "7174dcc21709cd533e85801b5a893140d8529271b9b8ca40c922aeedfa610474"
+      },
+      "portable_archive": {
+        "path": "provenance/independent-d2-taylor01-runtime-v2/objects/7174dcc21709cd533e85801b5a893140d8529271b9b8ca40c922aeedfa610474.json.gz",
+        "sha256": "0b147f9aea9c70d5071ef511bb08ecb3546d153ef0a197d8a95d20dda372e338",
+        "bytes": 12187,
+        "uncompressed_sha256": "7174dcc21709cd533e85801b5a893140d8529271b9b8ca40c922aeedfa610474",
+        "uncompressed_bytes": 56257
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-D2-delta0to2-auxiliary215-geometric8-source-v1/auxiliary215-output-v1/jet2-A-W280-native-output/profile.json",
+        "sha256": "621dd870869dbda20146c34006ac5968aea2ee6a20481ecc9b2150ccffbf7612"
+      },
+      "portable_archive": {
+        "path": "provenance/independent-d2-taylor01-runtime-v2/objects/621dd870869dbda20146c34006ac5968aea2ee6a20481ecc9b2150ccffbf7612.json.gz",
+        "sha256": "785a45ceacd64f97be40b13a98b399b3c8740be1c3e1b90791eaab74500d7415",
+        "bytes": 913798,
+        "uncompressed_sha256": "621dd870869dbda20146c34006ac5968aea2ee6a20481ecc9b2150ccffbf7612",
+        "uncompressed_bytes": 6315458
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-D2-delta0to2-auxiliary215-geometric8-source-v1/auxiliary215-output-v1/jet2-B-W340-native-output/profile.json",
+        "sha256": "5259876515af8eb9a33717a1bf6d346558e4809fa4c1ab4859cb430b8fb96155"
+      },
+      "portable_archive": {
+        "path": "provenance/independent-d2-taylor01-runtime-v2/objects/5259876515af8eb9a33717a1bf6d346558e4809fa4c1ab4859cb430b8fb96155.json.gz",
+        "sha256": "17ba780f02c2d5fec704a638b47b89405ab6828b0473aa66c1bffea6b58174a9",
+        "bytes": 1106167,
+        "uncompressed_sha256": "5259876515af8eb9a33717a1bf6d346558e4809fa4c1ab4859cb430b8fb96155",
+        "uncompressed_bytes": 7129865
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR7-D2-first-jet215-preserved-A-fresh-B-source-v1/pilot-output-v1/firstjet38-pair215-validation.json",
+        "sha256": "d8e0c7c3c81a9776473124b9fbe9f99d8eafe6f0feeb019616aba01f8a3e8cab"
+      },
+      "portable_archive": {
+        "path": "provenance/independent-d2-taylor01-runtime-v2/objects/d8e0c7c3c81a9776473124b9fbe9f99d8eafe6f0feeb019616aba01f8a3e8cab.json.gz",
+        "sha256": "fa81ab5e8987398af40e5e8f14272fd6817df896218ed97966e3086422b0e0df",
+        "bytes": 9926,
+        "uncompressed_sha256": "d8e0c7c3c81a9776473124b9fbe9f99d8eafe6f0feeb019616aba01f8a3e8cab",
+        "uncompressed_bytes": 48095
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR7-D2-first-jet215-numeric-consumer-source-v1/pilot-output-v1/jet1-A-W280-native-output/profile.json",
+        "sha256": "9cbf2d0dbcc80b5d17118d2e746fca0042df6993a41f5c100461aaf2127d8c2d"
+      },
+      "portable_archive": {
+        "path": "provenance/independent-d2-taylor01-runtime-v2/objects/9cbf2d0dbcc80b5d17118d2e746fca0042df6993a41f5c100461aaf2127d8c2d.json.gz",
+        "sha256": "7b2a96414fbfbe0a0fef72526cdd346cda9ceef3864acdc6c3a85c9388201040",
+        "bytes": 516155,
+        "uncompressed_sha256": "9cbf2d0dbcc80b5d17118d2e746fca0042df6993a41f5c100461aaf2127d8c2d",
+        "uncompressed_bytes": 4712865
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR7-D2-first-jet215-preserved-A-fresh-B-source-v1/pilot-output-v1/jet1-B-W340-native-output/profile.json",
+        "sha256": "3a0b2cbc86a1b4f9e2e9eeb74292655d584fc1e1aefc9809415a320fa4c6bcf9"
+      },
+      "portable_archive": {
+        "path": "provenance/independent-d2-taylor01-runtime-v2/objects/3a0b2cbc86a1b4f9e2e9eeb74292655d584fc1e1aefc9809415a320fa4c6bcf9.json.gz",
+        "sha256": "59ec923babdc2973cb0b4d891a040cd944b44c42f69df627c565b8b9d7fb8038",
+        "bytes": 605631,
+        "uncompressed_sha256": "3a0b2cbc86a1b4f9e2e9eeb74292655d584fc1e1aefc9809415a320fa4c6bcf9",
+        "uncompressed_bytes": 5219144
+      }
+    }
+  ],
+  "resolution": "Resolve portable_archive.path from repository root; verify compressed and uncompressed SHA256. Original absolute paths are provenance only.",
+  "scope": "Existing authenticated full error records and both accepted raw profiles; no new numerical integration or producer changes."
+}

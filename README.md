@@ -142,3 +142,13 @@ with independent 215-digit empirical evidence. Existing leading definitions,
 all numerical precision, extra orders and bounded constant payloads remain
 unchanged. This producer update adds no numerical binding by itself; runtime bindings
 are managed separately by the authenticated projection. It creates no release.
+
+The additive Taylor runtime projection supplies only `vakint::PR10D2Eps1`
+and `vakint::PR7D2Eps1` as finite 215-digit bindings. Their estimated absolute
+errors cover both accepted full profile neighborhoods around the chosen
+high-precision center; they remain empirical, not interval bounds. The portable
+full source records, reproducible projection, exact-arithmetic review and
+seven unchanged previous bindings are recorded under
+[`provenance/independent-d2-taylor01-runtime-v2`](provenance/independent-d2-taylor01-runtime-v2).
+The source cap stays at 215 digits despite longer stored decimals. No producer
+record, numerical coefficient or existing bounded constant binding is changed.

@@ -1,0 +1,155 @@
+{
+  "schema": "vakint.external-data.independent-d2-taylor01-runtime-review.v2",
+  "accepted": true,
+  "independent_exact_fraction_arithmetic": true,
+  "no_new_numerical_calculation": true,
+  "original_producer_archives_and_history_not_changed_by_review": true,
+  "all_prior_constant_records_unchanged": true,
+  "prior_constant_record_count": 7,
+  "new_symbols": [
+    "vakint::PR10D2Eps1",
+    "vakint::PR7D2Eps1"
+  ],
+  "records": [
+    {
+      "symbol": "vakint::PR10D2Eps1",
+      "accepted_source_cap": 215,
+      "chosen_profile": "jet2-B-W340",
+      "profile_count": 2,
+      "model_slot": 2,
+      "exact_fraction_center_and_union_error_match": true,
+      "union_dominated_by_A": true,
+      "relative_error_supports215": true,
+      "both_profile_error_neighborhoods_contained": true,
+      "rounded215_cell_verified": true,
+      "entire_union_inside_strict215_rounding_cell": true,
+      "acceptance": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-65313cb7fc0357e956e3d6537cb036ef443d289e06a8c21129d9e58415d1b6ba.json.gz",
+        "sha256": "f9be7144639da28310c3704457af28bc5881db19ff785efb0628a46a5f2c92bd",
+        "bytes": 3001,
+        "uncompressed_sha256": "65313cb7fc0357e956e3d6537cb036ef443d289e06a8c21129d9e58415d1b6ba",
+        "uncompressed_bytes": 9158
+      },
+      "validation": {
+        "path": "provenance/independent-d2-taylor01-runtime-v2/objects/7174dcc21709cd533e85801b5a893140d8529271b9b8ca40c922aeedfa610474.json.gz",
+        "sha256": "0b147f9aea9c70d5071ef511bb08ecb3546d153ef0a197d8a95d20dda372e338",
+        "bytes": 12187,
+        "uncompressed_sha256": "7174dcc21709cd533e85801b5a893140d8529271b9b8ca40c922aeedfa610474",
+        "uncompressed_bytes": 56257
+      },
+      "profiles": [
+        {
+          "path": "provenance/independent-d2-taylor01-runtime-v2/objects/621dd870869dbda20146c34006ac5968aea2ee6a20481ecc9b2150ccffbf7612.json.gz",
+          "sha256": "785a45ceacd64f97be40b13a98b399b3c8740be1c3e1b90791eaab74500d7415",
+          "bytes": 913798,
+          "uncompressed_sha256": "621dd870869dbda20146c34006ac5968aea2ee6a20481ecc9b2150ccffbf7612",
+          "uncompressed_bytes": 6315458
+        },
+        {
+          "path": "provenance/independent-d2-taylor01-runtime-v2/objects/5259876515af8eb9a33717a1bf6d346558e4809fa4c1ab4859cb430b8fb96155.json.gz",
+          "sha256": "17ba780f02c2d5fec704a638b47b89405ab6828b0473aa66c1bffea6b58174a9",
+          "bytes": 1106167,
+          "uncompressed_sha256": "5259876515af8eb9a33717a1bf6d346558e4809fa4c1ab4859cb430b8fb96155",
+          "uncompressed_bytes": 7129865
+        }
+      ]
+    },
+    {
+      "symbol": "vakint::PR7D2Eps1",
+      "accepted_source_cap": 215,
+      "chosen_profile": "jet1-B-W340",
+      "profile_count": 2,
+      "model_slot": 5,
+      "exact_fraction_center_and_union_error_match": true,
+      "union_dominated_by_A": true,
+      "relative_error_supports215": true,
+      "both_profile_error_neighborhoods_contained": true,
+      "rounded215_cell_verified": true,
+      "entire_union_inside_strict215_rounding_cell": true,
+      "acceptance": {
+        "path": "validation/producer-update-PR10-epsilon1-v25-d1b7b26dead0ff100185736b1efda50cb92ca503012a25c7ad75915b3f8750c6.json.gz",
+        "sha256": "624b6427b28c001e9e155c544eedc18d6e54597b282a7d989bc91c16c590fe97",
+        "bytes": 4231,
+        "uncompressed_sha256": "d1b7b26dead0ff100185736b1efda50cb92ca503012a25c7ad75915b3f8750c6",
+        "uncompressed_bytes": 12154
+      },
+      "validation": {
+        "path": "provenance/independent-d2-taylor01-runtime-v2/objects/d8e0c7c3c81a9776473124b9fbe9f99d8eafe6f0feeb019616aba01f8a3e8cab.json.gz",
+        "sha256": "fa81ab5e8987398af40e5e8f14272fd6817df896218ed97966e3086422b0e0df",
+        "bytes": 9926,
+        "uncompressed_sha256": "d8e0c7c3c81a9776473124b9fbe9f99d8eafe6f0feeb019616aba01f8a3e8cab",
+        "uncompressed_bytes": 48095
+      },
+      "profiles": [
+        {
+          "path": "provenance/independent-d2-taylor01-runtime-v2/objects/9cbf2d0dbcc80b5d17118d2e746fca0042df6993a41f5c100461aaf2127d8c2d.json.gz",
+          "sha256": "7b2a96414fbfbe0a0fef72526cdd346cda9ceef3864acdc6c3a85c9388201040",
+          "bytes": 516155,
+          "uncompressed_sha256": "9cbf2d0dbcc80b5d17118d2e746fca0042df6993a41f5c100461aaf2127d8c2d",
+          "uncompressed_bytes": 4712865
+        },
+        {
+          "path": "provenance/independent-d2-taylor01-runtime-v2/objects/3a0b2cbc86a1b4f9e2e9eeb74292655d584fc1e1aefc9809415a320fa4c6bcf9.json.gz",
+          "sha256": "59ec923babdc2973cb0b4d891a040cd944b44c42f69df627c565b8b9d7fb8038",
+          "bytes": 605631,
+          "uncompressed_sha256": "3a0b2cbc86a1b4f9e2e9eeb74292655d584fc1e1aefc9809415a320fa4c6bcf9",
+          "uncompressed_bytes": 5219144
+        }
+      ]
+    }
+  ],
+  "source_projection_sha256": "9ab7d95031cb100d781ccf6dcd1723900e60df017de3269d613d29456818a2cc",
+  "portable_object_readset": [
+    {
+      "path": "provenance/independent-d2-taylor01-runtime-v2/objects/7174dcc21709cd533e85801b5a893140d8529271b9b8ca40c922aeedfa610474.json.gz",
+      "sha256": "0b147f9aea9c70d5071ef511bb08ecb3546d153ef0a197d8a95d20dda372e338"
+    },
+    {
+      "path": "provenance/independent-d2-taylor01-runtime-v2/objects/621dd870869dbda20146c34006ac5968aea2ee6a20481ecc9b2150ccffbf7612.json.gz",
+      "sha256": "785a45ceacd64f97be40b13a98b399b3c8740be1c3e1b90791eaab74500d7415"
+    },
+    {
+      "path": "provenance/independent-d2-taylor01-runtime-v2/objects/5259876515af8eb9a33717a1bf6d346558e4809fa4c1ab4859cb430b8fb96155.json.gz",
+      "sha256": "17ba780f02c2d5fec704a638b47b89405ab6828b0473aa66c1bffea6b58174a9"
+    },
+    {
+      "path": "provenance/independent-d2-taylor01-runtime-v2/objects/d8e0c7c3c81a9776473124b9fbe9f99d8eafe6f0feeb019616aba01f8a3e8cab.json.gz",
+      "sha256": "fa81ab5e8987398af40e5e8f14272fd6817df896218ed97966e3086422b0e0df"
+    },
+    {
+      "path": "provenance/independent-d2-taylor01-runtime-v2/objects/9cbf2d0dbcc80b5d17118d2e746fca0042df6993a41f5c100461aaf2127d8c2d.json.gz",
+      "sha256": "7b2a96414fbfbe0a0fef72526cdd346cda9ceef3864acdc6c3a85c9388201040"
+    },
+    {
+      "path": "provenance/independent-d2-taylor01-runtime-v2/objects/3a0b2cbc86a1b4f9e2e9eeb74292655d584fc1e1aefc9809415a320fa4c6bcf9.json.gz",
+      "sha256": "59ec923babdc2973cb0b4d891a040cd944b44c42f69df627c565b8b9d7fb8038"
+    }
+  ],
+  "readset": [
+    {
+      "path": "4L/provenance/PR10-epsilon1-v25/independent-D2-Taylor01-period-registry-v2.json",
+      "sha256": "242211f4a7278303df58c8ee6405d839b95eb67f5d6db468cff4caca04b416e7"
+    },
+    {
+      "path": "provenance/PR10-epsilon1-v25/portable-proof-index.json",
+      "sha256": "3d10e05f328295d7956ba7cd92aac6565e6058d1c6943836a31bed6864013876"
+    },
+    {
+      "path": "provenance/independent-d2-taylor01-runtime-v2/portable-proof-index.json",
+      "sha256": "406baa038771d80e52407e1212a5494eb1452bc7404132838e674d30de6d2eb0"
+    },
+    {
+      "path": "provenance/independent-d2-taylor01-runtime-v2/constants-d2-taylor01.json",
+      "sha256": "9ab7d95031cb100d781ccf6dcd1723900e60df017de3269d613d29456818a2cc"
+    },
+    {
+      "path": "provenance/independent-d2-taylor01-runtime-v2/before/4L/constants.json",
+      "sha256": "9c2b7d773c97c00899c3cf462c8fe62034db0f949d5cd3f93469d7dfb2da6102"
+    },
+    {
+      "path": "4L/constants.json",
+      "sha256": "cf38a751725f9e3ea130d55f871a9591c78e57bb99e7c5e1ec08c5c57b0474fa"
+    }
+  ],
+  "review_script_sha256": "9706fc415e920e050397a0839058a2ea018f7b697753c64cb62076541bd99bb3"
+}

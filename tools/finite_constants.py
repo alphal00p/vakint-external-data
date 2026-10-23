@@ -60,11 +60,17 @@ def validate_source(root):
     }
     actual = {record["symbol"]: record for record in records["runtime_payload"]}
     additional = receipt.get("additional_sources", {})
-    if set(additional) - {"independent-d2-v1"}:
+    if set(additional) - {"independent-d2-v1", "independent-d2-taylor01-v2"}:
         raise ValueError("unknown finite constant source adapter")
     extra = {}
-    if additional:
-        extra = _validate_d2_source(root, additional["independent-d2-v1"], actual)
+    previous = actual
+    if "independent-d2-taylor01-v2" in additional:
+        extra = _validate_d2_taylor01_source(
+            root, additional["independent-d2-taylor01-v2"], actual
+        )
+        previous = {symbol: record for symbol, record in actual.items() if symbol not in extra}
+    if "independent-d2-v1" in additional:
+        extra.update(_validate_d2_source(root, additional["independent-d2-v1"], previous))
     if (
         len(actual) != len(records["runtime_payload"])
         or set(source) & set(extra)
@@ -97,13 +103,36 @@ def validate_source(root):
 def _validate_d2_source(root, reference, actual):
     from d2_constants import derive
 
+    return _validate_d2_projection(
+        root,
+        reference,
+        actual,
+        derive,
+        "vakint.external-data.independent-d2-runtime-projection.v1",
+        {"vakint::PR7D2", "vakint::PR10D2", "vakint::PR15D2"},
+    )
+
+
+def _validate_d2_taylor01_source(root, reference, actual):
+    from d2_constants import derive_taylor01
+
+    return _validate_d2_projection(
+        root,
+        reference,
+        actual,
+        derive_taylor01,
+        "vakint.external-data.independent-d2-taylor01-runtime-projection.v2",
+        {"vakint::PR7D2Eps1", "vakint::PR10D2Eps1"},
+    )
+
+
+def _validate_d2_projection(root, reference, actual, derive, schema, symbols):
     path = data.checked_path(root, reference["path"])
     if data.digest(path) != reference["sha256"]:
         raise ValueError("independent D2 projection receipt changed")
     receipt = data.read_json(path)
     if (
-        receipt.get("schema")
-        != "vakint.external-data.independent-d2-runtime-projection.v1"
+        receipt.get("schema") != schema
         or receipt.get("accepted") is not True
         or receipt.get("no_new_numerical_calculation") is not True
         or receipt.get("no_master_coefficient_inversion") is not True
@@ -125,7 +154,7 @@ def _validate_d2_source(root, reference, actual):
     if readset != receipt["readset"] or data.read_json(payload) != expected:
         raise ValueError("independent D2 values differ from accepted source projection")
     extra = {record["symbol"]: record for record in expected}
-    if set(extra) != {"vakint::PR7D2", "vakint::PR10D2", "vakint::PR15D2"}:
+    if set(extra) != symbols:
         raise ValueError("independent D2 projection changes accepted identities")
     if any(actual.get(symbol) != record for symbol, record in extra.items()):
         raise ValueError("independent D2 runtime schema projection differs")

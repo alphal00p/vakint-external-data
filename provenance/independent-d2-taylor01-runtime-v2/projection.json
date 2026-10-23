@@ -1,0 +1,40 @@
+{
+  "schema": "vakint.external-data.independent-d2-taylor01-runtime-projection.v2",
+  "accepted": true,
+  "no_new_numerical_calculation": true,
+  "no_master_coefficient_inversion": true,
+  "all_errors_estimated_not_bounded": true,
+  "readset": [
+    {
+      "path": "4L/provenance/PR10-epsilon1-v25/independent-D2-Taylor01-period-registry-v2.json",
+      "sha256": "242211f4a7278303df58c8ee6405d839b95eb67f5d6db468cff4caca04b416e7"
+    },
+    {
+      "path": "provenance/PR10-epsilon1-v25/portable-proof-index.json",
+      "sha256": "3d10e05f328295d7956ba7cd92aac6565e6058d1c6943836a31bed6864013876"
+    },
+    {
+      "path": "provenance/independent-d2-taylor01-runtime-v2/portable-proof-index.json",
+      "sha256": "406baa038771d80e52407e1212a5494eb1452bc7404132838e674d30de6d2eb0"
+    }
+  ],
+  "output_sha256": "9ab7d95031cb100d781ccf6dcd1723900e60df017de3269d613d29456818a2cc",
+  "script_sha256": "c009cffeee142188b0cf875ae9d23d67f3bdae0dca16ea7d91213e241ea14fbc",
+  "source_payload": {
+    "path": "provenance/independent-d2-taylor01-runtime-v2/constants-d2-taylor01.json",
+    "sha256": "9ab7d95031cb100d781ccf6dcd1723900e60df017de3269d613d29456818a2cc"
+  },
+  "previous_runtime_payload": {
+    "path": "provenance/independent-d2-taylor01-runtime-v2/before/4L/constants.json",
+    "sha256": "9c2b7d773c97c00899c3cf462c8fe62034db0f949d5cd3f93469d7dfb2da6102"
+  },
+  "previous_binding_receipt": {
+    "path": "provenance/independent-d2-taylor01-runtime-v2/before/provenance/finite-constant-bindings.json",
+    "sha256": "7c81b1a17e6f676c3779f1189ac7829c47df7a6b322c64cfbaadf1c371b92739"
+  },
+  "derivation": "tools/d2_constants.py --adapter taylor01-v2 replays only authenticated accepted first Taylor coefficients and covers both complete empirical profile neighborhoods; no numerical engine",
+  "independent_review": {
+    "path": "provenance/independent-d2-taylor01-runtime-v2/review.json",
+    "sha256": "9ad61dfae184e4bc3dcc89e2e6363b1012ceba78b113d82485ddcabdce38ea2e"
+  }
+}
