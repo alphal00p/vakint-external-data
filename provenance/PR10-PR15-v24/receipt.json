@@ -1,0 +1,52 @@
+{
+  "schema": "vakint.external-data.PR10-PR15-eleven-finite-symbolic-sync.v1",
+  "base_commit": "adcc160a6d36efe1f1c1f5a28c8bc796ebc74c0e",
+  "selected_master_ids": [
+    "L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p1_p0_p1_p1_p1_p1_p1_p1_p0",
+    "L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p2_p1_p0_p1_p1_p1_p1_p1_p0",
+    "L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p2_p1_p1_p1_p0_p1_p1_p1_p0",
+    "L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p0_p1_p1_p1_p1_p1_p1_p1_p0_p0",
+    "L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p2_p1_p1_p0_p1_p1_p1_p1_p0_p0",
+    "L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p1_p0_p1_p1_p1_p1_p1_p1_p0_p0",
+    "L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p2_p1_p0_p1_p1_p1_p1_p1_p0_p0",
+    "L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p2_p1_p1_p1_p0_p1_p1_p1_p0_p0",
+    "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p0_p1_p1_p1_p1_p1_p1_p0",
+    "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p2_p1_p0_p1_p1_p1_p1_p1_p0",
+    "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p0_p0_p1_p1_p1_p1_p1_p0"
+  ],
+  "epsilon_power_replaced_only": 0,
+  "local_publication_adoption": {
+    "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-eleven-finite-symbolic-publication-source-v1/root-actual-eleven-symbolic-files-ledgers-and-period-registry-publication-adoption-v1.json",
+    "sha256": "b6aabeabcd218b444d54fbbb17ec6c98ed33ce50ab1d390d3f1ee57130d964c4"
+  },
+  "symbolic_validation_digits": 200,
+  "mathematical_method": "direct_analytic_not_new_PSLQ",
+  "period_definitions": {
+    "path": "4L/provenance/PR10-PR15-v24/independent-D2-periods-v1.json",
+    "sha256": "ac0f8f72e34660f873d17b4227e5aa5eb0f293592364cb9213f93c241f918c0c"
+  },
+  "portable_proof_index": {
+    "path": "provenance/PR10-PR15-v24/portable-proof-index.json",
+    "sha256": "52c8be0a6fe4a6c347047ff52458004e9149fdfefea0efc9797bf6c21613b41b"
+  },
+  "before_counts": {
+    "numerical": 739,
+    "symbolic": 681,
+    "fallback": 58,
+    "extra_orders": 49
+  },
+  "after_counts": {
+    "numerical": 739,
+    "symbolic": 692,
+    "fallback": 47,
+    "extra_orders": 49
+  },
+  "numerical_precision_counts": {
+    "20000": 38,
+    "200": 695,
+    "2000": 6
+  },
+  "numerical_extra_order_graph_IBP_cache_constants_and_evaluator_payloads_unchanged": true,
+  "requires_existing_generator_validation_and_tests_before_publication": true,
+  "no_Git_network_tag_release_pack_assets_or_latest_action": true
+}

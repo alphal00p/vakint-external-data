@@ -1,0 +1,2701 @@
+{
+  "accepted_independent_auxiliary215_evidence": true,
+  "geometry_Root_adoption": {
+    "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-leading18-Frobenius-geometry-source-v2/root-actual-leading18-exact-origin-infinity-geometry-adoption-v1.json",
+    "sha256": "07640d0eb8a136153fdb5828242257175a966cc86df0e35270fdf5ecaca7429a"
+  },
+  "geometry_receipt": {
+    "accepted_leading18_exact_origin_and_infinity_geometry_only": true,
+    "actual_MMA_exact_assembly": {
+      "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-leading18-Frobenius-geometry-source-v2/observation-output-v1/assembled-matrix.json",
+      "sha256": "8ede362f5c47836107a1e9774704b5149f89423b0fde346c1ea2e3351c04da07"
+    },
+    "actual_clean_guard": {
+      "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-leading18-Frobenius-geometry-source-v2/controller-v1/guard.json",
+      "sha256": "f1fdcbc93b7fed6eabdc62a4c0aaeeb305d4f886be5fd8b1a10dbf4d1cebd010"
+    },
+    "actual_final_infinity_transformation_identity": true,
+    "actual_native_geometry": {
+      "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-leading18-Frobenius-geometry-source-v2/observation-output-v1/native-exact-geometry/geometry-result.json",
+      "sha256": "db764ba4a38fc2f401aa416fa717dad6a69332020d2f57bad35319f1d492affa"
+    },
+    "actual_qualification": {
+      "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-leading18-Frobenius-geometry-source-v2/observation-output-v1/qualification.json",
+      "sha256": "80fa631bf23a99cab248c0485930c51c76757d3c8d63d86a8e87588d05376ba3"
+    },
+    "all1295_original_origin_constraints_replayed": true,
+    "all142_unwanted_endpoint_rows_exact_zero_on_entire_solution_space": true,
+    "constant_projection_rank": 2,
+    "exact_infinity_accumulator_projection": {
+      "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-leading18-Frobenius-geometry-source-v2/observation-output-v1/native-exact-geometry/exact-infinity-accumulator-projection-proof.json",
+      "sha256": "869e53e5e6e4b8bbe9fea32eb92ff77e00e523bdd72242d155bed80cad710f26"
+    },
+    "exact_infinity_prefix0_depth_certificate": {
+      "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-leading18-Frobenius-geometry-source-v2/observation-output-v1/native-exact-geometry/exact-infinity-prefix0-depth-certificate.json",
+      "sha256": "dd2c88dfd05722621d28120ad36c19399ceac8afedd41318db339e2ccc9a83d0"
+    },
+    "exact_origin_constraints": {
+      "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-leading18-Frobenius-geometry-source-v2/observation-output-v1/native-exact-geometry/exact-origin-constraints-and-free-S0-proof.json",
+      "sha256": "23f78906f0abb73885bd1ea0b72c714989fe8ce7aaabd740d6508da60f3577f2"
+    },
+    "independent_actual_audit": {
+      "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-leading18-Frobenius-geometry-source-v2/peer-independent-actual-leading18-Source2-exact-geometry-pr11d-v1.json",
+      "sha256": "ae8357fb4a77420acd6c703fbb905cc540abf5b145d6750865b9907d07eb6686"
+    },
+    "infinity_required_exact_prefix_order": 0,
+    "no_numerical_period_or_master_or_symbolic_or_precision_acceptance": true,
+    "origin_dimension": 18,
+    "origin_formal_independent_S0_amplitudes": 1,
+    "reviewed_unix": 1792706062.0614617,
+    "root_review": [
+      "FreshnativeMMA exact8x2productmatrixreplay andall324nativeinputreplay verified. Origin all1295originalrelations/filterpartition/offsetdirection replays/fullformalS0 boundary passunchanged,18constants/oneindependentlowerloopsunset amplitude. No targetnumericused.",
+      "Source2fullactualfinaltransformationexactidentity:18diagonal1/306zeros withnativevaluations>=0. Preparedindicialexponents0,1,2,3 plus noLaurentshift proveprefix0sufficient for allrequestednonpositivepower/logrows; every142full18componentrowzero. Constantprojectionrowse2/e3rank2. No missingordersfilled, native65536bit/4Mcells/defaultdensepolicyunchanged.",
+      "All7children0,guard138.207s/cleanuptrue,aggregateRSS1880600576/rawOS399 underCPU1capacity,qualified555observerrows/noreserve/drop. Independentactualpeer6991pins+19refs+52regularfiles verifiesfrozenoldSource1andcurrentactualoutputs. Earlierfailedprefix2attemptimmutable. Thisacceptsonlygeometry; twofreshnumericalboundary/transport/refinement/sourceerrorchecks and own200expressionvalidation stillrequiredbeforeanyperiodvalueornewmastercoefficientpublication."
+    ],
+    "schema": "vacuum-masters.root-actual-leading18-exact-geometry-adoption.v1",
+    "source1_failed_attempt_preserved": true,
+    "source_plan": {
+      "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-leading18-Frobenius-geometry-source-v2/plan.json",
+      "sha256": "1d251812ec0eac7ca3e772dc5d58927eafabd687d19731e49307debc4585c70e"
+    }
+  },
+  "independent_auxiliary215_Root_adoption": {
+    "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-leading-D2-auxiliary215-two-profile-source-v1/root-actual-two-independent-leading-D2-auxiliary215-evidence-adoption-v1.json",
+    "sha256": "25cce0adaf135f7ff29c83ed4bf64e04994d9bff1d2e921176dfc50ed2ec73a8"
+  },
+  "independently_defined_periods_not_renamed_unknown_D4_coefficients": true,
+  "normalization": {
+    "D2_positive_Euclidean_measure": "pi^(-4) times the integral over four d^2 k_E measures",
+    "D2_raw_Minkowski_measure": "(i*pi)^(-4) times four d^2 l_M integrals",
+    "D4_flow_to_FMFTandMATAD_conversion": "I_FMFTandMATAD(4-2*epsilon) = exp(4*EulerGamma*epsilon) * I_flow(4-2*epsilon)",
+    "D4_target_dimension": "4-2*epsilon",
+    "auxiliary_adoption_campaign_normalization_label": "dimensionless_unit_mass_FMFTandMATAD",
+    "mass_scaling_outside_coefficient_files": "For a scalar four-loop D2 integral with total propagator power A and no numerator, multiply the unit-mass period by (mUV^2)^(4-A).",
+    "raw_D2_signs": {
+      "PR10": -1,
+      "PR15": 1
+    }
+  },
+  "periods": [
+    {
+      "catalog_label": "PR10",
+      "complete_original_definition_only_input": {
+        "candidate_program": "/shared/codex-2/vacuum_masters/SOURCES/vakint-external-data-PR14-reconciled-14127-v1/4L/ibps/h.candidates.rrbin.gz",
+        "catalog_label": "PR10",
+        "compact_U_graph_formula": "(x+y)*(a+b)*(c*d+c*e+d*e)+(a+b)*x*y*(d+e)+(x+y)*a*b*(c+e)+x*y*a*b",
+        "expected_restricted_U_terms": 21,
+        "family": {
+          "aliases": [
+            "4L_h"
+          ],
+          "coordinate_index_base": 0,
+          "coordinates": [
+            {
+              "kind": "loop_loop",
+              "left": 0,
+              "right": 0
+            },
+            {
+              "kind": "loop_loop",
+              "left": 0,
+              "right": 1
+            },
+            {
+              "kind": "loop_loop",
+              "left": 0,
+              "right": 2
+            },
+            {
+              "kind": "loop_loop",
+              "left": 0,
+              "right": 3
+            },
+            {
+              "kind": "loop_loop",
+              "left": 1,
+              "right": 1
+            },
+            {
+              "kind": "loop_loop",
+              "left": 1,
+              "right": 2
+            },
+            {
+              "kind": "loop_loop",
+              "left": 1,
+              "right": 3
+            },
+            {
+              "kind": "loop_loop",
+              "left": 2,
+              "right": 2
+            },
+            {
+              "kind": "loop_loop",
+              "left": 2,
+              "right": 3
+            },
+            {
+              "kind": "loop_loop",
+              "left": 3,
+              "right": 3
+            }
+          ],
+          "denominator_convention": "constant + sum_j coefficients[j] * coordinates[j]",
+          "denominators": [
+            {
+              "coefficients": [
+                "1",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "1",
+                "0",
+                "-2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "-2",
+                "0",
+                "1",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "1",
+                "0",
+                "-2",
+                "-2",
+                "0",
+                "0",
+                "0",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "-2",
+                "-2",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "1",
+                "-2",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            }
+          ],
+          "dimension": "rustred::{}::d",
+          "external_momenta": [],
+          "fingerprint": "rustred-integral-family-v2;N18:symbolica_integral;L4;2:k1;2:k2;2:k3;2:k4;E0;P1;1:d;Q4,0,10;M;RY1,1;I+1;X1;Y1,1;I+1;X0;D10;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I+2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I+2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I+2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;G0;U10;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;",
+          "graph": "graphs/eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7.dot",
+          "loop_momenta": [
+            "k1",
+            "k2",
+            "k3",
+            "k4"
+          ],
+          "power_shifts": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "sha256": "eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7"
+        },
+        "fixed_query_scope": "native restricted U only; four distinct raises on the actual seven/eight active slots",
+        "graph_parameter_to_family_slot": {
+          "a": 4,
+          "b": 6,
+          "c": 7,
+          "d": 3,
+          "e": 5,
+          "x": 8,
+          "y": 1
+        },
+        "master_values_or_expected_reductions_included": false,
+        "no_new_IBP_search_or_equation_generation": true,
+        "schema": "vacuum-masters.PR10-PR15-Tarasov-definition-only-input.v1",
+        "source_manifest": {
+          "path": "/shared/codex-2/vacuum_masters/SOURCES/vakint-external-data-PR14-reconciled-14127-v1/4L/manifest.json",
+          "sha256": "ac55b26176949fc69b7182edf507f4a7b1015f2cb225d0f2127f827b2afd412d"
+        },
+        "stop_after_first_reduction_error": true,
+        "terminal_identity_metadata": [
+          {
+            "exact_basis_expression": "vakint::{}::PR1",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p0_p0_p0_p0_p1_p1_p1_p1_p0",
+            "powers": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "vakint::{}::PR2",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p0_p0_p0_p1_p1_p1_p1_p1_p0",
+            "powers": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "vakint::{}::PR3",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p0_p0_p1_p0_p1_p1_p1_p1_p0",
+            "powers": [
+              0,
+              0,
+              0,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "vakint::{}::PR6",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p0_p0_p1_p1_p1_p1_p1_p1_p0",
+            "powers": [
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "vakint::{}::PR5",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p0_p1_p0_p1_p1_p1_p1_p1_p0",
+            "powers": [
+              0,
+              0,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "vakint::{}::PR14",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p0_p1_p1_p1_p1_p1_p1_p1_p0",
+            "powers": [
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "vakint::{}::PR4",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p0_p0_p1_p1_p1_p0_p1_p0",
+            "powers": [
+              0,
+              1,
+              0,
+              0,
+              1,
+              1,
+              1,
+              0,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "vakint::{}::PR7",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p0_p0_p1_p1_p1_p1_p1_p0",
+            "powers": [
+              0,
+              1,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "vakint::{}::PR8",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p0_p1_p1_p0_p1_p1_p1_p0",
+            "powers": [
+              0,
+              1,
+              0,
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "vakint::{}::PR10",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p0_p1_p1_p1_p1_p1_p1_p0",
+            "powers": [
+              0,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "vakint::{}::PR9",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p1_p0_p1_p1_p1_p1_p1_p0",
+            "powers": [
+              0,
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "vakint::{}::PR13",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p1_p1_p0_p1_p1_p1_p1_p0",
+            "powers": [
+              0,
+              1,
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "vakint::{}::PR15",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p1_p1_p1_p1_p1_p1_p1_p0",
+            "powers": [
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "(-3*vakint::{}::PR4+4*vakint::{}::PR4*vakint::{}::ep)*-1/5",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p2_p0_p0_p1_p1_p1_p0_p1_p0",
+            "powers": [
+              0,
+              2,
+              0,
+              0,
+              1,
+              1,
+              1,
+              0,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "vakint::{}::PR9d",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p2_p1_p0_p1_p1_p1_p1_p1_p0",
+            "powers": [
+              0,
+              2,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "vakint::{}::PR4d",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p3_p0_p0_p1_p1_p1_p0_p1_p0",
+            "powers": [
+              0,
+              3,
+              0,
+              0,
+              1,
+              1,
+              1,
+              0,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "vakint::{}::PR11",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p1_p1_p0_p1_p1_p1_p1_p1_p1_p0",
+            "powers": [
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "vakint::{}::PR12",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p1_p1_p1_p1_p1_p1_p1_p1_p1_p0",
+            "powers": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "(-1+2*vakint::{}::ep)^(-1)*(-120*vakint::{}::PR9*vakint::{}::ep+-120*vakint::{}::PR9d+-160*vakint::{}::PR5*vakint::{}::ep^2+-210*vakint::{}::PR7*vakint::{}::ep+-30*vakint::{}::PR3+-30*vakint::{}::PR3*vakint::{}::ep^2+-40*vakint::{}::PR5+-48*vakint::{}::PR4*vakint::{}::ep+-75*vakint::{}::PR4d+160*vakint::{}::PR5*vakint::{}::ep+180*vakint::{}::PR7*vakint::{}::ep^2+240*vakint::{}::PR9*vakint::{}::ep^2+240*vakint::{}::PR9d*vakint::{}::ep+48*vakint::{}::PR4*vakint::{}::ep^2+60*vakint::{}::PR3*vakint::{}::ep+60*vakint::{}::PR7+9*vakint::{}::PR4)*-1/120",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p0_p0_p1_p1_p1_p1_p1_p0",
+            "powers": [
+              2,
+              1,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "(-1+2*vakint::{}::ep)^(-1)*(-160*vakint::{}::PR5*vakint::{}::ep^2+-210*vakint::{}::PR7*vakint::{}::ep+-30*vakint::{}::PR3+-30*vakint::{}::PR3*vakint::{}::ep^2+-30*vakint::{}::PR9+-40*vakint::{}::PR5+-48*vakint::{}::PR4*vakint::{}::ep+-75*vakint::{}::PR4d+-90*vakint::{}::PR9d+160*vakint::{}::PR5*vakint::{}::ep+180*vakint::{}::PR7*vakint::{}::ep^2+180*vakint::{}::PR9d*vakint::{}::ep+48*vakint::{}::PR4*vakint::{}::ep^2+60*vakint::{}::PR3*vakint::{}::ep+60*vakint::{}::PR7+60*vakint::{}::PR9*vakint::{}::ep+9*vakint::{}::PR4)*1/60",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p0_p1_p1_p1_p0_p1_p1_p0",
+            "powers": [
+              2,
+              1,
+              0,
+              1,
+              1,
+              1,
+              0,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "(vakint::{}::PR11*vakint::{}::ep+vakint::{}::PR11d)*-1",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p0_p1_p1_p1_p1_p1_p1_p0",
+            "powers": [
+              2,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "vakint::{}::PR11d",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p1_p0_p1_p1_p1_p1_p1_p0",
+            "powers": [
+              2,
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          }
+        ],
+        "unit_corner_powers": [
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "weighted_normalization": "/shared/codex-2/vacuum_masters/SOURCES/vakint-external-data-PR14-reconciled-14127-v1/4L/ibps/h.rrnorm.bin"
+      },
+      "current_independent_auxiliary_evidence": {
+        "Root_adoption": {
+          "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-leading-D2-auxiliary215-two-profile-source-v1/root-actual-two-independent-leading-D2-auxiliary215-evidence-adoption-v1.json",
+          "sha256": "25cce0adaf135f7ff29c83ed4bf64e04994d9bff1d2e921176dfc50ed2ec73a8"
+        },
+        "accepted_significant_digits": 215,
+        "actual_qualification": {
+          "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-leading-D2-auxiliary215-two-profile-source-v1/observation-output-v1/qualification.json",
+          "sha256": "6f62d885eb38bc775357d1d3f76474fe564ca7b91a7d49c97a4c25534aa1af37"
+        },
+        "clean_guard": {
+          "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-leading-D2-auxiliary215-two-profile-source-v1/controller-v1/guard.json",
+          "sha256": "99fe3d0d5d77cd61e6d0533454e190832107c9059fd9d5a1237085ba2218ede4"
+        },
+        "empirical_not_interval_proof": true,
+        "qualified_bindings": [
+          {
+            "available_significant_source_cap": 215,
+            "basis_profile": 0,
+            "center": {
+              "integer": "10189569061909011214495005968296777382762004059847200385490010525405689854486910570147407628378311193690057321984716398580192012213108638288300552455207223821728683892057250122956969158315542364492730797747552747629030676234883354205510016918752688232904001475660885366304566774408640696",
+              "power10": -286
+            },
+            "error_upper": {
+              "integer": "10189569061909011214495005968296777382770871016366893689399683514790950729017758354260587416581780432398212982496864620173784340138914436395172045620266194340386441840288685703385453030195803673713159103836895187036614625006613931046011994606637090597303637991626695278",
+              "power10": -500
+            },
+            "id": "E10",
+            "qualification": {
+              "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-leading-D2-auxiliary215-two-profile-source-v1/observation-output-v1/qualification.json",
+              "sha256": "6f62d885eb38bc775357d1d3f76474fe564ca7b91a7d49c97a4c25534aa1af37"
+            },
+            "source": {
+              "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-leading-D2-auxiliary215-two-profile-source-v1/observation-output-v1/RustFlow-W280-native-profile/profile.json",
+              "sha256": "7f8eb6a6508be1d39ba672a839e38877ea8f6fe55c8ed6bdf2c0939e6cf95f70"
+            }
+          },
+          {
+            "available_significant_source_cap": 215,
+            "basis_profile": 1,
+            "center": {
+              "integer": "101895690619090112144950059682967773827620040598472003854900105254056898544869105701474076283783111936900573219847163985801920122131086382883005524552072238217286838920572501229569691583155423644927307977475527476290306762348833542055100169187526882329040014756608853663045667744162182952729212789096590333875929456535764160675910864826079819829031137933848060422779",
+              "power10": -365
+            },
+            "error_upper": {
+              "integer": "10189569061909011214495005968296777382770871016366893679399683514790950729017758354260587416581780432398212982496864620173784340138915436395172045620266194340386441840288685703385453030195803673713159103836895187036614625006613931046011994606637090597303637991626695278",
+              "power10": -500
+            },
+            "id": "E10",
+            "qualification": {
+              "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-leading-D2-auxiliary215-two-profile-source-v1/observation-output-v1/qualification.json",
+              "sha256": "6f62d885eb38bc775357d1d3f76474fe564ca7b91a7d49c97a4c25534aa1af37"
+            },
+            "source": {
+              "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-leading-D2-auxiliary215-two-profile-source-v1/observation-output-v1/RustFlow-W360-native-profile/profile.json",
+              "sha256": "0b1ecdc1263a6e90318babf4da0221073576ada4da34b2c0f5c1afb076c3789e"
+            }
+          }
+        ],
+        "strict215_rounded_value": "1.0189569061909011214495005968296777382762004059847200385490010525405689854486910570147407628378311193690057321984716398580192012213108638288300552455207223821728683892057250122956969158315542364492730797747552747629",
+        "validation": {
+          "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-leading-D2-auxiliary215-two-profile-source-v1/observation-output-v1/validation.json",
+          "sha256": "9149e424e32cf3f7ca0af21f4a8e21e86cc6e40f63939fbdf761d64d987fc03d"
+        }
+      },
+      "historical_frozen_public3_definition": {
+        "catalog_label": "PR10",
+        "definition_signed_indices": [
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "definition_source": {
+          "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-native-Tarasov-depth-source-v1/PR10-definition-only-input.json",
+          "sha256": "06ea8bed3267089ac462c2b188b1bea76960bab781b833b3bb83f4fe3801bce8"
+        },
+        "family_fingerprint_utf8_sha256": "eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7",
+        "future_public_symbol": "vakint::PR10D2",
+        "independent_actual_period_qualification": null,
+        "loop_count": 4,
+        "positive_Euclidean_definition": "pi^(-4) integral over four d^2 k_E measures of the scalar unit-mass catalog topology specified by the pinned ordered denominators and signed indices, with q_E^2+1 denominators and no coupling/symmetry factor",
+        "positive_Euclidean_parametric_definition": "Gamma(A-4)/product(Gamma(a_e)) times the projective positive-simplex integral of product(x_e^(a_e-1))/U_G(x), with A=sum(a_e), physical a_e>0, sum(x_e)=1, and U_G from the pinned topology.",
+        "private_formal_symbol": "leading_priority::E10",
+        "raw_Minkowski_to_positive_Euclidean_sign": -1,
+        "raw_normalized_Minkowski_D2_equals": "-vakint::PR10D2",
+        "renaming_or_publication_authorized_now": false,
+        "scalar_numerator": "1",
+        "total_physical_propagator_power": 7,
+        "unit_mass_squared": true
+      },
+      "historical_null_qualification_and_false_renaming_flags_not_current_status": true,
+      "id": "E10",
+      "mathematical_definition_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-native-Tarasov-depth-source-v1/PR10-definition-only-input.json",
+        "sha256": "06ea8bed3267089ac462c2b188b1bea76960bab781b833b3bb83f4fe3801bce8"
+      },
+      "portable_integral_definition": {
+        "A": 7,
+        "Gamma_factor": "Gamma(A-4)/product(Gamma(a_e))",
+        "U_G": "(x+y)*(a+b)*(c*d+c*e+d*e)+(a+b)*x*y*(d+e)+(x+y)*a*b*(c+e)+x*y*a*b",
+        "active_physical_denominators": [
+          {
+            "family_slot_index_base0": 1,
+            "positive_Euclidean_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ],
+              "constant": "1"
+            },
+            "positive_Euclidean_rule": "Replace Minkowski scalar products by Euclidean scalar products and use q_E^2+1; D_M = -(q_E^2+1) under Wick rotation.",
+            "power": 1,
+            "stored_Minkowski_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            }
+          },
+          {
+            "family_slot_index_base0": 3,
+            "positive_Euclidean_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1"
+              ],
+              "constant": "1"
+            },
+            "positive_Euclidean_rule": "Replace Minkowski scalar products by Euclidean scalar products and use q_E^2+1; D_M = -(q_E^2+1) under Wick rotation.",
+            "power": 1,
+            "stored_Minkowski_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1"
+              ],
+              "constant": "-1"
+            }
+          },
+          {
+            "family_slot_index_base0": 4,
+            "positive_Euclidean_denominator": {
+              "coefficients": [
+                "1",
+                "0",
+                "-2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0"
+              ],
+              "constant": "1"
+            },
+            "positive_Euclidean_rule": "Replace Minkowski scalar products by Euclidean scalar products and use q_E^2+1; D_M = -(q_E^2+1) under Wick rotation.",
+            "power": 1,
+            "stored_Minkowski_denominator": {
+              "coefficients": [
+                "1",
+                "0",
+                "-2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            }
+          },
+          {
+            "family_slot_index_base0": 5,
+            "positive_Euclidean_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "-2",
+                "0",
+                "1",
+                "0",
+                "0"
+              ],
+              "constant": "1"
+            },
+            "positive_Euclidean_rule": "Replace Minkowski scalar products by Euclidean scalar products and use q_E^2+1; D_M = -(q_E^2+1) under Wick rotation.",
+            "power": 1,
+            "stored_Minkowski_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "-2",
+                "0",
+                "1",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            }
+          },
+          {
+            "family_slot_index_base0": 6,
+            "positive_Euclidean_denominator": {
+              "coefficients": [
+                "1",
+                "0",
+                "-2",
+                "-2",
+                "0",
+                "0",
+                "0",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "1"
+            },
+            "positive_Euclidean_rule": "Replace Minkowski scalar products by Euclidean scalar products and use q_E^2+1; D_M = -(q_E^2+1) under Wick rotation.",
+            "power": 1,
+            "stored_Minkowski_denominator": {
+              "coefficients": [
+                "1",
+                "0",
+                "-2",
+                "-2",
+                "0",
+                "0",
+                "0",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "-1"
+            }
+          },
+          {
+            "family_slot_index_base0": 7,
+            "positive_Euclidean_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "-2",
+                "-2",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "1"
+            },
+            "positive_Euclidean_rule": "Replace Minkowski scalar products by Euclidean scalar products and use q_E^2+1; D_M = -(q_E^2+1) under Wick rotation.",
+            "power": 1,
+            "stored_Minkowski_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "-2",
+                "-2",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "-1"
+            }
+          },
+          {
+            "family_slot_index_base0": 8,
+            "positive_Euclidean_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "1"
+            },
+            "positive_Euclidean_rule": "Replace Minkowski scalar products by Euclidean scalar products and use q_E^2+1; D_M = -(q_E^2+1) under Wick rotation.",
+            "power": 1,
+            "stored_Minkowski_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "-1"
+            }
+          }
+        ],
+        "dimension": 2,
+        "family_fingerprint_utf8_sha256": "eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7",
+        "graph_parameter_to_family_slot": {
+          "a": 4,
+          "b": 6,
+          "c": 7,
+          "d": 3,
+          "e": 5,
+          "x": 8,
+          "y": 1
+        },
+        "loop_count": 4,
+        "mass_scaling": "(mUV^2)^(4-A)",
+        "momentum_measure": "product over four loops of d^2 k_E / pi",
+        "no_coupling_or_symmetry_factor": true,
+        "ordered_family": {
+          "aliases": [
+            "4L_h"
+          ],
+          "coordinate_index_base": 0,
+          "coordinates": [
+            {
+              "kind": "loop_loop",
+              "left": 0,
+              "right": 0
+            },
+            {
+              "kind": "loop_loop",
+              "left": 0,
+              "right": 1
+            },
+            {
+              "kind": "loop_loop",
+              "left": 0,
+              "right": 2
+            },
+            {
+              "kind": "loop_loop",
+              "left": 0,
+              "right": 3
+            },
+            {
+              "kind": "loop_loop",
+              "left": 1,
+              "right": 1
+            },
+            {
+              "kind": "loop_loop",
+              "left": 1,
+              "right": 2
+            },
+            {
+              "kind": "loop_loop",
+              "left": 1,
+              "right": 3
+            },
+            {
+              "kind": "loop_loop",
+              "left": 2,
+              "right": 2
+            },
+            {
+              "kind": "loop_loop",
+              "left": 2,
+              "right": 3
+            },
+            {
+              "kind": "loop_loop",
+              "left": 3,
+              "right": 3
+            }
+          ],
+          "denominator_convention": "constant + sum_j coefficients[j] * coordinates[j]",
+          "denominators": [
+            {
+              "coefficients": [
+                "1",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "1",
+                "0",
+                "-2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "-2",
+                "0",
+                "1",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "1",
+                "0",
+                "-2",
+                "-2",
+                "0",
+                "0",
+                "0",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "-2",
+                "-2",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "1",
+                "-2",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            }
+          ],
+          "dimension": "rustred::{}::d",
+          "external_momenta": [],
+          "fingerprint": "rustred-integral-family-v2;N18:symbolica_integral;L4;2:k1;2:k2;2:k3;2:k4;E0;P1;1:d;Q4,0,10;M;RY1,1;I+1;X1;Y1,1;I+1;X0;D10;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I+2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I+2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I+2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;G0;U10;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;",
+          "graph": "graphs/eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7.dot",
+          "loop_momenta": [
+            "k1",
+            "k2",
+            "k3",
+            "k4"
+          ],
+          "power_shifts": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "sha256": "eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7"
+        },
+        "positive_Euclidean_definition": "pi^(-4) integral over four d^2 k_E measures of the scalar unit-mass catalog topology specified by the pinned ordered denominators and signed indices, with q_E^2+1 denominators and no coupling/symmetry factor",
+        "positive_Euclidean_parametric_definition": "Gamma(A-4)/product(Gamma(a_e)) times the projective positive-simplex integral of product(x_e^(a_e-1))/U_G(x), with A=sum(a_e), physical a_e>0, sum(x_e)=1, and U_G from the pinned topology.",
+        "projective_simplex_constraint": "sum(x_e)=1 with x_e>=0",
+        "scalar_numerator": "1",
+        "signed_index_tuple": [
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "total_physical_propagator_power": 7,
+        "unit_mass_squared": true
+      },
+      "public_atom": {
+        "Mathematica": "vakint`PR10D2",
+        "Mathematica_default_native_namespace_hiding_preserved": true,
+        "Mathematica_exact_native_reverse_rename_roundtrip": true,
+        "Mathematica_private_period_transport_namespace": "leadingPriority",
+        "Mathematica_temporary_transport_E_indices": [],
+        "Mathematica_transport_names_are_not_public_periods_or_definitions": true,
+        "canonical": "vakint::{}::PR10D2",
+        "canonical_readable_Mathematica_roundtrips": true,
+        "readable": "vakint::PR10D2",
+        "readable_all_namespaces_no_attributes_Unicode_no_ANSI": true
+      },
+      "raw_Minkowski_to_positive_Euclidean_sign": -1,
+      "raw_normalized_Minkowski_D2_equals": "-vakint::PR10D2"
+    },
+    {
+      "catalog_label": "PR15",
+      "complete_original_definition_only_input": {
+        "candidate_program": "/shared/codex-2/vacuum_masters/SOURCES/vakint-external-data-PR14-reconciled-14127-v1/4L/ibps/h.candidates.rrbin.gz",
+        "catalog_label": "PR15",
+        "compact_U_graph_formula": "(x+y)*((c+d+e+f)*((b+d+f)*(a+e+f)-f^2)-(d+f)^2*(a+e+f)-(e+f)^2*(b+d+f)+2*(d+f)*(e+f)*f)+x*y*((b+d+f)*(a+e+f)-f^2)",
+        "expected_restricted_U_terms": 40,
+        "family": {
+          "aliases": [
+            "4L_h"
+          ],
+          "coordinate_index_base": 0,
+          "coordinates": [
+            {
+              "kind": "loop_loop",
+              "left": 0,
+              "right": 0
+            },
+            {
+              "kind": "loop_loop",
+              "left": 0,
+              "right": 1
+            },
+            {
+              "kind": "loop_loop",
+              "left": 0,
+              "right": 2
+            },
+            {
+              "kind": "loop_loop",
+              "left": 0,
+              "right": 3
+            },
+            {
+              "kind": "loop_loop",
+              "left": 1,
+              "right": 1
+            },
+            {
+              "kind": "loop_loop",
+              "left": 1,
+              "right": 2
+            },
+            {
+              "kind": "loop_loop",
+              "left": 1,
+              "right": 3
+            },
+            {
+              "kind": "loop_loop",
+              "left": 2,
+              "right": 2
+            },
+            {
+              "kind": "loop_loop",
+              "left": 2,
+              "right": 3
+            },
+            {
+              "kind": "loop_loop",
+              "left": 3,
+              "right": 3
+            }
+          ],
+          "denominator_convention": "constant + sum_j coefficients[j] * coordinates[j]",
+          "denominators": [
+            {
+              "coefficients": [
+                "1",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "1",
+                "0",
+                "-2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "-2",
+                "0",
+                "1",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "1",
+                "0",
+                "-2",
+                "-2",
+                "0",
+                "0",
+                "0",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "-2",
+                "-2",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "1",
+                "-2",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            }
+          ],
+          "dimension": "rustred::{}::d",
+          "external_momenta": [],
+          "fingerprint": "rustred-integral-family-v2;N18:symbolica_integral;L4;2:k1;2:k2;2:k3;2:k4;E0;P1;1:d;Q4,0,10;M;RY1,1;I+1;X1;Y1,1;I+1;X0;D10;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I+2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I+2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I+2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;G0;U10;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;",
+          "graph": "graphs/eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7.dot",
+          "loop_momenta": [
+            "k1",
+            "k2",
+            "k3",
+            "k4"
+          ],
+          "power_shifts": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "sha256": "eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7"
+        },
+        "fixed_query_scope": "native restricted U only; four distinct raises on the actual seven/eight active slots",
+        "graph_parameter_to_family_slot": {
+          "a": 8,
+          "b": 5,
+          "c": 3,
+          "d": 7,
+          "e": 2,
+          "f": 1,
+          "x": 6,
+          "y": 4
+        },
+        "master_values_or_expected_reductions_included": false,
+        "no_new_IBP_search_or_equation_generation": true,
+        "schema": "vacuum-masters.PR10-PR15-Tarasov-definition-only-input.v1",
+        "source_manifest": {
+          "path": "/shared/codex-2/vacuum_masters/SOURCES/vakint-external-data-PR14-reconciled-14127-v1/4L/manifest.json",
+          "sha256": "ac55b26176949fc69b7182edf507f4a7b1015f2cb225d0f2127f827b2afd412d"
+        },
+        "stop_after_first_reduction_error": true,
+        "terminal_identity_metadata": [
+          {
+            "exact_basis_expression": "vakint::{}::PR1",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p0_p0_p0_p0_p1_p1_p1_p1_p0",
+            "powers": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "vakint::{}::PR2",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p0_p0_p0_p1_p1_p1_p1_p1_p0",
+            "powers": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "vakint::{}::PR3",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p0_p0_p1_p0_p1_p1_p1_p1_p0",
+            "powers": [
+              0,
+              0,
+              0,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "vakint::{}::PR6",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p0_p0_p1_p1_p1_p1_p1_p1_p0",
+            "powers": [
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "vakint::{}::PR5",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p0_p1_p0_p1_p1_p1_p1_p1_p0",
+            "powers": [
+              0,
+              0,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "vakint::{}::PR14",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p0_p1_p1_p1_p1_p1_p1_p1_p0",
+            "powers": [
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "vakint::{}::PR4",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p0_p0_p1_p1_p1_p0_p1_p0",
+            "powers": [
+              0,
+              1,
+              0,
+              0,
+              1,
+              1,
+              1,
+              0,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "vakint::{}::PR7",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p0_p0_p1_p1_p1_p1_p1_p0",
+            "powers": [
+              0,
+              1,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "vakint::{}::PR8",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p0_p1_p1_p0_p1_p1_p1_p0",
+            "powers": [
+              0,
+              1,
+              0,
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "vakint::{}::PR10",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p0_p1_p1_p1_p1_p1_p1_p0",
+            "powers": [
+              0,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "vakint::{}::PR9",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p1_p0_p1_p1_p1_p1_p1_p0",
+            "powers": [
+              0,
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "vakint::{}::PR13",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p1_p1_p0_p1_p1_p1_p1_p0",
+            "powers": [
+              0,
+              1,
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "vakint::{}::PR15",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p1_p1_p1_p1_p1_p1_p1_p0",
+            "powers": [
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "(-3*vakint::{}::PR4+4*vakint::{}::PR4*vakint::{}::ep)*-1/5",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p2_p0_p0_p1_p1_p1_p0_p1_p0",
+            "powers": [
+              0,
+              2,
+              0,
+              0,
+              1,
+              1,
+              1,
+              0,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "vakint::{}::PR9d",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p2_p1_p0_p1_p1_p1_p1_p1_p0",
+            "powers": [
+              0,
+              2,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "vakint::{}::PR4d",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p3_p0_p0_p1_p1_p1_p0_p1_p0",
+            "powers": [
+              0,
+              3,
+              0,
+              0,
+              1,
+              1,
+              1,
+              0,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "vakint::{}::PR11",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p1_p1_p0_p1_p1_p1_p1_p1_p1_p0",
+            "powers": [
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "vakint::{}::PR12",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p1_p1_p1_p1_p1_p1_p1_p1_p1_p0",
+            "powers": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "(-1+2*vakint::{}::ep)^(-1)*(-120*vakint::{}::PR9*vakint::{}::ep+-120*vakint::{}::PR9d+-160*vakint::{}::PR5*vakint::{}::ep^2+-210*vakint::{}::PR7*vakint::{}::ep+-30*vakint::{}::PR3+-30*vakint::{}::PR3*vakint::{}::ep^2+-40*vakint::{}::PR5+-48*vakint::{}::PR4*vakint::{}::ep+-75*vakint::{}::PR4d+160*vakint::{}::PR5*vakint::{}::ep+180*vakint::{}::PR7*vakint::{}::ep^2+240*vakint::{}::PR9*vakint::{}::ep^2+240*vakint::{}::PR9d*vakint::{}::ep+48*vakint::{}::PR4*vakint::{}::ep^2+60*vakint::{}::PR3*vakint::{}::ep+60*vakint::{}::PR7+9*vakint::{}::PR4)*-1/120",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p0_p0_p1_p1_p1_p1_p1_p0",
+            "powers": [
+              2,
+              1,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "(-1+2*vakint::{}::ep)^(-1)*(-160*vakint::{}::PR5*vakint::{}::ep^2+-210*vakint::{}::PR7*vakint::{}::ep+-30*vakint::{}::PR3+-30*vakint::{}::PR3*vakint::{}::ep^2+-30*vakint::{}::PR9+-40*vakint::{}::PR5+-48*vakint::{}::PR4*vakint::{}::ep+-75*vakint::{}::PR4d+-90*vakint::{}::PR9d+160*vakint::{}::PR5*vakint::{}::ep+180*vakint::{}::PR7*vakint::{}::ep^2+180*vakint::{}::PR9d*vakint::{}::ep+48*vakint::{}::PR4*vakint::{}::ep^2+60*vakint::{}::PR3*vakint::{}::ep+60*vakint::{}::PR7+60*vakint::{}::PR9*vakint::{}::ep+9*vakint::{}::PR4)*1/60",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p0_p1_p1_p1_p0_p1_p1_p0",
+            "powers": [
+              2,
+              1,
+              0,
+              1,
+              1,
+              1,
+              0,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "(vakint::{}::PR11*vakint::{}::ep+vakint::{}::PR11d)*-1",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p0_p1_p1_p1_p1_p1_p1_p0",
+            "powers": [
+              2,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "exact_basis_expression": "vakint::{}::PR11d",
+            "master_id": "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p1_p0_p1_p1_p1_p1_p1_p0",
+            "powers": [
+              2,
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          }
+        ],
+        "unit_corner_powers": [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "weighted_normalization": "/shared/codex-2/vacuum_masters/SOURCES/vakint-external-data-PR14-reconciled-14127-v1/4L/ibps/h.rrnorm.bin"
+      },
+      "current_independent_auxiliary_evidence": {
+        "Root_adoption": {
+          "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-leading-D2-auxiliary215-two-profile-source-v1/root-actual-two-independent-leading-D2-auxiliary215-evidence-adoption-v1.json",
+          "sha256": "25cce0adaf135f7ff29c83ed4bf64e04994d9bff1d2e921176dfc50ed2ec73a8"
+        },
+        "accepted_significant_digits": 215,
+        "actual_qualification": {
+          "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-leading-D2-auxiliary215-two-profile-source-v1/observation-output-v1/qualification.json",
+          "sha256": "6f62d885eb38bc775357d1d3f76474fe564ca7b91a7d49c97a4c25534aa1af37"
+        },
+        "clean_guard": {
+          "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-leading-D2-auxiliary215-two-profile-source-v1/controller-v1/guard.json",
+          "sha256": "99fe3d0d5d77cd61e6d0533454e190832107c9059fd9d5a1237085ba2218ede4"
+        },
+        "empirical_not_interval_proof": true,
+        "qualified_bindings": [
+          {
+            "available_significant_source_cap": 215,
+            "basis_profile": 0,
+            "center": {
+              "integer": "32080234448205866006499901188692259715867771087974626026034222355827355900874227142398475155273074996922478743907377762918786792169088654408185822214729156367052512239620290728347503991458258734283150825422719347794473770665491057108305495162421230562831863638921372148141802458618781562",
+              "power10": -287
+            },
+            "error_upper": {
+              "integer": "10000000000000000000000000000000000000006908247910315958589656880255743457670537068857066068618419913967662470197644166336809275818430451177700275857669057222434277303223976988678579614781532557793048493347296726360115856306953987951804284785119807290650532511506995323",
+              "power10": -500
+            },
+            "id": "E15",
+            "qualification": {
+              "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-leading-D2-auxiliary215-two-profile-source-v1/observation-output-v1/qualification.json",
+              "sha256": "6f62d885eb38bc775357d1d3f76474fe564ca7b91a7d49c97a4c25534aa1af37"
+            },
+            "source": {
+              "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-leading-D2-auxiliary215-two-profile-source-v1/observation-output-v1/RustFlow-W280-native-profile/profile.json",
+              "sha256": "7f8eb6a6508be1d39ba672a839e38877ea8f6fe55c8ed6bdf2c0939e6cf95f70"
+            }
+          },
+          {
+            "available_significant_source_cap": 215,
+            "basis_profile": 1,
+            "center": {
+              "integer": "320802344482058660064999011886922597158677710879746260260342223558273559008742271423984751552730749969224787439073777629187867921690886544081858222147291563670525122396202907283475039914582587342831508254227193477944737706654910571083054951624212305628318636389213721481418024586514151325116552490521868331234797876494365826467539840973081439956849235351730828475692",
+              "power10": -366
+            },
+            "error_upper": {
+              "integer": "10000000000000000000000000000000000000006908247910315957589656880255743457670537068857066068618419913967662470197644166336809275818430551177700275857669057222434277303223976988678579614781532557793048493347296726360115856306953987951804284785119807290650532511506995323",
+              "power10": -500
+            },
+            "id": "E15",
+            "qualification": {
+              "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-leading-D2-auxiliary215-two-profile-source-v1/observation-output-v1/qualification.json",
+              "sha256": "6f62d885eb38bc775357d1d3f76474fe564ca7b91a7d49c97a4c25534aa1af37"
+            },
+            "source": {
+              "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-leading-D2-auxiliary215-two-profile-source-v1/observation-output-v1/RustFlow-W360-native-profile/profile.json",
+              "sha256": "0b1ecdc1263a6e90318babf4da0221073576ada4da34b2c0f5c1afb076c3789e"
+            }
+          }
+        ],
+        "strict215_rounded_value": "0.32080234448205866006499901188692259715867771087974626026034222355827355900874227142398475155273074996922478743907377762918786792169088654408185822214729156367052512239620290728347503991458258734283150825422719347794",
+        "validation": {
+          "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-leading-D2-auxiliary215-two-profile-source-v1/observation-output-v1/validation.json",
+          "sha256": "9149e424e32cf3f7ca0af21f4a8e21e86cc6e40f63939fbdf761d64d987fc03d"
+        }
+      },
+      "historical_frozen_public3_definition": {
+        "catalog_label": "PR15",
+        "definition_signed_indices": [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "definition_source": {
+          "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-native-Tarasov-depth-source-v1/PR15-definition-only-input.json",
+          "sha256": "bdbf14716c864b6602d4a6a4369a941a2c12897be9f3189a9e6e27ec2ae42e20"
+        },
+        "family_fingerprint_utf8_sha256": "eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7",
+        "future_public_symbol": "vakint::PR15D2",
+        "independent_actual_period_qualification": null,
+        "loop_count": 4,
+        "positive_Euclidean_definition": "pi^(-4) integral over four d^2 k_E measures of the scalar unit-mass catalog topology specified by the pinned ordered denominators and signed indices, with q_E^2+1 denominators and no coupling/symmetry factor",
+        "positive_Euclidean_parametric_definition": "Gamma(A-4)/product(Gamma(a_e)) times the projective positive-simplex integral of product(x_e^(a_e-1))/U_G(x), with A=sum(a_e), physical a_e>0, sum(x_e)=1, and U_G from the pinned topology.",
+        "private_formal_symbol": "leading_priority::E15",
+        "raw_Minkowski_to_positive_Euclidean_sign": 1,
+        "raw_normalized_Minkowski_D2_equals": "+vakint::PR15D2",
+        "renaming_or_publication_authorized_now": false,
+        "scalar_numerator": "1",
+        "total_physical_propagator_power": 8,
+        "unit_mass_squared": true
+      },
+      "historical_null_qualification_and_false_renaming_flags_not_current_status": true,
+      "id": "E15",
+      "mathematical_definition_source": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-native-Tarasov-depth-source-v1/PR15-definition-only-input.json",
+        "sha256": "bdbf14716c864b6602d4a6a4369a941a2c12897be9f3189a9e6e27ec2ae42e20"
+      },
+      "portable_integral_definition": {
+        "A": 8,
+        "Gamma_factor": "Gamma(A-4)/product(Gamma(a_e))",
+        "U_G": "(x+y)*((c+d+e+f)*((b+d+f)*(a+e+f)-f^2)-(d+f)^2*(a+e+f)-(e+f)^2*(b+d+f)+2*(d+f)*(e+f)*f)+x*y*((b+d+f)*(a+e+f)-f^2)",
+        "active_physical_denominators": [
+          {
+            "family_slot_index_base0": 1,
+            "positive_Euclidean_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ],
+              "constant": "1"
+            },
+            "positive_Euclidean_rule": "Replace Minkowski scalar products by Euclidean scalar products and use q_E^2+1; D_M = -(q_E^2+1) under Wick rotation.",
+            "power": 1,
+            "stored_Minkowski_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            }
+          },
+          {
+            "family_slot_index_base0": 2,
+            "positive_Euclidean_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0"
+              ],
+              "constant": "1"
+            },
+            "positive_Euclidean_rule": "Replace Minkowski scalar products by Euclidean scalar products and use q_E^2+1; D_M = -(q_E^2+1) under Wick rotation.",
+            "power": 1,
+            "stored_Minkowski_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            }
+          },
+          {
+            "family_slot_index_base0": 3,
+            "positive_Euclidean_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1"
+              ],
+              "constant": "1"
+            },
+            "positive_Euclidean_rule": "Replace Minkowski scalar products by Euclidean scalar products and use q_E^2+1; D_M = -(q_E^2+1) under Wick rotation.",
+            "power": 1,
+            "stored_Minkowski_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1"
+              ],
+              "constant": "-1"
+            }
+          },
+          {
+            "family_slot_index_base0": 4,
+            "positive_Euclidean_denominator": {
+              "coefficients": [
+                "1",
+                "0",
+                "-2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0"
+              ],
+              "constant": "1"
+            },
+            "positive_Euclidean_rule": "Replace Minkowski scalar products by Euclidean scalar products and use q_E^2+1; D_M = -(q_E^2+1) under Wick rotation.",
+            "power": 1,
+            "stored_Minkowski_denominator": {
+              "coefficients": [
+                "1",
+                "0",
+                "-2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            }
+          },
+          {
+            "family_slot_index_base0": 5,
+            "positive_Euclidean_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "-2",
+                "0",
+                "1",
+                "0",
+                "0"
+              ],
+              "constant": "1"
+            },
+            "positive_Euclidean_rule": "Replace Minkowski scalar products by Euclidean scalar products and use q_E^2+1; D_M = -(q_E^2+1) under Wick rotation.",
+            "power": 1,
+            "stored_Minkowski_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "-2",
+                "0",
+                "1",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            }
+          },
+          {
+            "family_slot_index_base0": 6,
+            "positive_Euclidean_denominator": {
+              "coefficients": [
+                "1",
+                "0",
+                "-2",
+                "-2",
+                "0",
+                "0",
+                "0",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "1"
+            },
+            "positive_Euclidean_rule": "Replace Minkowski scalar products by Euclidean scalar products and use q_E^2+1; D_M = -(q_E^2+1) under Wick rotation.",
+            "power": 1,
+            "stored_Minkowski_denominator": {
+              "coefficients": [
+                "1",
+                "0",
+                "-2",
+                "-2",
+                "0",
+                "0",
+                "0",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "-1"
+            }
+          },
+          {
+            "family_slot_index_base0": 7,
+            "positive_Euclidean_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "-2",
+                "-2",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "1"
+            },
+            "positive_Euclidean_rule": "Replace Minkowski scalar products by Euclidean scalar products and use q_E^2+1; D_M = -(q_E^2+1) under Wick rotation.",
+            "power": 1,
+            "stored_Minkowski_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "-2",
+                "-2",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "-1"
+            }
+          },
+          {
+            "family_slot_index_base0": 8,
+            "positive_Euclidean_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "1"
+            },
+            "positive_Euclidean_rule": "Replace Minkowski scalar products by Euclidean scalar products and use q_E^2+1; D_M = -(q_E^2+1) under Wick rotation.",
+            "power": 1,
+            "stored_Minkowski_denominator": {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "-1"
+            }
+          }
+        ],
+        "dimension": 2,
+        "family_fingerprint_utf8_sha256": "eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7",
+        "graph_parameter_to_family_slot": {
+          "a": 8,
+          "b": 5,
+          "c": 3,
+          "d": 7,
+          "e": 2,
+          "f": 1,
+          "x": 6,
+          "y": 4
+        },
+        "loop_count": 4,
+        "mass_scaling": "(mUV^2)^(4-A)",
+        "momentum_measure": "product over four loops of d^2 k_E / pi",
+        "no_coupling_or_symmetry_factor": true,
+        "ordered_family": {
+          "aliases": [
+            "4L_h"
+          ],
+          "coordinate_index_base": 0,
+          "coordinates": [
+            {
+              "kind": "loop_loop",
+              "left": 0,
+              "right": 0
+            },
+            {
+              "kind": "loop_loop",
+              "left": 0,
+              "right": 1
+            },
+            {
+              "kind": "loop_loop",
+              "left": 0,
+              "right": 2
+            },
+            {
+              "kind": "loop_loop",
+              "left": 0,
+              "right": 3
+            },
+            {
+              "kind": "loop_loop",
+              "left": 1,
+              "right": 1
+            },
+            {
+              "kind": "loop_loop",
+              "left": 1,
+              "right": 2
+            },
+            {
+              "kind": "loop_loop",
+              "left": 1,
+              "right": 3
+            },
+            {
+              "kind": "loop_loop",
+              "left": 2,
+              "right": 2
+            },
+            {
+              "kind": "loop_loop",
+              "left": 2,
+              "right": 3
+            },
+            {
+              "kind": "loop_loop",
+              "left": 3,
+              "right": 3
+            }
+          ],
+          "denominator_convention": "constant + sum_j coefficients[j] * coordinates[j]",
+          "denominators": [
+            {
+              "coefficients": [
+                "1",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "1",
+                "0",
+                "-2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "-2",
+                "0",
+                "1",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "1",
+                "0",
+                "-2",
+                "-2",
+                "0",
+                "0",
+                "0",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "-2",
+                "-2",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "2",
+                "1"
+              ],
+              "constant": "-1"
+            },
+            {
+              "coefficients": [
+                "1",
+                "-2",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ],
+              "constant": "-1"
+            }
+          ],
+          "dimension": "rustred::{}::d",
+          "external_momenta": [],
+          "fingerprint": "rustred-integral-family-v2;N18:symbolica_integral;L4;2:k1;2:k2;2:k3;2:k4;E0;P1;1:d;Q4,0,10;M;RY1,1;I+1;X1;Y1,1;I+1;X0;D10;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I+2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I+2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I+2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;G0;U10;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;",
+          "graph": "graphs/eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7.dot",
+          "loop_momenta": [
+            "k1",
+            "k2",
+            "k3",
+            "k4"
+          ],
+          "power_shifts": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "sha256": "eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7"
+        },
+        "positive_Euclidean_definition": "pi^(-4) integral over four d^2 k_E measures of the scalar unit-mass catalog topology specified by the pinned ordered denominators and signed indices, with q_E^2+1 denominators and no coupling/symmetry factor",
+        "positive_Euclidean_parametric_definition": "Gamma(A-4)/product(Gamma(a_e)) times the projective positive-simplex integral of product(x_e^(a_e-1))/U_G(x), with A=sum(a_e), physical a_e>0, sum(x_e)=1, and U_G from the pinned topology.",
+        "projective_simplex_constraint": "sum(x_e)=1 with x_e>=0",
+        "scalar_numerator": "1",
+        "signed_index_tuple": [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "total_physical_propagator_power": 8,
+        "unit_mass_squared": true
+      },
+      "public_atom": {
+        "Mathematica": "vakint`PR15D2",
+        "Mathematica_default_native_namespace_hiding_preserved": true,
+        "Mathematica_exact_native_reverse_rename_roundtrip": true,
+        "Mathematica_private_period_transport_namespace": "leadingPriority",
+        "Mathematica_temporary_transport_E_indices": [],
+        "Mathematica_transport_names_are_not_public_periods_or_definitions": true,
+        "canonical": "vakint::{}::PR15D2",
+        "canonical_readable_Mathematica_roundtrips": true,
+        "readable": "vakint::PR15D2",
+        "readable_all_namespaces_no_attributes_Unicode_no_ANSI": true
+      },
+      "raw_Minkowski_to_positive_Euclidean_sign": 1,
+      "raw_normalized_Minkowski_D2_equals": "+vakint::PR15D2"
+    }
+  ],
+  "principal_master_publication_scientific_Root_adoption": {
+    "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-public-leading-own200-acceptance-source-v3/root-actual-eleven-finite-own200-symbolic-publication-adoption-v1.json",
+    "sha256": "ab21b208cebaff3373ec67231820897799f71d49cffa003c7de1d4f9ef5d8573"
+  },
+  "principal_publication_full_own200_gate_pending": false,
+  "public_exact_export": {
+    "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-public-leading-formula-materialization-source-v3/observation-output-v1/public-exact-result.json",
+    "sha256": "6c59768974ed82702ea68ac2c37ec897a455c6ad284e5a65f8b513d48b50b8a0"
+  },
+  "public_exact_materialization_Root_adoption": {
+    "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-public-leading-formula-materialization-source-v3/root-actual-three-public-finite-formulas-exact-materialization-only-adoption-v1.json",
+    "sha256": "85adb11b6045bb8c13e7648df8281e8ec563ed5f5496e754c0a22b62ea551255"
+  },
+  "registry_version": 1,
+  "runtime_evaluator_implementation_or_new_precision_stage_claimed": false,
+  "schema": "vacuum-masters.independent-positive-Euclidean-leading-D2-period-registry.v1",
+  "source_sha256": {
+    "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-leading-D2-auxiliary215-two-profile-source-v1/controller-v1/guard.json": "99fe3d0d5d77cd61e6d0533454e190832107c9059fd9d5a1237085ba2218ede4",
+    "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-leading-D2-auxiliary215-two-profile-source-v1/observation-output-v1/RustFlow-W280-native-profile/profile.json": "7f8eb6a6508be1d39ba672a839e38877ea8f6fe55c8ed6bdf2c0939e6cf95f70",
+    "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-leading-D2-auxiliary215-two-profile-source-v1/observation-output-v1/RustFlow-W360-native-profile/profile.json": "0b1ecdc1263a6e90318babf4da0221073576ada4da34b2c0f5c1afb076c3789e",
+    "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-leading-D2-auxiliary215-two-profile-source-v1/observation-output-v1/qualification.json": "6f62d885eb38bc775357d1d3f76474fe564ca7b91a7d49c97a4c25534aa1af37",
+    "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-leading-D2-auxiliary215-two-profile-source-v1/observation-output-v1/validation.json": "9149e424e32cf3f7ca0af21f4a8e21e86cc6e40f63939fbdf761d64d987fc03d",
+    "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-leading-D2-auxiliary215-two-profile-source-v1/peer-independent-actual-auxiliary215-numerical-audit-pr11d-v1.json": "00da2342dc70f7d273d17e97beba1e9eaa9d5c78f4bbbc8b590b694749dc03d5",
+    "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-leading-D2-auxiliary215-two-profile-source-v1/peer-independent-actual-auxiliary215-resource-observer-audit-v1.json": "18c72d2d488107bdf3f45ccd7c9226e3ed91a5aeab51f3bdaa22f2e553853b0c",
+    "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-leading-D2-auxiliary215-two-profile-source-v1/root-actual-two-independent-leading-D2-auxiliary215-evidence-adoption-v1.json": "25cce0adaf135f7ff29c83ed4bf64e04994d9bff1d2e921176dfc50ed2ec73a8",
+    "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-leading-period-postfreeze50-diagnostic-source-v3/future-public-period-conventions.json": "441b01180b64d76f2d931992f8289d723b961f0ac1419711dc588eb604f9d2c5",
+    "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-leading18-Frobenius-geometry-source-v2/root-actual-leading18-exact-origin-infinity-geometry-adoption-v1.json": "07640d0eb8a136153fdb5828242257175a966cc86df0e35270fdf5ecaca7429a",
+    "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-native-Tarasov-depth-source-v1/PR10-definition-only-input.json": "06ea8bed3267089ac462c2b188b1bea76960bab781b833b3bb83f4fe3801bce8",
+    "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-native-Tarasov-depth-source-v1/PR15-definition-only-input.json": "bdbf14716c864b6602d4a6a4369a941a2c12897be9f3189a9e6e27ec2ae42e20",
+    "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-public-leading-formula-materialization-source-v3/observation-output-v1/public-exact-result.json": "6c59768974ed82702ea68ac2c37ec897a455c6ad284e5a65f8b513d48b50b8a0",
+    "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-public-leading-formula-materialization-source-v3/root-actual-three-public-finite-formulas-exact-materialization-only-adoption-v1.json": "85adb11b6045bb8c13e7648df8281e8ec563ed5f5496e754c0a22b62ea551255"
+  },
+  "unknown_target_finite_values_used": false,
+  "full_own200_qualification": {
+    "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-public-leading-own200-acceptance-source-v3/observation-output-v1/qualification.json",
+    "sha256": "7f58bb0a8488d6442e72bcfbb51352662e6ef31245685d071d898968259dc036"
+  },
+  "fresh_known73_Root_adoption": {
+    "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-known73-symbolic-leaf-qualification-source-v2/root-actual-known73-and-complete-leaf-source-bank-only-adoption-v1.json",
+    "sha256": "9e47f47c3a4f9d7498d77b1b6547717943c5647b3e6b8f43b1119cfe193acfe7"
+  },
+  "historical_prepared_registry": {
+    "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-eleven-finite-symbolic-publication-preparation-v2/independent-leading-D2-period-registry.prepared.v1.json",
+    "sha256": "bb96ba6778804245aa7faa70cc3549006a7321b68f3e3c33c5624692211a329c"
+  },
+  "portable_validation_proof_index": {
+    "path": "provenance/PR10-PR15-v24/portable-proof-index.json",
+    "sha256": "52c8be0a6fe4a6c347047ff52458004e9149fdfefea0efc9797bf6c21613b41b"
+  },
+  "runtime": {
+    "numerical_binding_provided": false,
+    "evaluator_installed": false,
+    "independent_auxiliary_evidence_digits": 215,
+    "empirical_refinement_not_interval_constant_certificate": true
+  }
+}

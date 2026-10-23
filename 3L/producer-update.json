@@ -6,12 +6,12 @@
       "sha256": "f2992d7479b2a48c088c4e380f70c9fbf542a322bc20d32f5838af7e36508ccc"
     },
     "symbolic_coverage": {
-      "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/coverage-v23.json",
-      "sha256": "e50b2ecca8b082aa9862c2ed9f24dea5f74f64bcf7793e43d045e896c777125f"
+      "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/coverage-v24.json",
+      "sha256": "1da6a695e464d5a7c18736522a59cc6abef2d9e7ac9693e80fcd2628a9680299"
     },
     "symbolic_overlays": {
-      "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/current-symbolic-overlays-v7.json",
-      "sha256": "7b75bcfa193f01948a7e61c13e231d8b355859c307a41cded65a74e45553ae02"
+      "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/current-symbolic-overlays-v8.json",
+      "sha256": "63dc8283aaad7611c179ee1ff3e5a676edf78a81fc1bfa97cd7ce164234fa042"
     },
     "source_intake": {
       "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/external-data-PR14-v22-repository-update-source-v1/intake.json",
@@ -21,8 +21,8 @@
     "retained_supplemented_coefficients": 49,
     "numerical_accuracy_evidence_not_interval_proof": true,
     "previous_producer_update": {
-      "path": "provenance/PR7-v23-83cd-before/provenance/producer-update.json",
-      "sha256": "7e72846e9158f302afc455a0bba9b193f529f1889a3c8ca06a0a0641985a42f0"
+      "path": "provenance/PR10-PR15-v24-before/provenance/producer-update.json",
+      "sha256": "dce90157e55f056db2df4701492b7bbc4c8b6db3c9d8794922b7e8832d122e95"
     },
     "actual_PR4_publication": {
       "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR4-direct10-acceptance-publication-source-v1/publication-output-v1/publication.json",
@@ -113,6 +113,33 @@
         "sha256": "1ce9213d1309be3d530103124e505de5a4e62063caf71dbb45412a99203568ff"
       },
       "remote_38_rows_at20000_6_at2000_695_at200_preserved": true
+    },
+    "actual_PR10_PR15_publication": {
+      "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-eleven-finite-symbolic-publication-source-v1/publication-output-v1/publication.json",
+      "sha256": "8aa794a7fdbd6d07d096fff4aaf7e06dd4a228fc9c1eed7e4608d46dcc786f3d"
+    },
+    "actual_PR10_PR15_publication_audit": {
+      "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-eleven-finite-symbolic-publication-source-v1/peer-independent-actual-eleven-current-files-ledgers-census-periods-resource-numeric-v1.json",
+      "sha256": "a35ae65571b09b486861ac132352a4c9c4fd77947359184d4f9ad23876997b6b"
+    },
+    "Root_actual_PR10_PR15_publication_adoption": {
+      "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR10-PR15-eleven-finite-symbolic-publication-source-v1/root-actual-eleven-symbolic-files-ledgers-and-period-registry-publication-adoption-v1.json",
+      "sha256": "b6aabeabcd218b444d54fbbb17ec6c98ed33ce50ab1d390d3f1ee57130d964c4"
+    },
+    "new_PR10_PR15_exact_cells": 11,
+    "PR10_PR15_direct_analytic_validation": {
+      "symbolic_coefficient_digits": 200,
+      "independent_D2_source_cap": 215,
+      "empirical_refinement_not_interval_bound": true,
+      "runtime_binding_provided": false,
+      "period_definitions": {
+        "path": "4L/provenance/PR10-PR15-v24/independent-D2-periods-v1.json",
+        "sha256": "ac0f8f72e34660f873d17b4227e5aa5eb0f293592364cb9213f93c241f918c0c"
+      },
+      "portable_proof_index": {
+        "path": "provenance/PR10-PR15-v24/portable-proof-index.json",
+        "sha256": "52c8be0a6fe4a6c347047ff52458004e9149fdfefea0efc9797bf6c21613b41b"
+      }
     }
   },
   "masters": {
