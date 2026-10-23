@@ -3868,7 +3868,8 @@
         -3,
         -2,
         -1,
-        0
+        0,
+        1
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -4024,7 +4025,7 @@
         },
         "symbolic.json": {
           "path": "masters/P13/symbolic.json",
-          "sha256": "62911455a95606956fb6c2ea389f8f6a5ca2f43f6518e3d4491bb6807b5261cf"
+          "sha256": "92415beef17aec86199b4f299d8f4e83f503464e214d0b9a4dedf4536c7b3805"
         },
         "graph.dot": {
           "path": "masters/P13/graph.dot",
@@ -4080,7 +4081,7 @@
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 200
         }
@@ -7352,7 +7353,8 @@
         -3,
         -2,
         -1,
-        0
+        0,
+        1
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -7508,7 +7510,7 @@
         },
         "symbolic.json": {
           "path": "masters/P27/symbolic.json",
-          "sha256": "62911455a95606956fb6c2ea389f8f6a5ca2f43f6518e3d4491bb6807b5261cf"
+          "sha256": "92415beef17aec86199b4f299d8f4e83f503464e214d0b9a4dedf4536c7b3805"
         },
         "graph.dot": {
           "path": "masters/P27/graph.dot",
@@ -7564,7 +7566,7 @@
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 200
         }
@@ -12456,7 +12458,8 @@
         -3,
         -2,
         -1,
-        0
+        0,
+        1
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -12612,7 +12615,7 @@
         },
         "symbolic.json": {
           "path": "masters/P48/symbolic.json",
-          "sha256": "62911455a95606956fb6c2ea389f8f6a5ca2f43f6518e3d4491bb6807b5261cf"
+          "sha256": "92415beef17aec86199b4f299d8f4e83f503464e214d0b9a4dedf4536c7b3805"
         },
         "graph.dot": {
           "path": "masters/P48/graph.dot",
@@ -12668,7 +12671,7 @@
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 200
         }
@@ -15903,7 +15906,8 @@
         -3,
         -2,
         -1,
-        0
+        0,
+        1
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -16059,7 +16063,7 @@
         },
         "symbolic.json": {
           "path": "masters/P62/symbolic.json",
-          "sha256": "62911455a95606956fb6c2ea389f8f6a5ca2f43f6518e3d4491bb6807b5261cf"
+          "sha256": "92415beef17aec86199b4f299d8f4e83f503464e214d0b9a4dedf4536c7b3805"
         },
         "graph.dot": {
           "path": "masters/P62/graph.dot",
@@ -16115,7 +16119,7 @@
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 200
         }
@@ -58633,8 +58637,8 @@
       "bytes": 1369
     },
     "masters/P13/symbolic.json": {
-      "sha256": "62911455a95606956fb6c2ea389f8f6a5ca2f43f6518e3d4491bb6807b5261cf",
-      "bytes": 3074
+      "sha256": "92415beef17aec86199b4f299d8f4e83f503464e214d0b9a4dedf4536c7b3805",
+      "bytes": 25545
     },
     "masters/P14/graph.dot": {
       "sha256": "0a6c2819cdabd6f120ba7d6c1050f0911981019159d8348b44fac51be07cf07e",
@@ -58813,8 +58817,8 @@
       "bytes": 1369
     },
     "masters/P27/symbolic.json": {
-      "sha256": "62911455a95606956fb6c2ea389f8f6a5ca2f43f6518e3d4491bb6807b5261cf",
-      "bytes": 3074
+      "sha256": "92415beef17aec86199b4f299d8f4e83f503464e214d0b9a4dedf4536c7b3805",
+      "bytes": 25545
     },
     "masters/P28/graph.dot": {
       "sha256": "9237547bea10881a80c9580f8a293007f3c53a5fd865bee8bab5b5b15ddd6bfe",
@@ -59089,8 +59093,8 @@
       "bytes": 1369
     },
     "masters/P48/symbolic.json": {
-      "sha256": "62911455a95606956fb6c2ea389f8f6a5ca2f43f6518e3d4491bb6807b5261cf",
-      "bytes": 3074
+      "sha256": "92415beef17aec86199b4f299d8f4e83f503464e214d0b9a4dedf4536c7b3805",
+      "bytes": 25545
     },
     "masters/P49/graph.dot": {
       "sha256": "fb7af52374d61758f8cfa8d6b0f08bf813f931345d63637dbd920e646d89b384",
@@ -59281,8 +59285,8 @@
       "bytes": 1369
     },
     "masters/P62/symbolic.json": {
-      "sha256": "62911455a95606956fb6c2ea389f8f6a5ca2f43f6518e3d4491bb6807b5261cf",
-      "bytes": 3074
+      "sha256": "92415beef17aec86199b4f299d8f4e83f503464e214d0b9a4dedf4536c7b3805",
+      "bytes": 25545
     },
     "masters/P63/graph.dot": {
       "sha256": "8e716ea6a29eb1bea3abbbdd8cc89cbac12c029f7bf9400fb87bf136ac0e89bc",
@@ -59473,12 +59477,16 @@
       "bytes": 51787
     },
     "producer-update.json": {
-      "sha256": "cc0a2ba818b9b983b4525149eeba5d00b426e0eb64cb594750e46c9e9fac42d3",
-      "bytes": 409768
+      "sha256": "204682c40cdda98f902dcd86aea1be19d7cd1c9c3bf50374ebd89514a868bd86",
+      "bytes": 415930
     },
     "provenance/PR10-PR15-v24/independent-D2-periods-v1.json": {
       "sha256": "ac0f8f72e34660f873d17b4227e5aa5eb0f293592364cb9213f93c241f918c0c",
       "bytes": 99650
+    },
+    "provenance/PR10-epsilon1-v25/independent-D2-Taylor01-period-registry-v2.json": {
+      "sha256": "242211f4a7278303df58c8ee6405d839b95eb67f5d6db468cff4caca04b416e7",
+      "bytes": 166997
     },
     "provenance/PR7-v23/independent-D2-period.json": {
       "sha256": "43dd9fd09075b8b679a99365ddd49e44a335b6455af730a980a5af511e910a71",

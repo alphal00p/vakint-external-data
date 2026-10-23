@@ -62,7 +62,7 @@ overwrite a current five-loop publication. Staging and installing a source
 update do not publish a GitHub release or change `data-latest`.
 
 The `v0.1.1` dataset contains 739 numerical coefficient rows:
-692 have exact symbolic expressions and 47 retain numerical fallbacks. These
+696 have exact symbolic expressions and 43 retain numerical fallbacks. These
 counts include 49 additional orders preserved from the previous export.
 The numerical fallback rows have 20,000 validated digits at 1L and 2L. Most
 3L and 4L fallbacks provide 200 digits; exceptions include the three-loop D6
@@ -120,3 +120,20 @@ are defined in `4L/provenance/PR10-PR15-v24/independent-D2-periods-v1.json`,
 with independent 215-digit empirical evidence. This update installs no
 numerical binding or evaluator and preserves every existing numerical
 precision, extra order and bounded constant payload. No new release is created.
+
+The four PR10 epsilon-one expressions are direct dimensional-recurrence results,
+independently checked against their own 200-digit numerical coefficients.
+The initial 22-entry PSLQ search was unstable. After exact known-lower
+subtraction, Symbolica and Mathematica recovered the five-entry residual
+relation [8,189,27,-274,-30] at 100/110 effective digits, using 140/150
+digits of the original targets. A separately constructed native full Atom
+is exactly identical to the accepted dimensional-recurrence expression,
+binding this recurrence-assisted recognition to the existing 200-digit
+checks. This does not claim blind full-coefficient discovery.
+The positive Euclidean D2 Taylor coefficients `vakint::PR10D2`,
+`vakint::PR10D2Eps1`, `vakint::PR7D2` and `vakint::PR7D2Eps1` are defined in
+`4L/provenance/PR10-epsilon1-v25/independent-D2-Taylor01-period-registry-v2.json`,
+with independent 215-digit empirical evidence. Existing leading definitions,
+all numerical precision, extra orders and bounded constant payloads remain
+unchanged. This update installs no numerical binding or evaluator and
+creates no new release.
