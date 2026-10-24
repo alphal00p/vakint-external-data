@@ -269,6 +269,109 @@ Native RustRed validation is separately required for BLAKE3, Symbolica state,
 solver ownership, exact coefficients, guards and cold/warm parity. The Python
 source checks never establish new algebraic authority or campaign coverage.
 
+== Prepared physical benchmark inputs
+
+`5L/benchmarks/quadratic` and `5L/benchmarks/zero-momentum` contain complete
+saved scalar inputs for the native massless-QCD four-rung fixture. Each contains
+only `prepared-input.json`, `vakint-input.symbolica` and
+`projector-conditions.symbolica`. These are benchmark inputs, not reduction
+caches or master coefficients. They are carried by the ordinary five-loop pack
+and its authenticated file inventory.
+
+The manifests retain the original generator source hashes, executable identity,
+projection, complete nonzero conditions and historical preparation timings.
+`benchmarks/provenance.json` connects them to the unchanged scientific acceptance
+and validation receipts under `provenance/prepared-benchmark-inputs`. Recorded
+development paths in those archived receipts are provenance, never paths that
+runtime loading follows. The zero-momentum additive provenance distinguishes
+the actual FeynKit owner revision from its feature base.
+
+Vakint's `five_loop_qcd_ladder` example accepts `--prepared-input DIRECTORY`.
+For the corresponding projection, it checks the exact scientific definition,
+input and guard hashes and canonical symbolic identity before reuse. It also
+reuses a valid saved bundle already present in its work directory. Input-loading
+time is measured separately; the original preparation time is not reported as
+current work. Use `--fresh-prepare` with a new work directory to validate native
+graph, trace and Taylor construction independently. A corrupt or partial bundle
+is an error and never silently triggers expensive regeneration.
+
+For intentional additions, first prepare an external staging directory containing
+only the accepted `benchmarks/` payloads and their small
+`provenance/prepared-benchmark-inputs/` evidence. Scientific admission belongs to
+the Vakint fixture loader and recorded generator checks; the following recipe
+only installs those already accepted bytes using the existing data machinery.
+Run it from a source checkout, preserving its release version. It changes only
+the five-loop file inventory and the root's five-loop manifest hash, while
+checking all prior payloads, lower-loop packs and the campaign semantic binding.
+Do not use the historical `generate` command for this operation.
+
+```sh
+python3 - /absolute/workspace/accepted-loop-additions <<'PY'
+from pathlib import Path
+import json
+import sys
+
+sys.path.insert(0, "tools")
+import data
+from replace_five_loop import inventory, lower_snapshot
+from saved_cache import semantic_digest
+
+root = Path.cwd()
+source = Path(sys.argv[1]).resolve()
+if source.is_relative_to(root) or root.is_relative_to(source):
+    raise ValueError("stage additions outside the repository")
+release = data.validate(root)
+directory = root / "5L"
+manifest = data.read_json(directory / "manifest.json")
+pack = next(row for row in release["loop_packs"] if row["loop_count"] == 5)
+if pack["archive_sha256"] is not None or pack["archive_bytes"] is not None:
+    raise ValueError("author a source checkout, never an installed release")
+before = inventory(directory)
+before.pop("manifest.json")
+if before != manifest["files"]:
+    raise ValueError("current loop payload inventory differs")
+lower = lower_snapshot(root)
+semantic = semantic_digest(directory, manifest)
+additions = inventory(source)
+if not additions:
+    raise ValueError("no accepted benchmark additions selected")
+for name in additions:
+    if not name.startswith(("benchmarks/", "provenance/prepared-benchmark-inputs/")):
+        raise ValueError(f"unexpected benchmark addition path: {name}")
+for name in additions:
+    data.copy_verified(
+        data.checked_path(source, name), data.checked_path(directory, name)
+    )
+after = inventory(directory)
+after.pop("manifest.json")
+if any(after.get(name) != record for name, record in before.items()):
+    raise ValueError("existing payload changed")
+if any(after.get(name) != record for name, record in additions.items()):
+    raise ValueError("copied additions differ from their selected bytes")
+if semantic_digest(directory, manifest) != semantic:
+    raise ValueError("campaign semantic binding changed")
+manifest["files"] = after
+data.write_json(directory / "manifest.json", manifest)
+pack["manifest_sha256"] = data.digest(directory / "manifest.json")
+data.write_json(root / "manifest.json", release)
+if lower_snapshot(root) != lower:
+    raise ValueError("lower-loop data changed")
+data.validate(root)
+print(json.dumps({
+    "selected_files": len(additions),
+    "selected_bytes": sum(row["bytes"] for row in additions.values()),
+    "existing_five_loop_payloads_preserved": len(before),
+    "semantic_digest_hex": bytes(semantic).hex(),
+    "five_loop_manifest_sha256": pack["manifest_sha256"],
+    "root_manifest_sha256": data.digest(root / "manifest.json"),
+}))
+PY
+```
+
+This source operation does not publish a release or attest to completed IBP
+reductions. Final native API, reduction and cache checks remain required before
+release publication.
+
 == Authoring and releases
 
 The tooling needs Python 3.11 or newer and only its standard library. Generate

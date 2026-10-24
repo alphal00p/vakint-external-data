@@ -1,0 +1,89 @@
+{
+  "schema": "vakint.prepared-primary-two-load-smokes.v1",
+  "utc": "2026-10-24T19:12:49.979863+00:00",
+  "source_commit": "0d4fa7b5398561a45b3e65d01e31d12742806fe2",
+  "immutable_executable_sha256": "0d7c62eeefb5b7e76fecd8ebbd69323c6e592955f9ef3bb80b7d876a1497f5d7",
+  "invocations": 2,
+  "all_passed": true,
+  "records": [
+    {
+      "projection": "quadratic",
+      "exit_code": 0,
+      "functional_process_wall_seconds": 2.553133208071813,
+      "performance_eligible": false,
+      "build_time_included": false,
+      "fresh_preparation_or_IBP_requested": false,
+      "checks": {
+        "exit0": true,
+        "bundle_unchanged": true,
+        "binary_unchanged": true,
+        "fresh_false": true,
+        "mode_prepared": true,
+        "current_preparation_null": true,
+        "loading_finite_nonnegative": true,
+        "exact_input_sha_bytes": true,
+        "exact_guards": true,
+        "historical_manifest_exact": true,
+        "historical_producer_fixture_sources": true,
+        "source0d4_clean": true,
+        "exact_current_executable": true,
+        "no_reduction_claim": true,
+        "no_data_loader_or_IBP_report": true,
+        "only_report_written": true,
+        "original_preparation_explicitly_excluded": true
+      },
+      "passed": true,
+      "input_loading_seconds": 2.270015893,
+      "historical_preparation_seconds": 4652.569581612,
+      "input_sha256": "276d17a136aa5292b82effe05354d0b7cb639966a5f3797f960bbdf9f301a1fa",
+      "guard_file_sha256": "bc23ecdd82b5c54269b27c5b39b3769f3500cbe62c5f93c2e391267cd1035af9",
+      "manifest_sha256": "1c425e6da17492e3f116ac3357d68dc92759dacdc7a6943514c635ce7dcf110b",
+      "report": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/release-prepared-primary-0d4fa7b53/prepare-only-smokes/quadratic/work/benchmark.json",
+        "sha256": "6b7cc6231e118825c5fdaafed4fa9cc862abbe380e3cee23ca8e7ee36925d45b"
+      },
+      "stdout_sha256": "030d81744fc374938844bf0e2915b649e8d08516c835458d8607cf28c189015c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "projection": "zero-momentum",
+      "exit_code": 0,
+      "functional_process_wall_seconds": 0.3364610980497673,
+      "performance_eligible": false,
+      "build_time_included": false,
+      "fresh_preparation_or_IBP_requested": false,
+      "checks": {
+        "exit0": true,
+        "bundle_unchanged": true,
+        "binary_unchanged": true,
+        "fresh_false": true,
+        "mode_prepared": true,
+        "current_preparation_null": true,
+        "loading_finite_nonnegative": true,
+        "exact_input_sha_bytes": true,
+        "exact_guards": true,
+        "historical_manifest_exact": true,
+        "historical_producer_fixture_sources": true,
+        "source0d4_clean": true,
+        "exact_current_executable": true,
+        "no_reduction_claim": true,
+        "no_data_loader_or_IBP_report": true,
+        "only_report_written": true,
+        "original_preparation_explicitly_excluded": true
+      },
+      "passed": true,
+      "input_loading_seconds": 0.024079001,
+      "historical_preparation_seconds": 0.49339697,
+      "input_sha256": "9814c3b49a1b486b9790bbe5458d8bc582c3fb3c299ba6a1a0362db8ba71cb16",
+      "guard_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "manifest_sha256": "e8bd141e653944390fd48ba234f477173caa2f84089c7ca56ea9b39938f7b1f4",
+      "report": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/release-prepared-primary-0d4fa7b53/prepare-only-smokes/zero-momentum/work/benchmark.json",
+        "sha256": "46c061a1f32c3644644faea11f20ae685b0e18078fb0cf31d2ad6416059972a2"
+      },
+      "stdout_sha256": "02975b9d71c7e393a66b560baf831a14db7b7f77e41ac9982f188427b9bb3188",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scope": "Two prepared-input prepare-only checks; no fresh preparation, data loader, IBP, cache, qualification or performance. Functional wall/input-load observations are separate from normal-build timing."
+}

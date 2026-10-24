@@ -1,0 +1,86 @@
+{
+  "schema": "vakint.prepared-input-independent-readonly-review.v1",
+  "source_worktree": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-prepared-input",
+  "reviewed_files": {
+    "crates/vakint/tests/fixtures/qcd_ladder/mod.rs": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-prepared-input/crates/vakint/tests/fixtures/qcd_ladder/mod.rs",
+      "sha256": "9980517e77277211d104273de89b1bb46f575b5816a338ce8bdaae223d77aa5e",
+      "bytes": 18384
+    },
+    "crates/vakint/tests/fixtures/qcd_ladder/prepared.rs": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-prepared-input/crates/vakint/tests/fixtures/qcd_ladder/prepared.rs",
+      "sha256": "1ccfc971843e47dbadb02293923dbcf5cf038373901a77af92efcffd8ef411a8",
+      "bytes": 23002
+    },
+    "crates/vakint/examples/five_loop_qcd_ladder.rs": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-prepared-input/crates/vakint/examples/five_loop_qcd_ladder.rs",
+      "sha256": "290e431aebc6a2794a4592661fe3845069de931b9206e75fe10878e786dcda1b",
+      "bytes": 22736
+    },
+    "crates/vakint/tests/fixtures/qcd_ladder/slow.rs": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-prepared-input/crates/vakint/tests/fixtures/qcd_ladder/slow.rs",
+      "sha256": "73134263ecb5f5ba69b7101ca491c060678e6bf46cd0092017dabe3897d75437",
+      "bytes": 10860
+    }
+  },
+  "reported_checks_binding": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/prepared-input-cli-check/validation.json",
+    "sha256": "e2f04ff48b1d516fe8895f71f0163fe71da6c1d2b4bafd67458b0c784f2c5c6a",
+    "bytes": 3625
+  },
+  "reported_checks_scope": "Owner ran strict combined Clippy/formatting/Typst; this review ran no compiler, native preparation, or reductions.",
+  "bundle": {
+    "manifest": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/physics/prepared-input-quadratic-4bd7448-v1/prepared-input.json",
+      "sha256": "1c425e6da17492e3f116ac3357d68dc92759dacdc7a6943514c635ce7dcf110b",
+      "bytes": 2400
+    },
+    "input": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/physics/prepared-input-quadratic-4bd7448-v1/vakint-input.symbolica",
+      "sha256": "276d17a136aa5292b82effe05354d0b7cb639966a5f3797f960bbdf9f301a1fa",
+      "bytes": 34795612
+    },
+    "conditions": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/physics/prepared-input-quadratic-4bd7448-v1/projector-conditions.symbolica",
+      "sha256": "bc23ecdd82b5c54269b27c5b39b3769f3500cbe62c5f93c2e391267cd1035af9",
+      "bytes": 103
+    },
+    "adoption_receipt": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/prepared-input-fixture/bundle-adoption.json",
+      "sha256": "8d6b6fe7e729503beb74316f63132b104b9cb3ac804bd025fec444d672c66f3b",
+      "bytes": 2029
+    },
+    "original_live_input": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/physics/current-release-quadratic-full-validation-20261024/run/vakint-input.symbolica",
+      "sha256": "276d17a136aa5292b82effe05354d0b7cb639966a5f3797f960bbdf9f301a1fa",
+      "bytes": 34795612
+    },
+    "live_input_read_only_and_not_mutated_by_reviewer": true,
+    "all_21_contributions_and_complete_five_projector_guards": true,
+    "original_producer_source_and_executable_identity_preserved": true
+  },
+  "scientific_identity": {
+    "six_complete_scientific_files_byte_equal_to_original_commit": true,
+    "mod_assembly_imports_Projection_and_all_construction_to_complete_input_sum_byte_equal_to_original": true,
+    "assembly_bytes": 14154,
+    "assembly_sha256": "16be3edc83d1cfad237e7762269bc02d2335e21173b01ee881b5c5834b4aa7e9",
+    "original_full_mod_sha256": "f272cac241d343d81d510ee8e50e2ec3ae1f4fc9db1c67fac93b928662b95a59",
+    "current_full_mod_sha256": "9980517e77277211d104273de89b1bb46f575b5816a338ce8bdaae223d77aa5e"
+  },
+  "resolved_findings": [
+    "mod.rs scientific import/generation/routing/dimension/assembly behavior is now authenticated separately from persistence/reporting IO.",
+    "Partial payloads without manifest produce fixture-owned error before automatic or forced fresh preparation; no corruption fallback.",
+    "Direct save rejects differing existing payloads, symlinks/nonregular files and uses create_new plus manifest no-clobber."
+  ],
+  "reviewed_contracts": {
+    "explicit_or_automatic_verified_reuse": true,
+    "projection_and_definition_validation": true,
+    "complete_guard_validation_and_canonical_Atom_roundtrip": true,
+    "reused_current_preparation_fields_are_null": true,
+    "historical_4652s_remains_manifest_provenance_not_current_E2E": true,
+    "fresh_preparation_remains_explicit_and_separate": true,
+    "existing_census_reduction_warm_guard_and_family_assertions_preserved": true
+  },
+  "findings": [],
+  "scope_limitations": "Read-only source/data review. Actual narrow loader tests and real --prepared-input --prepare-only CLI verification remain parent/owner validation evidence; no IBP performance claim or fresh-preparation claim is made."
+}
