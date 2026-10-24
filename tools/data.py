@@ -19,6 +19,7 @@ ROOT_SCHEMA = "vakint.external-data.v1"
 LOOP_SCHEMA = "vakint.external-data.loop.v1"
 PRODUCER_SCHEMA = "vakint.external-data.producer-update.v1"
 PRIMER_ROOTS = {1: 5, 2: 77, 3: 2320, 4: 164352}
+RELEASE_ASSET_BYTES_LIMIT = 2_000_000_000
 
 
 def read_json(path):
@@ -38,6 +39,10 @@ def digest(path):
 
 def file_record(path):
     return {"sha256": digest(path), "bytes": Path(path).stat().st_size}
+
+
+def valid_archive_bytes(value):
+    return type(value) is int and 0 < value < RELEASE_ASSET_BYTES_LIMIT
 
 
 def checked_path(base, relative):
@@ -66,6 +71,61 @@ def copy_verified(source, destination):
         shutil.copy2(source, destination)
     if file_record(source) != file_record(destination):
         raise ValueError(f"migration checksum mismatch: {source}")
+
+
+def provenance_assets(manifest):
+    """Validate optional immutable source evidence, never runtime loop payloads."""
+    assets = manifest.get("provenance_assets", [])
+    if not isinstance(assets, list):
+        raise ValueError("provenance_assets must be a list")
+    names = {pack["archive"] for pack in manifest["loop_packs"]}
+    for asset in assets:
+        if not isinstance(asset, dict) or set(asset) != {
+            "archive", "archive_sha256", "archive_bytes"
+        }:
+            raise ValueError("invalid provenance asset metadata fields")
+        name = asset["archive"]
+        prefix = f"vakint-external-data-{manifest['version']}-"
+        if (
+            not isinstance(name, str)
+            or not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._-]*\.tar\.gz", name)
+            or not name.startswith(prefix)
+            or name in names
+        ):
+            raise ValueError(f"unsafe, unversioned or duplicate provenance asset: {name}")
+        names.add(name)
+        if (
+            not isinstance(asset["archive_sha256"], str)
+            or not re.fullmatch(r"[0-9a-f]{64}", asset["archive_sha256"])
+            or not valid_archive_bytes(asset["archive_bytes"])
+        ):
+            raise ValueError("invalid provenance asset SHA-256 or byte length")
+    return assets
+
+
+def checked_provenance_assets(directory, manifest):
+    """Require the declared inventory of independently supplied regular files."""
+    assets = provenance_assets(manifest)
+    if directory is None:
+        if assets:
+            raise ValueError("--provenance-assets is required for declared source evidence")
+        return []
+    directory = Path(directory)
+    if directory.is_symlink() or not directory.is_dir():
+        raise ValueError("provenance assets directory must be a regular directory")
+    if {path.name for path in directory.iterdir()} != {a["archive"] for a in assets}:
+        raise ValueError("provenance asset directory inventory differs from manifest")
+    paths = []
+    for asset in assets:
+        path = checked_path(directory, asset["archive"])
+        if (
+            not path.is_file()
+            or path.stat().st_size != asset["archive_bytes"]
+            or digest(path) != asset["archive_sha256"]
+        ):
+            raise ValueError(f"provenance asset checksum/size mismatch: {path}")
+        paths.append(path)
+    return paths
 
 
 def migrate(source, vakint_source):
@@ -790,6 +850,7 @@ def validate(root=None):
         raise ValueError("unsupported root schema")
     if [p["loop_count"] for p in manifest["loop_packs"]] != list(range(1, 6)):
         raise ValueError("release must contain disjoint 1L through 5L packs")
+    provenance_assets(manifest)
     counts = []
     for pack in manifest["loop_packs"]:
         path = checked_path(root, pack["manifest"])
@@ -975,8 +1036,9 @@ def validate(root=None):
     return manifest
 
 
-def pack(output):
+def pack(output, provenance_directory=None):
     manifest = validate()
+    evidence = checked_provenance_assets(provenance_directory, manifest)
     output = Path(output).resolve()
     if output.is_relative_to(ROOT):
         raise ValueError("release outputs must be outside the source repository")
@@ -1003,8 +1065,10 @@ def pack(output):
                         archive.addfile(info, stream)
                 else:
                     archive.addfile(info)
-        loop["archive_sha256"] = digest(target)
         loop["archive_bytes"] = target.stat().st_size
+        if not valid_archive_bytes(loop["archive_bytes"]):
+            raise ValueError(f"generated release archive must be smaller than 2 GB: {target}")
+        loop["archive_sha256"] = digest(target)
         print(
             json.dumps(
                 {
@@ -1015,13 +1079,22 @@ def pack(output):
             ),
             flush=True,
         )
+    for source, asset in zip(evidence, provenance_assets(manifest), strict=True):
+        destination = checked_path(output, asset["archive"])
+        copy_verified(source, destination)
+        if file_record(destination) != {
+            "sha256": asset["archive_sha256"], "bytes": asset["archive_bytes"]
+        }:
+            raise ValueError(f"provenance asset changed while packing: {source}")
     write_json(output / "manifest.json", manifest)
+    archive_names = {x["archive"] for x in manifest["loop_packs"]}
+    archive_names.update(a["archive"] for a in provenance_assets(manifest))
     (output / "SHA256SUMS").write_text(
         "".join(
             f"{digest(p)}  {p.name}\n"
             for p in sorted(output.iterdir())
             if p.name == "manifest.json"
-            or p.name in {x["archive"] for x in manifest["loop_packs"]}
+            or p.name in archive_names
         )
     )
 
@@ -1031,6 +1104,10 @@ def set_version(version):
     if not re.fullmatch(r"v(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)", version):
         raise ValueError("release version must be vMAJOR.MINOR.PATCH")
     manifest = validate()
+    if provenance_assets(manifest):
+        raise ValueError(
+            "remove version-bound provenance assets before changing release version"
+        )
     if any(pack["archive_sha256"] is not None or pack["archive_bytes"] is not None
            for pack in manifest["loop_packs"]):
         raise ValueError("set-version requires a source checkout, not release metadata")
@@ -1062,6 +1139,7 @@ def main():
     commands.add_parser("validate")
     packing = commands.add_parser("pack")
     packing.add_argument("--output", type=Path, required=True)
+    packing.add_argument("--provenance-assets", type=Path)
     args = parser.parse_args()
     if args.command == "migrate":
         migrate(args.source, args.vakint_source)
@@ -1072,7 +1150,7 @@ def main():
     elif args.command == "validate":
         validate()
     elif args.command == "pack":
-        pack(args.output)
+        pack(args.output, args.provenance_assets)
 
 
 if __name__ == "__main__":

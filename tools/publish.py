@@ -9,6 +9,8 @@ import subprocess
 from pathlib import Path
 from urllib.parse import quote
 
+import data
+
 REPOSITORY = "alphal00p/vakint-external-data"
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -96,24 +98,31 @@ def checked_assets(directory, manifest, source):
         raise RuntimeError(
             "release assets were not built from the committed source manifest"
         )
+    try:
+        evidence = data.provenance_assets(manifest)
+    except ValueError as error:
+        raise RuntimeError(str(error)) from error
+    assets = [*manifest["loop_packs"], *evidence]
+    if any(not data.valid_archive_bytes(asset["archive_bytes"]) for asset in assets):
+        raise RuntimeError("release archive sizes must be positive integers smaller than 2 GB")
     archives = []
     checksums = {}
-    for pack in manifest["loop_packs"]:
+    for pack in assets:
         name = pack["archive"]
         if (
-            name
+            "loop_count" in pack
+            and name
             != f"vakint-external-data-{manifest['version']}-{pack['loop_count']}L.tar.gz"
         ):
             raise RuntimeError(f"unexpected release archive name: {name}")
         archive = directory / name
         if archive.is_symlink() or not archive.is_file():
             raise RuntimeError(f"release archive is not a regular file: {archive}")
+        if archive.stat().st_size != pack["archive_bytes"]:
+            raise RuntimeError(f"release archive differs from manifest: {archive}")
         with archive.open("rb") as stream:
             actual = hashlib.file_digest(stream, "sha256").hexdigest()
-        if (
-            actual != pack["archive_sha256"]
-            or archive.stat().st_size != pack["archive_bytes"]
-        ):
+        if actual != pack["archive_sha256"]:
             raise RuntimeError(f"release archive differs from manifest: {archive}")
         checksums[name] = actual
         archives.append(str(archive))

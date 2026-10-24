@@ -107,6 +107,164 @@ class PortableDataTests(unittest.TestCase):
             )
         )
 
+    def provenance_fixture(self):
+        directory = self.base / "evidence"
+        directory.mkdir()
+        path = directory / "vakint-external-data-v0.0.0-cache-build-evidence.tar.gz"
+        path.write_bytes(b"source evidence fixture; never a runtime cache")
+        asset = {
+            "archive": path.name,
+            "archive_sha256": data.digest(path),
+            "archive_bytes": path.stat().st_size,
+        }
+        manifest = data.read_json(self.root / "manifest.json")
+        manifest["provenance_assets"] = [asset]
+        data.write_json(self.root / "manifest.json", manifest)
+        return directory, path, manifest
+
+    def test_optional_source_evidence_is_verified_copied_and_checksummed(self):
+        directory, evidence, source = self.provenance_fixture()
+        output = self.base / "release"
+        with patch.object(data, "ROOT", self.root), contextlib.redirect_stdout(io.StringIO()):
+            data.pack(output, directory)
+        copied = output / evidence.name
+        self.assertEqual(copied.read_bytes(), evidence.read_bytes())
+        self.assertEqual(
+            data.read_json(output / "manifest.json")["provenance_assets"],
+            source["provenance_assets"],
+        )
+        self.assertIn(f"{data.digest(copied)}  {evidence.name}\n", (output / "SHA256SUMS").read_text())
+        self.assertEqual(data.read_json(self.root / "manifest.json"), source)
+
+    def test_absent_optional_assets_preserve_legacy_release_bytes(self):
+        empty = self.base / "empty-evidence"
+        empty.mkdir()
+        outputs = [self.base / "legacy", self.base / "optional-empty"]
+        with patch.object(data, "ROOT", self.root), contextlib.redirect_stdout(io.StringIO()):
+            data.pack(outputs[0])
+            data.pack(outputs[1], empty)
+        self.assertEqual(
+            {p.name: p.read_bytes() for p in outputs[0].iterdir()},
+            {p.name: p.read_bytes() for p in outputs[1].iterdir()},
+        )
+        self.assertEqual(len(list(outputs[0].iterdir())), 7)
+        self.assertNotIn("provenance_assets", data.read_json(outputs[0] / "manifest.json"))
+
+    def test_generated_loop_archive_size_is_checked_before_hash_and_manifest(self):
+        # A small explicit test ceiling exercises the same strict boundary
+        # without creating a two-gigabyte test file.
+        output = self.base / "oversized-release"
+        with (
+            patch.object(data, "ROOT", self.root),
+            patch.object(data, "RELEASE_ASSET_BYTES_LIMIT", 1),
+            patch.object(data, "digest", wraps=data.digest) as digest,
+            contextlib.redirect_stdout(io.StringIO()),
+            self.assertRaisesRegex(ValueError, "generated release archive"),
+        ):
+            data.pack(output)
+        self.assertFalse((output / "manifest.json").exists())
+        self.assertFalse((output / "SHA256SUMS").exists())
+        self.assertTrue((output / "vakint-external-data-v0.0.0-1L.tar.gz").is_file())
+        self.assertTrue(all(output not in call.args[0].parents for call in digest.call_args_list))
+
+    def test_source_evidence_metadata_rejects_unsafe_names_sizes_and_identities(self):
+        _, _, manifest = self.provenance_fixture()
+        valid = manifest["provenance_assets"][0]
+        invalid = [
+            {**valid, "archive": name}
+            for name in (
+                "../evidence.tar.gz", "/evidence.tar.gz", "evidence.tar.gz",
+                "vakint-external-data-v0.0.1-evidence.tar.gz",
+                "vakint-external-data-v0.0.0-sub/evidence.tar.gz",
+                "vakint-external-data-v0.0.0-1L.tar.gz",
+                "vakint-external-data-v0.0.0-evidence\\name.tar.gz",
+            )
+        ] + [
+            {**valid, "archive_bytes": value}
+            for value in (0, -1, True, "42", 2_000_000_000)
+        ] + [
+            {**valid, "archive_sha256": "x" * 64},
+            {**valid, "archive_sha256": "A" * 64},
+            {**valid, "unexpected": "not part of the static contract"},
+        ]
+        for asset in invalid:
+            with self.subTest(asset=asset), self.assertRaises(ValueError):
+                data.provenance_assets({**manifest, "provenance_assets": [asset]})
+        for assets in (None, {}, [valid, valid]):
+            with self.subTest(assets=assets), self.assertRaises(ValueError):
+                data.provenance_assets({**manifest, "provenance_assets": assets})
+
+    def test_source_evidence_inventory_and_contents_fail_before_packing(self):
+        directory, path, manifest = self.provenance_fixture()
+        with self.assertRaisesRegex(ValueError, "required"):
+            data.checked_provenance_assets(None, manifest)
+        extra = directory / "unexpected.txt"
+        extra.write_text("undeclared")
+        with self.assertRaisesRegex(ValueError, "inventory"):
+            data.checked_provenance_assets(directory, manifest)
+        extra.unlink()
+        original = path.read_bytes()
+        path.write_bytes(b"corrupt")
+        with (
+            patch.object(data, "digest") as digest,
+            self.assertRaisesRegex(ValueError, "checksum/size"),
+        ):
+            data.checked_provenance_assets(directory, manifest)
+        digest.assert_not_called()
+        path.write_bytes(b"x" * len(original))
+        with self.assertRaisesRegex(ValueError, "checksum/size"):
+            data.checked_provenance_assets(directory, manifest)
+        path.unlink()
+        with self.assertRaisesRegex(ValueError, "inventory"):
+            data.checked_provenance_assets(directory, manifest)
+        target = self.base / "original"
+        target.write_bytes(original)
+        path.symlink_to(target)
+        with self.assertRaisesRegex(ValueError, "escapes"):
+            data.checked_provenance_assets(directory, manifest)
+        path.unlink()
+        path.mkdir()
+        with self.assertRaisesRegex(ValueError, "checksum/size"):
+            data.checked_provenance_assets(directory, manifest)
+        with patch.object(data, "ROOT", self.root), self.assertRaises(ValueError):
+            data.pack(self.base / "not-created", directory)
+        self.assertFalse((self.base / "not-created").exists())
+
+    def test_version_change_cannot_leave_static_evidence_on_the_old_version(self):
+        self.provenance_fixture()
+        before = (self.root / "manifest.json").read_bytes()
+        with patch.object(data, "ROOT", self.root), self.assertRaisesRegex(ValueError, "version-bound"):
+            data.set_version("v0.0.1")
+        self.assertEqual((self.root / "manifest.json").read_bytes(), before)
+
+    def test_packing_rejects_an_evidence_destination_symlink(self):
+        directory, evidence, _ = self.provenance_fixture()
+        output = self.base / "release"
+        output.mkdir()
+        (output / evidence.name).symlink_to(evidence)
+        with (
+            patch.object(data, "ROOT", self.root),
+            contextlib.redirect_stdout(io.StringIO()),
+            self.assertRaisesRegex(ValueError, "escapes"),
+        ):
+            data.pack(output, directory)
+
+    def test_evidence_changes_during_packing_do_not_gain_a_new_identity(self):
+        directory, _, _ = self.provenance_fixture()
+        copy_verified = data.copy_verified
+
+        def changed_copy(source, destination):
+            source.write_bytes(b"changed after preflight")
+            copy_verified(source, destination)
+
+        with (
+            patch.object(data, "ROOT", self.root),
+            patch.object(data, "copy_verified", side_effect=changed_copy),
+            contextlib.redirect_stdout(io.StringIO()),
+            self.assertRaisesRegex(ValueError, "changed while packing"),
+        ):
+            data.pack(self.base / "release", directory)
+
     def test_version_update_preserves_all_scientific_payloads_and_current_five_loop(self):
         before = {
             p.relative_to(self.root).as_posix(): p.read_bytes()

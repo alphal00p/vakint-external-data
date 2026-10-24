@@ -10,6 +10,8 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "tools"))
+
 SPEC = importlib.util.spec_from_file_location(
     "publish", Path(__file__).resolve().parents[1] / "tools/publish.py"
 )
@@ -58,13 +60,16 @@ class PublicationTests(unittest.TestCase):
         (self.directory / "manifest.json").write_text(json.dumps(self.manifest))
         paths = [self.directory / "manifest.json"] + [
             self.directory / pack["archive"] for pack in self.manifest["loop_packs"]
+        ] + [
+            self.directory / asset["archive"]
+            for asset in self.manifest.get("provenance_assets", [])
         ]
         (self.directory / "SHA256SUMS").write_text(
             "".join(f"{self.digest(path)}  {path.name}\n" for path in sorted(paths))
         )
 
-    def invoke(self, existing=None, dirty=False):
-        calls = []
+    def invoke(self, existing=None, dirty=False, calls=None):
+        calls = [] if calls is None else calls
 
         def run(*arguments):
             if arguments == ("git", "status", "--porcelain"):
@@ -83,6 +88,106 @@ class PublicationTests(unittest.TestCase):
         ):
             publish.main()
         return calls
+
+    def add_source_evidence(self):
+        path = self.directory / "vakint-external-data-v0.1.1-cache-build-evidence.tar.gz"
+        path.write_bytes(b"immutable source evidence")
+        asset = {"archive": path.name, "archive_sha256": self.digest(path), "archive_bytes": path.stat().st_size}
+        self.source["provenance_assets"] = [asset]
+        self.manifest["provenance_assets"] = copy.deepcopy(self.source["provenance_assets"])
+        (self.root / "manifest.json").write_text(json.dumps(self.source))
+        self.write_manifest_and_checksums()
+        return path
+
+    def test_optional_evidence_is_uploaded_immutably_before_alias_manifest(self):
+        evidence = self.add_source_evidence()
+        calls = self.invoke()
+        immutable_upload = next(call for call in calls if call[:3] == ("release", "upload", "v0.1.1"))
+        self.assertIn(str(evidence), immutable_upload)
+        published = calls.index(("release", "edit", "v0.1.1", "--draft=false", "--latest"))
+        alias_assets = next(i for i, call in enumerate(calls) if call[:3] == ("release", "upload", "data-latest") and str(evidence) in call)
+        alias_manifest = next(i for i, call in enumerate(calls) if call[:3] == ("release", "upload", "data-latest") and str(self.directory / "manifest.json") in call)
+        self.assertLess(calls.index(immutable_upload), published)
+        self.assertLess(published, alias_assets)
+        self.assertLess(alias_assets, alias_manifest)
+
+    def test_all_loop_archive_sizes_are_checked_before_hashing_or_mutation(self):
+        valid = copy.deepcopy(self.manifest)
+        for value in (0, -1, True, "42", 1.5, 2_000_000_000, 2_000_000_001):
+            self.manifest = copy.deepcopy(valid)
+            # Use the final archive to prove earlier archives are not hashed.
+            self.manifest["loop_packs"][-1]["archive_bytes"] = value
+            (self.directory / "manifest.json").write_text(json.dumps(self.manifest))
+            calls = []
+            with (
+                self.subTest(value=value),
+                patch.object(publish.hashlib, "file_digest") as digest,
+                self.assertRaisesRegex(RuntimeError, "positive integers smaller than 2 GB"),
+            ):
+                self.invoke(calls=calls)
+            digest.assert_not_called()
+            self.assertEqual(calls, [])
+
+    def test_static_evidence_must_match_committed_metadata_before_any_mutation(self):
+        self.add_source_evidence()
+        self.manifest["provenance_assets"][0]["archive_sha256"] = "f" * 64
+        self.write_manifest_and_checksums()
+        calls = []
+        with self.assertRaisesRegex(RuntimeError, "committed source manifest"):
+            self.invoke(calls=calls)
+        self.assertEqual(calls, [])
+
+    def test_corrupt_missing_or_symlink_evidence_is_rejected_before_any_mutation(self):
+        path = self.add_source_evidence()
+        payload = path.read_bytes()
+        for kind in ("corrupt", "missing", "symlink"):
+            with self.subTest(kind=kind):
+                if path.exists() or path.is_symlink():
+                    path.unlink()
+                if kind == "corrupt":
+                    path.write_bytes(b"different payload")
+                elif kind == "symlink":
+                    target = self.base / "evidence-original"
+                    target.write_bytes(payload)
+                    path.symlink_to(target)
+                calls = []
+                with self.assertRaisesRegex(RuntimeError, "regular file|archive differs"):
+                    self.invoke(calls=calls)
+                self.assertEqual(calls, [])
+
+    def test_optional_evidence_requires_safe_names_strict_size_and_checksum_inventory(self):
+        self.add_source_evidence()
+        valid = copy.deepcopy(self.manifest)
+        for update in (
+            {"archive": "../escape.tar.gz"},
+            {"archive": "vakint-external-data-v9.9.9-evidence.tar.gz"},
+            {"archive_bytes": 2_000_000_000},
+            {"archive_bytes": True},
+            {"archive_sha256": "not a hash"},
+        ):
+            self.manifest = copy.deepcopy(valid)
+            self.manifest["provenance_assets"][0].update(update)
+            self.source = copy.deepcopy(self.manifest)
+            for pack in self.source["loop_packs"]:
+                pack.update(archive_sha256=None, archive_bytes=None)
+            (self.root / "manifest.json").write_text(json.dumps(self.source))
+            (self.directory / "manifest.json").write_text(json.dumps(self.manifest))
+            calls = []
+            with self.subTest(update=update), self.assertRaises(RuntimeError):
+                self.invoke(calls=calls)
+            self.assertEqual(calls, [])
+        self.manifest = valid
+        self.source = copy.deepcopy(valid)
+        for pack in self.source["loop_packs"]:
+            pack.update(archive_sha256=None, archive_bytes=None)
+        (self.root / "manifest.json").write_text(json.dumps(self.source))
+        self.write_manifest_and_checksums()
+        checksums = self.directory / "SHA256SUMS"
+        checksums.write_text("".join(line for line in checksums.read_text().splitlines(keepends=True) if "evidence" not in line))
+        calls = []
+        with self.assertRaisesRegex(RuntimeError, "SHA256SUMS"):
+            self.invoke(calls=calls)
+        self.assertEqual(calls, [])
 
     def test_valid_release_is_published_before_latest_manifest_changes(self):
         calls = self.invoke()

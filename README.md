@@ -12,6 +12,30 @@ loop count installs all packs up to that count. `data-latest` points to the
 current immutable release through its `manifest.json`; exact versions remain
 available independently.
 
+An immutable release may also declare optional source evidence in the root
+manifest's `provenance_assets` list. Each row contains `archive`,
+`archive_sha256`, and `archive_bytes`: a versioned filename such as
+`vakint-external-data-v0.1.2-cache-build-evidence.tar.gz`, its lowercase SHA-256,
+and a positive byte length strictly below 2,000,000,000. Keep these large files
+outside Git. They are evidence downloads, not runtime caches or loop packs.
+Every release archive, including each loop pack, must satisfy that size bound.
+
+After finalizing the release version and committing those static metadata rows,
+place exactly the declared regular files in a separate directory and run:
+
+```sh
+python3 tools/data.py pack --output /path/to/release --provenance-assets /path/to/evidence
+python3 tools/publish.py /path/to/release
+```
+
+Packing verifies and copies the files and includes them in `SHA256SUMS`.
+Publication verifies the same committed metadata and all asset identities before
+any release mutation, publishes the immutable assets first, and updates the
+alias manifest last. Older versioned assets remain available through the alias.
+Without `provenance_assets`, the existing packing and publication behavior is
+unchanged and the extra argument is unnecessary. Version changes require
+removing the old version's evidence rows and authoring the new ones explicitly.
+
 ```python
 engine.load_official_external_data(4)
 engine.load_official_external_data(4, version="v0.1.1", local_artifacts_path="/path/to/data")
