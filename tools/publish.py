@@ -12,6 +12,7 @@ from urllib.parse import quote
 import data
 
 REPOSITORY = "alphal00p/vakint-external-data"
+RELEASE_ASSET_COUNT_LIMIT = 1000
 ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -103,11 +104,18 @@ def checked_assets(directory, manifest, source):
         )
     try:
         evidence = data.provenance_assets(manifest)
+        runtime = data.runtime_cache_assets(ROOT, manifest)
+        descriptors = data.runtime_descriptor_assets(manifest)
     except ValueError as error:
         raise RuntimeError(str(error)) from error
-    assets = [*manifest["loop_packs"], *evidence]
+    assets = [*manifest["loop_packs"], *evidence, *runtime, *descriptors]
     if any(not data.valid_archive_bytes(asset["archive_bytes"]) for asset in assets):
         raise RuntimeError("release archive sizes must be positive integers smaller than 2 GB")
+    expected_files = {asset["archive"] for asset in assets} | {"manifest.json", "SHA256SUMS"}
+    if len(expected_files) > RELEASE_ASSET_COUNT_LIMIT:
+        raise RuntimeError("release exceeds the 1000-asset hosting allowance")
+    if {path.name for path in directory.iterdir()} - expected_files:
+        raise RuntimeError("release directory differs from the complete declared asset inventory")
     archives = []
     checksums = {}
     for pack in assets:
@@ -129,6 +137,13 @@ def checked_assets(directory, manifest, source):
             raise RuntimeError(f"release archive differs from manifest: {archive}")
         checksums[name] = actual
         archives.append(str(archive))
+    # Recheck the container/member inventory at the publication boundary as well
+    # as during packaging. Metadata checks alone do not authenticate tar members.
+    if runtime:
+        import nativepack
+
+        for reference in manifest.get("runtime_cache_snapshots", []):
+            nativepack.verify_archives(nativepack.validate_reference(ROOT, reference), directory)
     checksums["manifest.json"] = hashlib.sha256(
         (directory / "manifest.json").read_bytes()
     ).hexdigest()

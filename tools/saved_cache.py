@@ -165,6 +165,29 @@ def validate_native_profile(profile, selected):
         )
 
 
+def validate_nativepack(directory, manifest, descriptor):
+    """Admit optional NativePack transport metadata, preserving the small default.
+
+    Native index parsing, claimed-generation checks and record semantic validation
+    remain the consumer's Native APIs. No coefficient state is imported here.
+    """
+    import nativepack
+
+    nativepack.validate_descriptor(descriptor)
+    families = manifest["families"]
+    if (manifest["loop_count"] != 5 or descriptor["loop_count"] != 5
+            or len(families) != 1 or len(families[0]["denominators"]) != 15):
+        raise ValueError("NativePack source requires the recorded five-loop common family")
+    expected = {
+        "artifact_digest": semantic_digest(directory, manifest),
+        "family_fingerprint": families[0]["fingerprint"],
+        "physical_arity": 15,
+        "layer": "saved-application-route-apply-v1",
+    }
+    if descriptor["binding"] != expected:
+        raise ValueError("NativePack semantic binding differs from the live application/catalogue")
+
+
 def validate(directory, manifest):
     cache = manifest["cache"]
     if manifest["loop_count"] != 5 or cache.get("format") != FORMAT:

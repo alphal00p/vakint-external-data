@@ -128,6 +128,70 @@ def checked_provenance_assets(directory, manifest):
     return paths
 
 
+def runtime_cache_assets(root, manifest):
+    """Authenticate opt-in NativePack metadata without reading Native records."""
+    import nativepack
+    from saved_cache import validate_nativepack
+
+    references = manifest.get("runtime_cache_snapshots", [])
+    if not isinstance(references, list):
+        raise ValueError("runtime_cache_snapshots must be a list")  # noqa: TRY004 - metadata admission uses ValueError
+    for reference in references:
+        descriptor = nativepack.validate_reference(root, reference)
+        if reference["loop_count"] != 5:
+            raise ValueError("runtime cache snapshot source admission currently requires 5L")
+        pack = next((pack for pack in manifest["loop_packs"] if pack["loop_count"] == 5), None)
+        if pack is None:
+            raise ValueError("runtime cache snapshot requires a five-loop pack")
+        loop_path = checked_path(root, pack["manifest"])
+        loop = read_json(loop_path)
+        relative = checked_path(root, reference["manifest"]).relative_to(loop_path.parent).as_posix()
+        if loop["files"].get(relative) != {
+            "sha256": reference["manifest_sha256"], "bytes": reference["manifest_bytes"]
+        }:
+            raise ValueError("runtime cache descriptor differs from loop file inventory")
+        validate_nativepack(loop_path.parent, loop, descriptor)
+    assets = nativepack.assets(manifest, root)
+    names = {"manifest.json", "SHA256SUMS", RUNTIME_ONLY_MARKER}
+    names.update(pack["archive"] for pack in manifest["loop_packs"])
+    names.update(asset["archive"] for asset in provenance_assets(manifest))
+    for reference in references:
+        name = PurePosixPath(reference["manifest"]).name
+        if name in names:
+            raise ValueError("duplicate runtime descriptor asset basename")
+        names.add(name)
+    for asset in assets:
+        if asset["archive"] in names:
+            raise ValueError("runtime cache archive collides with another release asset")
+        names.add(asset["archive"])
+    return assets
+
+
+def runtime_descriptor_assets(manifest):
+    """Identical small descriptors are also standalone release assets."""
+    return [{"archive": PurePosixPath(row["manifest"]).name,
+             "archive_sha256": row["manifest_sha256"], "archive_bytes": row["manifest_bytes"]}
+            for row in manifest.get("runtime_cache_snapshots", [])]
+
+
+def checked_runtime_cache_assets(root, manifest, directory):
+    import nativepack
+
+    assets = runtime_cache_assets(root, manifest)
+    if directory is None:
+        if assets:
+            raise ValueError("--runtime-cache-assets is required for declared runtime cache snapshots")
+        return []
+    directory = Path(directory)
+    if directory.is_symlink() or not directory.is_dir():
+        raise ValueError("runtime cache assets must be a regular directory")
+    if {path.name for path in directory.iterdir()} != {asset["archive"] for asset in assets}:
+        raise ValueError("runtime cache asset directory inventory differs from manifest")
+    for reference in manifest.get("runtime_cache_snapshots", []):
+        nativepack.verify_archives(nativepack.validate_reference(root, reference), directory)
+    return [checked_path(directory, asset["archive"]) for asset in assets]
+
+
 def migrate(source, vakint_source):
     source = Path(source).resolve()
     inventory = []
@@ -1032,6 +1096,7 @@ def validate(root=None):
                 or hashlib.sha256(raw).hexdigest() != item["uncompressed_sha256"]
             ):
                 raise ValueError("original validation evidence checksum mismatch")
+    runtime_cache_assets(root, manifest)
     print(json.dumps({"version": manifest["version"], "validated": counts}))
     return manifest
 
@@ -1039,12 +1104,14 @@ def validate(root=None):
 RUNTIME_ONLY_MARKER = "RUNTIME_ONLY.json"
 
 
-def pack(output, provenance_directory=None, *, runtime_only=False):
-    if runtime_only and provenance_directory is not None:
-        raise ValueError("--runtime-only and --provenance-assets are mutually exclusive")
+def pack(output, provenance_directory=None, *, runtime_only=False, runtime_cache_directory=None):
+    if runtime_only and (provenance_directory is not None or runtime_cache_directory is not None):
+        raise ValueError("--runtime-only and external asset directories are mutually exclusive")
     manifest = validate()
     declared_evidence = provenance_assets(manifest)
     evidence = [] if runtime_only else checked_provenance_assets(provenance_directory, manifest)
+    declared_runtime = runtime_cache_assets(ROOT, manifest)
+    runtime = [] if runtime_only else checked_runtime_cache_assets(ROOT, manifest, runtime_cache_directory)
     output = Path(output).resolve()
     if output.is_relative_to(ROOT):
         raise ValueError("release outputs must be outside the source repository")
@@ -1062,6 +1129,7 @@ def pack(output, provenance_directory=None, *, runtime_only=False):
             "version": manifest["version"],
             "source_manifest_sha256": digest(ROOT / "manifest.json"),
             "omitted_provenance_assets": declared_evidence,
+            "omitted_runtime_cache_assets": declared_runtime,
             "scope": "Runtime validation archives only; rebuild in full mode for publication.",
         })
     for loop in manifest["loop_packs"]:
@@ -1108,9 +1176,20 @@ def pack(output, provenance_directory=None, *, runtime_only=False):
             "sha256": asset["archive_sha256"], "bytes": asset["archive_bytes"]
         }:
             raise ValueError(f"provenance asset changed while packing: {source}")
+    included_runtime = [] if runtime_only else declared_runtime
+    for source, asset in zip(runtime, included_runtime, strict=True):
+        destination = checked_path(output, asset["archive"])
+        copy_verified(source, destination)
+        if file_record(destination) != {"sha256": asset["archive_sha256"], "bytes": asset["archive_bytes"]}:
+            raise ValueError(f"runtime cache archive changed while packing: {source}")
+    descriptors = runtime_descriptor_assets(manifest)
+    for reference, asset in zip(manifest.get("runtime_cache_snapshots", []), descriptors, strict=True):
+        copy_verified(checked_path(ROOT, reference["manifest"]), checked_path(output, asset["archive"]))
     write_json(output / "manifest.json", manifest)
     archive_names = {x["archive"] for x in manifest["loop_packs"]}
     archive_names.update(a["archive"] for a in included_evidence)
+    archive_names.update(a["archive"] for a in included_runtime)
+    archive_names.update(a["archive"] for a in descriptors)
     (output / "SHA256SUMS").write_text(
         "".join(
             f"{digest(p)}  {p.name}\n"
@@ -1167,6 +1246,18 @@ def main():
         "--runtime-only", action="store_true",
         help="Build nonpublishable runtime validation packs without external source evidence",
     )
+    packing.add_argument("--runtime-cache-assets", type=Path,
+                         help="Authenticated optional NativePack part archives; never downloaded implicitly")
+    native_packing = commands.add_parser("pack-nativepack", help="Containerize opaque NativePack files; never decode coefficients")
+    native_packing.add_argument("--source", type=Path, required=True)
+    native_packing.add_argument("--output", type=Path, required=True)
+    native_packing.add_argument("--descriptor", type=Path, required=True)
+    native_packing.add_argument("--binding", type=Path, required=True,
+                                help="JSON containing the exact public Native binding object")
+    native_packing.add_argument("--generation", type=int, required=True)
+    native_packing.add_argument("--stored-record-references", type=int, required=True)
+    native_packing.add_argument("--base-descriptor", type=Path)
+    native_packing.add_argument("--base-archives", type=Path)
     args = parser.parse_args()
     if args.command == "migrate":
         migrate(args.source, args.vakint_source)
@@ -1177,7 +1268,24 @@ def main():
     elif args.command == "validate":
         validate()
     elif args.command == "pack":
-        pack(args.output, args.provenance_assets, runtime_only=args.runtime_only)
+        pack(args.output, args.provenance_assets, runtime_only=args.runtime_only,
+             runtime_cache_directory=args.runtime_cache_assets)
+    elif args.command == "pack-nativepack":
+        import nativepack
+
+        if args.descriptor.exists() or args.descriptor.is_symlink():
+            raise ValueError("preserve the existing NativePack descriptor")
+        if args.descriptor.resolve().is_relative_to(args.output.resolve()):
+            raise ValueError("keep the descriptor outside the part archive directory")
+        if args.descriptor.resolve().is_relative_to(args.source.resolve()):
+            raise ValueError("keep the descriptor outside the preserved NativePack source")
+        descriptor = nativepack.pack_parts(
+            args.source, args.output, binding=nativepack.read_json(args.binding),
+            generation=args.generation, stored_record_references=args.stored_record_references,
+            base_descriptor=nativepack.read_json(args.base_descriptor) if args.base_descriptor else None,
+            base_archives=args.base_archives,
+        )
+        write_json(args.descriptor, descriptor)
 
 
 if __name__ == "__main__":

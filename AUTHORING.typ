@@ -269,6 +269,107 @@ Native RustRed validation is separately required for BLAKE3, Symbolica state,
 solver ownership, exact coefficients, guards and cold/warm parity. The Python
 source checks never establish new algebraic authority or campaign coverage.
 
+=== Optional cumulative NativePack transport
+
+Large cumulative caches have an explicit, optional transport descriptor. They
+do not replace `cache/prepared.rrcache.gz`, change its descriptor or size limits,
+or enable automatic downloads during ordinary data loading. The cumulative
+NativePack has no total-cache size cap. The 1.8 GB bound below admits individual
+release assets; it never authorizes deleting, truncating or compacting records.
+
+The root manifest's optional `runtime_cache_snapshots` list authenticates each
+small descriptor with exactly `loop_count`, `manifest`, `manifest_sha256` and
+`manifest_bytes`. Current source admission requires `loop_count: 5` and a path
+`5L/cache/NAME.json`, also present in the five-loop file inventory. The same
+descriptor bytes are published as standalone asset `NAME.json`; its immutable
+release URL uses that basename. Descriptor basenames must be globally unique
+across snapshot descriptors and release assets. These are runtime assets, never
+`provenance_assets` evidence declarations.
+
+Each descriptor uses `schema: "vakint.nativepack-transport.v1"` and exactly
+`loop_count`, `binding`, `generation`, `stored_record_references`, `files` and
+`parts`. The binding has the existing public Native fields: `artifact_digest`
+(32 bytes), `family_fingerprint`, `physical_arity` and `layer`. Source validation
+reproduces the active application's semantic binding. Native index decoding,
+matching the declared generation/reference census and validating imported
+records remain the consumer's existing Native APIs. Stored references are not
+distinct keys, certified workload completion or a measured utility claim.
+
+The `files` object maps exact paths to objects containing only `bytes` and
+lowercase `sha256`. Allowed paths are `cache/bundle.rrindex`,
+`cache/bindings/ID/cache.rrindex` and
+`cache/bindings/ID/chunks/DIGEST.rrchunk.gz`; `ID` and `DIGEST` are 64 lowercase
+hexadecimal characters. The packer treats all these files as opaque bytes.
+The singular binding requires exactly one child namespace and its index; every
+chunk belongs to that child. Native opening verifies the hashed namespace itself.
+No locks, logs, job checkpoints or in-flight state enter the transport.
+The source may retain Native's empty regular `writer.lock` at the bundle root or
+binding child. Packaging omits that operational marker without modifying it;
+nonempty markers are refused. This does not determine whether a writer is live:
+the caller must supply an already sealed, independently validated snapshot.
+
+Each ordered `parts` entry has exactly `kind`, `archive`, `archive_bytes`,
+`archive_sha256`, `members`, and optionally `url`. Archive names are unique safe
+basenames ending in `.tar.gz`; byte lengths are positive integers no greater
+than 1,800,000,000. Members are sorted, unique exact file paths. Exactly one part
+has `kind: "indexes"` and contains every index. All other parts have
+`kind: "chunks"` and contain only whole chunk files. A global duplicate check
+requires the disjoint member union to equal `files`, across all selected parts.
+
+An optional HTTPS `url` locates an unchanged asset from an older immutable
+release. Without it, remote transfer resolves `archive` beside the descriptor
+URL. Offline import and producer checks always use `archive` beside the local
+descriptor or in the explicit asset directory, ignoring `url`; no Python tool
+fetches remote bytes. Full publication currently requires local verified copies
+of every selected part, including reused assets.
+
+`tools/data.py pack-nativepack` creates deterministic, separately checksummed
+USTAR/gzip containers outside the preserved Native source. It partitions whole
+files in lexical order, counts tar headers/padding/end blocks and reserves gzip
+overhead before producing each part; the actual compressed length is checked
+again. Metadata uses fixed modes, zero timestamps and uid/gid, empty user/group
+names and gzip timestamp zero. An indivisible file that cannot fit is refused
+without changing its bytes or discarding any record.
+
+For an already preserved and independently validated Native snapshot:
+
+```sh
+python3 tools/data.py pack-nativepack \
+  --source /workspace/preserved/native-bundle \
+  --output /workspace/transport/parts \
+  --descriptor /workspace/transport/snapshot.json \
+  --binding /workspace/public-native-binding.json \
+  --generation N --stored-record-references N
+```
+
+The binding JSON contains the public binding object itself. Generation and
+reference census come from the authenticated Native snapshot, never a failed
+job's completion label. For a later snapshot, add `--base-descriptor PATH` and
+`--base-archives DIRECTORY`. The packer verifies and copies unchanged base chunk
+parts byte for byte, adds containers only for novel chunks, and emits one fresh
+index container. Old index containers are never overlaid. Earlier source files,
+parts and descriptors remain intact; future same-binding mathematical merges
+belong to Native validated append, not this transport.
+
+After intentional admission, place the small descriptor in the loop inventory
+and declare its authenticated root reference. Full `tools/data.py pack` requires
+`--runtime-cache-assets DIRECTORY` containing exactly the selected part files,
+alongside any required `--provenance-assets`. Packaging and publication both
+stream-check every selected container, exact regular-file headers, member
+bytes/SHA256, padding, gzip CRC and absence of trailing data. The complete
+`SHA256SUMS` includes each unique part and standalone descriptor. The publisher
+checks immutable committed metadata and retains the existing immutable-release
+then alias-manifest-last sequence. Its 1,000-asset hosting allowance includes
+standalone descriptors, the root manifest and checksums. No assets are uploaded
+by packaging itself.
+
+`--runtime-only` omits these optional external parts, retains their declarations
+and small descriptors, records `omitted_runtime_cache_assets` and remains
+explicitly nonpublishable. Compare independent tiny-fixture archive builds when
+changing transport construction. Neither metadata nor container checks establish
+new reduction identities; Native binding, guard, context and terminal validation
+remain mandatory when a record is actually used.
+
 CI packaging uses `tools/data.py pack --runtime-only --output PATH` to check
 runtime archives without fetching optional source evidence. This explicit mode
 requires an empty output directory, preserves the full manifest declarations
