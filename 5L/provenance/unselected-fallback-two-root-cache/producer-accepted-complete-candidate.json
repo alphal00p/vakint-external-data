@@ -1,0 +1,163 @@
+{
+  "schema": "vakint.strict-complete-small-candidate-acceptance.v1",
+  "utc": "2026-10-24T11:46:54.196358+00:00",
+  "state": "STRICT_COMPLETE_CANDIDATE_NOT_FINAL_SELECTION",
+  "whole_job_wall_seconds": 1278.7086279720534,
+  "worker_loading_data_plus_owner_proof_seconds": 628.651971187,
+  "preparation_inclusive_seconds": 639.161489705,
+  "strict_application_setup_seconds": 594.912973463,
+  "worker_total_seconds": 1269.393119747,
+  "supervisor_total_seconds": 1272.623246836,
+  "selected_training_roots": 2,
+  "completed_strict_roots": 2,
+  "record_count": 25088,
+  "captured_intermediates": 25086,
+  "native_statistics": {
+    "cache_work": {
+      "evicted_coefficient_bytes": 0,
+      "evicted_coefficient_terms": 0,
+      "evicted_entries": 0,
+      "recomputed_nodes": 0
+    },
+    "native": {
+      "cache_hits": 190109,
+      "cached_coefficient_bytes": 78126718,
+      "cached_coefficient_terms": 1543649,
+      "cached_integrals": 25088,
+      "coalescing_additions": 271790,
+      "rule_applications": 11511
+    }
+  },
+  "capture_skipped_records": 0,
+  "cache_file": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/strict-pilot-first2-run2-budget2400/candidate.rrcache.gz",
+    "sha256": "cc5e6d80aacc737b81be1675a8aa02694b9ccaa1e4f31cc2d5a34199e4f1a19d",
+    "compressed_bytes": 2456235,
+    "decoded_sha256": "3426758874cc6acf59ace61dede0a8e189fe3c6c32d8fa0d934eb788e23878a9",
+    "decoded_bytes": 16593448,
+    "native_identity": {
+      "compressed_blake3": [
+        235,
+        115,
+        193,
+        232,
+        0,
+        155,
+        254,
+        151,
+        231,
+        165,
+        69,
+        2,
+        118,
+        229,
+        228,
+        199,
+        173,
+        252,
+        111,
+        230,
+        59,
+        32,
+        80,
+        153,
+        21,
+        24,
+        208,
+        148,
+        113,
+        69,
+        12,
+        132
+      ],
+      "compressed_bytes": 2456235,
+      "decoded_blake3": [
+        83,
+        182,
+        5,
+        124,
+        210,
+        42,
+        77,
+        52,
+        19,
+        208,
+        205,
+        223,
+        221,
+        246,
+        14,
+        166,
+        137,
+        7,
+        19,
+        247,
+        14,
+        165,
+        234,
+        163,
+        138,
+        143,
+        207,
+        155,
+        42,
+        41,
+        190,
+        203
+      ],
+      "decoded_bytes": 16593448
+    }
+  },
+  "exact_owner_cohort_sha256": "a516bb453f8bf8d408afe68e5abf9e9de78198b83ec14ddc9a9653c6270803ef",
+  "workload_sha256": "b5a502290b714bb96dc2979cfb481c66ba1faeddfff0395f003ef165d351bf05",
+  "reports": {
+    "outer": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/strict-pilot-first2-run2-budget2400/receipt.json",
+      "sha256": "6d4592a8665e6cda88a36e799b4ba071b5c0613065943524da258cd4beabc75e"
+    },
+    "build": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/strict-pilot-first2-run2-budget2400/builder-work/build.json",
+      "sha256": "6d12f1329b992c3a46614c61b5fb004897444c705aa41f3559a14ff9d3febea1"
+    },
+    "worker": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/strict-pilot-first2-run2-budget2400/builder-work/worker.json",
+      "sha256": "1a6adc3554c6b4ae1fe788b90de6d758a2f66fa4cee4edd4fa349f4f76d4222f"
+    },
+    "supervisor": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/strict-pilot-first2-run2-budget2400/builder-work/supervisor.json",
+      "sha256": "ad1ec87a91dc0f36cc362d7bc0c2c4cd6fbd89a8c7f6f5715c7fafffee29c873"
+    },
+    "selection": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/strict-pilot-first2-run2-budget2400/training-selection.json",
+      "sha256": "14728ca238b63bb19761b9fa9a78258990722da043c907b25e7dd69f0a4bcc8e"
+    }
+  },
+  "root_progress": [
+    {
+      "status": "running",
+      "completed_roots": 0,
+      "newly_stored_roots": 0,
+      "newly_stored_intermediates": 0,
+      "elapsed_seconds": 0.011811528
+    },
+    {
+      "status": "running",
+      "completed_roots": 0,
+      "newly_stored_roots": 0,
+      "newly_stored_intermediates": 21824,
+      "elapsed_seconds": 34.809899527
+    },
+    {
+      "status": "complete",
+      "completed_roots": 2,
+      "newly_stored_roots": 2,
+      "newly_stored_intermediates": 25086,
+      "elapsed_seconds": 41.116268479
+    }
+  ],
+  "ordinary_source_entry_admission": [
+    false,
+    false
+  ],
+  "known_scope": "StrictComplete for selected2source roots and capturedcompleteddescendants. No fullprimaryworkloadclosure, no measuredspeedup, no finalcachepublication."
+}

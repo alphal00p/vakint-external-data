@@ -1,0 +1,22 @@
+{
+  "schema": "vakint.fallback-cache-native-validation-source-contract.v1",
+  "actual_consumer_sources": [
+    {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-release-supervision-c6dcc/crates/vakint/src/rustred_evaluation/cache_five_loop.rs",
+      "sha256": "692a46af462858152383e9a74b75ab62ec8bf812c278acb2090bc3b0e7000239"
+    },
+    {
+      "path": "/shared/codex-1/vakint_rustred/workspace/cargo/git/checkouts/rustred-971a3b8def498c77/42bae6e/crates/rustred-app/src/application/saved_application/cache_file.rs",
+      "sha256": "be85210d76055f077c5433d9ef8e57e76c2cd15b09ac669f2b03385108d12de1"
+    }
+  ],
+  "code_path": [
+    "measure_cache::measure calls engine.load_cache(5, path, Default) before evaluation",
+    "Vakint::load_five_loop_cache calls SavedApplicationCacheFile::open with actual application binding and bounded native file limits",
+    "Native open checks one gzip member, CRC/trailing bytes, native header length and BLAKE3 digest, complete decoded native binding/index",
+    "Before attaching, for EVERY file.keys(): fork_reader.lookup(key, actual coefficient context), then prepared.validate_completed_cache_record(binding, record)",
+    "Only after every record passes does the native application clear resident cache and atomically attach backing"
+  ],
+  "native_every_record_evidence": "Successful actual cached worker with persistent5L backing and actual file.records=25088 establishes this unconditional completed source path; no invented checked-record counter",
+  "load_cache_return_type": "Result<(), VakintError>; statistics are captured by existing worker after attachment/evaluation"
+}

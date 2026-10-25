@@ -1,0 +1,123 @@
+{
+  "cache": {
+    "compressed_bytes": 2456235,
+    "decoded_bytes": 16593448,
+    "decoded_sha256": "3426758874cc6acf59ace61dede0a8e189fe3c6c32d8fa0d934eb788e23878a9",
+    "intermediate_records": 25086,
+    "path": "cache/prepared.rrcache.gz",
+    "records": 25088,
+    "sha256": "cc5e6d80aacc737b81be1675a8aa02694b9ccaa1e4f31cc2d5a34199e4f1a19d",
+    "strict_complete_roots": 2
+  },
+  "consumer_revision": "c6dcc126bfaf0164870776e1018d08bdafb1e117",
+  "fresh_f022_attempt": {
+    "complete_suite": false,
+    "deadline_failed": 1,
+    "functional_success": 10,
+    "not_started_after_failure": 2
+  },
+  "historical_producer_provenance": {
+    "note": "Verbatim pre-selection state; the later Root decision above selects the exact same completed artifact without relabelling old reports or timings.",
+    "path": "provenance/unselected-fallback-two-root-cache/UNSELECTED_FALLBACK_CANDIDATE.json",
+    "sha256": "20e1e04e05413a09280abacbe2cc8a7b1a6123878579ddf6bf2f3b5bc0db5043"
+  },
+  "native_compatibility_scope": "Accepted actual C6/f022 semantic projection only; no broader/new consumer cohort or complete fresh f022 thirteen-case pass.",
+  "performance_qualified": false,
+  "performance_scope": "Selection is based on strict completion, size and accepted native compatibility, with modest preliminary tuning/intermediate-use evidence. Final held-out/physical medians and a speed gain are not established.",
+  "producer_phase": "pilot",
+  "producer_revision": "8ef03d7fd7557772e1b531b71b71c08e3419ff54",
+  "producer_workload": {
+    "path": "cache/workload.json",
+    "sha256": "b5a502290b714bb96dc2979cfb481c66ba1faeddfff0395f003ef165d351bf05"
+  },
+  "published": false,
+  "references": {
+    "accepted-cache-consumer-bridge.json": {
+      "bytes": 19795,
+      "path": "provenance/selected-fallback-two-root-cache/accepted-cache-consumer-bridge.json",
+      "sha256": "daa07861eaf718d289073709bac5c50f5e633832cdccb20ab35cf070d8c9aca9"
+    },
+    "accepted-native-compatibility.json": {
+      "bytes": 21397,
+      "path": "provenance/selected-fallback-two-root-cache/accepted-native-compatibility.json",
+      "sha256": "0038f97ed13d33e3d6c49f2f677557f5e6cc10ea096a51187b380c9a998bccf2"
+    },
+    "accepted-projection.json": {
+      "bytes": 4401,
+      "path": "provenance/selected-fallback-two-root-cache/accepted-projection.json",
+      "sha256": "524e49b6ec93c5e42083ceb035cd0512f71863a5a5f06bb6fa742294e245d6e2"
+    },
+    "consumer-two-root-workload.json": {
+      "bytes": 21729,
+      "path": "provenance/selected-fallback-two-root-cache/consumer-two-root-workload.json",
+      "sha256": "f022d21736684ed9831619c919250cce79f4eeacb9e9b3245ae3f872cb7f8f60"
+    },
+    "incomplete-f022-attempt-supplement.json": {
+      "bytes": 4272,
+      "path": "provenance/selected-fallback-two-root-cache/incomplete-f022-attempt-supplement.json",
+      "sha256": "a99df18d3d4522c074c32363cab375090b8fcbb65a48869c79e824312fc93af1"
+    },
+    "native-compatibility-handoff.json": {
+      "bytes": 1567,
+      "path": "provenance/selected-fallback-two-root-cache/native-compatibility-handoff.json",
+      "sha256": "e73da82cef5869c7c06b469f494b2ffe4e2b9b048c010762c7d2e5f5bd09e51a"
+    },
+    "native-compatibility-validation.json": {
+      "bytes": 59715,
+      "path": "provenance/selected-fallback-two-root-cache/native-compatibility-validation.json",
+      "sha256": "cbedb84e8a0bbf2d97caa89abb4f3c2d35cb28ee43deff3af06e253c3c8ed02f"
+    },
+    "rejected-three-root-build.json": {
+      "bytes": 42582,
+      "path": "provenance/selected-fallback-two-root-cache/rejected-three-root-build.json",
+      "sha256": "6e2c56ae7a6dda334b788fcb20de91cb84f514cfadb9ab8753b4dca5f039d7a3"
+    },
+    "rejected-three-root-terminal-outcome.json": {
+      "bytes": 5163,
+      "path": "provenance/selected-fallback-two-root-cache/rejected-three-root-terminal-outcome.json",
+      "sha256": "c025aa100a7c87daabe3dbd56d936a8791b902647efa5949a0a0d06bba7f4933"
+    },
+    "rejected-three-root-worker.json": {
+      "bytes": 17528,
+      "path": "provenance/selected-fallback-two-root-cache/rejected-three-root-worker.json",
+      "sha256": "98c6b51af8bcf7fc0225f65f8bbb6da601b8ddd146b54f29197398d883886b96"
+    },
+    "root-final-cache-selection.json": {
+      "bytes": 5823,
+      "path": "provenance/selected-fallback-two-root-cache/root-final-cache-selection.json",
+      "sha256": "828f61d0d6a6960131f7b08d0700f3f88ed2114ea73315d70d1335dc66ba1800"
+    },
+    "root-selection-validation.json": {
+      "bytes": 66856,
+      "path": "provenance/selected-fallback-two-root-cache/root-selection-validation.json",
+      "sha256": "a234924a114c9142eea482aba0eda356f2e468419ed7f524ce842fd911852012"
+    },
+    "selected-artifact-handoff.json": {
+      "bytes": 5172,
+      "path": "provenance/selected-fallback-two-root-cache/selected-artifact-handoff.json",
+      "sha256": "8656b7e02d0895a3043aaea7badb603b8e79c5fbabe20d782e5538249d40bae5"
+    },
+    "wall-budget-ledger.json": {
+      "bytes": 1431,
+      "path": "provenance/selected-fallback-two-root-cache/wall-budget-ledger.json",
+      "sha256": "6c97392984ee2267f1dffad506011f9ecb4ddc38e46a40f4f559c3f4230d8f8c"
+    }
+  },
+  "rejected_three_root_trial": {
+    "captured_intermediates": 792831,
+    "final_gzip_candidate_exists": false,
+    "promoted_as_complete": false,
+    "requested_roots": 3,
+    "strict_complete_roots": 1,
+    "whole_attempt_seconds": 32613.349550541956
+  },
+  "release_accepted": false,
+  "schema": "vakint.selected-fallback-two-root-cache.provenance.v1",
+  "selected": true,
+  "source_evidence": {
+    "note": "The immutable source-evidence archive remains historical pilot evidence. Selection/consumer acceptance is recorded separately here.",
+    "path": "provenance/cache-build-source-evidence.json",
+    "sha256": "20bff2e1689480e09bf0bfe310be330f3c6ea373918035c88a14d139ce37cbb7"
+  },
+  "status": "ROOT_SELECTED_COMPLETE_TWO_ROOT_FALLBACK_SOURCE_STAGE"
+}

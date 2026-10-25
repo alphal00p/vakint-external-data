@@ -1,0 +1,24 @@
+{
+  "archive_root": "cache-build-evidence-v1",
+  "evidence_manifest": "evidence-manifest.json",
+  "frozen_external_commit": "d40afb5a7e6b0e12eba867a4009f66b6d1dccacc",
+  "instructions": "REPRODUCING.md",
+  "original_proof_sha256": "7f4e774fa3583f3fd13417155897d4d4824f462301dbd8679096f5f8434ccca2",
+  "original_workload_sha256": "b5a502290b714bb96dc2979cfb481c66ba1faeddfff0395f003ef165d351bf05",
+  "path_map": "path-map.json",
+  "pilot_only": true,
+  "provenance_assets": [
+    {
+      "archive": "vakint-external-data-v0.1.2-cache-build-evidence.tar.gz",
+      "archive_bytes": 490633105,
+      "archive_sha256": "a906414ea74d5658793db4a72f4fd7788b249fd478c777c123f5cf1aa1512ab4"
+    }
+  ],
+  "qualification": "Runtime binding excludes release/cache inventory; historical builder requires original frozen manifests. New compiled snapshot requires honest new cohort/proof; no old-stamp injection.",
+  "relative_owner_proof": "operational/owner-proof.json",
+  "relative_proof_sha256": "6d675974e2ec418c3e3e2c609e5feac93ccd748158285d0927240cbb6c623b47",
+  "relative_workload": "operational/workload.json",
+  "relative_workload_sha256": "cdb46862e235467f79281514ae043e4baaa793baf2b4764093b0f1ec19b00b9a",
+  "schema": "vakint.cache-build-source-evidence-index.v1",
+  "scope": "Historical accepted2root pilot source evidence/full15 owner proof;64 original files, optional environment snapshot excluded; not final selection; contains no runtime cache or ELFs."
+}

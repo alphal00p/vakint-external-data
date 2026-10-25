@@ -1,0 +1,217 @@
+{
+  "schema": "vakint.unselected-fallback-two-root-cache.provenance.v1",
+  "status": "UNSELECTED_FALLBACK_TWO_ROOT_COMPLETE_CACHE",
+  "accepted_bridge": false,
+  "selected_adopted_or_published": false,
+  "performance_claim_allowed": false,
+  "producer_revision": "8ef03d7fd7557772e1b531b71b71c08e3419ff54",
+  "consumer_revision": "c6dcc126bfaf0164870776e1018d08bdafb1e117",
+  "cache": {
+    "path": "cache/prepared.rrcache.gz",
+    "sha256": "cc5e6d80aacc737b81be1675a8aa02694b9ccaa1e4f31cc2d5a34199e4f1a19d",
+    "bytes": 2456235,
+    "decoded_sha256": "3426758874cc6acf59ace61dede0a8e189fe3c6c32d8fa0d934eb788e23878a9",
+    "identity": {
+      "compressed_blake3": [
+        235,
+        115,
+        193,
+        232,
+        0,
+        155,
+        254,
+        151,
+        231,
+        165,
+        69,
+        2,
+        118,
+        229,
+        228,
+        199,
+        173,
+        252,
+        111,
+        230,
+        59,
+        32,
+        80,
+        153,
+        21,
+        24,
+        208,
+        148,
+        113,
+        69,
+        12,
+        132
+      ],
+      "compressed_bytes": 2456235,
+      "decoded_blake3": [
+        83,
+        182,
+        5,
+        124,
+        210,
+        42,
+        77,
+        52,
+        19,
+        208,
+        205,
+        223,
+        221,
+        246,
+        14,
+        166,
+        137,
+        7,
+        19,
+        247,
+        14,
+        165,
+        234,
+        163,
+        138,
+        143,
+        207,
+        155,
+        42,
+        41,
+        190,
+        203
+      ],
+      "decoded_bytes": 16593448
+    }
+  },
+  "workload": {
+    "path": "cache/workload.json",
+    "sha256": "b5a502290b714bb96dc2979cfb481c66ba1faeddfff0395f003ef165d351bf05",
+    "bytes": 21736
+  },
+  "complete_training_roots": 2,
+  "records": 25088,
+  "captured_intermediate_records": 25086,
+  "whole_job_wall_seconds": 1278.7086279720534,
+  "references": {
+    "producer-accepted-complete-candidate.json": {
+      "path": "provenance/unselected-fallback-two-root-cache/producer-accepted-complete-candidate.json",
+      "sha256": "8513bbac970bab938d4c2806f53f0757896b6b6de2b6f1116bad0299ad2f90a5",
+      "bytes": 4789
+    },
+    "producer-build.json": {
+      "path": "provenance/unselected-fallback-two-root-cache/producer-build.json",
+      "sha256": "6d12f1329b992c3a46614c61b5fb004897444c705aa41f3559a14ff9d3febea1",
+      "bytes": 49607
+    },
+    "producer-worker.json": {
+      "path": "provenance/unselected-fallback-two-root-cache/producer-worker.json",
+      "sha256": "1a6adc3554c6b4ae1fe788b90de6d758a2f66fa4cee4edd4fa349f4f76d4222f",
+      "bytes": 24554
+    },
+    "producer-supervision.json": {
+      "path": "provenance/unselected-fallback-two-root-cache/producer-supervision.json",
+      "sha256": "6d4592a8665e6cda88a36e799b4ba071b5c0613065943524da258cd4beabc75e",
+      "bytes": 2735
+    },
+    "producer-training-selection.json": {
+      "path": "provenance/unselected-fallback-two-root-cache/producer-training-selection.json",
+      "sha256": "14728ca238b63bb19761b9fa9a78258990722da043c907b25e7dd69f0a4bcc8e",
+      "bytes": 4336
+    },
+    "producer-owner-proof.json": {
+      "path": "provenance/unselected-fallback-two-root-cache/producer-owner-proof.json",
+      "sha256": "7f4e774fa3583f3fd13417155897d4d4824f462301dbd8679096f5f8434ccca2",
+      "bytes": 156529
+    },
+    "consumer-c6-validation.json": {
+      "path": "provenance/unselected-fallback-two-root-cache/consumer-c6-validation.json",
+      "sha256": "ef76f940a32444f95d772ff96feaeb0e0d389ef522ec65c09f642a24d1a9934b",
+      "bytes": 9274
+    },
+    "consumer-c6-postflight.json": {
+      "path": "provenance/unselected-fallback-two-root-cache/consumer-c6-postflight.json",
+      "sha256": "3f3412acbe724cbe830f79525d73a93f6358817ff79da8a7e4d5cbe9b971f000",
+      "bytes": 1552
+    },
+    "consumer-c6-native-validation-contract.json": {
+      "path": "provenance/unselected-fallback-two-root-cache/consumer-c6-native-validation-contract.json",
+      "sha256": "9b79490c80ccecd94f6f26b7d43afcf7013662fc4ba153695f5c1dc6695e63d0",
+      "bytes": 1648
+    },
+    "consumer-c6-owner-proof.json": {
+      "path": "provenance/unselected-fallback-two-root-cache/consumer-c6-owner-proof.json",
+      "sha256": "6b367a2526c92540354af5cf9f8449f7e76944ee91d0c216db09544e8097148d",
+      "bytes": 139969
+    },
+    "consumer-c6-compiled-cohort.json": {
+      "path": "provenance/unselected-fallback-two-root-cache/consumer-c6-compiled-cohort.json",
+      "sha256": "2b2a26eb74cc83d2e7df71087c41d94a8459c6e84d2d3de4097ba377f608116b",
+      "bytes": 8283
+    },
+    "consumer-c6-protected-alias-exclusion.json": {
+      "path": "provenance/unselected-fallback-two-root-cache/consumer-c6-protected-alias-exclusion.json",
+      "sha256": "6dced3ab55a214c4909b1999423b943e0505ae999efd95fdc6179e89f63d35eb",
+      "bytes": 3775
+    },
+    "consumer-c6-existing-owner-proof-validation.json": {
+      "path": "provenance/unselected-fallback-two-root-cache/consumer-c6-existing-owner-proof-validation.json",
+      "sha256": "4269f1f9d60d2a06dac762b687163f83835a935ea4e3329146b61734bf698465",
+      "bytes": 2697
+    }
+  },
+  "consumer_alias_exclusion_scope": {
+    "original_producer_training_root_count": 2,
+    "conservatively_checked_consumer_route_count": 3,
+    "matched_producer_roots": [
+      {
+        "powers": [
+          1,
+          1,
+          2,
+          1,
+          2,
+          1,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "consumer_source_priority": 0
+      },
+      {
+        "powers": [
+          2,
+          2,
+          1,
+          2,
+          2,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1
+        ],
+        "consumer_source_priority": 1
+      }
+    ],
+    "scope": "Actual C6 exclusion of all 3 routed candidates conservatively covers the original 2-root subset; it does not change the producer workload or adopt the ongoing 3-root candidate."
+  },
+  "scope": [
+    "The original 2-root workload, exact preparation report and cache bytes remain unchanged.",
+    "Both raw source roots were outside recorded entry coverage, which remained advisory; native preparation nevertheless completed strictly into declared terminals.",
+    "Actual C6 file import validates all 25088 native records and one cached public case exactly matches its actual uncached value and complete guards.",
+    "No cache selection, final comparison, final performance window, release, current 3-root completion or wider campaign coverage is asserted.",
+    "Archived producer/consumer receipts retain original recorded development paths. Runtime cache loading follows only authenticated loop-relative cache paths."
+  ]
+}

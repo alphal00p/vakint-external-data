@@ -1,0 +1,871 @@
+{
+  "schema": "vakint.root-final-cache-selection-validation.v1",
+  "utc": "2026-10-25T00:51:50.906887+00:00",
+  "status": "ROOT_SELECTION_RECORDED_ACTUAL_FINAL_SELECTION_API_PASSED",
+  "accepted_by": "Codex coordinator (/root)",
+  "selection": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/root-selected-fallback2-cache/root-final-cache-selection.json",
+    "sha256": "828f61d0d6a6960131f7b08d0700f3f88ed2114ea73315d70d1335dc66ba1800"
+  },
+  "actual_main_parser": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-final-integration/crates/vakint/docs/benchmark/merge_five_loop_results.py",
+    "sha256": "5b8da09f82185384007e1c3c5e2fdd5dd62f6827152930d9524fc5a6141147a4"
+  },
+  "evidence_index": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/root-selected-fallback2-cache/selection-evidence-index.json",
+    "sha256": "9022ef91c80aac5df0b4e45000122951f75136680faddce1148b88b42ad532e3"
+  },
+  "actual_final_selection_API_passed": true,
+  "actual_result": {
+    "evidence": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/root-selected-fallback2-cache/root-final-cache-selection.json",
+      "sha256": "828f61d0d6a6960131f7b08d0700f3f88ed2114ea73315d70d1335dc66ba1800"
+    },
+    "raw_receipt": {
+      "schema": "vakint.cache-final-selection.v1",
+      "accepted": true,
+      "accepted_by": "Codex coordinator (/root)",
+      "decided_utc": "2026-10-25T00:51:30.644111+00:00",
+      "recorded_by": "/root/cache_consumer_qualification",
+      "decision": "retain_complete_candidate",
+      "producer_phase": "pilot",
+      "reason": "Retain the original strict-complete two-root pilot artifact with its original producer8ef/build/workload/times. The exact file has accepted native compatibility for actual C6/f022 and fits the <=50 MiB target without any size exception. The separately budgeted three-root final trial stopped on its native time budget with only1/3 roots complete and no final cache candidate. Selection relies only on modest preliminary tuning/intermediate-use evidence and completion/size/compatibility, not established final performance. Final held-out and physical cached-versus-uncached medians remain pending; no performance gain is guaranteed or inferred from these engineering records.",
+      "cache": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/strict-pilot-first2-run2-budget2400/candidate.rrcache.gz",
+        "sha256": "cc5e6d80aacc737b81be1675a8aa02694b9ccaa1e4f31cc2d5a34199e4f1a19d"
+      },
+      "build_report": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/strict-pilot-first2-run2-budget2400/builder-work/build.json",
+        "sha256": "6d12f1329b992c3a46614c61b5fb004897444c705aa41f3559a14ff9d3febea1"
+      },
+      "producer_workload": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/proposed-pilot-workload-first2.json",
+        "sha256": "b5a502290b714bb96dc2979cfb481c66ba1faeddfff0395f003ef165d351bf05"
+      },
+      "consumer_workload": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-fallback2-import/consumer-two-root-workload.json",
+        "sha256": "f022d21736684ed9831619c919250cce79f4eeacb9e9b3245ae3f872cb7f8f60"
+      },
+      "candidate_acceptance": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/strict-pilot-first2-run2-budget2400/accepted-candidate.json",
+        "sha256": "8513bbac970bab938d4c2806f53f0757896b6b6de2b6f1116bad0299ad2f90a5"
+      },
+      "cache_requalification": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/root-accepted-fallback2-native-compatibility/accepted-cache-consumer-bridge.json",
+        "sha256": "daa07861eaf718d289073709bac5c50f5e633832cdccb20ab35cf070d8c9aca9"
+      },
+      "selected_census": {
+        "strict_complete_roots": 2,
+        "records": 25088,
+        "intermediate_records": 25086,
+        "compressed_bytes": 2456235,
+        "decoded_bytes": 16593448,
+        "decoded_sha256": "3426758874cc6acf59ace61dede0a8e189fe3c6c32d8fa0d934eb788e23878a9"
+      },
+      "size_policy": {
+        "target_bytes": 52428800,
+        "within_target": true,
+        "size_exception_used": false
+      },
+      "original_provenance_preserved": {
+        "producer_revision": "8ef03d7fd7557772e1b531b71b71c08e3419ff54",
+        "original_build_phase": "pilot",
+        "source_reports_or_timings_relabelled": false,
+        "candidate_acceptance_state": "STRICT_COMPLETE_CANDIDATE_NOT_FINAL_SELECTION",
+        "cache_rebuilt_for_selection": false
+      },
+      "discarded_trial": {
+        "phase": "final",
+        "terminal_outcome": {
+          "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/final-sparse-three-root-run1/terminal-outcome.json",
+          "sha256": "c025aa100a7c87daabe3dbd56d936a8791b902647efa5949a0a0d06bba7f4933"
+        },
+        "wall_budget_ledger": {
+          "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/phase-wall-budget-ledger-after-final-three-root.json",
+          "sha256": "6c97392984ee2267f1dffad506011f9ecb4ddc38e46a40f4f559c3f4230d8f8c"
+        },
+        "actual_failed_build": {
+          "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/final-sparse-three-root-run1/builder-work/build.json",
+          "sha256": "6e2c56ae7a6dda334b788fcb20de91cb84f514cfadb9ab8753b4dca5f039d7a3"
+        },
+        "actual_native_worker": {
+          "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/final-sparse-three-root-run1/builder-work/worker.json",
+          "sha256": "98c6b51af8bcf7fc0225f65f8bbb6da601b8ddd146b54f29197398d883886b96"
+        },
+        "strict_complete_roots": 1,
+        "requested_roots": 3,
+        "captured_intermediates": 792831,
+        "final_gzip_candidate_exists": false,
+        "whole_attempt_seconds": 32613.349550541956,
+        "status": "TIME_BUDGET_INCOMPLETE_NO_CANDIDATE_ALL_PROCESSES_DRAINED",
+        "promoted_as_complete": false
+      },
+      "preliminary_evidence_scope": {
+        "native_compatibility_validation": {
+          "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/root-accepted-fallback2-native-compatibility/validation.json",
+          "sha256": "cbedb84e8a0bbf2d97caa89abb4f3c2d35cb28ee43deff3af06e253c3c8ed02f"
+        },
+        "existing_strict_import_and_intermediate_use": {
+          "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-fallback2-import/validation.json",
+          "sha256": "ef76f940a32444f95d772ff96feaeb0e0d389ef522ec65c09f642a24d1a9934b"
+        },
+        "performance_qualified": false,
+        "description": "The existing functional cached tune records intermediate reuse; this is not an isolated timing or final held-out speedup result."
+      },
+      "authorization_scope": {
+        "final_cache_selection_only": true,
+        "selected_consumer_compatibility": "actualC6/f022 only",
+        "new_cohort_compatibility": false,
+        "execution_window_accepted": false,
+        "native_jobs_authorized_by_record": false,
+        "performance_accepted": false,
+        "repository_push_authorized_by_record": false,
+        "release_accepted": false
+      }
+    },
+    "cache_requalification": {
+      "evidence": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/root-accepted-fallback2-native-compatibility/accepted-cache-consumer-bridge.json",
+        "sha256": "daa07861eaf718d289073709bac5c50f5e633832cdccb20ab35cf070d8c9aca9"
+      },
+      "raw_receipt": {
+        "schema": "vakint.cache-consumer-requalification.v1",
+        "utc": "2026-10-24T23:37:13.174498+00:00",
+        "accepted": true,
+        "status": "ROOT_ACCEPTED_NATIVE_CACHE_COMPATIBILITY_ONLY",
+        "producer": {
+          "cache": {
+            "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/strict-pilot-first2-run2-budget2400/candidate.rrcache.gz",
+            "sha256": "cc5e6d80aacc737b81be1675a8aa02694b9ccaa1e4f31cc2d5a34199e4f1a19d"
+          },
+          "build_report": {
+            "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/strict-pilot-first2-run2-budget2400/builder-work/build.json",
+            "sha256": "6d12f1329b992c3a46614c61b5fb004897444c705aa41f3559a14ff9d3febea1"
+          },
+          "workload": {
+            "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/proposed-pilot-workload-first2.json",
+            "sha256": "b5a502290b714bb96dc2979cfb481c66ba1faeddfff0395f003ef165d351bf05"
+          },
+          "owner_proof": {
+            "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/prefix-through-19-owner-proof.json",
+            "sha256": "7f4e774fa3583f3fd13417155897d4d4824f462301dbd8679096f5f8434ccca2"
+          },
+          "compiled_cohort": {
+            "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/compiled-cohort.json",
+            "sha256": "a516bb453f8bf8d408afe68e5abf9e9de78198b83ec14ddc9a9653c6270803ef"
+          }
+        },
+        "consumer": {
+          "collector_artifacts": {
+            "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/release-supervision-c6dcc126/five-driver-artifacts.json",
+            "sha256": "473fe5162924e0c12844775028b1636b796bcc6e6b50db83f2f4bf597ed5d736"
+          },
+          "compiled_cohort": {
+            "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/compiled-cohort.json",
+            "sha256": "2b2a26eb74cc83d2e7df71087c41d94a8459c6e84d2d3de4097ba377f608116b"
+          },
+          "qualification_workload": {
+            "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/qualification-workload.json",
+            "sha256": "42fa6a6e95f8759e24886b398a97a76f7375f44e04a5ffa546b424b69c590559"
+          },
+          "final_workload": {
+            "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-fallback2-import/consumer-two-root-workload.json",
+            "sha256": "f022d21736684ed9831619c919250cce79f4eeacb9e9b3245ae3f872cb7f8f60"
+          },
+          "owner_proof": {
+            "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/owner-proof.json",
+            "sha256": "6b367a2526c92540354af5cf9f8449f7e76944ee91d0c216db09544e8097148d"
+          },
+          "protected_union": {
+            "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/protected-raw-owner-union.json",
+            "sha256": "4bc388aa4856b6854a53558e6118e999dced66f4c9e5f6abd8b0f2eb7a837b72"
+          },
+          "training_route_qualification": {
+            "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/training-route/qualification.json",
+            "sha256": "9c90b9c900aa45c9f79ad2ba12a3336d37f21ea5fe4cc49a4cf9ac6ce6d59e36"
+          },
+          "alias_exclusion": {
+            "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/training-route/protected-alias-exclusion.json",
+            "sha256": "6dced3ab55a214c4909b1999423b943e0505ae999efd95fdc6179e89f63d35eb"
+          }
+        },
+        "semantic_binding": {
+          "artifact_digest": [
+            162,
+            68,
+            185,
+            180,
+            206,
+            143,
+            114,
+            40,
+            199,
+            12,
+            133,
+            132,
+            8,
+            135,
+            208,
+            168,
+            201,
+            62,
+            78,
+            199,
+            29,
+            175,
+            102,
+            4,
+            104,
+            117,
+            83,
+            104,
+            97,
+            251,
+            210,
+            115
+          ],
+          "family_fingerprint": "rustred-integral-family-v2;N27:tide_five_loop_common_basis;L5;2:k1;2:k2;2:k3;2:k4;2:k5;E0;P1;1:d;Q5,0,15;M;RY1,1;I+1;X1;Y1,1;I+1;X0;D15;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I+2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;G0;U15;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;",
+          "layer": "saved-application-route-apply-v1",
+          "physical_arity": 15
+        },
+        "immutable_selection": {
+          "source_census_sha256": "dbcccd344356a4f874527dd35786f2ef7247e40bdf59c1c6ed3c7216536e2ac7",
+          "training": [
+            {
+              "id": "quadratic-source-priority-00000",
+              "powers": [
+                1,
+                1,
+                2,
+                1,
+                2,
+                1,
+                1,
+                0,
+                0,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "public_input_source_sha256": null
+            },
+            {
+              "id": "quadratic-source-priority-00001",
+              "powers": [
+                2,
+                2,
+                1,
+                2,
+                2,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                -1
+              ],
+              "public_input_source_sha256": null
+            }
+          ],
+          "tuning": [
+            {
+              "id": "parent-31740-tuning",
+              "powers": [
+                0,
+                -1,
+                0,
+                2,
+                0,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0
+              ],
+              "public_input_source_sha256": "a1ebf718f7dca6f37c2099d6a7e08edc4fa435f378032ff57e14036a18a1ceca"
+            }
+          ],
+          "held_out": [
+            {
+              "id": "parent-32745-dot_a",
+              "powers": [
+                0,
+                0,
+                0,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                1
+              ],
+              "public_input_source_sha256": "cf0a17ef494b6928a9a144d7b122d8c481ed7dcee79545a687e6daa82989e6ca"
+            },
+            {
+              "id": "parent-31740-dot_a",
+              "powers": [
+                0,
+                0,
+                0,
+                2,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0
+              ],
+              "public_input_source_sha256": "b1715fac58771446298dd808db45c834f6201c356fbc8a67bc1758f1935250b1"
+            },
+            {
+              "id": "parent-31740-dot_b",
+              "powers": [
+                0,
+                0,
+                0,
+                1,
+                0,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0
+              ],
+              "public_input_source_sha256": "29291c1679537753cb1174e30ecc0cf056920d8e535b46b9fb54c5e56314c8f9"
+            },
+            {
+              "id": "parent-30699-dot_a",
+              "powers": [
+                0,
+                0,
+                0,
+                0,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                0,
+                1,
+                1
+              ],
+              "public_input_source_sha256": "4032e98a9f8c288f9eac667bc4d5cbd8cea514bebdf835834246587c8a32bfca"
+            },
+            {
+              "id": "parent-30699-dot_b",
+              "powers": [
+                0,
+                0,
+                0,
+                0,
+                1,
+                2,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                0,
+                1,
+                1
+              ],
+              "public_input_source_sha256": "a9318c0366945f78cd76f9a701a7d51ee818f5b181b3018e63d071242bfeb91a"
+            },
+            {
+              "id": "parent-30699-rank1",
+              "powers": [
+                -1,
+                0,
+                1,
+                0,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                0,
+                1,
+                1
+              ],
+              "public_input_source_sha256": "045c88318cee979b5813bc3f0dbf2f4fc5c4fb0cb6998466b5036d1ba8b0aa53"
+            },
+            {
+              "id": "parent-30527-dot_b",
+              "powers": [
+                0,
+                0,
+                0,
+                0,
+                1,
+                2,
+                1,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "public_input_source_sha256": "d080d590075ff290508bed27b4b65b8633dfed6ef2fcbce7c4fc5b354e7dc85f"
+            },
+            {
+              "id": "reserve-v1-parent-32745-dot_c",
+              "powers": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                1
+              ],
+              "public_input_source_sha256": "a847e8c0d7d68a3b8bb2003459f8f8084d454a140d2fb60ebf848b368292b8dd"
+            },
+            {
+              "id": "reserve-v1-parent-31740-dot_c",
+              "powers": [
+                0,
+                0,
+                0,
+                1,
+                0,
+                1,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0
+              ],
+              "public_input_source_sha256": "b0ab9a88d98a4d01d77dcbc06237f20c0e57565a88412b8415412adce2173dee"
+            },
+            {
+              "id": "reserve-v1-parent-30699-dot_c",
+              "powers": [
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                0,
+                1,
+                0,
+                1,
+                1
+              ],
+              "public_input_source_sha256": "c8fc6049a94dc6d23da63639b9287cd11665cba4d06cc8824c16ca376bfd51bb"
+            },
+            {
+              "id": "reserve-v1-parent-30527-dot_c",
+              "powers": [
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                2,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "public_input_source_sha256": "b603f3a871c02881c54829fe90cfc255bb052b9ef7f1451840cfcaae225f528b"
+            },
+            {
+              "id": "reserve-v1-parent-32745-dot_d",
+              "powers": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                1
+              ],
+              "public_input_source_sha256": "ea457473419f8886006d51d93e55841ad549a3f77fd10a07ff5b7e2681d05b46"
+            }
+          ]
+        },
+        "checks": {
+          "canonical_consumer_proof": true,
+          "unchanged_selection": false,
+          "twelve_distinct_held_out_sets": true,
+          "training_raw_and_nonzero_owner_disjoint": true,
+          "cache_import_validated": true
+        },
+        "qualification_projection_evidence": {
+          "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/fallback2-native-compatibility-review/qualification-projection-evidence.json",
+          "sha256": "e71611ea869f110c0f8d17b33d05ceb0263879f5311e150894fe72cef9e039a9"
+        },
+        "consumer_final_workload_role_scope": "Existing schema field names the actually validated f022 compatibility target only; this is not final cache/workload selection.",
+        "final_selection": false,
+        "release_accepted": false,
+        "performance_window_accepted": false,
+        "qualification_projection": {
+          "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/root-accepted-fallback2-native-compatibility/accepted-projection.json",
+          "sha256": "524e49b6ec93c5e42083ceb035cd0512f71863a5a5f06bb6fa742294e245d6e2"
+        },
+        "accepted_by": "Codex coordinator (/root)",
+        "accepted_at": "2026-10-25T00:42:16.099804+00:00",
+        "root_decision": {
+          "accepted_by": "Codex coordinator (/root)",
+          "accepted_at": "2026-10-25T00:42:16.099804+00:00",
+          "recorded_by": "/root/cache_consumer_qualification",
+          "authority": "Explicit Root coordinator decision authorizing native compatibility flags; this recorder does not independently grant acceptance.",
+          "decision": "ACCEPT NATIVE CACHE COMPATIBILITY ONLY for exact original cc5e two-root strict producer8ef/D40 to actual C6 consumer/f022, via independently reviewed original42fa13 projection.",
+          "parser_main_commit": "4220e90ae78f9b44e07ab953d466e90d7ca99cbb",
+          "parser": {
+            "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-final-integration/crates/vakint/docs/benchmark/merge_five_loop_results.py",
+            "sha256": "5b8da09f82185384007e1c3c5e2fdd5dd62f6827152930d9524fc5a6141147a4"
+          },
+          "source_review": {
+            "reviewer": "/root",
+            "reviewed_parser_sha256": "5b8da09f82185384007e1c3c5e2fdd5dd62f6827152930d9524fc5a6141147a4",
+            "passed": true
+          },
+          "synthetic_report_tests": {
+            "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/qualification-projection-tests/result.json",
+            "sha256": "f8e7cb103b829589e73c2424276b9d200a1bc948c01cebee92f017dd729e4298"
+          },
+          "synthetic_controller_tests": {
+            "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/qualification-projection-report/controller66-validation.json",
+            "sha256": "d6149d30cefe2ce4ddfb92d3a302f31fa9e37bd57f57b2a2ce85d9dd885c3bc8"
+          },
+          "prospective_actual_validation": {
+            "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/qualification-projection-report/prospective-actual/validation.json",
+            "sha256": "aaa3b0059f377008f214279c8ce42ec93f4a27457e167fddbaad8b700759f97f"
+          },
+          "independent_scientific_review": {
+            "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/fallback2-native-compatibility-review/independent-semantic-projection-review.json",
+            "sha256": "230293890c12397687281dcbd13b623341b988eb7a0b249ade51f694c9a718f3"
+          },
+          "independent_validator_scope": {
+            "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/fallback2-native-compatibility-review/independent-validator-scope-addendum.json",
+            "sha256": "6a1a26ede84d070f41f2082528db1988cc37c66430b0a2b1039dc37be9cb965c"
+          },
+          "exclusions": [
+            "No complete fresh f022 thirteen-case qualification",
+            "No compatibility for a newer or uncompiled consumer cohort",
+            "No final cache or workload selection",
+            "No timing transfer, performance acceptance or serialized performance window",
+            "No published-release acceptance"
+          ]
+        },
+        "scope": {
+          "native_compatibility_only": true,
+          "fresh_target_suite_pass": false,
+          "new_cohort_compatibility": false,
+          "final_selection": false,
+          "cache_selected": false,
+          "timing_or_performance_accepted": false,
+          "performance_window_accepted": false,
+          "release_accepted": false,
+          "native_calls_performed_by_recorder": false
+        },
+        "native_compatibility_acceptance": {
+          "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/root-accepted-fallback2-native-compatibility/accepted-native-compatibility.json",
+          "sha256": "0038f97ed13d33e3d6c49f2f677557f5e6cc10ea096a51187b380c9a998bccf2"
+        },
+        "original_unsigned_draft": {
+          "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/fallback2-native-compatibility-review/UNSIGNED-controller-bridge.json",
+          "sha256": "b9c525e0b37ae151fd7cb9198f1940818ecf8ef7893696b568489b2094f5b091"
+        }
+      },
+      "qualification_projection": {
+        "evidence": {
+          "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/root-accepted-fallback2-native-compatibility/accepted-projection.json",
+          "sha256": "524e49b6ec93c5e42083ceb035cd0512f71863a5a5f06bb6fa742294e245d6e2"
+        },
+        "raw_relation": {
+          "schema": "vakint.qualification-workload-projection.v1",
+          "relation": "unexecuted-training-prefix-pruning",
+          "status": "ROOT_ACCEPTED_NATIVE_COMPATIBILITY_PROJECTION_ONLY",
+          "accepted": true,
+          "evidence": {
+            "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/fallback2-native-compatibility-review/qualification-projection-evidence.json",
+            "sha256": "e71611ea869f110c0f8d17b33d05ceb0263879f5311e150894fe72cef9e039a9"
+          },
+          "independent_review": {
+            "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/fallback2-native-compatibility-review/independent-semantic-projection-review.json",
+            "sha256": "230293890c12397687281dcbd13b623341b988eb7a0b249ade51f694c9a718f3"
+          },
+          "validator_scope": {
+            "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/fallback2-native-compatibility-review/independent-validator-scope-addendum.json",
+            "sha256": "6a1a26ede84d070f41f2082528db1988cc37c66430b0a2b1039dc37be9cb965c"
+          },
+          "incomplete_attempt": {
+            "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/f022-public-requalification-run1/incomplete-postflight.json",
+            "sha256": "8186d23ca717a04eaa5809a742710716aa00cbf923c17650cde0ebf2753a652f"
+          },
+          "accepted_by": "Codex coordinator (/root)",
+          "accepted_at": "2026-10-25T00:42:16.099804+00:00",
+          "root_decision": {
+            "accepted_by": "Codex coordinator (/root)",
+            "accepted_at": "2026-10-25T00:42:16.099804+00:00",
+            "recorded_by": "/root/cache_consumer_qualification",
+            "authority": "Explicit Root coordinator decision authorizing native compatibility flags; this recorder does not independently grant acceptance.",
+            "decision": "ACCEPT NATIVE CACHE COMPATIBILITY ONLY for exact original cc5e two-root strict producer8ef/D40 to actual C6 consumer/f022, via independently reviewed original42fa13 projection.",
+            "parser_main_commit": "4220e90ae78f9b44e07ab953d466e90d7ca99cbb",
+            "parser": {
+              "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-final-integration/crates/vakint/docs/benchmark/merge_five_loop_results.py",
+              "sha256": "5b8da09f82185384007e1c3c5e2fdd5dd62f6827152930d9524fc5a6141147a4"
+            },
+            "source_review": {
+              "reviewer": "/root",
+              "reviewed_parser_sha256": "5b8da09f82185384007e1c3c5e2fdd5dd62f6827152930d9524fc5a6141147a4",
+              "passed": true
+            },
+            "synthetic_report_tests": {
+              "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/qualification-projection-tests/result.json",
+              "sha256": "f8e7cb103b829589e73c2424276b9d200a1bc948c01cebee92f017dd729e4298"
+            },
+            "synthetic_controller_tests": {
+              "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/qualification-projection-report/controller66-validation.json",
+              "sha256": "d6149d30cefe2ce4ddfb92d3a302f31fa9e37bd57f57b2a2ce85d9dd885c3bc8"
+            },
+            "prospective_actual_validation": {
+              "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/qualification-projection-report/prospective-actual/validation.json",
+              "sha256": "aaa3b0059f377008f214279c8ce42ec93f4a27457e167fddbaad8b700759f97f"
+            },
+            "independent_scientific_review": {
+              "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/fallback2-native-compatibility-review/independent-semantic-projection-review.json",
+              "sha256": "230293890c12397687281dcbd13b623341b988eb7a0b249ade51f694c9a718f3"
+            },
+            "independent_validator_scope": {
+              "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/fallback2-native-compatibility-review/independent-validator-scope-addendum.json",
+              "sha256": "6a1a26ede84d070f41f2082528db1988cc37c66430b0a2b1039dc37be9cb965c"
+            },
+            "exclusions": [
+              "No complete fresh f022 thirteen-case qualification",
+              "No compatibility for a newer or uncompiled consumer cohort",
+              "No final cache or workload selection",
+              "No timing transfer, performance acceptance or serialized performance window",
+              "No published-release acceptance"
+            ]
+          },
+          "scope": {
+            "native_compatibility_only": true,
+            "fresh_target_suite_pass": false,
+            "new_cohort_compatibility": false,
+            "final_selection": false,
+            "cache_selected": false,
+            "timing_or_performance_accepted": false,
+            "performance_window_accepted": false,
+            "release_accepted": false,
+            "native_calls_performed_by_recorder": false
+          }
+        },
+        "scope": "Native compatibility only; original13 source identities retained, no fresh target-suite or timing claim."
+      }
+    }
+  },
+  "old_candidate_acceptance_still_unmodified_state": "STRICT_COMPLETE_CANDIDATE_NOT_FINAL_SELECTION",
+  "original_cache_build_producer_phase_and_times_unchanged": true,
+  "referenced_sha256_rechecked": {
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-final-integration/crates/vakint/docs/benchmark/merge_five_loop_results.py": "5b8da09f82185384007e1c3c5e2fdd5dd62f6827152930d9524fc5a6141147a4",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/root-accepted-fallback2-native-compatibility/accepted-cache-consumer-bridge.json": "daa07861eaf718d289073709bac5c50f5e633832cdccb20ab35cf070d8c9aca9",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/strict-pilot-first2-run2-budget2400/accepted-candidate.json": "8513bbac970bab938d4c2806f53f0757896b6b6de2b6f1116bad0299ad2f90a5",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/strict-pilot-first2-run2-budget2400/builder-work/build.json": "6d12f1329b992c3a46614c61b5fb004897444c705aa41f3559a14ff9d3febea1",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/strict-pilot-first2-run2-budget2400/candidate.rrcache.gz": "cc5e6d80aacc737b81be1675a8aa02694b9ccaa1e4f31cc2d5a34199e4f1a19d",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/proposed-pilot-workload-first2.json": "b5a502290b714bb96dc2979cfb481c66ba1faeddfff0395f003ef165d351bf05",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-fallback2-import/consumer-two-root-workload.json": "f022d21736684ed9831619c919250cce79f4eeacb9e9b3245ae3f872cb7f8f60",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/final-sparse-three-root-run1/terminal-outcome.json": "c025aa100a7c87daabe3dbd56d936a8791b902647efa5949a0a0d06bba7f4933",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/phase-wall-budget-ledger-after-final-three-root.json": "6c97392984ee2267f1dffad506011f9ecb4ddc38e46a40f4f559c3f4230d8f8c",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/final-sparse-three-root-run1/builder-work/build.json": "6e2c56ae7a6dda334b788fcb20de91cb84f514cfadb9ab8753b4dca5f039d7a3",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/root-accepted-fallback2-native-compatibility/validation.json": "cbedb84e8a0bbf2d97caa89abb4f3c2d35cb28ee43deff3af06e253c3c8ed02f",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/fallback2-native-compatibility-review/independent-semantic-projection-review.json": "230293890c12397687281dcbd13b623341b988eb7a0b249ade51f694c9a718f3",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/fallback2-native-compatibility-review/independent-projection-file-review.json": "4d043109557899323965c6c5c2f76ac89484b55d0c9dafc75d39a0ace6189d80",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/fallback2-native-compatibility-review/FINAL-UNSIGNED-packet.json": "da46ab7a30a2a31932f4d99211edfa60afaf64cfd2903d1043cdcab154625c7d",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/fallback2-native-compatibility-review/UNSIGNED-native-compatibility.json": "8971c2fc47562b596ad3adf69935ab319f8602d81ea03ae89f548bd034c473b3",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/fallback2-native-compatibility-review/qualification-projection-evidence.json": "e71611ea869f110c0f8d17b33d05ceb0263879f5311e150894fe72cef9e039a9",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/fallback2-native-compatibility-review/INCOMPLETE-f022-attempt-supplement.json": "a99df18d3d4522c074c32363cab375090b8fcbb65a48869c79e824312fc93af1",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/f022-public-requalification-run1/incomplete-postflight.json": "8186d23ca717a04eaa5809a742710716aa00cbf923c17650cde0ebf2753a652f",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/qualification-workload.json": "42fa6a6e95f8759e24886b398a97a76f7375f44e04a5ffa546b424b69c590559",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/owner-proof.json": "6b367a2526c92540354af5cf9f8449f7e76944ee91d0c216db09544e8097148d",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/compiled-cohort.json": "2b2a26eb74cc83d2e7df71087c41d94a8459c6e84d2d3de4097ba377f608116b",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/protected-raw-owner-union.json": "4bc388aa4856b6854a53558e6118e999dced66f4c9e5f6abd8b0f2eb7a837b72",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/training-route/qualification.json": "9c90b9c900aa45c9f79ad2ba12a3336d37f21ea5fe4cc49a4cf9ac6ce6d59e36",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/training-route/protected-alias-exclusion.json": "6dced3ab55a214c4909b1999423b943e0505ae999efd95fdc6179e89f63d35eb",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/00-parent-31740-tuning/case-000-00-uncached/measurement.json": "e9c16120c94af7bffe1a8c55b573babeaa0fb38f4d5b8abc9ccc7aac1b7fac1f",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/cases/00-parent-31740-tuning/case-000-00-uncached/measurement.json": "25f5e45d855396487bb8e92efd4f2abdcf6f80bfb2be265e971f4438217ac0eb",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/00-parent-31740-tuning/case-000-00-uncached/value.symbolica": "a0f756efb5ac9d55002c6d714500490bfd75a72f70dec7efc1e619a319954ad9",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/cases/00-parent-31740-tuning/case-000-00-uncached/value.symbolica": "a0f756efb5ac9d55002c6d714500490bfd75a72f70dec7efc1e619a319954ad9",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/00-parent-31740-tuning/case-000-00-uncached/guards.json": "3e9fecdf5d24d9c0a7d6ff7df99f81d94657ea720a06d00f24eae69715e53f19",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/cases/00-parent-31740-tuning/case-000-00-uncached/guards.json": "3e9fecdf5d24d9c0a7d6ff7df99f81d94657ea720a06d00f24eae69715e53f19",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/00-parent-31740-tuning/case-000-00-uncached/unknown-masters.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/01-parent-32745-dot_a/case-000-00-uncached/measurement.json": "546002a2710f79ffad5d9d61b8e7cb4065654c33ee1623e527b1f1519a27e4f5",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/cases/03-parent-32745-dot_a/case-000-00-uncached/measurement.json": "dd98e4c5f5627e66742b8eed4fb5d5bc7c03adcd476910343614458e2e9e28df",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/01-parent-32745-dot_a/case-000-00-uncached/value.symbolica": "47120a748d72ad7fdeb8f7cb005ea654a9ff2ad09542f1b0dde89be2227e9b46",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/cases/03-parent-32745-dot_a/case-000-00-uncached/value.symbolica": "47120a748d72ad7fdeb8f7cb005ea654a9ff2ad09542f1b0dde89be2227e9b46",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/01-parent-32745-dot_a/case-000-00-uncached/guards.json": "8ca032c5e396d819aaddb3281fd12b37d9f3f18c78373b84c6066db50fb5f805",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/cases/03-parent-32745-dot_a/case-000-00-uncached/guards.json": "8ca032c5e396d819aaddb3281fd12b37d9f3f18c78373b84c6066db50fb5f805",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/01-parent-32745-dot_a/case-000-00-uncached/unknown-masters.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/02-parent-31740-dot_a/case-000-00-uncached/measurement.json": "3c1efe580308e83bcf05e8c53f4a481e0aea30f701b05453c0a64dfdc7b533f9",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/cases/06-parent-31740-dot_a/case-000-00-uncached/measurement.json": "c4895ac0eca2b24a4995ca98b8b3412ea401e636d96b2ba994889e21441ae510",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/02-parent-31740-dot_a/case-000-00-uncached/value.symbolica": "587b0c834c5120cb18ff67798b01f5f502bb5c214d7dd79d8aa03e02382c6204",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/cases/06-parent-31740-dot_a/case-000-00-uncached/value.symbolica": "587b0c834c5120cb18ff67798b01f5f502bb5c214d7dd79d8aa03e02382c6204",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/02-parent-31740-dot_a/case-000-00-uncached/guards.json": "345f98e59f4fdfef70fd75abe32ffdf471fbc50f43475e43f1e2b7b7013eff95",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/cases/06-parent-31740-dot_a/case-000-00-uncached/guards.json": "345f98e59f4fdfef70fd75abe32ffdf471fbc50f43475e43f1e2b7b7013eff95",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/02-parent-31740-dot_a/case-000-00-uncached/unknown-masters.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/03-parent-31740-dot_b/case-000-00-uncached/measurement.json": "57a7ed74774cf9d70567e91ac44db944c5bea0cce8b3e6f8669eb94fc20bfb53",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/cases/07-parent-31740-dot_b/case-000-00-uncached/measurement.json": "4e1aca7b552c646b87d0f6a216fe3b4b20498d225067d2845cbd65bd7e051002",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/03-parent-31740-dot_b/case-000-00-uncached/value.symbolica": "90939140b09d336adf435f929bb8939a798a7e8d10b07a5366cd30abb63bf244",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/cases/07-parent-31740-dot_b/case-000-00-uncached/value.symbolica": "90939140b09d336adf435f929bb8939a798a7e8d10b07a5366cd30abb63bf244",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/03-parent-31740-dot_b/case-000-00-uncached/guards.json": "a6a8df45d44f5a39dba3697d256e11242a30ecc2c0abb42bd3082e6b287c94ba",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/cases/07-parent-31740-dot_b/case-000-00-uncached/guards.json": "a6a8df45d44f5a39dba3697d256e11242a30ecc2c0abb42bd3082e6b287c94ba",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/03-parent-31740-dot_b/case-000-00-uncached/unknown-masters.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/04-parent-30699-dot_a/case-000-00-uncached/measurement.json": "c27fd4142007b5af9c2ac3a2ce0743c223b221aad98219e866be58b932be942b",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/cases/09-parent-30699-dot_a/case-000-00-uncached/measurement.json": "70b40262074ddfa6b3ffe1b3be50e87ddf9d5d9d30b247442e581c366834ca74",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/04-parent-30699-dot_a/case-000-00-uncached/value.symbolica": "5daea500fc17a7c00310d41ce16e3184a9e0c4b0063732ab0a277fab04ce0248",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/cases/09-parent-30699-dot_a/case-000-00-uncached/value.symbolica": "5daea500fc17a7c00310d41ce16e3184a9e0c4b0063732ab0a277fab04ce0248",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/04-parent-30699-dot_a/case-000-00-uncached/guards.json": "7f02f8a832b989a5d4039f8fdf52f13c02bbc4c677dbf1969ca5578e514fa69c",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/cases/09-parent-30699-dot_a/case-000-00-uncached/guards.json": "7f02f8a832b989a5d4039f8fdf52f13c02bbc4c677dbf1969ca5578e514fa69c",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/04-parent-30699-dot_a/case-000-00-uncached/unknown-masters.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/05-parent-30699-dot_b/case-000-00-uncached/measurement.json": "8f55630f02748502b512704071f3fdc19bbb14060f15d6c16ada1c3f1775c23e",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/cases/10-parent-30699-dot_b/case-000-00-uncached/measurement.json": "90aa434fa8fa8fe79a80b802ea8a246cec96be6d6c620ba36f1ef79614ed3d5e",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/05-parent-30699-dot_b/case-000-00-uncached/value.symbolica": "97c3423cd01b677ddbbe214b368f12d41e28f525374c6f1cf3d264ded6ffe042",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/cases/10-parent-30699-dot_b/case-000-00-uncached/value.symbolica": "97c3423cd01b677ddbbe214b368f12d41e28f525374c6f1cf3d264ded6ffe042",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/05-parent-30699-dot_b/case-000-00-uncached/guards.json": "7f02f8a832b989a5d4039f8fdf52f13c02bbc4c677dbf1969ca5578e514fa69c",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/cases/10-parent-30699-dot_b/case-000-00-uncached/guards.json": "7f02f8a832b989a5d4039f8fdf52f13c02bbc4c677dbf1969ca5578e514fa69c",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/05-parent-30699-dot_b/case-000-00-uncached/unknown-masters.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/06-parent-30699-rank1/case-000-00-uncached/measurement.json": "74003c09ec3e561bc4e2f8425b8746286b9cd59a4df0df04b027fcc6b4b92253",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/cases/11-parent-30699-rank1/case-000-00-uncached/measurement.json": "47c05a643cecb67d890628df03444eb9b88e3b0441043f40bbe9b897fb7ac4a1",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/06-parent-30699-rank1/case-000-00-uncached/value.symbolica": "f424f3401da9f2e93ef71fda04e1cec618ee9c9150cbd4e4f8ac495357bcc355",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/cases/11-parent-30699-rank1/case-000-00-uncached/value.symbolica": "f424f3401da9f2e93ef71fda04e1cec618ee9c9150cbd4e4f8ac495357bcc355",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/06-parent-30699-rank1/case-000-00-uncached/guards.json": "b3320098c2adab4e474874a76a729534eeec1158be883b8278eb30fb004a4ae1",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/cases/11-parent-30699-rank1/case-000-00-uncached/guards.json": "b3320098c2adab4e474874a76a729534eeec1158be883b8278eb30fb004a4ae1",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/06-parent-30699-rank1/case-000-00-uncached/unknown-masters.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/07-parent-30527-dot_b/case-000-00-uncached/measurement.json": "b10dc392e833a03208ac1c87d331a751b63a9e57b4de56bcb78302f377d19d3e",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/cases/13-parent-30527-dot_b/case-000-00-uncached/measurement.json": "5e3984e29d8a7b634ad52c8db9aec8226395272dae319ba22d5938b735faf0ca",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/07-parent-30527-dot_b/case-000-00-uncached/value.symbolica": "3548d830986757956749420c3b8c4ebc0599dfaf0606e72a58fb9dd5e9bc6f27",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/cases/13-parent-30527-dot_b/case-000-00-uncached/value.symbolica": "3548d830986757956749420c3b8c4ebc0599dfaf0606e72a58fb9dd5e9bc6f27",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/07-parent-30527-dot_b/case-000-00-uncached/guards.json": "7f02f8a832b989a5d4039f8fdf52f13c02bbc4c677dbf1969ca5578e514fa69c",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/cases/13-parent-30527-dot_b/case-000-00-uncached/guards.json": "7f02f8a832b989a5d4039f8fdf52f13c02bbc4c677dbf1969ca5578e514fa69c",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/07-parent-30527-dot_b/case-000-00-uncached/unknown-masters.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/08-reserve-v1-parent-32745-dot_c/case-000-00-uncached/measurement.json": "218b19e56b6f5e7b53b42991ad81f365f7e8ec09dda8079886632ef5d1e13b94",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/cases/15-reserve-v1-parent-32745-dot_c/case-000-00-uncached/measurement.json": "a25d01e48558a05ca518337bb0926f6a8743cedc0b24e8acc1e02e24ab4c9b7a",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/08-reserve-v1-parent-32745-dot_c/case-000-00-uncached/value.symbolica": "01d5087da593eed42da7829b96ae0ce93969205d46a8c7f0d57695282d9c175e",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/cases/15-reserve-v1-parent-32745-dot_c/case-000-00-uncached/value.symbolica": "01d5087da593eed42da7829b96ae0ce93969205d46a8c7f0d57695282d9c175e",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/08-reserve-v1-parent-32745-dot_c/case-000-00-uncached/guards.json": "6414e9827b84098d933cb37dd834dbf24820dcfdbdcfc74a55d48fab1887eb57",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/cases/15-reserve-v1-parent-32745-dot_c/case-000-00-uncached/guards.json": "6414e9827b84098d933cb37dd834dbf24820dcfdbdcfc74a55d48fab1887eb57",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/08-reserve-v1-parent-32745-dot_c/case-000-00-uncached/unknown-masters.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/09-reserve-v1-parent-31740-dot_c/case-000-00-uncached/measurement.json": "d8ab1bd0626da356aaeecaa5d4e224d202252c5521dc57ba3adce1c9cffafa66",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/cases/16-reserve-v1-parent-31740-dot_c/case-000-00-uncached/measurement.json": "7c2a3dd5a9ec71aa3a225a86c062122b39e4134df8637ee19cd55c76349e8620",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/09-reserve-v1-parent-31740-dot_c/case-000-00-uncached/value.symbolica": "90939140b09d336adf435f929bb8939a798a7e8d10b07a5366cd30abb63bf244",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/cases/16-reserve-v1-parent-31740-dot_c/case-000-00-uncached/value.symbolica": "90939140b09d336adf435f929bb8939a798a7e8d10b07a5366cd30abb63bf244",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/09-reserve-v1-parent-31740-dot_c/case-000-00-uncached/guards.json": "9f4c8254f0fa7e9e713e7d986bb690781ecf21f13b4f024fea7ee98424a10ece",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/cases/16-reserve-v1-parent-31740-dot_c/case-000-00-uncached/guards.json": "9f4c8254f0fa7e9e713e7d986bb690781ecf21f13b4f024fea7ee98424a10ece",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/09-reserve-v1-parent-31740-dot_c/case-000-00-uncached/unknown-masters.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/10-reserve-v1-parent-30699-dot_c/case-000-00-uncached/measurement.json": "b2d696ab7d451a7b186b3863a945b3bd65fe1b614aad892c6286389611d719fe",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/cases/17-reserve-v1-parent-30699-dot_c/case-000-00-uncached/measurement.json": "0a1c2844a1c18417d829ab0c655be0505128a0c5ae8cf9ef145586787f72c1e3",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/10-reserve-v1-parent-30699-dot_c/case-000-00-uncached/value.symbolica": "d3eea5bd79b26d1e37bb4ba66540d82dfbdcafaff76339223492467f892c5e14",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/cases/17-reserve-v1-parent-30699-dot_c/case-000-00-uncached/value.symbolica": "d3eea5bd79b26d1e37bb4ba66540d82dfbdcafaff76339223492467f892c5e14",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/10-reserve-v1-parent-30699-dot_c/case-000-00-uncached/guards.json": "7f02f8a832b989a5d4039f8fdf52f13c02bbc4c677dbf1969ca5578e514fa69c",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/cases/17-reserve-v1-parent-30699-dot_c/case-000-00-uncached/guards.json": "7f02f8a832b989a5d4039f8fdf52f13c02bbc4c677dbf1969ca5578e514fa69c",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/10-reserve-v1-parent-30699-dot_c/case-000-00-uncached/unknown-masters.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/11-reserve-v1-parent-30527-dot_c/case-000-00-uncached/measurement.json": "e6e82279cae74db4586f42d6c00f5b00f889d8ffe38b84c4186a0160c41544d4",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/cases/18-reserve-v1-parent-30527-dot_c/case-000-00-uncached/measurement.json": "db982dd30b13f5ee066b5a646fb33af1e9a8be388e8e2b2cf6e9a0df577c1a6e",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/11-reserve-v1-parent-30527-dot_c/case-000-00-uncached/value.symbolica": "b56d1f7d02bedbb39bfce5863ef4df484c553802cd8a4b72e0a52a52ae12e318",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/cases/18-reserve-v1-parent-30527-dot_c/case-000-00-uncached/value.symbolica": "b56d1f7d02bedbb39bfce5863ef4df484c553802cd8a4b72e0a52a52ae12e318",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/11-reserve-v1-parent-30527-dot_c/case-000-00-uncached/guards.json": "7f02f8a832b989a5d4039f8fdf52f13c02bbc4c677dbf1969ca5578e514fa69c",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/cases/18-reserve-v1-parent-30527-dot_c/case-000-00-uncached/guards.json": "7f02f8a832b989a5d4039f8fdf52f13c02bbc4c677dbf1969ca5578e514fa69c",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/11-reserve-v1-parent-30527-dot_c/case-000-00-uncached/unknown-masters.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/12-reserve-v1-parent-32745-dot_d/case-000-00-uncached/measurement.json": "903054fa51f55d429e4d3efee8c4d1674e5ebdfa32849c3c202d7c44c3cf2abb",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/cases/19-reserve-v1-parent-32745-dot_d/case-000-00-uncached/measurement.json": "3b4cca3eb8ca83b8c2618a0008eb70ae1bb2ca2a37d218445552eb6391478ab6",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/12-reserve-v1-parent-32745-dot_d/case-000-00-uncached/value.symbolica": "9cd76ae667c827a838e930051332ef95bb9ce49a0e8266e63a5b8127df6e9996",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/cases/19-reserve-v1-parent-32745-dot_d/case-000-00-uncached/value.symbolica": "9cd76ae667c827a838e930051332ef95bb9ce49a0e8266e63a5b8127df6e9996",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/12-reserve-v1-parent-32745-dot_d/case-000-00-uncached/guards.json": "9bd4f92eb24243e94ba0d4f8d03eacbb41e0d921895fdf2fa8aea885bb337d82",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/cases/19-reserve-v1-parent-32745-dot_d/case-000-00-uncached/guards.json": "9bd4f92eb24243e94ba0d4f8d03eacbb41e0d921895fdf2fa8aea885bb337d82",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/cases/12-reserve-v1-parent-32745-dot_d/case-000-00-uncached/unknown-masters.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-fallback2-import/two-root-workload-validation.json": "6c207ba7aa9d85ee07b7e30f317f8cd5ed3fc49854a0c8c50847417113f8c7e0",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-fallback2-import/validation.json": "ef76f940a32444f95d772ff96feaeb0e0d389ef522ec65c09f642a24d1a9934b",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-fallback2-import/cached-case/worker.json": "69e16a69c65e85336b9d8690ea306a6c152d9b95928e6dfa68fcb58f704c8486",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/qualification-projection-report/prospective-actual/validation.json": "aaa3b0059f377008f214279c8ce42ec93f4a27457e167fddbaad8b700759f97f",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-qualification-projection-report/crates/vakint/docs/benchmark/merge_five_loop_results.py": "5b8da09f82185384007e1c3c5e2fdd5dd62f6827152930d9524fc5a6141147a4",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-qualification-projection-report/crates/vakint/docs/benchmark/data/results.json": "3b4596097e24d13c41ec23fb697efb98b79b3170c54f7a0a67bf1203464ddbbb",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-qualification-projection-report/crates/vakint/docs/benchmark/benchmark.pdf": "bfff568e3c746acd9a2056ff9abd2a139b69137f8e9b5c5e37f3c0a844bea67f",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/fallback2-native-compatibility-review/UNSIGNED-controller-bridge.json": "b9c525e0b37ae151fd7cb9198f1940818ecf8ef7893696b568489b2094f5b091",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/fallback2-native-compatibility-review/independent-validator-scope-addendum.json": "6a1a26ede84d070f41f2082528db1988cc37c66430b0a2b1039dc37be9cb965c",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/prefix-through-19-owner-proof.json": "7f4e774fa3583f3fd13417155897d4d4824f462301dbd8679096f5f8434ccca2",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/qualification-projection-tests/result.json": "f8e7cb103b829589e73c2424276b9d200a1bc948c01cebee92f017dd729e4298",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/qualification-projection-report/controller66-validation.json": "d6149d30cefe2ce4ddfb92d3a302f31fa9e37bd57f57b2a2ce85d9dd885c3bc8",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/root-accepted-fallback2-native-compatibility/accepted-projection.json": "524e49b6ec93c5e42083ceb035cd0512f71863a5a5f06bb6fa742294e245d6e2",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/root-accepted-fallback2-native-compatibility/accepted-native-compatibility.json": "0038f97ed13d33e3d6c49f2f677557f5e6cc10ea096a51187b380c9a998bccf2",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/root-accepted-fallback2-native-compatibility/accepted-evidence-index.json": "d381e617ec0bc5011d418e23dcd8786ce056c25d395046d7326c6e37e228b376",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/root-accepted-fallback2-native-compatibility/original-unsigned-evidence-index.json": "f1c511a9dd020f994110a78cd2da52cbd958fd45afc0b068e00c8a2689fc616c",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/qualification-projection-report/prospective-actual/UNSIGNED-bridge-prospective.json": "84a43f59f7d784a2da1c51e94ce393d032ce86644c91c9084748af2ec1eba8ce",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/root-accepted-fallback2-native-compatibility/prospective-unsigned-evidence-index.json": "1f3b8fe7506de145ec8632ee3e49e2d5ec56875cb174304947f8d697b7dfb5c8",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/root-selected-fallback2-cache/root-final-cache-selection.json": "828f61d0d6a6960131f7b08d0700f3f88ed2114ea73315d70d1335dc66ba1800",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/root-selected-fallback2-cache/selection-evidence-index.json": "9022ef91c80aac5df0b4e45000122951f75136680faddce1148b88b42ad532e3"
+  },
+  "full_payloads_unchanged": true,
+  "canonical_data_mutated": false,
+  "controller_GO_or_config_modified": false,
+  "native_calls_builds_pushes_or_release_actions": false
+}

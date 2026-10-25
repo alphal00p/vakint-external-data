@@ -1,0 +1,79 @@
+{
+  "schema": "vakint.qualification-workload-projection.v1",
+  "relation": "unexecuted-training-prefix-pruning",
+  "status": "ROOT_ACCEPTED_NATIVE_COMPATIBILITY_PROJECTION_ONLY",
+  "accepted": true,
+  "evidence": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/fallback2-native-compatibility-review/qualification-projection-evidence.json",
+    "sha256": "e71611ea869f110c0f8d17b33d05ceb0263879f5311e150894fe72cef9e039a9"
+  },
+  "independent_review": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/fallback2-native-compatibility-review/independent-semantic-projection-review.json",
+    "sha256": "230293890c12397687281dcbd13b623341b988eb7a0b249ade51f694c9a718f3"
+  },
+  "validator_scope": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/fallback2-native-compatibility-review/independent-validator-scope-addendum.json",
+    "sha256": "6a1a26ede84d070f41f2082528db1988cc37c66430b0a2b1039dc37be9cb965c"
+  },
+  "incomplete_attempt": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/f022-public-requalification-run1/incomplete-postflight.json",
+    "sha256": "8186d23ca717a04eaa5809a742710716aa00cbf923c17650cde0ebf2753a652f"
+  },
+  "accepted_by": "Codex coordinator (/root)",
+  "accepted_at": "2026-10-25T00:42:16.099804+00:00",
+  "root_decision": {
+    "accepted_by": "Codex coordinator (/root)",
+    "accepted_at": "2026-10-25T00:42:16.099804+00:00",
+    "recorded_by": "/root/cache_consumer_qualification",
+    "authority": "Explicit Root coordinator decision authorizing native compatibility flags; this recorder does not independently grant acceptance.",
+    "decision": "ACCEPT NATIVE CACHE COMPATIBILITY ONLY for exact original cc5e two-root strict producer8ef/D40 to actual C6 consumer/f022, via independently reviewed original42fa13 projection.",
+    "parser_main_commit": "4220e90ae78f9b44e07ab953d466e90d7ca99cbb",
+    "parser": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-final-integration/crates/vakint/docs/benchmark/merge_five_loop_results.py",
+      "sha256": "5b8da09f82185384007e1c3c5e2fdd5dd62f6827152930d9524fc5a6141147a4"
+    },
+    "source_review": {
+      "reviewer": "/root",
+      "reviewed_parser_sha256": "5b8da09f82185384007e1c3c5e2fdd5dd62f6827152930d9524fc5a6141147a4",
+      "passed": true
+    },
+    "synthetic_report_tests": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/qualification-projection-tests/result.json",
+      "sha256": "f8e7cb103b829589e73c2424276b9d200a1bc948c01cebee92f017dd729e4298"
+    },
+    "synthetic_controller_tests": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/qualification-projection-report/controller66-validation.json",
+      "sha256": "d6149d30cefe2ce4ddfb92d3a302f31fa9e37bd57f57b2a2ce85d9dd885c3bc8"
+    },
+    "prospective_actual_validation": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/qualification-projection-report/prospective-actual/validation.json",
+      "sha256": "aaa3b0059f377008f214279c8ce42ec93f4a27457e167fddbaad8b700759f97f"
+    },
+    "independent_scientific_review": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/fallback2-native-compatibility-review/independent-semantic-projection-review.json",
+      "sha256": "230293890c12397687281dcbd13b623341b988eb7a0b249ade51f694c9a718f3"
+    },
+    "independent_validator_scope": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/fallback2-native-compatibility-review/independent-validator-scope-addendum.json",
+      "sha256": "6a1a26ede84d070f41f2082528db1988cc37c66430b0a2b1039dc37be9cb965c"
+    },
+    "exclusions": [
+      "No complete fresh f022 thirteen-case qualification",
+      "No compatibility for a newer or uncompiled consumer cohort",
+      "No final cache or workload selection",
+      "No timing transfer, performance acceptance or serialized performance window",
+      "No published-release acceptance"
+    ]
+  },
+  "scope": {
+    "native_compatibility_only": true,
+    "fresh_target_suite_pass": false,
+    "new_cohort_compatibility": false,
+    "final_selection": false,
+    "cache_selected": false,
+    "timing_or_performance_accepted": false,
+    "performance_window_accepted": false,
+    "release_accepted": false,
+    "native_calls_performed_by_recorder": false
+  }
+}

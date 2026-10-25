@@ -1,0 +1,32 @@
+{
+  "schema": "vakint.root-native-cache-compatibility-handoff.v1",
+  "accepted_by": "Codex coordinator (/root)",
+  "accepted_at": "2026-10-25T00:42:16.099804+00:00",
+  "accepted_native_compatibility": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/root-accepted-fallback2-native-compatibility/accepted-native-compatibility.json",
+    "sha256": "0038f97ed13d33e3d6c49f2f677557f5e6cc10ea096a51187b380c9a998bccf2"
+  },
+  "accepted_bridge": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/root-accepted-fallback2-native-compatibility/accepted-cache-consumer-bridge.json",
+    "sha256": "daa07861eaf718d289073709bac5c50f5e633832cdccb20ab35cf070d8c9aca9"
+  },
+  "accepted_projection": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/root-accepted-fallback2-native-compatibility/accepted-projection.json",
+    "sha256": "524e49b6ec93c5e42083ceb035cd0512f71863a5a5f06bb6fa742294e245d6e2"
+  },
+  "validation": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/root-accepted-fallback2-native-compatibility/validation.json",
+    "sha256": "cbedb84e8a0bbf2d97caa89abb4f3c2d35cb28ee43deff3af06e253c3c8ed02f"
+  },
+  "scope": {
+    "native_compatibility_only": true,
+    "fresh_target_suite_pass": false,
+    "new_cohort_compatibility": false,
+    "final_selection": false,
+    "cache_selected": false,
+    "timing_or_performance_accepted": false,
+    "performance_window_accepted": false,
+    "release_accepted": false,
+    "native_calls_performed_by_recorder": false
+  }
+}

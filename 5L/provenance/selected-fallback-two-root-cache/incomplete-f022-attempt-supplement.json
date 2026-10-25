@@ -1,0 +1,80 @@
+{
+  "schema": "vakint.cache-compatibility-incomplete-attempt-supplement.v1",
+  "utc": "2026-10-24T23:59:07.680942+00:00",
+  "status": "SUPPLEMENT_ONLY_NOT_A_COMPLETE_QUALIFICATION",
+  "postflight": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/f022-public-requalification-run1/incomplete-postflight.json",
+    "sha256": "8186d23ca717a04eaa5809a742710716aa00cbf923c17650cde0ebf2753a652f",
+    "bytes": 7727
+  },
+  "original_complete_fresh13_workload": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/qualification-workload.json",
+    "sha256": "42fa6a6e95f8759e24886b398a97a76f7375f44e04a5ffa546b424b69c590559",
+    "bytes": 13454
+  },
+  "actual_existing_f022_native_validation": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-fallback2-import/two-root-workload-validation.json",
+    "sha256": "6c207ba7aa9d85ee07b7e30f317f8cd5ed3fc49854a0c8c50847417113f8c7e0",
+    "bytes": 9910
+  },
+  "actual_existing_f022_import_equality": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-fallback2-import/validation.json",
+    "sha256": "ef76f940a32444f95d772ff96feaeb0e0d389ef522ec65c09f642a24d1a9934b",
+    "bytes": 9274
+  },
+  "new_f022_attempt_complete": false,
+  "new_f022_attempt_counts": {
+    "functional_success": 10,
+    "deadline_failed": 1,
+    "not_started_after_failure": 2,
+    "started_native_workers": 11,
+    "planned_public_cases": 13
+  },
+  "genuine_new_successes": [
+    {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/f022-public-requalification-run1/00-parent-31740-tuning/measurement.json",
+      "sha256": "8276197206d087147c32fb92c9949e7fca45790f9efe1af778b372500dd2434d"
+    },
+    {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/f022-public-requalification-run1/03-parent-31740-dot_b/measurement.json",
+      "sha256": "01015f70cc76ba099ccdb067ff2e40ebfcf3c346633dadc3410add407c57226b"
+    },
+    {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/f022-public-requalification-run1/01-parent-32745-dot_a/measurement.json",
+      "sha256": "3414f9c9b3102b1a9883e8c1821ad2635769cb9452639fcd0e9a5636b88b4f47"
+    },
+    {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/f022-public-requalification-run1/04-parent-30699-dot_a/measurement.json",
+      "sha256": "fbea546bc91e29997dde864f0a54d26d5486d0f1258db2582712db1276567505"
+    },
+    {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/f022-public-requalification-run1/07-parent-30527-dot_b/measurement.json",
+      "sha256": "b9a148060facb20b677dae007ff794174c54f07bf3adc2d2305ecc73d53ae4ed"
+    },
+    {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/f022-public-requalification-run1/10-reserve-v1-parent-30699-dot_c/measurement.json",
+      "sha256": "fa6dbbc577278aaddb1f8aa6c57be9224bb0145bb63b41e984cb560eebb4cc84"
+    },
+    {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/f022-public-requalification-run1/02-parent-31740-dot_a/measurement.json",
+      "sha256": "0b421599ef209e3da94938f45ddbe2888ad7903d4724454280887eb54a25d5bc"
+    },
+    {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/f022-public-requalification-run1/05-parent-30699-dot_b/measurement.json",
+      "sha256": "89b92207cec730670be0ec0abdfc4cdad00273aa947a6057a3d288b91169fa22"
+    },
+    {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/f022-public-requalification-run1/08-reserve-v1-parent-32745-dot_c/measurement.json",
+      "sha256": "f4da8833b0b199b1fc8e4cea7c0bf8cfabc8f92758c15ea5d64f3c12ea7d4c23"
+    },
+    {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/f022-public-requalification-run1/11-reserve-v1-parent-30527-dot_c/measurement.json",
+      "sha256": "a91e1c523608bd64675de475fbc12d29170d7b9ec1ae1c50efeb5bfc1c88524b"
+    }
+  ],
+  "failed_partial_output_equal_is_not_qualification": true,
+  "old_raw_reports_or_proofs_modified": false,
+  "accepted_bridge": false,
+  "new_proof_created": false,
+  "native_compatibility_acceptance_or_final_selection": false
+}

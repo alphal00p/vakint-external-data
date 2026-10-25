@@ -1,0 +1,265 @@
+{
+  "attempt": {
+    "hard_deadline_unix_seconds": 1792890941.8466227,
+    "hard_seconds": 36000.0,
+    "prepare_seconds": 32400.0,
+    "previous_elapsed_seconds": 0.0,
+    "started_unix_seconds": 1792854941.8466227
+  },
+  "complete": false,
+  "data_manifest_sha256": "4c0877b63b2da3f176d9e612f7d5ed4b7b30b34ee926404799f7034cfbd38c0d",
+  "elapsed_seconds": 32582.788913479,
+  "frozen_held_out_inputs": 12,
+  "loading_seconds": 675.109557687,
+  "owner_proof": {
+    "cohort_receipt_sha256": "a516bb453f8bf8d408afe68e5abf9e9de78198b83ec14ddc9a9653c6270803ef",
+    "compiled_cohort": {
+      "actual_binding_source": {
+        "guards_sha256": "3e9fecdf5d24d9c0a7d6ff7df99f81d94657ea720a06d00f24eae69715e53f19",
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/cases/00-parent-31740-tuning/case-000-00-uncached/measurement.json",
+        "sha256": "25f5e45d855396487bb8e92efd4f2abdcf6f80bfb2be265e971f4438217ac0eb",
+        "value_sha256": "a0f756efb5ac9d55002c6d714500490bfd75a72f70dec7efc1e619a319954ad9"
+      },
+      "application_sha256": "976d574c4ad8b4021ac7a1914c624095a77f5975b98e243c7a20a9396a86ff03",
+      "builder_executable_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/release-runtime-8ef03d7/immutable-bin/build_cache-sha256-9add016cedcfd7a87394dc0dab89e32c9a2a68e81c563a42fac9d95d0f93f794",
+      "builder_executable_sha256": "9add016cedcfd7a87394dc0dab89e32c9a2a68e81c563a42fac9d95d0f93f794",
+      "data_manifest_sha256": "4c0877b63b2da3f176d9e612f7d5ed4b7b30b34ee926404799f7034cfbd38c0d",
+      "external_three_binary_build_receipt": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/release-runtime-8ef03d7/three-driver-artifacts.json",
+        "sha256": "c0c5b36c0c1dafa7b2ca232bb69f0142ee37721b25137d42091657e5b895035b"
+      },
+      "kernel_revision": "9cd57678d8817ec33c05cacba4925162f1c86b0b",
+      "loop_manifest_sha256": "a3e581928df153f3e6137da7fc336b72d4b2d2ab062ce1a133849e2bb073ae46",
+      "main_revision": "8ef03d7fd7557772e1b531b71b71c08e3419ff54",
+      "main_source_snapshot_sha256": "a0cb8ba8e67d1f4aefa8d36a1a88d718cbd495f5e963318bc321aae6193261e9",
+      "mapper_executable_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/release-runtime-8ef03d7/immutable-bin/authenticate_owner_roots-sha256-4d9ebd2d0fb26ae2ab6a12a3433ec48f50b7cff1d5cce401f19437ea16042c09",
+      "mapper_executable_sha256": "4d9ebd2d0fb26ae2ab6a12a3433ec48f50b7cff1d5cce401f19437ea16042c09",
+      "mapper_source_sha256": "a9537ce3c35d5c00d1f9a01536dab628572656b5542cc778b01926b988d0ee6e",
+      "measurement_executable_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/release-runtime-8ef03d7/immutable-bin/measure_cache-sha256-5222b5cbea4aeed69421558e323ea704239019282a9f9b65997f6921407e0b02",
+      "measurement_executable_sha256": "5222b5cbea4aeed69421558e323ea704239019282a9f9b65997f6921407e0b02",
+      "native_revision": "42bae6e0a4031203db71a052975ebab0bd66eeb1",
+      "native_source_snapshot_sha256": "1c0c6a0e5c77f878d843d336e9740ee7b417a7aa8bba329ff58241241d74f8b6",
+      "schema": "vakint.final-three-driver-compiled-cohort.v1",
+      "scope": "Actual release build and loaded program binding only; owner transport/heldout qualification remains pending",
+      "semantic_binding": {
+        "artifact_digest": [
+          162,
+          68,
+          185,
+          180,
+          206,
+          143,
+          114,
+          40,
+          199,
+          12,
+          133,
+          132,
+          8,
+          135,
+          208,
+          168,
+          201,
+          62,
+          78,
+          199,
+          29,
+          175,
+          102,
+          4,
+          104,
+          117,
+          83,
+          104,
+          97,
+          251,
+          210,
+          115
+        ],
+        "family_fingerprint": "rustred-integral-family-v2;N27:tide_five_loop_common_basis;L5;2:k1;2:k2;2:k3;2:k4;2:k5;E0;P1;1:d;Q5,0,15;M;RY1,1;I+1;X1;Y1,1;I+1;X0;D15;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I+2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;G0;U15;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;",
+        "layer": "saved-application-route-apply-v1",
+        "physical_arity": 15
+      }
+    },
+    "mapper_executable_sha256": "4d9ebd2d0fb26ae2ab6a12a3433ec48f50b7cff1d5cce401f19437ea16042c09",
+    "mapper_source_sha256": "a9537ce3c35d5c00d1f9a01536dab628572656b5542cc778b01926b988d0ee6e",
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/prefix-through-19-owner-proof.json",
+    "sha256": "7f4e774fa3583f3fd13417155897d4d4824f462301dbd8679096f5f8434ccca2"
+  },
+  "owner_root_correlations": [
+    {
+      "case_a": "parent-31740-tuning",
+      "case_b": "parent-31740-dot_b",
+      "cohort_a": "tuning",
+      "cohort_b": "held-out",
+      "identical_owner_sets": false,
+      "shared_owner_roots": [
+        [
+          2,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1
+        ]
+      ]
+    }
+  ],
+  "phase": "final",
+  "preparation": {
+    "capture_lookup_budget_skips": 0,
+    "capture_metadata_exhausted_roots": 0,
+    "capture_metadata_peak_bytes": 0,
+    "capture_native_skipped_records": 0,
+    "capture_offered_records": 792850,
+    "capture_oversized_records": 0,
+    "capture_profile": "completed-intermediates-with-local-guard-provenance-v1",
+    "charged_disk_bytes": 14741085182,
+    "checkpoint_failure": {
+      "detail": "elapsed time 31103.778690136s reached the configured time budget 31101.643884064s",
+      "kind": "limit"
+    },
+    "completed_roots": 1,
+    "coverage_claim": false,
+    "elapsed_seconds": 31726.204810266,
+    "failure": {
+      "detail": "elapsed time 31103.767351936s reached the configured time budget 31101.643884064s",
+      "kind": "limit"
+    },
+    "native_profile": {
+      "entry_coverage": "advisory",
+      "kind": "saved-application-route-apply",
+      "native": "SavedApplicationOptions { unresolved_policy: Reject, entry_coverage_policy: Advisory, reduction_limits: ReductionLimits { diagnostics_enabled: false, exact_algebra: ExactAlgebraLimits { diagnostics_enabled: false, max_exponent: 65535, max_polynomial_terms: 4000000, max_term_operations: 16000000 }, indexed_algebra: IndexedAlgebraLimits { diagnostics_enabled: false, exact_algebra: ExactAlgebraLimits { diagnostics_enabled: false, max_exponent: 65535, max_polynomial_terms: 4000000, max_term_operations: 16000000 }, max_specialization_power_operations: 16000000, max_specialization_integer_bits: 16000000 }, max_rule_applications: 1000000, max_cached_integrals: 1000000, max_cached_coefficient_terms: 16000000, max_cached_coefficient_bytes: 18446744073709551615, max_pending_frames: 1000000, max_coalescing_additions: 16000000, max_factorization_terms: 1000000 }, trace_limits: RoutedCandidateLimits { diagnostics_enabled: false, max_input_targets: 100000, max_unique_nodes: 1000000, max_transport_calls: 100000, max_transport_operations: 64000000, max_transport_endpoints: 4000000, expansion: MultiAffineNumeratorExpansionLimits { diagnostics_enabled: false, exact_algebra: ExactAlgebraLimits { diagnostics_enabled: false, max_exponent: 65535, max_polynomial_terms: 4000000, max_term_operations: 16000000 }, max_factors: 128, max_relation_coefficient_entries: 16384, max_total_power: 1000000, max_native_polynomial_terms: 4000000, max_native_polynomial_operations: 64000000, max_native_exponent_entries: 64000000, max_endpoints: 4000000, max_endpoint_power_entries: 64000000, max_retained_endpoint_key_bytes: 1000000000, max_retained_coefficient_terms: 64000000, max_retained_coefficient_clone_owned_bytes: 1000000000 } }, binary_limits: BinaryIoLimits { diagnostics_enabled: false, max_program_bytes: 18446744073709551615, max_sections: 32, max_collection_entries: 8000000, max_state_bytes: 18446744073709551615, max_atom_bytes: 18446744073709551615, max_total_atom_bytes: 18446744073709551615, exact_algebra: ExactAlgebraLimits { diagnostics_enabled: false, max_exponent: 65535, max_polynomial_terms: 4000000, max_term_operations: 16000000 } }, cache_representation: Sparse, cache_policy: EvictLeastRecentlyUsed, preparation_workers: 1 }",
+      "required_root_postcondition": "complete-native-declared-terminals",
+      "roots": [
+        {
+          "coverage_admitted": false,
+          "namespace": 0,
+          "powers": [
+            1,
+            1,
+            2,
+            1,
+            2,
+            1,
+            1,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coverage_admitted": false,
+          "namespace": 0,
+          "powers": [
+            1,
+            3,
+            3,
+            1,
+            1,
+            1,
+            1,
+            0,
+            -3,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coverage_admitted": false,
+          "namespace": 0,
+          "powers": [
+            2,
+            2,
+            1,
+            2,
+            2,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -1
+          ]
+        }
+      ],
+      "strict": true,
+      "unresolved_policy": "reject"
+    },
+    "native_statistics": {
+      "cache_work": {
+        "evicted_coefficient_bytes": 0,
+        "evicted_coefficient_terms": 0,
+        "evicted_entries": 0,
+        "recomputed_nodes": 0
+      },
+      "native": {
+        "cache_hits": 37856929,
+        "cached_coefficient_bytes": 51339275684,
+        "cached_coefficient_terms": 775444200,
+        "cached_integrals": 792850,
+        "coalescing_additions": 45916921,
+        "rule_applications": 256987
+      }
+    },
+    "newly_stored_intermediates": 792831,
+    "newly_stored_roots": 1,
+    "options": {
+      "batch_records": 64,
+      "cache_policy": "evict-lru",
+      "capture_metadata_limit_bytes_per_request": 18446744073709551615,
+      "checkpoint_interval_seconds": 60,
+      "deadline_is_cooperative": true,
+      "diagnostics_enabled": false,
+      "disk_bytes": 18446744073709551615,
+      "intermediate_capture": true,
+      "loop_count": 5,
+      "max_roots": 3,
+      "ram_coefficient_bytes": 18446744073709551615,
+      "ram_is_process_rss": false,
+      "resume": true,
+      "storage_limits": "SavedApplicationCachePackLimits { diagnostics_enabled: false, chunk: ApplicationCacheIoLimits { binary: BinaryIoLimits { diagnostics_enabled: false, max_program_bytes: 18446744073709551615, max_sections: 32, max_collection_entries: 8000000, max_state_bytes: 18446744073709551615, max_atom_bytes: 18446744073709551615, max_total_atom_bytes: 18446744073709551615, exact_algebra: ExactAlgebraLimits { diagnostics_enabled: false, max_exponent: 65535, max_polynomial_terms: 4000000, max_term_operations: 16000000 } }, diagnostics_enabled: false, max_arity: 64, max_identity_bytes: 1000000, max_records: 4096, max_index_owned_bytes: 18446744073709551615, max_terms_per_record: 1000000, max_guards_per_record: 1000000, max_decoded_coefficient_terms: 16000000, max_decoded_coefficient_bytes: 18446744073709551615 }, max_manifest_bytes: 18446744073709551615, max_directory_owned_bytes: 18446744073709551615, max_chunks: 32768, max_runs: 4096, max_namespaces: 128, max_encoded_chunk_bytes: 18446744073709551615, max_lookup_chunks: 8, max_lookup_encoded_bytes: 536870912, max_lookup_decoded_bytes: 536870912, max_disk_bytes: 18446744073709551615 }",
+      "strict_application_setup_seconds": 622.356115936,
+      "time_budget_scope": "entire-preparation-job",
+      "time_limit_seconds": 31101,
+      "validated_lazy_storage": false
+    },
+    "reader_directory_owned_bytes": 12814081,
+    "resource_failure": {
+      "detail": "elapsed time 31103.767351936s reached the configured time budget 31101.643884064s",
+      "resource": "elapsed"
+    },
+    "resume_semantics": "durable selected roots and guarded intermediates; no in-flight native operation state",
+    "reused_roots": 0,
+    "status": "time-budget",
+    "total_roots": 3
+  },
+  "publishable": false,
+  "schema": "vakint.five-loop-cache-build.v2",
+  "selected_training_roots": 3,
+  "source_census": "/shared/codex-1/vakint_rustred/workspace/5l-push/physics/raised-census/campaign-census.json",
+  "source_census_sha256": "dbcccd344356a4f874527dd35786f2ef7247e40bdf59c1c6ed3c7216536e2ac7",
+  "workload_sha256": "b1b0e41cc5aedbb1c82b1683f4740935d4a3ba1f2affba9d53ad9847a6e3b0bc"
+}

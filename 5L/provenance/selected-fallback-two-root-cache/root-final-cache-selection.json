@@ -1,0 +1,102 @@
+{
+  "schema": "vakint.cache-final-selection.v1",
+  "accepted": true,
+  "accepted_by": "Codex coordinator (/root)",
+  "decided_utc": "2026-10-25T00:51:30.644111+00:00",
+  "recorded_by": "/root/cache_consumer_qualification",
+  "decision": "retain_complete_candidate",
+  "producer_phase": "pilot",
+  "reason": "Retain the original strict-complete two-root pilot artifact with its original producer8ef/build/workload/times. The exact file has accepted native compatibility for actual C6/f022 and fits the <=50 MiB target without any size exception. The separately budgeted three-root final trial stopped on its native time budget with only1/3 roots complete and no final cache candidate. Selection relies only on modest preliminary tuning/intermediate-use evidence and completion/size/compatibility, not established final performance. Final held-out and physical cached-versus-uncached medians remain pending; no performance gain is guaranteed or inferred from these engineering records.",
+  "cache": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/strict-pilot-first2-run2-budget2400/candidate.rrcache.gz",
+    "sha256": "cc5e6d80aacc737b81be1675a8aa02694b9ccaa1e4f31cc2d5a34199e4f1a19d"
+  },
+  "build_report": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/strict-pilot-first2-run2-budget2400/builder-work/build.json",
+    "sha256": "6d12f1329b992c3a46614c61b5fb004897444c705aa41f3559a14ff9d3febea1"
+  },
+  "producer_workload": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/proposed-pilot-workload-first2.json",
+    "sha256": "b5a502290b714bb96dc2979cfb481c66ba1faeddfff0395f003ef165d351bf05"
+  },
+  "consumer_workload": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-fallback2-import/consumer-two-root-workload.json",
+    "sha256": "f022d21736684ed9831619c919250cce79f4eeacb9e9b3245ae3f872cb7f8f60"
+  },
+  "candidate_acceptance": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/strict-pilot-first2-run2-budget2400/accepted-candidate.json",
+    "sha256": "8513bbac970bab938d4c2806f53f0757896b6b6de2b6f1116bad0299ad2f90a5"
+  },
+  "cache_requalification": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/root-accepted-fallback2-native-compatibility/accepted-cache-consumer-bridge.json",
+    "sha256": "daa07861eaf718d289073709bac5c50f5e633832cdccb20ab35cf070d8c9aca9"
+  },
+  "selected_census": {
+    "strict_complete_roots": 2,
+    "records": 25088,
+    "intermediate_records": 25086,
+    "compressed_bytes": 2456235,
+    "decoded_bytes": 16593448,
+    "decoded_sha256": "3426758874cc6acf59ace61dede0a8e189fe3c6c32d8fa0d934eb788e23878a9"
+  },
+  "size_policy": {
+    "target_bytes": 52428800,
+    "within_target": true,
+    "size_exception_used": false
+  },
+  "original_provenance_preserved": {
+    "producer_revision": "8ef03d7fd7557772e1b531b71b71c08e3419ff54",
+    "original_build_phase": "pilot",
+    "source_reports_or_timings_relabelled": false,
+    "candidate_acceptance_state": "STRICT_COMPLETE_CANDIDATE_NOT_FINAL_SELECTION",
+    "cache_rebuilt_for_selection": false
+  },
+  "discarded_trial": {
+    "phase": "final",
+    "terminal_outcome": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/final-sparse-three-root-run1/terminal-outcome.json",
+      "sha256": "c025aa100a7c87daabe3dbd56d936a8791b902647efa5949a0a0d06bba7f4933"
+    },
+    "wall_budget_ledger": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/phase-wall-budget-ledger-after-final-three-root.json",
+      "sha256": "6c97392984ee2267f1dffad506011f9ecb4ddc38e46a40f4f559c3f4230d8f8c"
+    },
+    "actual_failed_build": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/final-sparse-three-root-run1/builder-work/build.json",
+      "sha256": "6e2c56ae7a6dda334b788fcb20de91cb84f514cfadb9ab8753b4dca5f039d7a3"
+    },
+    "actual_native_worker": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/final-sparse-three-root-run1/builder-work/worker.json",
+      "sha256": "98c6b51af8bcf7fc0225f65f8bbb6da601b8ddd146b54f29197398d883886b96"
+    },
+    "strict_complete_roots": 1,
+    "requested_roots": 3,
+    "captured_intermediates": 792831,
+    "final_gzip_candidate_exists": false,
+    "whole_attempt_seconds": 32613.349550541956,
+    "status": "TIME_BUDGET_INCOMPLETE_NO_CANDIDATE_ALL_PROCESSES_DRAINED",
+    "promoted_as_complete": false
+  },
+  "preliminary_evidence_scope": {
+    "native_compatibility_validation": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/root-accepted-fallback2-native-compatibility/validation.json",
+      "sha256": "cbedb84e8a0bbf2d97caa89abb4f3c2d35cb28ee43deff3af06e253c3c8ed02f"
+    },
+    "existing_strict_import_and_intermediate_use": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-fallback2-import/validation.json",
+      "sha256": "ef76f940a32444f95d772ff96feaeb0e0d389ef522ec65c09f642a24d1a9934b"
+    },
+    "performance_qualified": false,
+    "description": "The existing functional cached tune records intermediate reuse; this is not an isolated timing or final held-out speedup result."
+  },
+  "authorization_scope": {
+    "final_cache_selection_only": true,
+    "selected_consumer_compatibility": "actualC6/f022 only",
+    "new_cohort_compatibility": false,
+    "execution_window_accepted": false,
+    "native_jobs_authorized_by_record": false,
+    "performance_accepted": false,
+    "repository_push_authorized_by_record": false,
+    "release_accepted": false
+  }
+}

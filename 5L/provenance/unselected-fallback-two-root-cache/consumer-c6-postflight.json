@@ -1,0 +1,44 @@
+{
+  "schema": "vakint.fallback2-current-consumer-postflight.v1",
+  "utc": "2026-10-24T20:07:07.476875+00:00",
+  "validation": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-fallback2-import/validation.json",
+    "sha256": "ef76f940a32444f95d772ff96feaeb0e0d389ef522ec65c09f642a24d1a9934b"
+  },
+  "literal_byte_parity_with_actual_c6_uncached_case": {
+    "value.symbolica": true,
+    "guards.json": true,
+    "unknown-masters.json": true
+  },
+  "all_validation_references_rehashed": 6,
+  "consumer_revision": "c6dcc126bfaf0164870776e1018d08bdafb1e117",
+  "producer_revision": "8ef03d7fd7557772e1b531b71b71c08e3419ff54",
+  "producer_training_roots": 2,
+  "total_records": 25088,
+  "intermediate_records": 25086,
+  "actual_cached_case_success": true,
+  "catalogue_closed": true,
+  "native_keys_authenticated": true,
+  "actual_cache_file_statistics": {
+    "compressed_bytes": 2456235,
+    "decoded_bytes": 16593448,
+    "decoded_coefficient_bytes": 15123514,
+    "decoded_coefficient_terms": 345109,
+    "decoded_coefficients": 23645,
+    "hits": 27,
+    "index_owned_bytes": 6172092,
+    "misses": 124,
+    "records": 25088
+  },
+  "supervision_exit_code": 0,
+  "supervision_deadline_exhausted": false,
+  "actual_worker_pid": 2247002,
+  "actual_supervisor_pid": 2246941,
+  "native_jobs_drained": true,
+  "released_cpu_lane": "49-56",
+  "accepted_bridge": false,
+  "cache_selected_adopted_or_published": false,
+  "final_performance_eligible": false,
+  "performance_comparison_claimed": false,
+  "retries": 0
+}

@@ -1,0 +1,140 @@
+{
+  "schema": "vakint.source-candidate-external-protected-alias-exclusion.v1",
+  "utc": "2026-10-24T19:44:59.729832+00:00",
+  "qualification": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/training-route/qualification.json",
+    "sha256": "9c90b9c900aa45c9f79ad2ba12a3336d37f21ea5fe4cc49a4cf9ac6ce6d59e36"
+  },
+  "protected_union": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/protected-raw-owner-union.json",
+    "sha256": "4bc388aa4856b6854a53558e6118e999dced66f4c9e5f6abd8b0f2eb7a837b72"
+  },
+  "canonical_cohort_sha256": "2b2a26eb74cc83d2e7df71087c41d94a8459c6e84d2d3de4097ba377f608116b",
+  "source_census_sha256": "dbcccd344356a4f874527dd35786f2ef7247e40bdf59c1c6ed3c7216536e2ac7",
+  "source_priority_sha256": "1e23a045e3470b7501449a28b9fea25f08765632485164e860c7a85d8c548a53",
+  "rule": "Exact15power rawtarget OR any nonzero directly routed owner endpoint intersection with protectedraw+owner+declared union rejects candidate. Incidental descendants are separate latercapture evidence.",
+  "rows": [
+    {
+      "priority": 0,
+      "powers": [
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "source_occurrences": 21,
+      "source_contribution_count": 21,
+      "census_entry_admitted": false,
+      "actual_raw_recorded_coverage": {
+        "admitted": false,
+        "error": null
+      },
+      "scalar_key_metrics": {
+        "A": 11,
+        "negative_power_rank_R": 0,
+        "Dkey": 11
+      },
+      "route_complete_nonempty": true,
+      "owner_endpoint_count": 1,
+      "raw_protected_intersection": false,
+      "owner_protected_intersections": [],
+      "eligible_after_external_alias_exclusion": true,
+      "qualification_row_index": 0
+    },
+    {
+      "priority": 1,
+      "powers": [
+        2,
+        2,
+        1,
+        2,
+        2,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -1
+      ],
+      "source_occurrences": 21,
+      "source_contribution_count": 21,
+      "census_entry_admitted": false,
+      "actual_raw_recorded_coverage": {
+        "admitted": false,
+        "error": null
+      },
+      "scalar_key_metrics": {
+        "A": 12,
+        "negative_power_rank_R": 1,
+        "Dkey": 11
+      },
+      "route_complete_nonempty": true,
+      "owner_endpoint_count": 7,
+      "raw_protected_intersection": false,
+      "owner_protected_intersections": [],
+      "eligible_after_external_alias_exclusion": true,
+      "qualification_row_index": 1
+    },
+    {
+      "priority": 15432,
+      "powers": [
+        1,
+        3,
+        3,
+        1,
+        1,
+        1,
+        1,
+        0,
+        -3,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "source_occurrences": 1,
+      "source_contribution_count": 1,
+      "census_entry_admitted": true,
+      "actual_raw_recorded_coverage": {
+        "admitted": false,
+        "error": null
+      },
+      "scalar_key_metrics": {
+        "A": 13,
+        "negative_power_rank_R": 3,
+        "Dkey": 10
+      },
+      "route_complete_nonempty": true,
+      "owner_endpoint_count": 1,
+      "raw_protected_intersection": false,
+      "owner_protected_intersections": [],
+      "eligible_after_external_alias_exclusion": true,
+      "qualification_row_index": 2
+    }
+  ],
+  "eligible_priorities": [
+    0,
+    1,
+    15432
+  ],
+  "training_selected": false,
+  "scope": "External directalias check only; no completeIBP/cache/benefit claim",
+  "join_source_sha256": "efd2cb2480dd33915fee34878f40e4b3b5fde1313923ea584b4ff80dd1d992db"
+}

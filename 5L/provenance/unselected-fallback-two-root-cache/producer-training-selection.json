@@ -1,0 +1,103 @@
+{
+  "schema": "vakint.explicit-source-training-selection.v1",
+  "selected_utc": "2026-10-24T11:24:49.198871+00:00",
+  "root_selection_and_pilot_go": true,
+  "workload": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/proposed-pilot-workload-first2.json",
+    "sha256": "b5a502290b714bb96dc2979cfb481c66ba1faeddfff0395f003ef165d351bf05"
+  },
+  "direct_alias_exclusion": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/candidate-owner-prefix8-run1/protected-alias-exclusion.json",
+    "sha256": "fed00ffd465b3d29cf50353c40f59e8d27def8969f3b0990779d5b5fbc6b2fbf"
+  },
+  "source_census": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/physics/raised-census/campaign-census.json",
+    "sha256": "dbcccd344356a4f874527dd35786f2ef7247e40bdf59c1c6ed3c7216536e2ac7"
+  },
+  "qualified_source_priorities": [
+    0,
+    1
+  ],
+  "chosen_rule": "First2 deterministic full-source recurrence priority passing completeNativeownertransport+protectedraw/directowneraliasexclusion; no heldouttimings/work used",
+  "full_source_authority_roots": 27454,
+  "initial_admitted_subpool_used": false,
+  "outside_entry_coverage": "Advisory, NOTcertified; strict allselected Complete mandatory",
+  "training_targets": [
+    {
+      "id": "quadratic-source-priority-00000",
+      "powers": [
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "rationale": "First deterministic full-source priority 0; exact source recurrence 21 across 21 contributions is only prior; completeNativeowner route and external directalias exclusion passed. Outside-entry coverage remains advisory; strictComplete preparation is mandatory.",
+      "public_input": null,
+      "lowered_roots": [],
+      "protected_roots": []
+    },
+    {
+      "id": "quadratic-source-priority-00001",
+      "powers": [
+        2,
+        2,
+        1,
+        2,
+        2,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -1
+      ],
+      "rationale": "First deterministic full-source priority 1; exact source recurrence 21 across 21 contributions is only prior; completeNativeowner route and external directalias exclusion passed. Outside-entry coverage remains advisory; strictComplete preparation is mandatory.",
+      "public_input": null,
+      "lowered_roots": [],
+      "protected_roots": []
+    }
+  ],
+  "qualified_public_inputs": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/qualified-public-inputs.json",
+    "sha256": "c4d78954f74c8ede8bd3ad36a8c5e5eb2702f707b838bdd3ba272214fa3884e6"
+  },
+  "unresolved_policy": "Reject",
+  "coverage_policy": "Advisory",
+  "representation": "Sparse",
+  "native_preparation_workers": 1,
+  "process_rss_limit": null,
+  "retained_coefficient_limit": null,
+  "native_prepare_seconds": 1800,
+  "whole_job_seconds": 2400,
+  "compressed_limit_bytes": 52428800,
+  "decoded_limit_bytes": 1073741824,
+  "95MiB_exception": false,
+  "concurrency": "Oldq0functionalCPU25\u201332 active; RootNixpreflight113\u2013120 may remain active. Functional/capturepilot only, no finalspeedmeasurement.",
+  "output": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/strict-pilot-first2-run2-budget2400/candidate.rrcache.gz",
+  "last_complete_pointer_rule": "Only after allstrictComplete/file/completenesschecks; interruptedprefix nevercomplete",
+  "protocol": "Distinct explicit revised1800prep2400whole engineeringbudget; sameexactselected2roots, original15minloadingfailurepreserved",
+  "first_attempt": {
+    "receipt": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/strict-pilot-first2-run1/receipt.json",
+    "sha256": "4eb54d4d4550a57d44351eaf0e6dfb8834f965f66ddff2f7b9a08f9c4fbff9d2",
+    "outcome": "Initialload exceeded600prep beforeanyrootattempt; noIBP/rootfailureinferred"
+  },
+  "revised_budget_proposal": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/revised-strict-pilot-budget2400-proposal.json",
+    "sha256": "6f94102610461a0cafd6ba32ecb0103ddfe848aa66d37ccb40f0ae41febbbcfc"
+  }
+}

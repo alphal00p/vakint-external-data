@@ -1,0 +1,307 @@
+{
+  "schema": "vakint.cache-native-compatibility-review.v1",
+  "utc": "2026-10-24T23:37:13.174498+00:00",
+  "status": "ROOT_ACCEPTED_NATIVE_CACHE_COMPATIBILITY_ONLY",
+  "accepted": true,
+  "root_review": {
+    "accepted_by": "Codex coordinator (/root)",
+    "accepted_at": "2026-10-25T00:42:16.099804+00:00",
+    "recorded_by": "/root/cache_consumer_qualification",
+    "authority": "Explicit Root coordinator decision authorizing native compatibility flags; this recorder does not independently grant acceptance.",
+    "decision": "ACCEPT NATIVE CACHE COMPATIBILITY ONLY for exact original cc5e two-root strict producer8ef/D40 to actual C6 consumer/f022, via independently reviewed original42fa13 projection.",
+    "parser_main_commit": "4220e90ae78f9b44e07ab953d466e90d7ca99cbb",
+    "parser": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-final-integration/crates/vakint/docs/benchmark/merge_five_loop_results.py",
+      "sha256": "5b8da09f82185384007e1c3c5e2fdd5dd62f6827152930d9524fc5a6141147a4"
+    },
+    "source_review": {
+      "reviewer": "/root",
+      "reviewed_parser_sha256": "5b8da09f82185384007e1c3c5e2fdd5dd62f6827152930d9524fc5a6141147a4",
+      "passed": true
+    },
+    "synthetic_report_tests": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/qualification-projection-tests/result.json",
+      "sha256": "f8e7cb103b829589e73c2424276b9d200a1bc948c01cebee92f017dd729e4298"
+    },
+    "synthetic_controller_tests": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/qualification-projection-report/controller66-validation.json",
+      "sha256": "d6149d30cefe2ce4ddfb92d3a302f31fa9e37bd57f57b2a2ce85d9dd885c3bc8"
+    },
+    "prospective_actual_validation": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/qualification-projection-report/prospective-actual/validation.json",
+      "sha256": "aaa3b0059f377008f214279c8ce42ec93f4a27457e167fddbaad8b700759f97f"
+    },
+    "independent_scientific_review": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/fallback2-native-compatibility-review/independent-semantic-projection-review.json",
+      "sha256": "230293890c12397687281dcbd13b623341b988eb7a0b249ade51f694c9a718f3"
+    },
+    "independent_validator_scope": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/fallback2-native-compatibility-review/independent-validator-scope-addendum.json",
+      "sha256": "6a1a26ede84d070f41f2082528db1988cc37c66430b0a2b1039dc37be9cb965c"
+    },
+    "exclusions": [
+      "No complete fresh f022 thirteen-case qualification",
+      "No compatibility for a newer or uncompiled consumer cohort",
+      "No final cache or workload selection",
+      "No timing transfer, performance acceptance or serialized performance window",
+      "No published-release acceptance"
+    ]
+  },
+  "scope": "Existing complete2-root producer8ef cache versus actual sealedC6 consumer on frozenD40; native compatibility only, no final selection/release/performance acceptance",
+  "producer": {
+    "cache": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/strict-pilot-first2-run2-budget2400/candidate.rrcache.gz",
+      "sha256": "cc5e6d80aacc737b81be1675a8aa02694b9ccaa1e4f31cc2d5a34199e4f1a19d"
+    },
+    "build_report": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/strict-pilot-first2-run2-budget2400/builder-work/build.json",
+      "sha256": "6d12f1329b992c3a46614c61b5fb004897444c705aa41f3559a14ff9d3febea1"
+    },
+    "workload": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/proposed-pilot-workload-first2.json",
+      "sha256": "b5a502290b714bb96dc2979cfb481c66ba1faeddfff0395f003ef165d351bf05"
+    },
+    "owner_proof": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/prefix-through-19-owner-proof.json",
+      "sha256": "7f4e774fa3583f3fd13417155897d4d4824f462301dbd8679096f5f8434ccca2"
+    },
+    "compiled_cohort": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/compiled-cohort.json",
+      "sha256": "a516bb453f8bf8d408afe68e5abf9e9de78198b83ec14ddc9a9653c6270803ef"
+    }
+  },
+  "consumer": {
+    "collector_artifacts": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/release-supervision-c6dcc126/five-driver-artifacts.json",
+      "sha256": "473fe5162924e0c12844775028b1636b796bcc6e6b50db83f2f4bf597ed5d736"
+    },
+    "compiled_cohort": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/compiled-cohort.json",
+      "sha256": "2b2a26eb74cc83d2e7df71087c41d94a8459c6e84d2d3de4097ba377f608116b"
+    },
+    "qualification_workload": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/qualification-workload.json",
+      "sha256": "42fa6a6e95f8759e24886b398a97a76f7375f44e04a5ffa546b424b69c590559"
+    },
+    "final_workload": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-fallback2-import/consumer-two-root-workload.json",
+      "sha256": "f022d21736684ed9831619c919250cce79f4eeacb9e9b3245ae3f872cb7f8f60"
+    },
+    "owner_proof": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/owner-proof.json",
+      "sha256": "6b367a2526c92540354af5cf9f8449f7e76944ee91d0c216db09544e8097148d"
+    },
+    "protected_union": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/protected-raw-owner-union.json",
+      "sha256": "4bc388aa4856b6854a53558e6118e999dced66f4c9e5f6abd8b0f2eb7a837b72"
+    },
+    "training_route_qualification": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/training-route/qualification.json",
+      "sha256": "9c90b9c900aa45c9f79ad2ba12a3336d37f21ea5fe4cc49a4cf9ac6ce6d59e36"
+    },
+    "alias_exclusion": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/training-route/protected-alias-exclusion.json",
+      "sha256": "6dced3ab55a214c4909b1999423b943e0505ae999efd95fdc6179e89f63d35eb"
+    }
+  },
+  "semantic_binding": {
+    "artifact_digest": [
+      162,
+      68,
+      185,
+      180,
+      206,
+      143,
+      114,
+      40,
+      199,
+      12,
+      133,
+      132,
+      8,
+      135,
+      208,
+      168,
+      201,
+      62,
+      78,
+      199,
+      29,
+      175,
+      102,
+      4,
+      104,
+      117,
+      83,
+      104,
+      97,
+      251,
+      210,
+      115
+    ],
+    "family_fingerprint": "rustred-integral-family-v2;N27:tide_five_loop_common_basis;L5;2:k1;2:k2;2:k3;2:k4;2:k5;E0;P1;1:d;Q5,0,15;M;RY1,1;I+1;X1;Y1,1;I+1;X0;D15;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I+2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;G0;U15;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;",
+    "layer": "saved-application-route-apply-v1",
+    "physical_arity": 15
+  },
+  "producer_identity": {
+    "revision": "8ef03d7fd7557772e1b531b71b71c08e3419ff54",
+    "phase": "pilot",
+    "roots": 2,
+    "intermediate_records": 25086,
+    "total_records": 25088,
+    "compressed_bytes": 2456235,
+    "decoded_bytes": 16593448,
+    "decoded_sha256": "3426758874cc6acf59ace61dede0a8e189fe3c6c32d8fa0d934eb788e23878a9"
+  },
+  "consumer_identity": {
+    "revision": "c6dcc126bfaf0164870776e1018d08bdafb1e117",
+    "native": "42bae6e0a4031203db71a052975ebab0bd66eeb1",
+    "kernel": "9cd57678d8817ec33c05cacba4925162f1c86b0b",
+    "measure_elf_sha256": "128a4fbb0e826861f110a01e0c18cb0e7a2fdf650b4e9da94e6baa44d690c12a",
+    "mapper_elf_sha256": "52cc5c7d951528319e9c17a8d8916f31a503e891d334e2f211968c0d2f200dfb",
+    "not_latest_621_or_uncompiled_runtime_changes": true
+  },
+  "frozen_data": {
+    "manifest.json": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/external-model-identity/manifest.json",
+      "sha256": "4c0877b63b2da3f176d9e612f7d5ed4b7b30b34ee926404799f7034cfbd38c0d"
+    },
+    "5L/manifest.json": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/external-model-identity/5L/manifest.json",
+      "sha256": "a3e581928df153f3e6137da7fc336b72d4b2d2ab062ce1a133849e2bb073ae46"
+    },
+    "5L/ibps/application.json": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/external-model-identity/5L/ibps/application.json",
+      "sha256": "976d574c4ad8b4021ac7a1914c624095a77f5975b98e243c7a20a9396a86ff03"
+    },
+    "5L/terminal-definitions.json": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/external-model-identity/5L/terminal-definitions.json",
+      "sha256": "3510ceb7c1990a8e3197fc8f3e9df7869d91c78eb3fed76fcd671ca051c7c6d0"
+    }
+  },
+  "source_census": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/physics/raised-census/campaign-census.json",
+    "sha256": "dbcccd344356a4f874527dd35786f2ef7247e40bdf59c1c6ed3c7216536e2ac7"
+  },
+  "candidate_acceptance": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/strict-pilot-first2-run2-budget2400/accepted-candidate.json",
+    "sha256": "8513bbac970bab938d4c2806f53f0757896b6b6de2b6f1116bad0299ad2f90a5"
+  },
+  "producer_build_supervision": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/strict-pilot-first2-run2-budget2400/builder-work/supervisor.json",
+    "sha256": "ad1ec87a91dc0f36cc362d7bc0c2c4cd6fbd89a8c7f6f5715c7fafffee29c873"
+  },
+  "producer_worker": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/strict-pilot-first2-run2-budget2400/builder-work/worker.json",
+    "sha256": "1a6adc3554c6b4ae1fe788b90de6d758a2f66fa4cee4edd4fa349f4f76d4222f"
+  },
+  "consumer_native_proof_validation": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/existing-owner-proof-validation/receipt.json",
+    "sha256": "4269f1f9d60d2a06dac762b687163f83835a935ea4e3329146b61734bf698465"
+  },
+  "consumer_native_proof_postflight": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/postflight.json",
+    "sha256": "328cd78014e9a428f5ee9058e5bf314b298e79ede7e7d9e73bcb361974a0a9c8"
+  },
+  "compatibility_projection": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/root-accepted-fallback2-native-compatibility/accepted-projection.json",
+    "sha256": "524e49b6ec93c5e42083ceb035cd0512f71863a5a5f06bb6fa742294e245d6e2"
+  },
+  "strict_cache_import": {
+    "validation": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-fallback2-import/validation.json",
+      "sha256": "ef76f940a32444f95d772ff96feaeb0e0d389ef522ec65c09f642a24d1a9934b"
+    },
+    "postflight": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-fallback2-import/postflight.json",
+      "sha256": "3f3412acbe724cbe830f79525d73a93f6358817ff79da8a7e4d5cbe9b971f000"
+    },
+    "actual_cached_worker": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-fallback2-import/cached-case/worker.json",
+      "sha256": "69e16a69c65e85336b9d8690ea306a6c152d9b95928e6dfa68fcb58f704c8486"
+    },
+    "supervision": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-fallback2-import/supervision.json",
+      "sha256": "90a0a878061ec3952d9fb40bf96f07d47be6ceeb9891b6845de50efe3176011f"
+    },
+    "native_every_record_source_contract": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-fallback2-import/native-validation-contract.json",
+      "sha256": "9b79490c80ccecd94f6f26b7d43afcf7013662fc4ba153695f5c1dc6695e63d0"
+    },
+    "scope": "Actual existing load_cache path completed every key lookup/validate_completed_cache_record before atomic attach; no invented checked-node counter. One fresh f022 cached tune exactly matches42fa actual baseline value and all guards. No speed claim."
+  },
+  "ordinary_local_api_attachment": {
+    "actual_postflight": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/unselected-fallback-two-root-cache/local-loader-proposal/actual-postflight.json",
+      "sha256": "c280a0e8ca077ee3fcb3b7c75ee16e1167c304d1df826c1016e4bde0b4583fa1"
+    },
+    "independent_review": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/unselected-fallback-two-root-cache/local-loader-proposal/independent-postflight-review.json",
+      "sha256": "a4172a8b017fbe3ee745aff0366eab544cdce217505f01274e4e66e3e87ef05b"
+    },
+    "network_qualification": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/unselected-fallback-two-root-cache/local-loader-proposal/sanitized-network-qualification.json",
+      "sha256": "a9106b2093c9abee88829bc2642c0667bfa1bf2a38e78e73e368f53e5fc88c18"
+    },
+    "native_result": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/unselected-fallback-two-root-cache/local-loader-proposal/run1/result.json",
+      "sha256": "2dd7f549537827827f3bb95cb8425e4d9381909c88666ff9c15a628cd3d5d76c"
+    },
+    "frozen_precommit": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/unselected-fallback-two-root-cache/local-loader-proposal/PROPOSED-precommit-json-paths.json",
+      "sha256": "e1550b8264a3cde8d0f8996ae6a4dec251ca5731ae358ec909dca2c89ef4e627"
+    },
+    "actual_host_vakint": "8282f0224b767857ab5044a128839a8bb7f8b0c4",
+    "actual_host_community": "85c15800772aac91717b83c89fc9df4d976aa822",
+    "actual_profile": "ci-optim: host opt-level2; dependencies opt-level3; debug disabled; exact known public profile834aa15f",
+    "not_a_C6_ELF_or_release_measurement": true,
+    "all_loops_1_through_5_caches_attached": true,
+    "native_rule_applications_and_persistent_lookups": 0,
+    "literal_whole_process_zero_network": false,
+    "external_data_network_scope": "SUPPORTED_BY_EXACT_LOCAL_RETURN_BRANCH_AND_OBSERVED_ENDPOINT_PROTOCOL_SCOPE",
+    "license_network_qualification_preserved": true
+  },
+  "factual_checks": {
+    "canonical_actual_C6_proof_and13_validation": true,
+    "twelve_distinct_heldout_owner_sets": true,
+    "protected_union_51_and_actual_selected2_raw_owner_disjoint": true,
+    "producer_to_f022_scientific_selection_unchanged": true,
+    "fresh42fa_public_suite_to_f022_identical": true,
+    "strict_native_import_and_one_exact_cached_case": true,
+    "ordinary_local_api_attachment_auxiliary_host_scope": true
+  },
+  "pending": [
+    "Actual final candidate/workload selection remains separate",
+    "Final active source/runtime and published immutable release roundtrip remain separate",
+    "Any timing comparison requires its separately accepted serialized performance window"
+  ],
+  "new_native_calls_or_builds": false,
+  "raw_records_modified": false,
+  "unselected_external_candidate_modified": false,
+  "existing_controller_GO_modified": false,
+  "accepted_by": "Codex coordinator (/root)",
+  "accepted_at": "2026-10-25T00:42:16.099804+00:00",
+  "root_decision_scope": {
+    "native_compatibility_only": true,
+    "fresh_target_suite_pass": false,
+    "new_cohort_compatibility": false,
+    "final_selection": false,
+    "cache_selected": false,
+    "timing_or_performance_accepted": false,
+    "performance_window_accepted": false,
+    "release_accepted": false,
+    "native_calls_performed_by_recorder": false
+  },
+  "original_unsigned_draft": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/fallback2-native-compatibility-review/UNSIGNED-native-compatibility.json",
+    "sha256": "8971c2fc47562b596ad3adf69935ab319f8602d81ea03ae89f548bd034c473b3"
+  },
+  "qualification_projection_evidence": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/fallback2-native-compatibility-review/qualification-projection-evidence.json",
+    "sha256": "e71611ea869f110c0f8d17b33d05ceb0263879f5311e150894fe72cef9e039a9"
+  },
+  "incomplete_target_attempt": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/f022-public-requalification-run1/incomplete-postflight.json",
+    "sha256": "8186d23ca717a04eaa5809a742710716aa00cbf923c17650cde0ebf2753a652f"
+  }
+}

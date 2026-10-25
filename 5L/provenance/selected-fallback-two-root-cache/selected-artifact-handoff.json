@@ -1,0 +1,141 @@
+{
+  "schema": "vakint.selected-two-root-cache-external-stage-handoff.v1",
+  "accepted_by": "Codex coordinator (/root)",
+  "decided_utc": "2026-10-25T00:51:30.644111+00:00",
+  "selection": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/root-selected-fallback2-cache/root-final-cache-selection.json",
+    "sha256": "828f61d0d6a6960131f7b08d0700f3f88ed2114ea73315d70d1335dc66ba1800"
+  },
+  "selection_validation": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/root-selected-fallback2-cache/validation.json",
+    "sha256": "a234924a114c9142eea482aba0eda356f2e468419ed7f524ce842fd911852012"
+  },
+  "cache": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/strict-pilot-first2-run2-budget2400/candidate.rrcache.gz",
+    "sha256": "cc5e6d80aacc737b81be1675a8aa02694b9ccaa1e4f31cc2d5a34199e4f1a19d",
+    "compressed_bytes": 2456235,
+    "decoded_bytes": 16593448,
+    "decoded_sha256": "3426758874cc6acf59ace61dede0a8e189fe3c6c32d8fa0d934eb788e23878a9",
+    "native_identity": {
+      "compressed_blake3": [
+        235,
+        115,
+        193,
+        232,
+        0,
+        155,
+        254,
+        151,
+        231,
+        165,
+        69,
+        2,
+        118,
+        229,
+        228,
+        199,
+        173,
+        252,
+        111,
+        230,
+        59,
+        32,
+        80,
+        153,
+        21,
+        24,
+        208,
+        148,
+        113,
+        69,
+        12,
+        132
+      ],
+      "compressed_bytes": 2456235,
+      "decoded_blake3": [
+        83,
+        182,
+        5,
+        124,
+        210,
+        42,
+        77,
+        52,
+        19,
+        208,
+        205,
+        223,
+        221,
+        246,
+        14,
+        166,
+        137,
+        7,
+        19,
+        247,
+        14,
+        165,
+        234,
+        163,
+        138,
+        143,
+        207,
+        155,
+        42,
+        41,
+        190,
+        203
+      ],
+      "decoded_bytes": 16593448
+    }
+  },
+  "producer_build_report": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/strict-pilot-first2-run2-budget2400/builder-work/build.json",
+    "sha256": "6d12f1329b992c3a46614c61b5fb004897444c705aa41f3559a14ff9d3febea1"
+  },
+  "producer_workload": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/proposed-pilot-workload-first2.json",
+    "sha256": "b5a502290b714bb96dc2979cfb481c66ba1faeddfff0395f003ef165d351bf05"
+  },
+  "consumer_workload": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-fallback2-import/consumer-two-root-workload.json",
+    "sha256": "f022d21736684ed9831619c919250cce79f4eeacb9e9b3245ae3f872cb7f8f60"
+  },
+  "candidate_acceptance": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/strict-pilot-first2-run2-budget2400/accepted-candidate.json",
+    "sha256": "8513bbac970bab938d4c2806f53f0757896b6b6de2b6f1116bad0299ad2f90a5"
+  },
+  "native_compatibility_bridge": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/root-accepted-fallback2-native-compatibility/accepted-cache-consumer-bridge.json",
+    "sha256": "daa07861eaf718d289073709bac5c50f5e633832cdccb20ab35cf070d8c9aca9"
+  },
+  "native_compatibility_validation": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/root-accepted-fallback2-native-compatibility/validation.json",
+    "sha256": "cbedb84e8a0bbf2d97caa89abb4f3c2d35cb28ee43deff3af06e253c3c8ed02f"
+  },
+  "discarded_three_root_trial": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/final-sparse-three-root-run1/terminal-outcome.json",
+    "sha256": "c025aa100a7c87daabe3dbd56d936a8791b902647efa5949a0a0d06bba7f4933"
+  },
+  "wall_budget_ledger": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/phase-wall-budget-ledger-after-final-three-root.json",
+    "sha256": "6c97392984ee2267f1dffad506011f9ecb4ddc38e46a40f4f559c3f4230d8f8c"
+  },
+  "required_single_runtime_target": "5L/cache/prepared.rrcache.gz",
+  "original_producer_phase": "pilot",
+  "original_producer_revision": "8ef03d7fd7557772e1b531b71b71c08e3419ff54",
+  "strict_completed_root_count": 2,
+  "total_records": 25088,
+  "intermediates": 25086,
+  "existing_external_release_readiness": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/external-final-single-file-release-plan.json",
+    "sha256": "ffbb87d3cf410603b57309a23f2e9a06b6abbf6a4a6d8319c63c7240da612e9e"
+  },
+  "stage_owner": "/root/push5_partial_continue",
+  "stage_or_publication_authorization": "This handoff grants no external mutation, repository push or release authority; Root controls a separate staging/publication step.",
+  "pending": [
+    "Final active-source/runtime compatibility checks remain separate from actualC6 compatibility",
+    "Held-out and physical cached-vs-uncached final medians remain pending",
+    "Actual published release download/cache attachment/offline reuse remains pending"
+  ]
+}

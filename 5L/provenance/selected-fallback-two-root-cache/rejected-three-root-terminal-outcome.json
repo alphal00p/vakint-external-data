@@ -1,0 +1,108 @@
+{
+  "schema": "vakint.final-sparse-three-root-terminal-outcome.v1",
+  "sealed_utc": "2026-10-25T00:22:48.244253+00:00",
+  "outcome": "TIME_BUDGET_INCOMPLETE_NO_CANDIDATE_ALL_PROCESSES_DRAINED",
+  "outer_execution_session": 43003,
+  "outer_execution_cell_exit_code": 0,
+  "worker_exit_code": 1,
+  "external_timeout": false,
+  "hard_deadline_exhausted": false,
+  "complete": false,
+  "publishable": false,
+  "candidate_exists": false,
+  "qualification_marker_exists": false,
+  "strict_complete_roots": 1,
+  "selected_roots": 3,
+  "original_resource_failure": {
+    "detail": "elapsed time 31103.767351936s reached the configured time budget 31101.643884064s",
+    "resource": "elapsed"
+  },
+  "original_checkpoint_failure": {
+    "detail": "elapsed time 31103.778690136s reached the configured time budget 31101.643884064s",
+    "kind": "limit"
+  },
+  "native_statistics": {
+    "cache_work": {
+      "evicted_coefficient_bytes": 0,
+      "evicted_coefficient_terms": 0,
+      "evicted_entries": 0,
+      "recomputed_nodes": 0
+    },
+    "native": {
+      "cache_hits": 37856929,
+      "cached_coefficient_bytes": 51339275684,
+      "cached_coefficient_terms": 775444200,
+      "cached_integrals": 792850,
+      "coalescing_additions": 45916921,
+      "rule_applications": 256987
+    }
+  },
+  "capture": {
+    "capture_lookup_budget_skips": 0,
+    "capture_metadata_exhausted_roots": 0,
+    "capture_metadata_peak_bytes": 0,
+    "capture_native_skipped_records": 0,
+    "capture_offered_records": 792850,
+    "capture_oversized_records": 0,
+    "capture_profile": "completed-intermediates-with-local-guard-provenance-v1",
+    "charged_disk_bytes": 14741085182,
+    "newly_stored_intermediates": 792831,
+    "newly_stored_roots": 1
+  },
+  "timings_seconds": {
+    "outer_total_including_controller_finalization": 32613.349550541956,
+    "driver_supervision": 32606.478533595,
+    "worker_total": 32582.788913479,
+    "initial_data_activation_plus_ownerproof_validation": 675.109557687,
+    "strict_application_setup": 622.356115936,
+    "preparation_inclusive_strict_setup": 31726.204810266,
+    "native_runner_report": 31103.769389334,
+    "worker_unattributed_after_loading_and_preparation": 181.4745455259981
+  },
+  "bounds": {
+    "original_final_whole_start": "2026-10-24T15:15:35.040789+00:00",
+    "original_final_whole_deadline": "2026-10-25T01:15:35.040789+00:00",
+    "whole_seconds": 36000,
+    "attempt_within_whole": true,
+    "owner_seal_elapsed_since_original_start": 32833.203464,
+    "owner_seal_remaining_before_original_deadline": 3166.796536,
+    "reset_or_retry_performed": false
+  },
+  "receipts": {
+    "outer": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/final-sparse-three-root-run1/receipt.json",
+      "sha256": "9f4432bab531a725f74a48f07173d9d5c98e85e8505f502fb6fa0964ced3eb7e"
+    },
+    "native_worker": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/final-sparse-three-root-run1/builder-work/worker.json",
+      "sha256": "98c6b51af8bcf7fc0225f65f8bbb6da601b8ddd146b54f29197398d883886b96"
+    },
+    "build": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/final-sparse-three-root-run1/builder-work/build.json",
+      "sha256": "6e2c56ae7a6dda334b788fcb20de91cb84f514cfadb9ab8753b4dca5f039d7a3"
+    },
+    "supervisor": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/final-sparse-three-root-run1/builder-work/supervisor.json",
+      "sha256": "6d406a9c49cf3fbc26d625098c11a0cf46ef84510a097b1cb2596986322cc3bb"
+    },
+    "source_comparison": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/final-sparse-three-root-run1/source-comparison-audit/comparison.json",
+      "sha256": "4ab5fbd7acf08b74a2bd3f4dd02b9607cbb47da456a5f2aa52ab7d195031dcd4"
+    }
+  },
+  "fallback_preserved": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/strict-pilot-first2-run2-budget2400/candidate.rrcache.gz",
+    "sha256": "cc5e6d80aacc737b81be1675a8aa02694b9ccaa1e4f31cc2d5a34199e4f1a19d"
+  },
+  "fallback_pointer_preserved": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/last-complete-candidate.json",
+    "sha256": "982784e20d80942a4ec87f1b03bc8c01d8dfdf11b4f2528951f53bf0b8f3116b"
+  },
+  "fallback_selected": false,
+  "prior_exploration_ledger_preserved": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/phase-wall-budget-ledger-after-factorized-diagnostic.json",
+    "sha256": "7cf356c41334fea2657f44a60b29dd61b10bd4b106654e3aacdaf46b591374bb"
+  },
+  "selection_or_publication_performed": false,
+  "scope": "Strict3-root preparation did not complete; no file eligibility/size/parity gate ran and no partial3-root cache is accepted. OriginalElapsed is not irreducibility/catalogue-closure evidence. Native source order priority0,R3,priority1; last pre-failure boundary35.719s follows priority0. Oldq0 continues separately unchanged."
+}

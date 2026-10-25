@@ -1,0 +1,45 @@
+{
+  "schema": "vakint.existing-consumer-owner-proof-validation.v1",
+  "valid": true,
+  "utc": "2026-10-24T19:45:14.545765+00:00",
+  "compile_precommit": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/existing-owner-proof-validation/precommit.json",
+    "sha256": "94ece4b240aa679469182392be84ac347481ad284e9d9b123f0f5a690b1398f9"
+  },
+  "compile_result": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/existing-owner-proof-validation/compile-result.json",
+    "sha256": "4a7fa53c896373f973489693b5818b29f6ad399883cbd91cb2b817528b31575b"
+  },
+  "executable": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/existing-owner-proof-validation/validate-existing-owner-proof-sha256-42be0356c5d55e3edd85c5046f279eb8d702394b58a22eefdb007ca4bc859ab9",
+    "sha256": "42be0356c5d55e3edd85c5046f279eb8d702394b58a22eefdb007ca4bc859ab9"
+  },
+  "command": [
+    "taskset",
+    "-c",
+    "49-56",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/existing-owner-proof-validation/validate-existing-owner-proof-sha256-42be0356c5d55e3edd85c5046f279eb8d702394b58a22eefdb007ca4bc859ab9",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/final-workload.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/external-model-identity",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/compiled-cohort.json"
+  ],
+  "exit_code": 0,
+  "stdout": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/existing-owner-proof-validation/validator.stdout.json",
+    "sha256": "c0b430eead1b6312165c45fb4f8fdba6547623e5e267b9e5c3260b2bee6dc3fd"
+  },
+  "stderr": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/existing-owner-proof-validation/validator.stderr.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "workload": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/final-workload.json",
+    "sha256": "4069fe3e1df733c3bdb0e39bd649292743eae60d4db53d258fbe7742c1dbd786"
+  },
+  "proof": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-consumer-c6-requalification/owner-proof.json",
+    "sha256": "6b367a2526c92540354af5cf9f8449f7e76944ee91d0c216db09544e8097148d"
+  },
+  "input_drift": [],
+  "reduction_or_cache_import_performed": false
+}
