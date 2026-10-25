@@ -150,6 +150,66 @@ class PortableDataTests(unittest.TestCase):
         self.assertEqual(len(list(outputs[0].iterdir())), 7)
         self.assertNotIn("provenance_assets", data.read_json(outputs[0] / "manifest.json"))
 
+    def test_runtime_only_keeps_exact_runtime_bytes_without_source_evidence(self):
+        directory, evidence, source = self.provenance_fixture()
+        full, runtime = self.base / "full", self.base / "runtime"
+        with patch.object(data, "ROOT", self.root), contextlib.redirect_stdout(io.StringIO()):
+            data.pack(full, directory)
+            evidence.unlink()  # A fresh CI checkout has metadata, not this asset.
+            with patch.object(data, "checked_provenance_assets", side_effect=AssertionError("runtime mode accessed external evidence")):
+                data.pack(runtime, runtime_only=True)
+            with self.assertRaisesRegex(ValueError, "--provenance-assets is required"):
+                data.pack(self.base / "still-strict-full")
+        manifest = data.read_json(runtime / "manifest.json")
+        self.assertEqual((runtime / "manifest.json").read_bytes(), (full / "manifest.json").read_bytes())
+        self.assertEqual(manifest["provenance_assets"], source["provenance_assets"])
+        for pack in manifest["loop_packs"]:
+            self.assertEqual((runtime / pack["archive"]).read_bytes(), (full / pack["archive"]).read_bytes())
+        marker = data.read_json(runtime / data.RUNTIME_ONLY_MARKER)
+        self.assertIs(marker["publishable"], False)
+        self.assertEqual(marker["omitted_provenance_assets"], source["provenance_assets"])
+        self.assertEqual(marker["source_manifest_sha256"], data.digest(self.root / "manifest.json"))
+        names = {pack["archive"] for pack in manifest["loop_packs"]}
+        self.assertEqual({p.name for p in runtime.iterdir()}, names | {"manifest.json", "SHA256SUMS", data.RUNTIME_ONLY_MARKER})
+        checksums = (runtime / "SHA256SUMS").read_text()
+        self.assertIn(f"{data.digest(runtime / data.RUNTIME_ONLY_MARKER)}  {data.RUNTIME_ONLY_MARKER}\n", checksums)
+        self.assertNotIn(evidence.name, checksums)
+        self.assertEqual(data.read_json(self.root / "manifest.json"), source)
+
+    def test_runtime_only_requires_fresh_output_and_cannot_silently_become_full(self):
+        directory, _, _ = self.provenance_fixture()
+        output = self.base / "runtime"
+        with patch.object(data, "ROOT", self.root), contextlib.redirect_stdout(io.StringIO()):
+            with self.assertRaisesRegex(ValueError, "mutually exclusive"):
+                data.pack(output, directory, runtime_only=True)
+            self.assertFalse(output.exists())
+            data.pack(output, runtime_only=True)
+            before = {p.name: p.read_bytes() for p in output.iterdir()}
+            with self.assertRaisesRegex(ValueError, "must be empty"):
+                data.pack(output, runtime_only=True)
+            with self.assertRaisesRegex(ValueError, "use a new output directory"):
+                data.pack(output, directory)
+        self.assertEqual({p.name: p.read_bytes() for p in output.iterdir()}, before)
+
+    def test_runtime_only_cli_is_explicit_and_deterministic_without_declared_assets(self):
+        outputs = [self.base / "runtime-first", self.base / "runtime-second"]
+        with patch.object(data, "ROOT", self.root), contextlib.redirect_stdout(io.StringIO()):
+            for output in outputs:
+                with patch.object(sys, "argv", ["data.py", "pack", "--runtime-only", "--output", str(output)]):
+                    data.main()
+        self.assertEqual(
+            {p.name: p.read_bytes() for p in outputs[0].iterdir()},
+            {p.name: p.read_bytes() for p in outputs[1].iterdir()},
+        )
+        self.assertEqual(data.read_json(outputs[0] / data.RUNTIME_ONLY_MARKER)["omitted_provenance_assets"], [])
+        with (
+            patch.object(sys, "argv", ["data.py", "pack", "--runtime-only", "--provenance-assets", str(self.base), "--output", str(self.base / "conflict")]),
+            contextlib.redirect_stderr(io.StringIO()),
+            self.assertRaises(SystemExit) as error,
+        ):
+            data.main()
+        self.assertEqual(error.exception.code, 2)
+
     def test_generated_loop_archive_size_is_checked_before_hash_and_manifest(self):
         # A small explicit test ceiling exercises the same strict boundary
         # without creating a two-gigabyte test file.

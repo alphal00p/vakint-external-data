@@ -111,6 +111,28 @@ class PublicationTests(unittest.TestCase):
         self.assertLess(published, alias_assets)
         self.assertLess(alias_assets, alias_manifest)
 
+    def test_runtime_only_marker_rejects_even_complete_assets_before_any_mutation(self):
+        self.add_source_evidence()
+        marker = self.directory / publish.data.RUNTIME_ONLY_MARKER
+        marker.write_text(json.dumps({"schema": "vakint.runtime-only-pack.v1", "publishable": False}))
+        calls = []
+        with self.assertRaisesRegex(RuntimeError, "runtime-only validation packs are not publishable"):
+            self.invoke(calls=calls)
+        self.assertEqual(calls, [])
+
+    def test_removing_runtime_marker_does_not_make_missing_evidence_publishable(self):
+        evidence = self.add_source_evidence()
+        evidence.unlink()
+        marker = self.directory / publish.data.RUNTIME_ONLY_MARKER
+        marker.write_text("{}")
+        for marked in (True, False):
+            if not marked:
+                marker.unlink()
+            calls = []
+            with self.subTest(marked=marked), self.assertRaisesRegex(RuntimeError, "not publishable|not a regular file"):
+                self.invoke(calls=calls)
+            self.assertEqual(calls, [])
+
     def test_all_loop_archive_sizes_are_checked_before_hashing_or_mutation(self):
         valid = copy.deepcopy(self.manifest)
         for value in (0, -1, True, "42", 1.5, 2_000_000_000, 2_000_000_001):

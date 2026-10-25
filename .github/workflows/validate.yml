@@ -15,9 +15,10 @@ jobs:
           python-version: '3.13'
       - run: python3 tools/data.py validate
       - run: python3 -m unittest discover -s tests
-      - run: python3 tools/data.py pack --output "$RUNNER_TEMP/vakint-release"
+      - name: Build nonpublishable runtime validation packs
+        run: python3 tools/data.py pack --runtime-only --output "$RUNNER_TEMP/vakint-runtime-validation"
       - uses: actions/upload-artifact@v4
         with:
-          name: vakint-external-data-release
-          path: ${{ runner.temp }}/vakint-release
+          name: vakint-external-data-runtime-validation
+          path: ${{ runner.temp }}/vakint-runtime-validation
           if-no-files-found: error

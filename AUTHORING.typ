@@ -269,6 +269,16 @@ Native RustRed validation is separately required for BLAKE3, Symbolica state,
 solver ownership, exact coefficients, guards and cold/warm parity. The Python
 source checks never establish new algebraic authority or campaign coverage.
 
+CI packaging uses `tools/data.py pack --runtime-only --output PATH` to check
+runtime archives without fetching optional source evidence. This explicit mode
+requires an empty output directory, preserves the full manifest declarations
+and runtime archive bytes, and writes checksummed `RUNTIME_ONLY.json`. These
+artifacts are not a complete release and the publisher rejects them, even if
+evidence is later copied alongside them. Full publication still requires the
+default pack mode with every authenticated `--provenance-assets` file, using a
+new output directory. Do not delete declarations or edit the manifest to make
+an incomplete validation bundle appear publishable.
+
 == Prepared physical benchmark inputs
 
 `5L/benchmarks/quadratic` and `5L/benchmarks/zero-momentum` contain complete

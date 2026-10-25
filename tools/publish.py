@@ -86,6 +86,9 @@ def check_release_target(version, commit, current):
 
 def checked_assets(directory, manifest, source):
     """Allow only generated archive identities to differ from committed metadata."""
+    marker = directory / data.RUNTIME_ONLY_MARKER
+    if marker.exists() or marker.is_symlink():
+        raise RuntimeError("runtime-only validation packs are not publishable; rebuild in full mode")
     identity = copy.deepcopy(manifest)
     for pack in identity["loop_packs"]:
         pack["archive_sha256"] = None

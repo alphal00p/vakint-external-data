@@ -36,6 +36,13 @@ Without `provenance_assets`, the existing packing and publication behavior is
 unchanged and the extra argument is unnecessary. Version changes require
 removing the old version's evidence rows and authoring the new ones explicitly.
 
+CI can validate the same deterministic runtime packs without downloading source
+evidence by running `python3 tools/data.py pack --runtime-only --output PATH`
+with an empty output directory. This preserves the release manifest and runtime
+archive bytes, records omitted evidence in checksummed `RUNTIME_ONLY.json`, and
+produces **nonpublishable** validation artifacts. The publisher rejects them;
+build a full release in a new directory with every declared source asset.
+
 ```python
 engine.load_official_external_data(4)
 engine.load_official_external_data(4, version="v0.1.1", local_artifacts_path="/path/to/data")

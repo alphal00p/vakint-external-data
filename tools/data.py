@@ -1036,13 +1036,34 @@ def validate(root=None):
     return manifest
 
 
-def pack(output, provenance_directory=None):
+RUNTIME_ONLY_MARKER = "RUNTIME_ONLY.json"
+
+
+def pack(output, provenance_directory=None, *, runtime_only=False):
+    if runtime_only and provenance_directory is not None:
+        raise ValueError("--runtime-only and --provenance-assets are mutually exclusive")
     manifest = validate()
-    evidence = checked_provenance_assets(provenance_directory, manifest)
+    declared_evidence = provenance_assets(manifest)
+    evidence = [] if runtime_only else checked_provenance_assets(provenance_directory, manifest)
     output = Path(output).resolve()
     if output.is_relative_to(ROOT):
         raise ValueError("release outputs must be outside the source repository")
+    marker = output / RUNTIME_ONLY_MARKER
+    if runtime_only:
+        if output.exists() and any(output.iterdir()):
+            raise ValueError("runtime-only output directory must be empty")
+    elif marker.exists() or marker.is_symlink():
+        raise ValueError("runtime-only output cannot become a release; use a new output directory")
     output.mkdir(parents=True, exist_ok=True)
+    if runtime_only:
+        write_json(marker, {
+            "schema": "vakint.runtime-only-pack.v1",
+            "publishable": False,
+            "version": manifest["version"],
+            "source_manifest_sha256": digest(ROOT / "manifest.json"),
+            "omitted_provenance_assets": declared_evidence,
+            "scope": "Runtime validation archives only; rebuild in full mode for publication.",
+        })
     for loop in manifest["loop_packs"]:
         target = output / loop["archive"]
         with (
@@ -1079,7 +1100,8 @@ def pack(output, provenance_directory=None):
             ),
             flush=True,
         )
-    for source, asset in zip(evidence, provenance_assets(manifest), strict=True):
+    included_evidence = [] if runtime_only else declared_evidence
+    for source, asset in zip(evidence, included_evidence, strict=True):
         destination = checked_path(output, asset["archive"])
         copy_verified(source, destination)
         if file_record(destination) != {
@@ -1088,12 +1110,12 @@ def pack(output, provenance_directory=None):
             raise ValueError(f"provenance asset changed while packing: {source}")
     write_json(output / "manifest.json", manifest)
     archive_names = {x["archive"] for x in manifest["loop_packs"]}
-    archive_names.update(a["archive"] for a in provenance_assets(manifest))
+    archive_names.update(a["archive"] for a in included_evidence)
     (output / "SHA256SUMS").write_text(
         "".join(
             f"{digest(p)}  {p.name}\n"
             for p in sorted(output.iterdir())
-            if p.name == "manifest.json"
+            if p.name == "manifest.json" or (runtime_only and p.name == RUNTIME_ONLY_MARKER)
             or p.name in archive_names
         )
     )
@@ -1139,7 +1161,12 @@ def main():
     commands.add_parser("validate")
     packing = commands.add_parser("pack")
     packing.add_argument("--output", type=Path, required=True)
-    packing.add_argument("--provenance-assets", type=Path)
+    assets = packing.add_mutually_exclusive_group()
+    assets.add_argument("--provenance-assets", type=Path)
+    assets.add_argument(
+        "--runtime-only", action="store_true",
+        help="Build nonpublishable runtime validation packs without external source evidence",
+    )
     args = parser.parse_args()
     if args.command == "migrate":
         migrate(args.source, args.vakint_source)
@@ -1150,7 +1177,7 @@ def main():
     elif args.command == "validate":
         validate()
     elif args.command == "pack":
-        pack(args.output, args.provenance_assets)
+        pack(args.output, args.provenance_assets, runtime_only=args.runtime_only)
 
 
 if __name__ == "__main__":
