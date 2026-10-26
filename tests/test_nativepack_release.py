@@ -378,34 +378,45 @@ class NativePackReleaseTests(unittest.TestCase):
             ):
                 self.checked_release(output)
 
-    def test_shared_parts_across_snapshots_are_copied_and_checksummed_once(self):
+    def test_same_loop_snapshot_selection_rejects_identical_and_distinct_references(
+        self,
+    ):
         second = self.root / "5L/cache" / (("d" * 64) + ".json")
         data.write_json(second, self.descriptor)
-        self.source["runtime_cache_snapshots"].append(
-            {
-                "loop_count": 5,
-                "manifest": second.relative_to(self.root).as_posix(),
-                "manifest_sha256": data.digest(second),
-                "manifest_bytes": second.stat().st_size,
-            }
-        )
+        second_reference = {
+            "loop_count": 5,
+            "manifest": second.relative_to(self.root).as_posix(),
+            "manifest_sha256": data.digest(second),
+            "manifest_bytes": second.stat().st_size,
+        }
         self.write_loop(5, self.loop)
         self.source["loop_packs"][4]["manifest_sha256"] = data.digest(
             self.root / "5L/manifest.json"
         )
-        data.write_json(self.root / "manifest.json", self.source)
-        self.assertEqual(
-            data.runtime_cache_assets(self.root, self.source), self.descriptor["parts"]
+        first_reference = self.source["runtime_cache_snapshots"][0]
+        selections = (
+            [first_reference, copy.deepcopy(first_reference)],
+            [first_reference, second_reference],
+            [second_reference, first_reference],
         )
-        output = self.build_release(runtime_cache_directory=self.assets_directory)
-        checksums = (output / "SHA256SUMS").read_text().splitlines()
-        for part in self.descriptor["parts"]:
-            self.assertEqual(
-                sum(line.endswith(f"  {part['archive']}") for line in checksums), 1
-            )
-        archives = self.checked_release(output)
-        self.assertEqual(len(archives), len(set(archives)))
-        self.assertEqual(len(archives), 5 + len(self.descriptor["parts"]) + 2)
+        for index, references in enumerate(selections):
+            self.source["runtime_cache_snapshots"] = references
+            data.write_json(self.root / "manifest.json", self.source)
+            with self.subTest(references=references):
+                with self.assertRaisesRegex(
+                    ValueError, "multiple selected runtime cache snapshots for 5L"
+                ):
+                    data.runtime_cache_assets(self.root, self.source)
+                output = self.base / f"duplicate-selection-{index}"
+                with self.assertRaisesRegex(
+                    ValueError, "multiple selected runtime cache snapshots for 5L"
+                ):
+                    self.build_release(
+                        output.name, runtime_cache_directory=self.assets_directory
+                    )
+                self.assertFalse(output.exists())
+        self.assertEqual(nativepack.read_json(second), self.descriptor)
+        nativepack.verify_archives(self.descriptor, self.assets_directory)
 
     def test_publisher_rejects_unlisted_runtime_archive_and_changed_static_reference(
         self,

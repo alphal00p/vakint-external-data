@@ -129,15 +129,20 @@ def checked_provenance_assets(directory, manifest):
 
 
 def runtime_cache_assets(root, manifest):
-    """Authenticate opt-in NativePack metadata without reading Native records."""
+    """Authenticate selected NativePack metadata without reading Native records."""
     import nativepack
     from saved_cache import validate_nativepack
 
     references = manifest.get("runtime_cache_snapshots", [])
     if not isinstance(references, list):
         raise ValueError("runtime_cache_snapshots must be a list")  # noqa: TRY004 - metadata admission uses ValueError
+    selected_loops = set()
     for reference in references:
         descriptor = nativepack.validate_reference(root, reference)
+        loop_count = reference["loop_count"]
+        if loop_count in selected_loops:
+            raise ValueError(f"multiple selected runtime cache snapshots for {loop_count}L")
+        selected_loops.add(loop_count)
         if reference["loop_count"] != 5:
             raise ValueError("runtime cache snapshot source admission currently requires 5L")
         pack = next((pack for pack in manifest["loop_packs"] if pack["loop_count"] == 5), None)

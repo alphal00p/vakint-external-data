@@ -272,10 +272,12 @@ source checks never establish new algebraic authority or campaign coverage.
 === Optional cumulative NativePack transport
 
 Large cumulative caches have an explicit, optional transport descriptor. They
-do not replace `cache/prepared.rrcache.gz`, change its descriptor or size limits,
-or enable automatic downloads during ordinary data loading. The cumulative
-NativePack has no total-cache size cap. The 1.8 GB bound below admits individual
-release assets; it never authorizes deleting, truncating or compacting records.
+preserve `cache/prepared.rrcache.gz`, its descriptor, size limits and provenance.
+An explicitly requested official-data load selects the cumulative snapshot in
+preference to that legacy small cache for the same loop count. Ordinary engine
+construction remains offline. The cumulative NativePack has no total-cache size
+cap. The 1.8 GB bound below admits individual release assets; it never authorizes
+deleting, truncating or compacting records.
 
 The root manifest's optional `runtime_cache_snapshots` list authenticates each
 small descriptor with exactly `loop_count`, `manifest`, `manifest_sha256` and
@@ -283,8 +285,27 @@ small descriptor with exactly `loop_count`, `manifest`, `manifest_sha256` and
 `5L/cache/NAME.json`, also present in the five-loop file inventory. The same
 descriptor bytes are published as standalone asset `NAME.json`; its immutable
 release URL uses that basename. Descriptor basenames must be globally unique
-across snapshot descriptors and release assets. These are runtime assets, never
-`provenance_assets` evidence declarations.
+across snapshot descriptors and release assets. At most one snapshot may be
+selected per loop count; multiple same-loop rows are rejected, rather than
+choosing the first. These are runtime assets, never `provenance_assets` evidence
+declarations. The four-field reference schema remains unchanged.
+
+`load_official_external_data(..., load_prepared_caches=True)` downloads and
+attaches each selected snapshot automatically for the requested loop range;
+`True` is the default. It authenticates the descriptor and parts against the
+same release manifest before activating the complete dataset. With
+`load_prepared_caches=False`, it still authenticates the selected descriptor,
+but downloads no snapshot parts and attaches no prepared cache. An already
+validated installation is reusable offline, including its selected snapshot.
+
+A recognized external-data checkout never triggers HTTP requests or writes to
+that checkout. For prepared-cache loading, its selected snapshot must already
+exist at `cache-snapshots/DESCRIPTOR_SHA256`, relative to the checkout root,
+where `DESCRIPTOR_SHA256` is the reference's `manifest_sha256`. A missing or
+invalid local snapshot is an error, without falling back to the legacy small
+cache or downloading parts into the checkout. Explicit import or manual cache
+population is a separate operation. Setting `load_prepared_caches=False`
+authenticates the descriptor without requiring this local snapshot.
 
 Each descriptor uses `schema: "vakint.nativepack-transport.v1"` and exactly
 `loop_count`, `binding`, `generation`, `stored_record_references`, `files` and
