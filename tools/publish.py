@@ -111,6 +111,10 @@ def checked_assets(directory, manifest, source):
     assets = [*manifest["loop_packs"], *evidence, *runtime, *descriptors]
     if any(not data.valid_archive_bytes(asset["archive_bytes"]) for asset in assets):
         raise RuntimeError("release archive sizes must be positive integers smaller than 2 GB")
+    try:
+        data.validate_release_cache_budget(ROOT, manifest)
+    except ValueError as error:
+        raise RuntimeError(str(error)) from error
     expected_files = {asset["archive"] for asset in assets} | {"manifest.json", "SHA256SUMS"}
     if len(expected_files) > RELEASE_ASSET_COUNT_LIMIT:
         raise RuntimeError("release exceeds the 1000-asset hosting allowance")

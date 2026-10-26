@@ -151,6 +151,29 @@ class NativePackReleaseTests(unittest.TestCase):
         )
         self.assertTrue(all(part["archive_bytes"] < 2_000_000_000 for part in assets))
 
+    def test_release_light_budget_sums_native_parts_without_capping_local_transport(self):
+        descriptor = copy.deepcopy(self.descriptor)
+        other_parts = sum(part["archive_bytes"] for part in descriptor["parts"][1:])
+        descriptor["parts"][0]["archive_bytes"] = 95_000_000 - other_parts
+        self.write_descriptor(descriptor)
+        self.assertEqual(data.validate_release_cache_budget(self.root, self.source), 95_000_000)
+        descriptor["parts"][0]["archive_bytes"] += 1
+        self.write_descriptor(descriptor)
+        # Metadata-only local validation still permits a larger Native snapshot;
+        # no large file or Native record is created by this fixture.
+        self.assertEqual(data.runtime_cache_assets(self.root, self.source), descriptor["parts"])
+        nativepack.validate_descriptor(descriptor)
+        with contextlib.redirect_stdout(io.StringIO()):
+            data.validate(self.root)
+        output = self.base / "heavy-must-not-become-official-light"
+        with (
+            self.assertRaisesRegex(ValueError, "95000001.*95000000"),
+            patch.object(data, "checked_runtime_cache_assets") as asset_copy,
+        ):
+            self.build_release(output.name, runtime_cache_directory=self.assets_directory)
+        self.assertFalse(output.exists())
+        asset_copy.assert_not_called()
+
     def test_reference_rejects_changed_descriptor_identity_and_unsafe_paths(self):
         valid = copy.deepcopy(self.source)
         for change in (

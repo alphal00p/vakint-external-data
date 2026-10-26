@@ -261,7 +261,9 @@ a safely completed root or strengthen the saved campaign's certification. Any
 unknown leaf still fails strict preparation; only complete, guarded native
 records may be published or satisfy strict lookups.
 
-The compressed file is limited to 95 MiB and decoded framing/payload to 1 GiB.
+The native single-file admission checks retain their 95 MiB compressed and
+1 GiB decoded framing/payload safety limits. These codec checks are separate
+from the official release policy below.
 Above the 50 MiB target, `size_exception` must bind a measured comparison and show
 at least twenty percent improvement in either the quadratic median IBP time or
 the tuning-suite geometric mean against the best file at or below 50 MiB.
@@ -271,13 +273,27 @@ source checks never establish new algebraic authority or campaign coverage.
 
 === Optional cumulative NativePack transport
 
-Large cumulative caches have an explicit, optional transport descriptor. They
-preserve `cache/prepared.rrcache.gz`, its descriptor, size limits and provenance.
-An explicitly requested official-data load selects the cumulative snapshot in
-preference to that legacy small cache for the same loop count. Ordinary engine
-construction remains offline. The cumulative NativePack has no total-cache size
-cap. The 1.8 GB bound below admits individual release assets; it never authorizes
-deleting, truncating or compacting records.
+Cumulative caches have an explicit, optional transport descriptor. Local
+NativePack creation, import and HEAVY archives have no aggregate publication
+budget. Preserve every useful heavy cache independently of the official LIGHT
+selection; size never authorizes deleting or truncating captured records.
+
+Official five-loop releases publish at most *95,000,000 compressed cache bytes*
+(decimal bytes, not 95 MiB). The aggregate is the existing
+`cache/prepared.rrcache.gz` file plus every compressed release part of a selected
+five-loop `runtime_cache_snapshots` descriptor. Descriptor and inventory metadata,
+other loop data and lower-loop caches are outside this cache-payload budget.
+There is no second cap on decoded Native files, indexes or directory size.
+Full `tools/data.py pack` and `tools/publish.py` both enforce this policy before
+creating release archives or uploading assets. The current LIGHT path remains
+the single prepared gzip; do not select a HEAVY descriptor in an official release.
+
+This is a publication policy, not a Native codec limit. General
+`pack-nativepack`, local source validation and nonpublishable `--runtime-only`
+packing remain available for large snapshots. The 1.8 GB bound below applies to
+individual transport containers, independently of aggregate size. When a small
+snapshot is intentionally selected, an official-data load prefers it to the
+legacy prepared file for that loop count. Ordinary construction remains offline.
 
 The root manifest's optional `runtime_cache_snapshots` list authenticates each
 small descriptor with exactly `loop_count`, `manifest`, `manifest_sha256` and

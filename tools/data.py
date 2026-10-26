@@ -20,6 +20,7 @@ LOOP_SCHEMA = "vakint.external-data.loop.v1"
 PRODUCER_SCHEMA = "vakint.external-data.producer-update.v1"
 PRIMER_ROOTS = {1: 5, 2: 77, 3: 2320, 4: 164352}
 RELEASE_ASSET_BYTES_LIMIT = 2_000_000_000
+FIVE_LOOP_LIGHT_CACHE_BYTES_LIMIT = 95_000_000
 
 
 def read_json(path):
@@ -195,6 +196,30 @@ def checked_runtime_cache_assets(root, manifest, directory):
     for reference in manifest.get("runtime_cache_snapshots", []):
         nativepack.verify_archives(nativepack.validate_reference(root, reference), directory)
     return [checked_path(directory, asset["archive"]) for asset in assets]
+
+
+def validate_release_cache_budget(root, manifest):
+    """Limit official 5L LIGHT cache downloads, not Native codecs or local tools."""
+    pack = next(pack for pack in manifest["loop_packs"] if pack["loop_count"] == 5)
+    loop_path = checked_path(root, pack["manifest"])
+    if digest(loop_path) != pack["manifest_sha256"]:
+        raise ValueError("five-loop release cache manifest checksum mismatch")
+    loop = read_json(loop_path)
+    compressed_bytes = 0
+    if loop["cache"]["available"]:
+        path = checked_path(loop_path.parent, loop["cache"]["path"])
+        if not path.is_file():
+            raise ValueError("five-loop release cache must be a regular file")
+        compressed_bytes = path.stat().st_size
+    compressed_bytes += sum(
+        asset["archive_bytes"] for asset in runtime_cache_assets(root, manifest)
+    )
+    if compressed_bytes > FIVE_LOOP_LIGHT_CACHE_BYTES_LIMIT:
+        raise ValueError(
+            f"official five-loop LIGHT cache has {compressed_bytes} compressed bytes; "
+            f"release budget is {FIVE_LOOP_LIGHT_CACHE_BYTES_LIMIT} bytes"
+        )
+    return compressed_bytes
 
 
 def migrate(source, vakint_source):
@@ -1113,6 +1138,8 @@ def pack(output, provenance_directory=None, *, runtime_only=False, runtime_cache
     if runtime_only and (provenance_directory is not None or runtime_cache_directory is not None):
         raise ValueError("--runtime-only and external asset directories are mutually exclusive")
     manifest = validate()
+    if not runtime_only:
+        validate_release_cache_budget(ROOT, manifest)
     declared_evidence = provenance_assets(manifest)
     evidence = [] if runtime_only else checked_provenance_assets(provenance_directory, manifest)
     declared_runtime = runtime_cache_assets(ROOT, manifest)

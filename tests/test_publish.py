@@ -43,6 +43,10 @@ class PublicationTests(unittest.TestCase):
                 for loop in range(1, 6)
             ],
         }
+        five_loop_manifest = self.root / "5L/manifest.json"
+        five_loop_manifest.parent.mkdir()
+        five_loop_manifest.write_text(json.dumps({"cache": {"available": False}}))
+        self.source["loop_packs"][4]["manifest_sha256"] = self.digest(five_loop_manifest)
         self.manifest = copy.deepcopy(self.source)
         for pack in self.manifest["loop_packs"]:
             archive = self.directory / pack["archive"]
@@ -118,6 +122,21 @@ class PublicationTests(unittest.TestCase):
         calls = []
         with self.assertRaisesRegex(RuntimeError, "runtime-only validation packs are not publishable"):
             self.invoke(calls=calls)
+        self.assertEqual(calls, [])
+
+    def test_light_budget_is_rechecked_before_asset_hashes_or_publication(self):
+        calls = []
+        with (
+            patch.object(
+                publish.data, "validate_release_cache_budget",
+                side_effect=ValueError("official five-loop LIGHT cache exceeds release budget"),
+            ) as budget,
+            patch.object(publish.hashlib, "file_digest") as digest,
+            self.assertRaisesRegex(RuntimeError, "LIGHT cache"),
+        ):
+            self.invoke(calls=calls)
+        budget.assert_called_once_with(self.root, self.manifest)
+        digest.assert_not_called()
         self.assertEqual(calls, [])
 
     def test_removing_runtime_marker_does_not_make_missing_evidence_publishable(self):
