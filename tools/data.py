@@ -923,7 +923,7 @@ def generate(version):
     print(f"Generated {version} metadata for all five loop packs")
 
 
-def validate(root=None):
+def validate(root=None, *, light_cache_admission=None):
     root = ROOT if root is None else root
     from finite_constants import (
         binding as constant_binding,
@@ -946,6 +946,7 @@ def validate(root=None):
         raise ValueError("release must contain disjoint 1L through 5L packs")
     provenance_assets(manifest)
     counts = []
+    light_admission = None
     for pack in manifest["loop_packs"]:
         path = checked_path(root, pack["manifest"])
         if digest(path) != pack["manifest_sha256"]:
@@ -1074,7 +1075,7 @@ def validate(root=None):
         if loop["cache"]["available"] and loop["loop_count"] == 5:
             from saved_cache import validate as validate_saved_cache
 
-            validate_saved_cache(path.parent, loop)
+            light_admission = validate_saved_cache(path.parent, loop)
         elif loop["cache"]["available"]:
             metadata = read_json(path.parent / loop["cache"]["metadata"])
             report = metadata["preparation_report"]
@@ -1127,6 +1128,15 @@ def validate(root=None):
             ):
                 raise ValueError("original validation evidence checksum mismatch")
     runtime_cache_assets(root, manifest)
+    if light_cache_admission is not None:
+        output = Path(light_cache_admission).resolve()
+        if output.is_relative_to(root.resolve()):
+            raise ValueError("LIGHT admission output must be outside the source repository")
+        if light_admission is None:
+            raise ValueError("LIGHT admission requires usage-selected snapshot provenance")
+        output.parent.mkdir(parents=True, exist_ok=True)
+        with output.open("x") as stream:
+            stream.write(json.dumps(light_admission, indent=2) + "\n")
     print(json.dumps({"version": manifest["version"], "validated": counts}))
     return manifest
 
@@ -1269,7 +1279,11 @@ def main():
     generation.add_argument("--version", required=True)
     versioning = commands.add_parser("set-version")
     versioning.add_argument("--version", required=True)
-    commands.add_parser("validate")
+    validation = commands.add_parser("validate")
+    validation.add_argument(
+        "--light-cache-admission", type=Path,
+        help="Write recomputed usage-selection admission outside the source checkout; never overwrite",
+    )
     packing = commands.add_parser("pack")
     packing.add_argument("--output", type=Path, required=True)
     assets = packing.add_mutually_exclusive_group()
@@ -1298,7 +1312,7 @@ def main():
     elif args.command == "set-version":
         set_version(args.version)
     elif args.command == "validate":
-        validate()
+        validate(light_cache_admission=args.light_cache_admission)
     elif args.command == "pack":
         pack(args.output, args.provenance_assets, runtime_only=args.runtime_only,
              runtime_cache_directory=args.runtime_cache_assets)

@@ -470,6 +470,31 @@ class NativePackReleaseTests(unittest.TestCase):
         )
         self.assertEqual(len(self.checked_release(output)), 5)
 
+    def test_usage_admission_output_is_external_exclusive_and_after_validation(self):
+        self.loop["cache"]["available"] = True
+        self.write_descriptor(self.descriptor)
+        admission = {"schema": "vakint.light-cache-selection-admission.v1", "accepted": True, "synthetic_plumbing_fixture": True}
+        output = self.base / "admission.json"
+        with (
+            patch.object(saved_cache, "validate", return_value=admission),
+            contextlib.redirect_stdout(io.StringIO()),
+        ):
+            data.validate(self.root, light_cache_admission=output)
+            self.assertEqual(data.read_json(output), admission)
+            with self.assertRaises(FileExistsError):
+                data.validate(self.root, light_cache_admission=output)
+            inside = self.root / "must-not-write.json"
+            with self.assertRaisesRegex(ValueError, "outside the source repository"):
+                data.validate(self.root, light_cache_admission=inside)
+            self.assertFalse(inside.exists())
+        refused = self.base / "failed-admission.json"
+        with (
+            patch.object(saved_cache, "validate", side_effect=ValueError("synthetic invalid proof")),
+            self.assertRaisesRegex(ValueError, "invalid proof"),
+        ):
+            data.validate(self.root, light_cache_admission=refused)
+        self.assertFalse(refused.exists())
+
     def invoke_nativepack_cli(self, output, descriptor):
         binding = self.base / "public-binding.json"
         data.write_json(binding, self.binding)

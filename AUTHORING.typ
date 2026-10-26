@@ -246,8 +246,9 @@ the native compressed/decoded BLAKE3 identity, decoded SHA256 and complete
 semantic binding; the ordinary file inventory authenticates compressed SHA256.
 `cache.json` uses `vakint.external-data.saved-cache.v1`, with `strict: true`, the
 original `preparation_report`, authenticated `workload` path/SHA256, and final
-build wall time including load, preparation and compaction. `tools/saved_cache.py`
-checks the selected-root completion, disjoint held-out inputs, at most ten hours,
+build wall time including load, preparation and compaction. For these historical
+finite-workload records, `tools/saved_cache.py` checks selected-root completion,
+disjoint held-out inputs, at most ten hours,
 one gzip member, CRC, decoded size/hash and matching native framing. It reproduces
 Vakint's field-length-prefixed semantic digest over the exact application bytes,
 dimension, normalization, family fingerprints and signed catalogue identities.
@@ -270,6 +271,89 @@ the tuning-suite geometric mean against the best file at or below 50 MiB.
 Native RustRed validation is separately required for BLAKE3, Symbolica state,
 solver ownership, exact coefficients, guards and cold/warm parity. The Python
 source checks never establish new algebraic authority or campaign coverage.
+
+=== Usage-selected LIGHT snapshots
+
+A trimmed selection from accumulated strict completed records uses the same
+single-file codec and `vakint.external-data.saved-cache.v1` metadata schema.
+Its `cache.json` has exactly `schema`, `strict: true`, `coverage_claim: false`
+and `selection`. The selection's `kind` is `usage-selected-strict-snapshot`;
+it binds the canonical cumulative producer, original data/index identity,
+source inventory, selected keys, usage profile, selected unique count and raw
+strict Native reimport receipt. `allowed_input_classes` is exactly
+`["tuning", "physical-example"]`, and `final_held_out_used` is false.
+Training-origin records can be selected only through positive observed hits from
+those eligible inputs. No training role is emitted by this profile version.
+
+This variant does not claim that its source workloads completed. It has no
+finite-root completion report, ten-hour cap, 50 MiB threshold or twenty-percent
+exception gate. The actual LIGHT gzip must fit the 95,000,000-byte publication
+budget. The preserved HEAVY snapshot and original incomplete/completed source
+receipts remain unchanged. Only strict completed records can enter the exported
+file; the raw Native receipt must prove exact selected/reimported/complete counts,
+no missing or partial records, exact coefficients and ordered guards, declared
+terminal validation and an unchanged selected source/index identity.
+
+Proof sidecars are source-only files under the repository's existing root
+`provenance/`, not additional five-loop runtime payloads. Every `cache.json`
+reference is an explicit root-relative path and SHA256; traversal, backslashes,
+symlink components and files of 100 MiB or more are refused. Large selected-key,
+usage and inventory summaries may use authenticated `.json.gz` files. Keep full
+per-event traces with HEAVY and retain their hashes; do not add them to Git.
+The version-bound `provenance_assets` inventory stays unchanged.
+
+The existing saved-cache admission delegates profile checks to
+`tools/cache_usage.py`. It decodes exact embedded public eligibility inventories,
+derives tuning membership and raw public-input hashes independently, and checks
+the separate canonical input/result/full-guard hashes against archived accepted
+receipts. Actual invocation and frozen authority documents may differ, but must
+declare the same input. The collector's actual ELF/compiler/profile and all five
+source stamps are bound through the existing compiled artifact and source
+inventories. File-cache and Native-index telemetry retain their actual distinct
+identities. Sampled, failed, malformed, unknown-role or final-held-out cases fail.
+The cohort's `data_manifests` archives the actual original root, five-loop and
+application bodies with root-relative `path_hint`/SHA256 references. Their three
+hashes must match the profile; the root must authenticate the loop, and the loop
+must authenticate the active application bytes. Publishing a changed cache must
+not silently replace those original data identities.
+
+The Native reimport receipt has its own exporter artifact and cohort, distinct
+from the measurement host. Admission authenticates its actual ELF and five
+stamps, canonical layered-helper/Native source identities, and every archived
+source file in its source freeze. Transport references are root-relative;
+original compiler and binary paths remain historical facts, not lookup aliases.
+
+Dispatch ordinals, unique Route roots, completed-root counts, Apply owner masks,
+all six persistent counters and per-key hit multiplicities are recomputed with
+checked integer arithmetic. Dispatch totals must also equal the accepted case's
+Native counters. Selected keys must be unique and have positive frequency among
+the explicitly listed eligible cases. This is a portable summary/eligibility
+check, not an independent replay of the separately hash-bound raw traces.
+
+The recorded physical eligibility anchor covers only the complete zero-momentum
+`q0` fixture. Quadratic examples are deferred. Physical usage requires the same
+complete cached `measure_cache --classify-cache-hits` receipt as tuning, with the
+exact prepared-file input in its authenticated invocation workload. Its portable
+role comes from the physical anchor, irrespective of the CLI's tuning selector.
+Eligibility metadata alone grants no measured usage. Old sampled physical
+monitoring snapshots cannot be promoted into these statistics.
+
+After complete source validation, emit the recomputed admission outside the
+checkout with:
+
+```sh
+python3 tools/data.py validate --light-cache-admission /absolute/workspace/light-admission.json
+```
+
+The output must not already exist. Its
+`vakint.light-cache-selection-admission.v1` receipt binds the cache metadata,
+keys, usage, inventory and raw Native validation hashes, semantic/source-index
+identity, actual distinct counts and the independently recomputed checks.
+The top export proof references this admission and the metadata; neither
+`cache.json` nor the raw Native receipt links back to that top proof or to the
+admission, avoiding a hash cycle. Runtime clients authenticate the ordinary
+manifest, Native codec and program bindings; loading a loop pack does not fetch
+or execute these source-only proof files.
 
 === Optional cumulative NativePack transport
 

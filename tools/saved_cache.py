@@ -214,6 +214,11 @@ def validate(directory, manifest):
         or metadata.get("strict") is not True
     ):
         raise ValueError("saved cache must record strict native preparation")
+    if "selection" in metadata:
+        from cache_usage import validate as validate_usage_selection
+
+        check_gzip(path, cache["identity"], cache["decoded_sha256"])
+        return validate_usage_selection(directory, manifest, metadata)
     workload_ref = metadata["workload"]
     workload_path = data.checked_path(directory, workload_ref["path"])
     if data.digest(workload_path) != workload_ref["sha256"]:
