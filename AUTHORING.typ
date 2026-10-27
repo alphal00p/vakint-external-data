@@ -337,7 +337,8 @@ collector instead uses `vakint.physical-cache-usage-receipt.v1`, with exactly si
 ordinary `path_hint`/SHA256 references: `benchmark`, `completion`, `launch`, and
 their `reference_` counterparts. The normal cached reference disables
 classification; a separate fresh process with the same final ELF, input,
-scientific sources, data, settings and immutable cache enables classification.
+scientific sources, data, settings (including resolved `cache_file_options`)
+and immutable cache enables classification.
 Both must retain identical complete results, canonical sorted/deduplicated guard
 sets including preparation conditions, family maps and empty unknown inventories.
 The public guard file is not the Native records' original ordered guard vector.
@@ -357,7 +358,10 @@ compiler, five source stamps, collector source and the five shared helper paths
 in `collector_helper_sources_sha256`. The physical reports must bind the same
 helper hashes and exact canonical prepared-input text. Eligibility metadata alone
 grants no measured usage, and old sampled monitoring snapshots cannot be promoted
-into these statistics. Preserve original proof origins when the release changes;
+into these statistics. Exported Nix binaries can explicitly report both runtime
+Git probes as null; the authenticated compiled source inventory remains their
+authority. Both runs must agree, and dirty, omitted or inconsistent probes fail.
+Preserve original proof origins when the release changes;
 requalify the unchanged frozen public inputs against the final manifests.
 
 After complete source validation, emit the recomputed admission outside the

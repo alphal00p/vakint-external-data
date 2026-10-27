@@ -646,6 +646,13 @@ class UsageSelectedAdmissionTests(unittest.TestCase):
             "data_manifest_sha256": self.profile["data"]["root_manifest_sha256"],
             "cache_identity": copy.deepcopy(self.case["cache_identity"]),
             "cache_identity_after": copy.deepcopy(self.case["cache_identity"]),
+            "cache_file_options": {
+                "explicit": False,
+                "max_compressed_bytes": 95 * 1024 * 1024,
+                "max_decoded_bytes": 1024 * 1024 * 1024,
+                "max_index_bytes": 32 * 1024 * 1024,
+                "decoded_directory": None,
+            },
             "catalogue_closure": {
                 "closed": True,
                 "unknown_count": 0,
@@ -773,6 +780,74 @@ class UsageSelectedAdmissionTests(unittest.TestCase):
         self.assertEqual(
             self.case["input_sha256"], self.case["public_input_source_sha256"]
         )
+
+    def test_exported_nix_runtime_git_probes_are_explicit_and_not_source_authority(
+        self,
+    ):
+        self.physical_fixture()
+        for report in self.physical_reports:
+            report.update(source_commit=None, source_dirty=None)
+        self.seal_physical()
+        self.assertTrue(self.validate()["accepted"])
+        original = copy.deepcopy(self.physical_reports)
+        for change, message in (
+            ({"source_dirty": True}, "cohort, data or immutable cache"),
+            ({"source_dirty": 0}, "cohort, data or immutable cache"),
+            ({"source_commit": "9" * 40}, "cohort, data or immutable cache"),
+            (
+                {"source_commit": self.compiled["main_revision"]},
+                "cohort, data or immutable cache",
+            ),
+            (
+                {
+                    "source_commit": self.compiled["main_revision"],
+                    "source_dirty": False,
+                },
+                "normal reference",
+            ),
+            ({"compiled_cohort": {}}, "cohort, data or immutable cache"),
+            ({"executable_sha256": "9" * 64}, "cohort, data or immutable cache"),
+            (
+                {"collector_helper_sources_sha256": {}},
+                "cohort, data or immutable cache",
+            ),
+        ):
+            with self.subTest(change=change):
+                self.physical_reports = copy.deepcopy(original)
+                self.physical_reports[1].update(change)
+                self.seal_physical()
+                with self.assertRaisesRegex(ValueError, message):
+                    self.validate()
+        for field in ("source_commit", "source_dirty"):
+            with self.subTest(omitted=field):
+                self.physical_reports = copy.deepcopy(original)
+                del self.physical_reports[1][field]
+                self.seal_physical()
+                with self.assertRaisesRegex(
+                    ValueError, "cohort, data or immutable cache"
+                ):
+                    self.validate()
+
+    def test_physical_reference_requires_the_same_resolved_file_options(self):
+        self.physical_fixture()
+        original = copy.deepcopy(self.physical_reports)
+        for field, value in (
+            ("decoded_directory", "/synthetic/different-resolved-directory"),
+            ("max_decoded_bytes", 0),
+            ("explicit", True),
+        ):
+            with self.subTest(field=field):
+                self.physical_reports = copy.deepcopy(original)
+                self.physical_reports[1]["cache_file_options"][field] = value
+                self.seal_physical()
+                with self.assertRaisesRegex(ValueError, "normal reference"):
+                    self.validate()
+        self.physical_reports = copy.deepcopy(original)
+        for report in self.physical_reports:
+            del report["cache_file_options"]
+        self.seal_physical()
+        with self.assertRaisesRegex(ValueError, "normal reference"):
+            self.validate()
 
     def test_physical_source_identity_cache_and_result_parity_fail_closed(self):
         self.physical_fixture()

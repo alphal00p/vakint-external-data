@@ -822,6 +822,13 @@ def physical_receipt(root, case, profile, documents, receipt):
             "physical usage requires one retained read-only cached evaluation",
         )
         actual_cohort = report.get("compiled_cohort", {})
+        # Exported Nix binaries may retain a source path without .git. The
+        # authenticated compiled source stamps above are the authority; these
+        # optional runtime probes must still be consistent and never dirty.
+        runtime_revision, runtime_dirty = (
+            report.get("source_commit"),
+            report.get("source_dirty"),
+        )
         require(
             isinstance(actual_cohort, dict)
             and all(
@@ -836,8 +843,15 @@ def physical_receipt(root, case, profile, documents, receipt):
                 report.get("collector_helper_sources_sha256"),
                 compiled["collector_helper_sources_sha256"],
             )
-            and report.get("source_commit") == compiled["main_revision"]
-            and report.get("source_dirty") is False
+            and "source_commit" in report
+            and "source_dirty" in report
+            and (
+                (runtime_revision is None and runtime_dirty is None)
+                or (
+                    runtime_revision == compiled["main_revision"]
+                    and runtime_dirty is False
+                )
+            )
             and report.get("data_manifest_sha256")
             == profile["data"]["root_manifest_sha256"]
             and same(report.get("cache_identity"), case["cache_identity"])
@@ -977,6 +991,10 @@ def physical_receipt(root, case, profile, documents, receipt):
             reference["consumer_fixture_sources_sha256"],
             report["consumer_fixture_sources_sha256"],
         )
+        and reference["source_commit"] == report["source_commit"]
+        and reference["source_dirty"] is report["source_dirty"]
+        and isinstance(report.get("cache_file_options"), dict)
+        and same(reference.get("cache_file_options"), report["cache_file_options"])
         and same(reference.get("families"), report.get("families"))
         and isinstance(report.get("families"), dict)
         and report["families"]
