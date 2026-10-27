@@ -24,6 +24,16 @@ COHORT_FIELDS = {
     "main_source_snapshot_sha256": "VAKINT_CACHE_BUILD_MAIN_SOURCE_SNAPSHOT_SHA256",
     "native_source_snapshot_sha256": "VAKINT_CACHE_BUILD_NATIVE_SOURCE_SNAPSHOT_SHA256",
 }
+PHYSICAL_COLLECTOR_HELPERS = {
+    f"crates/vakint/examples/build_cache/{name}.rs"
+    for name in (
+        "cache_identity",
+        "cache_hit_diagnostic",
+        "cache_hit_capture",
+        "cache_file_args",
+        "resource_guard_admission",
+    )
+}
 
 
 def require(condition, message):
@@ -337,6 +347,7 @@ def physical_case(root, case, document, pointer):
         and hash256(prepared.get("scientific_assembly_sha256")),
         "physical public input differs from the authenticated prepared source",
     )
+    return selected, prepared
 
 
 def public_case(root, case, documents, held_out_ids, held_out_inputs):
@@ -438,7 +449,13 @@ def cohort(root, value):
     require(isinstance(artifacts, dict), "invalid collector artifact proof")
     binaries = artifacts.get("artifacts", {})
     require(isinstance(binaries, dict), "invalid collector artifact inventory")
-    measure = binaries.get("measure_cache", {})
+    collector = value.get("collector", "measure_cache")
+    require(
+        isinstance(collector, str)
+        and collector in ("measure_cache", "five_loop_qcd_ladder"),
+        "unknown usage collector",
+    )
+    measure = binaries.get(collector, {})
     stamps = artifacts.get("compile_proof", {})
     require(
         isinstance(measure, dict) and isinstance(stamps, dict),
@@ -472,12 +489,25 @@ def cohort(root, value):
         )
     files = references["main_source_snapshot"].get("files", {})
     require(isinstance(files, dict), "invalid compiled source inventory")
-    collector = files.get("crates/vakint/examples/measure_cache.rs", {})
+    collector_source = files.get(f"crates/vakint/examples/{collector}.rs", {})
     require(
-        isinstance(collector, dict)
-        and collector.get("sha256") == value["collector_source_sha256"],
+        isinstance(collector_source, dict)
+        and collector_source.get("sha256") == value["collector_source_sha256"],
         "usage collector source differs from its compiled source inventory",
     )
+    if collector == "five_loop_qcd_ladder":
+        helpers = value.get("collector_helper_sources_sha256")
+        require(
+            isinstance(helpers, dict)
+            and set(helpers) == PHYSICAL_COLLECTOR_HELPERS
+            and all(
+                hash256(checksum)
+                and isinstance(files.get(path), dict)
+                and files[path].get("sha256") == checksum
+                for path, checksum in helpers.items()
+            ),
+            "physical collector helpers differ from the compiled source inventory",
+        )
 
 
 def profile_data(root, profile, directory):
@@ -696,6 +726,292 @@ def native_index_identity(value):
     )
 
 
+def referenced_json(root, reference):
+    fields(reference, ("path_hint", "sha256"), "invalid physical run reference")
+    return source_json(
+        root, {"path": reference["path_hint"], "sha256": reference["sha256"]}
+    )
+
+
+def physical_receipt(root, case, profile, documents, receipt):
+    """Project an authenticated physical run into the common usage checks.
+
+    Supervision and normal/diagnostic parity are separate source evidence. The
+    collector neither attests to its own exit nor invents a text Workload.
+    """
+    fields(
+        receipt,
+        (
+            "schema",
+            "benchmark",
+            "completion",
+            "launch",
+            "reference_benchmark",
+            "reference_completion",
+            "reference_launch",
+        ),
+        "invalid physical usage receipt fields",
+    )
+    compiled = profile["compiled_cohort"]
+    require(
+        case["role"] == "physical-example"
+        and compiled.get("collector") == "five_loop_qcd_ladder",
+        "physical usage requires its actual physical collector",
+    )
+    authority = documents.get(case["role_evidence"]["document_sha256"], {})
+    selected, prepared = physical_case(
+        root, case, authority, case["role_evidence"]["json_pointer"]
+    )
+    reports, processes, commands = [], [], []
+    for prefix, diagnostic in (("reference_", False), ("", True)):
+        report = referenced_json(root, receipt[prefix + "benchmark"])
+        completion = referenced_json(root, receipt[prefix + "completion"])
+        launch = referenced_json(root, receipt[prefix + "launch"])
+        require(
+            all(isinstance(value, dict) for value in (report, completion, launch)),
+            "invalid physical run evidence",
+        )
+        identity = report.get("prepared_input", {})
+        sources = report.get("consumer_fixture_sources_sha256", {})
+        require(
+            report.get("schema") == "vakint.qcd-ladder.benchmark.v1"
+            and report.get("projection") == "zero-momentum-metric"
+            and report.get("input_mode") == "prepared"
+            and report.get("fresh_native_preparation") is False
+            and isinstance(identity, dict)
+            and identity.get("manifest_sha256") == selected["prepared_manifest_sha256"]
+            and same(identity.get("manifest"), prepared)
+            and report.get("input_sha256")
+            == report.get("input_canonical_sha256")
+            == case["input_sha256"]
+            == case["public_input_source_sha256"]
+            and type(report.get("input_bytes")) is int
+            and report["input_bytes"] == selected["public_input_source_bytes"]
+            and isinstance(sources, dict)
+            and set(sources) == set(prepared["scientific_sources_sha256"]) | {"mod.rs"}
+            and all(hash256(value) for value in sources.values())
+            and all(
+                sources[name] == value
+                for name, value in prepared["scientific_sources_sha256"].items()
+            ),
+            "physical run differs from the complete canonical prepared input",
+        )
+        require(
+            report.get("master_mode") == "retain"
+            and report.get("guard_policy") == "canonical-full-sorted-deduplicated"
+            and report.get("retained_result_available") is True
+            and report.get("reduction_completed") is True
+            and report.get("reduction_error") is None
+            and report.get("cache_hit_diagnostic_enabled") is diagnostic
+            and report.get("diagnostic_only") is diagnostic
+            and report.get("performance_claim") is False
+            and report.get("warm_requested") is False
+            and report.get("running_cache_path") is None
+            and report.get("running_cache_attached") is False
+            and report.get("running_cache_capture_only") is False
+            and report.get("persistent_cache_attached") is True
+            and report.get("persistent_cache_policy") == "manual-five-loop-only"
+            and same(
+                report.get("persistent_cache_attachments_before"),
+                {str(i): False for i in range(1, 6)},
+            )
+            and same(
+                report.get("persistent_cache_attachments_during_evaluation"),
+                {str(i): i == 5 for i in range(1, 6)},
+            ),
+            "physical usage requires one retained read-only cached evaluation",
+        )
+        actual_cohort = report.get("compiled_cohort", {})
+        require(
+            isinstance(actual_cohort, dict)
+            and all(
+                actual_cohort.get(name) == compiled[name]
+                for name in (*COHORT_FIELDS, "profile", "rustc")
+            )
+            and report.get("executable_sha256")
+            == compiled["measurement_executable_sha256"]
+            and report.get("collector_source_sha256")
+            == compiled["collector_source_sha256"]
+            and same(
+                report.get("collector_helper_sources_sha256"),
+                compiled["collector_helper_sources_sha256"],
+            )
+            and report.get("source_commit") == compiled["main_revision"]
+            and report.get("source_dirty") is False
+            and report.get("data_manifest_sha256")
+            == profile["data"]["root_manifest_sha256"]
+            and same(report.get("cache_identity"), case["cache_identity"])
+            and same(report.get("cache_identity_after"), case["cache_identity"]),
+            "physical run cohort, data or immutable cache identity differs",
+        )
+        closure, guards = report.get("catalogue_closure", {}), report.get("guards", {})
+        statistics = report.get("saved_application_cache", {})
+        require(
+            isinstance(closure, dict)
+            and closure.get("closed") is True
+            and type(closure.get("unknown_count")) is int
+            and closure["unknown_count"] == 0
+            and closure.get("unknown_preview") == []
+            and hash256(closure.get("unknown_sha256"))
+            and isinstance(guards, dict)
+            and integer(guards.get("count"), 0, U64_MAX)
+            and guards.get("includes_preparation_conditions") is True
+            and guards.get("sha256") == case["guards_sha256"]
+            and report.get("result_sha256") == case["value_sha256"]
+            and integer(report.get("result_bytes"), 1, U64_MAX),
+            "physical result, complete guards or catalogue closure differs",
+        )
+        require(
+            isinstance(statistics, dict)
+            and statistics.get("read_backing") is True
+            and statistics.get("running") is None
+            and same(statistics.get("binding"), profile["semantic_binding"])
+            and isinstance(statistics.get("persistent"), dict)
+            and all(
+                type(statistics["persistent"].get(name)) is int
+                and statistics["persistent"][name] == 0
+                for name in ("captured_records", "skipped_records")
+            ),
+            "physical usage must not capture or skip persistent records",
+        )
+        process, supervisor = launch.get("collector", {}), launch.get("supervisor", {})
+        require(
+            all(
+                isinstance(value, dict)
+                and integer(value.get("pid"), 1, U64_MAX)
+                and integer(value.get("start_ticks"), 1, U64_MAX)
+                for value in (process, supervisor)
+            )
+            and process["pid"] != supervisor["pid"]
+            and same(completion.get("collector"), process)
+            and completion.get("collector_exit_code") == 0
+            and type(completion.get("collector_exit_code")) is int
+            and completion.get("process_zero_acceptance") is True
+            and completion.get("functional_acceptance") is True
+            and completion.get("native_child_restarted_or_signalled") is False
+            and completion.get("authoritative_wait_error") is None
+            and completion.get("acceptance_error") is None
+            and completion.get("performance_eligible") is False
+            and launch.get("performance_eligible") is False
+            and launch.get("automatic_retry") is False
+            and launch.get("runtime_hard_cap") is None
+            and hash256(launch.get("config_sha256"))
+            and launch["config_sha256"] == completion.get("config_sha256"),
+            "physical usage lacks accepted actual process supervision",
+        )
+        argv, executable = launch.get("argv"), completion.get("post_executable", {})
+        require(
+            isinstance(argv, list)
+            and argv
+            and all(isinstance(arg, str) for arg in argv)
+            and argv[0].startswith("/")
+            and isinstance(executable, dict)
+            and executable.get("path") == argv[0]
+            and executable.get("sha256") == report["executable_sha256"]
+            and integer(executable.get("bytes"), 1, U64_MAX)
+            and argv.count("--classify-cache-hits") == int(diagnostic)
+            and argv.count("--work-dir") == 1
+            and "--cache" in argv
+            and "--prepared-input" in argv
+            and "--warm" not in argv
+            and not any(arg.startswith("--running-cache") for arg in argv),
+            "physical launch differs from its executable or diagnostic policy",
+        )
+        command = [arg for arg in argv if arg != "--classify-cache-hits"]
+        index = command.index("--work-dir")
+        require(index + 1 < len(command), "physical launch lacks its output path")
+        del command[index : index + 2]
+        commands.append(command)
+        outputs, artifacts = (
+            completion.get("outputs", {}),
+            completion.get("terminal_artifacts", {}),
+        )
+        expected = {
+            "benchmark.json": receipt[prefix + "benchmark"]["sha256"],
+            "result.symbolica": report["result_sha256"],
+            "nonzero-conditions.symbolica": guards["sha256"],
+            "unknown-masters.json": closure["unknown_sha256"],
+        }
+        benchmark_file = source_file(
+            root,
+            {
+                "path": receipt[prefix + "benchmark"]["path_hint"],
+                "sha256": receipt[prefix + "benchmark"]["sha256"],
+            },
+        )
+        require(
+            isinstance(outputs, dict)
+            and isinstance(artifacts, dict)
+            and all(
+                isinstance(artifacts.get(name), dict)
+                and artifacts[name].get("exists") is True
+                and integer(
+                    artifacts[name].get("bytes"),
+                    0 if name == "nonzero-conditions.symbolica" else 1,
+                    U64_MAX,
+                )
+                and artifacts[name].get("sha256") == checksum
+                for name, checksum in expected.items()
+            )
+            and outputs.get("benchmark_sha256") == expected["benchmark.json"]
+            and outputs.get("result_sha256") == report["result_sha256"]
+            and type(outputs.get("result_bytes")) is int
+            and outputs["result_bytes"] == report["result_bytes"]
+            and outputs.get("guards_sha256") == guards["sha256"]
+            and type(outputs.get("guards_count")) is int
+            and outputs["guards_count"] == guards["count"]
+            and outputs.get("unknown_sha256") == closure["unknown_sha256"]
+            and type(outputs.get("unknown_count")) is int
+            and outputs["unknown_count"] == 0
+            and artifacts["result.symbolica"]["bytes"] == report["result_bytes"]
+            and artifacts["benchmark.json"]["bytes"] == benchmark_file.stat().st_size,
+            "physical completion does not bind the complete retained files",
+        )
+        reports.append(report)
+        processes.append((process["pid"], process["start_ticks"]))
+    reference, report = reports
+    require(
+        processes[0] != processes[1]
+        and commands[0] == commands[1]
+        and same(
+            reference["consumer_fixture_sources_sha256"],
+            report["consumer_fixture_sources_sha256"],
+        )
+        and same(reference.get("families"), report.get("families"))
+        and isinstance(report.get("families"), dict)
+        and report["families"]
+        and reference["result_bytes"] == report["result_bytes"]
+        and reference["guards"]["count"] == report["guards"]["count"]
+        and reference["catalogue_closure"]["unknown_sha256"]
+        == report["catalogue_closure"]["unknown_sha256"]
+        and reference.get("cache_hit_diagnostic") is None,
+        "physical usage requires a fresh same-cohort normal reference with exact parity",
+    )
+    return {
+        "success": True,
+        "worker_success": True,
+        "fresh_process": True,
+        "case_id": case["case_id"],
+        "variant": "cached",
+        "supervision": {"success": True, "exit_code": 0, "deadline_exhausted": False},
+        "input_sha256": report["input_canonical_sha256"],
+        "value_sha256": report["result_sha256"],
+        "guards_sha256": report["guards"]["sha256"],
+        "identity": {
+            "data_manifest_sha256": report["data_manifest_sha256"],
+            "executable_sha256": report["executable_sha256"],
+            "compiled_driver_sha256": report["collector_source_sha256"],
+            "build_git_revision": report["compiled_cohort"]["main_revision"],
+            "build_profile": report["compiled_cohort"]["profile"],
+            "build_rustc": report["compiled_cohort"]["rustc"],
+            **report["cache_identity"],
+            "cache_hit_diagnostic": True,
+        },
+        "cache_statistics": report.get("saved_application_cache"),
+        "cache_hit_diagnostic": report.get("cache_hit_diagnostic"),
+    }
+
+
 def case_receipt(root, case, profile, documents):
     reference = case["receipt"]
     require(
@@ -706,28 +1022,34 @@ def case_receipt(root, case, profile, documents):
         root, {"path": reference.get("path_hint"), "sha256": reference.get("sha256")}
     )
     require(isinstance(receipt, dict), "accepted case receipt must be an object")
-    identity = receipt.get("identity", {})
-    require(
-        isinstance(identity, dict) and hash256(identity.get("workload_sha256")),
-        "invalid accepted case identity",
-    )
     compiled = profile["compiled_cohort"]
-    invocation = documents.get(identity.get("workload_sha256"), {})
-    tuning = invocation.get("tuning", [])
-    require(isinstance(tuning, list), "invalid invocation tuning inventory")
-    actual = [
-        row
-        for row in tuning
-        if isinstance(row, dict) and row.get("id") == case["case_id"]
-    ]
-    require(
-        invocation.get("schema") == "vakint.five-loop-cache-workload.v1"
-        and len(actual) == 1
-        and isinstance(actual[0].get("public_input"), str)
-        and hashlib.sha256(actual[0]["public_input"].encode()).hexdigest()
-        == case["public_input_source_sha256"],
-        "accepted invocation workload differs from authorized public source",
-    )
+    if receipt.get("schema") == "vakint.physical-cache-usage-receipt.v1":
+        receipt = physical_receipt(root, case, profile, documents, receipt)
+    else:
+        identity = receipt.get("identity", {})
+        require(
+            compiled.get("collector", "measure_cache") == "measure_cache"
+            and isinstance(identity, dict)
+            and hash256(identity.get("workload_sha256")),
+            "invalid accepted case identity",
+        )
+        invocation = documents.get(identity.get("workload_sha256"), {})
+        tuning = invocation.get("tuning", [])
+        require(isinstance(tuning, list), "invalid invocation tuning inventory")
+        actual = [
+            row
+            for row in tuning
+            if isinstance(row, dict) and row.get("id") == case["case_id"]
+        ]
+        require(
+            invocation.get("schema") == "vakint.five-loop-cache-workload.v1"
+            and len(actual) == 1
+            and isinstance(actual[0].get("public_input"), str)
+            and hashlib.sha256(actual[0]["public_input"].encode()).hexdigest()
+            == case["public_input_source_sha256"],
+            "accepted invocation workload differs from authorized public source",
+        )
+    identity = receipt["identity"]
     supervision = receipt.get("supervision", {})
     require(
         isinstance(supervision, dict)

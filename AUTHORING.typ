@@ -331,12 +331,34 @@ the explicitly listed eligible cases. This is a portable summary/eligibility
 check, not an independent replay of the separately hash-bound raw traces.
 
 The recorded physical eligibility anchor covers only the complete zero-momentum
-`q0` fixture. Quadratic examples are deferred. Physical usage requires the same
-complete cached `measure_cache --classify-cache-hits` receipt as tuning, with the
-exact prepared-file input in its authenticated invocation workload. Its portable
-role comes from the physical anchor, irrespective of the CLI's tuning selector.
-Eligibility metadata alone grants no measured usage. Old sampled physical
-monitoring snapshots cannot be promoted into these statistics.
+`q0` fixture. Quadratic examples are deferred. Existing authenticated
+`measure_cache` receipts retain their text-workload contract. The physical
+collector instead uses `vakint.physical-cache-usage-receipt.v1`, with exactly six
+ordinary `path_hint`/SHA256 references: `benchmark`, `completion`, `launch`, and
+their `reference_` counterparts. The normal cached reference disables
+classification; a separate fresh process with the same final ELF, input,
+scientific sources, data, settings and immutable cache enables classification.
+Both must retain identical complete results, canonical sorted/deduplicated guard
+sets including preparation conditions, family maps and empty unknown inventories.
+The public guard file is not the Native records' original ordered guard vector.
+
+Actual supervisor launch/completion evidence binds process identities, the
+authoritative zero exit status, the actual executable and every retained output
+hash. Neither the collector nor a success boolean supplies this authority.
+Both cache identities are checked before and after each run. Running capture,
+warm repetitions, sampled observers and performance claims are inadmissible.
+The existing common lossless dispatch/frequency validation still applies; the
+physical adapter creates no fictitious Workload or independent cache validator.
+
+Its usage cohort selects `collector: "five_loop_qcd_ladder"`; omitting this field
+retains the legacy `measure_cache` collector. The same existing compiled artifact
+and tracked-source inventories must authenticate the selected actual ELF,
+compiler, five source stamps, collector source and the five shared helper paths
+in `collector_helper_sources_sha256`. The physical reports must bind the same
+helper hashes and exact canonical prepared-input text. Eligibility metadata alone
+grants no measured usage, and old sampled monitoring snapshots cannot be promoted
+into these statistics. Preserve original proof origins when the release changes;
+requalify the unchanged frozen public inputs against the final manifests.
 
 After complete source validation, emit the recomputed admission outside the
 checkout with:

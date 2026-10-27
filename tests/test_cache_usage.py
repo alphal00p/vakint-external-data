@@ -520,6 +520,422 @@ class UsageSelectedAdmissionTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "complete zero-momentum"):
             self.validate()
 
+    def physical_fixture(self):
+        """Synthetic source evidence, never an executed physical reduction."""
+        original = (
+            Path(__file__).resolve().parents[1]
+            / "5L/benchmarks/zero-momentum/prepared-input.json"
+        )
+        raw = original.read_bytes()
+        prepared = json.loads(raw)
+        target = self.root / "benchmarks/zero-momentum/prepared-input.json"
+        target.parent.mkdir(parents=True)
+        target.write_bytes(raw)
+        physical = {
+            "schema": "vakint.physical-cache-usage-source-inventory.v1",
+            "cases": [
+                {
+                    "id": "q0",
+                    "source_job_id": "q0",
+                    "role": "physical-example",
+                    "projection": "zero-momentum-metric",
+                    "definition": prepared["definition"],
+                    "input_source_kind": "prepared-vakint-input.symbolica-file-bytes",
+                    "public_input_source_sha256": prepared["input"]["sha256"],
+                    "public_input_source_bytes": prepared["input"]["bytes"],
+                    "prepared_manifest_sha256": hashlib.sha256(raw).hexdigest(),
+                    "source_job_config_sha256": "a" * 64,
+                }
+            ],
+            "prepared_manifest_documents": [
+                {
+                    "sha256": hashlib.sha256(raw).hexdigest(),
+                    "json_bytes_base64": base64.b64encode(raw).decode(),
+                }
+            ],
+        }
+        anchor = self.embed(physical)
+        self.profile["eligibility_documents"].append(anchor)
+        self.case.update(
+            case_id="q0",
+            role="physical-example",
+            input_sha256=prepared["input"]["sha256"],
+            public_input_source_sha256=prepared["input"]["sha256"],
+            role_evidence={
+                "document_sha256": anchor["sha256"],
+                "json_pointer": "/cases/0",
+            },
+        )
+        self.keys["eligible_case_ids"] = ["q0"]
+        main = cache_usage.source_json(
+            self.repo,
+            {
+                "path": self.compiled["main_source_snapshot"]["path_hint"],
+                "sha256": self.compiled["main_source_snapshot"]["sha256"],
+            },
+        )
+        main["files"]["crates/vakint/examples/five_loop_qcd_ladder.rs"] = main[
+            "files"
+        ].pop("crates/vakint/examples/measure_cache.rs")
+        helpers = {path: "6" * 64 for path in cache_usage.PHYSICAL_COLLECTOR_HELPERS}
+        main["files"].update(
+            {path: {"sha256": checksum} for path, checksum in helpers.items()}
+        )
+        main_ref = self.save("main.json", main)
+        self.compiled.update(
+            collector="five_loop_qcd_ladder",
+            collector_helper_sources_sha256=helpers,
+            main_source_snapshot=self.hint(main_ref),
+            main_source_snapshot_sha256=main_ref["sha256"],
+        )
+        stamps = {
+            stamp: self.compiled[name]
+            for name, stamp in cache_usage.COHORT_FIELDS.items()
+        }
+        binary = self.artifacts["artifacts"].pop("measure_cache")
+        binary["all_five_actual_env_dep_stamps"] = stamps
+        self.artifacts["artifacts"]["five_loop_qcd_ladder"] = binary
+        self.artifacts["compile_proof"].update(stamps)
+        self.compiled["collector_artifacts"] = self.hint(
+            self.save("artifacts.json", self.artifacts)
+        )
+        statistics = copy.deepcopy(self.receipt["cache_statistics"])
+        statistics.update(read_backing=True, running=None)
+        statistics["persistent"].update(captured_records=0, skipped_records=0)
+        normal = {
+            "schema": "vakint.qcd-ladder.benchmark.v1",
+            "projection": "zero-momentum-metric",
+            "input_mode": "prepared",
+            "fresh_native_preparation": False,
+            "prepared_input": {
+                "manifest_sha256": hashlib.sha256(raw).hexdigest(),
+                "manifest": prepared,
+            },
+            "input_sha256": self.case["input_sha256"],
+            "input_canonical_sha256": self.case["input_sha256"],
+            "input_bytes": prepared["input"]["bytes"],
+            "consumer_fixture_sources_sha256": dict(
+                prepared["scientific_sources_sha256"], **{"mod.rs": "8" * 64}
+            ),
+            "master_mode": "retain",
+            "guard_policy": "canonical-full-sorted-deduplicated",
+            "retained_result_available": True,
+            "reduction_completed": True,
+            "cache_hit_diagnostic_enabled": False,
+            "diagnostic_only": False,
+            "performance_claim": False,
+            "warm_requested": False,
+            "running_cache_path": None,
+            "running_cache_attached": False,
+            "running_cache_capture_only": False,
+            "persistent_cache_attached": True,
+            "persistent_cache_policy": "manual-five-loop-only",
+            "persistent_cache_attachments_before": {str(i): False for i in range(1, 6)},
+            "persistent_cache_attachments_during_evaluation": {
+                str(i): i == 5 for i in range(1, 6)
+            },
+            "compiled_cohort": {
+                name: self.compiled[name]
+                for name in (*cache_usage.COHORT_FIELDS, "profile", "rustc")
+            },
+            "executable_sha256": self.compiled["measurement_executable_sha256"],
+            "collector_source_sha256": self.compiled["collector_source_sha256"],
+            "collector_helper_sources_sha256": helpers,
+            "source_commit": self.compiled["main_revision"],
+            "source_dirty": False,
+            "data_manifest_sha256": self.profile["data"]["root_manifest_sha256"],
+            "cache_identity": copy.deepcopy(self.case["cache_identity"]),
+            "cache_identity_after": copy.deepcopy(self.case["cache_identity"]),
+            "catalogue_closure": {
+                "closed": True,
+                "unknown_count": 0,
+                "unknown_preview": [],
+                "unknown_sha256": "0" * 64,
+            },
+            "guards": {
+                "count": 1,
+                "includes_preparation_conditions": True,
+                "sha256": self.case["guards_sha256"],
+            },
+            "result_sha256": self.case["value_sha256"],
+            "result_bytes": 123,
+            "families": {"master": "synthetic-family"},
+            "saved_application_cache": statistics,
+        }
+        diagnostic = copy.deepcopy(normal)
+        diagnostic.update(
+            cache_hit_diagnostic_enabled=True,
+            diagnostic_only=True,
+            cache_hit_diagnostic=copy.deepcopy(self.receipt["cache_hit_diagnostic"]),
+        )
+        self.physical_reports = [normal, diagnostic]
+        self.physical_launches, self.physical_completions = [], []
+        for index in range(2):
+            process = {"pid": index + 100, "start_ticks": 1000 + index}
+            argv = [
+                "/synthetic/collector",
+                "--work-dir",
+                f"/synthetic/output-{index}",
+                "--cache",
+                "/synthetic/heavy.gz",
+                "--prepared-input",
+                "/synthetic/q0",
+            ]
+            if index:
+                argv.append("--classify-cache-hits")
+            self.physical_launches.append(
+                {
+                    "collector": process,
+                    "supervisor": {"pid": 90, "start_ticks": 900},
+                    "argv": argv,
+                    "config_sha256": str(index + 1) * 64,
+                    "performance_eligible": False,
+                    "automatic_retry": False,
+                    "runtime_hard_cap": None,
+                }
+            )
+            self.physical_completions.append(
+                {
+                    "collector": process,
+                    "collector_exit_code": 0,
+                    "process_zero_acceptance": True,
+                    "functional_acceptance": True,
+                    "native_child_restarted_or_signalled": False,
+                    "performance_eligible": False,
+                    "config_sha256": str(index + 1) * 64,
+                    "post_executable": {
+                        "path": argv[0],
+                        "sha256": normal["executable_sha256"],
+                        "bytes": 100,
+                    },
+                }
+            )
+        self.seal_physical()
+
+    def seal_physical(self):
+        self.receipt = {"schema": "vakint.physical-cache-usage-receipt.v1"}
+        for index, prefix in enumerate(("reference_", "")):
+            report, completion = (
+                self.physical_reports[index],
+                self.physical_completions[index],
+            )
+            report_ref = self.save(prefix + "benchmark.json", report)
+            completion["outputs"] = {
+                "benchmark_sha256": report_ref["sha256"],
+                "result_sha256": report["result_sha256"],
+                "result_bytes": report["result_bytes"],
+                "guards_sha256": report["guards"]["sha256"],
+                "guards_count": report["guards"]["count"],
+                "unknown_sha256": report["catalogue_closure"]["unknown_sha256"],
+                "unknown_count": report["catalogue_closure"]["unknown_count"],
+            }
+            completion["terminal_artifacts"] = {
+                name: {
+                    "exists": True,
+                    "sha256": checksum,
+                    "bytes": report["result_bytes"]
+                    if name == "result.symbolica"
+                    else 100,
+                }
+                for name, checksum in {
+                    "benchmark.json": report_ref["sha256"],
+                    "result.symbolica": report["result_sha256"],
+                    "nonzero-conditions.symbolica": report["guards"]["sha256"],
+                    "unknown-masters.json": report["catalogue_closure"][
+                        "unknown_sha256"
+                    ],
+                }.items()
+            }
+            completion["terminal_artifacts"]["benchmark.json"]["bytes"] = (
+                (self.repo / report_ref["path"]).stat().st_size
+            )
+            self.receipt[prefix + "benchmark"] = self.hint(report_ref)
+            self.receipt[prefix + "completion"] = self.hint(
+                self.save(prefix + "completion.json", completion)
+            )
+            self.receipt[prefix + "launch"] = self.hint(
+                self.save(prefix + "launch.json", self.physical_launches[index])
+            )
+        self.seal()
+
+    def test_physical_receipt_reuses_common_lossless_usage_without_fake_workload(self):
+        self.physical_fixture()
+        self.assertTrue(self.validate()["accepted"])
+        self.assertFalse(
+            any(
+                document.get("tuning", [{}])[0].get("id") == "q0"
+                for document in cache_usage.embedded_eligibility(self.profile)[
+                    0
+                ].values()
+                if document.get("tuning")
+            )
+        )
+        self.assertEqual(
+            self.case["input_sha256"], self.case["public_input_source_sha256"]
+        )
+
+    def test_physical_source_identity_cache_and_result_parity_fail_closed(self):
+        self.physical_fixture()
+        original = copy.deepcopy(self.physical_reports)
+        for field, value, message in (
+            ("input_canonical_sha256", "9" * 64, "canonical prepared input"),
+            ("executable_sha256", "9" * 64, "cohort, data or immutable cache"),
+            ("cache_identity_after", {}, "cohort, data or immutable cache"),
+            ("result_sha256", "9" * 64, "result, complete guards"),
+            ("guard_policy", "native-ordered-vector", "retained read-only"),
+            ("master_mode", "numerical", "retained read-only"),
+            ("warm_requested", True, "retained read-only"),
+            ("running_cache_attached", True, "retained read-only"),
+            ("performance_claim", True, "retained read-only"),
+            ("diagnostic_only", False, "retained read-only"),
+        ):
+            with self.subTest(field=field):
+                self.physical_reports = copy.deepcopy(original)
+                self.physical_reports[1][field] = value
+                self.seal_physical()
+                with self.assertRaisesRegex(ValueError, message):
+                    self.validate()
+
+    def test_physical_normal_reference_and_actual_process_are_required(self):
+        self.physical_fixture()
+        self.physical_launches[1]["collector"] = self.physical_launches[0]["collector"]
+        self.physical_completions[1]["collector"] = self.physical_launches[0][
+            "collector"
+        ]
+        self.seal_physical()
+        with self.assertRaisesRegex(ValueError, "fresh same-cohort"):
+            self.validate()
+        self.physical_completions[1]["collector_exit_code"] = True
+        self.seal_physical()
+        with self.assertRaisesRegex(ValueError, "actual process supervision"):
+            self.validate()
+
+    def test_physical_helper_source_closure_is_authenticated(self):
+        self.physical_fixture()
+        self.compiled["collector_helper_sources_sha256"] = {}
+        self.seal()
+        with self.assertRaisesRegex(ValueError, "helpers differ"):
+            self.validate()
+
+    def test_physical_dispatch_and_trace_keep_the_common_strict_validator(self):
+        self.physical_fixture()
+        self.physical_reports[1]["cache_hit_diagnostic"]["stream_complete"] = False
+        self.seal_physical()
+        with self.assertRaisesRegex(ValueError, "lossless trace"):
+            self.validate()
+        self.physical_reports[1]["cache_hit_diagnostic"]["stream_complete"] = True
+        self.physical_reports[1]["saved_application_cache"]["persistent"][
+            "captured_records"
+        ] = 1
+        self.seal_physical()
+        with self.assertRaisesRegex(ValueError, "must not capture"):
+            self.validate()
+
+    def test_physical_supervision_cannot_be_replaced_with_success_booleans(self):
+        self.physical_fixture()
+        original = copy.deepcopy(self.physical_completions)
+        for field, value, message in (
+            ("collector", {}, "actual process supervision"),
+            ("config_sha256", "9" * 64, "actual process supervision"),
+            ("collector_exit_code", False, "actual process supervision"),
+            ("collector_exit_code", 1, "actual process supervision"),
+            ("functional_acceptance", 1, "actual process supervision"),
+            ("native_child_restarted_or_signalled", True, "actual process supervision"),
+            ("post_executable", {}, "executable or diagnostic policy"),
+        ):
+            with self.subTest(field=field, value=value):
+                self.physical_completions = copy.deepcopy(original)
+                self.physical_completions[1][field] = value
+                self.seal_physical()
+                with self.assertRaisesRegex(ValueError, message):
+                    self.validate()
+        self.physical_completions = copy.deepcopy(original)
+        self.seal_physical()
+        completion = copy.deepcopy(self.physical_completions[1])
+        completion["outputs"]["guards_sha256"] = "9" * 64
+        self.receipt["completion"] = self.hint(self.save("completion.json", completion))
+        self.seal()
+        with self.assertRaisesRegex(ValueError, "complete retained files"):
+            self.validate()
+
+    def test_physical_reference_must_use_the_same_settings_and_have_no_unknowns(self):
+        self.physical_fixture()
+        original = copy.deepcopy(self.physical_reports)
+        for change, message in (
+            ({"catalogue_closure": {"closed": False}}, "catalogue closure"),
+            (
+                {
+                    "guards": {
+                        "count": 1,
+                        "includes_preparation_conditions": False,
+                        "sha256": self.case["guards_sha256"],
+                    }
+                },
+                "complete guards",
+            ),
+            ({"cache_hit_diagnostic": {}}, "normal reference"),
+            ({"families": {"other": "family"}}, "normal reference"),
+            ({"compiled_cohort": {}}, "cohort, data or immutable cache"),
+        ):
+            with self.subTest(change=change):
+                self.physical_reports = copy.deepcopy(original)
+                self.physical_reports[0].update(change)
+                # Keep enough completed-output fields for the synthetic receipt
+                # writer; the validator still must reject the altered closure.
+                if "catalogue_closure" in change:
+                    self.physical_reports[0]["catalogue_closure"].update(
+                        unknown_count=0, unknown_sha256="0" * 64, unknown_preview=[]
+                    )
+                self.seal_physical()
+                with self.assertRaisesRegex(ValueError, message):
+                    self.validate()
+        self.physical_reports = copy.deepcopy(original)
+        self.physical_launches[1]["argv"].extend(
+            ["--coefficient-representation", "factorized"]
+        )
+        self.seal_physical()
+        with self.assertRaisesRegex(ValueError, "normal reference"):
+            self.validate()
+
+    def test_physical_native_index_identity_is_supported_without_reading_cache_payloads(
+        self,
+    ):
+        self.physical_fixture()
+        projection = {"cache_sha256": None, "cache_native_index_identity": self.index}
+        self.case["cache_identity"] = copy.deepcopy(projection)
+        for report in self.physical_reports:
+            report["cache_identity"] = copy.deepcopy(projection)
+            report["cache_identity_after"] = copy.deepcopy(projection)
+        self.seal_physical()
+        self.assertTrue(self.validate()["accepted"])
+        self.physical_reports[0]["cache_identity_after"]["cache_native_index_identity"][
+            "sha256"
+        ] = "9" * 64
+        self.seal_physical()
+        with self.assertRaisesRegex(ValueError, "immutable cache"):
+            self.validate()
+
+    def test_physical_receipt_still_requires_unsampled_exact_dispatch_totals(self):
+        self.physical_fixture()
+        self.physical_reports[1]["saved_application_cache"]["persistent"][
+            "lookups"
+        ] += 1
+        self.seal_physical()
+        with self.assertRaisesRegex(ValueError, "accepted Native statistics"):
+            self.validate()
+
+    def test_unknown_collector_and_physical_evidence_tampering_are_rejected(self):
+        self.compiled["collector"] = "arbitrary"
+        self.seal()
+        with self.assertRaisesRegex(ValueError, "unknown usage collector"):
+            self.validate()
+        self.compiled.pop("collector")
+        self.physical_fixture()
+        reference = self.receipt["reference_launch"]
+        (self.repo / reference["path_hint"]).write_text("{}")
+        with self.assertRaisesRegex(ValueError, "SHA256 differs"):
+            self.validate()
+
     def test_held_out_and_unknown_roles_or_ids_are_never_eligible(self):
         for role in ("held_out", "training", "unknown", "physical-example"):
             with self.subTest(role=role):
