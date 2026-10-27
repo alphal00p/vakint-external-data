@@ -1344,6 +1344,14 @@ class ComposedUsageProfileTests(unittest.TestCase):
         main["files"]["crates/vakint/examples/measure_cache.rs"] = {"sha256": "7" * 64}
         frozen = copy.deepcopy(f.document)
         frozen["schema"] = "vakint.five-loop-frozen-public-suites.v1"
+        # Deliberate predeclared aliases exercise global input rejection after
+        # the original per-profile eligibility and invocation checks pass.
+        frozen["tuning"].extend(
+            [
+                {"id": "alias-same", "public_input": "vacuum( 1 )"},
+                {"id": "alias-spaced", "public_input": "vacuum(  1  )"},
+            ]
+        )
         self.authority = f.embed(frozen)
         main["files"][
             "crates/vakint/examples/build_cache/frozen-public-suites.json"
@@ -1715,16 +1723,19 @@ class ComposedUsageProfileTests(unittest.TestCase):
         )
 
     def test_a_renamed_case_cannot_doublecount_the_same_input(self):
-        for public_input in ("vacuum( 1 )", "vacuum(  1  )"):
+        for alias_id, public_input in (
+            ("alias-same", "vacuum( 1 )"),
+            ("alias-spaced", "vacuum(  1  )"),
+        ):
             with self.subTest(public_input=public_input):
                 alias = copy.deepcopy(self.children["tuning"])
                 case = alias["cases"][0]
                 invocation = copy.deepcopy(self.f.document)
-                invocation["tuning"] = [{"id": "alias", "public_input": public_input}]
+                invocation["tuning"] = [{"id": alias_id, "public_input": public_input}]
                 document = self.f.embed(invocation)
                 alias["eligibility_documents"].append(document)
                 case.update(
-                    case_id="alias",
+                    case_id=alias_id,
                     public_input_source_sha256=hashlib.sha256(
                         public_input.encode()
                     ).hexdigest(),
@@ -1734,7 +1745,7 @@ class ComposedUsageProfileTests(unittest.TestCase):
                     },
                 )
                 receipt = cache_usage.referenced_json(self.f.repo, case["receipt"])
-                receipt["case_id"] = "alias"
+                receipt["case_id"] = alias_id
                 receipt["identity"]["workload_sha256"] = document["sha256"]
                 case["receipt"] = self.f.hint(
                     self.f.save("composition/alias-receipt.json", receipt)
@@ -1745,6 +1756,32 @@ class ComposedUsageProfileTests(unittest.TestCase):
                     ValueError, "repeats a case source or input"
                 ):
                     self.frequencies()
+
+    def test_an_extra_real_workload_cannot_expand_the_frozen_tuning_suite(self):
+        child = self.children["tuning"]
+        case = child["cases"][0]
+        invocation = copy.deepcopy(self.f.document)
+        invocation["tuning"] = [{"id": "unfrozen", "public_input": "vacuum( 1 )"}]
+        document = self.f.embed(invocation)
+        child["eligibility_documents"].append(document)
+        case.update(
+            case_id="unfrozen",
+            role_evidence={
+                "document_sha256": document["sha256"],
+                "json_pointer": "/tuning/0",
+            },
+        )
+
+        def edit(receipt):
+            receipt["case_id"] = "unfrozen"
+            receipt["identity"]["workload_sha256"] = document["sha256"]
+
+        self.edit_receipt("tuning", edit)
+        self.seal_composed()
+        with self.assertRaisesRegex(
+            ValueError, "differs from the compiled frozen suite"
+        ):
+            self.frequencies()
 
     def test_native_conventions_and_actual_output_normalization_must_match(self):
         self.outer["common"]["raw_reduction_settings"]["unit_mass_squared"] = 1

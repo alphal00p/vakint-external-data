@@ -1485,6 +1485,25 @@ def composed_profile_frequencies(
             "composed member must select exactly its actual cases",
         )
         for case in child["cases"]:
+            if case["role"] == "tuning":
+                tuning = authority.get("tuning", [])
+                require(
+                    isinstance(tuning, list), "invalid common frozen tuning inventory"
+                )
+                authorized = [
+                    row
+                    for row in tuning
+                    if isinstance(row, dict) and row.get("id") == case["case_id"]
+                ]
+                require(
+                    len(authorized) == 1
+                    and isinstance(authorized[0].get("public_input"), str)
+                    and hashlib.sha256(
+                        authorized[0]["public_input"].encode()
+                    ).hexdigest()
+                    == case["public_input_source_sha256"],
+                    "composed tuning case differs from the compiled frozen suite",
+                )
             require(case["case_id"] not in case_ids, "duplicate composed usage case ID")
             case_ids.add(case["case_id"])
             require(

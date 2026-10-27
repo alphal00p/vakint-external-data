@@ -389,7 +389,9 @@ the compiled source inventory and embedded by every member. The final workload
 contains twelve held-out inputs. Admission additionally unions every member's
 held-out IDs and raw-input hashes before admitting any observation, preventing
 cross-member aliases from entering selection. Held-out measurements happen only
-after the LIGHT bytes are frozen.
+after the LIGHT bytes are frozen. Every tuning case ID and raw-input hash must
+also match that exact frozen suite; another valid invocation workload cannot
+expand the tuning authority.
 
 The common raw settings describe retained, sparse, unit-mass Native evaluation.
 Dimension and normalization match the archived loop manifest; actual tuning
