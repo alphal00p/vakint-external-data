@@ -1,0 +1,273 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "vakint.cache-record-usage-profile.v2",
+  "title": "Composition of authenticated completed-record v1 usage profiles",
+  "description": "Source-only admission. The Python validator authenticates each complete v1 member, common compiled artifact/source/data/index/settings facts, held-out authority, independent case provenance and checked frequencies. No aggregate measurement executable is invented.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "semantic_binding",
+    "common",
+    "members"
+  ],
+  "properties": {
+    "schema": {
+      "const": "vakint.cache-record-usage-profile.v2"
+    },
+    "semantic_binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "artifact_digest",
+        "family_fingerprint",
+        "physical_arity",
+        "layer"
+      ],
+      "properties": {
+        "artifact_digest": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 255
+          },
+          "minItems": 32,
+          "maxItems": 32
+        },
+        "family_fingerprint": {
+          "type": "string",
+          "minLength": 1
+        },
+        "physical_arity": {
+          "const": 15
+        },
+        "layer": {
+          "const": "saved-application-route-apply-v1"
+        }
+      }
+    },
+    "common": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_cache_native_index_identity",
+        "data",
+        "compiled_source_cohort",
+        "raw_reduction_settings",
+        "output_conventions",
+        "held_out_authority_sha256"
+      ],
+      "properties": {
+        "source_cache_native_index_identity": {
+          "type": "object",
+          "description": "Exact existing native-cache-index-identity.v1; validated and joined to the cumulative producer, never a file masquerading as an index."
+        },
+        "data": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "root_manifest_sha256",
+            "loop_manifest_sha256",
+            "application_sha256"
+          ],
+          "properties": {
+            "root_manifest_sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "loop_manifest_sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "application_sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          }
+        },
+        "compiled_source_cohort": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "main_revision",
+            "native_revision",
+            "kernel_revision",
+            "main_source_snapshot_sha256",
+            "native_source_snapshot_sha256",
+            "profile",
+            "rustc",
+            "collector_artifacts",
+            "main_source_snapshot",
+            "native_source_snapshot"
+          ],
+          "properties": {
+            "main_revision": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{40}$"
+            },
+            "native_revision": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{40}$"
+            },
+            "kernel_revision": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{40}$"
+            },
+            "main_source_snapshot_sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "native_source_snapshot_sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "profile": {
+              "type": "string",
+              "minLength": 1
+            },
+            "rustc": {
+              "type": "string",
+              "minLength": 1
+            },
+            "collector_artifacts": {
+              "$ref": "#/$defs/hinted_reference"
+            },
+            "main_source_snapshot": {
+              "$ref": "#/$defs/hinted_reference"
+            },
+            "native_source_snapshot": {
+              "$ref": "#/$defs/hinted_reference"
+            }
+          }
+        },
+        "raw_reduction_settings": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "master_mode",
+            "coefficient_representation",
+            "dimension",
+            "normalization",
+            "unit_mass_squared"
+          ],
+          "properties": {
+            "master_mode": {
+              "const": "retain"
+            },
+            "coefficient_representation": {
+              "const": "sparse"
+            },
+            "dimension": {
+              "type": "string",
+              "minLength": 1
+            },
+            "normalization": {
+              "type": "string",
+              "minLength": 1
+            },
+            "unit_mass_squared": {
+              "const": true
+            }
+          }
+        },
+        "output_conventions": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "integral_normalization",
+            "integral_normalization_expression",
+            "epsilon_symbol"
+          ],
+          "properties": {
+            "integral_normalization": {
+              "type": "string",
+              "minLength": 1
+            },
+            "integral_normalization_expression": {
+              "type": "string",
+              "minLength": 1
+            },
+            "epsilon_symbol": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "held_out_authority_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    },
+    "members": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "profile",
+          "eligible_case_ids"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "profile": {
+            "$ref": "#/$defs/reference"
+          },
+          "eligible_case_ids": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "reference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^provenance/"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    },
+    "hinted_reference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path_hint",
+        "sha256"
+      ],
+      "properties": {
+        "path_hint": {
+          "type": "string",
+          "pattern": "^provenance/"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    }
+  }
+}

@@ -364,6 +364,52 @@ authority. Both runs must agree, and dirty, omitted or inconsistent probes fail.
 Preserve original proof origins when the release changes;
 requalify the unchanged frozen public inputs against the final manifests.
 
+==== Composing physical and tuning observations
+
+`vakint.cache-record-usage-profile.v2` composes authenticated v1 profiles without
+inventing a common collector executable. Its frozen source-only schema is
+`provenance/cache-record-usage-v2/profile.schema.json`; the adjacent contract
+records the unchanged v1 schema. The existing v1 validators still validate every
+member's entire cohort, case, dispatch and receipt inventory. Nested aggregates,
+duplicate profiles, case IDs, receipts, public/canonical inputs and case-source
+aliases are refused. Independent inputs may legitimately have identical trace
+hashes. Frequencies add by exact Native work key with checked integer arithmetic.
+
+Each member names exactly its actual cases. The selected-key document's eligible
+IDs must equal their union. Every member uses the same cumulative Native index,
+original data hashes, five compiled source stamps, compiler/profile, source
+inventories and shared build artifact inventory. Each collector keeps its own
+authenticated named source and distinct ELF. The original root hash also matches
+the cumulative producer. Original manifests stay archived; their noncache file
+and terminal declarations must match the active validated manifest. Changing
+only cache metadata therefore creates no measurement/proof hash cycle.
+
+The common frozen held-out authority must be the exact file authenticated by
+the compiled source inventory and embedded by every member. The final workload
+contains twelve held-out inputs. Admission additionally unions every member's
+held-out IDs and raw-input hashes before admitting any observation, preventing
+cross-member aliases from entering selection. Held-out measurements happen only
+after the LIGHT bytes are frozen.
+
+The common raw settings describe retained, sparse, unit-mass Native evaluation.
+Dimension and normalization match the archived loop manifest; actual tuning
+`raw_reduction_settings`, its original-data source, read-only attachment policy,
+and post-evaluation cache identity are required. Both physical reports must
+record the same actual mode/representation. Actual output normalization and
+epsilon conventions agree across all reports. Old v1 receipts remain valid v1;
+missing new facts cannot be inferred from their source text to manufacture v2.
+
+The Native exporter must stamp the actual v2 schema SHA, while retaining the
+unchanged selected-key schema and Native codec. A v1 stamp cannot authorize a
+v2 profile. This requires rebuilding and authenticating the metadata-only
+exporter successor before final export; source admission alone does not perform
+that build or establish Native coefficient/ordered-guard equality.
+
+Authenticated JSON proof files remain smaller than 100 MiB both compressed and
+decoded. Gzip proofs contain one complete CRC-checked member, with no trailing
+bytes; truncation, concatenated members and excess decoded output fail. This
+proof-document bound does not limit reduction work or the unbounded HEAVY cache.
+
 After complete source validation, emit the recomputed admission outside the
 checkout with:
 

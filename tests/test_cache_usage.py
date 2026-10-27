@@ -1327,5 +1327,528 @@ class UsageSelectedAdmissionTests(unittest.TestCase):
             self.validate()
 
 
+class ComposedUsageProfileTests(unittest.TestCase):
+    """Synthetic source contracts; no Native decoder or measured usage claims."""
+
+    def setUp(self):
+        f = UsageSelectedAdmissionTests(
+            "test_usage_variant_recomputes_admission_without_finite_workload_claims"
+        )
+        f.setUp()
+        self.addCleanup(f.doCleanups)
+        self.f = f
+        tuning, tuning_receipt = copy.deepcopy(f.profile), copy.deepcopy(f.receipt)
+        f.physical_fixture()
+        # Both real named collectors share one actual source/build inventory.
+        main = cache_usage.referenced_json(f.repo, f.compiled["main_source_snapshot"])
+        main["files"]["crates/vakint/examples/measure_cache.rs"] = {"sha256": "7" * 64}
+        frozen = copy.deepcopy(f.document)
+        frozen["schema"] = "vakint.five-loop-frozen-public-suites.v1"
+        self.authority = f.embed(frozen)
+        main["files"][
+            "crates/vakint/examples/build_cache/frozen-public-suites.json"
+        ] = {"sha256": self.authority["sha256"]}
+        main_ref = f.save("composition/main.json", main)
+        f.compiled.update(
+            main_source_snapshot=f.hint(main_ref),
+            main_source_snapshot_sha256=main_ref["sha256"],
+        )
+        stamps = {
+            stamp: f.compiled[name] for name, stamp in cache_usage.COHORT_FIELDS.items()
+        }
+        f.artifacts["compile_proof"].update(stamps)
+        f.artifacts["artifacts"] = {
+            collector: {"sha256": checksum, "all_five_actual_env_dep_stamps": stamps}
+            for collector, checksum in (
+                ("measure_cache", "4" * 64),
+                ("five_loop_qcd_ladder", "6" * 64),
+            )
+        }
+        f.compiled["measurement_executable_sha256"] = "6" * 64
+        f.compiled["collector_artifacts"] = f.hint(
+            f.save("composition/artifacts.json", f.artifacts)
+        )
+        # The original immutable bodies are distinct from the later cache manifest.
+        f.manifest["unit_mass_squared"] = True
+        f.manifest["files"]["ibps/application.json"] = data.file_record(
+            f.root / "ibps/application.json"
+        )
+        loop = cache_usage.referenced_json(f.repo, f.compiled["data_manifests"]["loop"])
+        loop.update(
+            {
+                name: copy.deepcopy(f.manifest[name])
+                for name in (
+                    "dimension",
+                    "normalization",
+                    "unit_mass_squared",
+                    "masters",
+                    "families",
+                )
+            }
+        )
+        loop_ref = f.save("composition/loop.json", loop)
+        release = cache_usage.referenced_json(
+            f.repo, f.compiled["data_manifests"]["root"]
+        )
+        release["loop_packs"][0]["manifest_sha256"] = loop_ref["sha256"]
+        root_ref = f.save("composition/root.json", release)
+        f.compiled["data_manifests"].update(
+            loop=f.hint(loop_ref), root=f.hint(root_ref)
+        )
+        f.profile["data"].update(
+            root_manifest_sha256=root_ref["sha256"],
+            loop_manifest_sha256=loop_ref["sha256"],
+        )
+        f.data_root_sha256 = root_ref["sha256"]
+        f.producer["data_manifest_sha256"] = f.data_root_sha256
+        f.profile["eligibility_documents"].append(self.authority)
+        self.settings = {
+            "master_mode": "retain",
+            "coefficient_representation": "sparse",
+            "dimension": "4-2*epsilon",
+            "normalization": "FMFTandMATAD",
+            "unit_mass_squared": True,
+        }
+        self.conventions = {
+            "integral_normalization": "PySecDec",
+            "integral_normalization_expression": "fixture-normalization",
+            "epsilon_symbol": "epsilon",
+        }
+        projection = {
+            "cache_sha256": None,
+            "cache_native_index_identity": copy.deepcopy(f.index),
+        }
+        f.case["cache_identity"] = copy.deepcopy(projection)
+        for report in f.physical_reports:
+            report.update(
+                compiled_cohort={
+                    name: f.compiled[name]
+                    for name in (*cache_usage.COHORT_FIELDS, "profile", "rustc")
+                },
+                executable_sha256="6" * 64,
+                coefficient_representation="sparse",
+                conventions=copy.deepcopy(self.conventions),
+                data_manifest_sha256=f.data_root_sha256,
+                cache_identity=copy.deepcopy(projection),
+                cache_identity_after=copy.deepcopy(projection),
+            )
+        for completion in f.physical_completions:
+            completion["post_executable"]["sha256"] = "6" * 64
+        f.seal_physical()
+        physical = copy.deepcopy(f.profile)
+        tuning["compiled_cohort"] = copy.deepcopy(f.compiled)
+        tuning["compiled_cohort"].pop("collector_helper_sources_sha256")
+        tuning["compiled_cohort"].update(
+            collector="measure_cache", measurement_executable_sha256="4" * 64
+        )
+        tuning["data"] = copy.deepcopy(physical["data"])
+        tuning["eligibility_documents"].append(self.authority)
+        tuning["cases"][0]["cache_identity"] = copy.deepcopy(projection)
+        tuning_receipt["identity"].update(
+            projection, data_manifest_sha256=f.data_root_sha256
+        )
+        tuning_receipt.update(
+            raw_reduction_settings=copy.deepcopy(self.settings),
+            raw_reduction_settings_source={
+                "data_version": loop["version"],
+                "release_manifest_sha256": f.data_root_sha256,
+                "loop_manifest_sha256": loop_ref["sha256"],
+                "loop_count": 5,
+            },
+            conventions=copy.deepcopy(self.conventions),
+            cache_identity_after=copy.deepcopy(projection),
+            persistent_cache_policy="manual-five-loop-only",
+            persistent_cache_attachments_before={str(i): False for i in range(1, 6)},
+            persistent_cache_attachments_during_evaluation={
+                str(i): i == 5 for i in range(1, 6)
+            },
+        )
+        tuning["cases"][0]["receipt"] = f.hint(
+            f.save("composition/tuning-receipt.json", tuning_receipt)
+        )
+        self.children = {"tuning": tuning, "physical": physical}
+        self.outer = {
+            "schema": cache_usage.PROFILE_V2_SCHEMA,
+            "semantic_binding": f.binding,
+            "common": {
+                "source_cache_native_index_identity": copy.deepcopy(f.index),
+                "data": copy.deepcopy(physical["data"]),
+                "compiled_source_cohort": {
+                    name: copy.deepcopy(f.compiled[name])
+                    for name in cache_usage.COMMON_COHORT_FIELDS
+                },
+                "raw_reduction_settings": copy.deepcopy(self.settings),
+                "output_conventions": copy.deepcopy(self.conventions),
+                "held_out_authority_sha256": self.authority["sha256"],
+            },
+            "members": [],
+        }
+        self.seal_composed()
+
+    def seal_composed(self, gzip_members=False):
+        f = self.f
+        self.outer["members"] = [
+            {
+                "id": name,
+                "profile": f.save(
+                    "composition/" + name + (".json.gz" if gzip_members else ".json"),
+                    child,
+                ),
+                "eligible_case_ids": [case["case_id"] for case in child["cases"]],
+            }
+            for name, child in self.children.items()
+        ]
+        profile = f.save("composition/profile-v2.json", self.outer)
+        f.keys["usage_profile_sha256"] = profile["sha256"]
+        f.keys["eligible_case_ids"] = [
+            case["case_id"]
+            for child in self.children.values()
+            for case in child["cases"]
+        ]
+        keys = f.save("composition/keys.json", f.keys)
+        f.raw.update(
+            selected_keys_sha256=keys["sha256"],
+            usage_profile_sha256=profile["sha256"],
+            usage_profile_schema_sha256=cache_usage.PROFILE_V2_SCHEMA_SHA256,
+        )
+        f.metadata["selection"].update(
+            usage_profile=profile,
+            keys=keys,
+            validation=f.save("composition/native-validation.json", f.raw),
+        )
+        data.write_json(f.root / "cache.json", f.metadata)
+
+    def edit_receipt(self, member, edit):
+        case = self.children[member]["cases"][0]
+        receipt = cache_usage.referenced_json(self.f.repo, case["receipt"])
+        edit(receipt)
+        case["receipt"] = self.f.hint(
+            self.f.save("composition/edited-" + member + ".json", receipt)
+        )
+
+    def frequencies(self):
+        return cache_usage.admitted_profile_frequencies(
+            self.f.repo,
+            self.outer,
+            self.f.keys,
+            self.f.binding,
+            self.f.root,
+            self.f.metadata["selection"]["source"],
+            self.f.manifest,
+        )
+
+    def test_distinct_real_collectors_share_counts_without_a_global_elf(self):
+        counts = self.frequencies()
+        self.assertEqual(counts[cache_usage.work(self.f.route, 15)], 4)
+        self.assertEqual(counts[cache_usage.work(self.f.apply, 15)], 6)
+        self.assertTrue(self.f.validate()["accepted"])
+        self.assertEqual(
+            self.children["physical"]["cases"][0]["trace"]["sha256"],
+            self.children["tuning"]["cases"][0]["trace"]["sha256"],
+        )
+        self.assertNotEqual(
+            self.children["physical"]["compiled_cohort"][
+                "measurement_executable_sha256"
+            ],
+            self.children["tuning"]["compiled_cohort"]["measurement_executable_sha256"],
+        )
+
+    def test_compressed_members_and_single_member_composition_are_supported(self):
+        self.seal_composed(gzip_members=True)
+        self.assertTrue(self.f.validate()["accepted"])
+        del self.children["tuning"]
+        self.seal_composed()
+        self.assertEqual(self.frequencies()[cache_usage.work(self.f.route, 15)], 2)
+
+    def test_outer_cannot_invent_a_collector_or_extra_fields(self):
+        self.outer["common"]["compiled_source_cohort"][
+            "measurement_executable_sha256"
+        ] = "4" * 64
+        with self.assertRaisesRegex(ValueError, "common compiled source cohort"):
+            self.frequencies()
+
+    def test_common_data_must_match_the_cumulative_producer(self):
+        self.outer["common"]["data"]["root_manifest_sha256"] = "9" * 64
+        with self.assertRaisesRegex(
+            ValueError, "data differs from cumulative producer"
+        ):
+            self.frequencies()
+
+    def test_common_index_and_actual_source_cohort_must_match(self):
+        self.outer["common"]["compiled_source_cohort"]["rustc"] = "another compiler"
+        with self.assertRaisesRegex(ValueError, "common compiled source cohort"):
+            self.frequencies()
+        self.outer["common"]["compiled_source_cohort"]["rustc"] = "synthetic-rustc"
+        self.outer["common"]["source_cache_native_index_identity"] = copy.deepcopy(
+            self.f.index
+        )
+        self.outer["common"]["source_cache_native_index_identity"]["indexes"][
+            "cache.rrindex"
+        ]["bytes"] += 1
+        with self.assertRaisesRegex(ValueError, "index commitment"):
+            self.frequencies()
+
+    def test_each_member_still_runs_the_original_v1_validator(self):
+        self.children["physical"]["cases"][0]["interval_ns"] = 1
+        self.seal_composed()
+        with self.assertRaisesRegex(ValueError, "observer is incomplete or sampled"):
+            self.frequencies()
+
+    def test_nested_profiles_and_duplicate_member_provenance_are_rejected(self):
+        first = copy.deepcopy(self.outer["members"][0])
+        self.outer["members"].append(dict(first, id="alias"))
+        with self.assertRaisesRegex(ValueError, "duplicate usage member profile"):
+            self.frequencies()
+        self.outer["members"] = [dict(first, id="same"), dict(first, id="same")]
+        with self.assertRaisesRegex(ValueError, "member ID"):
+            self.frequencies()
+        nested = self.f.save("composition/nested.json", self.outer)
+        self.outer["members"] = [
+            {"id": "nested", "profile": nested, "eligible_case_ids": ["tune"]}
+        ]
+        with self.assertRaisesRegex(ValueError, "invalid usage profile fields"):
+            self.frequencies()
+
+    def test_selected_case_union_and_member_cases_must_be_exact(self):
+        self.f.keys["eligible_case_ids"] = ["q0"]
+        with self.assertRaisesRegex(ValueError, "composed member union"):
+            self.frequencies()
+        self.f.keys["eligible_case_ids"] = ["q0", "tune"]
+        self.outer["members"][0]["eligible_case_ids"] = ["q0"]
+        with self.assertRaisesRegex(ValueError, "unknown case"):
+            self.frequencies()
+
+    def test_cross_member_heldout_input_laundering_is_rejected(self):
+        authority = copy.deepcopy(self.f.document)
+        authority["held_out"] = [{"id": "alias", "public_input": "vacuum( 1 )"}]
+        self.children["physical"]["eligibility_documents"].append(
+            self.f.embed(authority)
+        )
+        self.seal_composed()
+        with self.assertRaisesRegex(ValueError, "launders a held-out"):
+            self.frequencies()
+
+    def test_common_frozen_authority_must_be_present_in_every_member(self):
+        self.children["physical"]["eligibility_documents"].pop()
+        self.seal_composed()
+        with self.assertRaisesRegex(ValueError, "common frozen held-out authority"):
+            self.frequencies()
+
+    def test_actual_tuning_settings_and_cache_after_are_required(self):
+        self.edit_receipt("tuning", lambda r: r.pop("raw_reduction_settings"))
+        self.seal_composed()
+        with self.assertRaisesRegex(ValueError, "actual resolved raw settings"):
+            self.frequencies()
+        self.edit_receipt(
+            "tuning",
+            lambda r: r.update(
+                raw_reduction_settings=self.settings, cache_identity_after=None
+            ),
+        )
+        self.seal_composed()
+        with self.assertRaisesRegex(ValueError, "source index changed"):
+            self.frequencies()
+
+    def test_readonly_policy_and_physical_representation_are_actual_facts(self):
+        self.edit_receipt("tuning", lambda r: r.update(running_cache={"enabled": True}))
+        self.seal_composed()
+        with self.assertRaisesRegex(ValueError, "read-only five-loop"):
+            self.frequencies()
+        self.edit_receipt("tuning", lambda r: r.update(running_cache=None))
+        physical = self.children["physical"]["cases"][0]
+        receipt = cache_usage.referenced_json(self.f.repo, physical["receipt"])
+        report = cache_usage.referenced_json(self.f.repo, receipt["benchmark"])
+        report["coefficient_representation"] = "factorized"
+        receipt["benchmark"] = self.f.hint(
+            self.f.save("composition/changed-report.json", report)
+        )
+        physical["receipt"] = self.f.hint(
+            self.f.save("composition/changed-physical.json", receipt)
+        )
+        # Direct settings check isolates this fact; the full v1 path also rejects
+        # the deliberately stale supervisor output hashes.
+        with self.assertRaisesRegex(ValueError, "physical report differs"):
+            cache_usage.composed_case_settings(
+                self.f.repo,
+                self.children["physical"],
+                physical,
+                self.settings,
+                self.conventions,
+            )
+
+    def test_active_noncache_and_terminal_catalogue_cannot_change(self):
+        for name, value in (
+            ("masters", []),
+            ("families", []),
+            ("unit_mass_squared", False),
+            ("normalization", "other"),
+        ):
+            original = self.f.manifest[name]
+            with self.subTest(name=name):
+                self.f.manifest[name] = value
+                with self.assertRaisesRegex(
+                    ValueError, "active noncache data or terminal"
+                ):
+                    self.frequencies()
+            self.f.manifest[name] = original
+
+    def test_native_exporter_cannot_mislabel_v2_with_the_old_schema_stamp(self):
+        self.f.raw["usage_profile_schema_sha256"] = (
+            "515a986b3364a8a1aa919e50b65e2f6d3dbe5bbc030440270b66df575aeeea46"
+        )
+        self.f.metadata["selection"]["validation"] = self.f.save(
+            "composition/wrong-stamp.json", self.f.raw
+        )
+        data.write_json(self.f.root / "cache.json", self.f.metadata)
+        with self.assertRaisesRegex(ValueError, "actual composed usage schema"):
+            self.f.validate()
+
+    def test_schema_stamp_matches_the_immutable_contract(self):
+        path = (
+            Path(__file__).resolve().parents[1]
+            / "provenance/cache-record-usage-v2/profile.schema.json"
+        )
+        self.assertEqual(data.digest(path), cache_usage.PROFILE_V2_SCHEMA_SHA256)
+        self.assertEqual(
+            json.loads(path.read_bytes())["properties"]["schema"]["const"],
+            cache_usage.PROFILE_V2_SCHEMA,
+        )
+
+    def test_a_renamed_case_cannot_doublecount_the_same_input(self):
+        for public_input in ("vacuum( 1 )", "vacuum(  1  )"):
+            with self.subTest(public_input=public_input):
+                alias = copy.deepcopy(self.children["tuning"])
+                case = alias["cases"][0]
+                invocation = copy.deepcopy(self.f.document)
+                invocation["tuning"] = [{"id": "alias", "public_input": public_input}]
+                document = self.f.embed(invocation)
+                alias["eligibility_documents"].append(document)
+                case.update(
+                    case_id="alias",
+                    public_input_source_sha256=hashlib.sha256(
+                        public_input.encode()
+                    ).hexdigest(),
+                    role_evidence={
+                        "document_sha256": document["sha256"],
+                        "json_pointer": "/tuning/0",
+                    },
+                )
+                receipt = cache_usage.referenced_json(self.f.repo, case["receipt"])
+                receipt["case_id"] = "alias"
+                receipt["identity"]["workload_sha256"] = document["sha256"]
+                case["receipt"] = self.f.hint(
+                    self.f.save("composition/alias-receipt.json", receipt)
+                )
+                self.children["alias"] = alias
+                self.seal_composed()
+                with self.assertRaisesRegex(
+                    ValueError, "repeats a case source or input"
+                ):
+                    self.frequencies()
+
+    def test_native_conventions_and_actual_output_normalization_must_match(self):
+        self.outer["common"]["raw_reduction_settings"]["unit_mass_squared"] = 1
+        with self.assertRaisesRegex(ValueError, "authenticated native conventions"):
+            self.frequencies()
+        self.outer["common"]["raw_reduction_settings"]["unit_mass_squared"] = True
+        self.edit_receipt(
+            "tuning",
+            lambda r: r["conventions"].update(integral_normalization="different"),
+        )
+        self.seal_composed()
+        with self.assertRaisesRegex(ValueError, "output conventions differ"):
+            self.frequencies()
+
+    def test_composition_checks_overflow_after_each_valid_member(self):
+        for member, child in self.children.items():
+            case = child["cases"][0]
+            dispatch = case["dispatches"][0]
+            count = 1 << 63
+            dispatch["records"][0]["backing_hits"] = count
+            persistent = dispatch["persistent"]
+            persistent.update(
+                lookups=count + 5, route_hits=count, intermediate_hits=count + 2
+            )
+            receipt = cache_usage.referenced_json(self.f.repo, case["receipt"])
+            if member == "tuning":
+                receipt["cache_statistics"]["persistent"].update(persistent)
+            else:
+                for prefix in ("reference_", ""):
+                    report = cache_usage.referenced_json(
+                        self.f.repo, receipt[prefix + "benchmark"]
+                    )
+                    report["saved_application_cache"]["persistent"].update(persistent)
+                    reference = self.f.save(
+                        "composition/overflow-" + prefix + "benchmark.json", report
+                    )
+                    receipt[prefix + "benchmark"] = self.f.hint(reference)
+                    completion = cache_usage.referenced_json(
+                        self.f.repo, receipt[prefix + "completion"]
+                    )
+                    completion["outputs"]["benchmark_sha256"] = reference["sha256"]
+                    completion["terminal_artifacts"]["benchmark.json"].update(
+                        sha256=reference["sha256"],
+                        bytes=(self.f.repo / reference["path"]).stat().st_size,
+                    )
+                    receipt[prefix + "completion"] = self.f.hint(
+                        self.f.save(
+                            "composition/overflow-" + prefix + "completion.json",
+                            completion,
+                        )
+                    )
+            case["receipt"] = self.f.hint(
+                self.f.save("composition/overflow-" + member + ".json", receipt)
+            )
+        self.seal_composed()
+        with self.assertRaisesRegex(ValueError, "usage counter overflow"):
+            self.frequencies()
+
+
+class SourceProofGzipTests(unittest.TestCase):
+    def test_single_gzip_member_has_bounded_decoded_json_and_strict_framing(self):
+        f = UsageSelectedAdmissionTests(
+            "test_usage_variant_recomputes_admission_without_finite_workload_claims"
+        )
+        f.setUp()
+        self.addCleanup(f.doCleanups)
+        raw = b'{"proof": "valid"}'
+        good = gzip.compress(raw, mtime=0)
+
+        def archive(payload):
+            reference = f.save_bytes("framing.json.gz", b"")
+            (f.repo / reference["path"]).write_bytes(payload)
+            reference["sha256"] = data.digest(f.repo / reference["path"])
+            return reference
+
+        reference = archive(good)
+        self.assertEqual(cache_usage.source_json(f.repo, reference), {"proof": "valid"})
+        for payload in (
+            good + gzip.compress(b" ", mtime=0),
+            good + b"trailing",
+            good[:-1],
+            good[:-8] + bytes([good[-8] ^ 1]) + good[-7:],
+        ):
+            with self.subTest(payload=payload):
+                reference = archive(payload)
+                with self.assertRaises(ValueError):
+                    cache_usage.source_json(f.repo, reference)
+        # A small patched proof limit tests the exact decoded boundary without
+        # allocating 100 MiB. Encoded proofs remain below that same allowance.
+        for length, accepted in ((255, True), (256, False), (257, False)):
+            payload = b'"' + b"x" * (length - 2) + b'"'
+            reference = archive(gzip.compress(payload, mtime=0))
+            with (
+                self.subTest(length=length),
+                patch.object(cache_usage, "GIT_FILE_BYTES_LIMIT", 256),
+            ):
+                if accepted:
+                    self.assertEqual(
+                        len(cache_usage.source_json(f.repo, reference)), length - 2
+                    )
+                else:
+                    with self.assertRaisesRegex(ValueError, "decoded source proof"):
+                        cache_usage.source_json(f.repo, reference)
+
+
 if __name__ == "__main__":
     unittest.main()

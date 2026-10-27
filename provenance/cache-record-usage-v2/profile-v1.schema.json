@@ -1,0 +1,432 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Portable completed-record usage profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "semantic_binding",
+    "compiled_cohort",
+    "data",
+    "eligibility_documents",
+    "cases"
+  ],
+  "properties": {
+    "schema": {
+      "const": "vakint.cache-record-usage-profile.v1"
+    },
+    "semantic_binding": {
+      "type": "object",
+      "required": [
+        "artifact_digest",
+        "family_fingerprint",
+        "physical_arity",
+        "layer"
+      ],
+      "properties": {
+        "artifact_digest": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 255
+          },
+          "minItems": 32,
+          "maxItems": 32
+        },
+        "family_fingerprint": {
+          "type": "string",
+          "minLength": 1
+        },
+        "physical_arity": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "layer": {}
+      },
+      "description": "Exact existing Native cache-binding document; no new binding/codec."
+    },
+    "compiled_cohort": {
+      "type": "object",
+      "required": [
+        "main_revision",
+        "main_source_snapshot_sha256",
+        "native_revision",
+        "native_source_snapshot_sha256",
+        "kernel_revision",
+        "measurement_executable_sha256",
+        "collector_source_sha256",
+        "profile",
+        "rustc"
+      ],
+      "properties": {
+        "main_revision": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "main_source_snapshot_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "native_revision": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "native_source_snapshot_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "kernel_revision": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "measurement_executable_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "collector_source_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "profile": {
+          "type": "string"
+        },
+        "rustc": {
+          "type": "string"
+        }
+      },
+      "description": "Actual values from existing compiled-cohort receipt; omit its duplicate semantic_binding projection."
+    },
+    "data": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "root_manifest_sha256",
+        "loop_manifest_sha256",
+        "application_sha256"
+      ],
+      "properties": {
+        "root_manifest_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "loop_manifest_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "application_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    },
+    "eligibility_documents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "sha256",
+          "json_bytes_base64"
+        ],
+        "properties": {
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "json_bytes_base64": {
+            "type": "string",
+            "contentEncoding": "base64"
+          }
+        },
+        "description": "Exact small public workload/physical case manifest bytes, SHA-verified before role lookup; no private environment or raw trace."
+      }
+    },
+    "cases": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "case_id",
+          "role",
+          "input_sha256",
+          "public_input_source_sha256",
+          "role_evidence",
+          "receipt",
+          "trace",
+          "cache_identity",
+          "value_sha256",
+          "guards_sha256",
+          "guard_policy",
+          "observer_status",
+          "interval_ns",
+          "input_dispatch_count",
+          "dispatches"
+        ],
+        "properties": {
+          "case_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "role": {
+            "enum": [
+              "tuning",
+              "physical-example"
+            ]
+          },
+          "input_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$",
+            "description": "Actual input_sha256 from completed same-cohort measurement receipt after public parsing; never compare directly to raw public_input bytes."
+          },
+          "role_evidence": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "document_sha256",
+              "json_pointer"
+            ],
+            "properties": {
+              "document_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "json_pointer": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "receipt": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "sha256"
+            ],
+            "properties": {
+              "sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "path_hint": {
+                "type": "string"
+              }
+            }
+          },
+          "trace": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "sha256"
+            ],
+            "properties": {
+              "sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "path_hint": {
+                "type": "string"
+              }
+            }
+          },
+          "cache_identity": {
+            "type": "object"
+          },
+          "value_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "guards_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "guard_policy": {
+            "enum": [
+              "native-ordered-vector",
+              "canonical-full-sorted-deduplicated"
+            ]
+          },
+          "observer_status": {
+            "const": "Active"
+          },
+          "interval_ns": {
+            "const": 0
+          },
+          "input_dispatch_count": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 18446744073709551615
+          },
+          "dispatches": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "ordinal",
+                "requested_roots",
+                "completed_roots",
+                "collected_roots",
+                "persistent",
+                "records"
+              ],
+              "properties": {
+                "ordinal": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 18446744073709551615
+                },
+                "requested_roots": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 18446744073709551615
+                },
+                "completed_roots": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 18446744073709551615
+                },
+                "collected_roots": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/$defs/work"
+                  }
+                },
+                "persistent": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "lookups",
+                    "misses",
+                    "route_hits",
+                    "apply_hits",
+                    "requested_root_hits",
+                    "intermediate_hits"
+                  ],
+                  "properties": {
+                    "lookups": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 18446744073709551615
+                    },
+                    "misses": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 18446744073709551615
+                    },
+                    "route_hits": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 18446744073709551615
+                    },
+                    "apply_hits": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 18446744073709551615
+                    },
+                    "requested_root_hits": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 18446744073709551615
+                    },
+                    "intermediate_hits": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 18446744073709551615
+                    }
+                  }
+                },
+                "records": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "work",
+                      "backing_hits"
+                    ],
+                    "properties": {
+                      "work": {
+                        "$ref": "#/$defs/work"
+                      },
+                      "backing_hits": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 18446744073709551615
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "public_input_source_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$",
+            "description": "SHA256 of exact frozen public_input UTF-8 bytes; existing mapper field. Kept distinct from actual parsed/canonical input_sha256 in completed receipt."
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "work": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kind",
+            "powers"
+          ],
+          "properties": {
+            "kind": {
+              "const": "route"
+            },
+            "powers": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "minimum": -9223372036854775808,
+                "maximum": 9223372036854775807
+              },
+              "minItems": 1
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kind",
+            "owner_sector",
+            "powers"
+          ],
+          "properties": {
+            "kind": {
+              "const": "apply"
+            },
+            "owner_sector": {
+              "type": "array",
+              "items": {
+                "type": "boolean"
+              },
+              "minItems": 1
+            },
+            "powers": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "minimum": -9223372036854775808,
+                "maximum": 9223372036854775807
+              },
+              "minItems": 1
+            }
+          }
+        }
+      ]
+    }
+  }
+}

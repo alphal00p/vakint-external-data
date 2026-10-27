@@ -6,10 +6,10 @@ validation bindings. It neither decodes Native records nor replays large traces.
 
 import base64
 import collections
-import gzip
 import hashlib
 import json
 import re
+import zlib
 from pathlib import PurePosixPath
 
 import data
@@ -34,6 +34,19 @@ PHYSICAL_COLLECTOR_HELPERS = {
         "resource_guard_admission",
     )
 }
+PROFILE_V2_SCHEMA = "vakint.cache-record-usage-profile.v2"
+# Frozen source-only contract; never substitute the v1 schema stamp for v2.
+PROFILE_V2_SCHEMA_SHA256 = (
+    "3d8bc402451ebeab16a67b5119eaaaa19b0410d905dcffbf75c5bf95bcf945e4"
+)
+COMMON_COHORT_FIELDS = (
+    *COHORT_FIELDS,
+    "profile",
+    "rustc",
+    "collector_artifacts",
+    "main_source_snapshot",
+    "native_source_snapshot",
+)
 
 
 def require(condition, message):
@@ -112,9 +125,24 @@ def source_json(root, reference):
     path = source_file(root, reference)
     if path.name.endswith(".json.gz"):
         try:
-            with gzip.open(path, "rb") as stream:
-                return decode_json(stream.read())
-        except (OSError, EOFError) as error:
+            decoder = zlib.decompressobj(31)
+            plain = bytearray()
+            with path.open("rb") as stream:
+                while block := stream.read(64 * 1024):
+                    plain.extend(
+                        decoder.decompress(block, GIT_FILE_BYTES_LIMIT - len(plain))
+                    )
+                    require(
+                        len(plain) < GIT_FILE_BYTES_LIMIT,
+                        "decoded source proof must be smaller than 100 MiB",
+                    )
+                    require(
+                        not decoder.unused_data,
+                        "source proof has trailing data or extra gzip members",
+                    )
+            require(decoder.eof, "source proof gzip is truncated")
+            return decode_json(plain)
+        except (OSError, EOFError, zlib.error) as error:
             raise ValueError("source proof gzip framing or CRC is invalid") from error
     require(path.name.endswith(".json"), "source proof must be JSON or JSON gzip")
     return decode_json(path.read_bytes())
@@ -1271,6 +1299,375 @@ def profile_frequencies(root, profile, selected, binding):
     return frequencies
 
 
+def composed_profile_frequencies(
+    root, profile, selected, binding, directory, source, manifest
+):
+    """Join authenticated v1 observations, keeping each real collector identity.
+
+    Member validators remain the v1 authority. Composition adds common-source,
+    settings, global holdout and non-duplication checks; it never replays traces
+    or constructs a fictitious aggregate collector/executable.
+    """
+    fields(
+        profile,
+        ("schema", "semantic_binding", "common", "members"),
+        "invalid composed usage profile fields",
+    )
+    require(
+        profile["schema"] == PROFILE_V2_SCHEMA
+        and same(profile["semantic_binding"], binding),
+        "composed usage profile binding differs",
+    )
+    common = profile["common"]
+    fields(
+        common,
+        (
+            "source_cache_native_index_identity",
+            "data",
+            "compiled_source_cohort",
+            "raw_reduction_settings",
+            "output_conventions",
+            "held_out_authority_sha256",
+        ),
+        "invalid composed usage common fields",
+    )
+    fields(
+        common["data"],
+        ("root_manifest_sha256", "loop_manifest_sha256", "application_sha256"),
+        "invalid composed usage data",
+    )
+    index = source["cache_native_index_identity"]
+    native_index_identity(common["source_cache_native_index_identity"])
+    require(
+        same(common["source_cache_native_index_identity"], index),
+        "composed usage differs from selected cumulative index",
+    )
+    require(
+        common["data"].get("root_manifest_sha256") == source["data_manifest_sha256"],
+        "composed usage data differs from cumulative producer",
+    )
+    compiled = common["compiled_source_cohort"]
+    fields(compiled, COMMON_COHORT_FIELDS, "invalid common compiled source cohort")
+    cohort_ids(compiled)
+    require(
+        hash256(common["held_out_authority_sha256"]),
+        "invalid common frozen held-out authority",
+    )
+    snapshot = referenced_json(root, compiled["main_source_snapshot"])
+    require(
+        isinstance(snapshot, dict) and isinstance(snapshot.get("files"), dict),
+        "invalid common compiled source inventory",
+    )
+    frozen = snapshot.get("files", {}).get(
+        "crates/vakint/examples/build_cache/frozen-public-suites.json", {}
+    )
+    require(
+        isinstance(frozen, dict)
+        and frozen.get("sha256") == common["held_out_authority_sha256"],
+        "common held-out authority differs from compiled frozen suites",
+    )
+    members = profile["members"]
+    require(isinstance(members, list) and members, "empty composed usage profile")
+    requested = selected["eligible_case_ids"]
+    require(
+        isinstance(requested, list)
+        and requested
+        and all(isinstance(name, str) and name for name in requested)
+        and len(set(requested)) == len(requested),
+        "invalid composed selected eligible case IDs",
+    )
+    member_ids, profile_hashes, case_ids, receipt_hashes = set(), set(), set(), set()
+    public_inputs, canonical_inputs, role_sources, physical_runs = (
+        set(),
+        set(),
+        set(),
+        set(),
+    )
+    collectors = {}
+    held_out_ids, held_out_inputs = set(), set()
+    validated = []
+    frequencies = collections.Counter()
+    for member in members:
+        fields(
+            member,
+            ("id", "profile", "eligible_case_ids"),
+            "invalid usage profile member fields",
+        )
+        require(
+            isinstance(member["id"], str)
+            and member["id"]
+            and member["id"] not in member_ids,
+            "duplicate or invalid usage profile member ID",
+        )
+        member_ids.add(member["id"])
+        child = source_json(root, member["profile"])
+        checksum = member["profile"]["sha256"]
+        require(checksum not in profile_hashes, "duplicate usage member profile")
+        profile_hashes.add(checksum)
+        # No recursion or relaxed v1 projection: validate every member's entire
+        # cases/receipts/cohort/dispatch inventory through the original path.
+        counts = profile_frequencies(root, child, member, binding)
+        profile_data(root, child, directory)
+        original_loop = referenced_json(
+            root, child["compiled_cohort"]["data_manifests"]["loop"]
+        )
+
+        def noncache_files(loop):
+            return {
+                path: record
+                for path, record in loop["files"].items()
+                if path != "cache.json" and not path.startswith("cache/")
+            }
+
+        require(
+            same(noncache_files(original_loop), noncache_files(manifest))
+            and all(
+                same(original_loop.get(name), manifest.get(name))
+                for name in (
+                    "masters",
+                    "families",
+                    "dimension",
+                    "normalization",
+                    "unit_mass_squared",
+                )
+            ),
+            "active noncache data or terminal catalogue differs from original usage",
+        )
+        require(
+            same(child["data"], common["data"]),
+            "usage member data differs from common data",
+        )
+        require(
+            all(
+                same(child["compiled_cohort"].get(name), compiled[name])
+                for name in COMMON_COHORT_FIELDS
+            ),
+            "usage member differs from common compiled source cohort",
+        )
+        collector = child["compiled_cohort"].get("collector", "measure_cache")
+        executable = child["compiled_cohort"]["measurement_executable_sha256"]
+        require(
+            (collector not in collectors or collectors[collector] == executable)
+            and all(
+                name == collector or checksum != executable
+                for name, checksum in collectors.items()
+            ),
+            "composed collectors must retain their distinct named executables",
+        )
+        collectors[collector] = executable
+        documents, child_held_ids, child_held_inputs = embedded_eligibility(child)
+        authority = documents.get(common["held_out_authority_sha256"], {})
+        require(
+            authority.get("schema") == "vakint.five-loop-frozen-public-suites.v1"
+            and isinstance(authority.get("held_out"), list)
+            and authority["held_out"]
+            and all(
+                isinstance(row, dict) and isinstance(row.get("public_input"), str)
+                for row in authority["held_out"]
+            ),
+            "usage member lacks the common frozen held-out authority",
+        )
+        authority_ids = [row["id"] for row in authority["held_out"]]
+        authority_inputs = [
+            hashlib.sha256(row["public_input"].encode()).hexdigest()
+            for row in authority["held_out"]
+        ]
+        require(
+            len(set(authority_ids)) == len(authority_ids)
+            and len(set(authority_inputs)) == len(authority_inputs),
+            "common frozen held-out authority repeats an ID or input",
+        )
+        held_out_ids.update(child_held_ids)
+        held_out_inputs.update(child_held_inputs)
+        require(
+            set(member["eligible_case_ids"])
+            == {case["case_id"] for case in child["cases"]},
+            "composed member must select exactly its actual cases",
+        )
+        for case in child["cases"]:
+            require(case["case_id"] not in case_ids, "duplicate composed usage case ID")
+            case_ids.add(case["case_id"])
+            require(
+                case["receipt"]["sha256"] not in receipt_hashes,
+                "reused composed usage case receipt",
+            )
+            receipt_hashes.add(case["receipt"]["sha256"])
+            role = (
+                case["role_evidence"]["document_sha256"],
+                case["role_evidence"]["json_pointer"],
+            )
+            require(
+                role not in role_sources
+                and case["public_input_source_sha256"] not in public_inputs
+                and case["input_sha256"] not in canonical_inputs,
+                "composed usage repeats a case source or input",
+            )
+            role_sources.add(role)
+            public_inputs.add(case["public_input_source_sha256"])
+            canonical_inputs.add(case["input_sha256"])
+            require(
+                same(
+                    case["cache_identity"],
+                    {
+                        "cache_sha256": None,
+                        "cache_native_index_identity": index,
+                    },
+                ),
+                "composed usage case is not on the common cumulative index",
+            )
+            composed_case_settings(
+                root,
+                child,
+                case,
+                common["raw_reduction_settings"],
+                common["output_conventions"],
+            )
+            receipt = referenced_json(root, case["receipt"])
+            if receipt.get("schema") == "vakint.physical-cache-usage-receipt.v1":
+                for prefix in ("reference_", ""):
+                    launch = referenced_json(root, receipt[prefix + "launch"])
+                    run = (
+                        child["compiled_cohort"]["measurement_executable_sha256"],
+                        launch["collector"]["pid"],
+                        launch["collector"]["start_ticks"],
+                    )
+                    require(
+                        run not in physical_runs,
+                        "composed usage reuses a physical collector process",
+                    )
+                    physical_runs.add(run)
+        validated.append(child)
+        for key, count in counts.items():
+            frequencies[key] = checked_sum((frequencies[key], count))
+    require(
+        set(requested) == case_ids,
+        "selected eligible cases differ from composed member union",
+    )
+    for child in validated:
+        for case in child["cases"]:
+            require(
+                case["case_id"] not in held_out_ids
+                and case["public_input_source_sha256"] not in held_out_inputs,
+                "composed usage launders a held-out case or input",
+            )
+    return frequencies
+
+
+def composed_case_settings(root, profile, case, common, conventions):
+    """Compare actual resolved runtime settings, never an inferred source mode."""
+    # The original manifest is immutable evidence even when publication changes
+    # the current root/cache hashes. Native conventions must match the active
+    # application and source binding, not a caller-supplied settings assertion.
+    references = profile["compiled_cohort"]["data_manifests"]
+    loop = referenced_json(root, references["loop"])
+    fields(
+        conventions,
+        (
+            "integral_normalization",
+            "integral_normalization_expression",
+            "epsilon_symbol",
+        ),
+        "invalid composed output conventions",
+    )
+    require(
+        all(isinstance(value, str) and value for value in conventions.values()),
+        "invalid composed output convention value",
+    )
+    fields(
+        common,
+        (
+            "master_mode",
+            "coefficient_representation",
+            "dimension",
+            "normalization",
+            "unit_mass_squared",
+        ),
+        "invalid composed raw reduction settings",
+    )
+    require(
+        common["master_mode"] == "retain"
+        and common["coefficient_representation"] == "sparse"
+        and common["dimension"] == loop.get("dimension")
+        and common["normalization"] == loop.get("normalization")
+        and common["unit_mass_squared"] is True
+        and loop.get("unit_mass_squared") is True,
+        "composed raw settings differ from authenticated native conventions",
+    )
+    receipt = referenced_json(root, case["receipt"])
+    if profile["compiled_cohort"].get("collector", "measure_cache") == "measure_cache":
+        require(
+            same(receipt.get("raw_reduction_settings"), common),
+            "tuning receipt lacks matching actual resolved raw settings",
+        )
+        require(
+            same(
+                receipt.get("raw_reduction_settings_source"),
+                {
+                    "data_version": loop["version"],
+                    "release_manifest_sha256": profile["data"]["root_manifest_sha256"],
+                    "loop_manifest_sha256": profile["data"]["loop_manifest_sha256"],
+                    "loop_count": 5,
+                },
+            ),
+            "tuning resolved settings have different original data authority",
+        )
+        actual_reports = [receipt]
+        require(
+            same(receipt.get("cache_identity_after"), case["cache_identity"]),
+            "tuning source index changed during evaluation",
+        )
+        require(
+            receipt.get("persistent_cache_policy") == "manual-five-loop-only"
+            and receipt.get("running_cache") is None
+            and same(
+                receipt.get("persistent_cache_attachments_before"),
+                {str(i): False for i in range(1, 6)},
+            )
+            and same(
+                receipt.get("persistent_cache_attachments_during_evaluation"),
+                {str(i): i == 5 for i in range(1, 6)},
+            ),
+            "composed tuning usage requires a read-only five-loop backing",
+        )
+    else:
+        actual_reports = []
+        for prefix in ("reference_", ""):
+            report = referenced_json(root, receipt[prefix + "benchmark"])
+            require(
+                report.get("master_mode") == common["master_mode"]
+                and report.get("coefficient_representation")
+                == common["coefficient_representation"],
+                "physical report differs from composed resolved raw settings",
+            )
+            actual_reports.append(report)
+    for report in actual_reports:
+        actual = report.get("conventions", {})
+        require(
+            isinstance(actual, dict)
+            and all(
+                same(actual.get(name), value) for name, value in conventions.items()
+            ),
+            "actual output conventions differ across composed usage",
+        )
+
+
+def admitted_profile_frequencies(
+    root, profile, selected, binding, directory, source, manifest
+):
+    if isinstance(profile, dict) and profile.get("schema") == PROFILE_V2_SCHEMA:
+        return composed_profile_frequencies(
+            root, profile, selected, binding, directory, source, manifest
+        )
+    frequencies = profile_frequencies(root, profile, selected, binding)
+    profile_data(root, profile, directory)
+    require(
+        profile["data"]["application_sha256"]
+        == data.digest(directory / "ibps/application.json"),
+        "usage application differs from selected cache",
+    )
+    return frequencies
+
+
 def validate(directory, manifest, metadata):
     """Return a recomputed admission record, never a new Native algebra claim."""
     require(
@@ -1372,12 +1769,8 @@ def validate(directory, manifest, metadata):
         == data.FIVE_LOOP_LIGHT_CACHE_BYTES_LIMIT,
         "selected keys differ from eligible profile, binding or compressed budget",
     )
-    frequencies = profile_frequencies(root, profile, keys, binding)
-    profile_data(root, profile, directory)
-    require(
-        profile["data"]["application_sha256"]
-        == data.digest(directory / "ibps/application.json"),
-        "usage application differs from selected cache",
+    frequencies = admitted_profile_frequencies(
+        root, profile, keys, binding, directory, source, manifest
     )
     require(isinstance(keys["keys"], list) and keys["keys"], "empty selected key list")
     selected = [work(row, binding["physical_arity"]) for row in keys["keys"]]
@@ -1388,6 +1781,11 @@ def validate(directory, manifest, metadata):
     )
     raw = source_json(root, selection["validation"])
     require(isinstance(raw, dict), "Native validation receipt must be an object")
+    if profile.get("schema") == PROFILE_V2_SCHEMA:
+        require(
+            raw.get("usage_profile_schema_sha256") == PROFILE_V2_SCHEMA_SHA256,
+            "Native exporter must stamp the actual composed usage schema",
+        )
     cohort_ids(raw.get("compiled_cohort"))
     identity = manifest["cache"]["identity"]
     cache_sha256 = data.digest(directory / manifest["cache"]["path"])
