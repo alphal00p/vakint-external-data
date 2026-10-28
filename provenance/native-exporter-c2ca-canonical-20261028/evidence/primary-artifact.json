@@ -1,0 +1,27 @@
+{
+  "path": "/shared/codex-1/vakint_rustred/workspace/build/native-producer-c2ca-v2-ci-optim/ci-optim/native-selected-cache-producer",
+  "sha256": "4843e29e64b319585a4437c0bbd21e9c2212626242e8300a78808d9351763539",
+  "bytes": 39986184,
+  "Cargo_profile": {
+    "opt_level": "2",
+    "debuginfo": 0,
+    "debug_assertions": true,
+    "overflow_checks": true,
+    "test": false
+  },
+  "fresh": false,
+  "target": {
+    "kind": [
+      "bin"
+    ],
+    "crate_types": [
+      "bin"
+    ],
+    "name": "native-selected-cache-producer",
+    "src_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-c2ca-source/src/main.rs",
+    "edition": "2024",
+    "doc": true,
+    "doctest": false,
+    "test": true
+  }
+}

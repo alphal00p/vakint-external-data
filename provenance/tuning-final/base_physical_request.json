@@ -1,0 +1,412 @@
+{
+  "schema": "vakint.actual-q0-physical-v1-stage-request.v1",
+  "Main_revision": "2d70bfe439d84b6888cbd29d2574df9c1ed7aae6",
+  "output": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-v1-stage-run1",
+  "owner_tools": "/shared/codex-1/vakint_rustred/workspace/5l-push/external-light-profile-v2-20261027/tools",
+  "owner_sources": {
+    "cache_usage.py": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/external-light-profile-v2-20261027/tools/cache_usage.py",
+      "sha256": "4c1b9c905962739edc5bbb27443838c144489a73a625ad865e3e5fec95f8f8db",
+      "bytes": 90730
+    },
+    "data.py": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/external-light-profile-v2-20261027/tools/data.py",
+      "sha256": "b07bab2f8021c2ddd97c6c3f9776c3e7ef9fca54d3c386a59c448601c3808627",
+      "bytes": 59242
+    },
+    "saved_cache.py": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/external-light-profile-v2-20261027/tools/saved_cache.py",
+      "sha256": "fb09a576ca8126a383cacad62e8dac5420240c42986819fde84e8a301c2feec6",
+      "bytes": 12677
+    }
+  },
+  "cohort_archive": [
+    {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/collector-cohort-adapter/actual-2d70-run1/provenance/actual-two-collector-cohort/adapter-validation.json",
+      "sha256": "22a98680c361c4b7735642c7585716e21e022dd0649dc303607aad1c47ff4425",
+      "bytes": 3115,
+      "relative": "adapter-validation.json"
+    },
+    {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/collector-cohort-adapter/actual-2d70-run1/provenance/actual-two-collector-cohort/artifacts/five_loop_qcd_ladder.d",
+      "sha256": "f0a84e399040655a9a999234d1c4db8c1a6c5cd515ba1a648d080bde4d6e264f",
+      "bytes": 4783,
+      "relative": "artifacts/five_loop_qcd_ladder.d"
+    },
+    {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/collector-cohort-adapter/actual-2d70-run1/provenance/actual-two-collector-cohort/artifacts/measure_cache.d",
+      "sha256": "ed0a945b1ddde9c41fa7523394f1da10de89fc86dc0e7df64bb15c83773e2097",
+      "bytes": 2556,
+      "relative": "artifacts/measure_cache.d"
+    },
+    {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/collector-cohort-adapter/actual-2d70-run1/provenance/actual-two-collector-cohort/build-plan.json",
+      "sha256": "0dca14ee2e0cbed29cfd323657b6a79bf64b99288eadff6a29fc6f094ccc07c8",
+      "bytes": 12843,
+      "relative": "build-plan.json"
+    },
+    {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/collector-cohort-adapter/actual-2d70-run1/provenance/actual-two-collector-cohort/build.py",
+      "sha256": "acb70b7e93190358a613925718784f8947ad4c85302d0436dc69843726d020e9",
+      "bytes": 13790,
+      "relative": "build.py"
+    },
+    {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/collector-cohort-adapter/actual-2d70-run1/provenance/actual-two-collector-cohort/collector-artifacts.json",
+      "sha256": "9bf61b213956dbed1f3a2667d16c3b906c9931834e018b234e0d178433c0fb7e",
+      "bytes": 13494,
+      "relative": "collector-artifacts.json"
+    },
+    {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/collector-cohort-adapter/actual-2d70-run1/provenance/actual-two-collector-cohort/compile-proof-environment.json",
+      "sha256": "6b69938aa990c74b2762a47a193d4003a87535e4412cd6357d686c827c67da60",
+      "bytes": 610,
+      "relative": "compile-proof-environment.json"
+    },
+    {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/collector-cohort-adapter/actual-2d70-run1/provenance/actual-two-collector-cohort/five_loop_qcd_ladder-cohort.json",
+      "sha256": "27c6dfe423baf330fff4838b95aab78b6a6ac79104f9c7b4d2ab7eab0574fcd3",
+      "bytes": 2015,
+      "relative": "five_loop_qcd_ladder-cohort.json"
+    },
+    {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/collector-cohort-adapter/actual-2d70-run1/provenance/actual-two-collector-cohort/main-source-snapshot.json",
+      "sha256": "d415bf7d142d57b386bd5656471a7551dd43c5ddb0c0ea82c7f2fc3436abc29a",
+      "bytes": 572091,
+      "relative": "main-source-snapshot.json"
+    },
+    {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/collector-cohort-adapter/actual-2d70-run1/provenance/actual-two-collector-cohort/measure_cache-cohort.json",
+      "sha256": "2aa7b5115ce4ab6df2210c2a012c0378312c46b0cde14ef68d6d820b88f00e4b",
+      "bytes": 1305,
+      "relative": "measure_cache-cohort.json"
+    },
+    {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/collector-cohort-adapter/actual-2d70-run1/provenance/actual-two-collector-cohort/native-source-snapshot.json",
+      "sha256": "3cdfaaacc4619f3adb3ceddb3185106338e2352523ecc778858a633a80055b0c",
+      "bytes": 1325287,
+      "relative": "native-source-snapshot.json"
+    },
+    {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/collector-cohort-adapter/actual-2d70-run1/provenance/actual-two-collector-cohort/raw-release-collectors.json",
+      "sha256": "6f15e5b521ca929e295fa9aa721aeb85d6b93803be861e9c0f20d3c99791e931",
+      "bytes": 27025,
+      "relative": "raw-release-collectors.json"
+    },
+    {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/collector-cohort-adapter/actual-2d70-run1/provenance/actual-two-collector-cohort/validator/cache_usage.py",
+      "sha256": "51aeb696422f47756ac045041f527307310d3264d90ef2da6c5a5b3fbfcfb2f0",
+      "bytes": 76527,
+      "relative": "validator/cache_usage.py"
+    },
+    {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/collector-cohort-adapter/actual-2d70-run1/provenance/actual-two-collector-cohort/validator/data.py",
+      "sha256": "b07bab2f8021c2ddd97c6c3f9776c3e7ef9fca54d3c386a59c448601c3808627",
+      "bytes": 59242,
+      "relative": "validator/data.py"
+    },
+    {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/collector-cohort-adapter/actual-2d70-run1/provenance/actual-two-collector-cohort/validator/saved_cache.py",
+      "sha256": "fb09a576ca8126a383cacad62e8dac5420240c42986819fde84e8a301c2feec6",
+      "bytes": 12677,
+      "relative": "validator/saved_cache.py"
+    }
+  ],
+  "physical_cohort": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/collector-cohort-adapter/actual-2d70-run1/provenance/actual-two-collector-cohort/five_loop_qcd_ladder-cohort.json",
+    "sha256": "27c6dfe423baf330fff4838b95aab78b6a6ac79104f9c7b4d2ab7eab0574fcd3",
+    "bytes": 2015
+  },
+  "data": {
+    "root": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/external-q0-running-cache-d438/manifest.json",
+      "sha256": "794c0e4b44a1c6be1d78f8ebdbca188473678823ea1f3b821f70b63b2a6dd5a7",
+      "bytes": 1745
+    },
+    "loop": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/external-q0-running-cache-d438/5L/manifest.json",
+      "sha256": "81ece536cd54781b98d039325a7d62a884ec958aca27c1f4d5adca734a0f4ccb",
+      "bytes": 1642993
+    },
+    "application": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/external-q0-running-cache-d438/5L/ibps/application.json",
+      "sha256": "976d574c4ad8b4021ac7a1914c624095a77f5975b98e243c7a20a9396a86ff03",
+      "bytes": 47233
+    },
+    "prepared": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/physics/prepared-input-q0-8282f022-v1/prepared-input.json",
+      "sha256": "e8bd141e653944390fd48ba234f477173caa2f84089c7ca56ea9b39938f7b1f4",
+      "bytes": 2224
+    }
+  },
+  "all5_source": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/cumulative-source-projection/actual-all5-source-run1/provenance/all5-cumulative-source/cumulative-report.json",
+    "sha256": "fb3e66522504dd70194ca80275513e14fcc805c55058bf467028990e80415673",
+    "bytes": 19690
+  },
+  "semantic_binding": {
+    "artifact_digest": [
+      162,
+      68,
+      185,
+      180,
+      206,
+      143,
+      114,
+      40,
+      199,
+      12,
+      133,
+      132,
+      8,
+      135,
+      208,
+      168,
+      201,
+      62,
+      78,
+      199,
+      29,
+      175,
+      102,
+      4,
+      104,
+      117,
+      83,
+      104,
+      97,
+      251,
+      210,
+      115
+    ],
+    "family_fingerprint": "rustred-integral-family-v2;N27:tide_five_loop_common_basis;L5;2:k1;2:k2;2:k3;2:k4;2:k5;E0;P1;1:d;Q5,0,15;M;RY1,1;I+1;X1;Y1,1;I+1;X0;D15;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I+2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;G0;U15;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;",
+    "layer": "saved-application-route-apply-v1",
+    "physical_arity": 15
+  },
+  "cache_identity": {
+    "cache_native_index_identity": {
+      "indexes": {
+        "bindings/6b235c09ae267174886f88a033214526be0dc1a3158fd597f4fb97b8dccd9853/cache.rrindex": {
+          "bytes": 36582873,
+          "sha256": "a1a33ef0861c45726d64ca2c0fadf76c85d3ccad77193b231a89b92c5c05eea2"
+        },
+        "bundle.rrindex": {
+          "bytes": 5254,
+          "sha256": "4f940e610956c96a5f344bf8f0540021ab70908873bbd3ade9c0c4bf9f0f0f6d"
+        }
+      },
+      "layout": "bundle",
+      "schema": "vakint.native-cache-index-identity.v1",
+      "sha256": "2658cd25b88b24c00fc5e3ad7a68b2396fdbe4ab8facea0039873d971b236654"
+    },
+    "cache_sha256": null
+  },
+  "trace": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-on-run1/run/cache-hit-events.json",
+    "sha256": "fe11a49c38ba1c88c5c7c352eb2c735baed30a1e36bc3ae0b3cdc2ac27681aab",
+    "bytes": 21038986
+  },
+  "physical_inventory": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-record-usage-contract-final/physical-source-inventory.json",
+    "sha256": "e829c99e9304d67bed4180247819876dcd8af9822f54506c8311a49fa2573d3c",
+    "bytes": 4019
+  },
+  "frozen_heldouts": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/final-usage-plan/workload-inputs/frozen-public-suites.json",
+    "sha256": "dcf2a6d0e6de4dd55fc9a2dd23a16381dc501a64ab843433d15f38e77246d220",
+    "bytes": 20474
+  },
+  "off": {
+    "benchmark": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-off-projection-run1/raw-benchmark.json",
+      "sha256": "0b67ab6f51220b060564ee6306b2f8ca24eb131d43ce25e9b5bcd0316b6d86e2",
+      "bytes": 38729
+    },
+    "completion": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-off-projection-run1/accepted-completion.json",
+      "sha256": "6ab3ad615c49c766e15581e195c5851bb50cb6d6e570a01853c19635f1235fc4",
+      "bytes": 4613
+    },
+    "launch": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-off-projection-run1/accepted-launch.json",
+      "sha256": "ab35b1312b0ed1576e3f5aaa0b8d60cebc2463aa127784c5bd790f0da1852207",
+      "bytes": 2079
+    },
+    "verification": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-off-verify-run1/verification.json",
+      "sha256": "d11fb036865e9169563f2a6e88b909819c7cab54e0a9505a1e4dc092e223d834",
+      "bytes": 8381
+    },
+    "science": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-off-scientific-handoff.json",
+      "sha256": "4bec1f2b9b5b895de87fa9eb75ceac9381b3713f0fda3855265490aa563a85e3",
+      "bytes": 4243
+    },
+    "full58proof": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-off-verify-run1/full58-scalar-proof.json",
+      "sha256": "06d8872b7f65e91746ff30562aab871588d41c3eaf72da40fd1abfab9bc93d64",
+      "bytes": 26233
+    },
+    "raw_execution": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-off-projection-run1/raw-execution.json",
+      "sha256": "ad799a43b5938858e4f3278460eb5737aa6c915f13ba7c3ee6f80ad53e9c0c12",
+      "bytes": 6512
+    },
+    "raw_launch": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-off-projection-run1/raw-launch.json",
+      "sha256": "ab35b1312b0ed1576e3f5aaa0b8d60cebc2463aa127784c5bd790f0da1852207",
+      "bytes": 2079
+    },
+    "raw_verification": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-off-projection-run1/raw-verification.json",
+      "sha256": "d11fb036865e9169563f2a6e88b909819c7cab54e0a9505a1e4dc092e223d834",
+      "bytes": 8381
+    },
+    "raw_full58proof": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-off-projection-run1/raw-full58-proof.json",
+      "sha256": "06d8872b7f65e91746ff30562aab871588d41c3eaf72da40fd1abfab9bc93d64",
+      "bytes": 26233
+    },
+    "scientific_handoff": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-off-scientific-handoff.json",
+      "sha256": "4bec1f2b9b5b895de87fa9eb75ceac9381b3713f0fda3855265490aa563a85e3",
+      "bytes": 4243
+    },
+    "projection_handoff": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-off-projection-handoff.json",
+      "sha256": "e10cd61ebfff0c25eb0ffda104dbe69cdc54b9ac729d829981da1e5e02114105",
+      "bytes": 3948
+    }
+  },
+  "on": {
+    "benchmark": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-on-projection-run1/raw-benchmark.json",
+      "sha256": "6069c8c9c8cea2d656b25d0c4c64690977d29d847b02ab09bb55a3ac957fc33b",
+      "bytes": 39078
+    },
+    "completion": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-on-projection-run1/accepted-completion.json",
+      "sha256": "3a6960f61d80dccce18d4f02e7443ce9fa9c2096c61e3d63c56ab102fa4637b3",
+      "bytes": 4602
+    },
+    "launch": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-on-projection-run1/accepted-launch.json",
+      "sha256": "a4b463305f5cb82b94e2f06c43f4db5226fd81e278a58552158bfdcbd6abbb13",
+      "bytes": 2106
+    },
+    "verification": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-on-verify-run1/verification.json",
+      "sha256": "10b8187c2f97a33e3c9b835ed12daa0c19c14ad28df311eb3e0c7affcff69766",
+      "bytes": 8369
+    },
+    "science": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-on-scientific-handoff.json",
+      "sha256": "28582d1049fc81a31b2d30428597b7969f3154dbf5ac9088208229fefb22ec90",
+      "bytes": 4913
+    },
+    "full58proof": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-on-verify-run1/full58-scalar-proof.json",
+      "sha256": "06d8872b7f65e91746ff30562aab871588d41c3eaf72da40fd1abfab9bc93d64",
+      "bytes": 26233
+    },
+    "raw_execution": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-on-projection-run1/raw-execution.json",
+      "sha256": "39e99428504cbf0ac90c0d122522cace6dd7c7555a7f87555105c9f86c473473",
+      "bytes": 6488
+    },
+    "raw_launch": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-on-projection-run1/raw-launch.json",
+      "sha256": "a4b463305f5cb82b94e2f06c43f4db5226fd81e278a58552158bfdcbd6abbb13",
+      "bytes": 2106
+    },
+    "raw_verification": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-on-projection-run1/raw-verification.json",
+      "sha256": "10b8187c2f97a33e3c9b835ed12daa0c19c14ad28df311eb3e0c7affcff69766",
+      "bytes": 8369
+    },
+    "raw_full58proof": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-on-projection-run1/raw-full58-proof.json",
+      "sha256": "06d8872b7f65e91746ff30562aab871588d41c3eaf72da40fd1abfab9bc93d64",
+      "bytes": 26233
+    },
+    "scientific_handoff": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-on-scientific-handoff.json",
+      "sha256": "28582d1049fc81a31b2d30428597b7969f3154dbf5ac9088208229fefb22ec90",
+      "bytes": 4913
+    },
+    "projection_handoff": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-on-projection-handoff.json",
+      "sha256": "4933e6e792f1126eccc6b3b256defd6470b373a4c6637907f609ba35e008f8f8",
+      "bytes": 3881
+    }
+  },
+  "protected_roots": [
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/external-light-profile-v2-20261027",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/external-light-profile-v2-20261027/tools/cache_usage.py",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/external-light-profile-v2-20261027/tools/data.py",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/external-light-profile-v2-20261027/tools/saved_cache.py",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/external-q0-running-cache-d438",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/external-q0-running-cache-d438/5L/ibps/application.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/external-q0-running-cache-d438/5L/manifest.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/external-q0-running-cache-d438/manifest.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/physics/prepared-input-q0-8282f022-v1",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/physics/prepared-input-q0-8282f022-v1/prepared-input.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-q0-coefficient-release-freeze-2d70-20261028",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-record-usage-contract-final",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/cache-record-usage-contract-final/physical-source-inventory.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/union-copy-run1/native-output/cache",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/collector-cohort-adapter/actual-2d70-run1/provenance/actual-two-collector-cohort",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/collector-cohort-adapter/actual-2d70-run1/provenance/actual-two-collector-cohort/adapter-validation.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/collector-cohort-adapter/actual-2d70-run1/provenance/actual-two-collector-cohort/artifacts/five_loop_qcd_ladder.d",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/collector-cohort-adapter/actual-2d70-run1/provenance/actual-two-collector-cohort/artifacts/measure_cache.d",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/collector-cohort-adapter/actual-2d70-run1/provenance/actual-two-collector-cohort/build-plan.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/collector-cohort-adapter/actual-2d70-run1/provenance/actual-two-collector-cohort/build.py",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/collector-cohort-adapter/actual-2d70-run1/provenance/actual-two-collector-cohort/collector-artifacts.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/collector-cohort-adapter/actual-2d70-run1/provenance/actual-two-collector-cohort/compile-proof-environment.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/collector-cohort-adapter/actual-2d70-run1/provenance/actual-two-collector-cohort/five_loop_qcd_ladder-cohort.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/collector-cohort-adapter/actual-2d70-run1/provenance/actual-two-collector-cohort/main-source-snapshot.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/collector-cohort-adapter/actual-2d70-run1/provenance/actual-two-collector-cohort/measure_cache-cohort.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/collector-cohort-adapter/actual-2d70-run1/provenance/actual-two-collector-cohort/native-source-snapshot.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/collector-cohort-adapter/actual-2d70-run1/provenance/actual-two-collector-cohort/raw-release-collectors.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/collector-cohort-adapter/actual-2d70-run1/provenance/actual-two-collector-cohort/validator/cache_usage.py",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/collector-cohort-adapter/actual-2d70-run1/provenance/actual-two-collector-cohort/validator/data.py",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/collector-cohort-adapter/actual-2d70-run1/provenance/actual-two-collector-cohort/validator/saved_cache.py",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/cumulative-source-projection/actual-all5-source-run1/provenance/all5-cumulative-source",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/cumulative-source-projection/actual-all5-source-run1/provenance/all5-cumulative-source/cumulative-report.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/final-usage-plan/workload-inputs",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/final-usage-plan/workload-inputs/frozen-public-suites.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-off-projection-handoff.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-off-projection-run1",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-off-projection-run1/accepted-completion.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-off-projection-run1/accepted-launch.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-off-projection-run1/raw-benchmark.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-off-projection-run1/raw-execution.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-off-projection-run1/raw-full58-proof.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-off-projection-run1/raw-launch.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-off-projection-run1/raw-verification.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-off-run1",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-off-scientific-handoff.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-off-verify-run1",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-off-verify-run1/full58-scalar-proof.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-off-verify-run1/verification.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-on-projection-handoff.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-on-projection-run1",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-on-projection-run1/accepted-completion.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-on-projection-run1/accepted-launch.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-on-projection-run1/raw-benchmark.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-on-projection-run1/raw-execution.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-on-projection-run1/raw-full58-proof.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-on-projection-run1/raw-launch.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-on-projection-run1/raw-verification.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-on-run1",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-on-run1/run/cache-hit-events.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-on-scientific-handoff.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-on-verify-run1",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-on-verify-run1/full58-scalar-proof.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-on-verify-run1/verification.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-v1-stage-request.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/stage-physical-v1.py",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-release-2d70-20261028",
+    "/shared/codex-1/vakint_rustred/workspace/cargo/git/checkouts/rustred-971a3b8def498c77/c2ca815"
+  ]
+}

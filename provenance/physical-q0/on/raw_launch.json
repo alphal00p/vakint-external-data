@@ -1,0 +1,65 @@
+{
+  "utc": "2026-10-28T05:22:39.060881+00:00",
+  "controller": {
+    "pid": 2511724,
+    "start_ticks": 119865891,
+    "ppid": 9584,
+    "state": "R",
+    "uid": 1124
+  },
+  "unit": {
+    "LoadState": "loaded",
+    "ActiveState": "active",
+    "SubState": "running",
+    "InvocationID": "0e684fed59fa48d0b14cf46d5ac8e95f",
+    "MainPID": "2511724",
+    "Result": "success",
+    "ExecMainStartTimestamp": "Wed 2026-10-28 05:22:37 UTC",
+    "ExecMainPID": "2511724",
+    "ExecMainStatus": "0",
+    "ControlGroup": "/user.slice/user-1124.slice/user@1124.service/app.slice/vakint-q0-all5-2d70-on-20261028.service"
+  },
+  "worker": {
+    "pid": 2511999,
+    "start_ticks": 119866001,
+    "ppid": 2511724,
+    "state": "R",
+    "uid": 1124
+  },
+  "collector": {
+    "pid": 2511999,
+    "start_ticks": 119866001,
+    "ppid": 2511724,
+    "state": "R",
+    "uid": 1124
+  },
+  "supervisor": {
+    "pid": 2511724,
+    "start_ticks": 119865891,
+    "ppid": 9584,
+    "state": "R",
+    "uid": 1124
+  },
+  "argv": [
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-release-2d70-20261028/run/artifacts/five_loop_qcd_ladder",
+    "--work-dir",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-on-run1/run",
+    "--artifacts",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/external-q0-running-cache-d438",
+    "--projection",
+    "zero-momentum",
+    "--coefficient-representation",
+    "sparse",
+    "--prepared-input",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/physics/prepared-input-q0-8282f022-v1",
+    "--cache",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/union-copy-run1/native-output/cache",
+    "--classify-cache-hits"
+  ],
+  "config_sha256": "ea46e616f2c129265a014bc34be17053466802417181e7d5163761adad9b2d28",
+  "performance_eligible": false,
+  "automatic_retry": false,
+  "runtime_hard_cap": null,
+  "launch_spec_sha256": "a7ee3270647b1d9c5e4c40af2ece8a36ecbef23cc534dd65903d09ac53f4411a",
+  "Native_permitted": false
+}

@@ -58,10 +58,11 @@ terminals have graphs and exact identities, but **no computed coefficients**.
 The five-loop graph files retain the complete numerator, propagator powers,
 mass terms and explicit loop-momentum basis. Their names `P1` through `P640`
 are assigned anew for this publication; match integrals by their family-qualified
-signed index tuples, not by names from older releases. A selected complete
-five-loop cache is included in this source stage: two training roots and 25,086
-intermediate records in one 2,456,235-byte native gzip file. It retains its
-original pilot producer and timings; it supplies no five-loop epsilon coefficients.
+signed index tuples, not by names from older releases. The selected five-loop
+LIGHT cache contains 2,102 strict-complete records (54 Route and 2,048 Apply)
+in one 89,635,796-byte native gzip file. The user froze this existing validated
+candidate as adequate; this is not a measured performance winner. It supplies
+no five-loop epsilon coefficients.
 See [`5L/cache/README.md`](5L/cache/README.md) for exact selection and compatibility scope.
 Prepared 1L–4L caches complete a declared finite workload; this does not certify
 arbitrary-index IBP coverage. See `coverage.json` and `cache.json` in each pack.
@@ -82,13 +83,16 @@ engine.load_external_data("/path/to/vakint-external-data", max_loop_count=5)
 ```
 
 Five-loop evaluation is symbolic until numerical coefficients are supplied.
-The selected cache was produced by Vakint revision
-`8ef03d7fd7557772e1b531b71b71c08e3419ff54` and has accepted native compatibility
-for the actual `c6dcc126bfaf0164870776e1018d08bdafb1e117` consumer and its frozen
-two-root workload. The acceptance uses the reviewed semantic projection; it
-does not claim a complete fresh thirteen-case pass, compatibility with a newer
-consumer, or a guaranteed speed gain. Original campaign and producer identities
-remain recorded separately from the later selection.
+The selected file has actual Native `c2ca815` export/reimport validation for all
+2,102 records, exact coefficients and ordered guards, with no missing or partial
+records. Its authenticated usage comes from the frozen tuning and physical
+inputs; no final held-out outcomes selected its records. Original measurement
+and exporter cohorts remain separate. The previous two-root fallback, its
+producer/consumer evidence and original manifests are preserved under
+[`provenance/replaced-fallback-20261028`](provenance/replaced-fallback-20261028).
+All five-loop noncache files, including their historical README, remain the
+unchanged input-data authority. Current cache status is recorded in
+[`5L/cache.json`](5L/cache.json) and [`5L/cache/README.md`](5L/cache/README.md).
 
 For a subsequent five-loop refresh, use `tools/replace_five_loop.py stage` with
 the exported native application and its native terminal definitions, validate

@@ -1,0 +1,52 @@
+   Compiling getrandom v0.4.2
+   Compiling fastrand v2.4.1
+   Compiling tempfile v3.27.0
+   Compiling native-selected-cache-producer v0.1.0 (/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-c2ca-source)
+    Finished `ci-optim` profile [optimized] target(s) in 10.26s
+     Running unittests src/main.rs (/shared/codex-1/vakint_rustred/workspace/build/native-producer-c2ca-v2-ci-optim/ci-optim/deps/native_selected_cache_producer-be3c0cb509cb1e88)
+
+running 40 tests
+test proof_reference::tests::canonical_contained_file_emits_exact_relative_transport_and_same_sha ... ok
+test proof_reference::tests::changed_document_or_replaced_root_cannot_emit_a_reference ... ok
+test proof_reference::tests::file_reference_rejects_traversal_absolute_aliases_and_relative_inputs ... ok
+test proof_reference::tests::root_leaf_parent_and_inside_pointing_symlinks_are_rejected ... ok
+test proof_reference::tests::root_requires_existing_normal_absolute_regular_directory ... ok
+test proof_reference::tests::same_bytes_outside_root_and_prefix_collision_are_not_containment ... ok
+test reference_parser_tests::document_does_not_normalize_an_alias_into_an_acceptable_rooted_reference ... ok
+test reference_parser_tests::document_rooted_reference_preserves_actual_sha_and_rechecks_contents ... ok
+test reference_parser_tests::document_without_root_preserves_historical_absolute_reference_bytes ... ok
+test reference_parser_tests::optional_proof_root_preserves_existing_required_arguments_in_both_modes ... ok
+test reference_parser_tests::optional_timing_map_preserves_absence_and_only_records_completed_named_phases ... ok
+test reference_parser_tests::private_five_loop_runtime_cannot_bypass_absent_shared_admission ... ok
+test reference_parser_tests::proof_root_parser_rejects_missing_duplicate_and_unknown_arguments ... ok
+test reference_parser_tests::record_diagnostic_line_is_only_phase_count_and_elapsed_metadata ... ok
+test reference_parser_tests::record_diagnostics_are_bounded_to_each_1024_records_and_final_count ... ok
+test reference_parser_tests::root_replacement_with_equal_bytes_fails_reference_postflight ... ok
+test resource_guard_admission::tests::absent_tuple_is_inert_and_every_partial_tuple_is_refused ... ok
+test resource_guard_admission::tests::changed_inputs_and_nonzero_helper_never_produce_admission ... error: Unrecognized option: 'B'
+ok
+test resource_guard_admission::tests::metadata_fifo_and_oversize_are_refused_before_hashing ... ok
+test resource_guard_admission::tests::real_guard_admission_returns_before_any_native_work ... ignored, requires reviewed task ENV, authoritative postspawn ticket and real guard; no Native work
+test resource_guard_admission::tests::receipt_must_match_rust_pid_start_uid_executable_and_launch_spec ... ok
+test selection::tests::actual_profile_tag_preserves_v1_and_records_v2_schema_identity ... ok
+test selection::tests::arity_owner_unknown_stage_and_route_owner_fail ... ok
+test selection::tests::binding_adapter_rejects_non_native_fields_and_bad_shapes ... ok
+test selection::tests::duplicates_empty_lists_and_unknown_top_fields_fail ... ok
+test selection::tests::public_work_maps_to_exact_existing_native_keys ... ok
+test selection::tests::standard_gzip_json_uses_same_parser_and_rejects_extra_members ... ok
+test selection::tests::wrong_schema_binding_usage_hash_and_budget_fail ... ok
+test union::tests::actual_metadata_alone_controls_output_sums_and_checked_overflow ... ok
+test union::tests::copied_physical_bytes_are_not_confused_with_stored_references ... ok
+test union::tests::empty_duplicate_wrong_kind_unknown_fields_and_bindings_refuse ... ok
+test union::tests::namespace_projection_is_exact_existing_layout_only ... ok
+test union::tests::partial_expectations_check_every_provided_value ... ok
+test union::tests::positive_grants_and_checked_reference_sums_are_required ... ok
+test union::tests::snapshot_reporting_distinguishes_native_blake3_from_source_sha256 ... ok
+test union::tests::source_count_and_order_are_not_hardcoded ... ok
+test union::tests::sources_and_sidecars_cannot_alias_or_nest ... ok
+test union::tests::synthetic_index_drift_and_root_replacement_are_detected_without_native_open ... ok
+test union::tests::union_cli_needs_no_application_and_forbids_wrong_mode_arguments ... ok
+test union::tests::unknown_expectations_require_explicit_null_and_mandatory_seals ... ok
+
+test result: ok. 39 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.03s
+

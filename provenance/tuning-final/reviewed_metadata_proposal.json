@@ -1,0 +1,39 @@
+{
+  "schema": "vakint.actual-tuning-publication-failure-postflight-proposal.v1",
+  "status": "SOURCE_AND_EXISTING_METADATA_ONLY_ROOT_REVIEW_PENDING",
+  "utc": "2026-10-28T06:34:43.964225+00:00",
+  "native_outcome": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/tuning-native-outcome-preserved.json",
+    "sha256": "22fa72e4206dd28d6d437f7166906f6e6c74f65e24176b7bb5ad82fa4ab781a2",
+    "bytes": 5343
+  },
+  "original_running_receipt": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/tuning-run1/completion.json",
+    "sha256": "aa0dc0e3a5aa2170dcb738f86221b41bf4cd6760d0a88d0705772af2cd36b83a",
+    "bytes": 1392
+  },
+  "unpublished_terminal_candidate": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/tuning-run1/completion.json.pending",
+    "sha256": "65d4118f82df19e58d18e8d74effe4b1e4333d2c8beff9e820806c4d30d3092f",
+    "bytes": 8440
+  },
+  "original_kernel_terminal": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/tuning-kernel-terminal.json",
+    "sha256": "4a1ee3d2f882221b3a024c9bd5319b1f9a05aebe321138ebc21f50e335eaa037",
+    "bytes": 3028
+  },
+  "candidate_is_not_committed_controller_PASS": true,
+  "actual_controller_exit": 1,
+  "actual_Rust_supervisor_exit": 0,
+  "actual_worker_PIDFD_terminal": true,
+  "actual_controller_owned_signals": [],
+  "actual_controller_errors_before_publication": [],
+  "candidate_final_resources": {
+    "utc": "2026-10-28T06:30:11.931907+00:00",
+    "MemAvailable_bytes": 680875675648,
+    "output_filesystem_available_bytes": 2760043790336
+  },
+  "proposed_acceptance": "Keep failed outer controller/raw originals immutable; separately authenticate measurement+summary+unpublished candidate+original kernel terminal/guard/latches and admit genuine Rust-supervisor measurement through unchanged canonical v1 case_receipt. No controller PASS repair, no rerun.",
+  "no_CAS_Native_cache_index_or_payload_IO": true,
+  "no_automatic_successor": true
+}

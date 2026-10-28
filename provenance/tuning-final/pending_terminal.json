@@ -1,0 +1,238 @@
+{
+  "schema": "vakint.tuning-extra-hop-execution.v1",
+  "status": "PASS",
+  "started_utc": "2026-10-28T06:21:19.455637+00:00",
+  "plan_sha256": "d549c82d326dce329032908a1f5502d0a765d7631dedcfe7b42ee4c6606371c7",
+  "root_go_sha256": "f1f9c8520604e4ca444acbaee210538e0274d6201cc818e9fd7055697355d59b",
+  "source_head": "2d70bfe439d84b6888cbd29d2574df9c1ed7aae6",
+  "controller": {
+    "pid": 37703,
+    "start_ticks": 120217983,
+    "ppid": 9584,
+    "state": "R",
+    "uid": 1124
+  },
+  "unit": {
+    "LoadState": "loaded",
+    "ActiveState": "active",
+    "SubState": "running",
+    "InvocationID": "b64caccda98243dcabebdea7de2414dc",
+    "MainPID": "37703",
+    "Result": "success",
+    "ExecMainStartTimestamp": "Wed 2026-10-28 06:21:18 UTC",
+    "ExecMainPID": "37703",
+    "ExecMainStatus": "0",
+    "ControlGroup": "/user.slice/user-1124.slice/user@1124.service/app.slice/vakint-q0-all5-2d70-tuning-20261028.service"
+  },
+  "case_id": "final-v2-parent-32745-late-double-dot-rank1-tuning",
+  "supervisor": {
+    "pid": 38033,
+    "start_ticks": 120218058,
+    "ppid": 37703,
+    "state": "R",
+    "uid": 1124
+  },
+  "worker": {
+    "pid": 38307,
+    "start_ticks": 120218086,
+    "ppid": 38033,
+    "state": "S",
+    "uid": 1124,
+    "cwd": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-q0-coefficient-release-freeze-2d70-20261028",
+    "cgroup": "0::/user.slice/user-1124.slice/user@1124.service/app.slice/vakint-q0-all5-2d70-tuning-20261028.service",
+    "argv": [
+      "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-release-2d70-20261028/run/artifacts/measure_cache",
+      "--artifacts",
+      "/shared/codex-1/vakint_rustred/workspace/5l-push/external-q0-running-cache-d438",
+      "--workload",
+      "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/final-usage-plan/workload-inputs/workload.json",
+      "--source-census",
+      "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/final-usage-plan/workload-inputs/five-source-current-public-root-audit.json",
+      "--work-dir",
+      "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/tuning-run1/run",
+      "--cache",
+      "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/union-copy-run1/native-output/cache",
+      "--suite",
+      "tuning",
+      "--repetitions",
+      "1",
+      "--classify-cache-hits",
+      "--worker",
+      "--case-id",
+      "final-v2-parent-32745-late-double-dot-rank1-tuning",
+      "--variant",
+      "cached",
+      "--sample",
+      "0",
+      "--work-dir",
+      "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/tuning-run1/run/case-000-00-cached"
+    ],
+    "direct_supervisor": {
+      "pid": 38033,
+      "start_ticks": 120218058
+    }
+  },
+  "signals_sent": [],
+  "errors": [],
+  "supervisor_exit_code": 0,
+  "worker_pidfd_terminal_observed": true,
+  "automatic_retry": false,
+  "automatic_successor": false,
+  "scientific_accepted": false,
+  "performance_claim": false,
+  "cache_io_scope": "Supervisor reads cache identity before worker admission; outer resource checks cover that phase",
+  "launch_spec_sha256": "0b1867f47728ba1126773b2bf0caebd09f734d75c428971507974ad7e94aebfd",
+  "admission": {
+    "candidate": {
+      "schema": "vakint.before-native-worker-candidate.v1",
+      "launch_spec_sha256": "0b1867f47728ba1126773b2bf0caebd09f734d75c428971507974ad7e94aebfd",
+      "worker": {
+        "pid": 38307,
+        "start_ticks": 120218086
+      },
+      "supervisor": {
+        "pid": 38033,
+        "start_ticks": 120218058
+      },
+      "authority": "request only; not guard admission"
+    },
+    "controller_observed_guard_ack": {
+      "worker": {
+        "pid": 38307,
+        "start_ticks": 120218086,
+        "state": "S",
+        "uid": 1124
+      },
+      "guard": {
+        "pid": 38600,
+        "start_ticks": 120218200,
+        "state": "S",
+        "uid": 1124
+      },
+      "config_sha256": "1993945d43f45364b9e17b3cc45f58e88a80cc76f71880f0f832d8ce838d1037",
+      "slot": "q0-all5-2d70-tuning",
+      "MemAvailable_bytes": 674985480192,
+      "admission_utc": "2026-10-28T06:21:21.339468+00:00"
+    },
+    "guard_unit": {
+      "LoadState": "loaded",
+      "ActiveState": "active",
+      "SubState": "running",
+      "InvocationID": "b2ac1fb024b6416ab28f499c8f8a7dfd",
+      "MainPID": "38600",
+      "Result": "success",
+      "ExecMainStartTimestamp": "Wed 2026-10-28 06:21:20 UTC",
+      "ExecMainPID": "38600",
+      "ExecMainStatus": "0",
+      "ControlGroup": "/user.slice/user-1124.slice/user@1124.service/app.slice/vakint-q0-all5-2d70-tuning-memory-20261028.service",
+      "process": {
+        "pid": 38600,
+        "start_ticks": 120218200,
+        "ppid": 9584,
+        "state": "R",
+        "uid": 1124
+      }
+    },
+    "guard_config_sha256": "1993945d43f45364b9e17b3cc45f58e88a80cc76f71880f0f832d8ce838d1037"
+  },
+  "last_observed_heartbeat": {
+    "schema": "vakint.physical-memavailable-guard.v1",
+    "utc": "2026-10-28T06:30:11.349894+00:00",
+    "guard_pid": 38600,
+    "threshold_bytes": 50000000000,
+    "sample_seconds": 1,
+    "MemAvailable_bytes": 680932229120,
+    "sample_error": null,
+    "latched_abort": false,
+    "slots": {
+      "q0-all5-2d70-tuning": {
+        "state": "ORIGINAL_PROCESS_TERMINAL",
+        "target": {
+          "pid": 38307,
+          "start_ticks": 120218086,
+          "supervisor_pid": 38033,
+          "supervisor_start_ticks": 120218058
+        },
+        "collector_exit_code": null
+      }
+    },
+    "scope": "Only explicitly registered exact 5L worker PIDFDs; no builds/apps/other users"
+  },
+  "worker_wait_evidence": {
+    "child_pid": 38307,
+    "deadline_exhausted": false,
+    "elapsed_seconds": 531.085362861,
+    "exit_code": 0,
+    "exit_status": "exit status: 0",
+    "finished_unix_seconds": 1793169010.8339634,
+    "interval_scope": "supervisor pre-spawn setup through supervisor-observed worker completion",
+    "started_unix_seconds": 1793168479.7486262,
+    "success": true,
+    "supervisor_pid": 38033
+  },
+  "outputs": [
+    {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/tuning-run1/run/case-000-00-cached/measurement.json",
+      "bytes": 37345,
+      "sha256": "518d4963a3409b65ca0091affc31aecd90816e5ccc5e5af06d2298426444f7c4"
+    },
+    {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/tuning-run1/run/summary.json",
+      "bytes": 52827,
+      "sha256": "2f3e5e7c8b761aee479d50595ef29d83a35c19757285a0cdb0388f4a2d71fe43"
+    }
+  ],
+  "guard_registration": {
+    "schema": "vakint.physical-memory-floor-registration.v1",
+    "utc": "2026-10-28T06:21:21.240769+00:00",
+    "guard": {
+      "pid": 38600,
+      "start_ticks": 120218200,
+      "ppid": 9584,
+      "state": "R",
+      "uids": [
+        1124,
+        1124,
+        1124,
+        1124
+      ],
+      "cwd": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/tuning-run1/physical-guard",
+      "cgroup": "0::/user.slice/user-1124.slice/user@1124.service/app.slice/vakint-q0-all5-2d70-tuning-memory-20261028.service"
+    },
+    "config_sha256": "1993945d43f45364b9e17b3cc45f58e88a80cc76f71880f0f832d8ce838d1037",
+    "threshold_bytes": 50000000000,
+    "sample_seconds": 1,
+    "slots": {
+      "q0-all5-2d70-tuning": {
+        "state": "ARMED_EXACT_PIDFD",
+        "target": {
+          "pid": 38307,
+          "start_ticks": 120218086,
+          "supervisor_pid": 38033,
+          "supervisor_start_ticks": 120218058
+        }
+      }
+    },
+    "signals_sent": []
+  },
+  "final_resources": {
+    "utc": "2026-10-28T06:30:11.931907+00:00",
+    "MemAvailable_bytes": 680875675648,
+    "output_filesystem_available_bytes": 2760043790336
+  },
+  "guard_after_actual_wait": {
+    "LoadState": "not-found",
+    "ActiveState": "inactive",
+    "SubState": "dead",
+    "InvocationID": "",
+    "MainPID": "0",
+    "Result": "success",
+    "ExecMainStartTimestamp": "",
+    "ExecMainPID": "0",
+    "ExecMainStatus": "0",
+    "ControlGroup": ""
+  },
+  "finished_utc": "2026-10-28T06:30:12.039009+00:00",
+  "elapsed_seconds": 532.5833599041216,
+  "supervisor_wait_is_authoritative": true
+}

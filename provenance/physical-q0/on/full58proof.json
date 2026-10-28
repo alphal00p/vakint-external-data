@@ -1,0 +1,359 @@
+{
+  "schema": "vakint.complete-master-product-parity.v1",
+  "status": "PASS",
+  "master_count": 55,
+  "product_union_count": 58,
+  "full_scalar_proofs": [
+    {
+      "product": "(vakint::{}::RustRedMaster(vakint::{}::rustred_family_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4,1))^2*vakint::{}::RustRedMaster(vakint::{}::rustred_family_56d4ac620f0309e551e825ce435d23ee4b58e887f2ee639e1bf14006bc9e9f93,1,1,0,1,0,1)",
+      "original_coefficient_sha256": "3ad0aa2357729ceb9903f145dbe47a1e9502ac28980b79e5393a0afaf205e432",
+      "actual_coefficient_sha256": "35e9d70f700ea6dd279e6934ac1edea12fe77061533813654b71cf0474c23d43",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "(vakint::{}::RustRedMaster(vakint::{}::rustred_family_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4,1))^2*vakint::{}::RustRedMaster(vakint::{}::rustred_family_56d4ac620f0309e551e825ce435d23ee4b58e887f2ee639e1bf14006bc9e9f93,1,1,0,1,1,1)",
+      "original_coefficient_sha256": "ffa81f057e20868cc2d67694b603e8ed41c41a3f434af696ad392e7ae881d3e7",
+      "actual_coefficient_sha256": "d382edf4e326f3d7a8ef93cf2f7ed8fdc9a1f3c168d497a5ca748612fd1a8954",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "(vakint::{}::RustRedMaster(vakint::{}::rustred_family_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4,1))^3*vakint::{}::RustRedMaster(vakint::{}::rustred_family_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1,1,1,1)",
+      "original_coefficient_sha256": "9c71e8c42872dfd7d77f0671f35f6d28de9d4fd4fcc016d566b6d30573cde5f5",
+      "actual_coefficient_sha256": "90dadb7659dae08b5d863c83578adbeb6604fbdc35b076a1dc801998e58ce0a4",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "(vakint::{}::RustRedMaster(vakint::{}::rustred_family_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4,1))^5",
+      "original_coefficient_sha256": "de3e303fdb125ebebaeb7e384525a2da650b2d69e7d63e41c4ca61b1d4d1ce7b",
+      "actual_coefficient_sha256": "617b0219dd36363337c4645c2c648b8867c4c46cdda8881bc782ebc44ad2db2f",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "(vakint::{}::RustRedMaster(vakint::{}::rustred_family_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1,1,1,1))^2*vakint::{}::RustRedMaster(vakint::{}::rustred_family_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4,1)",
+      "original_coefficient_sha256": "da3414b03a004eb648ea41b73de30a1967fe14dcf5952758b46d245aef45ae77",
+      "actual_coefficient_sha256": "6e3ee5947a3d4154cd906c11b0e13598a439ff2be9f4bc833a60016a45cf93e9",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,-1,-1,-1,0,1,1,0,0,1,0,0,1,0,1,1)",
+      "original_coefficient_sha256": "c673b0e98020b4003f93b1cabed03e7e93a925b32630847116509c27f1d5477c",
+      "actual_coefficient_sha256": "2f1311a9ef9f0371b14cfbdfda27e0f9a8125d45f739af9cff433f490d94d041",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,-1,-1,0,-1,1,1,0,0,1,0,-1,1,0,1,1)",
+      "original_coefficient_sha256": "0738ff833dd0f4d31a8c71b50b3aba9654ceaae07205d161c0b68a1169e642d2",
+      "actual_coefficient_sha256": "e265c2545cdc16dc6ff524bd553b91487834e5b0feab9d9a9c5517f7ccf5b846",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,-1,-1,1,0,0,-1,1,0,0,1,0,1,1,1,1)",
+      "original_coefficient_sha256": "92be787d8fb35d5d99e011ac9216e77e56f7b5556a95a763cbbf5be39b1ba4f4",
+      "actual_coefficient_sha256": "7c5f49e8aee1a1386e330f33f5bfb2e084fa9c792095fcfef1959d7452b9f5ff",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,-1,-1,1,0,0,0,1,0,0,1,0,1,1,1,1)",
+      "original_coefficient_sha256": "a8c6cfa8c1efca79297d528c5256d7e86d24498509f108d805835e64c3c4865a",
+      "actual_coefficient_sha256": "5b3841cec8b7f8e6bd05ddff5cec82beba49a08ef88e46028c7f165301bd18f1",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,-1,0,0,-1,1,1,0,0,1,0,0,1,-1,1,1)",
+      "original_coefficient_sha256": "2b0ae5ee6b28bc6c5f7e79afc40a4219bdf4094743c3b1a48e54ab2fc4b253bb",
+      "actual_coefficient_sha256": "9da103bbe6a7f93a29fc7b1248a19e711540012a42d95259b5c9093478a45fdf",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,-1,0,0,0,1,1,-1,0,1,-1,0,1,0,1,1)",
+      "original_coefficient_sha256": "42bc08d68079f1e1fed297cb34c8af6a54be9f614d0c0c04c10140d533fe90cf",
+      "actual_coefficient_sha256": "08c38ce179c585643451b9fe315fa93344bcbf21d49e54a93f7a2b9b301f0715",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,-1,0,1,0,0,-1,1,0,0,1,0,1,1,1,1)",
+      "original_coefficient_sha256": "8c16704457024f53c87da964f6d497c5a072f03d6c61ff9c133a4ed7e85b8710",
+      "actual_coefficient_sha256": "a8bb74aa058199be6314fad1f3c2c5bce9611399533d2a7df3f4a62d441422bb",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,-2,-1,0,0,1,1,0,0,1,0,0,1,0,1,1)",
+      "original_coefficient_sha256": "083bc86b5ef54e11378527cc52ca33d56e4abb92ca7d0f642fa03ab2003baf08",
+      "actual_coefficient_sha256": "dafee33a8c98ff0e6d3af3ed15c1c10104b9aef532022a9e005082b1ed29839d",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,-2,0,-1,0,1,1,0,0,1,0,0,1,0,1,1)",
+      "original_coefficient_sha256": "e587e6ef7b58cdb7c95947b327f7d0ccc699d4b378da3e030354468b4038ed94",
+      "actual_coefficient_sha256": "6706afa9a15ef05cb9ce41029e3bb85a30b95d2585122608f2c9cc9a6a92b0de",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,-2,0,0,-1,1,1,0,0,1,0,-1,1,0,1,1)",
+      "original_coefficient_sha256": "51c5bba49878debd16c5e21bc3f2733172f4b8621d2a61821ff8fc96e07e9910",
+      "actual_coefficient_sha256": "038021e8d6c28add747a7c5d7b754a75369545a28e27c4bae8dc4ffabeacb098",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,-3,0,0,0,1,1,0,0,1,0,-1,1,0,1,1)",
+      "original_coefficient_sha256": "15a61034ad2d33ee38e23ae702e4475770f4b1e6cb22d6beb036bacbd30d642c",
+      "actual_coefficient_sha256": "ba48353080151d802d97922006f596496bdd53eb464e33cbf2d50d2a82b23145",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,-3,0,0,0,1,1,0,0,1,0,0,1,-1,1,1)",
+      "original_coefficient_sha256": "1c0ec9c208ec30bb5b7f70fef68ac049ac020cdebf4d973d840f995425973bd6",
+      "actual_coefficient_sha256": "e688343bdc674d61b4e117ef31c735387b7ac63eede6aa697817fe22cd676554",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,0,-1,0,-1,1,1,0,0,1,0,-2,1,0,1,1)",
+      "original_coefficient_sha256": "c827fd57928778c3bb554173315d4cbb5d28249001e12e6747ea32977eba3f6d",
+      "actual_coefficient_sha256": "2dd4583c3f349dee4cc33f24862349cd9c2b190b663e8ec4e65eb0feb386e54a",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,0,-1,0,0,1,1,0,-1,2,0,0,1,-1,1,1)",
+      "original_coefficient_sha256": "2a76dc085676a3279faa43414c362dab3aa702e82098d7844ee063d4293d61a7",
+      "actual_coefficient_sha256": "118d24943df6f5bc05e7493a5cb7ce95e04fbb36a88e79ed00a7591ae5b239d8",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,0,-1,1,0,0,-1,1,0,0,1,0,1,1,1,1)",
+      "original_coefficient_sha256": "1d99adae38228399ee8e1447731c5d9978c9c247fb8c3d45d62f2b883044bc62",
+      "actual_coefficient_sha256": "d0af6b67fdedbef9b9e5a7d4f1b670585371151a6ddaefb96d2cbcfb6678aba5",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,0,-2,0,0,1,2,0,0,1,0,-1,1,0,1,1)",
+      "original_coefficient_sha256": "08e8ec9abcf2275815e19e62bd460d728a60bba762bcd0453fc5c940ce8758eb",
+      "actual_coefficient_sha256": "80e9095e1227ee5ba6a098415029b49aa6ac1b8187cdb4262cc3724879443cae",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,0,-3,0,0,1,2,0,0,1,0,-1,1,0,1,1)",
+      "original_coefficient_sha256": "967b6d79dc664c5d8a07c9ebcef962807eabd8c3e62e68cb1c51f623d54dc4f9",
+      "actual_coefficient_sha256": "fcd039c457263c9ef119ebf3f744b64fba8ea52558d0432f52ac33f5cc0d80a1",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,0,0,0,-1,1,1,-1,0,1,0,-2,1,0,1,1)",
+      "original_coefficient_sha256": "6a4b203f68cbf7bd49c278874749dd7bc21634de038990f2d28b236041144cbd",
+      "actual_coefficient_sha256": "5db4606fb7ecc6cc317bd691fe5590c4126c850a638c7706fdc61825f927bb7f",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,0,0,0,-1,1,1,-1,0,1,0,0,1,-1,1,1)",
+      "original_coefficient_sha256": "a926825019d983b004d9e44be9950e72db14c4c037027e918b61c8945980bb85",
+      "actual_coefficient_sha256": "40cb6efc260961ef4f671a24f9570b2b86c80a1a6bdf0851066f108cea77c22c",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,0,0,0,-1,1,1,0,0,1,0,-2,1,0,1,1)",
+      "original_coefficient_sha256": "40cf71809864e2bbe2c4bee99123cf65c118b36b342624e3cbc0469a0ba0d2a6",
+      "actual_coefficient_sha256": "11e9bcb8564578e8ba68a53b59eedf986b8f6a2d45a6eaf9070af4e6568b620e",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,0,0,0,-2,1,2,0,0,1,0,-1,1,0,1,1)",
+      "original_coefficient_sha256": "a96bf35a0b8b37b4f66223c9bd07c8d6957c935a86105da1b9eaf499bf34d2c1",
+      "actual_coefficient_sha256": "9d1245386374efcdd883e266717b9555463f42d88a5062b4399fd3f100bc86dd",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,0,0,0,0,1,1,-1,0,1,-1,-1,1,0,1,1)",
+      "original_coefficient_sha256": "48ff3382730daa9bc97386e3198e3834105a3b65be986a59231eb822fa8ae3c9",
+      "actual_coefficient_sha256": "74c2bdbca18b1a8d2a667e6b33d21f9c8622750787dca294a0e47ec866e6905b",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,0,0,0,0,1,1,0,0,1,0,0,1,0,1,1)",
+      "original_coefficient_sha256": "29a79f3aceeb6fa475d1c3dac315183a37b56d3cc51396fd3fe899ddff8fbff9",
+      "actual_coefficient_sha256": "7a2f953e6755a7005cf80b418e9e38506e4ac5fd37e72dc69e30f110c0d3ded3",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,0,0,0,0,2,1,-1,0,1,-3,0,1,0,1,1)",
+      "original_coefficient_sha256": "2a3de270d57d4bcfe660826fd81925fa91cded93d386612412fe89704719ae95",
+      "actual_coefficient_sha256": "a0b07550fa77e8091e70965fb1569db5d82970b073f137faf2095b112873f898",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,0,0,0,0,3,1,0,0,1,0,0,1,0,1,1)",
+      "original_coefficient_sha256": "25921745b49aa28bb4084df8dfe0b05d8a3e355ed6937be35ae198f566a77aba",
+      "actual_coefficient_sha256": "67b5ff9e4f41bbf73d1fd43b3fd1dc5b7f63c55226bb6f4c55afe992ef79f62e",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,0,0,1,-1,0,-2,1,0,0,1,0,1,1,1,1)",
+      "original_coefficient_sha256": "7790f5998aa0edd5c86166077aaa80769daab9f60dccff1dc97d38c94db7b49a",
+      "actual_coefficient_sha256": "256be4a53d92fd99202fa52a551b2b22b9e3c9bc08f5cffa300229571661bf67",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,0,0,1,0,0,-1,1,0,-1,1,0,1,1,1,1)",
+      "original_coefficient_sha256": "aef27eed9597c5ecad47555e65fff39c8cb857fb93d56311634ceaf9feb2507b",
+      "actual_coefficient_sha256": "b324ff86c2d185e2fd731beca9c5c0caa41d2e6432d52bd003ee6b5334f1e931",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,0,0,1,0,0,0,1,0,0,1,0,1,1,1,1)",
+      "original_coefficient_sha256": "3156dba4b2ffae96d1d5b6dba52b7e9c470f278eeb4f67092eceb3d6e992a75d",
+      "actual_coefficient_sha256": "63db6e5f205227f6d91301617974757be6fefc48a54c75f0107e5e17b5bf6c9b",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,0,0,1,0,0,1,1,0,0,1,0,1,1,1,1)",
+      "original_coefficient_sha256": "50c87dbfb3de6fd2bdf71deeb8dbcbe2e7f7bad0ff4cb393b4c72e98abfcd247",
+      "actual_coefficient_sha256": "0942601b5049da54ed89ee60630aa309a7a30f3f14a370b17a6538ff0df6cc52",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,0,0,1,0,0,1,2,0,-1,1,0,1,1,1,1)",
+      "original_coefficient_sha256": "06445fc68276a6bf832a95b6ed1855aa9aa6aea496d9c92b6bad732f532880cc",
+      "actual_coefficient_sha256": "622332922bd8bfc2d97da9970455a182a00c3baa69a2b3fc8673794db7b64027",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,0,0,1,0,0,1,2,0,0,1,0,1,1,1,1)",
+      "original_coefficient_sha256": "04763a33eb243d138a0a0ce7415c25c40d0a11208f9d1e38a9dad0b33b3a9560",
+      "actual_coefficient_sha256": "3ed647aabc04a0410cf46e1766814c9f762b5545535cfb04d5c893d61fbf8f86",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,0,0,2,0,0,0,1,0,0,1,0,1,1,1,1)",
+      "original_coefficient_sha256": "3f4f1a93cfbabf5223f290ff53b2fd703f83ac2715b7f78b37fe586c9aaff351",
+      "actual_coefficient_sha256": "5ad71fd6c4ebf42ab553ddaa6ff8f149676f1f0ed4ff2d3a1529ce33e2bae33c",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,0,0,2,0,0,0,2,0,0,1,0,1,1,1,1)",
+      "original_coefficient_sha256": "1a4bf5b7952bd5611fa33fec6ee0b9d8a585301565f7f54f2aeaddb23d6181ea",
+      "actual_coefficient_sha256": "dc17e7ece137837424c0beed726a6c95d7ee7097750b3b0c0cecbd400a17f2cf",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,0,0,2,0,0,1,1,0,0,1,0,1,1,1,1)",
+      "original_coefficient_sha256": "604a853e63d95df3e995c7a77f3c87a17d02bd5a1c4b5fa495208654e134b313",
+      "actual_coefficient_sha256": "8a7be6309c7e367d32700461fb04407c96befaa16bc46290135ca3ad172119c5",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,0,0,2,0,0,1,2,0,0,1,0,1,1,1,1)",
+      "original_coefficient_sha256": "34ebcb6ca73bd72bc18a7fa767cbf02c42a3f6970557dd7d6296c44fcdc8aea5",
+      "actual_coefficient_sha256": "c1a1cfbb8ee27b3445ba64770f90b5ca7c343cf9eb56d5fb2c11d8c862c50e5f",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,0,0,3,0,0,0,1,0,0,1,0,1,1,1,1)",
+      "original_coefficient_sha256": "411e29076351146bafa44426fc4f3804b3e433b58db95454a96b4c42b1f20247",
+      "actual_coefficient_sha256": "e5e1e817065607b4e513baf6a09f58fbc51c7f22f4bf17cc9a29fb176d54be1a",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,0,1,1,0,1,1,1,0,1,1,0,1,0,0,1)",
+      "original_coefficient_sha256": "4961afc8a63d37b3e31ae2fa55012aaaeebe171c0f396023007baefe52c799e7",
+      "actual_coefficient_sha256": "49b8c410026b722d7d25bf761fa34e1f1b09e65faeba8689fa7c6dc73a1fe48b",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,0,2,1,0,1,1,1,0,1,1,0,1,0,0,1)",
+      "original_coefficient_sha256": "093109ada83356ff28ae3610d77214589fed3a8c44e6c23ee51edefb2684a532",
+      "actual_coefficient_sha256": "1fde0d1ba510cdf7c1ce907b3d1841c30278134658285609798b32b03a2685de",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,1,1,1,-1,-1,0,0,1,0,1,-2,1,0,0,1)",
+      "original_coefficient_sha256": "95f3df68332d06e9f14165c2314299b434f0a91cddf076a8d725a9ade5329c78",
+      "actual_coefficient_sha256": "0142a99a3f4a312e035d799ac34f441e3a85c4991c0575601569a5b6e37da197",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,1,1,1,0,0,0,-1,1,0,1,-1,1,0,0,1)",
+      "original_coefficient_sha256": "022887feb400c8fccdeada0bf6425c146916b8f36bdb735ff77d69270b36192c",
+      "actual_coefficient_sha256": "9953ef28e47f931123e37eada9de470762a01246cb2e40a68c14b0a0b0be3b35",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,1,1,1,0,0,0,0,1,0,1,-1,1,0,0,1)",
+      "original_coefficient_sha256": "fc69fa74feb4738210b179010116bd3f525f5f915e655787745c9468585b6d75",
+      "actual_coefficient_sha256": "65f10c27ee6b811328728a7e2c1b99596f5ba73e6c946ca22f2ee7b25dc1fb6b",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,1,1,1,0,0,0,0,1,0,1,0,1,0,0,1)",
+      "original_coefficient_sha256": "c3f1c842ca1180d19a7e50f62060c363becb61536e11e4a9c0e2f7a6b9225d2c",
+      "actual_coefficient_sha256": "31499db73ad08273b95af9b958e1bf932c75f21b943b607fd6feee42470258ca",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,1,1,1,0,0,1,-1,0,0,0,0,1,1,1,1)",
+      "original_coefficient_sha256": "e123a1ac8a198be12b39ffaa333e6617751aba35a2d6304311c914e08db7e7ef",
+      "actual_coefficient_sha256": "2c3b67294f20fac61bf233f34ac3a4fb259c8e6358f279cf52b22658e63b4302",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,1,1,1,0,0,1,0,0,0,0,0,1,1,1,1)",
+      "original_coefficient_sha256": "1390e4ff68746c8f773aef6eed262ee32081aad9c64bf909ca90c6d2783a89be",
+      "actual_coefficient_sha256": "115741287d2ccabad0f177fe3d94d847d37846163d1d669712495f205f7470ed",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,1,1,1,0,0,2,0,0,0,0,0,1,1,1,1)",
+      "original_coefficient_sha256": "ad641020f276157a3187cc0b65a3267b61ae65d720ba2e7b9f817722de5d79ca",
+      "actual_coefficient_sha256": "9dfdf9def319e3d654bdf408c2c8f898d675abdf44212c8afe485109930f9da1",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b,1,2,1,0,0,1,0,0,0,0,0,1,1,1,1)",
+      "original_coefficient_sha256": "b6c79af8ac05450ab40dd6e4b4c4e9f7399c6c6bb73ee487cc47a61fb517f927",
+      "actual_coefficient_sha256": "c5696bd87563992e677d3ed4751acf491406a8167ec9f8f395cfa8156dcc6a86",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_56d4ac620f0309e551e825ce435d23ee4b58e887f2ee639e1bf14006bc9e9f93,1,1,0,1,0,1)*vakint::{}::RustRedMaster(vakint::{}::rustred_family_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1,1,1,1)",
+      "original_coefficient_sha256": "3a9ebf2f6754a4368b41a2f55db91b556a561e890eddf4c2ded3afc5b7a6b5c4",
+      "actual_coefficient_sha256": "a0839078218e2648cdb78ba0516385eb75d5a7f532ecc1c9be3324141dc4009d",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_56d4ac620f0309e551e825ce435d23ee4b58e887f2ee639e1bf14006bc9e9f93,1,1,0,1,1,1)*vakint::{}::RustRedMaster(vakint::{}::rustred_family_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1,1,1,1)",
+      "original_coefficient_sha256": "4363083a85fadf17bf8d4e082b9167da2cb8928d8832f1e6ea213aeeac9cfec2",
+      "actual_coefficient_sha256": "1184ceb918742fbb62ef0c8d9a45e927ab100c7f22d7f55ffd06cb5ba650d697",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4,1)*vakint::{}::RustRedMaster(vakint::{}::rustred_family_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7,0,1,0,0,1,1,1,0,1,0)",
+      "original_coefficient_sha256": "62a179801172a42d3525429a2ed77334adc2b8ffd46c4a783e15e2e2509ab814",
+      "actual_coefficient_sha256": "b09b52f37c4ec7bf53c26a8a3245cd4bc1451bf58c436ece04c18cd9121780dd",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4,1)*vakint::{}::RustRedMaster(vakint::{}::rustred_family_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7,0,1,0,0,1,1,1,1,1,0)",
+      "original_coefficient_sha256": "2dd642afcfadf2cbcced67a6f6e383376621d45d7bb56a96aed40747bbbc4211",
+      "actual_coefficient_sha256": "a6723fce2500494bb806ef219ff98b16c1cdef7a3cf30654102977b00b76d8c3",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4,1)*vakint::{}::RustRedMaster(vakint::{}::rustred_family_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7,0,1,0,1,1,1,1,1,1,0)",
+      "original_coefficient_sha256": "043fc4b3a7e34802615cab1cff3db995d59f8bf3af1b9b4700f7d953f6b052a6",
+      "actual_coefficient_sha256": "09ab7e8d8db7da9df439c1ee6561cefbf1ee6599b57b783a91660d4df4697714",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4,1)*vakint::{}::RustRedMaster(vakint::{}::rustred_family_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7,0,2,0,0,1,1,1,0,1,0)",
+      "original_coefficient_sha256": "e3edf690557a8eb1f85a68e27b639983db7548ea6841daeb9c05bd9e43a42b65",
+      "actual_coefficient_sha256": "ecba2283a75d98dc9f829da80eae465e37820e5d3e5d00c54ec68de67656ba64",
+      "exact_difference_zero": true
+    },
+    {
+      "product": "vakint::{}::RustRedMaster(vakint::{}::rustred_family_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4,1)*vakint::{}::RustRedMaster(vakint::{}::rustred_family_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7,0,3,0,0,1,1,1,0,1,0)",
+      "original_coefficient_sha256": "5b3e78106cb6048ea3fa47e22a056bb0f6cc10769fee9ae38c27541c4cb8d83c",
+      "actual_coefficient_sha256": "d4a418a3c0ff452ee336235829e893410e58b7f1fb40781769bb1190dc3766f7",
+      "exact_difference_zero": true
+    }
+  ],
+  "global_together_or_full_amplitude_difference": false,
+  "unit_mass_or_coupling_replacement": false,
+  "numerical_sampling": false
+}

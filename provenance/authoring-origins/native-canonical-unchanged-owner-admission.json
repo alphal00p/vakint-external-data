@@ -1,0 +1,132 @@
+{
+  "schema": "vakint.native-canonical-artifact-unchanged-owner-admission.v1",
+  "status": "PASS_UNCHANGED_NATIVE_ARTIFACT_METADATA_OWNER",
+  "owner_function": "cache_usage.native_artifact",
+  "owner_sources": {
+    "cache_usage.py": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/external-light-profile-v2-20261027/tools/cache_usage.py",
+      "bytes": 90730,
+      "sha256": "4c1b9c905962739edc5bbb27443838c144489a73a625ad865e3e5fec95f8f8db"
+    },
+    "data.py": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/external-light-profile-v2-20261027/tools/data.py",
+      "bytes": 59242,
+      "sha256": "b07bab2f8021c2ddd97c6c3f9776c3e7ef9fca54d3c386a59c448601c3808627"
+    },
+    "saved_cache.py": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/external-light-profile-v2-20261027/tools/saved_cache.py",
+      "bytes": 12677,
+      "sha256": "fb09a576ca8126a383cacad62e8dac5420240c42986819fde84e8a301c2feec6"
+    }
+  },
+  "source_handoff": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/canonical-artifact-projection-20261028/source-handoff.json",
+    "bytes": 19271,
+    "sha256": "694fa3fe0f4b491a1aa027554214cbc75bdeda5fbd2a846577648fd1c902c6e5"
+  },
+  "independent_source_review": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/canonical-artifact-projection-20261028/source-peer-review.json",
+    "bytes": 5254,
+    "sha256": "b18fd70414d292e0f359fe28fcbc6a98f544b7aaf2ffd4aa56013b2e33dd27c8"
+  },
+  "proof_root": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/canonical-artifact-projection-20261028/proof-root",
+  "canonical_artifact": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/canonical-artifact-projection-20261028/proof-root/provenance/native-exporter-c2ca-canonical-20261028/collector-artifacts.json",
+    "bytes": 16133,
+    "sha256": "d990427e5d65a6528fd5ec9a2ff5041ce762f4a8591a97bb82bc0934cc4d5964"
+  },
+  "portable_artifact_reference": {
+    "path": "provenance/native-exporter-c2ca-canonical-20261028/collector-artifacts.json",
+    "sha256": "d990427e5d65a6528fd5ec9a2ff5041ce762f4a8591a97bb82bc0934cc4d5964"
+  },
+  "owner_input": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/canonical-artifact-projection-20261028/proof-root/provenance/native-exporter-c2ca-canonical-20261028/owner-input.json",
+    "bytes": 4074,
+    "sha256": "9eaaee404ffed136a7181e79cad35b886efc4826bc16243ef29783bc170d8d89"
+  },
+  "source_freeze": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/canonical-artifact-projection-20261028/proof-root/provenance/native-exporter-c2ca-canonical-20261028/source-freeze.json",
+    "bytes": 2463,
+    "sha256": "5ecd1dba2eb78e442576b1fef0273ef19bd9dae800607234db03d4fa69048fdf"
+  },
+  "owner_result": null,
+  "owner_returned_normally": true,
+  "compiled_cohort": {
+    "collector_source_sha256": "84c4c016855af710c30bed62530d37e3ab27a536f6d55bdb2a3db560d32bf7b1",
+    "kernel_revision": "9cd57678d8817ec33c05cacba4925162f1c86b0b",
+    "main_revision": "c2ca815cc906bdeaf7cb8c63b637e81a80fba917",
+    "main_source_snapshot_sha256": "13ee81b6525b26406c111713d4deb3463ab1abe81ba4ff65802bde7f31b364fe",
+    "measurement_executable_sha256": "4843e29e64b319585a4437c0bbd21e9c2212626242e8300a78808d9351763539",
+    "native_revision": "c2ca815cc906bdeaf7cb8c63b637e81a80fba917",
+    "native_source_snapshot_sha256": "c487c1a5162869ea68a7a62e5ac226a4277a41982478652e181a1bd1253e4bdb",
+    "profile": "debug",
+    "role": "native-selected-cache-producer",
+    "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)\nbinary: rustc\ncommit-hash: 48a229ceaefd4985c50990b14116b6d856af0985\ncommit-date: 2026-09-01\nhost: x86_64-unknown-linux-gnu\nrelease: 1.98.1\nLLVM version: 22.1.8",
+    "source_identity": {
+      "files": {
+        "Cargo.lock": "f28aadbf915abf2c57549ed91d88a1aecc3ca8e235ead6894a8945910c3ecac5",
+        "Cargo.toml": "98f6ebe93245988c09aaa25ef1e2b231cd83a37d600037b21d41df06dc65286d",
+        "build.rs": "bdb1e13d7d57635aaf10b55cd2009ab99f9b37bd77a4a875bad0af3263b18f99",
+        "src/index_identity.rs": "9c0bcb8aab60ccde38c7a406d719e26632bfb164829d1ef5e6c5a9ab23ec432e",
+        "src/main.rs": "84c4c016855af710c30bed62530d37e3ab27a536f6d55bdb2a3db560d32bf7b1",
+        "src/proof_reference.rs": "e8ce76485fac54f11fba173cfa4405fe08c8b9750758ce493c99251f22d2adfd",
+        "src/resource_guard_admission.rs": "bb3223d27584b42069d3813ebdcaefa6598a0935ca4531714a50248b334870cb",
+        "src/selection.rs": "bed2e34853e6654a6c1903a3ec59db81d695b1bd1d1f0190ab3d68ce4ce3de1b",
+        "src/union.rs": "1808b73180a0061044d3741a7fa3869836e15b21b931db7f4815bf3d3a36a5e4"
+      },
+      "native_identity": {
+        "clean": true,
+        "codec_state_format": 6,
+        "kernel_revision": "9cd57678d8817ec33c05cacba4925162f1c86b0b",
+        "kernel_tree": "096ad34ec305ccb1c15ea13c716b7bff35fd4737",
+        "revision": "c2ca815cc906bdeaf7cb8c63b637e81a80fba917",
+        "schema": "native.git-source-tree-identity.v1",
+        "source_repository": "https://github.com/alphal00p/rustred",
+        "tree": "125ef69c802ddb0023041927b1d1c26cca1b67dd"
+      },
+      "role": "native-selected-cache-producer",
+      "schema": "native.private-layered-helper-source-identity.v1",
+      "source_layer": "private standalone v4-census successor on public Nativec2ca with actualv1/v2profile schema metadata, source parity and unchanged ordered opaque union; exact reviewed task-admission module; no linked Vakint Main",
+      "source_repository": "https://github.com/alphal00p/rustred"
+    },
+    "source_layer": "private standalone v4-census helper with ordered opaque union and exact reviewed task-admission module; not linked Vakint Main",
+    "source_repository": "https://github.com/alphal00p/rustred",
+    "stamps": {
+      "VAKINT_CACHE_BUILD_GIT_REVISION": "c2ca815cc906bdeaf7cb8c63b637e81a80fba917",
+      "VAKINT_CACHE_BUILD_MAIN_SOURCE_SNAPSHOT_SHA256": "13ee81b6525b26406c111713d4deb3463ab1abe81ba4ff65802bde7f31b364fe",
+      "VAKINT_CACHE_BUILD_NATIVE_SOURCE_SNAPSHOT_SHA256": "c487c1a5162869ea68a7a62e5ac226a4277a41982478652e181a1bd1253e4bdb",
+      "VAKINT_CACHE_BUILD_PROFILE": "debug",
+      "VAKINT_CACHE_BUILD_RUSTC": "rustc 1.98.1 (48a229cea 2026-09-01)\nbinary: rustc\ncommit-hash: 48a229ceaefd4985c50990b14116b6d856af0985\ncommit-date: 2026-09-01\nhost: x86_64-unknown-linux-gnu\nrelease: 1.98.1\nLLVM version: 22.1.8",
+      "VAKINT_CACHE_BUILD_RUSTRED_REVISION": "c2ca815cc906bdeaf7cb8c63b637e81a80fba917",
+      "VAKINT_CACHE_BUILD_SYMBOLICA_REVISION": "9cd57678d8817ec33c05cacba4925162f1c86b0b"
+    }
+  },
+  "original_failed_controller_preserved": true,
+  "native_and_kernel_clean_scope": {
+    "meaning": "Identity worktrees were fully tracked/untracked clean at actual build-script and accepted supplement checks. Actual compiled regular inputs were compared with those pinned counterparts; this is not a new claim about all current Cargo-cache files.",
+    "build_script": {
+      "path": "provenance/native-exporter-c2ca-canonical-20261028/source/build.rs",
+      "bytes": 6573,
+      "sha256": "bdb1e13d7d57635aaf10b55cd2009ab99f9b37bd77a4a875bad0af3263b18f99"
+    },
+    "build_script_guard_lines": "37-68",
+    "supplement_peer": {
+      "path": "provenance/native-exporter-c2ca-canonical-20261028/evidence/supplement-peer-review.json",
+      "bytes": 22626,
+      "sha256": "77594bd9b443ed56d90ad3d31095a306f610fa9bc2c75c3507fa1a6a6d890e3c"
+    },
+    "native_identity": {
+      "clean": true,
+      "codec_state_format": 6,
+      "kernel_revision": "9cd57678d8817ec33c05cacba4925162f1c86b0b",
+      "kernel_tree": "096ad34ec305ccb1c15ea13c716b7bff35fd4737",
+      "revision": "c2ca815cc906bdeaf7cb8c63b637e81a80fba917",
+      "schema": "native.git-source-tree-identity.v1",
+      "source_repository": "https://github.com/alphal00p/rustred",
+      "tree": "125ef69c802ddb0023041927b1d1c26cca1b67dd"
+    }
+  },
+  "scope": "Only unchanged metadata-owner import and native_artifact call against portable small provenance/archive files. No producer/Native/kernel/Cargo/build/exporter/runtime calls, ELF reads or rehashes, cache/index/payload reads, or 7.5MB inventory reads/hashes.",
+  "core_export_authorized": false,
+  "runtime_or_performance_acceptance": false
+}

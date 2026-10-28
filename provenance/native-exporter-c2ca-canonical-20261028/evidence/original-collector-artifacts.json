@@ -1,0 +1,178 @@
+{
+  "schema": "vakint.native-selected-cache-producer-artifact.v1",
+  "utc": "2026-10-27T22:51:56.449743+00:00",
+  "state": "PASS_ORIGINAL_BUILD_PARSER_CLIPPY_BUILDINFO_PLUS_SEPARATE_METADATA_SUPPLEMENT",
+  "role": "native-selected-cache-producer",
+  "source_layer": "Private standalone actualc2ca Native-only v4-census tool with reviewed v1/v2 metadata schema stamps; normalci-optim functional producer, no linked Vakint Main.",
+  "transport_reference_base": "external-data-root",
+  "compiled_cohort": {
+    "collector_source_sha256": "84c4c016855af710c30bed62530d37e3ab27a536f6d55bdb2a3db560d32bf7b1",
+    "kernel_revision": "9cd57678d8817ec33c05cacba4925162f1c86b0b",
+    "main_revision": "c2ca815cc906bdeaf7cb8c63b637e81a80fba917",
+    "main_source_snapshot_sha256": "13ee81b6525b26406c111713d4deb3463ab1abe81ba4ff65802bde7f31b364fe",
+    "measurement_executable_sha256": "4843e29e64b319585a4437c0bbd21e9c2212626242e8300a78808d9351763539",
+    "native_revision": "c2ca815cc906bdeaf7cb8c63b637e81a80fba917",
+    "native_source_snapshot_sha256": "c487c1a5162869ea68a7a62e5ac226a4277a41982478652e181a1bd1253e4bdb",
+    "profile": "debug",
+    "role": "native-selected-cache-producer",
+    "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)\nbinary: rustc\ncommit-hash: 48a229ceaefd4985c50990b14116b6d856af0985\ncommit-date: 2026-09-01\nhost: x86_64-unknown-linux-gnu\nrelease: 1.98.1\nLLVM version: 22.1.8",
+    "source_identity": {
+      "files": {
+        "Cargo.lock": "f28aadbf915abf2c57549ed91d88a1aecc3ca8e235ead6894a8945910c3ecac5",
+        "Cargo.toml": "98f6ebe93245988c09aaa25ef1e2b231cd83a37d600037b21d41df06dc65286d",
+        "build.rs": "bdb1e13d7d57635aaf10b55cd2009ab99f9b37bd77a4a875bad0af3263b18f99",
+        "src/index_identity.rs": "9c0bcb8aab60ccde38c7a406d719e26632bfb164829d1ef5e6c5a9ab23ec432e",
+        "src/main.rs": "84c4c016855af710c30bed62530d37e3ab27a536f6d55bdb2a3db560d32bf7b1",
+        "src/proof_reference.rs": "e8ce76485fac54f11fba173cfa4405fe08c8b9750758ce493c99251f22d2adfd",
+        "src/resource_guard_admission.rs": "bb3223d27584b42069d3813ebdcaefa6598a0935ca4531714a50248b334870cb",
+        "src/selection.rs": "bed2e34853e6654a6c1903a3ec59db81d695b1bd1d1f0190ab3d68ce4ce3de1b",
+        "src/union.rs": "1808b73180a0061044d3741a7fa3869836e15b21b931db7f4815bf3d3a36a5e4"
+      },
+      "native_identity": {
+        "clean": true,
+        "codec_state_format": 6,
+        "kernel_revision": "9cd57678d8817ec33c05cacba4925162f1c86b0b",
+        "kernel_tree": "096ad34ec305ccb1c15ea13c716b7bff35fd4737",
+        "revision": "c2ca815cc906bdeaf7cb8c63b637e81a80fba917",
+        "schema": "native.git-source-tree-identity.v1",
+        "source_repository": "https://github.com/alphal00p/rustred",
+        "tree": "125ef69c802ddb0023041927b1d1c26cca1b67dd"
+      },
+      "role": "native-selected-cache-producer",
+      "schema": "native.private-layered-helper-source-identity.v1",
+      "source_layer": "private standalone v4-census successor on public Nativec2ca with actualv1/v2profile schema metadata, source parity and unchanged ordered opaque union; exact reviewed task-admission module; no linked Vakint Main",
+      "source_repository": "https://github.com/alphal00p/rustred"
+    },
+    "source_layer": "private standalone v4-census helper with ordered opaque union and exact reviewed task-admission module; not linked Vakint Main",
+    "source_repository": "https://github.com/alphal00p/rustred",
+    "stamps": {
+      "VAKINT_CACHE_BUILD_GIT_REVISION": "c2ca815cc906bdeaf7cb8c63b637e81a80fba917",
+      "VAKINT_CACHE_BUILD_MAIN_SOURCE_SNAPSHOT_SHA256": "13ee81b6525b26406c111713d4deb3463ab1abe81ba4ff65802bde7f31b364fe",
+      "VAKINT_CACHE_BUILD_NATIVE_SOURCE_SNAPSHOT_SHA256": "c487c1a5162869ea68a7a62e5ac226a4277a41982478652e181a1bd1253e4bdb",
+      "VAKINT_CACHE_BUILD_PROFILE": "debug",
+      "VAKINT_CACHE_BUILD_RUSTC": "rustc 1.98.1 (48a229cea 2026-09-01)\nbinary: rustc\ncommit-hash: 48a229ceaefd4985c50990b14116b6d856af0985\ncommit-date: 2026-09-01\nhost: x86_64-unknown-linux-gnu\nrelease: 1.98.1\nLLVM version: 22.1.8",
+      "VAKINT_CACHE_BUILD_RUSTRED_REVISION": "c2ca815cc906bdeaf7cb8c63b637e81a80fba917",
+      "VAKINT_CACHE_BUILD_SYMBOLICA_REVISION": "9cd57678d8817ec33c05cacba4925162f1c86b0b"
+    }
+  },
+  "stamps": {
+    "VAKINT_CACHE_BUILD_GIT_REVISION": "c2ca815cc906bdeaf7cb8c63b637e81a80fba917",
+    "VAKINT_CACHE_BUILD_MAIN_SOURCE_SNAPSHOT_SHA256": "13ee81b6525b26406c111713d4deb3463ab1abe81ba4ff65802bde7f31b364fe",
+    "VAKINT_CACHE_BUILD_NATIVE_SOURCE_SNAPSHOT_SHA256": "c487c1a5162869ea68a7a62e5ac226a4277a41982478652e181a1bd1253e4bdb",
+    "VAKINT_CACHE_BUILD_PROFILE": "debug",
+    "VAKINT_CACHE_BUILD_RUSTC": "rustc 1.98.1 (48a229cea 2026-09-01)\nbinary: rustc\ncommit-hash: 48a229ceaefd4985c50990b14116b6d856af0985\ncommit-date: 2026-09-01\nhost: x86_64-unknown-linux-gnu\nrelease: 1.98.1\nLLVM version: 22.1.8",
+    "VAKINT_CACHE_BUILD_RUSTRED_REVISION": "c2ca815cc906bdeaf7cb8c63b637e81a80fba917",
+    "VAKINT_CACHE_BUILD_SYMBOLICA_REVISION": "9cd57678d8817ec33c05cacba4925162f1c86b0b"
+  },
+  "binary": {
+    "cargo_path": "/shared/codex-1/vakint_rustred/workspace/build/native-producer-c2ca-v2-ci-optim/ci-optim/native-selected-cache-producer",
+    "sha256": "4843e29e64b319585a4437c0bbd21e9c2212626242e8300a78808d9351763539",
+    "bytes": 39986184,
+    "ELF": true,
+    "path_semantics": "Actual unchanged compiled target ELF; no immutable-copy/fatLTO/release claim."
+  },
+  "cargo_profile": {
+    "opt_level": "2",
+    "debuginfo": 0,
+    "debug_assertions": true,
+    "overflow_checks": true,
+    "test": false
+  },
+  "requested_profile": "ci-optim",
+  "actual_Cargo_PROFILE_env": "debug",
+  "original_controller_result": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-build-run1/result.json",
+    "bytes": 10872,
+    "sha256": "1f5085b6d77a8dc27e62f683e15175c8df3cfcc85a9b03a88f338538406f0bd9"
+  },
+  "successful_stage_evidence": [
+    {
+      "name": "copy-readonly-c2ca-donor",
+      "returncode": 0,
+      "seconds": 11.056154842022806,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "seed-authentic03-lock",
+      "returncode": 0,
+      "seconds": 1.6534213859122247,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "ordinary-private-resolver",
+      "returncode": 0,
+      "seconds": 1.690440348116681,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "build-producer",
+      "returncode": 0,
+      "seconds": 821.269419281045,
+      "log_sha256": "437b8f466a3973e9e54977bfc211ad4cbd6f926d94b30cb619c7222f667136b1"
+    },
+    {
+      "name": "parser-tests",
+      "returncode": 0,
+      "seconds": 11.720679574878886,
+      "log_sha256": "6ec1cf2b173f2fda41d71c4babed4c8caa47669e7ea1d855c98904c2afb8f1a7"
+    },
+    {
+      "name": "clippy",
+      "returncode": 0,
+      "seconds": 72.98612329503521,
+      "log_sha256": "99da9845ceb2a469a8f97182e3808cd6deff0adff70feaa0a08461faa84f2d16"
+    },
+    {
+      "name": "build-info",
+      "returncode": 0,
+      "seconds": 1.6790652920026332,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "supplemental_metadata_result": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/inventory-recovery/inventory-run1/result.json",
+    "bytes": 2645,
+    "sha256": "7620143493897de387589ccf4b88bd92442f5377ef92c738374ab9cd385da50e"
+  },
+  "supplemental_input_inventory": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/inventory-recovery/inventory-run1/supplemental-input-inventory.json",
+    "bytes": 7545881,
+    "sha256": "a8360902da3f5265d9907fe49c96175de468d3e229fd0875debe9daa2d4b953e"
+  },
+  "independent_composed_review": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/inventory-recovery/terminal-review.json",
+    "bytes": 22626,
+    "sha256": "77594bd9b443ed56d90ad3d31095a306f610fa9bc2c75c3507fa1a6a6d890e3c"
+  },
+  "original_Root_GO": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/root-build-only-go.json",
+    "bytes": 1103,
+    "sha256": "fde7134feb7d20f6263481eeffdc423dc2601cfead628c04ecddc9504cf05686"
+  },
+  "supplemental_Root_GO": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/inventory-recovery/root-metadata-recovery-go.json",
+    "bytes": 1107,
+    "sha256": "b7a1f9569e83d70d7232bec7a0c6620590dfaeccabfeac83d2e2d23aadc12590"
+  },
+  "source_origin": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/source-origin.json",
+    "bytes": 7337,
+    "sha256": "f701da736a0d06315f5d9db9a53dfd54625d6ee8f5161bf5ca65ed62e5cf7176"
+  },
+  "metadata_owner_proof": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-build-run1/metadata-owner-proof.json",
+    "bytes": 164116,
+    "sha256": "011fcb411e7b3174166f59ab4077574acbc55475856bef3ba445ca083ce93fe0"
+  },
+  "metadata": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-build-run1/cargo-metadata.json",
+    "bytes": 811907,
+    "sha256": "0e8de257c9d5a6be4993ed4c32e246d33d244d9acab886c1715c6649278f44a6"
+  },
+  "lock": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-c2ca-source/Cargo.lock",
+    "bytes": 40570,
+    "sha256": "f28aadbf915abf2c57549ed91d88a1aecc3ca8e235ead6894a8945910c3ecac5"
+  },
+  "qualification": "Original post-build bookkeeping FAILED is preserved; seven gates exit0 plus separately Root-cleared/peer-reviewed supplemental inventory establish actual build provenance. No cache runtime or performance acceptance."
+}

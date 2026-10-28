@@ -1,0 +1,31 @@
+{
+  "main_revision": "2d70bfe439d84b6888cbd29d2574df9c1ed7aae6",
+  "native_revision": "c2ca815cc906bdeaf7cb8c63b637e81a80fba917",
+  "kernel_revision": "9cd57678d8817ec33c05cacba4925162f1c86b0b",
+  "main_source_snapshot_sha256": "d415bf7d142d57b386bd5656471a7551dd43c5ddb0c0ea82c7f2fc3436abc29a",
+  "native_source_snapshot_sha256": "3cdfaaacc4619f3adb3ceddb3185106338e2352523ecc778858a633a80055b0c",
+  "collector": "five_loop_qcd_ladder",
+  "profile": "release",
+  "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)",
+  "measurement_executable_sha256": "ca89f4eb6776c88bb28a1147a6363233638517b1d52cc026a03798cdeb8ed1e1",
+  "collector_source_sha256": "314dcf4e20414a37177418f7eb38a712f2d7bcb8249f663e074b5e61f62063eb",
+  "collector_artifacts": {
+    "path_hint": "provenance/actual-two-collector-cohort/collector-artifacts.json",
+    "sha256": "9bf61b213956dbed1f3a2667d16c3b906c9931834e018b234e0d178433c0fb7e"
+  },
+  "main_source_snapshot": {
+    "path_hint": "provenance/actual-two-collector-cohort/main-source-snapshot.json",
+    "sha256": "d415bf7d142d57b386bd5656471a7551dd43c5ddb0c0ea82c7f2fc3436abc29a"
+  },
+  "native_source_snapshot": {
+    "path_hint": "provenance/actual-two-collector-cohort/native-source-snapshot.json",
+    "sha256": "3cdfaaacc4619f3adb3ceddb3185106338e2352523ecc778858a633a80055b0c"
+  },
+  "collector_helper_sources_sha256": {
+    "crates/vakint/examples/build_cache/cache_file_args.rs": "ad4a7cc12994a955b05f76114b239cba8994d8bb15a5ed1dda99a15e69e0b8ed",
+    "crates/vakint/examples/build_cache/cache_hit_capture.rs": "15f207139ec5076b10553452e97838028d9df199c626a0acacab9bd7ff8b40d6",
+    "crates/vakint/examples/build_cache/cache_hit_diagnostic.rs": "b8fafd26aec56041a7ff27341bcdadd1064519da2db590f3274ba105c71f1566",
+    "crates/vakint/examples/build_cache/cache_identity.rs": "e0a03ddb74d5e8814d1732269a7005b91d075561363a4e12f5eefbb7e8d5669f",
+    "crates/vakint/examples/build_cache/resource_guard_admission.rs": "bb3223d27584b42069d3813ebdcaefa6598a0935ca4531714a50248b334870cb"
+  }
+}

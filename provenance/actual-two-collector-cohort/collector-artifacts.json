@@ -1,0 +1,256 @@
+{
+  "status": "BUILT_AND_ALL_FIVE_STAMPS_AUTHENTICATED",
+  "source_head": "2d70bfe439d84b6888cbd29d2574df9c1ed7aae6",
+  "profile": "release",
+  "compile_proof": {
+    "VAKINT_CACHE_BUILD_GIT_REVISION": "2d70bfe439d84b6888cbd29d2574df9c1ed7aae6",
+    "VAKINT_CACHE_BUILD_RUSTRED_REVISION": "c2ca815cc906bdeaf7cb8c63b637e81a80fba917",
+    "VAKINT_CACHE_BUILD_SYMBOLICA_REVISION": "9cd57678d8817ec33c05cacba4925162f1c86b0b",
+    "VAKINT_CACHE_BUILD_MAIN_SOURCE_SNAPSHOT_SHA256": "d415bf7d142d57b386bd5656471a7551dd43c5ddb0c0ea82c7f2fc3436abc29a",
+    "VAKINT_CACHE_BUILD_NATIVE_SOURCE_SNAPSHOT_SHA256": "3cdfaaacc4619f3adb3ceddb3185106338e2352523ecc778858a633a80055b0c",
+    "VAKINT_CACHE_BUILD_RUSTC": "rustc 1.98.1 (48a229cea 2026-09-01)",
+    "VAKINT_CACHE_BUILD_PROFILE": "release"
+  },
+  "artifacts": {
+    "measure_cache": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-release-2d70-20261028/run/artifacts/measure_cache",
+      "sha256": "dc11710dab03050c3ceb259c431ba717f69810412b7ef17ba9f7ae9e91f3c9ea",
+      "bytes": 147680528,
+      "cargo_artifact": {
+        "reason": "compiler-artifact",
+        "package_id": "path+file:///shared/codex-1/vakint_rustred/workspace/5l-push/vakint-q0-coefficient-release-freeze-2d70-20261028/crates/vakint#0.1.2",
+        "manifest_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-q0-coefficient-release-freeze-2d70-20261028/crates/vakint/Cargo.toml",
+        "target": {
+          "kind": [
+            "example"
+          ],
+          "crate_types": [
+            "bin"
+          ],
+          "name": "measure_cache",
+          "src_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-q0-coefficient-release-freeze-2d70-20261028/crates/vakint/examples/measure_cache.rs",
+          "edition": "2024",
+          "doc": false,
+          "doctest": false,
+          "test": false
+        },
+        "profile": {
+          "opt_level": "3",
+          "debuginfo": 0,
+          "debug_assertions": false,
+          "overflow_checks": false,
+          "test": false
+        },
+        "features": [
+          "experimental-rustred",
+          "feynkit-ingress",
+          "progress-tui",
+          "symbolica_community_module",
+          "weighted-lowering-diagnostics"
+        ],
+        "filenames": [
+          "/shared/codex-1/vakint_rustred/workspace/build/vakint-q0-local-retained-2d70-release-20261028/release/examples/measure_cache"
+        ],
+        "executable": "/shared/codex-1/vakint_rustred/workspace/build/vakint-q0-local-retained-2d70-release-20261028/release/examples/measure_cache",
+        "fresh": false
+      },
+      "actual_rustc": {
+        "compiler": "/nix/store/7m3ahrz00pis1dplzf8vwldriqlfc0d0-rust-stable-with-components-2026-09-03/bin/rustc",
+        "crate_name": "measure_cache",
+        "codegen_flags": [
+          "opt-level=3",
+          "lto=fat",
+          "metadata=ac86ad0ff9ac0292",
+          "extra-filename=-2695202edfd3cb5d",
+          "linker=/nix/store/z4c6k0mrlkwl3s4w9ysxc8vq1wylm3ms-gcc-wrapper-15.3.0/bin/gcc",
+          "strip=debuginfo",
+          "linker=/nix/store/z4c6k0mrlkwl3s4w9ysxc8vq1wylm3ms-gcc-wrapper-15.3.0/bin/gcc"
+        ],
+        "cfg": [
+          "feature=\"experimental-rustred\"",
+          "feature=\"feynkit-ingress\"",
+          "feature=\"progress-tui\"",
+          "feature=\"symbolica_community_module\"",
+          "feature=\"weighted-lowering-diagnostics\""
+        ],
+        "source_arguments": [
+          "crates/vakint/examples/measure_cache.rs"
+        ],
+        "argument_sha256": "eba37b95b0a3bdbedda4b51bf22f2637358ace85ac13c4793da256c0477dbd9f"
+      },
+      "env_stamps": {
+        "VAKINT_CACHE_BUILD_GIT_REVISION": "2d70bfe439d84b6888cbd29d2574df9c1ed7aae6",
+        "VAKINT_CACHE_BUILD_RUSTRED_REVISION": "c2ca815cc906bdeaf7cb8c63b637e81a80fba917",
+        "VAKINT_CACHE_BUILD_SYMBOLICA_REVISION": "9cd57678d8817ec33c05cacba4925162f1c86b0b",
+        "VAKINT_CACHE_BUILD_MAIN_SOURCE_SNAPSHOT_SHA256": "d415bf7d142d57b386bd5656471a7551dd43c5ddb0c0ea82c7f2fc3436abc29a",
+        "VAKINT_CACHE_BUILD_NATIVE_SOURCE_SNAPSHOT_SHA256": "3cdfaaacc4619f3adb3ceddb3185106338e2352523ecc778858a633a80055b0c",
+        "VAKINT_CACHE_BUILD_RUSTC": "rustc 1.98.1 (48a229cea 2026-09-01)",
+        "VAKINT_CACHE_BUILD_PROFILE": "release"
+      },
+      "dep_info_sha256": "ed0a945b1ddde9c41fa7523394f1da10de89fc86dc0e7df64bb15c83773e2097",
+      "all_five_actual_env_dep_stamps": {
+        "VAKINT_CACHE_BUILD_GIT_REVISION": "2d70bfe439d84b6888cbd29d2574df9c1ed7aae6",
+        "VAKINT_CACHE_BUILD_RUSTRED_REVISION": "c2ca815cc906bdeaf7cb8c63b637e81a80fba917",
+        "VAKINT_CACHE_BUILD_SYMBOLICA_REVISION": "9cd57678d8817ec33c05cacba4925162f1c86b0b",
+        "VAKINT_CACHE_BUILD_MAIN_SOURCE_SNAPSHOT_SHA256": "d415bf7d142d57b386bd5656471a7551dd43c5ddb0c0ea82c7f2fc3436abc29a",
+        "VAKINT_CACHE_BUILD_NATIVE_SOURCE_SNAPSHOT_SHA256": "3cdfaaacc4619f3adb3ceddb3185106338e2352523ecc778858a633a80055b0c"
+      },
+      "all_seven_actual_env_dep_stamps": {
+        "VAKINT_CACHE_BUILD_GIT_REVISION": "2d70bfe439d84b6888cbd29d2574df9c1ed7aae6",
+        "VAKINT_CACHE_BUILD_RUSTRED_REVISION": "c2ca815cc906bdeaf7cb8c63b637e81a80fba917",
+        "VAKINT_CACHE_BUILD_SYMBOLICA_REVISION": "9cd57678d8817ec33c05cacba4925162f1c86b0b",
+        "VAKINT_CACHE_BUILD_MAIN_SOURCE_SNAPSHOT_SHA256": "d415bf7d142d57b386bd5656471a7551dd43c5ddb0c0ea82c7f2fc3436abc29a",
+        "VAKINT_CACHE_BUILD_NATIVE_SOURCE_SNAPSHOT_SHA256": "3cdfaaacc4619f3adb3ceddb3185106338e2352523ecc778858a633a80055b0c",
+        "VAKINT_CACHE_BUILD_PROFILE": "release",
+        "VAKINT_CACHE_BUILD_RUSTC": "rustc 1.98.1 (48a229cea 2026-09-01)"
+      },
+      "actual_dep_info": {
+        "path_hint": "provenance/actual-two-collector-cohort/artifacts/measure_cache.d",
+        "sha256": "ed0a945b1ddde9c41fa7523394f1da10de89fc86dc0e7df64bb15c83773e2097"
+      }
+    },
+    "five_loop_qcd_ladder": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-release-2d70-20261028/run/artifacts/five_loop_qcd_ladder",
+      "sha256": "ca89f4eb6776c88bb28a1147a6363233638517b1d52cc026a03798cdeb8ed1e1",
+      "bytes": 148891512,
+      "cargo_artifact": {
+        "reason": "compiler-artifact",
+        "package_id": "path+file:///shared/codex-1/vakint_rustred/workspace/5l-push/vakint-q0-coefficient-release-freeze-2d70-20261028/crates/vakint#0.1.2",
+        "manifest_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-q0-coefficient-release-freeze-2d70-20261028/crates/vakint/Cargo.toml",
+        "target": {
+          "kind": [
+            "example"
+          ],
+          "crate_types": [
+            "bin"
+          ],
+          "name": "five_loop_qcd_ladder",
+          "src_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-q0-coefficient-release-freeze-2d70-20261028/crates/vakint/examples/five_loop_qcd_ladder.rs",
+          "edition": "2024",
+          "required-features": [
+            "feynkit-ingress"
+          ],
+          "doc": false,
+          "doctest": false,
+          "test": false
+        },
+        "profile": {
+          "opt_level": "3",
+          "debuginfo": 0,
+          "debug_assertions": false,
+          "overflow_checks": false,
+          "test": false
+        },
+        "features": [
+          "experimental-rustred",
+          "feynkit-ingress",
+          "progress-tui",
+          "symbolica_community_module",
+          "weighted-lowering-diagnostics"
+        ],
+        "filenames": [
+          "/shared/codex-1/vakint_rustred/workspace/build/vakint-q0-local-retained-2d70-release-20261028/release/examples/five_loop_qcd_ladder"
+        ],
+        "executable": "/shared/codex-1/vakint_rustred/workspace/build/vakint-q0-local-retained-2d70-release-20261028/release/examples/five_loop_qcd_ladder",
+        "fresh": false
+      },
+      "actual_rustc": {
+        "compiler": "/nix/store/7m3ahrz00pis1dplzf8vwldriqlfc0d0-rust-stable-with-components-2026-09-03/bin/rustc",
+        "crate_name": "five_loop_qcd_ladder",
+        "codegen_flags": [
+          "opt-level=3",
+          "lto=fat",
+          "metadata=11313e7e6f8e7966",
+          "extra-filename=-682a31aa40b636d8",
+          "linker=/nix/store/z4c6k0mrlkwl3s4w9ysxc8vq1wylm3ms-gcc-wrapper-15.3.0/bin/gcc",
+          "strip=debuginfo",
+          "linker=/nix/store/z4c6k0mrlkwl3s4w9ysxc8vq1wylm3ms-gcc-wrapper-15.3.0/bin/gcc"
+        ],
+        "cfg": [
+          "feature=\"experimental-rustred\"",
+          "feature=\"feynkit-ingress\"",
+          "feature=\"progress-tui\"",
+          "feature=\"symbolica_community_module\"",
+          "feature=\"weighted-lowering-diagnostics\""
+        ],
+        "source_arguments": [
+          "crates/vakint/examples/five_loop_qcd_ladder.rs"
+        ],
+        "argument_sha256": "b51d297c00f4e056a28fc1372fe23f5963452b1306f0d6daa07246201e25f4e0"
+      },
+      "env_stamps": {
+        "VAKINT_CACHE_BUILD_GIT_REVISION": "2d70bfe439d84b6888cbd29d2574df9c1ed7aae6",
+        "VAKINT_CACHE_BUILD_RUSTRED_REVISION": "c2ca815cc906bdeaf7cb8c63b637e81a80fba917",
+        "VAKINT_CACHE_BUILD_SYMBOLICA_REVISION": "9cd57678d8817ec33c05cacba4925162f1c86b0b",
+        "VAKINT_CACHE_BUILD_MAIN_SOURCE_SNAPSHOT_SHA256": "d415bf7d142d57b386bd5656471a7551dd43c5ddb0c0ea82c7f2fc3436abc29a",
+        "VAKINT_CACHE_BUILD_NATIVE_SOURCE_SNAPSHOT_SHA256": "3cdfaaacc4619f3adb3ceddb3185106338e2352523ecc778858a633a80055b0c",
+        "VAKINT_CACHE_BUILD_RUSTC": "rustc 1.98.1 (48a229cea 2026-09-01)",
+        "VAKINT_CACHE_BUILD_PROFILE": "release"
+      },
+      "dep_info_sha256": "f0a84e399040655a9a999234d1c4db8c1a6c5cd515ba1a648d080bde4d6e264f",
+      "all_five_actual_env_dep_stamps": {
+        "VAKINT_CACHE_BUILD_GIT_REVISION": "2d70bfe439d84b6888cbd29d2574df9c1ed7aae6",
+        "VAKINT_CACHE_BUILD_RUSTRED_REVISION": "c2ca815cc906bdeaf7cb8c63b637e81a80fba917",
+        "VAKINT_CACHE_BUILD_SYMBOLICA_REVISION": "9cd57678d8817ec33c05cacba4925162f1c86b0b",
+        "VAKINT_CACHE_BUILD_MAIN_SOURCE_SNAPSHOT_SHA256": "d415bf7d142d57b386bd5656471a7551dd43c5ddb0c0ea82c7f2fc3436abc29a",
+        "VAKINT_CACHE_BUILD_NATIVE_SOURCE_SNAPSHOT_SHA256": "3cdfaaacc4619f3adb3ceddb3185106338e2352523ecc778858a633a80055b0c"
+      },
+      "all_seven_actual_env_dep_stamps": {
+        "VAKINT_CACHE_BUILD_GIT_REVISION": "2d70bfe439d84b6888cbd29d2574df9c1ed7aae6",
+        "VAKINT_CACHE_BUILD_RUSTRED_REVISION": "c2ca815cc906bdeaf7cb8c63b637e81a80fba917",
+        "VAKINT_CACHE_BUILD_SYMBOLICA_REVISION": "9cd57678d8817ec33c05cacba4925162f1c86b0b",
+        "VAKINT_CACHE_BUILD_MAIN_SOURCE_SNAPSHOT_SHA256": "d415bf7d142d57b386bd5656471a7551dd43c5ddb0c0ea82c7f2fc3436abc29a",
+        "VAKINT_CACHE_BUILD_NATIVE_SOURCE_SNAPSHOT_SHA256": "3cdfaaacc4619f3adb3ceddb3185106338e2352523ecc778858a633a80055b0c",
+        "VAKINT_CACHE_BUILD_PROFILE": "release",
+        "VAKINT_CACHE_BUILD_RUSTC": "rustc 1.98.1 (48a229cea 2026-09-01)"
+      },
+      "actual_dep_info": {
+        "path_hint": "provenance/actual-two-collector-cohort/artifacts/five_loop_qcd_ladder.d",
+        "sha256": "f0a84e399040655a9a999234d1c4db8c1a6c5cd515ba1a648d080bde4d6e264f"
+      }
+    }
+  },
+  "projection": {
+    "schema": "vakint.actual-two-collector-cohort-projection.v1",
+    "raw_receipt": {
+      "path_hint": "provenance/actual-two-collector-cohort/raw-release-collectors.json",
+      "sha256": "6f15e5b521ca929e295fa9aa721aeb85d6b93803be861e9c0f20d3c99791e931"
+    },
+    "raw_receipt_original": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-release-2d70-20261028/run/release-collectors.json",
+      "sha256": "6f15e5b521ca929e295fa9aa721aeb85d6b93803be861e9c0f20d3c99791e931"
+    },
+    "build_plan": {
+      "path_hint": "provenance/actual-two-collector-cohort/build-plan.json",
+      "sha256": "0dca14ee2e0cbed29cfd323657b6a79bf64b99288eadff6a29fc6f094ccc07c8"
+    },
+    "build_plan_original": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-release-2d70-20261028/plan.json",
+      "sha256": "0dca14ee2e0cbed29cfd323657b6a79bf64b99288eadff6a29fc6f094ccc07c8"
+    },
+    "actual_build_source": {
+      "path_hint": "provenance/actual-two-collector-cohort/build.py",
+      "sha256": "acb70b7e93190358a613925718784f8947ad4c85302d0436dc69843726d020e9"
+    },
+    "compiler_environment": {
+      "path_hint": "provenance/actual-two-collector-cohort/compile-proof-environment.json",
+      "sha256": "6b69938aa990c74b2762a47a193d4003a87535e4412cd6357d686c827c67da60"
+    },
+    "original_ELFs": {
+      "measure_cache": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-release-2d70-20261028/run/artifacts/measure_cache",
+        "sha256": "dc11710dab03050c3ceb259c431ba717f69810412b7ef17ba9f7ae9e91f3c9ea",
+        "bytes": 147680528
+      },
+      "five_loop_qcd_ladder": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-release-2d70-20261028/run/artifacts/five_loop_qcd_ladder",
+        "sha256": "ca89f4eb6776c88bb28a1147a6363233638517b1d52cc026a03798cdeb8ed1e1",
+        "bytes": 148891512
+      }
+    },
+    "binary_contents_read_or_rehashed_by_adapter": false,
+    "meaning_of_all_five": "five authenticated source env-dep stamps PER actual binary; not five binaries",
+    "actual_collector_count": 2,
+    "dependency_freshness_claim": "unchanged raw receipt only; no newly compiled Native dependency inferred"
+  }
+}

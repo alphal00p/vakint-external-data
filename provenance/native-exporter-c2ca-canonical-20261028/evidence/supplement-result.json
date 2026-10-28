@@ -1,0 +1,56 @@
+{
+  "schema": "vakint.native-producer-metadata-supplement-control.v1",
+  "status": "PASS_METADATA_SUPPLEMENT_ONLY_NO_REBUILD",
+  "packet": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/inventory-recovery/packet.json",
+    "bytes": 12906,
+    "sha256": "fba486fe96c86f718a2432c4d81763aa96a06d8513edf7fa390b1ea322e176a3"
+  },
+  "root_go": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/inventory-recovery/root-metadata-recovery-go.json",
+    "bytes": 1107,
+    "sha256": "b7a1f9569e83d70d7232bec7a0c6620590dfaeccabfeac83d2e2d23aadc12590"
+  },
+  "original_controller_result": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-build-run1/result.json",
+    "bytes": 10872,
+    "sha256": "1f5085b6d77a8dc27e62f683e15175c8df3cfcc85a9b03a88f338538406f0bd9"
+  },
+  "argv": [
+    "/nix/store/0r6k8xa2kgqyp3r4v2w7yrb80ma2iawm-python3-3.13.12/bin/python3",
+    "-B",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/inventory-recovery/inventory.py",
+    "--packet",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/inventory-recovery/packet.json",
+    "--packet-sha256",
+    "fba486fe96c86f718a2432c4d81763aa96a06d8513edf7fa390b1ea322e176a3",
+    "--output",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/inventory-recovery/inventory-run1/supplemental-input-inventory.json"
+  ],
+  "cpus": [
+    200,
+    201
+  ],
+  "minimum_machine_MemAvailable_bytes": 50000000000,
+  "continuous_disk_floor_bytes": 100000000000,
+  "source_or_build_modified": false,
+  "Cargo_build_test_or_native_operation_run": false,
+  "started_utc": "2026-10-27T22:45:45Z",
+  "child": {
+    "pid": 1802966,
+    "uid": 1124,
+    "start_ticks": 117484616,
+    "state": "R"
+  },
+  "returncode": 0,
+  "inventory": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/inventory-recovery/inventory-run1/supplemental-input-inventory.json",
+    "bytes": 7545881,
+    "sha256": "a8360902da3f5265d9907fe49c96175de468d3e229fd0875debe9daa2d4b953e"
+  },
+  "seconds": 8.463336867978796,
+  "minimum_observed_machine_MemAvailable_bytes": 379627761664,
+  "maximum_observed_owned_cohort_rss_bytes": 32366592,
+  "signals": [],
+  "completed_utc": "2026-10-27T22:45:53Z"
+}

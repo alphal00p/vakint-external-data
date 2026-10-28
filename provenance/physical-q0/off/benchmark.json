@@ -1,0 +1,529 @@
+{
+  "cache_file_options": {
+    "decoded_directory": null,
+    "explicit": false,
+    "max_compressed_bytes": 99614720,
+    "max_decoded_bytes": 1073741824,
+    "max_index_bytes": 18446744073709551615
+  },
+  "cache_hit_diagnostic": null,
+  "cache_hit_diagnostic_enabled": false,
+  "cache_identity": {
+    "cache_native_index_identity": {
+      "indexes": {
+        "bindings/6b235c09ae267174886f88a033214526be0dc1a3158fd597f4fb97b8dccd9853/cache.rrindex": {
+          "bytes": 36582873,
+          "sha256": "a1a33ef0861c45726d64ca2c0fadf76c85d3ccad77193b231a89b92c5c05eea2"
+        },
+        "bundle.rrindex": {
+          "bytes": 5254,
+          "sha256": "4f940e610956c96a5f344bf8f0540021ab70908873bbd3ade9c0c4bf9f0f0f6d"
+        }
+      },
+      "layout": "bundle",
+      "schema": "vakint.native-cache-index-identity.v1",
+      "sha256": "2658cd25b88b24c00fc5e3ad7a68b2396fdbe4ab8facea0039873d971b236654"
+    },
+    "cache_sha256": null
+  },
+  "cache_identity_after": {
+    "cache_native_index_identity": {
+      "indexes": {
+        "bindings/6b235c09ae267174886f88a033214526be0dc1a3158fd597f4fb97b8dccd9853/cache.rrindex": {
+          "bytes": 36582873,
+          "sha256": "a1a33ef0861c45726d64ca2c0fadf76c85d3ccad77193b231a89b92c5c05eea2"
+        },
+        "bundle.rrindex": {
+          "bytes": 5254,
+          "sha256": "4f940e610956c96a5f344bf8f0540021ab70908873bbd3ade9c0c4bf9f0f0f6d"
+        }
+      },
+      "layout": "bundle",
+      "schema": "vakint.native-cache-index-identity.v1",
+      "sha256": "2658cd25b88b24c00fc5e3ad7a68b2396fdbe4ab8facea0039873d971b236654"
+    },
+    "cache_sha256": null
+  },
+  "cache_loading_seconds": 0.3798171,
+  "cache_statistics": "CandidateStatistics { work: ReductionStatistics { cache_hits: 1750, rule_applications: 0, coalescing_additions: 83586, cached_integrals: 0, cached_coefficient_terms: 0, cached_coefficient_bytes: 0 }, cached_integrals: 1750, cached_coefficient_terms: 20502818, cached_coefficient_bytes: 1682526604 }",
+  "catalogue_closure": {
+    "closed": true,
+    "master_count": 55,
+    "unknown_count": 0,
+    "unknown_file": "unknown-masters.json",
+    "unknown_preview": [],
+    "unknown_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "coefficient_representation": "sparse",
+  "collector_helper_sources_sha256": {
+    "crates/vakint/examples/build_cache/cache_file_args.rs": "ad4a7cc12994a955b05f76114b239cba8994d8bb15a5ed1dda99a15e69e0b8ed",
+    "crates/vakint/examples/build_cache/cache_hit_capture.rs": "15f207139ec5076b10553452e97838028d9df199c626a0acacab9bd7ff8b40d6",
+    "crates/vakint/examples/build_cache/cache_hit_diagnostic.rs": "b8fafd26aec56041a7ff27341bcdadd1064519da2db590f3274ba105c71f1566",
+    "crates/vakint/examples/build_cache/cache_identity.rs": "e0a03ddb74d5e8814d1732269a7005b91d075561363a4e12f5eefbb7e8d5669f",
+    "crates/vakint/examples/build_cache/resource_guard_admission.rs": "bb3223d27584b42069d3813ebdcaefa6598a0935ca4531714a50248b334870cb"
+  },
+  "collector_source_sha256": "314dcf4e20414a37177418f7eb38a712f2d7bcb8249f663e074b5e61f62063eb",
+  "compiled_cache_file_args_sha256": "ad4a7cc12994a955b05f76114b239cba8994d8bb15a5ed1dda99a15e69e0b8ed",
+  "compiled_cohort": {
+    "kernel_revision": "9cd57678d8817ec33c05cacba4925162f1c86b0b",
+    "main_revision": "2d70bfe439d84b6888cbd29d2574df9c1ed7aae6",
+    "main_source_snapshot_sha256": "d415bf7d142d57b386bd5656471a7551dd43c5ddb0c0ea82c7f2fc3436abc29a",
+    "native_revision": "c2ca815cc906bdeaf7cb8c63b637e81a80fba917",
+    "native_source_snapshot_sha256": "3cdfaaacc4619f3adb3ceddb3185106338e2352523ecc778858a633a80055b0c",
+    "profile": "release",
+    "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)"
+  },
+  "consumer_fixture_sources_sha256": {
+    "ladder.dot": "990490ae32441fcbc279390b97aedf433d226a7b4986faea1eaf87e15ca79ece",
+    "mod.rs": "9980517e77277211d104273de89b1bb46f575b5816a338ce8bdaae223d77aa5e",
+    "phi3.json": "5e7b76223b63752eac1200744ee945be2bc9b125890b1430271faea9917b1dd3",
+    "physical.rs": "754b9a5b2b0b9701fc666c29ce6728229d78ace9cb10948033c17d9e42275436",
+    "projector.rs": "bbd9a9a8ce08e0c29a632c74586f7b51dc04cc2d1ed8802a6ef6a43bdbf5a53d",
+    "qcd.json": "229179d56fec310801f9db3d5697d6f3947b6a3c112d9b856ba0fe6fc1fe6a3b",
+    "vacuum.rs": "05cdaa106c6f27fa16ea7c473f4a83ac0c4e7100eba9cc58ee4358e95aedb905"
+  },
+  "contributions": 1,
+  "conventions": {
+    "application_options": "SavedApplicationOptions { unresolved_policy: Preserve, entry_coverage_policy: FollowUnresolvedPolicy, reduction_limits: ReductionLimits { diagnostics_enabled: false, exact_algebra: ExactAlgebraLimits { diagnostics_enabled: false, max_exponent: 65535, max_polynomial_terms: 4000000, max_term_operations: 16000000 }, indexed_algebra: IndexedAlgebraLimits { diagnostics_enabled: false, exact_algebra: ExactAlgebraLimits { diagnostics_enabled: false, max_exponent: 65535, max_polynomial_terms: 4000000, max_term_operations: 16000000 }, max_specialization_power_operations: 16000000, max_specialization_integer_bits: 16000000 }, max_rule_applications: 1000000, max_cached_integrals: 1000000, max_cached_coefficient_terms: 16000000, max_cached_coefficient_bytes: 18446744073709551615, max_pending_frames: 1000000, max_coalescing_additions: 16000000, max_factorization_terms: 1000000 }, trace_limits: RoutedCandidateLimits { diagnostics_enabled: false, max_input_targets: 100000, max_unique_nodes: 1000000, max_transport_calls: 100000, max_transport_operations: 64000000, max_transport_endpoints: 4000000, expansion: MultiAffineNumeratorExpansionLimits { diagnostics_enabled: false, exact_algebra: ExactAlgebraLimits { diagnostics_enabled: false, max_exponent: 65535, max_polynomial_terms: 4000000, max_term_operations: 16000000 }, max_factors: 128, max_relation_coefficient_entries: 16384, max_total_power: 1000000, max_native_polynomial_terms: 4000000, max_native_polynomial_operations: 64000000, max_native_exponent_entries: 64000000, max_endpoints: 4000000, max_endpoint_power_entries: 64000000, max_retained_endpoint_key_bytes: 1000000000, max_retained_coefficient_terms: 64000000, max_retained_coefficient_clone_owned_bytes: 1000000000 } }, binary_limits: BinaryIoLimits { diagnostics_enabled: false, max_program_bytes: 18446744073709551615, max_sections: 32, max_collection_entries: 8000000, max_state_bytes: 18446744073709551615, max_atom_bytes: 18446744073709551615, max_total_atom_bytes: 18446744073709551615, exact_algebra: ExactAlgebraLimits { diagnostics_enabled: false, max_exponent: 65535, max_polynomial_terms: 4000000, max_term_operations: 16000000 } }, cache_representation: Sparse, cache_policy: EvictLeastRecentlyUsed, preparation_workers: 1 }",
+    "epsilon_symbol": "vakint::ε",
+    "integral_normalization": "pySecDec",
+    "integral_normalization_expression": "((𝑖)*𝜋^((-2*vakint::{}::ε+4)*1/2))^(-1*vakint::{}::n_loops)",
+    "mass_convention": "one common denominator mass mUV; massless quark numerators",
+    "matching_limits": "MomentumMatchLimits { diagnostics_enabled: false, max_graph_automorphisms: 100000, max_orientation_candidates: 1000000, max_verified_witnesses: 100000 }",
+    "scalar_limits": "ScalarNumeratorLimits { diagnostics_enabled: false, exact_algebra: ExactAlgebraLimits { diagnostics_enabled: false, max_exponent: 65535, max_polynomial_terms: 4000000, max_term_operations: 16000000 }, max_input_nodes: 1000000, max_momentum_label_nodes: 100000, max_loop_momentum_label_checks: 64000000, max_nesting_depth: 256, max_input_terms: 100000, max_factors_per_term: 100000, max_scalar_product_degree: 1000000, max_polynomial_terms: 100000, max_lowered_terms: 1000000, max_output_atom_nodes: 100000000 }"
+  },
+  "data": {
+    "load_prepared_caches": false,
+    "loops": [
+      {
+        "cache_available": true,
+        "cache_format": null,
+        "cache_loaded": false,
+        "cache_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/external-q0-running-cache-d438/1L/cache",
+        "cache_source": null,
+        "loop_count": 1,
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/external-q0-running-cache-d438/1L",
+        "source": "local"
+      },
+      {
+        "cache_available": true,
+        "cache_format": null,
+        "cache_loaded": false,
+        "cache_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/external-q0-running-cache-d438/2L/cache",
+        "cache_source": null,
+        "loop_count": 2,
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/external-q0-running-cache-d438/2L",
+        "source": "local"
+      },
+      {
+        "cache_available": true,
+        "cache_format": null,
+        "cache_loaded": false,
+        "cache_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/external-q0-running-cache-d438/3L/cache",
+        "cache_source": null,
+        "loop_count": 3,
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/external-q0-running-cache-d438/3L",
+        "source": "local"
+      },
+      {
+        "cache_available": true,
+        "cache_format": null,
+        "cache_loaded": false,
+        "cache_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/external-q0-running-cache-d438/4L/cache",
+        "cache_source": null,
+        "loop_count": 4,
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/external-q0-running-cache-d438/4L",
+        "source": "local"
+      },
+      {
+        "cache_available": true,
+        "cache_format": "rustred.saved-application-cache-file.v1",
+        "cache_loaded": false,
+        "cache_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/external-q0-running-cache-d438/5L/cache/prepared.rrcache.gz",
+        "cache_source": null,
+        "loop_count": 5,
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/external-q0-running-cache-d438/5L",
+        "source": "local"
+      }
+    ],
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/external-q0-running-cache-d438",
+    "version": "v0.1.2"
+  },
+  "data_loading_seconds": 134.731260685,
+  "data_manifest_sha256": "794c0e4b44a1c6be1d78f8ebdbca188473678823ea1f3b821f70b63b2a6dd5a7",
+  "diagnostic_only": false,
+  "end_to_end_scope": "verified prepared-input loading through cold result serialization; original preparation excluded",
+  "end_to_end_seconds": 1194.194337322,
+  "executable_sha256": "ca89f4eb6776c88bb28a1147a6363233638517b1d52cc026a03798cdeb8ed1e1",
+  "execution_threads": {
+    "math": 1,
+    "native_io_writer": 0,
+    "scope": "dedicated collector math, native writer and telemetry; not measured OS thread count",
+    "telemetry": 0
+  },
+  "families": {
+    "vakint::{}::rustred_family_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b": "rustred-integral-family-v2;N27:tide_five_loop_common_basis;L5;2:k1;2:k2;2:k3;2:k4;2:k5;E0;P1;1:d;Q5,0,15;M;RY1,1;I+1;X1;Y1,1;I+1;X0;D15;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I+2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;G0;U15;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;",
+    "vakint::{}::rustred_family_56d4ac620f0309e551e825ce435d23ee4b58e887f2ee639e1bf14006bc9e9f93": "rustred-integral-family-v2;N41:rustred_three_loop_unit_mass_vacuum_k6_v1;L3;2:k1;2:k2;2:k3;E0;P1;1:d;Q3,0,6;M;RY1,1;I+1;X1;Y1,1;I+1;X0;D6;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;G0;U6;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;",
+    "vakint::{}::rustred_family_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4": "rustred-integral-family-v2;N37:rustred-one-loop-unit-mass-tadpole-v1;L1;1:k;E0;P1;1:d;Q1,0,1;M;RY1,1;I+1;X1;Y1,1;I+1;X0;D1;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;G0;U1;RY1,0;Y1,1;I+1;X0;",
+    "vakint::{}::rustred_family_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7": "rustred-integral-family-v2;N18:symbolica_integral;L4;2:k1;2:k2;2:k3;2:k4;E0;P1;1:d;Q4,0,10;M;RY1,1;I+1;X1;Y1,1;I+1;X0;D10;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I+2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I+2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I+2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;G0;U10;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;",
+    "vakint::{}::rustred_family_ecdff6f39047e4dae21704b4de33a15ea53d9826e823496f7bdf62c1af498db1": "rustred-integral-family-v2;N36:rustred-two-loop-unit-mass-sunset-v1;L2;2:k1;2:k2;E0;P1;1:d;Q2,0,3;M;RY1,1;I+1;X1;Y1,1;I+1;X0;D3;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I+2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;G0;U3;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;"
+  },
+  "fixture_sources_sha256": {
+    "ladder.dot": "990490ae32441fcbc279390b97aedf433d226a7b4986faea1eaf87e15ca79ece",
+    "mod.rs": "f272cac241d343d81d510ee8e50e2ec3ae1f4fc9db1c67fac93b928662b95a59",
+    "phi3.json": "5e7b76223b63752eac1200744ee945be2bc9b125890b1430271faea9917b1dd3",
+    "physical.rs": "754b9a5b2b0b9701fc666c29ce6728229d78ace9cb10948033c17d9e42275436",
+    "projector.rs": "bbd9a9a8ce08e0c29a632c74586f7b51dc04cc2d1ed8802a6ef6a43bdbf5a53d",
+    "qcd.json": "229179d56fec310801f9db3d5697d6f3947b6a3c112d9b856ba0fe6fc1fe6a3b",
+    "vacuum.rs": "05cdaa106c6f27fa16ea7c473f4a83ac0c4e7100eba9cc58ee4358e95aedb905"
+  },
+  "fresh_native_preparation": false,
+  "guard_policy": "canonical-full-sorted-deduplicated",
+  "guards": {
+    "count": 146678,
+    "file": "nonzero-conditions.symbolica",
+    "includes_preparation_conditions": true,
+    "preview": [
+      "-1024",
+      "-64",
+      "-8"
+    ],
+    "sha256": "a266f432acf77ad596282574c8b6485b84eebace226d96ac122535ed308d29c1"
+  },
+  "input_bytes": 380697,
+  "input_canonical_sha256": "9814c3b49a1b486b9790bbe5458d8bc582c3fb3c299ba6a1a0362db8ba71cb16",
+  "input_loading_seconds": 0.02375373,
+  "input_mode": "prepared",
+  "input_sha256": "9814c3b49a1b486b9790bbe5458d8bc582c3fb3c299ba6a1a0362db8ba71cb16",
+  "loading_stages": {
+    "base_catalogue_prepared": [
+      0.032852
+    ],
+    "family_verified": [
+      0.015067
+    ],
+    "five_loop_catalogue_end": [
+      0.162282
+    ],
+    "native_load_end": [
+      123.235893
+    ],
+    "products_prepared": [
+      0.616627
+    ]
+  },
+  "master_mode": "retain",
+  "native_timing_scope": {
+    "owner_preparation": "Measured cumulative deferred-owner preparation counters at data load, cache setup, and reduction boundaries",
+    "phase_duration_estimates_by_subtraction": false,
+    "pure_ibp_seconds": null,
+    "saved_rule_application": "Native entry transport, lazy owner preparation, DAG reduction, exact sum, and terminal substitution",
+    "separate_native_phase_durations_available": false,
+    "stage_accounting": {
+      "disjoint_evaluation_spans": [
+        "frontend_setup",
+        "frontend_canonicalization",
+        "frontend_tensor_prepass",
+        "scalar_input_split",
+        "frontend_admitted_witness_search",
+        "numerator_replacement",
+        "detailed_evaluation_total",
+        "caller_result_merge",
+        "retained_finalization_total",
+        "public_result_packing"
+      ],
+      "loading_scope": "Initial loading_stages are captured before evaluation. Preparation spans may recur inside frontend_setup after a representation reload; products_prepared includes family_verified. Never add these overlapping spans to measured loading or evaluation wall totals.",
+      "nested_spans": {
+        "detailed_evaluation_total": [
+          "parent_transport_and_scalar_lowering",
+          "coverage_mass_batching",
+          "lowering_guard_materialization",
+          "saved_rule_application",
+          "terminal_geometry_and_lower_factors",
+          "retained_guard_materialization",
+          "retained_coefficient_materialization",
+          "unprojected_terminal_materialization",
+          "retained_batch_mass_assembly",
+          "retained_batch_cleanup",
+          "retained_normalization_and_notation",
+          "detailed_result_packing"
+        ],
+        "retained_finalization_total": [
+          "retained_catalogue_exact_combination",
+          "retained_catalogue_classification"
+        ]
+      },
+      "path_scope": "Successful and fallback batch spans append independently. Unprojected terminal materialization is a fallback path; cleanup is measured after existing batch locals naturally drop. Failed operations may omit completed spans.",
+      "samples": "Every stages[name] entry is one completed span; repeated calls append samples. Sum samples within a phase, never all phases together.",
+      "saved_rule_application_scope": "The complete saved call includes cache lookup/decode/validation when used, entry transport, weighted exact assembly, saved terminal substitution and running-cache flush. Cache hits do not imply IBP rule applications; inspect the recorded work counters.",
+      "unassigned": "Public evaluation minus disjoint spans and detailed/finalization totals minus their own children remain raw uninstrumented control, logging and caller cleanup time. Report each residual explicitly; no residual is a pure IBP estimate."
+    },
+    "terminal_substitution_seconds": null
+  },
+  "owner_preparation": {
+    "declared_owners": 67,
+    "failed_owners": 0,
+    "preparation_attempts": 0,
+    "preparation_attempts_after_cache_setup": 0,
+    "preparation_attempts_after_data_load": 0,
+    "preparation_during_cache_setup_seconds": 0.0,
+    "preparation_during_load_seconds": 0.0,
+    "preparation_during_reduction_seconds": 0.0,
+    "prepared_owners": 0,
+    "prepared_owners_after_cache_setup": 0,
+    "prepared_owners_after_data_load": 0
+  },
+  "performance_claim": false,
+  "persistent_cache": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/union-copy-run1/native-output/cache",
+  "persistent_cache_attached": true,
+  "persistent_cache_attachments_before": {
+    "1": false,
+    "2": false,
+    "3": false,
+    "4": false,
+    "5": false
+  },
+  "persistent_cache_attachments_during_evaluation": {
+    "1": false,
+    "2": false,
+    "3": false,
+    "4": false,
+    "5": true
+  },
+  "persistent_cache_policy": "manual-five-loop-only",
+  "preparation": null,
+  "preparation_policy": {
+    "fixture_work_count_overrides": false,
+    "native_denominator_basis_lowering": "required by saved-index application",
+    "optional_numerator_denominator_cancellation": false,
+    "optional_scalar_expansion": false,
+    "scalar_term_count": "stored representation"
+  },
+  "preparation_seconds": null,
+  "prepared_input": {
+    "manifest": {
+      "contributions": 1,
+      "definition": "massless-qcd-four-rung-native-uv-v1",
+      "input": {
+        "bytes": 380697,
+        "sha256": "9814c3b49a1b486b9790bbe5458d8bc582c3fb3c299ba6a1a0362db8ba71cb16"
+      },
+      "nonzero_conditions": [],
+      "nonzero_conditions_file": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "preparation_seconds": 0.49339697,
+      "producer": {
+        "executable_sha256": "7232faab6ba584f0b241a81a9292cc414b77a270675c67b19036df39472b91f3",
+        "fixture_sources_sha256": {
+          "ladder.dot": "990490ae32441fcbc279390b97aedf433d226a7b4986faea1eaf87e15ca79ece",
+          "mod.rs": "f272cac241d343d81d510ee8e50e2ec3ae1f4fc9db1c67fac93b928662b95a59",
+          "phi3.json": "5e7b76223b63752eac1200744ee945be2bc9b125890b1430271faea9917b1dd3",
+          "physical.rs": "754b9a5b2b0b9701fc666c29ce6728229d78ace9cb10948033c17d9e42275436",
+          "projector.rs": "bbd9a9a8ce08e0c29a632c74586f7b51dc04cc2d1ed8802a6ef6a43bdbf5a53d",
+          "qcd.json": "229179d56fec310801f9db3d5697d6f3947b6a3c112d9b856ba0fe6fc1fe6a3b",
+          "vacuum.rs": "05cdaa106c6f27fa16ea7c473f4a83ac0c4e7100eba9cc58ee4358e95aedb905"
+        },
+        "source_commit": "8282f0224b767857ab5044a128839a8bb7f8b0c4"
+      },
+      "projection": "zero-momentum-metric",
+      "scalar_terms": 1,
+      "schema": "vakint.qcd-ladder.prepared-input.v1",
+      "scientific_assembly_sha256": "16be3edc83d1cfad237e7762269bc02d2335e21173b01ee881b5c5834b4aa7e9",
+      "scientific_sources_sha256": {
+        "ladder.dot": "990490ae32441fcbc279390b97aedf433d226a7b4986faea1eaf87e15ca79ece",
+        "phi3.json": "5e7b76223b63752eac1200744ee945be2bc9b125890b1430271faea9917b1dd3",
+        "physical.rs": "754b9a5b2b0b9701fc666c29ce6728229d78ace9cb10948033c17d9e42275436",
+        "projector.rs": "bbd9a9a8ce08e0c29a632c74586f7b51dc04cc2d1ed8802a6ef6a43bdbf5a53d",
+        "qcd.json": "229179d56fec310801f9db3d5697d6f3947b6a3c112d9b856ba0fe6fc1fe6a3b",
+        "vacuum.rs": "05cdaa106c6f27fa16ea7c473f4a83ac0c4e7100eba9cc58ee4358e95aedb905"
+      },
+      "timings": {
+        "angular_seconds": 0.0,
+        "graph_generation_seconds": 0.193814645,
+        "ingress_seconds": 0.154826506,
+        "scalar_contraction_seconds": 0.10019787,
+        "taylor_seconds": 0.0,
+        "total_seconds": 0.493252849
+      }
+    },
+    "manifest_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/physics/prepared-input-q0-8282f022-v1/prepared-input.json",
+    "manifest_sha256": "e8bd141e653944390fd48ba234f477173caa2f84089c7ca56ea9b39938f7b1f4"
+  },
+  "prepared_nonzero_conditions": [],
+  "projection": "zero-momentum-metric",
+  "reduction_completed": true,
+  "reduction_seconds": 1048.252420505,
+  "representation_setup": {
+    "evaluation_requested": "sparse",
+    "first_evaluation_reloads_application": false,
+    "initial_data_load": "sparse",
+    "owner_preparation_counter_scope": "Before/after counters belong to different sessions when the representation reloads; their subtraction is not an isolated same-session preparation measurement",
+    "reload_timing_scope": "Any representation reload is included in reduction_seconds, not data_loading_seconds"
+  },
+  "result_bytes": 784045,
+  "result_sha256": "6b31e4501843d313425a97d176c105f0a974837d73df889d5f74c251f704d0f8",
+  "retained_result_available": true,
+  "running_cache": null,
+  "running_cache_attached": false,
+  "running_cache_capture_only": false,
+  "running_cache_loading_seconds": null,
+  "running_cache_path": null,
+  "running_cache_read_backing": false,
+  "running_cache_read_delta": true,
+  "running_cache_telemetry": null,
+  "running_cache_telemetry_start_error": null,
+  "saved_application_cache": {
+    "binding": {
+      "artifact_digest": [
+        162,
+        68,
+        185,
+        180,
+        206,
+        143,
+        114,
+        40,
+        199,
+        12,
+        133,
+        132,
+        8,
+        135,
+        208,
+        168,
+        201,
+        62,
+        78,
+        199,
+        29,
+        175,
+        102,
+        4,
+        104,
+        117,
+        83,
+        104,
+        97,
+        251,
+        210,
+        115
+      ],
+      "family_fingerprint": "rustred-integral-family-v2;N27:tide_five_loop_common_basis;L5;2:k1;2:k2;2:k3;2:k4;2:k5;E0;P1;1:d;Q5,0,15;M;RY1,1;I+1;X1;Y1,1;I+1;X0;D15;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I+2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;G0;U15;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;",
+      "layer": "saved-application-route-apply-v1",
+      "physical_arity": 15
+    },
+    "file": null,
+    "native": {
+      "cache_hits": 1750,
+      "cached_coefficient_bytes": 1682526604,
+      "cached_coefficient_terms": 20502818,
+      "cached_integrals": 1750,
+      "coalescing_additions": 83586,
+      "rule_applications": 0
+    },
+    "pack": {
+      "chunks": 72635,
+      "directory_owned_bytes": 96820189,
+      "hits": 1750,
+      "manifest_bytes": 36582873,
+      "misses": 0,
+      "records": 3048399,
+      "referenced_chunk_bytes": 117876774572,
+      "runs": 46255
+    },
+    "persistent": {
+      "apply_hits": 0,
+      "captured_records": 0,
+      "intermediate_hits": 0,
+      "lookups": 1750,
+      "misses": 0,
+      "requested_root_hits": 1750,
+      "route_hits": 1750,
+      "skipped_records": 0
+    },
+    "read_backing": true,
+    "running": null
+  },
+  "scalar_terms": 1,
+  "schema": "vakint.qcd-ladder.benchmark.v1",
+  "source_commit": "2d70bfe439d84b6888cbd29d2574df9c1ed7aae6",
+  "source_dirty": false,
+  "stages": {
+    "caller_result_merge": [
+      0.611306
+    ],
+    "coverage_mass_batching": [
+      0.023202
+    ],
+    "detailed_evaluation_total": [
+      804.104026
+    ],
+    "detailed_result_packing": [
+      0.00885
+    ],
+    "frontend_admitted_witness_search": [
+      11.641989
+    ],
+    "frontend_canonicalization": [
+      0.060501
+    ],
+    "frontend_setup": [
+      0.079068
+    ],
+    "frontend_tensor_prepass": [
+      0.032128
+    ],
+    "lowering_guard_materialization": [
+      0.000049
+    ],
+    "numerator_replacement": [
+      0.029307
+    ],
+    "parent_transport_and_scalar_lowering": [
+      1.053284
+    ],
+    "public_result_packing": [
+      0.009621
+    ],
+    "retained_batch_cleanup": [
+      0.102676
+    ],
+    "retained_batch_mass_assembly": [
+      0.002036
+    ],
+    "retained_catalogue_classification": [
+      0.002769
+    ],
+    "retained_catalogue_exact_combination": [
+      231.658658
+    ],
+    "retained_coefficient_materialization": [
+      0.005366
+    ],
+    "retained_finalization_total": [
+      231.662455
+    ],
+    "retained_guard_materialization": [
+      5.724434
+    ],
+    "retained_normalization_and_notation": [
+      0.090906
+    ],
+    "saved_rule_application": [
+      770.306794
+    ],
+    "scalar_input_split": [
+      0.018316
+    ],
+    "terminal_geometry_and_lower_factors": [
+      26.783661
+    ]
+  },
+  "warm_requested": false,
+  "warnings": [
+    "RustRed 5L: 786 scalar key(s) produced by numerator lowering are outside the recorded shifted-index entry predicates (data v0.1.2); reduction will be attempted, but complete reduction to the known masters is not guaranteed. First common-family powers: [0, 1, 2, 2, 1, 1, 1, 0, 0, 1, -1, 1, 0, 0, 0]"
+  ],
+  "witness_cache_statistics": "RustRedWitnessCacheStatistics { hits: 0, misses: 1, evictions: 0, oversized_skips: 0, invalidations: 0, retained_entries: 0, tracked_atom_bytes: 0 }"
+}

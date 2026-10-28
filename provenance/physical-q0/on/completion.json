@@ -1,0 +1,87 @@
+{
+  "schema": "vakint.physical-usage-accepted-completion.v1",
+  "collector": {
+    "pid": 2511999,
+    "start_ticks": 119866001,
+    "ppid": 2511724,
+    "state": "R",
+    "uid": 1124
+  },
+  "collector_exit_code": 0,
+  "config_sha256": "ea46e616f2c129265a014bc34be17053466802417181e7d5163761adad9b2d28",
+  "process_zero_acceptance": true,
+  "functional_acceptance": true,
+  "native_child_restarted_or_signalled": false,
+  "authoritative_wait_error": null,
+  "acceptance_error": null,
+  "performance_eligible": false,
+  "post_executable": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-release-2d70-20261028/run/artifacts/five_loop_qcd_ladder",
+    "sha256": "ca89f4eb6776c88bb28a1147a6363233638517b1d52cc026a03798cdeb8ed1e1",
+    "bytes": 148891512
+  },
+  "outputs": {
+    "benchmark_sha256": "6069c8c9c8cea2d656b25d0c4c64690977d29d847b02ab09bb55a3ac957fc33b",
+    "result_sha256": "6b31e4501843d313425a97d176c105f0a974837d73df889d5f74c251f704d0f8",
+    "result_bytes": 784045,
+    "guards_sha256": "a266f432acf77ad596282574c8b6485b84eebace226d96ac122535ed308d29c1",
+    "guards_count": 146678,
+    "unknown_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "unknown_count": 0
+  },
+  "terminal_artifacts": {
+    "benchmark.json": {
+      "exists": true,
+      "bytes": 39078,
+      "sha256": "6069c8c9c8cea2d656b25d0c4c64690977d29d847b02ab09bb55a3ac957fc33b"
+    },
+    "result.symbolica": {
+      "exists": true,
+      "bytes": 784045,
+      "sha256": "6b31e4501843d313425a97d176c105f0a974837d73df889d5f74c251f704d0f8"
+    },
+    "nonzero-conditions.symbolica": {
+      "exists": true,
+      "bytes": 122468030,
+      "sha256": "a266f432acf77ad596282574c8b6485b84eebace226d96ac122535ed308d29c1"
+    },
+    "unknown-masters.json": {
+      "exists": true,
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    }
+  },
+  "raw_origins": {
+    "raw-execution.json": {
+      "original_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-on-run1/completion.json",
+      "archived_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-on-projection-run1/raw-execution.json",
+      "sha256": "39e99428504cbf0ac90c0d122522cace6dd7c7555a7f87555105c9f86c473473"
+    },
+    "raw-launch.json": {
+      "original_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-on-run1/launch.json",
+      "archived_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-on-projection-run1/raw-launch.json",
+      "sha256": "a4b463305f5cb82b94e2f06c43f4db5226fd81e278a58552158bfdcbd6abbb13"
+    },
+    "raw-verification.json": {
+      "original_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-on-verify-run1/verification.json",
+      "archived_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-on-projection-run1/raw-verification.json",
+      "sha256": "10b8187c2f97a33e3c9b835ed12daa0c19c14ad28df311eb3e0c7affcff69766"
+    },
+    "raw-full58-proof.json": {
+      "original_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-on-verify-run1/full58-scalar-proof.json",
+      "archived_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-on-projection-run1/raw-full58-proof.json",
+      "sha256": "06d8872b7f65e91746ff30562aab871588d41c3eaf72da40fd1abfab9bc93d64"
+    },
+    "raw-benchmark.json": {
+      "original_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-on-run1/run/benchmark.json",
+      "archived_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-on-projection-run1/raw-benchmark.json",
+      "sha256": "6069c8c9c8cea2d656b25d0c4c64690977d29d847b02ab09bb55a3ac957fc33b"
+    }
+  },
+  "functional_acceptance_authority": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-on-verify-run1/verification.json",
+    "sha256": "10b8187c2f97a33e3c9b835ed12daa0c19c14ad28df311eb3e0c7affcff69766",
+    "bytes": 8369
+  },
+  "no_new_evaluation_or_cache_import": true
+}

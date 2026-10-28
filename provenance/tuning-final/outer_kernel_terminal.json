@@ -1,0 +1,79 @@
+{
+  "schema": "vakint.all5-tuning-kernel-terminal.v1",
+  "utc": "2026-10-28T06:30:12.056521+00:00",
+  "original_controller": {
+    "pid": 37703,
+    "start_ticks": 120217983,
+    "uid": 1124,
+    "argv": [
+      "/shared/codex-1/vakint_rustred/workspace/5l-push/gallery-python/bin/python",
+      "-B",
+      "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/tuning.py",
+      "--plan",
+      "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/tuning-plan.json",
+      "--plan-sha256",
+      "d549c82d326dce329032908a1f5502d0a765d7631dedcfe7b42ee4c6606371c7",
+      "--root-go",
+      "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/root-go-tuning.json",
+      "--root-go-sha256",
+      "f1f9c8520604e4ca444acbaee210538e0274d6201cc818e9fd7055697355d59b"
+    ],
+    "exe": "/home/codex-1/.local/share/uv/python/cpython-3.14.7-linux-x86_64-gnu/bin/python3.14"
+  },
+  "original_PIDFD_terminal": true,
+  "service_after_event": {
+    "LoadState": "not-found",
+    "ActiveState": "inactive",
+    "SubState": "dead",
+    "InvocationID": "",
+    "MainPID": "0",
+    "Result": "success",
+    "ExecMainPID": "0",
+    "ExecMainCode": "0",
+    "ExecMainStatus": "0",
+    "ControlGroup": ""
+  },
+  "controller_completion": {
+    "schema": "vakint.tuning-extra-hop-execution.v1",
+    "status": "RUNNING",
+    "started_utc": "2026-10-28T06:21:19.455637+00:00",
+    "plan_sha256": "d549c82d326dce329032908a1f5502d0a765d7631dedcfe7b42ee4c6606371c7",
+    "root_go_sha256": "f1f9c8520604e4ca444acbaee210538e0274d6201cc818e9fd7055697355d59b",
+    "source_head": "2d70bfe439d84b6888cbd29d2574df9c1ed7aae6",
+    "controller": {
+      "pid": 37703,
+      "start_ticks": 120217983,
+      "ppid": 9584,
+      "state": "R",
+      "uid": 1124
+    },
+    "unit": {
+      "LoadState": "loaded",
+      "ActiveState": "active",
+      "SubState": "running",
+      "InvocationID": "b64caccda98243dcabebdea7de2414dc",
+      "MainPID": "37703",
+      "Result": "success",
+      "ExecMainStartTimestamp": "Wed 2026-10-28 06:21:18 UTC",
+      "ExecMainPID": "37703",
+      "ExecMainStatus": "0",
+      "ControlGroup": "/user.slice/user-1124.slice/user@1124.service/app.slice/vakint-q0-all5-2d70-tuning-20261028.service"
+    },
+    "case_id": "final-v2-parent-32745-late-double-dot-rank1-tuning",
+    "supervisor": null,
+    "worker": null,
+    "signals_sent": [],
+    "errors": [],
+    "supervisor_exit_code": null,
+    "worker_pidfd_terminal_observed": false,
+    "automatic_retry": false,
+    "automatic_successor": false,
+    "scientific_accepted": false,
+    "performance_claim": false,
+    "cache_io_scope": "Supervisor reads cache identity before worker admission; outer resource checks cover that phase"
+  },
+  "controller_completion_sha256": "aa0dc0e3a5aa2170dcb738f86221b41bf4cd6760d0a88d0705772af2cd36b83a",
+  "scientific_acceptance": false,
+  "no_automatic_successor": true,
+  "signals_sent": []
+}

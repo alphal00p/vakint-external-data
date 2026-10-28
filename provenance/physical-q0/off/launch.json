@@ -1,0 +1,64 @@
+{
+  "utc": "2026-10-28T02:36:07.536229+00:00",
+  "controller": {
+    "pid": 2914632,
+    "start_ticks": 118866781,
+    "ppid": 9584,
+    "state": "R",
+    "uid": 1124
+  },
+  "unit": {
+    "LoadState": "loaded",
+    "ActiveState": "active",
+    "SubState": "running",
+    "InvocationID": "d73732f19bbd4cd3b1c77fe0ae13bd90",
+    "MainPID": "2914632",
+    "Result": "success",
+    "ExecMainStartTimestamp": "Wed 2026-10-28 02:36:06 UTC",
+    "ExecMainPID": "2914632",
+    "ExecMainStatus": "0",
+    "ControlGroup": "/user.slice/user-1124.slice/user@1124.service/app.slice/vakint-q0-all5-2d70-off-20261028.service"
+  },
+  "worker": {
+    "pid": 2914872,
+    "start_ticks": 118866852,
+    "ppid": 2914632,
+    "state": "R",
+    "uid": 1124
+  },
+  "collector": {
+    "pid": 2914872,
+    "start_ticks": 118866852,
+    "ppid": 2914632,
+    "state": "R",
+    "uid": 1124
+  },
+  "supervisor": {
+    "pid": 2914632,
+    "start_ticks": 118866781,
+    "ppid": 9584,
+    "state": "R",
+    "uid": 1124
+  },
+  "argv": [
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-release-2d70-20261028/run/artifacts/five_loop_qcd_ladder",
+    "--work-dir",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-off-run1/run",
+    "--artifacts",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/external-q0-running-cache-d438",
+    "--projection",
+    "zero-momentum",
+    "--coefficient-representation",
+    "sparse",
+    "--prepared-input",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/physics/prepared-input-q0-8282f022-v1",
+    "--cache",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/union-copy-run1/native-output/cache"
+  ],
+  "config_sha256": "5122a7b8226edc83308532f67272e9bbe65de13d11964fa814e94427b594aa36",
+  "performance_eligible": false,
+  "automatic_retry": false,
+  "runtime_hard_cap": null,
+  "launch_spec_sha256": "7532f774647bf335701f5edc8f0ebf9c8682b7ac56f8c006d86dd484d0c799b9",
+  "Native_permitted": false
+}

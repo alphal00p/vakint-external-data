@@ -1,0 +1,33 @@
+{
+  "schema": "vakint.physical-memory-floor-registration.v1",
+  "utc": "2026-10-28T06:21:21.240769+00:00",
+  "guard": {
+    "pid": 38600,
+    "start_ticks": 120218200,
+    "ppid": 9584,
+    "state": "R",
+    "uids": [
+      1124,
+      1124,
+      1124,
+      1124
+    ],
+    "cwd": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/tuning-run1/physical-guard",
+    "cgroup": "0::/user.slice/user-1124.slice/user@1124.service/app.slice/vakint-q0-all5-2d70-tuning-memory-20261028.service"
+  },
+  "config_sha256": "1993945d43f45364b9e17b3cc45f58e88a80cc76f71880f0f832d8ce838d1037",
+  "threshold_bytes": 50000000000,
+  "sample_seconds": 1,
+  "slots": {
+    "q0-all5-2d70-tuning": {
+      "state": "ARMED_EXACT_PIDFD",
+      "target": {
+        "pid": 38307,
+        "start_ticks": 120218086,
+        "supervisor_pid": 38033,
+        "supervisor_start_ticks": 120218058
+      }
+    }
+  },
+  "signals_sent": []
+}

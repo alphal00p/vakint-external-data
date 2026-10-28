@@ -1,0 +1,610 @@
+{
+  "actual_lowered_roots": [
+    [
+      1,
+      2,
+      1,
+      1,
+      0,
+      0,
+      2,
+      1,
+      1,
+      0,
+      -1,
+      1,
+      0,
+      0,
+      1
+    ]
+  ],
+  "cache_hit_diagnostic": {
+    "classification_available": false,
+    "classification_requires": "Same-cohort recursive mapper certificate and offline hit join",
+    "diagnostic_only": true,
+    "error": null,
+    "interval_ns": 0,
+    "path": "cache-hit-events.json",
+    "sha256": "975443f3f6cdc569f2b2ae13d05a1445b811f964cf6b872e6f3868a3fb390c6d",
+    "stream_complete": true
+  },
+  "cache_identity_after": {
+    "cache_native_index_identity": {
+      "indexes": {
+        "bindings/6b235c09ae267174886f88a033214526be0dc1a3158fd597f4fb97b8dccd9853/cache.rrindex": {
+          "bytes": 36582873,
+          "sha256": "a1a33ef0861c45726d64ca2c0fadf76c85d3ccad77193b231a89b92c5c05eea2"
+        },
+        "bundle.rrindex": {
+          "bytes": 5254,
+          "sha256": "4f940e610956c96a5f344bf8f0540021ab70908873bbd3ade9c0c4bf9f0f0f6d"
+        }
+      },
+      "layout": "bundle",
+      "schema": "vakint.native-cache-index-identity.v1",
+      "sha256": "2658cd25b88b24c00fc5e3ad7a68b2396fdbe4ab8facea0039873d971b236654"
+    },
+    "cache_sha256": null
+  },
+  "cache_loading_seconds": 0.369653414,
+  "cache_statistics": {
+    "binding": {
+      "artifact_digest": [
+        162,
+        68,
+        185,
+        180,
+        206,
+        143,
+        114,
+        40,
+        199,
+        12,
+        133,
+        132,
+        8,
+        135,
+        208,
+        168,
+        201,
+        62,
+        78,
+        199,
+        29,
+        175,
+        102,
+        4,
+        104,
+        117,
+        83,
+        104,
+        97,
+        251,
+        210,
+        115
+      ],
+      "family_fingerprint": "rustred-integral-family-v2;N27:tide_five_loop_common_basis;L5;2:k1;2:k2;2:k3;2:k4;2:k5;E0;P1;1:d;Q5,0,15;M;RY1,1;I+1;X1;Y1,1;I+1;X0;D15;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I+2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;G0;U15;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;",
+      "layer": "saved-application-route-apply-v1",
+      "physical_arity": 15
+    },
+    "file": null,
+    "native": {
+      "cache_hits": 104373,
+      "cached_coefficient_bytes": 1340608580,
+      "cached_coefficient_terms": 26817824,
+      "cached_integrals": 33725,
+      "coalescing_additions": 1314539,
+      "rule_applications": 4960
+    },
+    "pack": {
+      "chunks": 72635,
+      "directory_owned_bytes": 96820189,
+      "hits": 13918,
+      "manifest_bytes": 36582873,
+      "misses": 17963,
+      "records": 3048399,
+      "referenced_chunk_bytes": 117876774572,
+      "runs": 46255
+    },
+    "persistent": {
+      "apply_hits": 10581,
+      "captured_records": 0,
+      "intermediate_hits": 13918,
+      "lookups": 31881,
+      "misses": 17963,
+      "requested_root_hits": 0,
+      "route_hits": 3337,
+      "skipped_records": 0
+    },
+    "read_backing": true,
+    "running": null
+  },
+  "case_id": "final-v2-parent-32745-late-double-dot-rank1-tuning",
+  "catalogue_closure": {
+    "closed": true,
+    "independent_basis_claim": false,
+    "master_count": 68,
+    "numerical_evaluation_claim": false,
+    "scope": "Final combined retained master identities versus loaded catalogue declarations",
+    "unknown_count": 0,
+    "unknown_file": "unknown-masters.json",
+    "unknown_masters": [],
+    "unknown_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "conventions": {
+    "epsilon_symbol": "vakint::ε",
+    "integral_normalization": "pySecDec",
+    "integral_normalization_expression": "((𝑖)*𝜋^((-2*vakint::{}::ε+4)*1/2))^(-1*vakint::{}::n_loops)",
+    "mu_r_sq_symbol": "vakint::mursq",
+    "use_dot_product_notation": true
+  },
+  "data_loading_seconds": 116.317555765,
+  "declared_common_powers": [
+    0,
+    -1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    1,
+    0,
+    1,
+    0,
+    0,
+    1
+  ],
+  "end_to_end_scope": "supervisor worker spawn through exit, including loading, evaluation and output serialization",
+  "evaluation_seconds": 399.337262501,
+  "external_data": {
+    "load_prepared_caches": false,
+    "loops": [
+      {
+        "cache_available": true,
+        "cache_format": null,
+        "cache_loaded": false,
+        "cache_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/external-q0-running-cache-d438/1L/cache",
+        "cache_source": null,
+        "loop_count": 1,
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/external-q0-running-cache-d438/1L",
+        "source": "local"
+      },
+      {
+        "cache_available": true,
+        "cache_format": null,
+        "cache_loaded": false,
+        "cache_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/external-q0-running-cache-d438/2L/cache",
+        "cache_source": null,
+        "loop_count": 2,
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/external-q0-running-cache-d438/2L",
+        "source": "local"
+      },
+      {
+        "cache_available": true,
+        "cache_format": null,
+        "cache_loaded": false,
+        "cache_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/external-q0-running-cache-d438/3L/cache",
+        "cache_source": null,
+        "loop_count": 3,
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/external-q0-running-cache-d438/3L",
+        "source": "local"
+      },
+      {
+        "cache_available": true,
+        "cache_format": null,
+        "cache_loaded": false,
+        "cache_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/external-q0-running-cache-d438/4L/cache",
+        "cache_source": null,
+        "loop_count": 4,
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/external-q0-running-cache-d438/4L",
+        "source": "local"
+      },
+      {
+        "cache_available": true,
+        "cache_format": "rustred.saved-application-cache-file.v1",
+        "cache_loaded": false,
+        "cache_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/external-q0-running-cache-d438/5L/cache/prepared.rrcache.gz",
+        "cache_source": null,
+        "loop_count": 5,
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/external-q0-running-cache-d438/5L",
+        "source": "local"
+      }
+    ],
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/external-q0-running-cache-d438",
+    "version": "v0.1.2"
+  },
+  "fresh_process": true,
+  "frozen_lowered_roots": [
+    [
+      1,
+      2,
+      1,
+      1,
+      0,
+      0,
+      2,
+      1,
+      1,
+      0,
+      -1,
+      1,
+      0,
+      0,
+      1
+    ]
+  ],
+  "frozen_protected_roots": [
+    [
+      2,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      -1,
+      2,
+      1,
+      0,
+      1
+    ]
+  ],
+  "guards_sha256": "682a63fecd4bc48f2e14bb36f1bc08fc80bbec86fc1203fcf6dcf8d316489413",
+  "ibp_excluding_owner_seconds": 372.929774424,
+  "identity": {
+    "build_git_revision": "2d70bfe439d84b6888cbd29d2574df9c1ed7aae6",
+    "build_profile": "release",
+    "build_rustc": "rustc 1.98.1 (48a229cea 2026-09-01)",
+    "cache_file_options": {
+      "decoded_directory": null,
+      "explicit": false,
+      "max_compressed_bytes": 99614720,
+      "max_decoded_bytes": 1073741824,
+      "max_index_bytes": 18446744073709551615
+    },
+    "cache_hit_diagnostic": true,
+    "cache_hit_diagnostic_scope": {
+      "capability": "vakint.initial-routing-frontier-hit-proof.v1",
+      "interval_ns": 0,
+      "performance_claim_allowed": false,
+      "presentation": false,
+      "requires_offline_recursive_mapper": true
+    },
+    "cache_native_index_identity": {
+      "indexes": {
+        "bindings/6b235c09ae267174886f88a033214526be0dc1a3158fd597f4fb97b8dccd9853/cache.rrindex": {
+          "bytes": 36582873,
+          "sha256": "a1a33ef0861c45726d64ca2c0fadf76c85d3ccad77193b231a89b92c5c05eea2"
+        },
+        "bundle.rrindex": {
+          "bytes": 5254,
+          "sha256": "4f940e610956c96a5f344bf8f0540021ab70908873bbd3ade9c0c4bf9f0f0f6d"
+        }
+      },
+      "layout": "bundle",
+      "schema": "vakint.native-cache-index-identity.v1",
+      "sha256": "2658cd25b88b24c00fc5e3ad7a68b2396fdbe4ab8facea0039873d971b236654"
+    },
+    "cache_sha256": null,
+    "cached_variant_persistent_loops": [
+      5
+    ],
+    "collector_helper_sources_sha256": {
+      "crates/vakint/examples/build_cache/cache_hit_capture.rs": "15f207139ec5076b10553452e97838028d9df199c626a0acacab9bd7ff8b40d6",
+      "crates/vakint/examples/build_cache/cache_hit_diagnostic.rs": "b8fafd26aec56041a7ff27341bcdadd1064519da2db590f3274ba105c71f1566",
+      "crates/vakint/examples/build_cache/cache_identity.rs": "e0a03ddb74d5e8814d1732269a7005b91d075561363a4e12f5eefbb7e8d5669f"
+    },
+    "compiled_cache_file_args_sha256": "ad4a7cc12994a955b05f76114b239cba8994d8bb15a5ed1dda99a15e69e0b8ed",
+    "compiled_cargo_lock_sha256": "015da1c446c4aa538c36c17eb64da46d7d0a612cf9989926e7f53d496f77e8ea",
+    "compiled_driver_sha256": "a27007e87a590ec25443e422a339563decce58b11d5f30aee51fba44e0235d6f",
+    "compiled_owner_proof_sha256": "aecb6faa3ec3b4bcc6e09b7f0d71cd6a87db7358f4656acba9ab56a1cafa4233",
+    "compiled_workload_schema_sha256": "32bc59bf0008c751315699a3696916343f083e17618a21ea622074e34e4a3539",
+    "cpu_affinity": "112-113",
+    "data_manifest_sha256": "794c0e4b44a1c6be1d78f8ebdbca188473678823ea1f3b821f70b63b2a6dd5a7",
+    "executable_sha256": "dc11710dab03050c3ceb259c431ba717f69810412b7ef17ba9f7ae9e91f3c9ea",
+    "load_prepared_caches": false,
+    "max_case_seconds": null,
+    "only_case": null,
+    "owner_proof": {
+      "authority": "qualified_lowering",
+      "parsed_input_sha256_by_case": {
+        "final-v2-parent-32745-late-double-dot-rank1-tuning": "f78de631740029bf214dab52df855f9fe8e3aeae3d91622fc11fbddd71f90d75",
+        "final-v3-parent-30527-double-dot-rank1": "02412e6794ef78d18e7ebb846ba6bd78758e59a52cf160adfcea9eec89007817",
+        "parent-30527-dot_b": "e58f52a9fe239e3bd651a411a84cc6ddb18cd665bf6701de9fe85e85d21e94df",
+        "parent-30699-dot_a": "2a2782b3f6d5c1eba68bfb2b39e5e34b05fe22860c5348b45f5ac0818841dd75",
+        "parent-30699-dot_b": "d8e68a79a34399d3e539b2ff456558ef182a18938d5b9f3e979cb67078c6c5f0",
+        "parent-30699-rank1": "eaec18d88a091f0f891ad3a247bf498e8067bd82603707b644c5e990d3ed6dba",
+        "parent-31740-dot_a": "b577bf58504d40f444b41f930434587465dd63e12ea0170a89dd04708e4d20ed",
+        "parent-32745-dot_a": "9ccca9d9ddb3482fe59f9ee33623546ca8ae60806564cf43c5f62859b465f506",
+        "reserve-v1-parent-30527-dot_c": "78b4e549ea3281ae38222461fa1f10b558f6486aa2870d560e0699277c1c9ba0",
+        "reserve-v1-parent-30699-dot_c": "bffba820c64539a6cfa5ac7fe5d4c7257d692fb41eaaa5b74b5790ee57a4a883",
+        "reserve-v1-parent-31740-dot_c": "6abad3250dbfbb80ef89bd8bd48f7cd7adc214e63f248f8d6c0070fa9a961d42",
+        "reserve-v1-parent-32745-dot_c": "d6db25f5c0ffa5e5ebf00b290ba12613c81de7168c7e9d086e2890510f92a655",
+        "reserve-v1-parent-32745-dot_d": "aeb5cf9ef2b565699d6e3d2c0f776cb23c8239bb03679ac15d64cf916cb8afb0"
+      },
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/final-usage-plan/workload-inputs/frozen-public-suites.lowering-proof.json",
+      "qualification_origin": {
+        "application_sha256": "976d574c4ad8b4021ac7a1914c624095a77f5975b98e243c7a20a9396a86ff03",
+        "data_checkout_revision": "d4384149b5076de84b3f3fda761585dff1776532",
+        "data_manifest_sha256": "794c0e4b44a1c6be1d78f8ebdbca188473678823ea1f3b821f70b63b2a6dd5a7",
+        "data_version": "v0.1.2",
+        "family_sha256": "44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b",
+        "freeze_sha256": "d8952d9b3f4318bbe50bfaff2011942bd7124d21fc0f98b042bdf262752ad75c",
+        "loop_manifest_sha256": "81ece536cd54781b98d039325a7d62a884ec958aca27c1f4d5adca734a0f4ccb",
+        "postflight_sha256": "b03fe932016191d12ced88f0726cded36c7510b870250850cf988777ded59fcf",
+        "qualification_sha256": "bd93bb9dfea93dfdee4aed27275eadc841431946f4c1e92ac09f474fd1c69ee2",
+        "source_identity": {
+          "base_main_revision": "e90e78ae9b05c2813b462157a83073b0740419f4",
+          "diagnostic_source_sha256": "7d74babaacbaef775ea1e7b0ecff425c3bcd5471d814e35c748afc7e9fccf71f",
+          "executable_sha256": "fc68aaa6d19f8a8b1ac2d7d83a1b58669e69db8dfcb0671c8ed9a004d2cb8c11",
+          "kernel_revision": "9cd57678d8817ec33c05cacba4925162f1c86b0b",
+          "native_revision": "b209adb1e774242bcbe0417fed223317566561bd",
+          "native_source_snapshot_sha256": "36e7e7796216a707e5db4e3da7981893fc67b77f87ca13eb56f8e5bd1344a0f5",
+          "private_source_snapshot_sha256": "75bf3add8740ce1e01584802ba887a30247340f99e14cd61751e74f01918820f",
+          "profile": "ci-optim",
+          "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)"
+        }
+      },
+      "semantic_binding": {
+        "artifact_digest": [
+          162,
+          68,
+          185,
+          180,
+          206,
+          143,
+          114,
+          40,
+          199,
+          12,
+          133,
+          132,
+          8,
+          135,
+          208,
+          168,
+          201,
+          62,
+          78,
+          199,
+          29,
+          175,
+          102,
+          4,
+          104,
+          117,
+          83,
+          104,
+          97,
+          251,
+          210,
+          115
+        ],
+        "family_fingerprint": "rustred-integral-family-v2;N27:tide_five_loop_common_basis;L5;2:k1;2:k2;2:k3;2:k4;2:k5;E0;P1;1:d;Q5,0,15;M;RY1,1;I+1;X1;Y1,1;I+1;X0;D15;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I+2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;G0;U15;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;",
+        "layer": "saved-application-route-apply-v1",
+        "physical_arity": 15
+      },
+      "sha256": "a5db9aa5a8eb24b99e316740d66a64ea7d197e5cd484132947c3c364449c88c5"
+    },
+    "provisional": false,
+    "rayon_num_threads": "1",
+    "repetitions": 1,
+    "source_census_sha256": "dd21ebafa719d460141a83c8bd166a00dd485d9aa89397d353cc22d07afe1925",
+    "suite": "tuning",
+    "workload_sha256": "cc0a10d32bbbdc29fd02ab09348ee2b2e5c21471c280222cbffb1b1ad75dd76b"
+  },
+  "input_sha256": "f78de631740029bf214dab52df855f9fe8e3aeae3d91622fc11fbddd71f90d75",
+  "lowering_receipts": [
+    "phase=scalar_lowered target=[1, 2, 1, 1, 0, 0, 2, 1, 1, 0, 0, 1, 0, 0, 1] lowered_count=1 lowered_keys_prefix=[[1, 2, 1, 1, 0, 0, 2, 1, 1, 0, -1, 1, 0, 0, 1]]"
+  ],
+  "native_key_authentication": "verified-lowered-inputs-with-frozen-owner-protection",
+  "native_keys_authenticated": true,
+  "native_timing_scope": {
+    "ibp_excluding_owner_seconds": "Saved application interval minus actual deferred-owner preparation; entry transport, exact combination and terminal substitution remain included",
+    "pure_ibp_seconds": null,
+    "saved_application_including_owner_seconds": "Native entry transport, lazy owner preparation, DAG reduction, exact sum, and terminal substitution",
+    "separate_native_phase_durations_available": false,
+    "terminal_substitution_seconds": null
+  },
+  "owner_preparation_during_load_seconds": 0.0,
+  "owner_preparation_policy": "deferred on demand; actual stat delta, no common prewarm",
+  "owner_preparation_seconds": 11.529092576,
+  "owner_proof": {
+    "authority": "qualified_lowering",
+    "parsed_input_sha256_by_case": {
+      "final-v2-parent-32745-late-double-dot-rank1-tuning": "f78de631740029bf214dab52df855f9fe8e3aeae3d91622fc11fbddd71f90d75",
+      "final-v3-parent-30527-double-dot-rank1": "02412e6794ef78d18e7ebb846ba6bd78758e59a52cf160adfcea9eec89007817",
+      "parent-30527-dot_b": "e58f52a9fe239e3bd651a411a84cc6ddb18cd665bf6701de9fe85e85d21e94df",
+      "parent-30699-dot_a": "2a2782b3f6d5c1eba68bfb2b39e5e34b05fe22860c5348b45f5ac0818841dd75",
+      "parent-30699-dot_b": "d8e68a79a34399d3e539b2ff456558ef182a18938d5b9f3e979cb67078c6c5f0",
+      "parent-30699-rank1": "eaec18d88a091f0f891ad3a247bf498e8067bd82603707b644c5e990d3ed6dba",
+      "parent-31740-dot_a": "b577bf58504d40f444b41f930434587465dd63e12ea0170a89dd04708e4d20ed",
+      "parent-32745-dot_a": "9ccca9d9ddb3482fe59f9ee33623546ca8ae60806564cf43c5f62859b465f506",
+      "reserve-v1-parent-30527-dot_c": "78b4e549ea3281ae38222461fa1f10b558f6486aa2870d560e0699277c1c9ba0",
+      "reserve-v1-parent-30699-dot_c": "bffba820c64539a6cfa5ac7fe5d4c7257d692fb41eaaa5b74b5790ee57a4a883",
+      "reserve-v1-parent-31740-dot_c": "6abad3250dbfbb80ef89bd8bd48f7cd7adc214e63f248f8d6c0070fa9a961d42",
+      "reserve-v1-parent-32745-dot_c": "d6db25f5c0ffa5e5ebf00b290ba12613c81de7168c7e9d086e2890510f92a655",
+      "reserve-v1-parent-32745-dot_d": "aeb5cf9ef2b565699d6e3d2c0f776cb23c8239bb03679ac15d64cf916cb8afb0"
+    },
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/final-usage-plan/workload-inputs/frozen-public-suites.lowering-proof.json",
+    "qualification_origin": {
+      "application_sha256": "976d574c4ad8b4021ac7a1914c624095a77f5975b98e243c7a20a9396a86ff03",
+      "data_checkout_revision": "d4384149b5076de84b3f3fda761585dff1776532",
+      "data_manifest_sha256": "794c0e4b44a1c6be1d78f8ebdbca188473678823ea1f3b821f70b63b2a6dd5a7",
+      "data_version": "v0.1.2",
+      "family_sha256": "44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b",
+      "freeze_sha256": "d8952d9b3f4318bbe50bfaff2011942bd7124d21fc0f98b042bdf262752ad75c",
+      "loop_manifest_sha256": "81ece536cd54781b98d039325a7d62a884ec958aca27c1f4d5adca734a0f4ccb",
+      "postflight_sha256": "b03fe932016191d12ced88f0726cded36c7510b870250850cf988777ded59fcf",
+      "qualification_sha256": "bd93bb9dfea93dfdee4aed27275eadc841431946f4c1e92ac09f474fd1c69ee2",
+      "source_identity": {
+        "base_main_revision": "e90e78ae9b05c2813b462157a83073b0740419f4",
+        "diagnostic_source_sha256": "7d74babaacbaef775ea1e7b0ecff425c3bcd5471d814e35c748afc7e9fccf71f",
+        "executable_sha256": "fc68aaa6d19f8a8b1ac2d7d83a1b58669e69db8dfcb0671c8ed9a004d2cb8c11",
+        "kernel_revision": "9cd57678d8817ec33c05cacba4925162f1c86b0b",
+        "native_revision": "b209adb1e774242bcbe0417fed223317566561bd",
+        "native_source_snapshot_sha256": "36e7e7796216a707e5db4e3da7981893fc67b77f87ca13eb56f8e5bd1344a0f5",
+        "private_source_snapshot_sha256": "75bf3add8740ce1e01584802ba887a30247340f99e14cd61751e74f01918820f",
+        "profile": "ci-optim",
+        "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)"
+      }
+    },
+    "semantic_binding": {
+      "artifact_digest": [
+        162,
+        68,
+        185,
+        180,
+        206,
+        143,
+        114,
+        40,
+        199,
+        12,
+        133,
+        132,
+        8,
+        135,
+        208,
+        168,
+        201,
+        62,
+        78,
+        199,
+        29,
+        175,
+        102,
+        4,
+        104,
+        117,
+        83,
+        104,
+        97,
+        251,
+        210,
+        115
+      ],
+      "family_fingerprint": "rustred-integral-family-v2;N27:tide_five_loop_common_basis;L5;2:k1;2:k2;2:k3;2:k4;2:k5;E0;P1;1:d;Q5,0,15;M;RY1,1;I+1;X1;Y1,1;I+1;X0;D15;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I+2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;G0;U15;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;",
+      "layer": "saved-application-route-apply-v1",
+      "physical_arity": 15
+    },
+    "sha256": "a5db9aa5a8eb24b99e316740d66a64ea7d197e5cd484132947c3c364449c88c5"
+  },
+  "owner_proof_validation_seconds": 0.055619474,
+  "owner_root_correlations": [],
+  "performance_claim_allowed": false,
+  "persistent_cache_attachments_before": {
+    "1": false,
+    "2": false,
+    "3": false,
+    "4": false,
+    "5": false
+  },
+  "persistent_cache_attachments_during_evaluation": {
+    "1": false,
+    "2": false,
+    "3": false,
+    "4": false,
+    "5": true
+  },
+  "persistent_cache_policy": "manual-five-loop-only",
+  "provisional": false,
+  "rationale": "Proposed before any new evaluation/timing: parent 32745, unchanged authenticated nine-edge forest-pinch graph/routing, unit mass; dots at common zero-based slots [7, 8], numerator slot 1. Nominal D=10 and R=1 do not certify recorded coverage; full current public-lowering/owner/source exclusion is required.",
+  "raw_reduction_settings": {
+    "coefficient_representation": "sparse",
+    "dimension": "4-2*epsilon",
+    "master_mode": "retain",
+    "normalization": "FMFTandMATAD",
+    "unit_mass_squared": true
+  },
+  "raw_reduction_settings_source": {
+    "data_version": "v0.1.2",
+    "loop_count": 5,
+    "loop_manifest_sha256": "81ece536cd54781b98d039325a7d62a884ec958aca27c1f4d5adca734a0f4ccb",
+    "release_manifest_sha256": "794c0e4b44a1c6be1d78f8ebdbca188473678823ea1f3b821f70b63b2a6dd5a7"
+  },
+  "retained_result_available": true,
+  "sample": 0,
+  "saved_application_including_owner_seconds": 384.458867,
+  "schema": "vakint.five-loop-cache-measurement.v1",
+  "stages": {
+    "caller_result_merge": [
+      0.512836
+    ],
+    "coverage_mass_batching": [
+      0.000113
+    ],
+    "detailed_evaluation_total": [
+      395.788827
+    ],
+    "detailed_result_packing": [
+      0.005401
+    ],
+    "frontend_admitted_witness_search": [
+      0.216227
+    ],
+    "frontend_canonicalization": [
+      2.195808
+    ],
+    "frontend_setup": [
+      0.063916
+    ],
+    "frontend_tensor_prepass": [
+      0.003643
+    ],
+    "lowering_guard_materialization": [
+      0.000307
+    ],
+    "numerator_replacement": [
+      0.000377
+    ],
+    "parent_transport_and_scalar_lowering": [
+      0.001564
+    ],
+    "public_result_packing": [
+      0.006345
+    ],
+    "retained_batch_cleanup": [
+      0.104621
+    ],
+    "retained_batch_mass_assembly": [
+      0.000137
+    ],
+    "retained_catalogue_classification": [
+      0.000449
+    ],
+    "retained_catalogue_exact_combination": [
+      0.546309
+    ],
+    "retained_coefficient_materialization": [
+      0.001545
+    ],
+    "retained_finalization_total": [
+      0.54718
+    ],
+    "retained_guard_materialization": [
+      4.178913
+    ],
+    "retained_normalization_and_notation": [
+      0.010636
+    ],
+    "saved_rule_application": [
+      384.458867
+    ],
+    "scalar_input_split": [
+      0.000558
+    ],
+    "terminal_geometry_and_lower_factors": [
+      7.025758
+    ]
+  },
+  "success": true,
+  "value_sha256": "bc25a45f2c6cfc32803a952b4ef5e8c734cfe289aa6d5175b332764cdf8ab9ec",
+  "variant": "cached",
+  "warnings": []
+}

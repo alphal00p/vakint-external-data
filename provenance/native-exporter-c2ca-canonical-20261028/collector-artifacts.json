@@ -1,0 +1,323 @@
+{
+  "schema": "vakint.native-selected-cache-producer-artifact.v1",
+  "state": "PASS_BUILD_PARSER_CLIPPY_BUILDINFO_NO_5L_ACTIVATION",
+  "state_scope": "NEW canonical projection of successful component gates plus separately accepted inventory recovery. Original failed bookkeeping is preserved, not changed into controller PASS.",
+  "compiled_cohort": {
+    "collector_source_sha256": "84c4c016855af710c30bed62530d37e3ab27a536f6d55bdb2a3db560d32bf7b1",
+    "kernel_revision": "9cd57678d8817ec33c05cacba4925162f1c86b0b",
+    "main_revision": "c2ca815cc906bdeaf7cb8c63b637e81a80fba917",
+    "main_source_snapshot_sha256": "13ee81b6525b26406c111713d4deb3463ab1abe81ba4ff65802bde7f31b364fe",
+    "measurement_executable_sha256": "4843e29e64b319585a4437c0bbd21e9c2212626242e8300a78808d9351763539",
+    "native_revision": "c2ca815cc906bdeaf7cb8c63b637e81a80fba917",
+    "native_source_snapshot_sha256": "c487c1a5162869ea68a7a62e5ac226a4277a41982478652e181a1bd1253e4bdb",
+    "profile": "debug",
+    "role": "native-selected-cache-producer",
+    "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)\nbinary: rustc\ncommit-hash: 48a229ceaefd4985c50990b14116b6d856af0985\ncommit-date: 2026-09-01\nhost: x86_64-unknown-linux-gnu\nrelease: 1.98.1\nLLVM version: 22.1.8",
+    "source_identity": {
+      "files": {
+        "Cargo.lock": "f28aadbf915abf2c57549ed91d88a1aecc3ca8e235ead6894a8945910c3ecac5",
+        "Cargo.toml": "98f6ebe93245988c09aaa25ef1e2b231cd83a37d600037b21d41df06dc65286d",
+        "build.rs": "bdb1e13d7d57635aaf10b55cd2009ab99f9b37bd77a4a875bad0af3263b18f99",
+        "src/index_identity.rs": "9c0bcb8aab60ccde38c7a406d719e26632bfb164829d1ef5e6c5a9ab23ec432e",
+        "src/main.rs": "84c4c016855af710c30bed62530d37e3ab27a536f6d55bdb2a3db560d32bf7b1",
+        "src/proof_reference.rs": "e8ce76485fac54f11fba173cfa4405fe08c8b9750758ce493c99251f22d2adfd",
+        "src/resource_guard_admission.rs": "bb3223d27584b42069d3813ebdcaefa6598a0935ca4531714a50248b334870cb",
+        "src/selection.rs": "bed2e34853e6654a6c1903a3ec59db81d695b1bd1d1f0190ab3d68ce4ce3de1b",
+        "src/union.rs": "1808b73180a0061044d3741a7fa3869836e15b21b931db7f4815bf3d3a36a5e4"
+      },
+      "native_identity": {
+        "clean": true,
+        "codec_state_format": 6,
+        "kernel_revision": "9cd57678d8817ec33c05cacba4925162f1c86b0b",
+        "kernel_tree": "096ad34ec305ccb1c15ea13c716b7bff35fd4737",
+        "revision": "c2ca815cc906bdeaf7cb8c63b637e81a80fba917",
+        "schema": "native.git-source-tree-identity.v1",
+        "source_repository": "https://github.com/alphal00p/rustred",
+        "tree": "125ef69c802ddb0023041927b1d1c26cca1b67dd"
+      },
+      "role": "native-selected-cache-producer",
+      "schema": "native.private-layered-helper-source-identity.v1",
+      "source_layer": "private standalone v4-census successor on public Nativec2ca with actualv1/v2profile schema metadata, source parity and unchanged ordered opaque union; exact reviewed task-admission module; no linked Vakint Main",
+      "source_repository": "https://github.com/alphal00p/rustred"
+    },
+    "source_layer": "private standalone v4-census helper with ordered opaque union and exact reviewed task-admission module; not linked Vakint Main",
+    "source_repository": "https://github.com/alphal00p/rustred",
+    "stamps": {
+      "VAKINT_CACHE_BUILD_GIT_REVISION": "c2ca815cc906bdeaf7cb8c63b637e81a80fba917",
+      "VAKINT_CACHE_BUILD_MAIN_SOURCE_SNAPSHOT_SHA256": "13ee81b6525b26406c111713d4deb3463ab1abe81ba4ff65802bde7f31b364fe",
+      "VAKINT_CACHE_BUILD_NATIVE_SOURCE_SNAPSHOT_SHA256": "c487c1a5162869ea68a7a62e5ac226a4277a41982478652e181a1bd1253e4bdb",
+      "VAKINT_CACHE_BUILD_PROFILE": "debug",
+      "VAKINT_CACHE_BUILD_RUSTC": "rustc 1.98.1 (48a229cea 2026-09-01)\nbinary: rustc\ncommit-hash: 48a229ceaefd4985c50990b14116b6d856af0985\ncommit-date: 2026-09-01\nhost: x86_64-unknown-linux-gnu\nrelease: 1.98.1\nLLVM version: 22.1.8",
+      "VAKINT_CACHE_BUILD_RUSTRED_REVISION": "c2ca815cc906bdeaf7cb8c63b637e81a80fba917",
+      "VAKINT_CACHE_BUILD_SYMBOLICA_REVISION": "9cd57678d8817ec33c05cacba4925162f1c86b0b"
+    }
+  },
+  "stamps": {
+    "VAKINT_CACHE_BUILD_GIT_REVISION": "c2ca815cc906bdeaf7cb8c63b637e81a80fba917",
+    "VAKINT_CACHE_BUILD_MAIN_SOURCE_SNAPSHOT_SHA256": "13ee81b6525b26406c111713d4deb3463ab1abe81ba4ff65802bde7f31b364fe",
+    "VAKINT_CACHE_BUILD_NATIVE_SOURCE_SNAPSHOT_SHA256": "c487c1a5162869ea68a7a62e5ac226a4277a41982478652e181a1bd1253e4bdb",
+    "VAKINT_CACHE_BUILD_PROFILE": "debug",
+    "VAKINT_CACHE_BUILD_RUSTC": "rustc 1.98.1 (48a229cea 2026-09-01)\nbinary: rustc\ncommit-hash: 48a229ceaefd4985c50990b14116b6d856af0985\ncommit-date: 2026-09-01\nhost: x86_64-unknown-linux-gnu\nrelease: 1.98.1\nLLVM version: 22.1.8",
+    "VAKINT_CACHE_BUILD_RUSTRED_REVISION": "c2ca815cc906bdeaf7cb8c63b637e81a80fba917",
+    "VAKINT_CACHE_BUILD_SYMBOLICA_REVISION": "9cd57678d8817ec33c05cacba4925162f1c86b0b"
+  },
+  "binary": {
+    "cargo_path": "/shared/codex-1/vakint_rustred/workspace/build/native-producer-c2ca-v2-ci-optim/ci-optim/native-selected-cache-producer",
+    "sha256": "4843e29e64b319585a4437c0bbd21e9c2212626242e8300a78808d9351763539",
+    "bytes": 39986184,
+    "ELF": true,
+    "path_semantics": "Actual unchanged compiled target ELF; no immutable-copy/fatLTO/release claim."
+  },
+  "gates": {
+    "build": {
+      "exit_code": 0,
+      "original_name": "build-producer",
+      "argv": [
+        "cargo",
+        "build",
+        "--locked",
+        "--offline",
+        "--profile",
+        "ci-optim",
+        "--manifest-path",
+        "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-c2ca-source/Cargo.toml",
+        "--bin",
+        "native-selected-cache-producer",
+        "--message-format=json-render-diagnostics"
+      ],
+      "original_controller": {
+        "path": "provenance/native-exporter-c2ca-canonical-20261028/evidence/original-controller-result.json",
+        "bytes": 10872,
+        "sha256": "1f5085b6d77a8dc27e62f683e15175c8df3cfcc85a9b03a88f338538406f0bd9"
+      },
+      "log": {
+        "path": "provenance/native-exporter-c2ca-canonical-20261028/evidence/build-producer.log",
+        "bytes": 4621,
+        "sha256": "437b8f466a3973e9e54977bfc211ad4cbd6f926d94b30cb619c7222f667136b1"
+      }
+    },
+    "parser-tests": {
+      "exit_code": 0,
+      "original_name": "parser-tests",
+      "argv": [
+        "cargo",
+        "test",
+        "--locked",
+        "--offline",
+        "--profile",
+        "ci-optim",
+        "--manifest-path",
+        "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-c2ca-source/Cargo.toml",
+        "--bin",
+        "native-selected-cache-producer",
+        "--",
+        "--test-threads=1"
+      ],
+      "original_controller": {
+        "path": "provenance/native-exporter-c2ca-canonical-20261028/evidence/original-controller-result.json",
+        "bytes": 10872,
+        "sha256": "1f5085b6d77a8dc27e62f683e15175c8df3cfcc85a9b03a88f338538406f0bd9"
+      },
+      "log": {
+        "path": "provenance/native-exporter-c2ca-canonical-20261028/evidence/parser-tests.log",
+        "bytes": 4502,
+        "sha256": "6ec1cf2b173f2fda41d71c4babed4c8caa47669e7ea1d855c98904c2afb8f1a7"
+      }
+    },
+    "clippy": {
+      "exit_code": 0,
+      "original_name": "clippy",
+      "argv": [
+        "cargo",
+        "clippy",
+        "--locked",
+        "--offline",
+        "--profile",
+        "ci-optim",
+        "--manifest-path",
+        "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-c2ca-source/Cargo.toml",
+        "--bin",
+        "native-selected-cache-producer",
+        "--all-targets",
+        "--no-deps",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "original_controller": {
+        "path": "provenance/native-exporter-c2ca-canonical-20261028/evidence/original-controller-result.json",
+        "bytes": 10872,
+        "sha256": "1f5085b6d77a8dc27e62f683e15175c8df3cfcc85a9b03a88f338538406f0bd9"
+      },
+      "log": {
+        "path": "provenance/native-exporter-c2ca-canonical-20261028/evidence/clippy.log",
+        "bytes": 4233,
+        "sha256": "99da9845ceb2a469a8f97182e3808cd6deff0adff70feaa0a08461faa84f2d16"
+      }
+    },
+    "build-info": {
+      "exit_code": 0,
+      "original_name": "build-info",
+      "argv": [
+        "/shared/codex-1/vakint_rustred/workspace/build/native-producer-c2ca-v2-ci-optim/ci-optim/native-selected-cache-producer",
+        "build-info"
+      ],
+      "original_controller": {
+        "path": "provenance/native-exporter-c2ca-canonical-20261028/evidence/original-controller-result.json",
+        "bytes": 10872,
+        "sha256": "1f5085b6d77a8dc27e62f683e15175c8df3cfcc85a9b03a88f338538406f0bd9"
+      },
+      "log": {
+        "path": "provenance/native-exporter-c2ca-canonical-20261028/evidence/build-info.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  },
+  "source_freeze": {
+    "path": "provenance/native-exporter-c2ca-canonical-20261028/source-freeze.json",
+    "bytes": 2463,
+    "sha256": "5ecd1dba2eb78e442576b1fef0273ef19bd9dae800607234db03d4fa69048fdf"
+  },
+  "source_unchanged": true,
+  "native_and_kernel_clean": true,
+  "native_and_kernel_clean_scope": {
+    "meaning": "Identity worktrees were fully tracked/untracked clean at actual build-script and accepted supplement checks. Actual compiled regular inputs were compared with those pinned counterparts; this is not a new claim about all current Cargo-cache files.",
+    "build_script": {
+      "path": "provenance/native-exporter-c2ca-canonical-20261028/source/build.rs",
+      "bytes": 6573,
+      "sha256": "bdb1e13d7d57635aaf10b55cd2009ab99f9b37bd77a4a875bad0af3263b18f99"
+    },
+    "build_script_guard_lines": "37-68",
+    "supplement_peer": {
+      "path": "provenance/native-exporter-c2ca-canonical-20261028/evidence/supplement-peer-review.json",
+      "bytes": 22626,
+      "sha256": "77594bd9b443ed56d90ad3d31095a306f610fa9bc2c75c3507fa1a6a6d890e3c"
+    },
+    "native_identity": {
+      "clean": true,
+      "codec_state_format": 6,
+      "kernel_revision": "9cd57678d8817ec33c05cacba4925162f1c86b0b",
+      "kernel_tree": "096ad34ec305ccb1c15ea13c716b7bff35fd4737",
+      "revision": "c2ca815cc906bdeaf7cb8c63b637e81a80fba917",
+      "schema": "native.git-source-tree-identity.v1",
+      "source_repository": "https://github.com/alphal00p/rustred",
+      "tree": "125ef69c802ddb0023041927b1d1c26cca1b67dd"
+    }
+  },
+  "preserved_history": {
+    "original_artifact": {
+      "path": "provenance/native-exporter-c2ca-canonical-20261028/evidence/original-collector-artifacts.json",
+      "bytes": 10300,
+      "sha256": "57e9bd29a0a521771a95c6cf9d033d1ee481fb2c633e857ff915b2b0adffa759"
+    },
+    "original_artifact_state": "PASS_ORIGINAL_BUILD_PARSER_CLIPPY_BUILDINFO_PLUS_SEPARATE_METADATA_SUPPLEMENT",
+    "original_controller_status": "FAILED_PRESERVED_NO_CACHE_RUNTIME",
+    "original_controller_pass": false,
+    "inventory_recovery": {
+      "path": "provenance/native-exporter-c2ca-canonical-20261028/evidence/supplement-result.json",
+      "bytes": 2645,
+      "sha256": "7620143493897de387589ccf4b88bd92442f5377ef92c738374ab9cd385da50e"
+    },
+    "inventory_recovery_peer": {
+      "path": "provenance/native-exporter-c2ca-canonical-20261028/evidence/supplement-peer-review.json",
+      "bytes": 22626,
+      "sha256": "77594bd9b443ed56d90ad3d31095a306f610fa9bc2c75c3507fa1a6a6d890e3c"
+    },
+    "large_inventory_retained_at_origin_not_rehashed_or_copied": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/inventory-recovery/inventory-run1/supplemental-input-inventory.json",
+      "bytes": 7545881,
+      "sha256": "a8360902da3f5265d9907fe49c96175de468d3e229fd0875debe9daa2d4b953e"
+    }
+  },
+  "actual_profile": {
+    "requested": "ci-optim",
+    "Cargo_PROFILE_environment": "debug",
+    "compiler_artifact": {
+      "opt_level": "2",
+      "debuginfo": 0,
+      "debug_assertions": true,
+      "overflow_checks": true,
+      "test": false
+    }
+  },
+  "evidence": {
+    "original-collector-artifacts.json": {
+      "path": "provenance/native-exporter-c2ca-canonical-20261028/evidence/original-collector-artifacts.json",
+      "bytes": 10300,
+      "sha256": "57e9bd29a0a521771a95c6cf9d033d1ee481fb2c633e857ff915b2b0adffa759"
+    },
+    "original-controller-result.json": {
+      "path": "provenance/native-exporter-c2ca-canonical-20261028/evidence/original-controller-result.json",
+      "bytes": 10872,
+      "sha256": "1f5085b6d77a8dc27e62f683e15175c8df3cfcc85a9b03a88f338538406f0bd9"
+    },
+    "build-info.json": {
+      "path": "provenance/native-exporter-c2ca-canonical-20261028/evidence/build-info.json",
+      "bytes": 3656,
+      "sha256": "a6e2ef7b1b82004b90daf95da548360b266762afc8a0b898dd836391e7a4b362"
+    },
+    "primary-artifact.json": {
+      "path": "provenance/native-exporter-c2ca-canonical-20261028/evidence/primary-artifact.json",
+      "bytes": 782,
+      "sha256": "b816b83714db90ca9c8ec4716952dda73fea2d10d54e83e0dbcd38ce8bc4c013"
+    },
+    "supplement-result.json": {
+      "path": "provenance/native-exporter-c2ca-canonical-20261028/evidence/supplement-result.json",
+      "bytes": 2645,
+      "sha256": "7620143493897de387589ccf4b88bd92442f5377ef92c738374ab9cd385da50e"
+    },
+    "supplement-peer-review.json": {
+      "path": "provenance/native-exporter-c2ca-canonical-20261028/evidence/supplement-peer-review.json",
+      "bytes": 22626,
+      "sha256": "77594bd9b443ed56d90ad3d31095a306f610fa9bc2c75c3507fa1a6a6d890e3c"
+    },
+    "source-origin.json": {
+      "path": "provenance/native-exporter-c2ca-canonical-20261028/evidence/source-origin.json",
+      "bytes": 7337,
+      "sha256": "f701da736a0d06315f5d9db9a53dfd54625d6ee8f5161bf5ca65ed62e5cf7176"
+    },
+    "build-controller.py": {
+      "path": "provenance/native-exporter-c2ca-canonical-20261028/evidence/build-controller.py",
+      "bytes": 22214,
+      "sha256": "2565d3ea4a156fd3234ac75f4c5ae3bed498bb8a9ecb92f1304265d8f232c583"
+    },
+    "copy-readonly-c2ca-donor.log": {
+      "path": "provenance/native-exporter-c2ca-canonical-20261028/evidence/copy-readonly-c2ca-donor.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "seed-authentic03-lock.log": {
+      "path": "provenance/native-exporter-c2ca-canonical-20261028/evidence/seed-authentic03-lock.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ordinary-private-resolver.log": {
+      "path": "provenance/native-exporter-c2ca-canonical-20261028/evidence/ordinary-private-resolver.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "build-producer.log": {
+      "path": "provenance/native-exporter-c2ca-canonical-20261028/evidence/build-producer.log",
+      "bytes": 4621,
+      "sha256": "437b8f466a3973e9e54977bfc211ad4cbd6f926d94b30cb619c7222f667136b1"
+    },
+    "parser-tests.log": {
+      "path": "provenance/native-exporter-c2ca-canonical-20261028/evidence/parser-tests.log",
+      "bytes": 4502,
+      "sha256": "6ec1cf2b173f2fda41d71c4babed4c8caa47669e7ea1d855c98904c2afb8f1a7"
+    },
+    "clippy.log": {
+      "path": "provenance/native-exporter-c2ca-canonical-20261028/evidence/clippy.log",
+      "bytes": 4233,
+      "sha256": "99da9845ceb2a469a8f97182e3808cd6deff0adff70feaa0a08461faa84f2d16"
+    },
+    "build-info.log": {
+      "path": "provenance/native-exporter-c2ca-canonical-20261028/evidence/build-info.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "projection_operations": "Small metadata/source reads and create-only archive writes; no ELF/cache/index/program payload reads, Native operation, build or owner import.",
+  "runtime_or_performance_acceptance": false
+}

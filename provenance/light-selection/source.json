@@ -1,0 +1,26 @@
+{
+  "producer": {
+    "path": "provenance/physical-q0/all5-cumulative-report.json",
+    "sha256": "fb3e66522504dd70194ca80275513e14fcc805c55058bf467028990e80415673"
+  },
+  "data_manifest_sha256": "794c0e4b44a1c6be1d78f8ebdbca188473678823ea1f3b821f70b63b2a6dd5a7",
+  "cache_native_index_identity": {
+    "indexes": {
+      "bindings/6b235c09ae267174886f88a033214526be0dc1a3158fd597f4fb97b8dccd9853/cache.rrindex": {
+        "bytes": 36582873,
+        "sha256": "a1a33ef0861c45726d64ca2c0fadf76c85d3ccad77193b231a89b92c5c05eea2"
+      },
+      "bundle.rrindex": {
+        "bytes": 5254,
+        "sha256": "4f940e610956c96a5f344bf8f0540021ab70908873bbd3ade9c0c4bf9f0f0f6d"
+      }
+    },
+    "layout": "bundle",
+    "schema": "vakint.native-cache-index-identity.v1",
+    "sha256": "2658cd25b88b24c00fc5e3ad7a68b2396fdbe4ab8facea0039873d971b236654"
+  },
+  "inventory": {
+    "path": "provenance/physical-q0/all5-cumulative-report.json",
+    "sha256": "fb3e66522504dd70194ca80275513e14fcc805c55058bf467028990e80415673"
+  }
+}

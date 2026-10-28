@@ -1,0 +1,235 @@
+{
+  "schema": "vakint.final-instrumented-q0-plan.v1",
+  "status": "BOUND_ENGINEERING_RELEASE_BUILD_ONLY_ROOT_REVIEW_PENDING_NO_EXECUTION",
+  "frozen_source": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-q0-coefficient-release-freeze-2d70-20261028",
+    "head": "2d70bfe439d84b6888cbd29d2574df9c1ed7aae6",
+    "tree": "79df61098886dc6316dc4572edfa9a9d0aac9a19",
+    "CI_enable": false,
+    "acceptance_status": "IMMUTABLE_DETACHED_ENGINEERING_CI_OFF_NOT_FINAL_ENABLED_PUBLICATION_SOURCE",
+    "file_authorities": [
+      {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-release-2d70-20261028/source-freeze.json",
+        "sha256": "dc9c34b53500f392207b38233ee2a544ae7e431783eaf1ca20c6efc616ba4b17",
+        "bytes": 1310
+      },
+      {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-release-2d70-20261028/source-snapshot.json",
+        "sha256": "d415bf7d142d57b386bd5656471a7551dd43c5ddb0c0ea82c7f2fc3436abc29a",
+        "bytes": 572091
+      },
+      {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-local-master-combination-20261027/final-handoff.json",
+        "sha256": "d68ab36226e815cdd17dc764a9e0ea3032042813701724afe759279de1ca2cb2",
+        "bytes": 11108
+      },
+      {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-q0-coefficient-release-freeze-2d70-20261028/nix-ci.nix",
+        "sha256": "fa463b3cccf327d7c05718c1ab9168312ab5fb89028c1de3c6329221d71f7f47",
+        "bytes": 37807
+      },
+      {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-q0-coefficient-release-freeze-2d70-20261028/Cargo.toml",
+        "sha256": "6b28f6b57a518b76e7b32527aa487870317c9e366edaf7a16d075d99d72c2e8f",
+        "bytes": 7271
+      },
+      {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-q0-coefficient-release-freeze-2d70-20261028/Cargo.lock",
+        "sha256": "015da1c446c4aa538c36c17eb64da46d7d0a612cf9989926e7f53d496f77e8ea",
+        "bytes": 220799
+      },
+      {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-q0-coefficient-release-freeze-2d70-20261028/crates/vakint/Cargo.toml",
+        "sha256": "1f2b39e5c50aee69330f5c48197f5516e78bcd937526b6c81f2858a9ff238df1",
+        "bytes": 3083
+      },
+      {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-q0-coefficient-release-freeze-2d70-20261028/crates/vakint/src/lib.rs",
+        "sha256": "3c5fdc017731da9a32175cffe1e453f21a2ab6b4e901f8994b63484753f44e6d",
+        "bytes": 348834
+      },
+      {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-q0-coefficient-release-freeze-2d70-20261028/crates/vakint/src/rustred_evaluation/masters.rs",
+        "sha256": "a7a78f30b5dd3e1ac138f254430862788af53395604afffe62972c616fc78b92",
+        "bytes": 97070
+      },
+      {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-q0-coefficient-release-freeze-2d70-20261028/crates/vakint/src/rustred_evaluation/five_loop.rs",
+        "sha256": "bce1a410ec114384badd68ab87fe3d371ecf90f88538172dfa33e3d1cbdd7f9f",
+        "bytes": 80165
+      },
+      {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-q0-coefficient-release-freeze-2d70-20261028/crates/vakint/examples/five_loop_qcd_ladder.rs",
+        "sha256": "314dcf4e20414a37177418f7eb38a712f2d7bcb8249f663e074b5e61f62063eb",
+        "bytes": 71380
+      },
+      {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-q0-coefficient-release-freeze-2d70-20261028/crates/vakint/examples/measure_cache.rs",
+        "sha256": "a27007e87a590ec25443e422a339563decce58b11d5f30aee51fba44e0235d6f",
+        "bytes": 103440
+      }
+    ]
+  },
+  "cargo_home": "/shared/codex-1/vakint_rustred/workspace/cargo",
+  "memory_floor_bytes": 50000000000,
+  "controller_sources": [
+    {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-final-instrumented-replay-20261027/control.py",
+      "sha256": "524aa276524dcf52ad7b6f85a8fe274be42dc18b8912e9ae5128ce99d9c5cc7a",
+      "bytes": 12054
+    },
+    {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-final-instrumented-replay-20261027/build-v2-nix-linker.py",
+      "sha256": "acb70b7e93190358a613925718784f8947ad4c85302d0436dc69843726d020e9",
+      "bytes": 13790
+    },
+    {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-final-instrumented-replay-20261027/rustc_record.py",
+      "sha256": "fa588e42ade5d44044d10d76c254a82ffa7bd419ede8e4eea53fb3a203443341",
+      "bytes": 1589
+    }
+  ],
+  "protected_roots": [
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-final-q0-progress-publication-20261027",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-final-reference-notebook-integration-20261027",
+    "/shared/codex-1/vakint_rustred/workspace/build/vakint-03e80-release-collectors",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/physics/prepared-input-q0-8282f022-v1",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/external-q0-running-cache-d438",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/physics/capture-enabled-physical-user-units-20261025/q0-running-cache",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/physics/capture-enabled-physical-user-units-20261025/q0-optimized-capture-run1/run",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-final-instrumented-replay-20261027/plan.json",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-progress-publication-20261027",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-final-instrumented-replay-20261027/build-dc7364",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-final-instrumented-replay-20261027/build.py",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-q0-coefficient-release-freeze-2d70-20261028"
+  ],
+  "phases": {
+    "build": {
+      "output": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-release-2d70-20261028/run",
+      "cpus": [
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222,
+        223
+      ],
+      "python": "/nix/store/0r6k8xa2kgqyp3r4v2w7yrb80ma2iawm-python3-3.13.12/bin/python3",
+      "driver": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-final-instrumented-replay-20261027/build-v2-nix-linker.py",
+        "sha256": "acb70b7e93190358a613925718784f8947ad4c85302d0436dc69843726d020e9",
+        "bytes": 13790
+      }
+    }
+  },
+  "build": {
+    "route": "Ordinary Cargo --release in the pinned Nix development environment; not a NixCI check result",
+    "target": "/shared/codex-1/vakint_rustred/workspace/build/vakint-q0-local-retained-2d70-release-20261028",
+    "donor": "/shared/codex-1/vakint_rustred/workspace/build/vakint-03e80-release-collectors",
+    "donor_head": "03e80d538c6e470220ac2f07e32e0b7cefb17662",
+    "donor_authorities": {
+      "result": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/03e80-release-collectors-20261027/result.json",
+        "sha256": "be880a3910b5a25d309344501f87b399bddda8a94f6fa315f752ae4f434636dc"
+      },
+      "release_elfs": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/03e80-release-collectors-20261027/release-elfs.json",
+        "sha256": "47240c1f7f954c3dca2ed319b125b9e6deb2c00c4ff4ce44d12da26be287171b"
+      },
+      "source_freeze": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/03e80-release-collectors-20261027/source-freeze.json",
+        "sha256": "3dd00a44a45325217b61822263d809f255244f66e44d8f8a1a1ed24127911142"
+      },
+      "compile_proof": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/03e80-release-collectors-20261027/compile-proof-environment.json",
+        "sha256": "9553fe9ba603a76a3df6d86ee79627c0bbea815f80f23c674b6853fa19ca6228"
+      }
+    },
+    "compiler_tools": "/nix/store/7m3ahrz00pis1dplzf8vwldriqlfc0d0-rust-stable-with-components-2026-09-03/bin",
+    "gcc": "/nix/store/z4c6k0mrlkwl3s4w9ysxc8vq1wylm3ms-gcc-wrapper-15.3.0/bin/gcc",
+    "cargo_jobs": 2,
+    "features": "feynkit-ingress,experimental-rustred,weighted-lowering-diagnostics,symbolica_community_module,progress-tui",
+    "examples": [
+      "five_loop_qcd_ladder",
+      "measure_cache"
+    ],
+    "native_revision": "c2ca815cc906bdeaf7cb8c63b637e81a80fba917",
+    "kernel_revision": "9cd57678d8817ec33c05cacba4925162f1c86b0b",
+    "rustc_recorder": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-final-instrumented-replay-20261027/rustc_record.py",
+      "sha256": "fa588e42ade5d44044d10d76c254a82ffa7bd419ede8e4eea53fb3a203443341",
+      "bytes": 1589
+    },
+    "reuse_policy": "Independent-inode/reflink private target copy under read-only donor Cargo lock; clean only Vakint. Reused Native/other dependency artifacts retain actual03 origin. Cargo decides any newly required rustix/features from final lock; no false fresh/native codegen claim.",
+    "required_actual_profile": {
+      "opt_level": "3",
+      "lto": "fat",
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false,
+      "profile_overrides": []
+    },
+    "seven_compile_stamps": [
+      "GIT_REVISION",
+      "RUSTRED_REVISION",
+      "SYMBOLICA_REVISION",
+      "MAIN_SOURCE_SNAPSHOT_SHA256",
+      "NATIVE_SOURCE_SNAPSHOT_SHA256",
+      "RUSTC",
+      "PROFILE"
+    ],
+    "provenance_checks": [
+      "Actual final clean source tracked inventory",
+      "Actual locked metadata closure including rustix/features",
+      "Cargo collector artifact fresh=false",
+      "Actual rustc opt-level=3/lto=fat and Cargo debug_assertions/overflow_checks/test=false",
+      "Actual .d seven env-dep values",
+      "Fresh ELF and dep-info preservation/checksums",
+      "Normal --help CLI only; no physical invocation"
+    ],
+    "source_acceptance": "Root-selected immutable detached engineering2d70 tree, CIoff, byte-identical to actual tested1eb feature tree. Build-only; not final enabledCI/publication source."
+  },
+  "authorization_scope": {
+    "permitted_phases": [
+      "build"
+    ],
+    "runtime_GO_exists_at_preparation": false,
+    "scope": "Build exactly fresh physical+measure_cache release ELFs only after Root binds plan SHA and phaseGO. No cache load/import, physical evaluation, quadratic, numerical evaluation, merge or push.",
+    "replay_owner": "/root/heavy_owned_native_file/writer_source_audit",
+    "physical_replay_authorized": false
+  },
+  "build_role": {
+    "normal_profile": "Unmodified ordinary release opt3/fatLTO/assertions+overflowOFF, fixed5feature union and actual compiler proofs; no CARGO_PROFILE/optimization/LTO or wrapper override except reviewed recorder and exact normal inherited linker.",
+    "dependency_reuse": "Matching read-only03 artifact source authorities; private independent-inode target, fresh owner-only clean/build. Reused Native/dependencies retain actual origin.",
+    "pins_remain": "Nativec2ca815/official9cd; no LC-study changes pending actual decision.",
+    "not_a_NixCI_or_publication_claim": true
+  },
+  "actual_normal_validation": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-local-master-combination-20261027/final-handoff.json",
+    "sha256": "d68ab36226e815cdd17dc764a9e0ea3032042813701724afe759279de1ca2cb2",
+    "bytes": 11108
+  },
+  "existing_corrected_builder_authority": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-final-instrumented-replay-20261027/build-dc7364-attempt2/root-independent-build-acceptance.json",
+    "sha256": "5a25f3d307dcedcdb593549b8bd442889f61eb94ca06374d6d44c72cb8d5159f",
+    "bytes": 1948
+  },
+  "source_inventory_protocol": "Same schema, field insertion order, tracked Git path order and indent2+newline as corrected builder inventory(); actual build must match this bound source snapshot.",
+  "successor_replay_precondition": "Actual current2releaseELF acceptance plus Rootreviewed source-role/generator checks; separately bound replay plan and dynamic PIDFDguard/ACK/ticket; writer_source_audit owns execution.",
+  "source_only_replay_protocol": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-local-master-combination-20261027/release-successor-source-only/plan.json",
+    "sha256": "1bca23483ddf855fe4fd331fd5c2d2feb80a59e0d43f438205f6d3950c5f645a",
+    "bytes": 10820
+  },
+  "execution_done_by_this_packet": {
+    "source_checkout_and_hashing_only": true,
+    "builds": 0,
+    "physical_runs": 0,
+    "cache_payload_reads": 0,
+    "numerical_evaluations": 0,
+    "merges": 0,
+    "pushes": 0
+  }
+}

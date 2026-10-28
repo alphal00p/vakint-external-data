@@ -1,0 +1,76 @@
+{
+  "schema": "vakint.native-canonical-artifact-independent-source-review.v1",
+  "utc": "2026-10-28T07:16:02.223128+00:00",
+  "reviewer": "/root/light_cache_selection_readiness",
+  "status": "PASS_SOURCE_METADATA_NO_FINDINGS_OWNER_IMPORT_NOT_RUN",
+  "source_handoff": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/canonical-artifact-projection-20261028/source-handoff.json",
+    "bytes": 19271,
+    "sha256": "694fa3fe0f4b491a1aa027554214cbc75bdeda5fbd2a846577648fd1c902c6e5"
+  },
+  "projector": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/canonical-artifact-projection-20261028/project_artifact.py",
+    "bytes": 11595,
+    "sha256": "821364d61bc2344443925d846541ea788f4457c3f316edaa8c919ce19ed73923"
+  },
+  "tests_source": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/canonical-artifact-projection-20261028/test_projection.py",
+    "bytes": 5187,
+    "sha256": "5a9fa147cc4763b3c9b5c01c94ffd37e8a8edce861e3a2f29f90707497b53ddb"
+  },
+  "reported_pure_tests_log": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/canonical-artifact-projection-20261028/metadata-tests.log",
+    "bytes": 1363,
+    "sha256": "ded55ccfb3860dae42f1c0f278a4645cabdfc594e5a37de5279d024dcdf79304"
+  },
+  "reported_pure_tests": 10,
+  "tests_reexecuted_by_reviewer": false,
+  "canonical_artifact": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/canonical-artifact-projection-20261028/proof-root/provenance/native-exporter-c2ca-canonical-20261028/collector-artifacts.json",
+    "bytes": 16133,
+    "sha256": "d990427e5d65a6528fd5ec9a2ff5041ce762f4a8591a97bb82bc0934cc4d5964"
+  },
+  "source_freeze": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/canonical-artifact-projection-20261028/proof-root/provenance/native-exporter-c2ca-canonical-20261028/source-freeze.json",
+    "bytes": 2463,
+    "sha256": "5ecd1dba2eb78e442576b1fef0273ef19bd9dae800607234db03d4fa69048fdf"
+  },
+  "verified_portable_files": 27,
+  "verified_portable_bytes": 279934,
+  "exact_compiled_helper_source_files": 9,
+  "checks": {
+    "original_failed_controller_preserved": true,
+    "new_canonical_state_is_component_and_supplement_projection_not_old_controller_PASS": true,
+    "all_seven_original_component_exit_codes_zero": true,
+    "required_four_gate_argv_log_and_original_wait_links_match": true,
+    "actual_cohort_stamps_ELF_identity_and_ci_optim_debug_profile_preserved": true,
+    "new_source_archive_exact_compiled_nine_helper_bytes_and_hashes": true,
+    "portable_refs_root_relative_hash_bound_regular_files": true,
+    "no_native_codec_backend_or_owner_weakening": true
+  },
+  "native_and_kernel_clean_judgement": {
+    "supported": true,
+    "scope": "Historical compiled source identity worktrees clean at actual build-script/supplement checks, with compiled regular-source joins to pinned counterparts, not a new check or claim about all current Cargo-cache files.",
+    "buildscript": "Exact SHA-bdb1e13d compiled build.rs asserts actualNative revision+fulltracked/untrackedgitstatus and kernel revision+fulltracked/untrackedgitstatus before emitting clean State6 identity.",
+    "compiled_input_bridge": "Existing accepted77594 independent supplement review verifies actual153 .d joins/hashcoverage and ownercounterpart associations, plus targeted pinned source anchors; supplemental helper actually rehashed3317 regularinputs. This review relies on that preserved accepted evidence and does not reread/recompute7.5MB inventory.",
+    "qualifications_preserved": [
+      "Original inventory bookkeeping failure remainsFAILED, accepted supplementalmetadata operation separate.",
+      "ActualCargo PROFILE environment/debugstamps preserved although requestedprofileci-optim opt2/assertions+overflowON.",
+      "New source freeze explicitlynewverifiedarchive, not fabricated historicalmissingfreeze output."
+    ]
+  },
+  "reliance_on_accepted_supplement_review": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/canonical-artifact-projection-20261028/proof-root/provenance/native-exporter-c2ca-canonical-20261028/evidence/supplement-peer-review.json",
+    "bytes": 22626,
+    "sha256": "77594bd9b443ed56d90ad3d31095a306f610fa9bc2c75c3507fa1a6a6d890e3c"
+  },
+  "actions": {
+    "small_source_metadata_and_logs_read_and_rehashed": true,
+    "new_source_peer_review_created": true,
+    "tests_build_Native_or_owner_import_executed": false,
+    "ELF_Native_program_cache_INDEX_HEAVY_or_large_inventory_read_hashed": false,
+    "candidate_or_original_source_metadata_modified": false,
+    "CORE_export_or_runtime_authorized": false
+  },
+  "next": "Author may import unchanged currentfbb native_artifact metadata owner on this exact candidate, then reportactualowneracceptance; NativeCOREexport still requires separateRootGO."
+}

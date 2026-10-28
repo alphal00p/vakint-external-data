@@ -1,0 +1,70 @@
+{
+  "schema": "vakint.two-collector-cohort-adapter-validation.v1",
+  "status": "PASS",
+  "raw_receipt_original": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-release-2d70-20261028/run/release-collectors.json",
+    "sha256": "6f15e5b521ca929e295fa9aa721aeb85d6b93803be861e9c0f20d3c99791e931"
+  },
+  "raw_receipt": {
+    "path_hint": "provenance/actual-two-collector-cohort/raw-release-collectors.json",
+    "sha256": "6f15e5b521ca929e295fa9aa721aeb85d6b93803be861e9c0f20d3c99791e931"
+  },
+  "build_plan_original": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-release-2d70-20261028/plan.json",
+    "sha256": "0dca14ee2e0cbed29cfd323657b6a79bf64b99288eadff6a29fc6f094ccc07c8"
+  },
+  "collector_artifacts": {
+    "path_hint": "provenance/actual-two-collector-cohort/collector-artifacts.json",
+    "sha256": "9bf61b213956dbed1f3a2667d16c3b906c9931834e018b234e0d178433c0fb7e"
+  },
+  "cohorts": {
+    "measure_cache": {
+      "path_hint": "provenance/actual-two-collector-cohort/measure_cache-cohort.json",
+      "sha256": "2aa7b5115ce4ab6df2210c2a012c0378312c46b0cde14ef68d6d820b88f00e4b"
+    },
+    "five_loop_qcd_ladder": {
+      "path_hint": "provenance/actual-two-collector-cohort/five_loop_qcd_ladder-cohort.json",
+      "sha256": "27c6dfe423baf330fff4838b95aab78b6a6ac79104f9c7b4d2ab7eab0574fcd3"
+    }
+  },
+  "canonical_validator": "cache_usage.cohort",
+  "canonical_validator_sources": {
+    "cache_usage.py": {
+      "path_hint": "provenance/actual-two-collector-cohort/validator/cache_usage.py",
+      "sha256": "51aeb696422f47756ac045041f527307310d3264d90ef2da6c5a5b3fbfcfb2f0"
+    },
+    "data.py": {
+      "path_hint": "provenance/actual-two-collector-cohort/validator/data.py",
+      "sha256": "b07bab2f8021c2ddd97c6c3f9776c3e7ef9fca54d3c386a59c448601c3808627"
+    },
+    "saved_cache.py": {
+      "path_hint": "provenance/actual-two-collector-cohort/validator/saved_cache.py",
+      "sha256": "fb09a576ca8126a383cacad62e8dac5420240c42986819fde84e8a301c2feec6"
+    }
+  },
+  "canonical_collector_validations": [
+    "measure_cache",
+    "five_loop_qcd_ladder"
+  ],
+  "raw_receipt_bytes_unchanged": true,
+  "actual_collector_count": 2,
+  "all_five_counts_source_fields_not_binaries": true,
+  "original_ELFs": {
+    "measure_cache": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-release-2d70-20261028/run/artifacts/measure_cache",
+      "sha256": "dc11710dab03050c3ceb259c431ba717f69810412b7ef17ba9f7ae9e91f3c9ea",
+      "bytes": 147680528
+    },
+    "five_loop_qcd_ladder": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-release-2d70-20261028/run/artifacts/five_loop_qcd_ladder",
+      "sha256": "ca89f4eb6776c88bb28a1147a6363233638517b1d52cc026a03798cdeb8ed1e1",
+      "bytes": 148891512
+    }
+  },
+  "ELF_contents_read": false,
+  "executables_invoked": 0,
+  "builds": 0,
+  "cache_IO": 0,
+  "physical_or_numerical_evaluations": 0,
+  "adapter_source_sha256": "1fbb2aa8228413b6282b1469a09239cbe247c3e4d2348a3f8b4cf8ed9e3ba2a5"
+}

@@ -1,268 +1,52 @@
 {
-  "accepted_bridge": true,
-  "cache_selected": true,
-  "candidate_status": "ROOT_SELECTED_COMPLETE_TWO_ROOT_FALLBACK",
-  "consumer_revision": "c6dcc126bfaf0164870776e1018d08bdafb1e117",
-  "consumer_scope": "Accepted actual C6/f022 semantic projection only; no broader/new consumer cohort or complete fresh f022 thirteen-case pass.",
-  "consumer_workload": {
-    "bytes": 21729,
-    "path": "provenance/selected-fallback-two-root-cache/consumer-two-root-workload.json",
-    "sha256": "f022d21736684ed9831619c919250cce79f4eeacb9e9b3245ae3f872cb7f8f60"
-  },
-  "final_build_elapsed_seconds": 1278.7086279720534,
-  "final_selection": {
-    "bytes": 5823,
-    "path": "provenance/selected-fallback-two-root-cache/root-final-cache-selection.json",
-    "sha256": "828f61d0d6a6960131f7b08d0700f3f88ed2114ea73315d70d1335dc66ba1800"
-  },
-  "native_compatibility": {
-    "bytes": 19795,
-    "path": "provenance/selected-fallback-two-root-cache/accepted-cache-consumer-bridge.json",
-    "sha256": "daa07861eaf718d289073709bac5c50f5e633832cdccb20ab35cf070d8c9aca9"
-  },
-  "performance_claim_allowed": false,
-  "preparation_report": {
-    "capture_lookup_budget_skips": 0,
-    "capture_metadata_exhausted_roots": 0,
-    "capture_metadata_peak_bytes": 0,
-    "capture_native_skipped_records": 0,
-    "capture_offered_records": 25088,
-    "capture_oversized_records": 0,
-    "capture_profile": "completed-intermediates-with-local-guard-provenance-v1",
-    "charged_disk_bytes": 5333317,
-    "checkpoint_failure": null,
-    "completed_roots": 2,
-    "coverage_claim": false,
-    "elapsed_seconds": 639.161489705,
-    "failure": null,
-    "native_profile": {
-      "entry_coverage": "advisory",
-      "kind": "saved-application-route-apply",
-      "native": "SavedApplicationOptions { unresolved_policy: Reject, entry_coverage_policy: Advisory, reduction_limits: ReductionLimits { diagnostics_enabled: false, exact_algebra: ExactAlgebraLimits { diagnostics_enabled: false, max_exponent: 65535, max_polynomial_terms: 4000000, max_term_operations: 16000000 }, indexed_algebra: IndexedAlgebraLimits { diagnostics_enabled: false, exact_algebra: ExactAlgebraLimits { diagnostics_enabled: false, max_exponent: 65535, max_polynomial_terms: 4000000, max_term_operations: 16000000 }, max_specialization_power_operations: 16000000, max_specialization_integer_bits: 16000000 }, max_rule_applications: 1000000, max_cached_integrals: 1000000, max_cached_coefficient_terms: 16000000, max_cached_coefficient_bytes: 18446744073709551615, max_pending_frames: 1000000, max_coalescing_additions: 16000000, max_factorization_terms: 1000000 }, trace_limits: RoutedCandidateLimits { diagnostics_enabled: false, max_input_targets: 100000, max_unique_nodes: 1000000, max_transport_calls: 100000, max_transport_operations: 64000000, max_transport_endpoints: 4000000, expansion: MultiAffineNumeratorExpansionLimits { diagnostics_enabled: false, exact_algebra: ExactAlgebraLimits { diagnostics_enabled: false, max_exponent: 65535, max_polynomial_terms: 4000000, max_term_operations: 16000000 }, max_factors: 128, max_relation_coefficient_entries: 16384, max_total_power: 1000000, max_native_polynomial_terms: 4000000, max_native_polynomial_operations: 64000000, max_native_exponent_entries: 64000000, max_endpoints: 4000000, max_endpoint_power_entries: 64000000, max_retained_endpoint_key_bytes: 1000000000, max_retained_coefficient_terms: 64000000, max_retained_coefficient_clone_owned_bytes: 1000000000 } }, binary_limits: BinaryIoLimits { diagnostics_enabled: false, max_program_bytes: 18446744073709551615, max_sections: 32, max_collection_entries: 8000000, max_state_bytes: 18446744073709551615, max_atom_bytes: 18446744073709551615, max_total_atom_bytes: 18446744073709551615, exact_algebra: ExactAlgebraLimits { diagnostics_enabled: false, max_exponent: 65535, max_polynomial_terms: 4000000, max_term_operations: 16000000 } }, cache_representation: Sparse, cache_policy: EvictLeastRecentlyUsed, preparation_workers: 1 }",
-      "required_root_postcondition": "complete-native-declared-terminals",
-      "roots": [
-        {
-          "coverage_admitted": false,
-          "namespace": 0,
-          "powers": [
-            1,
-            1,
-            2,
-            1,
-            2,
-            1,
-            1,
-            0,
-            0,
-            1,
-            0,
-            1,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "coverage_admitted": false,
-          "namespace": 0,
-          "powers": [
-            2,
-            2,
-            1,
-            2,
-            2,
-            1,
-            1,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            -1
-          ]
-        }
-      ],
-      "strict": true,
-      "unresolved_policy": "reject"
-    },
-    "native_statistics": {
-      "cache_work": {
-        "evicted_coefficient_bytes": 0,
-        "evicted_coefficient_terms": 0,
-        "evicted_entries": 0,
-        "recomputed_nodes": 0
+  "schema": "vakint.external-data.saved-cache.v1",
+  "strict": true,
+  "coverage_claim": false,
+  "selection": {
+    "kind": "usage-selected-strict-snapshot",
+    "source": {
+      "producer": {
+        "path": "provenance/physical-q0/all5-cumulative-report.json",
+        "sha256": "fb3e66522504dd70194ca80275513e14fcc805c55058bf467028990e80415673"
       },
-      "native": {
-        "cache_hits": 190109,
-        "cached_coefficient_bytes": 78126718,
-        "cached_coefficient_terms": 1543649,
-        "cached_integrals": 25088,
-        "coalescing_additions": 271790,
-        "rule_applications": 11511
+      "data_manifest_sha256": "794c0e4b44a1c6be1d78f8ebdbca188473678823ea1f3b821f70b63b2a6dd5a7",
+      "cache_native_index_identity": {
+        "indexes": {
+          "bindings/6b235c09ae267174886f88a033214526be0dc1a3158fd597f4fb97b8dccd9853/cache.rrindex": {
+            "bytes": 36582873,
+            "sha256": "a1a33ef0861c45726d64ca2c0fadf76c85d3ccad77193b231a89b92c5c05eea2"
+          },
+          "bundle.rrindex": {
+            "bytes": 5254,
+            "sha256": "4f940e610956c96a5f344bf8f0540021ab70908873bbd3ade9c0c4bf9f0f0f6d"
+          }
+        },
+        "layout": "bundle",
+        "schema": "vakint.native-cache-index-identity.v1",
+        "sha256": "2658cd25b88b24c00fc5e3ad7a68b2396fdbe4ab8facea0039873d971b236654"
+      },
+      "inventory": {
+        "path": "provenance/physical-q0/all5-cumulative-report.json",
+        "sha256": "fb3e66522504dd70194ca80275513e14fcc805c55058bf467028990e80415673"
       }
     },
-    "newly_stored_intermediates": 25086,
-    "newly_stored_roots": 2,
-    "options": {
-      "batch_records": 64,
-      "cache_policy": "evict-lru",
-      "capture_metadata_limit_bytes_per_request": 18446744073709551615,
-      "checkpoint_interval_seconds": 60,
-      "deadline_is_cooperative": true,
-      "diagnostics_enabled": false,
-      "disk_bytes": 18446744073709551615,
-      "intermediate_capture": true,
-      "loop_count": 5,
-      "max_roots": 2,
-      "ram_coefficient_bytes": 18446744073709551615,
-      "ram_is_process_rss": false,
-      "resume": true,
-      "single_file": {
-        "binding": {
-          "artifact_digest": [
-            162,
-            68,
-            185,
-            180,
-            206,
-            143,
-            114,
-            40,
-            199,
-            12,
-            133,
-            132,
-            8,
-            135,
-            208,
-            168,
-            201,
-            62,
-            78,
-            199,
-            29,
-            175,
-            102,
-            4,
-            104,
-            117,
-            83,
-            104,
-            97,
-            251,
-            210,
-            115
-          ],
-          "family_fingerprint": "rustred-integral-family-v2;N27:tide_five_loop_common_basis;L5;2:k1;2:k2;2:k3;2:k4;2:k5;E0;P1;1:d;Q5,0,15;M;RY1,1;I+1;X1;Y1,1;I+1;X0;D15;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I+2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;G0;U15;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;",
-          "layer": "saved-application-route-apply-v1",
-          "physical_arity": 15
-        },
-        "checkpoint_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/strict-pilot-first2-run2-budget2400/builder-work/checkpoints",
-        "decoded_sha256": "3426758874cc6acf59ace61dede0a8e189fe3c6c32d8fa0d934eb788e23878a9",
-        "format": "rustred.saved-application-cache-file.v1",
-        "identity": {
-          "compressed_blake3": [
-            235,
-            115,
-            193,
-            232,
-            0,
-            155,
-            254,
-            151,
-            231,
-            165,
-            69,
-            2,
-            118,
-            229,
-            228,
-            199,
-            173,
-            252,
-            111,
-            230,
-            59,
-            32,
-            80,
-            153,
-            21,
-            24,
-            208,
-            148,
-            113,
-            69,
-            12,
-            132
-          ],
-          "compressed_bytes": 2456235,
-          "decoded_blake3": [
-            83,
-            182,
-            5,
-            124,
-            210,
-            42,
-            77,
-            52,
-            19,
-            208,
-            205,
-            223,
-            221,
-            246,
-            14,
-            166,
-            137,
-            7,
-            19,
-            247,
-            14,
-            165,
-            234,
-            163,
-            138,
-            143,
-            207,
-            155,
-            42,
-            41,
-            190,
-            203
-          ],
-          "decoded_bytes": 16593448
-        },
-        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/strict-pilot-first2-run2-budget2400/candidate.rrcache.gz",
-        "records": 25088
-      },
-      "storage_limits": "SavedApplicationCachePackLimits { diagnostics_enabled: false, chunk: ApplicationCacheIoLimits { binary: BinaryIoLimits { diagnostics_enabled: false, max_program_bytes: 18446744073709551615, max_sections: 32, max_collection_entries: 8000000, max_state_bytes: 18446744073709551615, max_atom_bytes: 18446744073709551615, max_total_atom_bytes: 18446744073709551615, exact_algebra: ExactAlgebraLimits { diagnostics_enabled: false, max_exponent: 65535, max_polynomial_terms: 4000000, max_term_operations: 16000000 } }, diagnostics_enabled: false, max_arity: 64, max_identity_bytes: 1000000, max_records: 4096, max_index_owned_bytes: 18446744073709551615, max_terms_per_record: 1000000, max_guards_per_record: 1000000, max_decoded_coefficient_terms: 16000000, max_decoded_coefficient_bytes: 18446744073709551615 }, max_manifest_bytes: 18446744073709551615, max_directory_owned_bytes: 18446744073709551615, max_chunks: 32768, max_runs: 4096, max_namespaces: 128, max_encoded_chunk_bytes: 18446744073709551615, max_lookup_chunks: 8, max_lookup_encoded_bytes: 536870912, max_lookup_decoded_bytes: 536870912, max_disk_bytes: 18446744073709551615 }",
-      "strict_application_setup_seconds": 594.912973463,
-      "time_budget_scope": "entire-preparation-job",
-      "time_limit_seconds": 576,
-      "validated_lazy_storage": false
+    "keys": {
+      "path": "provenance/light-selection/candidates-54-plus-2048/selected-keys-002048.json.gz",
+      "sha256": "bf7e7af8274fa8070df21c23bafc4e1a1d2a94928c5c17b344fe3e72c9bdf198"
     },
-    "reader_directory_owned_bytes": 806546,
-    "resource_failure": null,
-    "resume_semantics": "durable selected roots and guarded intermediates; no in-flight native operation state",
-    "reused_roots": 0,
-    "status": "complete",
-    "total_roots": 2
-  },
-  "producer_phase": "pilot",
-  "producer_revision": "8ef03d7fd7557772e1b531b71b71c08e3419ff54",
-  "provenance": {
-    "path": "provenance/selected-fallback-two-root-cache/SELECTED_FALLBACK_CACHE.json",
-    "sha256": "1912abe4282dbe5d30adbfa8176e235cf33b5ebffdf8a71c2ebe614ccc29c5c7"
-  },
-  "published": false,
-  "release_accepted": false,
-  "schema": "vakint.external-data.saved-cache.v1",
-  "source_staged": true,
-  "strict": true,
-  "workload": {
-    "path": "cache/workload.json",
-    "sha256": "b5a502290b714bb96dc2979cfb481c66ba1faeddfff0395f003ef165d351bf05"
+    "unique_keys": 2102,
+    "usage_profile": {
+      "path": "provenance/light-selection/candidates-54-plus-2048/usage-profile.json.gz",
+      "sha256": "041f4aa710909c28af60b9be68befd58a5a2f6d61662253610a5ff81ce2aa57f"
+    },
+    "allowed_input_classes": [
+      "tuning",
+      "physical-example"
+    ],
+    "final_held_out_used": false,
+    "validation": {
+      "path": "provenance/light-selection/frozen-B-20261028/native-validation.json",
+      "sha256": "1d4819effc97e58bd2d6a9d1265f759f6a22168889a446bde2151b8fb4a7805d"
+    }
   }
 }

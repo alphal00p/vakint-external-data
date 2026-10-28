@@ -1,0 +1,128 @@
+{
+  "schema": "vakint.public-c2ca-producer-source-preparation.v1",
+  "status": "SOURCE_ONLY_NOT_LOCKED_BUILT_OR_RUN",
+  "utc": "2026-10-27T22:13:19.949067+00:00",
+  "old_b209_source": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/native-selected-cache-export/producer-v4-census",
+  "old_immutable_ELF": "ba4a7b9c6b26cbed29ff9a00ef17c1d44424ccf06829467c6897494e142f967d",
+  "new_source": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-c2ca-source",
+  "unchanged_modules": {
+    "union.rs": {
+      "old": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/native-selected-cache-export/producer-v4-census/src/union.rs",
+        "bytes": 35083,
+        "sha256": "1808b73180a0061044d3741a7fa3869836e15b21b931db7f4815bf3d3a36a5e4"
+      },
+      "new": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-c2ca-source/src/union.rs",
+        "bytes": 35083,
+        "sha256": "1808b73180a0061044d3741a7fa3869836e15b21b931db7f4815bf3d3a36a5e4"
+      },
+      "byte_equal": true
+    },
+    "index_identity.rs": {
+      "old": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/native-selected-cache-export/producer-v4-census/src/index_identity.rs",
+        "bytes": 4556,
+        "sha256": "9c0bcb8aab60ccde38c7a406d719e26632bfb164829d1ef5e6c5a9ab23ec432e"
+      },
+      "new": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-c2ca-source/src/index_identity.rs",
+        "bytes": 4556,
+        "sha256": "9c0bcb8aab60ccde38c7a406d719e26632bfb164829d1ef5e6c5a9ab23ec432e"
+      },
+      "byte_equal": true
+    },
+    "proof_reference.rs": {
+      "old": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/native-selected-cache-export/producer-v4-census/src/proof_reference.rs",
+        "bytes": 11307,
+        "sha256": "e8ce76485fac54f11fba173cfa4405fe08c8b9750758ce493c99251f22d2adfd"
+      },
+      "new": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-c2ca-source/src/proof_reference.rs",
+        "bytes": 11307,
+        "sha256": "e8ce76485fac54f11fba173cfa4405fe08c8b9750758ce493c99251f22d2adfd"
+      },
+      "byte_equal": true
+    },
+    "resource_guard_admission.rs": {
+      "old": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/native-selected-cache-export/producer-v4-census/src/resource_guard_admission.rs",
+        "bytes": 14836,
+        "sha256": "bb3223d27584b42069d3813ebdcaefa6598a0935ca4531714a50248b334870cb"
+      },
+      "new": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-c2ca-source/src/resource_guard_admission.rs",
+        "bytes": 14836,
+        "sha256": "bb3223d27584b42069d3813ebdcaefa6598a0935ca4531714a50248b334870cb"
+      },
+      "byte_equal": true
+    }
+  },
+  "reviewed_v2_stamp_source": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/producer-schema-source-only/source-origin.json",
+    "bytes": 954,
+    "sha256": "33343f2054168aae2a31bad56377a5ee611b8c8978e1bc6188ed29d859f27e03"
+  },
+  "v2_stamp_only_files": {
+    "main.rs": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-c2ca-source/src/main.rs",
+      "bytes": 37426,
+      "sha256": "84c4c016855af710c30bed62530d37e3ab27a536f6d55bdb2a3db560d32bf7b1"
+    },
+    "selection.rs": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-c2ca-source/src/selection.rs",
+      "bytes": 11406,
+      "sha256": "bed2e34853e6654a6c1903a3ec59db81d695b1bd1d1f0190ab3d68ce4ce3de1b"
+    }
+  },
+  "metadata_build_identity_changes": "build.rs now authenticates actual clean publicNativec2ca/official9cd identityworktrees, truthfullydeclares Native-onlyhelpercohort c2ca; Cargo.toml usespublicimmutableGitSourceIDs/normalprofile withno localCargo sourceoverrides. Old sources/artifacts untouched. No union/application/math/format change.",
+  "files": {
+    "Cargo.toml": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-c2ca-source/Cargo.toml",
+      "bytes": 1719,
+      "sha256": "98f6ebe93245988c09aaa25ef1e2b231cd83a37d600037b21d41df06dc65286d"
+    },
+    "build.rs": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-c2ca-source/build.rs",
+      "bytes": 6573,
+      "sha256": "bdb1e13d7d57635aaf10b55cd2009ab99f9b37bd77a4a875bad0af3263b18f99"
+    },
+    "src/main.rs": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-c2ca-source/src/main.rs",
+      "bytes": 37426,
+      "sha256": "84c4c016855af710c30bed62530d37e3ab27a536f6d55bdb2a3db560d32bf7b1"
+    },
+    "src/selection.rs": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-c2ca-source/src/selection.rs",
+      "bytes": 11406,
+      "sha256": "bed2e34853e6654a6c1903a3ec59db81d695b1bd1d1f0190ab3d68ce4ce3de1b"
+    },
+    "src/union.rs": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-c2ca-source/src/union.rs",
+      "bytes": 35083,
+      "sha256": "1808b73180a0061044d3741a7fa3869836e15b21b931db7f4815bf3d3a36a5e4"
+    },
+    "src/index_identity.rs": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-c2ca-source/src/index_identity.rs",
+      "bytes": 4556,
+      "sha256": "9c0bcb8aab60ccde38c7a406d719e26632bfb164829d1ef5e6c5a9ab23ec432e"
+    },
+    "src/proof_reference.rs": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-c2ca-source/src/proof_reference.rs",
+      "bytes": 11307,
+      "sha256": "e8ce76485fac54f11fba173cfa4405fe08c8b9750758ce493c99251f22d2adfd"
+    },
+    "src/resource_guard_admission.rs": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-c2ca-source/src/resource_guard_admission.rs",
+      "bytes": 14836,
+      "sha256": "bb3223d27584b42069d3813ebdcaefa6598a0935ca4531714a50248b334870cb"
+    }
+  },
+  "Cargo_lock": "ABSENT until BUILDGO copies authentic03 seed then ordinaryCargo resolves/prunes actual tool lock; seed notrelabeled actualresolveroutput.",
+  "Cargo_lock_seed": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/Main03-Cargo.lock.seed",
+    "bytes": 220799,
+    "sha256": "015da1c446c4aa538c36c17eb64da46d7d0a612cf9989926e7f53d496f77e8ea"
+  }
+}

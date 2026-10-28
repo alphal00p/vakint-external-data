@@ -1,0 +1,63 @@
+{
+  "schema": "vakint.actual-q0-tuning-v1-staging-handoff.v1",
+  "utc": "2026-10-28T06:43:36.346322+00:00",
+  "status": "PASS_CANONICAL_V1_OBSERVED_FREQUENCIES",
+  "invocation": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/tuning-v1-stage-invocation.json",
+    "sha256": "517fd094bbd21107f27c26446d5cdb020e6d346ef80924831f7fbf1d30344607",
+    "bytes": 1054
+  },
+  "plan": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/tuning-v1-stage-run-plan.json",
+    "sha256": "5fde9cf17376d2fcc54c8da020383436ed401a2c6d48161a334910470d5f4d6e",
+    "bytes": 2167
+  },
+  "source": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/stage-tuning-v1.py",
+    "sha256": "7f97a3c53620ba4d68da18dc1bd259ae3102d5727a7b07fcc2c9efa0f6dd40df",
+    "bytes": 21331
+  },
+  "request": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/tuning-v1-stage-request.json",
+    "sha256": "e1a1ac3730f4296d528b14b29a479a1f25925b2ea133064f50b8799783d59590",
+    "bytes": 25172
+  },
+  "source_review": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/stage-tuning-v1-source-review.json",
+    "sha256": "62be003d58ca709c798ceabd1890a47365941312d7ea75332f50d620722991ea",
+    "bytes": 6823
+  },
+  "validation": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/tuning-v1-stage-run1/validation.json",
+    "sha256": "8d16b6e58e644feace1e1ab45a05879744cfe12cf9054e87d9d78b73c1e82db8",
+    "bytes": 959
+  },
+  "profile": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/tuning-v1-stage-run1/root/provenance/tuning-final/usage-tuning-v1.json",
+    "sha256": "243a5223ebb42413dac87e5c9829318dcc417c89c65cfb8775f5af5e34ab8e55",
+    "bytes": 11425567
+  },
+  "original_native_success_outer_publication_failure": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/tuning-native-outcome-preserved.json",
+    "sha256": "22fa72e4206dd28d6d437f7166906f6e6c74f65e24176b7bb5ad82fa4ab781a2",
+    "bytes": 5343
+  },
+  "original_pending_terminal": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/tuning-run1/completion.json.pending",
+    "sha256": "65d4118f82df19e58d18e8d74effe4b1e4333d2c8beff9e820806c4d30d3092f",
+    "bytes": 8440
+  },
+  "outer_controller_PASS": false,
+  "original_outer_failure_not_repaired": true,
+  "observed_unique_records": 13918,
+  "observed_backing_hits": 13918,
+  "actual_observed_Route_hits": 3337,
+  "actual_observed_Apply_hits": 10581,
+  "actual_misses": 17963,
+  "classification_available_preserved": false,
+  "recursive_mapper_certificate": null,
+  "proper_descendant_or_frontier_claim": false,
+  "selection_or_export_authorized": false,
+  "new_Native_IBP_CAS_cache_reads": 0,
+  "no_automatic_successor": true
+}

@@ -1,0 +1,398 @@
+{
+  "schema": "vakint.native-c2ca-metadata-supplement-independent-terminal-review.v1",
+  "utc": "2026-10-27T22:49:13.864249+00:00",
+  "reviewer": "/root/heavy_owned_native_file/profile_v2_peer",
+  "status": "PASS_COMPOSED_BUILD_PROVENANCE_REVIEW_NO_CACHE_RUNTIME",
+  "source_review": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/inventory-recovery/source-peer-review.json",
+    "bytes": 7425,
+    "sha256": "f263b513909aea13ec8a5d4f88f922348a5f4e0aa5d242736a241a723f02a2b3"
+  },
+  "packet": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/inventory-recovery/packet.json",
+    "bytes": 12906,
+    "sha256": "fba486fe96c86f718a2432c4d81763aa96a06d8513edf7fa390b1ea322e176a3"
+  },
+  "Root_metadata_GO": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/inventory-recovery/root-metadata-recovery-go.json",
+    "bytes": 1107,
+    "sha256": "b7a1f9569e83d70d7232bec7a0c6620590dfaeccabfeac83d2e2d23aadc12590"
+  },
+  "actual_launch": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/inventory-recovery/actual-launch.json",
+    "bytes": 2566,
+    "sha256": "d3a0e1a3d0b45fdd6f8fc44ff3c94bb1466d01c581d7c5f1c9265330c315f216"
+  },
+  "terminal_observation": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/inventory-recovery/terminal-observation.json",
+    "bytes": 645,
+    "sha256": "5e8a812733303ba3ab628db744dbb2f1ac695bf1dc4458e800863b2ae4f221d1"
+  },
+  "controller_result": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/inventory-recovery/inventory-run1/result.json",
+    "bytes": 2645,
+    "sha256": "7620143493897de387589ccf4b88bd92442f5377ef92c738374ab9cd385da50e"
+  },
+  "supplemental_inventory": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/inventory-recovery/inventory-run1/supplemental-input-inventory.json",
+    "bytes": 7545881,
+    "sha256": "a8360902da3f5265d9907fe49c96175de468d3e229fd0875debe9daa2d4b953e"
+  },
+  "original_failed_build_result": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-build-run1/result.json",
+    "bytes": 10872,
+    "sha256": "1f5085b6d77a8dc27e62f683e15175c8df3cfcc85a9b03a88f338538406f0bd9"
+  },
+  "original_controller_pass_claim": false,
+  "original_successful_build_gates_preserved": true,
+  "exact_completion_evidence": {
+    "controller": {
+      "pid": 1802964,
+      "uid": 1124,
+      "start_ticks": 117484605,
+      "state": "R"
+    },
+    "worker": {
+      "pid": 1802966,
+      "uid": 1124,
+      "start_ticks": 117484616,
+      "state": "R"
+    },
+    "service": "vakint-native-producer-c2ca-metadata-20261027.service",
+    "invocation_id": "7ca83ac503fb4d229f84931e06ceba8c",
+    "parent_retained_original_PIDFD_terminal": true,
+    "service_terminal": {
+      "ActiveState": "inactive",
+      "SubState": "dead",
+      "InvocationID": "",
+      "MainPID": "0",
+      "Result": "success",
+      "ExecMainStatus": "0"
+    }
+  },
+  "counts": {
+    "actual_compiler_artifacts": 153,
+    "covered_depfiles": 153,
+    "regular_file_inputs": 3317,
+    "typed_directory_triggers": 3,
+    "resolved_packages": 174,
+    "compiled_or_reported_package_ids": 123
+  },
+  "owner_counterpart_occurrence_checks": {
+    "rustred": 3170,
+    "rustred-app": 951,
+    "rustred-order": 15,
+    "symbolica": 338,
+    "graphica": 3,
+    "numerica": 108
+  },
+  "counterpart_count_qualification": "Counts are dependency occurrences checked against each matching package-root counterpart, not distinct source-file totals. Shared repository roots may overlap.",
+  "Cargo_fresh_flags": {
+    "False": 153
+  },
+  "fresh_qualification": "All153 actual Cargo compiler-artifact fresh flags arefalse: rebuilt in the original accepted compiler invocation. This is not a claim donor artifacts were reused.",
+  "recorded_generated_input_origins": {
+    "other": 3309,
+    "newtarget-generated": 8
+  },
+  "origin_qualification": "Actual recorded paths preserved;8 generated regular inputs reference new target and none reference donor. No origin relabel or clean-rebuild claim for unreported external C intermediates.",
+  "source_owners": {
+    "rustred": {
+      "id": "git+https://github.com/alphal00p/rustred?rev=c2ca815cc906bdeaf7cb8c63b637e81a80fba917#0.1.0",
+      "source": "git+https://github.com/alphal00p/rustred?rev=c2ca815cc906bdeaf7cb8c63b637e81a80fba917#c2ca815cc906bdeaf7cb8c63b637e81a80fba917",
+      "manifest_path": "/shared/codex-1/vakint_rustred/workspace/cargo/git/checkouts/rustred-971a3b8def498c77/c2ca815/crates/rustred-core/Cargo.toml"
+    },
+    "rustred-app": {
+      "id": "git+https://github.com/alphal00p/rustred?rev=c2ca815cc906bdeaf7cb8c63b637e81a80fba917#rustred-app@0.1.0",
+      "source": "git+https://github.com/alphal00p/rustred?rev=c2ca815cc906bdeaf7cb8c63b637e81a80fba917#c2ca815cc906bdeaf7cb8c63b637e81a80fba917",
+      "manifest_path": "/shared/codex-1/vakint_rustred/workspace/cargo/git/checkouts/rustred-971a3b8def498c77/c2ca815/crates/rustred-app/Cargo.toml"
+    },
+    "rustred-order": {
+      "id": "git+https://github.com/alphal00p/rustred?rev=c2ca815cc906bdeaf7cb8c63b637e81a80fba917#rustred-order@0.1.0",
+      "source": "git+https://github.com/alphal00p/rustred?rev=c2ca815cc906bdeaf7cb8c63b637e81a80fba917#c2ca815cc906bdeaf7cb8c63b637e81a80fba917",
+      "manifest_path": "/shared/codex-1/vakint_rustred/workspace/cargo/git/checkouts/rustred-971a3b8def498c77/c2ca815/crates/rustred-order/Cargo.toml"
+    },
+    "symbolica": {
+      "id": "git+https://github.com/symbolica-dev/symbolica?rev=9cd57678d8817ec33c05cacba4925162f1c86b0b#3.0.1",
+      "source": "git+https://github.com/symbolica-dev/symbolica?rev=9cd57678d8817ec33c05cacba4925162f1c86b0b#9cd57678d8817ec33c05cacba4925162f1c86b0b",
+      "manifest_path": "/shared/codex-1/vakint_rustred/workspace/cargo/git/checkouts/symbolica-db3dbb7e8d40efb5/9cd5767/Cargo.toml"
+    },
+    "graphica": {
+      "id": "git+https://github.com/symbolica-dev/symbolica?rev=9cd57678d8817ec33c05cacba4925162f1c86b0b#graphica@3.0.1",
+      "source": "git+https://github.com/symbolica-dev/symbolica?rev=9cd57678d8817ec33c05cacba4925162f1c86b0b#9cd57678d8817ec33c05cacba4925162f1c86b0b",
+      "manifest_path": "/shared/codex-1/vakint_rustred/workspace/cargo/git/checkouts/symbolica-db3dbb7e8d40efb5/9cd5767/lib/graphica/Cargo.toml"
+    },
+    "numerica": {
+      "id": "git+https://github.com/symbolica-dev/symbolica?rev=9cd57678d8817ec33c05cacba4925162f1c86b0b#numerica@3.0.1",
+      "source": "git+https://github.com/symbolica-dev/symbolica?rev=9cd57678d8817ec33c05cacba4925162f1c86b0b#9cd57678d8817ec33c05cacba4925162f1c86b0b",
+      "manifest_path": "/shared/codex-1/vakint_rustred/workspace/cargo/git/checkouts/symbolica-db3dbb7e8d40efb5/9cd5767/lib/numerica/Cargo.toml"
+    }
+  },
+  "independent_public_manifest_byte_checks": {
+    "rustred": {
+      "package_id": "git+https://github.com/alphal00p/rustred?rev=c2ca815cc906bdeaf7cb8c63b637e81a80fba917#0.1.0",
+      "actual": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/cargo/git/checkouts/rustred-971a3b8def498c77/c2ca815/crates/rustred-core/Cargo.toml",
+        "bytes": 1830,
+        "sha256": "19da07cfde5bbaaf2571e9657579f0df6693a577ee40f41691a91268738fbae6"
+      },
+      "identity_worktree_counterpart": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/native-cache-monitor-integration/crates/rustred-core/Cargo.toml",
+        "bytes": 1830,
+        "sha256": "19da07cfde5bbaaf2571e9657579f0df6693a577ee40f41691a91268738fbae6"
+      }
+    },
+    "rustred-app": {
+      "package_id": "git+https://github.com/alphal00p/rustred?rev=c2ca815cc906bdeaf7cb8c63b637e81a80fba917#rustred-app@0.1.0",
+      "actual": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/cargo/git/checkouts/rustred-971a3b8def498c77/c2ca815/crates/rustred-app/Cargo.toml",
+        "bytes": 3726,
+        "sha256": "09cd33361ef84a70d9dac37992eab49c034fd45fe2315ab815d07239097f61fe"
+      },
+      "identity_worktree_counterpart": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/native-cache-monitor-integration/crates/rustred-app/Cargo.toml",
+        "bytes": 3726,
+        "sha256": "09cd33361ef84a70d9dac37992eab49c034fd45fe2315ab815d07239097f61fe"
+      }
+    },
+    "rustred-order": {
+      "package_id": "git+https://github.com/alphal00p/rustred?rev=c2ca815cc906bdeaf7cb8c63b637e81a80fba917#rustred-order@0.1.0",
+      "actual": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/cargo/git/checkouts/rustred-971a3b8def498c77/c2ca815/crates/rustred-order/Cargo.toml",
+        "bytes": 414,
+        "sha256": "98212c56235eca62e3d654aa1c1787813232bd6ae9b3d1fe51ce366a458411b6"
+      },
+      "identity_worktree_counterpart": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/native-cache-monitor-integration/crates/rustred-order/Cargo.toml",
+        "bytes": 414,
+        "sha256": "98212c56235eca62e3d654aa1c1787813232bd6ae9b3d1fe51ce366a458411b6"
+      }
+    },
+    "symbolica": {
+      "package_id": "git+https://github.com/symbolica-dev/symbolica?rev=9cd57678d8817ec33c05cacba4925162f1c86b0b#3.0.1",
+      "actual": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/cargo/git/checkouts/symbolica-db3dbb7e8d40efb5/9cd5767/Cargo.toml",
+        "bytes": 6010,
+        "sha256": "46dfcfa8090a4a27d4c7990d6965a872194392e65ec02d194dc04644b76ea68b"
+      },
+      "identity_worktree_counterpart": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/native-cache-monitor-integration/vendor/symbolica/Cargo.toml",
+        "bytes": 6010,
+        "sha256": "46dfcfa8090a4a27d4c7990d6965a872194392e65ec02d194dc04644b76ea68b"
+      }
+    },
+    "graphica": {
+      "package_id": "git+https://github.com/symbolica-dev/symbolica?rev=9cd57678d8817ec33c05cacba4925162f1c86b0b#graphica@3.0.1",
+      "actual": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/cargo/git/checkouts/symbolica-db3dbb7e8d40efb5/9cd5767/lib/graphica/Cargo.toml",
+        "bytes": 942,
+        "sha256": "3730f1242f2cc8f91fcc4212397f54c402db7505b0a5d83b22a0a61a0e34b4e9"
+      },
+      "identity_worktree_counterpart": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/native-cache-monitor-integration/vendor/symbolica/lib/graphica/Cargo.toml",
+        "bytes": 942,
+        "sha256": "3730f1242f2cc8f91fcc4212397f54c402db7505b0a5d83b22a0a61a0e34b4e9"
+      }
+    },
+    "numerica": {
+      "package_id": "git+https://github.com/symbolica-dev/symbolica?rev=9cd57678d8817ec33c05cacba4925162f1c86b0b#numerica@3.0.1",
+      "actual": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/cargo/git/checkouts/symbolica-db3dbb7e8d40efb5/9cd5767/lib/numerica/Cargo.toml",
+        "bytes": 2109,
+        "sha256": "d926d83fa3cfa1cd4cf82b5e7f73800113e0fafc0809831b39b789b8b94492d8"
+      },
+      "identity_worktree_counterpart": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/native-cache-monitor-integration/vendor/symbolica/lib/numerica/Cargo.toml",
+        "bytes": 2109,
+        "sha256": "d926d83fa3cfa1cd4cf82b5e7f73800113e0fafc0809831b39b789b8b94492d8"
+      }
+    }
+  },
+  "independent_critical_source_byte_checks": {
+    "official_State6": {
+      "actual": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/cargo/git/checkouts/symbolica-db3dbb7e8d40efb5/9cd5767/src/state.rs",
+        "bytes": 72757,
+        "sha256": "13c27c7acb4bb8705814615144f35304f682d66bd23c8e252b80134975c73ce1"
+      },
+      "identity_worktree_counterpart": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/native-cache-monitor-integration/vendor/symbolica/src/state.rs",
+        "bytes": 72757,
+        "sha256": "13c27c7acb4bb8705814615144f35304f682d66bd23c8e252b80134975c73ce1"
+      }
+    },
+    "public_opaque_union": {
+      "actual": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/cargo/git/checkouts/rustred-971a3b8def498c77/c2ca815/crates/rustred-app/src/application/saved_application/cache_pack/bundle/snapshot.rs",
+        "bytes": 26391,
+        "sha256": "860a5dd7eb350315eaaa991f51edd12430096a358536ce34f79ef866c08f797c"
+      },
+      "identity_worktree_counterpart": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/native-cache-monitor-integration/crates/rustred-app/src/application/saved_application/cache_pack/bundle/snapshot.rs",
+        "bytes": 26391,
+        "sha256": "860a5dd7eb350315eaaa991f51edd12430096a358536ce34f79ef866c08f797c"
+      }
+    }
+  },
+  "independent_depfile_hash_checks": 153,
+  "directory_trigger_records": {
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/native-cache-monitor-integration/crates": {
+      "kind": "Cargo_build_script_rerun_if_changed_directory_trigger",
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/native-cache-monitor-integration/crates",
+      "actual_type": "directory",
+      "repository": "/shared/codex-1/vakint_rustred/workspace/5l-push/native-cache-monitor-integration",
+      "pinned_revision": "c2ca815cc906bdeaf7cb8c63b637e81a80fba917",
+      "relative": "crates",
+      "tracked_tree_oid": "73e0b42176175f1a7a16609f5d4de079351f1ec3",
+      "tracked_tree_entry": "040000 tree 73e0b42176175f1a7a16609f5d4de079351f1ec3\tcrates",
+      "associated_actual_Cargo_SourceIDs": {
+        "rustred": "git+https://github.com/alphal00p/rustred?rev=c2ca815cc906bdeaf7cb8c63b637e81a80fba917#c2ca815cc906bdeaf7cb8c63b637e81a80fba917",
+        "rustred-app": "git+https://github.com/alphal00p/rustred?rev=c2ca815cc906bdeaf7cb8c63b637e81a80fba917#c2ca815cc906bdeaf7cb8c63b637e81a80fba917",
+        "rustred-order": "git+https://github.com/alphal00p/rustred?rev=c2ca815cc906bdeaf7cb8c63b637e81a80fba917#c2ca815cc906bdeaf7cb8c63b637e81a80fba917"
+      },
+      "dependencies": [
+        {
+          "depfile": "/shared/codex-1/vakint_rustred/workspace/build/native-producer-c2ca-v2-ci-optim/ci-optim/native-selected-cache-producer.d",
+          "raw": "/shared/codex-1/vakint_rustred/workspace/5l-push/native-cache-monitor-integration/crates",
+          "reporting_artifact_package_id": "path+file:///shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-c2ca-source#native-selected-cache-producer@0.1.0",
+          "reporting_artifact_target": {
+            "kind": [
+              "bin"
+            ],
+            "crate_types": [
+              "bin"
+            ],
+            "name": "native-selected-cache-producer",
+            "src_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-c2ca-source/src/main.rs",
+            "edition": "2024",
+            "doc": true,
+            "doctest": false,
+            "test": true
+          }
+        }
+      ],
+      "scope": "Trigger membership, not a claim all directory files were compiled; regular .d inputs separately byte-hashed."
+    },
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/native-cache-monitor-integration/vendor/symbolica/lib": {
+      "kind": "Cargo_build_script_rerun_if_changed_directory_trigger",
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/native-cache-monitor-integration/vendor/symbolica/lib",
+      "actual_type": "directory",
+      "repository": "/shared/codex-1/vakint_rustred/workspace/5l-push/native-cache-monitor-integration/vendor/symbolica",
+      "pinned_revision": "9cd57678d8817ec33c05cacba4925162f1c86b0b",
+      "relative": "lib",
+      "tracked_tree_oid": "e48d30ebb21eec1afff397e84dc9b9abc366a457",
+      "tracked_tree_entry": "040000 tree e48d30ebb21eec1afff397e84dc9b9abc366a457\tlib",
+      "associated_actual_Cargo_SourceIDs": {
+        "symbolica": "git+https://github.com/symbolica-dev/symbolica?rev=9cd57678d8817ec33c05cacba4925162f1c86b0b#9cd57678d8817ec33c05cacba4925162f1c86b0b",
+        "graphica": "git+https://github.com/symbolica-dev/symbolica?rev=9cd57678d8817ec33c05cacba4925162f1c86b0b#9cd57678d8817ec33c05cacba4925162f1c86b0b",
+        "numerica": "git+https://github.com/symbolica-dev/symbolica?rev=9cd57678d8817ec33c05cacba4925162f1c86b0b#9cd57678d8817ec33c05cacba4925162f1c86b0b"
+      },
+      "dependencies": [
+        {
+          "depfile": "/shared/codex-1/vakint_rustred/workspace/build/native-producer-c2ca-v2-ci-optim/ci-optim/native-selected-cache-producer.d",
+          "raw": "/shared/codex-1/vakint_rustred/workspace/5l-push/native-cache-monitor-integration/vendor/symbolica/lib",
+          "reporting_artifact_package_id": "path+file:///shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-c2ca-source#native-selected-cache-producer@0.1.0",
+          "reporting_artifact_target": {
+            "kind": [
+              "bin"
+            ],
+            "crate_types": [
+              "bin"
+            ],
+            "name": "native-selected-cache-producer",
+            "src_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-c2ca-source/src/main.rs",
+            "edition": "2024",
+            "doc": true,
+            "doctest": false,
+            "test": true
+          }
+        }
+      ],
+      "scope": "Trigger membership, not a claim all directory files were compiled; regular .d inputs separately byte-hashed."
+    },
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/native-cache-monitor-integration/vendor/symbolica/src": {
+      "kind": "Cargo_build_script_rerun_if_changed_directory_trigger",
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/native-cache-monitor-integration/vendor/symbolica/src",
+      "actual_type": "directory",
+      "repository": "/shared/codex-1/vakint_rustred/workspace/5l-push/native-cache-monitor-integration/vendor/symbolica",
+      "pinned_revision": "9cd57678d8817ec33c05cacba4925162f1c86b0b",
+      "relative": "src",
+      "tracked_tree_oid": "0b6ebda5a960cc111501b418bf2be2e7901e6e6a",
+      "tracked_tree_entry": "040000 tree 0b6ebda5a960cc111501b418bf2be2e7901e6e6a\tsrc",
+      "associated_actual_Cargo_SourceIDs": {
+        "symbolica": "git+https://github.com/symbolica-dev/symbolica?rev=9cd57678d8817ec33c05cacba4925162f1c86b0b#9cd57678d8817ec33c05cacba4925162f1c86b0b",
+        "graphica": "git+https://github.com/symbolica-dev/symbolica?rev=9cd57678d8817ec33c05cacba4925162f1c86b0b#9cd57678d8817ec33c05cacba4925162f1c86b0b",
+        "numerica": "git+https://github.com/symbolica-dev/symbolica?rev=9cd57678d8817ec33c05cacba4925162f1c86b0b#9cd57678d8817ec33c05cacba4925162f1c86b0b"
+      },
+      "dependencies": [
+        {
+          "depfile": "/shared/codex-1/vakint_rustred/workspace/build/native-producer-c2ca-v2-ci-optim/ci-optim/native-selected-cache-producer.d",
+          "raw": "/shared/codex-1/vakint_rustred/workspace/5l-push/native-cache-monitor-integration/vendor/symbolica/src",
+          "reporting_artifact_package_id": "path+file:///shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-c2ca-source#native-selected-cache-producer@0.1.0",
+          "reporting_artifact_target": {
+            "kind": [
+              "bin"
+            ],
+            "crate_types": [
+              "bin"
+            ],
+            "name": "native-selected-cache-producer",
+            "src_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-c2ca-source/src/main.rs",
+            "edition": "2024",
+            "doc": true,
+            "doctest": false,
+            "test": true
+          }
+        }
+      ],
+      "scope": "Trigger membership, not a claim all directory files were compiled; regular .d inputs separately byte-hashed."
+    }
+  },
+  "actual_ELF": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/build/native-producer-c2ca-v2-ci-optim/ci-optim/native-selected-cache-producer",
+    "bytes": 39986184,
+    "sha256": "4843e29e64b319585a4437c0bbd21e9c2212626242e8300a78808d9351763539"
+  },
+  "actual_profile": {
+    "command_profile": "ci-optim",
+    "Cargo_artifact": {
+      "opt_level": "2",
+      "debuginfo": 0,
+      "debug_assertions": true,
+      "overflow_checks": true,
+      "test": false
+    },
+    "actual_Cargo_PROFILE_environment": "debug"
+  },
+  "resources": {
+    "seconds": 8.463336867978796,
+    "minimum_observed_machine_MemAvailable_bytes": 379627761664,
+    "maximum_observed_owned_cohort_rss_bytes": 32366592,
+    "signals": []
+  },
+  "reviewer_actions": [
+    "Read/hash sealed source and build metadata",
+    "Independently join all153 compiler artifact records to .d coverage and hash actual153 .d files",
+    "Recompute six counterpart occurrence counts from recorded regular-input dependencies",
+    "Check exact3 typed Git-tree witnesses and SourceID associations",
+    "Byte-compare6 actual Cargo manifests and2 critical source files against pinned clean worktrees",
+    "Hash allowed original39.99MB ELF and unchanged helper source/lock files",
+    "Inspect parent exact PIDFD/service terminal evidence"
+  ],
+  "not_performed": [
+    "Recovery helper/controller rerun or import",
+    "Cargo build/test",
+    "ELF execution",
+    "Cache/index/payload read",
+    "Any copy, reduction, export or reimport",
+    "Process/service signalling",
+    "Overwrite original failed evidence"
+  ],
+  "full_regular_input_rehash_repeated_by_peer": false,
+  "full_regular_input_rehash_qualification": "Reviewed supplemental helper performed3317 regular input byte hashes and all counterpart comparisons under its exact Root GO. Peer verified metadata joins/all .d hashes and specified public source anchors without rerunning the helper.",
+  "unresolved_review_findings": [],
+  "composed_build_provenance_review": "PASS using preserved successful build/test/Clippy/build-info gates plus separately supervised supplemental inventory; original failed controller result remains unchanged.",
+  "cache_runtime_authorized": false,
+  "runtime_or_scientific_acceptance": false,
+  "remaining_acceptance": "Separate Root runtime clearance and all cache/measurement/export/publication gates remain required."
+}

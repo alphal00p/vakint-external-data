@@ -1,0 +1,52 @@
+{
+  "schema": "native.private-layered-helper-source-freeze-projection.v1",
+  "files": {
+    "Cargo.toml": {
+      "path": "provenance/native-exporter-c2ca-canonical-20261028/source/Cargo.toml",
+      "bytes": 1719,
+      "sha256": "98f6ebe93245988c09aaa25ef1e2b231cd83a37d600037b21d41df06dc65286d"
+    },
+    "Cargo.lock": {
+      "path": "provenance/native-exporter-c2ca-canonical-20261028/source/Cargo.lock",
+      "bytes": 40570,
+      "sha256": "f28aadbf915abf2c57549ed91d88a1aecc3ca8e235ead6894a8945910c3ecac5"
+    },
+    "build.rs": {
+      "path": "provenance/native-exporter-c2ca-canonical-20261028/source/build.rs",
+      "bytes": 6573,
+      "sha256": "bdb1e13d7d57635aaf10b55cd2009ab99f9b37bd77a4a875bad0af3263b18f99"
+    },
+    "src/main.rs": {
+      "path": "provenance/native-exporter-c2ca-canonical-20261028/source/src/main.rs",
+      "bytes": 37426,
+      "sha256": "84c4c016855af710c30bed62530d37e3ab27a536f6d55bdb2a3db560d32bf7b1"
+    },
+    "src/selection.rs": {
+      "path": "provenance/native-exporter-c2ca-canonical-20261028/source/src/selection.rs",
+      "bytes": 11406,
+      "sha256": "bed2e34853e6654a6c1903a3ec59db81d695b1bd1d1f0190ab3d68ce4ce3de1b"
+    },
+    "src/union.rs": {
+      "path": "provenance/native-exporter-c2ca-canonical-20261028/source/src/union.rs",
+      "bytes": 35083,
+      "sha256": "1808b73180a0061044d3741a7fa3869836e15b21b931db7f4815bf3d3a36a5e4"
+    },
+    "src/index_identity.rs": {
+      "path": "provenance/native-exporter-c2ca-canonical-20261028/source/src/index_identity.rs",
+      "bytes": 4556,
+      "sha256": "9c0bcb8aab60ccde38c7a406d719e26632bfb164829d1ef5e6c5a9ab23ec432e"
+    },
+    "src/proof_reference.rs": {
+      "path": "provenance/native-exporter-c2ca-canonical-20261028/source/src/proof_reference.rs",
+      "bytes": 11307,
+      "sha256": "e8ce76485fac54f11fba173cfa4405fe08c8b9750758ce493c99251f22d2adfd"
+    },
+    "src/resource_guard_admission.rs": {
+      "path": "provenance/native-exporter-c2ca-canonical-20261028/source/src/resource_guard_admission.rs",
+      "bytes": 14836,
+      "sha256": "bb3223d27584b42069d3813ebdcaefa6598a0935ca4531714a50248b334870cb"
+    }
+  },
+  "scope": "New archive of exact compiled helper bytes, verified against actual build-info. The original controller failed before writing its planned freeze; this is not that missing historical output.",
+  "compiled_source_identity_sha256": "13ee81b6525b26406c111713d4deb3463ab1abe81ba4ff65802bde7f31b364fe"
+}

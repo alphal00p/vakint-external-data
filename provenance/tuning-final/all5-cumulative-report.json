@@ -1,0 +1,303 @@
+{
+  "schema": "vakint.cumulative-native-cache-report.v1",
+  "cache_sha256": null,
+  "cache_native_index_identity": {
+    "indexes": {
+      "bindings/6b235c09ae267174886f88a033214526be0dc1a3158fd597f4fb97b8dccd9853/cache.rrindex": {
+        "bytes": 36582873,
+        "sha256": "a1a33ef0861c45726d64ca2c0fadf76c85d3ccad77193b231a89b92c5c05eea2"
+      },
+      "bundle.rrindex": {
+        "bytes": 5254,
+        "sha256": "4f940e610956c96a5f344bf8f0540021ab70908873bbd3ade9c0c4bf9f0f0f6d"
+      }
+    },
+    "layout": "bundle",
+    "schema": "vakint.native-cache-index-identity.v1",
+    "sha256": "2658cd25b88b24c00fc5e3ad7a68b2396fdbe4ab8facea0039873d971b236654"
+  },
+  "semantic_binding": {
+    "artifact_digest": [
+      162,
+      68,
+      185,
+      180,
+      206,
+      143,
+      114,
+      40,
+      199,
+      12,
+      133,
+      132,
+      8,
+      135,
+      208,
+      168,
+      201,
+      62,
+      78,
+      199,
+      29,
+      175,
+      102,
+      4,
+      104,
+      117,
+      83,
+      104,
+      97,
+      251,
+      210,
+      115
+    ],
+    "family_fingerprint": "rustred-integral-family-v2;N27:tide_five_loop_common_basis;L5;2:k1;2:k2;2:k3;2:k4;2:k5;E0;P1;1:d;Q5,0,15;M;RY1,1;I+1;X1;Y1,1;I+1;X0;D15;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I+2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;G0;U15;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;",
+    "layer": "saved-application-route-apply-v1",
+    "physical_arity": 15
+  },
+  "data_manifest_sha256": "794c0e4b44a1c6be1d78f8ebdbca188473678823ea1f3b821f70b63b2a6dd5a7",
+  "sources": [
+    {
+      "id": "q0-complete",
+      "kind": "running-capture",
+      "scope": "completed-example",
+      "config": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/physics/capture-enabled-physical-user-units-20261025/q0.final.json",
+        "sha256": "c4e6e158c687242be1e26d2b3a93bd694ca21af0464719c77eaeacd12df1003e"
+      },
+      "producer": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/physics/capture-enabled-physical-user-units-20261025/q0-optimized-capture-run1/completion.json",
+        "sha256": "4c7e0cc18e5f455e328f310a8272574baf2714da36dd2359bf4fe3e15ed075ea"
+      },
+      "capture": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/physics/capture-enabled-physical-user-units-20261025/q0-optimized-capture-run1/run/running-cache.json",
+        "sha256": "07462712e89fba1d54213a20c8d69f3df95d8a5721ec2d6de2b09570d0af002d"
+      },
+      "snapshot": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/physics/capture-enabled-physical-user-units-20261025/q0-optimized-capture-run1/run/running-cache-snapshots/ladder-cold-2601498-1793112709121969629.json",
+        "sha256": "7742b3a655e1e91c287e15b82f62a88add067fbca66ed412bb5f4a1ab15501d8"
+      },
+      "index": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/physics/capture-enabled-physical-user-units-20261025/q0-optimized-capture-run1/run/running-cache-snapshots/ladder-cold-2601498-1793112709121969629.rrindex",
+        "sha256": "d410c9422c335f4e492e57e968d9c03059d01793e5b9a99393008769e40fbb5b"
+      },
+      "barrier": {
+        "path": "barriers/q0-complete.json",
+        "sha256": "22e2eacd1ef3e94ee74a3bd665db651ada97784fd93631d8ede01bc31744d683"
+      }
+    },
+    {
+      "id": "tuning-120",
+      "kind": "running-capture",
+      "scope": "completed-capture",
+      "producer": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/native-large-cache-tuning-pilot-v2/run1/case-cached/worker.json",
+        "sha256": "cff8c4cb4f8aec72dbf1cc09f546890f677c301ce7735de3116faed1cc24aaca"
+      },
+      "capture": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/native-large-cache-tuning-pilot-v2/run1/case-cached/running-cache.json",
+        "sha256": "251dfc9fc1d2c7a8f54f507ac578521a75a29e265c1b4b31a4186ee83eef468c"
+      },
+      "snapshot": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/native-large-cache-tuning-pilot-v2/run1/case-cached/running-cache-snapshots/measure-102072-1792988729025889974.json",
+        "sha256": "b4f420e37e6aae3c07bb87fbcd035244e63a47828e546f883486e35b49272b50"
+      },
+      "completion": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/native-large-cache-tuning-pilot-v2/functional-receipt.json",
+        "sha256": "cf1e2b3be58c21ee0c7b8fd81dc751fb29a3ad8a965f4ac8e6269b76a5ab566f"
+      },
+      "index": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/native-large-cache-tuning-pilot-v2/run1/case-cached/running-cache-snapshots/measure-102072-1792988729025889974.rrindex",
+        "sha256": "535eb5c1d986e264934fee200e6c0b4b480d531af6dfafc306e66e5159442b86"
+      },
+      "barrier": {
+        "path": "barriers/tuning-120.json",
+        "sha256": "494880ef4c6b652ed22d35b0c6a3cfe3053ed83131c82745136661d356c35cff"
+      }
+    },
+    {
+      "id": "q-monitor-1089",
+      "kind": "running-capture",
+      "scope": "completed-capture",
+      "producer": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/vakint-running-cache-monitor-cli-q-capture-run1/monitored-q/case-000-00-uncached/worker.json",
+        "sha256": "a8d169e4562584192563f6a88d11a618565ecd916fc2c797f09ca882bfe40e25"
+      },
+      "capture": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/vakint-running-cache-monitor-cli-q-capture-run1/monitored-q/case-000-00-uncached/running-cache.json",
+        "sha256": "fb8ab69a0afa018bb37f9dfe52b474c0baf04d96edcf9e29004b0e83df18718f"
+      },
+      "snapshot": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/vakint-running-cache-monitor-cli-q-capture-run1/monitored-q/case-000-00-uncached/running-cache-snapshots/measure-637287-1792972513725740462.json",
+        "sha256": "73eec6fcb29096db00ce55291ff27bdc90530b992f5643641fb9d775791936b5"
+      },
+      "completion": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/vakint-running-cache-monitor-cli-q-capture-run1/postflight.json",
+        "sha256": "298c905569b6c1a80f5ae29f63a859b59537cc41c81d93fd91063f728f2883b1"
+      },
+      "index": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/vakint-running-cache-monitor-cli-q-capture-run1/monitored-q/case-000-00-uncached/running-cache-snapshots/measure-637287-1792972513725740462.rrindex",
+        "sha256": "caa183c75a3d4ffd67fc909866107ef0607dddf016045ce859c8dc2821c5e78b"
+      },
+      "barrier": {
+        "path": "barriers/q-monitor-1089.json",
+        "sha256": "e97e941fffa09bde7dd9ed3e340f1858947c3caba40cea40943ace9f19170dec"
+      },
+      "result": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/vakint-running-cache-monitor-cli-q-capture-run1/result.json",
+        "sha256": "ce4275d8cc60b30d03d804d00e73404fd5fa202f3214e69b317a956918bd0b61"
+      },
+      "capture_evidence": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/vakint-running-cache-monitor-cli-q-capture-run1/running-capture-evidence.json",
+        "sha256": "2a1226acde6d7b27c75d1ff17bde1b3343c7226759f0cbbca0ee066b2373aa63"
+      }
+    },
+    {
+      "id": "historical-old-committed-prefix",
+      "kind": "native-index-prefix",
+      "scope": "committed-prefix",
+      "prefix_role": "old",
+      "producer": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/cache-workload/final-auth-8ef03d7/final-sparse-three-root-run1/builder-work/build.json",
+        "sha256": "6e2c56ae7a6dda334b788fcb20de91cb84f514cfadb9ab8753b4dca5f039d7a3"
+      },
+      "capture": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/native-cache-real-union-proof-v1/run1/metadata-proof.json",
+        "sha256": "da4f224468e1ab6b3d44e9d641347434b8436d810e8b8553002607e5983d71b3"
+      },
+      "snapshot": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/native-cache-real-union-proof-v1/run1/snapshots/old-base-captured.rrindex",
+        "sha256": "c4c7d5e7b201b3c3fcfc5197761eb3c806597a408b0e32e46661e0eeb35f2007"
+      },
+      "barrier": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/native-cache-real-union-proof-v1/postflight-qualified-prefix-proof.json",
+        "sha256": "b3448366c1b46da1357ed9474fad7a67c55e0933326a3d236e9430fb5c89ac2b"
+      }
+    },
+    {
+      "id": "historical-q0-committed-prefix",
+      "kind": "native-index-prefix",
+      "scope": "committed-prefix",
+      "prefix_role": "q0",
+      "producer": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/physics/capture-enabled-physical-user-units-20261025/q0.final.json",
+        "sha256": "c4e6e158c687242be1e26d2b3a93bd694ca21af0464719c77eaeacd12df1003e"
+      },
+      "capture": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/native-cache-real-union-proof-v1/run1/metadata-proof.json",
+        "sha256": "da4f224468e1ab6b3d44e9d641347434b8436d810e8b8553002607e5983d71b3"
+      },
+      "snapshot": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/native-cache-real-union-proof-v1/run1/snapshots/q0-captured.rrindex",
+        "sha256": "c033756d77ffff7d83b8fd9296880e535c3bc5b73983d64d9df4e4f8a0cf8c73"
+      },
+      "barrier": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/native-cache-real-union-proof-v1/postflight-qualified-prefix-proof.json",
+        "sha256": "b3448366c1b46da1357ed9474fad7a67c55e0933326a3d236e9430fb5c89ac2b"
+      }
+    },
+    {
+      "id": "accepted-small-two-root-prepared-snapshot",
+      "kind": "strict-preparation",
+      "scope": "completed-preparation",
+      "producer": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/strict-preparation-cumulative-source/actual-small-v1/proof-root/provenance/small-strict-source/producer.json",
+        "sha256": "6d12f1329b992c3a46614c61b5fb004897444c705aa41f3559a14ff9d3febea1"
+      },
+      "acceptance": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/strict-preparation-cumulative-source/actual-small-v1/proof-root/provenance/small-strict-source/acceptance.json",
+        "sha256": "8513bbac970bab938d4c2806f53f0757896b6b6de2b6f1116bad0299ad2f90a5"
+      },
+      "preservation": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/strict-preparation-cumulative-source/actual-small-v1/proof-root/provenance/small-strict-source/preservation.json",
+        "sha256": "cd3855bd6549b4a9927b543df01c52a3182c42a6ff72869db0d357d76ed868c7"
+      },
+      "inventory": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/strict-preparation-cumulative-source/actual-small-v1/proof-root/provenance/small-strict-source/inventory.json",
+        "sha256": "e373ee5e530b1a80577d6eb15a87bbb7f7069e3a6d3fa5ba51c2bce31f248e9a"
+      },
+      "native_validation": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/strict-preparation-cumulative-source/actual-small-v1/proof-root/provenance/small-strict-source/native_validation.json",
+        "sha256": "22c1d0c359f9b8ed475f9003f302f70ab0c6eb77fff64507896f7f961dd6818e"
+      },
+      "native_supervision": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/strict-preparation-cumulative-source/actual-small-v1/proof-root/provenance/small-strict-source/native_supervision.json",
+        "sha256": "75b74b019e29ec209836d8052ca532b489a7c09d40fce78b177b1eb62e72e005"
+      },
+      "native_artifacts": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/strict-preparation-cumulative-source/actual-small-v1/proof-root/provenance/native-exporter-v3/collector-artifacts.json",
+        "sha256": "f9db5c6a72ccc6801a0a0c563f0a6f877bfc7ddf2abaa030ce7a2e39080c5e08"
+      }
+    }
+  ],
+  "inventory": {
+    "compressed_bytes": 117872372421,
+    "stored_record_references": 3048399,
+    "physical_chunks": 72289
+  },
+  "validation": {
+    "path": "native-validation.json",
+    "sha256": "b3914497a0e477fde3f7a507c1b2b6b3600649595cf6c38847b5ac207526a143"
+  },
+  "physical_input_lineage_groups": [
+    {
+      "physical_source_id": "q0-complete",
+      "lineage_ids": [
+        "q0-complete",
+        "historical-q0-committed-prefix"
+      ],
+      "scope": "Historical same-directory committed prefix is overlapping lineage; not an additional copied source or completed old workload."
+    },
+    {
+      "physical_source_id": "tuning-120",
+      "lineage_ids": [
+        "tuning-120"
+      ]
+    },
+    {
+      "physical_source_id": "q-monitor-1089",
+      "lineage_ids": [
+        "q-monitor-1089"
+      ]
+    },
+    {
+      "physical_source_id": "old-completed-node-prefix",
+      "lineage_ids": [
+        "historical-old-committed-prefix"
+      ]
+    },
+    {
+      "physical_source_id": "accepted-small-two-root",
+      "lineage_ids": [
+        "accepted-small-two-root-prepared-snapshot"
+      ]
+    }
+  ],
+  "Native_copy_producer": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-proof-root/provenance/native-exporter-c2ca/collector-artifacts.json",
+    "bytes": 10300,
+    "sha256": "57e9bd29a0a521771a95c6cf9d033d1ee481fb2c633e857ff915b2b0adffa759"
+  },
+  "prospective_measurement_collector_build_cohorts": {
+    "five_loop_qcd_ladder": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/collector-cohort-adapter/actual-dc7364-attempt2-run1/provenance/actual-two-collector-cohort/five_loop_qcd_ladder-cohort.json",
+      "bytes": 2015,
+      "sha256": "2c07a5ec9b9631e7e074bf40254347b995aa755b9a0e5fa9560b338dc5ccdb31"
+    },
+    "measure_cache": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/collector-cohort-adapter/actual-dc7364-attempt2-run1/provenance/actual-two-collector-cohort/measure_cache-cohort.json",
+      "bytes": 1305,
+      "sha256": "9407dfb3e0942d73185fb4e32e456c2dfab01b2e74808f1774a8e00dd51ddd0c"
+    }
+  },
+  "separate_unique_row_census": {
+    "receipt": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/heavy-five-source-finalization-20261027/census-phase1/native-census/receipt.json",
+      "bytes": 8880,
+      "sha256": "09da0e5baa29e31b4c6c1dd5ccecb4e089f806bc23ce081066efce2700cd8e46"
+    },
+    "unique_records": 2230516,
+    "identical_duplicates": 817883
+  },
+  "scope": "Five physical immutable input directories may have overlapping historical lineages. No global collector ELF, completed old workload, coverage upgrade, held-out selection, or all5 performance claim."
+}

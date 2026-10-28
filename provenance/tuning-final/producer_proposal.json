@@ -1,0 +1,370 @@
+{
+  "schema": "vakint.tuning-v1-staging-source-proposal.v1",
+  "status": "SOURCE_AND_SMALL_METADATA_ONLY_AWAIT_ROOT_BOUND_PLAN_NOT_LAUNCHABLE",
+  "utc": "2026-10-28T06:35:55.234013+00:00",
+  "conclusion": {
+    "canonical_accepted_receipt_candidate": "Use actual unmodified Rust-supervisor measurement.json518d4963 as the nonphysical v1 case receipt. It already has all success/supervision fields required by current owner; do not synthesize a projected successful external Python controller completion.",
+    "canonical_validation_performed": false,
+    "actual_controller_PASS_claim": false,
+    "external_publication_failure_preserved": true,
+    "actual_trace_parsed_or_hash_verified_here": false
+  },
+  "actual_evidence": {
+    "measurement": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/tuning-run1/run/case-000-00-cached/measurement.json",
+      "sha256": "518d4963a3409b65ca0091affc31aecd90816e5ccc5e5af06d2298426444f7c4",
+      "bytes": 37345
+    },
+    "worker": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/tuning-run1/run/case-000-00-cached/worker.json",
+      "sha256": "9d0a80fa7eac1bfe0a7543cfd4eee2a34a8019d56cc319be323e969d707fdc74",
+      "bytes": 36860
+    },
+    "summary": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/tuning-run1/run/summary.json",
+      "sha256": "2f3e5e7c8b761aee479d50595ef29d83a35c19757285a0cdb0388f4a2d71fe43",
+      "bytes": 52827
+    },
+    "identity": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/tuning-run1/run/identity.json",
+      "sha256": "7ed6b91178b05b558f769743e3637c810368bd538c99a9671e68f1165448b34b",
+      "bytes": 11789
+    },
+    "original_external_completion": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/tuning-run1/completion.json",
+      "sha256": "aa0dc0e3a5aa2170dcb738f86221b41bf4cd6760d0a88d0705772af2cd36b83a",
+      "bytes": 1392
+    },
+    "original_external_kernel_terminal": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/tuning-kernel-terminal.json",
+      "sha256": "4a1ee3d2f882221b3a024c9bd5319b1f9a05aebe321138ebc21f50e335eaa037",
+      "bytes": 3028
+    },
+    "publication_failure_outcome": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/tuning-native-outcome-preserved.json",
+      "sha256": "22fa72e4206dd28d6d437f7166906f6e6c74f65e24176b7bb5ad82fa4ab781a2",
+      "bytes": 5343
+    },
+    "original_launch": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/tuning-run1/launch.json",
+      "sha256": "edeff0418bb59b09d1da73960da7147435923ad032bf00d26db6295992e40387",
+      "bytes": 1441
+    },
+    "original_controller_source": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/tuning.py",
+      "sha256": "f83ae5de5ffd760653182c6072aea50f3077a2b23b19d24fa35a0c8d13478253",
+      "bytes": 35900
+    },
+    "actual_measure_cohort": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/collector-cohort-adapter/actual-2d70-run1/provenance/actual-two-collector-cohort/measure_cache-cohort.json",
+      "sha256": "2aa7b5115ce4ab6df2210c2a012c0378312c46b0cde14ef68d6d820b88f00e4b",
+      "bytes": 1305
+    },
+    "actual_cohort_adapter_validation": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/collector-cohort-adapter/actual-2d70-run1/provenance/actual-two-collector-cohort/adapter-validation.json",
+      "sha256": "22a98680c361c4b7735642c7585716e21e022dd0649dc303607aad1c47ff4425",
+      "bytes": 3115
+    },
+    "workload": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/final-usage-plan/workload-inputs/workload.json",
+      "sha256": "cc0a10d32bbbdc29fd02ab09348ee2b2e5c21471c280222cbffb1b1ad75dd76b",
+      "bytes": 19953
+    },
+    "frozen_public_suites": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/final-usage-plan/workload-inputs/frozen-public-suites.json",
+      "sha256": "dcf2a6d0e6de4dd55fc9a2dd23a16381dc501a64ab843433d15f38e77246d220",
+      "bytes": 20474
+    },
+    "qualified_lowering_proof": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/final-usage-plan/workload-inputs/frozen-public-suites.lowering-proof.json",
+      "sha256": "a5db9aa5a8eb24b99e316740d66a64ea7d197e5cd484132947c3c364449c88c5",
+      "bytes": 13985
+    },
+    "source_census": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/final-usage-plan/workload-inputs/five-source-current-public-root-audit.json",
+      "sha256": "dd21ebafa719d460141a83c8bd166a00dd485d9aa89397d353cc22d07afe1925",
+      "bytes": 792332
+    },
+    "existing_workload_source_origin": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/final-usage-plan/workload-inputs/origin-delta-proof.json",
+      "sha256": "e0cae2e41cebac4f79fbc93297d3fa72de8fd8c285b4ac3fe193d4d0ba67f4f6",
+      "bytes": 23849
+    }
+  },
+  "receipt_source_contract": {
+    "canonical_owner": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/external-light-profile-v2-20261027/tools/cache_usage.py",
+      "sha256": "4c1b9c905962739edc5bbb27443838c144489a73a625ad865e3e5fec95f8f8db",
+      "bytes": 90730
+    },
+    "other_owner_sources": {
+      "data.py": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/external-light-profile-v2-20261027/tools/data.py",
+        "sha256": "b07bab2f8021c2ddd97c6c3f9776c3e7ef9fca54d3c386a59c448601c3808627",
+        "bytes": 59242
+      },
+      "saved_cache.py": {
+        "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/external-light-profile-v2-20261027/tools/saved_cache.py",
+        "sha256": "fb09a576ca8126a383cacad62e8dac5420240c42986819fde84e8a301c2feec6",
+        "bytes": 12677
+      }
+    },
+    "owner_head_parent_confirmed": "fbbfc212b1ef121fa62b6b6ecd3f56d3a680e064",
+    "callsites": {
+      "case_receipt1079-1100": "measure_cache collector, identity.workload_sha256 and embedded genuine WorkloadV1 tuning row must match eligible public source SHA.",
+      "case_receipt1101-1118": "receipt.success,worker_success,fresh_process and supervision.success/int exit_code0/deadline_exhaustedfalse plus cached variant; no external Python controller completion.",
+      "case_receipt1119-1198": "actual receipt input/value/guards hashes, data/binary/driver/source/compiler/binding, immutable cache identity, complete unsampled trace SHA, dispatch totals. Existing owner_proof.compiled_cohort only checked when present.",
+      "public_case389-439": "/tuning/0 in eligible WorkloadV1/frozen suite, exact UTF8 public_input SHA and all held-out exclusions.",
+      "dispatch_frequencies194-275": "Every actual dispatch and collected Route root; nonnegative six counters; all per-Route/Apply positive hit frequencies reconcile; nonzero misses and intermediate_hits allowed.",
+      "cohort453-550": "Reuse actual measure_cache-specific2aa7 cohort and original two-ELF artifact/source snapshot chain, without aggregate or mapper ELF.",
+      "profile_data552-608": "Authenticate same root/5L/application metadata and active application bytes; no cache/index/record decode.",
+      "profile_frequencies1202-1304": "Exact v1 profile and case field set; trace-bound observed frequencies only."
+    },
+    "measure_cache_source": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-q0-coefficient-release-freeze-2d70-20261028/crates/vakint/examples/measure_cache.rs",
+      "sha256": "a27007e87a590ec25443e422a339563decce58b11d5f30aee51fba44e0235d6f",
+      "bytes": 103440
+    },
+    "completed_output_checker_source": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-q0-coefficient-release-freeze-2d70-20261028/crates/vakint/examples/build_cache/owner_proof.rs",
+      "sha256": "aecb6faa3ec3b4bcc6e09b7f0d71cd6a87db7358f4656acba9ab56a1cafa4233",
+      "bytes": 114112
+    },
+    "Rust_supervisor_source": "measure_cache.rs1375-1494 starts actual child, observes real wait, preserves worker fields, appends worker_success/supervision/end_to_end_seconds and writes measurement; then validate_completed_outputs hashes stored value/guards and catalogue/identity checks before summary is complete.",
+    "guard_serialization_source": "measure_cache.rs1154-1163 canonical-string BTreeSet sorted/deduplicated full guards -> guards.json -> receipt.guards_sha256. Thus canonical-full-sorted-deduplicated is genuine source convention despite no explicit receipt.guard_policy.",
+    "no_independent_science_revalidation_claim": "Existing complete Rust summary records its own completed-output/closure validation; this source review did not reopen value.symbolica or guards.json and does not establish independent final held-out parity."
+  },
+  "actual_receipt_required_fields": {
+    "schema": "vakint.five-loop-cache-measurement.v1",
+    "success": true,
+    "worker_success": true,
+    "fresh_process": true,
+    "case_id": "final-v2-parent-32745-late-double-dot-rank1-tuning",
+    "variant": "cached",
+    "supervision": {
+      "child_pid": 38307,
+      "deadline_exhausted": false,
+      "elapsed_seconds": 531.085362861,
+      "exit_code": 0,
+      "exit_status": "exit status: 0",
+      "finished_unix_seconds": 1793169010.8339634,
+      "interval_scope": "supervisor pre-spawn setup through supervisor-observed worker completion",
+      "started_unix_seconds": 1793168479.7486262,
+      "success": true,
+      "supervisor_pid": 38033
+    },
+    "input_sha256": "f78de631740029bf214dab52df855f9fe8e3aeae3d91622fc11fbddd71f90d75",
+    "value_sha256": "bc25a45f2c6cfc32803a952b4ef5e8c734cfe289aa6d5175b332764cdf8ab9ec",
+    "guards_sha256": "682a63fecd4bc48f2e14bb36f1bc08fc80bbec86fc1203fcf6dcf8d316489413",
+    "provisional": false,
+    "native_keys_authenticated": true,
+    "native_key_authentication": "verified-lowered-inputs-with-frozen-owner-protection",
+    "performance_claim_allowed": false
+  },
+  "actual_summary": {
+    "schema": "vakint.five-loop-cache-suite.v1",
+    "complete": true,
+    "diagnostic_only": true,
+    "native_keys_authenticated": true,
+    "execution_provenance_complete": true,
+    "selection_allowed": false,
+    "final_held_out_comparison": false,
+    "provisional": false,
+    "cases": [
+      {
+        "backing_reuse": "root-scope-unclassified",
+        "catalogue_closure": {
+          "closed": true,
+          "numerical_evaluation_claim": false,
+          "unknown_count": 0,
+          "unknown_masters": []
+        },
+        "diagnostic_only": true,
+        "exact_output_and_guard_parity": null,
+        "hit_stream_complete": true,
+        "id": "final-v2-parent-32745-late-double-dot-rank1-tuning",
+        "intermediate_hits": 13918,
+        "native_keys_authenticated": true,
+        "requested_root_hits": 0,
+        "successful": true
+      }
+    ]
+  },
+  "worker_supervisor_receipt_provenance": {
+    "summary_embeds_actual_measurement_exactly": true,
+    "worker_and_measurement_common_fields_identical": true,
+    "only_Rust_supervisor_added_fields": [
+      "supervision",
+      "worker_success",
+      "end_to_end_seconds"
+    ],
+    "external_controller_failed_status": "RUST_WORKER_SUCCESS_CONTROLLER_FINAL_PUBLICATION_FAILED",
+    "original_external_completion_status": "RUNNING",
+    "publication_bug": "Initial RUNNING completion.json is exclusive-persisted; final exclusive persist rejects that same existing path. No original receipt/source modified.",
+    "external_receipt_will_not_be_rewritten": true
+  },
+  "public_input_identity": {
+    "case_id": "final-v2-parent-32745-late-double-dot-rank1-tuning",
+    "role_pointer": "/tuning/0",
+    "exact_UTF8_source_sha256": "728f3743b7c86a95ae1f279999b0f54634349c67628d5fbede077451f6302cfb",
+    "actual_parsed_input_sha256": "f78de631740029bf214dab52df855f9fe8e3aeae3d91622fc11fbddd71f90d75",
+    "source_and_parsed_hashes_are_distinct": true,
+    "parsed_input_qualified_owner_binding": "f78de631740029bf214dab52df855f9fe8e3aeae3d91622fc11fbddd71f90d75",
+    "workload_SHA": "cc0a10d32bbbdc29fd02ab09348ee2b2e5c21471c280222cbffb1b1ad75dd76b",
+    "suite_SHA": "dcf2a6d0e6de4dd55fc9a2dd23a16381dc501a64ab843433d15f38e77246d220",
+    "qualified_proof_SHA": "a5db9aa5a8eb24b99e316740d66a64ea7d197e5cd484132947c3c364449c88c5",
+    "original_training_rows_preserved_not_executed": 3,
+    "tuning_rows": 1,
+    "held_out_rows": 12,
+    "held_outs_selected_for_usage": false,
+    "original_qualification_provenance_not_relabeled_as_current_Main": true
+  },
+  "minimal_portable_staging_shape": {
+    "fresh_output_proposal": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/tuning-v1-stage-run1",
+    "source_only_not_launchable": true,
+    "reuse_existing_metadata_helpers": "Use existing narrowly scoped metadata archive/checked SHA/native-work projection patterns; no new owner schema, parallel cache system, false external success receipt or mandatory Native mapper.",
+    "cohort_archive_source": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/collector-cohort-adapter/actual-2d70-run1/provenance/actual-two-collector-cohort",
+    "cohort_archive_count": 15,
+    "select_exact_measure_cache_cohort": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/collector-cohort-adapter/actual-2d70-run1/provenance/actual-two-collector-cohort/measure_cache-cohort.json",
+      "sha256": "2aa7b5115ce4ab6df2210c2a012c0378312c46b0cde14ef68d6d820b88f00e4b",
+      "bytes": 1305
+    },
+    "selected_measure_cohort_sha256": "2aa7b5115ce4ab6df2210c2a012c0378312c46b0cde14ef68d6d820b88f00e4b",
+    "archive": {
+      "measurement": "provenance/tuning-final/measurement.json exact original bytes",
+      "worker": "provenance/tuning-final/worker.json exact original bytes",
+      "summary": "provenance/tuning-final/summary.json exact original bytes",
+      "identity": "provenance/tuning-final/identity.json exact original bytes",
+      "external_original_failure": "archive actual RUNNING completion, terminal, original controller source and publication-failure outcome for honesty; do not use them as successful measurement receipt",
+      "workload": "archive WorkloadV1cc0, frozen suite dcf2, proofa5db, source censusdd21 and existing origin-delta provenance preserving original identities",
+      "trace": "archive actual complete975443... trace only under separately bound Root metadata admission; 84,381,491B <100MiB; no need to archive oversized guards/value for canonical frequency admission",
+      "data": "same D438 root/5L/application metadata as completed physical-v1 stage; authenticate canonical data copies and actual all5fb3/index2658 authorities without cache reads"
+    },
+    "eligibility_documents": [
+      "embed exact bytes of WorkloadV1cc0 so receipt.identity.workload_sha256 resolves to genuine invocation",
+      "embed unchanged frozen-public-suitesdcf2 so complete12held_out IDs/inputs remain excluded; role evidence may use WorkloadV1/tuning0"
+    ],
+    "profile_skeleton": {
+      "schema": "vakint.cache-record-usage-profile.v1",
+      "semantic_binding": "exact actual measurement.cache_statistics.binding",
+      "compiled_cohort": "exact original measure_cache2aa7 cohort plus three authenticated data_manifests references",
+      "data": "same root794c/loop81ec/application976d identity",
+      "eligibility_documents": "base64 exact original workload+frozen-suite bytes/SHA",
+      "cases": [
+        {
+          "case_id": "final-v2-parent-32745-late-double-dot-rank1-tuning",
+          "role": "tuning",
+          "input_sha256": "f78de631740029bf214dab52df855f9fe8e3aeae3d91622fc11fbddd71f90d75",
+          "public_input_source_sha256": "728f3743b7c86a95ae1f279999b0f54634349c67628d5fbede077451f6302cfb",
+          "role_evidence": {
+            "document_sha256": "cc0a10d32bbbdc29fd02ab09348ee2b2e5c21471c280222cbffb1b1ad75dd76b",
+            "json_pointer": "/tuning/0"
+          },
+          "receipt": {
+            "path_hint": "provenance/tuning-final/measurement.json",
+            "sha256": "518d4963a3409b65ca0091affc31aecd90816e5ccc5e5af06d2298426444f7c4"
+          },
+          "trace": {
+            "path_hint": "provenance/tuning-final/cache-hit-events.json",
+            "sha256": "975443f3f6cdc569f2b2ae13d05a1445b811f964cf6b872e6f3868a3fb390c6d"
+          },
+          "cache_identity": {
+            "cache_sha256": null,
+            "cache_native_index_identity": {
+              "indexes": {
+                "bindings/6b235c09ae267174886f88a033214526be0dc1a3158fd597f4fb97b8dccd9853/cache.rrindex": {
+                  "bytes": 36582873,
+                  "sha256": "a1a33ef0861c45726d64ca2c0fadf76c85d3ccad77193b231a89b92c5c05eea2"
+                },
+                "bundle.rrindex": {
+                  "bytes": 5254,
+                  "sha256": "4f940e610956c96a5f344bf8f0540021ab70908873bbd3ade9c0c4bf9f0f0f6d"
+                }
+              },
+              "layout": "bundle",
+              "schema": "vakint.native-cache-index-identity.v1",
+              "sha256": "2658cd25b88b24c00fc5e3ad7a68b2396fdbe4ab8facea0039873d971b236654"
+            }
+          },
+          "value_sha256": "bc25a45f2c6cfc32803a952b4ef5e8c734cfe289aa6d5175b332764cdf8ab9ec",
+          "guards_sha256": "682a63fecd4bc48f2e14bb36f1bc08fc80bbec86fc1203fcf6dcf8d316489413",
+          "guard_policy": "canonical-full-sorted-deduplicated",
+          "observer_status": "Active",
+          "interval_ns": 0,
+          "input_dispatch_count": null,
+          "dispatches": null
+        }
+      ]
+    },
+    "trace_projection_required_later": "Project all dispatches from actual975443 trace after authenticated read; preserve exact root_collected Route identities and every Route/Apply backing_hit. Do not infer dispatch_count or collected roots from lowered_roots alone. Reuse generic native trace semantics; physical-only no-miss/requested-root-only driver cannot be reused unchanged.",
+    "generic_counter_contract": {
+      "actual_report_counters": {
+        "apply_hits": 10581,
+        "captured_records": 0,
+        "intermediate_hits": 13918,
+        "lookups": 31881,
+        "misses": 17963,
+        "requested_root_hits": 0,
+        "route_hits": 3337,
+        "skipped_records": 0
+      },
+      "required_arithmetic": "route3337 + apply10581 = hits13918 = requested0 + intermediate13918 = lookups31881 - misses17963. These are raw Native counters, never root-frontier/proper-descendant classification. Actual per-work frequencies and dispatch boundaries pending trace read.",
+      "captures_and_skips": 0
+    },
+    "preserve_unavailable_classification": {
+      "classification_available": false,
+      "recursive_mapper_certificate": null,
+      "root_frontier_or_proper_descendant_classification": null
+    },
+    "exact_existing_owner_calls_after_authorization": [
+      "cache_usage.cohort(staging_root, actual_measure_cohort)",
+      "cache_usage.profile_data(staging_root, tuning_v1_profile, staging_root/5L)",
+      "cache_usage.profile_frequencies(staging_root, tuning_v1_profile, {eligible_case_ids:[final-v2-parent-32745-late-double-dot-rank1-tuning]}, actual_binding)"
+    ],
+    "protect": "fresh output/pending must not overlap immutable actual receipts/trace/cohort/workload/source/data/cache roots. Preserve original failed source/receipt; do not protect whole BASE because fresh output is a sibling under BASE."
+  },
+  "large_files_not_read": {
+    "trace": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/tuning-run1/run/case-000-00-cached/cache-hit-events.json",
+      "bytes_lstat": 84381491,
+      "sha256_from_actual_measurement_not_recomputed": "975443f3f6cdc569f2b2ae13d05a1445b811f964cf6b872e6f3868a3fb390c6d",
+      "report_stream_complete": true,
+      "contents_read_or_parsed": false
+    },
+    "guards": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/tuning-run1/run/case-000-00-cached/guards.json",
+      "bytes_lstat": 122692491,
+      "SHA_from_actual_measurement_not_recomputed": "682a63fecd4bc48f2e14bb36f1bc08fc80bbec86fc1203fcf6dcf8d316489413",
+      "omit_from_portable_repository_metadata": true,
+      "contents_read": false
+    },
+    "value": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/tuning-run1/run/case-000-00-cached/value.symbolica",
+      "SHA_from_actual_measurement_not_recomputed": "bc25a45f2c6cfc32803a952b4ef5e8c734cfe289aa6d5175b332764cdf8ab9ec",
+      "contents_read": false
+    }
+  },
+  "pending_acceptance": {
+    "Root_bound_staging_source_and_plan": null,
+    "actual_trace_hash_parse_and_dispatch_projection": null,
+    "unchanged_canonical_owner_validation": null,
+    "v2_composition_with_physical": null,
+    "light_selection_export_or_publication": null,
+    "performance_eligibility": false
+  },
+  "independent_source_review": {
+    "task": "/root/heavy_owned_native_file/writer_source_audit/public_q0_generator/source_review",
+    "result": "Source review agrees: authentic Rust-supervisor measurement is direct v1 nonphysical receipt candidate; no external tuningcontroller PASS is required. Existing summary is complete/diagnostic; selection/final-heldout claims remain false."
+  },
+  "execution": {
+    "source_and_small_metadata_read_and_hash": true,
+    "84MB_trace_read_hash_or_parse": false,
+    "owner_import_or_calls": false,
+    "Native_CAS_build_probe_or_physical_run": false,
+    "cache_index_ELF_value_or_guards_content_read": false,
+    "generator_or_staging_driver_written": false,
+    "only_new_proposal_JSON_written": true,
+    "automatic_successor": false
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "schema": "vakint.final-instrumented-q0-replay-execution.v1",
+  "diagnostic_mode": "usage-off",
+  "engineering_timing_only": true,
+  "status": "PASS",
+  "started_utc": "2026-10-28T02:36:07.409822+00:00",
+  "controller": {
+    "pid": 2914632,
+    "start_ticks": 118866781,
+    "ppid": 9584,
+    "state": "R",
+    "uid": 1124
+  },
+  "unit": {
+    "LoadState": "loaded",
+    "ActiveState": "active",
+    "SubState": "running",
+    "InvocationID": "d73732f19bbd4cd3b1c77fe0ae13bd90",
+    "MainPID": "2914632",
+    "Result": "success",
+    "ExecMainStartTimestamp": "Wed 2026-10-28 02:36:06 UTC",
+    "ExecMainPID": "2914632",
+    "ExecMainStatus": "0",
+    "ControlGroup": "/user.slice/user-1124.slice/user@1124.service/app.slice/vakint-q0-all5-2d70-off-20261028.service"
+  },
+  "plan_sha256": "5122a7b8226edc83308532f67272e9bbe65de13d11964fa814e94427b594aa36",
+  "config_sha256": "5122a7b8226edc83308532f67272e9bbe65de13d11964fa814e94427b594aa36",
+  "root_go_sha256": "8f5d0cff1b88c36ffa1d37742adfa16632314cdf614ed7d5d26a798a13bb5007",
+  "worker": {
+    "pid": 2914872,
+    "start_ticks": 118866852,
+    "ppid": 2914632,
+    "state": "R",
+    "uid": 1124
+  },
+  "collector": {
+    "pid": 2914872,
+    "start_ticks": 118866852,
+    "ppid": 2914632,
+    "state": "R",
+    "uid": 1124
+  },
+  "argv": [
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-release-2d70-20261028/run/artifacts/five_loop_qcd_ladder",
+    "--work-dir",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-off-run1/run",
+    "--artifacts",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/external-q0-running-cache-d438",
+    "--projection",
+    "zero-momentum",
+    "--coefficient-representation",
+    "sparse",
+    "--prepared-input",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/physics/prepared-input-q0-8282f022-v1",
+    "--cache",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/union-copy-run1/native-output/cache"
+  ],
+  "launch_spec_sha256": "7532f774647bf335701f5edc8f0ebf9c8682b7ac56f8c006d86dd484d0c799b9",
+  "build_receipt": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-release-2d70-20261028/run/release-collectors.json",
+    "sha256": "6f15e5b521ca929e295fa9aa721aeb85d6b93803be861e9c0f20d3c99791e931",
+    "bytes": 27025
+  },
+  "source_head": "2d70bfe439d84b6888cbd29d2574df9c1ed7aae6",
+  "scientific_accepted": false,
+  "postflight_required": true,
+  "automatic_retry": false,
+  "automatic_successor": false,
+  "signals_sent": [],
+  "errors": [],
+  "spawned_collector_pid": 2914872,
+  "admission": {
+    "candidate": {
+      "schema": "vakint.before-native-worker-candidate.v1",
+      "launch_spec_sha256": "7532f774647bf335701f5edc8f0ebf9c8682b7ac56f8c006d86dd484d0c799b9",
+      "worker": {
+        "pid": 2914872,
+        "start_ticks": 118866852
+      },
+      "supervisor": {
+        "pid": 2914632,
+        "start_ticks": 118866781
+      },
+      "authority": "request only; not guard admission"
+    },
+    "controller_observed_guard_ack": {
+      "worker": {
+        "pid": 2914872,
+        "start_ticks": 118866852,
+        "state": "S",
+        "uid": 1124
+      },
+      "guard": {
+        "pid": 2914982,
+        "start_ticks": 118866911,
+        "state": "S",
+        "uid": 1124
+      },
+      "config_sha256": "6693b672a73bbada6f0e41c10f6ba3e63926610b66f52c0098a0f757fa7537a9",
+      "slot": "q0-all5-2d70-off",
+      "MemAvailable_bytes": 711916027904,
+      "admission_utc": "2026-10-28T02:36:08.397515+00:00"
+    },
+    "guard_unit": {
+      "LoadState": "loaded",
+      "ActiveState": "active",
+      "SubState": "running",
+      "InvocationID": "30d0bc4529a6422f8e56634091b122f0",
+      "MainPID": "2914982",
+      "Result": "success",
+      "ExecMainStartTimestamp": "Wed 2026-10-28 02:36:07 UTC",
+      "ExecMainPID": "2914982",
+      "ExecMainStatus": "0",
+      "ControlGroup": "/user.slice/user-1124.slice/user@1124.service/app.slice/vakint-q0-all5-2d70-off-memory-20261028.service",
+      "process": {
+        "pid": 2914982,
+        "start_ticks": 118866911,
+        "ppid": 9584,
+        "state": "R",
+        "uid": 1124
+      }
+    },
+    "guard_config_sha256": "6693b672a73bbada6f0e41c10f6ba3e63926610b66f52c0098a0f757fa7537a9"
+  },
+  "last_observed_heartbeat": {
+    "schema": "vakint.physical-memavailable-guard.v1",
+    "utc": "2026-10-28T02:56:12.557652+00:00",
+    "guard_pid": 2914982,
+    "threshold_bytes": 50000000000,
+    "sample_seconds": 1,
+    "MemAvailable_bytes": 620560769024,
+    "sample_error": null,
+    "latched_abort": false,
+    "slots": {
+      "q0-all5-2d70-off": {
+        "state": "ORIGINAL_PROCESS_TERMINAL",
+        "target": {
+          "pid": 2914872,
+          "start_ticks": 118866852
+        },
+        "collector_exit_code": null
+      }
+    },
+    "scope": "Only explicitly registered exact 5L worker PIDFDs; no builds/apps/other users"
+  },
+  "collector_exit_code": 0,
+  "guard_registration": {
+    "schema": "vakint.physical-memory-floor-registration.v1",
+    "utc": "2026-10-28T02:36:08.340547+00:00",
+    "guard": {
+      "pid": 2914982,
+      "start_ticks": 118866911,
+      "ppid": 9584,
+      "state": "R",
+      "uids": [
+        1124,
+        1124,
+        1124,
+        1124
+      ],
+      "cwd": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-off-run1/physical-guard",
+      "cgroup": "0::/user.slice/user-1124.slice/user@1124.service/app.slice/vakint-q0-all5-2d70-off-memory-20261028.service"
+    },
+    "config_sha256": "6693b672a73bbada6f0e41c10f6ba3e63926610b66f52c0098a0f757fa7537a9",
+    "threshold_bytes": 50000000000,
+    "sample_seconds": 1,
+    "slots": {
+      "q0-all5-2d70-off": {
+        "state": "ARMED_EXACT_PIDFD",
+        "target": {
+          "pid": 2914872,
+          "start_ticks": 118866852
+        }
+      }
+    },
+    "signals_sent": []
+  },
+  "guard_after_actual_child_wait": {
+    "LoadState": "not-found",
+    "ActiveState": "inactive",
+    "SubState": "dead",
+    "InvocationID": "",
+    "MainPID": "0",
+    "Result": "success",
+    "ExecMainStartTimestamp": "",
+    "ExecMainPID": "0",
+    "ExecMainStatus": "0",
+    "ControlGroup": ""
+  },
+  "finished_utc": "2026-10-28T02:56:13.073450+00:00",
+  "elapsed_seconds": 1205.663622488035,
+  "collector_wait_is_authoritative": true,
+  "mathematical_or_cache_speedup_acceptance": false
+}

@@ -1,0 +1,23 @@
+{
+  "schema": "vakint.actual-tuning-portable-v1-validation.v1",
+  "status": "PASS_CANONICAL_V1_OBSERVED_FREQUENCIES",
+  "request_sha256": "e1a1ac3730f4296d528b14b29a479a1f25925b2ea133064f50b8799783d59590",
+  "profile": {
+    "path": "root/provenance/tuning-final/usage-tuning-v1.json",
+    "sha256": "243a5223ebb42413dac87e5c9829318dcc417c89c65cfb8775f5af5e34ab8e55"
+  },
+  "outer_failure_postflight": {
+    "outer_controller_status": "FAILED_FINAL_METADATA_PUBLICATION",
+    "outer_controller_PASS": false,
+    "unpublished_candidate_promoted": false,
+    "originals_unchanged": true,
+    "Rust_supervisor_measurement_admissible_for_owner_check": true
+  },
+  "unique_observed_work_records": 13918,
+  "observed_backing_hits": 13918,
+  "classification_available_preserved": false,
+  "recursive_mapper_certificate": null,
+  "proper_descendant_classification_claim": false,
+  "new_Rust_Native_IBP_CAS_cache_reads": 0,
+  "selection_or_export_authorized": false
+}

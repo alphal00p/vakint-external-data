@@ -1,0 +1,46 @@
+[package]
+name = "native-selected-cache-producer"
+version = "0.1.0"
+edition = "2024"
+publish = false
+build = "build.rs"
+
+[workspace]
+resolver = "3"
+
+[dependencies]
+eyre = "=0.6.12"
+serde = { version = "=1.0.228", features = ["derive"] }
+serde_json = "=1.0.149"
+sha2 = "=0.10.9"
+flate2 = { version = "=1.1.9", default-features = false, features = ["rust_backend"] }
+libc = "=0.2.186"
+rustix = { version = "=1.1.4", features = ["fs"] }
+rustred = { git = "https://github.com/alphal00p/rustred", rev = "c2ca815cc906bdeaf7cb8c63b637e81a80fba917", default-features = false, features = ["native", "capacity-dispatch"] }
+rustred-app = { git = "https://github.com/alphal00p/rustred", rev = "c2ca815cc906bdeaf7cb8c63b637e81a80fba917", default-features = false, features = ["native", "capacity-dispatch"] }
+symbolica = { version = "~3.0.0", default-features = false, features = ["tracing_max_level_info", "bincode", "integer-gmp", "float-mpfr"] }
+
+[dev-dependencies]
+tempfile = "=3.27.0"
+
+[build-dependencies]
+serde_json = "=1.0.149"
+sha2 = "=0.10.9"
+
+[patch.crates-io]
+symbolica = { git = "https://github.com/symbolica-dev/symbolica", rev = "9cd57678d8817ec33c05cacba4925162f1c86b0b" }
+graphica = { git = "https://github.com/symbolica-dev/symbolica", rev = "9cd57678d8817ec33c05cacba4925162f1c86b0b" }
+numerica = { git = "https://github.com/symbolica-dev/symbolica", rev = "9cd57678d8817ec33c05cacba4925162f1c86b0b" }
+
+# Functional Native-only tooling; same normal ci-optim profile as the validated
+# finalizer, never a physical timing benchmark or ad-hoc profile override.
+[profile.dev-optim]
+inherits = "dev"
+opt-level = 2
+
+[profile.dev-optim.package."*"]
+opt-level = 3
+
+[profile.ci-optim]
+inherits = "dev-optim"
+debug = false

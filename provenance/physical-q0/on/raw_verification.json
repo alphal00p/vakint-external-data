@@ -1,0 +1,217 @@
+{
+  "schema": "vakint.coefficient-local-q0-verification.v1",
+  "status": "PASS",
+  "collector_source_head": "2d70bfe439d84b6888cbd29d2574df9c1ed7aae6",
+  "verifier_host_origin": {
+    "Community": "646b4a60543d977fdbd3b4a83aa715c7f03cbf5d",
+    "Vakint": "9c095d462f62fea61551581a7bca17d54fe04c7f",
+    "Native": "419",
+    "kernel": "9cd57678d8817ec33c05cacba4925162f1c86b0b",
+    "PyO3": "0.28.3",
+    "final_Main_acceptance": false
+  },
+  "verifier_is_not_final_Main_host_acceptance": true,
+  "installed_native_files": {
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/community-official-cache-loader-host/venv/lib/python3.14/site-packages/symbolica/core.abi3.so": "6dab93d10509d213681dc5a95effd1b6cdc10c9d60f29a9aebf46f8f7ad95df5"
+  },
+  "full58_scalar_coefficient_parity": true,
+  "full_scalar_coefficient_count": 58,
+  "master_identity_union_count": 55,
+  "validation_only_numeric_tag_codec": "9cd57678d8817ec33c05cacba4925162f1c86b0b",
+  "Float_numeric_atoms_rejected": true,
+  "original_native_baseline_authenticated": true,
+  "serialized_shape_may_differ": true,
+  "full58_proof": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-on-verify-run1/full58-scalar-proof.json",
+    "sha256": "06d8872b7f65e91746ff30562aab871588d41c3eaf72da40fd1abfab9bc93d64"
+  },
+  "whole_canonical_result_sha256": "6b31e4501843d313425a97d176c105f0a974837d73df889d5f74c251f704d0f8",
+  "whole_ordered_guard_Atoms_equal": true,
+  "guard_count": 146678,
+  "families_equal": true,
+  "normalization": {
+    "integral_normalization": "pySecDec",
+    "integral_normalization_expression": "((\ud835\udc56)*\ud835\udf0b^((-2*vakint::{}::\u03b5+4)*1/2))^(-1*vakint::{}::n_loops)",
+    "epsilon_symbol": "vakint::\u03b5",
+    "canonical_expression_sha256": "061d594756a341d686f46ce9fb9d7182d17ea7977f1e7319e4f2c29c1a0faefc"
+  },
+  "whole_canonical_input_sha256": "9814c3b49a1b486b9790bbe5458d8bc582c3fb3c299ba6a1a0362db8ba71cb16",
+  "cache_identity": {
+    "cache_native_index_identity": {
+      "indexes": {
+        "bindings/6b235c09ae267174886f88a033214526be0dc1a3158fd597f4fb97b8dccd9853/cache.rrindex": {
+          "bytes": 36582873,
+          "sha256": "a1a33ef0861c45726d64ca2c0fadf76c85d3ccad77193b231a89b92c5c05eea2"
+        },
+        "bundle.rrindex": {
+          "bytes": 5254,
+          "sha256": "4f940e610956c96a5f344bf8f0540021ab70908873bbd3ade9c0c4bf9f0f0f6d"
+        }
+      },
+      "layout": "bundle",
+      "schema": "vakint.native-cache-index-identity.v1",
+      "sha256": "2658cd25b88b24c00fc5e3ad7a68b2396fdbe4ab8facea0039873d971b236654"
+    },
+    "cache_sha256": null
+  },
+  "cache_identity_unchanged": true,
+  "stage_accounting": {
+    "disjoint_evaluation_spans": [
+      "frontend_setup",
+      "frontend_canonicalization",
+      "frontend_tensor_prepass",
+      "scalar_input_split",
+      "frontend_admitted_witness_search",
+      "numerator_replacement",
+      "detailed_evaluation_total",
+      "caller_result_merge",
+      "retained_finalization_total",
+      "public_result_packing"
+    ],
+    "loading_scope": "Initial loading_stages are captured before evaluation. Preparation spans may recur inside frontend_setup after a representation reload; products_prepared includes family_verified. Never add these overlapping spans to measured loading or evaluation wall totals.",
+    "nested_spans": {
+      "detailed_evaluation_total": [
+        "parent_transport_and_scalar_lowering",
+        "coverage_mass_batching",
+        "lowering_guard_materialization",
+        "saved_rule_application",
+        "terminal_geometry_and_lower_factors",
+        "retained_guard_materialization",
+        "retained_coefficient_materialization",
+        "unprojected_terminal_materialization",
+        "retained_batch_mass_assembly",
+        "retained_batch_cleanup",
+        "retained_normalization_and_notation",
+        "detailed_result_packing"
+      ],
+      "retained_finalization_total": [
+        "retained_catalogue_exact_combination",
+        "retained_catalogue_classification"
+      ]
+    },
+    "path_scope": "Successful and fallback batch spans append independently. Unprojected terminal materialization is a fallback path; cleanup is measured after existing batch locals naturally drop. Failed operations may omit completed spans.",
+    "samples": "Every stages[name] entry is one completed span; repeated calls append samples. Sum samples within a phase, never all phases together.",
+    "saved_rule_application_scope": "The complete saved call includes cache lookup/decode/validation when used, entry transport, weighted exact assembly, saved terminal substitution and running-cache flush. Cache hits do not imply IBP rule applications; inspect the recorded work counters.",
+    "unassigned": "Public evaluation minus disjoint spans and detailed/finalization totals minus their own children remain raw uninstrumented control, logging and caller cleanup time. Report each residual explicitly; no residual is a pure IBP estimate."
+  },
+  "stages": {
+    "caller_result_merge": {
+      "samples": 1,
+      "total_seconds": 0.812769
+    },
+    "coverage_mass_batching": {
+      "samples": 1,
+      "total_seconds": 0.053573
+    },
+    "detailed_evaluation_total": {
+      "samples": 1,
+      "total_seconds": 867.168673
+    },
+    "detailed_result_packing": {
+      "samples": 1,
+      "total_seconds": 0.009041
+    },
+    "frontend_admitted_witness_search": {
+      "samples": 1,
+      "total_seconds": 17.406858
+    },
+    "frontend_canonicalization": {
+      "samples": 1,
+      "total_seconds": 0.101953
+    },
+    "frontend_setup": {
+      "samples": 1,
+      "total_seconds": 0.098151
+    },
+    "frontend_tensor_prepass": {
+      "samples": 1,
+      "total_seconds": 0.056038
+    },
+    "lowering_guard_materialization": {
+      "samples": 1,
+      "total_seconds": 0.000701
+    },
+    "numerator_replacement": {
+      "samples": 1,
+      "total_seconds": 0.060285
+    },
+    "parent_transport_and_scalar_lowering": {
+      "samples": 1,
+      "total_seconds": 1.88905
+    },
+    "public_result_packing": {
+      "samples": 1,
+      "total_seconds": 0.008987
+    },
+    "retained_batch_cleanup": {
+      "samples": 1,
+      "total_seconds": 0.123817
+    },
+    "retained_batch_mass_assembly": {
+      "samples": 1,
+      "total_seconds": 0.00173
+    },
+    "retained_catalogue_classification": {
+      "samples": 1,
+      "total_seconds": 0.004337
+    },
+    "retained_catalogue_exact_combination": {
+      "samples": 1,
+      "total_seconds": 217.070516
+    },
+    "retained_coefficient_materialization": {
+      "samples": 1,
+      "total_seconds": 0.004106
+    },
+    "retained_finalization_total": {
+      "samples": 1,
+      "total_seconds": 217.077574
+    },
+    "retained_guard_materialization": {
+      "samples": 1,
+      "total_seconds": 5.307357
+    },
+    "retained_normalization_and_notation": {
+      "samples": 1,
+      "total_seconds": 0.1121
+    },
+    "saved_rule_application": {
+      "samples": 1,
+      "total_seconds": 835.833902
+    },
+    "scalar_input_split": {
+      "samples": 1,
+      "total_seconds": 0.030134
+    },
+    "terminal_geometry_and_lower_factors": {
+      "samples": 1,
+      "total_seconds": 23.828541
+    }
+  },
+  "measured_public_reduction_seconds": 1102.824033991,
+  "declared_disjoint_span_seconds": 1102.821422,
+  "unassigned_seconds_raw": 0.002611991000094349,
+  "span_quantization_bound_seconds": 9.999999999999999e-06,
+  "nested_residuals": {
+    "detailed_evaluation_total": {
+      "parent_seconds": 867.168673,
+      "children_seconds": 867.163918,
+      "unassigned_seconds_raw": 0.004755000000045584,
+      "span_quantization_bound_seconds": 1.2e-05,
+      "residual_is_not_pure_IBP": true
+    },
+    "retained_finalization_total": {
+      "parent_seconds": 217.077574,
+      "children_seconds": 217.074853,
+      "unassigned_seconds_raw": 0.002721000000008189,
+      "span_quantization_bound_seconds": 3e-06,
+      "residual_is_not_pure_IBP": true
+    }
+  },
+  "pure_ibp_seconds": null,
+  "HEAVY_file_performance_claim": false,
+  "comparison_kind": "One fresh-process accepted2d70 all5 INDEX engineering observation; diagnostics and concurrent background work retained; not repeated/serialized/HEAVY performance",
+  "numerical_evaluations": 0,
+  "master_values_evaluated": 0,
+  "IBP_runs_in_verifier": 0
+}

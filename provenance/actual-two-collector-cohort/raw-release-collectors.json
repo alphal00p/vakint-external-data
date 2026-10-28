@@ -1,0 +1,690 @@
+{
+  "schema": "vakint.final-two-release-collectors.v1",
+  "status": "PASS",
+  "source_head": "2d70bfe439d84b6888cbd29d2574df9c1ed7aae6",
+  "profile": "release",
+  "profile_overrides": [],
+  "normal_nix_develop": {
+    "IN_NIX_SHELL": "impure",
+    "source_flake_sha256": "d072e2a0e0fc846d0f11985bde18b0b5ab2ea7d985a12dbd9b5e370c79af34d7",
+    "source_flake_lock_sha256": "e10c5893b513d4c7120d841b47fbfddffb3ac4f1f5cb46a18c0f7542cbde8534"
+  },
+  "linker_rustflags": [
+    "-C",
+    "linker=/nix/store/z4c6k0mrlkwl3s4w9ysxc8vq1wylm3ms-gcc-wrapper-15.3.0/bin/gcc"
+  ],
+  "command": [
+    "/nix/store/7m3ahrz00pis1dplzf8vwldriqlfc0d0-rust-stable-with-components-2026-09-03/bin/cargo",
+    "build",
+    "--locked",
+    "--offline",
+    "--release",
+    "-p",
+    "vakint",
+    "--no-default-features",
+    "--features",
+    "feynkit-ingress,experimental-rustred,weighted-lowering-diagnostics,symbolica_community_module,progress-tui",
+    "--example",
+    "five_loop_qcd_ladder",
+    "--example",
+    "measure_cache",
+    "--message-format=json-render-diagnostics"
+  ],
+  "compile_proof": {
+    "VAKINT_CACHE_BUILD_GIT_REVISION": "2d70bfe439d84b6888cbd29d2574df9c1ed7aae6",
+    "VAKINT_CACHE_BUILD_RUSTRED_REVISION": "c2ca815cc906bdeaf7cb8c63b637e81a80fba917",
+    "VAKINT_CACHE_BUILD_SYMBOLICA_REVISION": "9cd57678d8817ec33c05cacba4925162f1c86b0b",
+    "VAKINT_CACHE_BUILD_MAIN_SOURCE_SNAPSHOT_SHA256": "d415bf7d142d57b386bd5656471a7551dd43c5ddb0c0ea82c7f2fc3436abc29a",
+    "VAKINT_CACHE_BUILD_NATIVE_SOURCE_SNAPSHOT_SHA256": "3cdfaaacc4619f3adb3ceddb3185106338e2352523ecc778858a633a80055b0c",
+    "VAKINT_CACHE_BUILD_RUSTC": "rustc 1.98.1 (48a229cea 2026-09-01)",
+    "VAKINT_CACHE_BUILD_PROFILE": "release"
+  },
+  "rustc_vv": "rustc 1.98.1 (48a229cea 2026-09-01)\nbinary: rustc\ncommit-hash: 48a229ceaefd4985c50990b14116b6d856af0985\ncommit-date: 2026-09-01\nhost: x86_64-unknown-linux-gnu\nrelease: 1.98.1\nLLVM version: 22.1.8\n",
+  "features": [
+    "feynkit-ingress",
+    "experimental-rustred",
+    "weighted-lowering-diagnostics",
+    "symbolica_community_module",
+    "progress-tui"
+  ],
+  "metadata_sha256": "8576ea5793b37a1d227221214e323c5bfd5caa8274326f9979e3dec395f83ddc",
+  "artifacts": {
+    "five_loop_qcd_ladder": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-release-2d70-20261028/run/artifacts/five_loop_qcd_ladder",
+      "sha256": "ca89f4eb6776c88bb28a1147a6363233638517b1d52cc026a03798cdeb8ed1e1",
+      "bytes": 148891512,
+      "cargo_artifact": {
+        "reason": "compiler-artifact",
+        "package_id": "path+file:///shared/codex-1/vakint_rustred/workspace/5l-push/vakint-q0-coefficient-release-freeze-2d70-20261028/crates/vakint#0.1.2",
+        "manifest_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-q0-coefficient-release-freeze-2d70-20261028/crates/vakint/Cargo.toml",
+        "target": {
+          "kind": [
+            "example"
+          ],
+          "crate_types": [
+            "bin"
+          ],
+          "name": "five_loop_qcd_ladder",
+          "src_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-q0-coefficient-release-freeze-2d70-20261028/crates/vakint/examples/five_loop_qcd_ladder.rs",
+          "edition": "2024",
+          "required-features": [
+            "feynkit-ingress"
+          ],
+          "doc": false,
+          "doctest": false,
+          "test": false
+        },
+        "profile": {
+          "opt_level": "3",
+          "debuginfo": 0,
+          "debug_assertions": false,
+          "overflow_checks": false,
+          "test": false
+        },
+        "features": [
+          "experimental-rustred",
+          "feynkit-ingress",
+          "progress-tui",
+          "symbolica_community_module",
+          "weighted-lowering-diagnostics"
+        ],
+        "filenames": [
+          "/shared/codex-1/vakint_rustred/workspace/build/vakint-q0-local-retained-2d70-release-20261028/release/examples/five_loop_qcd_ladder"
+        ],
+        "executable": "/shared/codex-1/vakint_rustred/workspace/build/vakint-q0-local-retained-2d70-release-20261028/release/examples/five_loop_qcd_ladder",
+        "fresh": false
+      },
+      "actual_rustc": {
+        "compiler": "/nix/store/7m3ahrz00pis1dplzf8vwldriqlfc0d0-rust-stable-with-components-2026-09-03/bin/rustc",
+        "crate_name": "five_loop_qcd_ladder",
+        "codegen_flags": [
+          "opt-level=3",
+          "lto=fat",
+          "metadata=11313e7e6f8e7966",
+          "extra-filename=-682a31aa40b636d8",
+          "linker=/nix/store/z4c6k0mrlkwl3s4w9ysxc8vq1wylm3ms-gcc-wrapper-15.3.0/bin/gcc",
+          "strip=debuginfo",
+          "linker=/nix/store/z4c6k0mrlkwl3s4w9ysxc8vq1wylm3ms-gcc-wrapper-15.3.0/bin/gcc"
+        ],
+        "cfg": [
+          "feature=\"experimental-rustred\"",
+          "feature=\"feynkit-ingress\"",
+          "feature=\"progress-tui\"",
+          "feature=\"symbolica_community_module\"",
+          "feature=\"weighted-lowering-diagnostics\""
+        ],
+        "source_arguments": [
+          "crates/vakint/examples/five_loop_qcd_ladder.rs"
+        ],
+        "argument_sha256": "b51d297c00f4e056a28fc1372fe23f5963452b1306f0d6daa07246201e25f4e0"
+      },
+      "env_stamps": {
+        "VAKINT_CACHE_BUILD_GIT_REVISION": "2d70bfe439d84b6888cbd29d2574df9c1ed7aae6",
+        "VAKINT_CACHE_BUILD_RUSTRED_REVISION": "c2ca815cc906bdeaf7cb8c63b637e81a80fba917",
+        "VAKINT_CACHE_BUILD_SYMBOLICA_REVISION": "9cd57678d8817ec33c05cacba4925162f1c86b0b",
+        "VAKINT_CACHE_BUILD_MAIN_SOURCE_SNAPSHOT_SHA256": "d415bf7d142d57b386bd5656471a7551dd43c5ddb0c0ea82c7f2fc3436abc29a",
+        "VAKINT_CACHE_BUILD_NATIVE_SOURCE_SNAPSHOT_SHA256": "3cdfaaacc4619f3adb3ceddb3185106338e2352523ecc778858a633a80055b0c",
+        "VAKINT_CACHE_BUILD_RUSTC": "rustc 1.98.1 (48a229cea 2026-09-01)",
+        "VAKINT_CACHE_BUILD_PROFILE": "release"
+      },
+      "dep_info_sha256": "f0a84e399040655a9a999234d1c4db8c1a6c5cd515ba1a648d080bde4d6e264f"
+    },
+    "measure_cache": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-release-2d70-20261028/run/artifacts/measure_cache",
+      "sha256": "dc11710dab03050c3ceb259c431ba717f69810412b7ef17ba9f7ae9e91f3c9ea",
+      "bytes": 147680528,
+      "cargo_artifact": {
+        "reason": "compiler-artifact",
+        "package_id": "path+file:///shared/codex-1/vakint_rustred/workspace/5l-push/vakint-q0-coefficient-release-freeze-2d70-20261028/crates/vakint#0.1.2",
+        "manifest_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-q0-coefficient-release-freeze-2d70-20261028/crates/vakint/Cargo.toml",
+        "target": {
+          "kind": [
+            "example"
+          ],
+          "crate_types": [
+            "bin"
+          ],
+          "name": "measure_cache",
+          "src_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-q0-coefficient-release-freeze-2d70-20261028/crates/vakint/examples/measure_cache.rs",
+          "edition": "2024",
+          "doc": false,
+          "doctest": false,
+          "test": false
+        },
+        "profile": {
+          "opt_level": "3",
+          "debuginfo": 0,
+          "debug_assertions": false,
+          "overflow_checks": false,
+          "test": false
+        },
+        "features": [
+          "experimental-rustred",
+          "feynkit-ingress",
+          "progress-tui",
+          "symbolica_community_module",
+          "weighted-lowering-diagnostics"
+        ],
+        "filenames": [
+          "/shared/codex-1/vakint_rustred/workspace/build/vakint-q0-local-retained-2d70-release-20261028/release/examples/measure_cache"
+        ],
+        "executable": "/shared/codex-1/vakint_rustred/workspace/build/vakint-q0-local-retained-2d70-release-20261028/release/examples/measure_cache",
+        "fresh": false
+      },
+      "actual_rustc": {
+        "compiler": "/nix/store/7m3ahrz00pis1dplzf8vwldriqlfc0d0-rust-stable-with-components-2026-09-03/bin/rustc",
+        "crate_name": "measure_cache",
+        "codegen_flags": [
+          "opt-level=3",
+          "lto=fat",
+          "metadata=ac86ad0ff9ac0292",
+          "extra-filename=-2695202edfd3cb5d",
+          "linker=/nix/store/z4c6k0mrlkwl3s4w9ysxc8vq1wylm3ms-gcc-wrapper-15.3.0/bin/gcc",
+          "strip=debuginfo",
+          "linker=/nix/store/z4c6k0mrlkwl3s4w9ysxc8vq1wylm3ms-gcc-wrapper-15.3.0/bin/gcc"
+        ],
+        "cfg": [
+          "feature=\"experimental-rustred\"",
+          "feature=\"feynkit-ingress\"",
+          "feature=\"progress-tui\"",
+          "feature=\"symbolica_community_module\"",
+          "feature=\"weighted-lowering-diagnostics\""
+        ],
+        "source_arguments": [
+          "crates/vakint/examples/measure_cache.rs"
+        ],
+        "argument_sha256": "eba37b95b0a3bdbedda4b51bf22f2637358ace85ac13c4793da256c0477dbd9f"
+      },
+      "env_stamps": {
+        "VAKINT_CACHE_BUILD_GIT_REVISION": "2d70bfe439d84b6888cbd29d2574df9c1ed7aae6",
+        "VAKINT_CACHE_BUILD_RUSTRED_REVISION": "c2ca815cc906bdeaf7cb8c63b637e81a80fba917",
+        "VAKINT_CACHE_BUILD_SYMBOLICA_REVISION": "9cd57678d8817ec33c05cacba4925162f1c86b0b",
+        "VAKINT_CACHE_BUILD_MAIN_SOURCE_SNAPSHOT_SHA256": "d415bf7d142d57b386bd5656471a7551dd43c5ddb0c0ea82c7f2fc3436abc29a",
+        "VAKINT_CACHE_BUILD_NATIVE_SOURCE_SNAPSHOT_SHA256": "3cdfaaacc4619f3adb3ceddb3185106338e2352523ecc778858a633a80055b0c",
+        "VAKINT_CACHE_BUILD_RUSTC": "rustc 1.98.1 (48a229cea 2026-09-01)",
+        "VAKINT_CACHE_BUILD_PROFILE": "release"
+      },
+      "dep_info_sha256": "ed0a945b1ddde9c41fa7523394f1da10de89fc86dc0e7df64bb15c83773e2097"
+    }
+  },
+  "dependency_cargo_artifacts": [
+    {
+      "reason": "compiler-artifact",
+      "package_id": "git+https://github.com/symbolica-dev/symbolica?rev=9cd57678d8817ec33c05cacba4925162f1c86b0b#3.0.1",
+      "manifest_path": "/shared/codex-1/vakint_rustred/workspace/cargo/git/checkouts/symbolica-db3dbb7e8d40efb5/9cd5767/Cargo.toml",
+      "target": {
+        "kind": [
+          "custom-build"
+        ],
+        "crate_types": [
+          "bin"
+        ],
+        "name": "build-script-build",
+        "src_path": "/shared/codex-1/vakint_rustred/workspace/cargo/git/checkouts/symbolica-db3dbb7e8d40efb5/9cd5767/build.rs",
+        "edition": "2024",
+        "doc": false,
+        "doctest": false,
+        "test": false
+      },
+      "profile": {
+        "opt_level": "0",
+        "debuginfo": 0,
+        "debug_assertions": false,
+        "overflow_checks": false,
+        "test": false
+      },
+      "features": [
+        "bincode",
+        "float-mpfr",
+        "integer-gmp",
+        "native_code_generation",
+        "numpy",
+        "pyo3",
+        "pyo3-stub-gen-derive",
+        "python_export",
+        "serde",
+        "tracing_max_level_info"
+      ],
+      "filenames": [
+        "/shared/codex-1/vakint_rustred/workspace/build/vakint-q0-local-retained-2d70-release-20261028/release/build/symbolica-29c3b35927d9fdc5/build-script-build"
+      ],
+      "executable": null,
+      "fresh": false
+    },
+    {
+      "reason": "compiler-artifact",
+      "package_id": "git+https://github.com/symbolica-dev/symbolica?rev=9cd57678d8817ec33c05cacba4925162f1c86b0b#numerica@3.0.1",
+      "manifest_path": "/shared/codex-1/vakint_rustred/workspace/cargo/git/checkouts/symbolica-db3dbb7e8d40efb5/9cd5767/lib/numerica/Cargo.toml",
+      "target": {
+        "kind": [
+          "lib"
+        ],
+        "crate_types": [
+          "lib"
+        ],
+        "name": "numerica",
+        "src_path": "/shared/codex-1/vakint_rustred/workspace/cargo/git/checkouts/symbolica-db3dbb7e8d40efb5/9cd5767/lib/numerica/src/lib.rs",
+        "edition": "2024",
+        "doc": true,
+        "doctest": true,
+        "test": true
+      },
+      "profile": {
+        "opt_level": "3",
+        "debuginfo": 0,
+        "debug_assertions": false,
+        "overflow_checks": false,
+        "test": false
+      },
+      "features": [
+        "bincode",
+        "float-mpfr",
+        "integer-gmp",
+        "numpy",
+        "pyo3",
+        "python",
+        "serde"
+      ],
+      "filenames": [
+        "/shared/codex-1/vakint_rustred/workspace/build/vakint-q0-local-retained-2d70-release-20261028/release/deps/libnumerica-d115c15fca358b19.rlib",
+        "/shared/codex-1/vakint_rustred/workspace/build/vakint-q0-local-retained-2d70-release-20261028/release/deps/libnumerica-d115c15fca358b19.rmeta"
+      ],
+      "executable": null,
+      "fresh": false
+    },
+    {
+      "reason": "compiler-artifact",
+      "package_id": "git+https://github.com/symbolica-dev/symbolica?rev=9cd57678d8817ec33c05cacba4925162f1c86b0b#graphica@3.0.1",
+      "manifest_path": "/shared/codex-1/vakint_rustred/workspace/cargo/git/checkouts/symbolica-db3dbb7e8d40efb5/9cd5767/lib/graphica/Cargo.toml",
+      "target": {
+        "kind": [
+          "lib"
+        ],
+        "crate_types": [
+          "lib"
+        ],
+        "name": "graphica",
+        "src_path": "/shared/codex-1/vakint_rustred/workspace/cargo/git/checkouts/symbolica-db3dbb7e8d40efb5/9cd5767/lib/graphica/src/lib.rs",
+        "edition": "2024",
+        "doc": true,
+        "doctest": true,
+        "test": true
+      },
+      "profile": {
+        "opt_level": "3",
+        "debuginfo": 0,
+        "debug_assertions": false,
+        "overflow_checks": false,
+        "test": false
+      },
+      "features": [],
+      "filenames": [
+        "/shared/codex-1/vakint_rustred/workspace/build/vakint-q0-local-retained-2d70-release-20261028/release/deps/libgraphica-95b940bf9f9ff80d.rlib",
+        "/shared/codex-1/vakint_rustred/workspace/build/vakint-q0-local-retained-2d70-release-20261028/release/deps/libgraphica-95b940bf9f9ff80d.rmeta"
+      ],
+      "executable": null,
+      "fresh": false
+    },
+    {
+      "reason": "compiler-artifact",
+      "package_id": "git+https://github.com/symbolica-dev/symbolica?rev=9cd57678d8817ec33c05cacba4925162f1c86b0b#numerica@3.0.1",
+      "manifest_path": "/shared/codex-1/vakint_rustred/workspace/cargo/git/checkouts/symbolica-db3dbb7e8d40efb5/9cd5767/lib/numerica/Cargo.toml",
+      "target": {
+        "kind": [
+          "lib"
+        ],
+        "crate_types": [
+          "lib"
+        ],
+        "name": "numerica",
+        "src_path": "/shared/codex-1/vakint_rustred/workspace/cargo/git/checkouts/symbolica-db3dbb7e8d40efb5/9cd5767/lib/numerica/src/lib.rs",
+        "edition": "2024",
+        "doc": true,
+        "doctest": true,
+        "test": true
+      },
+      "profile": {
+        "opt_level": "0",
+        "debuginfo": 0,
+        "debug_assertions": false,
+        "overflow_checks": false,
+        "test": false
+      },
+      "features": [
+        "bincode",
+        "float-mpfr",
+        "integer-gmp",
+        "serde"
+      ],
+      "filenames": [
+        "/shared/codex-1/vakint_rustred/workspace/build/vakint-q0-local-retained-2d70-release-20261028/release/deps/libnumerica-7e127f7ad3c21b7f.rlib",
+        "/shared/codex-1/vakint_rustred/workspace/build/vakint-q0-local-retained-2d70-release-20261028/release/deps/libnumerica-7e127f7ad3c21b7f.rmeta"
+      ],
+      "executable": null,
+      "fresh": false
+    },
+    {
+      "reason": "compiler-artifact",
+      "package_id": "git+https://github.com/symbolica-dev/symbolica?rev=9cd57678d8817ec33c05cacba4925162f1c86b0b#3.0.1",
+      "manifest_path": "/shared/codex-1/vakint_rustred/workspace/cargo/git/checkouts/symbolica-db3dbb7e8d40efb5/9cd5767/Cargo.toml",
+      "target": {
+        "kind": [
+          "custom-build"
+        ],
+        "crate_types": [
+          "bin"
+        ],
+        "name": "build-script-build",
+        "src_path": "/shared/codex-1/vakint_rustred/workspace/cargo/git/checkouts/symbolica-db3dbb7e8d40efb5/9cd5767/build.rs",
+        "edition": "2024",
+        "doc": false,
+        "doctest": false,
+        "test": false
+      },
+      "profile": {
+        "opt_level": "0",
+        "debuginfo": 0,
+        "debug_assertions": false,
+        "overflow_checks": false,
+        "test": false
+      },
+      "features": [
+        "bincode",
+        "float-mpfr",
+        "integer-gmp",
+        "native_code_generation",
+        "serde"
+      ],
+      "filenames": [
+        "/shared/codex-1/vakint_rustred/workspace/build/vakint-q0-local-retained-2d70-release-20261028/release/build/symbolica-49dc45abf762c726/build-script-build"
+      ],
+      "executable": null,
+      "fresh": false
+    },
+    {
+      "reason": "compiler-artifact",
+      "package_id": "git+https://github.com/symbolica-dev/symbolica?rev=9cd57678d8817ec33c05cacba4925162f1c86b0b#graphica@3.0.1",
+      "manifest_path": "/shared/codex-1/vakint_rustred/workspace/cargo/git/checkouts/symbolica-db3dbb7e8d40efb5/9cd5767/lib/graphica/Cargo.toml",
+      "target": {
+        "kind": [
+          "lib"
+        ],
+        "crate_types": [
+          "lib"
+        ],
+        "name": "graphica",
+        "src_path": "/shared/codex-1/vakint_rustred/workspace/cargo/git/checkouts/symbolica-db3dbb7e8d40efb5/9cd5767/lib/graphica/src/lib.rs",
+        "edition": "2024",
+        "doc": true,
+        "doctest": true,
+        "test": true
+      },
+      "profile": {
+        "opt_level": "0",
+        "debuginfo": 0,
+        "debug_assertions": false,
+        "overflow_checks": false,
+        "test": false
+      },
+      "features": [],
+      "filenames": [
+        "/shared/codex-1/vakint_rustred/workspace/build/vakint-q0-local-retained-2d70-release-20261028/release/deps/libgraphica-c7465731e44cf348.rlib",
+        "/shared/codex-1/vakint_rustred/workspace/build/vakint-q0-local-retained-2d70-release-20261028/release/deps/libgraphica-c7465731e44cf348.rmeta"
+      ],
+      "executable": null,
+      "fresh": false
+    },
+    {
+      "reason": "compiler-artifact",
+      "package_id": "git+https://github.com/symbolica-dev/symbolica?rev=9cd57678d8817ec33c05cacba4925162f1c86b0b#3.0.1",
+      "manifest_path": "/shared/codex-1/vakint_rustred/workspace/cargo/git/checkouts/symbolica-db3dbb7e8d40efb5/9cd5767/Cargo.toml",
+      "target": {
+        "kind": [
+          "lib"
+        ],
+        "crate_types": [
+          "lib"
+        ],
+        "name": "symbolica",
+        "src_path": "/shared/codex-1/vakint_rustred/workspace/cargo/git/checkouts/symbolica-db3dbb7e8d40efb5/9cd5767/src/lib.rs",
+        "edition": "2024",
+        "doc": true,
+        "doctest": true,
+        "test": true
+      },
+      "profile": {
+        "opt_level": "0",
+        "debuginfo": 0,
+        "debug_assertions": false,
+        "overflow_checks": false,
+        "test": false
+      },
+      "features": [
+        "bincode",
+        "float-mpfr",
+        "integer-gmp",
+        "native_code_generation",
+        "serde"
+      ],
+      "filenames": [
+        "/shared/codex-1/vakint_rustred/workspace/build/vakint-q0-local-retained-2d70-release-20261028/release/deps/libsymbolica-b196ec69ccd1ab23.rlib",
+        "/shared/codex-1/vakint_rustred/workspace/build/vakint-q0-local-retained-2d70-release-20261028/release/deps/libsymbolica-b196ec69ccd1ab23.rmeta"
+      ],
+      "executable": null,
+      "fresh": false
+    },
+    {
+      "reason": "compiler-artifact",
+      "package_id": "git+https://github.com/symbolica-dev/symbolica?rev=9cd57678d8817ec33c05cacba4925162f1c86b0b#3.0.1",
+      "manifest_path": "/shared/codex-1/vakint_rustred/workspace/cargo/git/checkouts/symbolica-db3dbb7e8d40efb5/9cd5767/Cargo.toml",
+      "target": {
+        "kind": [
+          "lib"
+        ],
+        "crate_types": [
+          "lib"
+        ],
+        "name": "symbolica",
+        "src_path": "/shared/codex-1/vakint_rustred/workspace/cargo/git/checkouts/symbolica-db3dbb7e8d40efb5/9cd5767/src/lib.rs",
+        "edition": "2024",
+        "doc": true,
+        "doctest": true,
+        "test": true
+      },
+      "profile": {
+        "opt_level": "3",
+        "debuginfo": 0,
+        "debug_assertions": false,
+        "overflow_checks": false,
+        "test": false
+      },
+      "features": [
+        "bincode",
+        "float-mpfr",
+        "integer-gmp",
+        "native_code_generation",
+        "numpy",
+        "pyo3",
+        "pyo3-stub-gen-derive",
+        "python_export",
+        "serde",
+        "tracing_max_level_info"
+      ],
+      "filenames": [
+        "/shared/codex-1/vakint_rustred/workspace/build/vakint-q0-local-retained-2d70-release-20261028/release/deps/libsymbolica-1d2dbda5fc214c15.rlib",
+        "/shared/codex-1/vakint_rustred/workspace/build/vakint-q0-local-retained-2d70-release-20261028/release/deps/libsymbolica-1d2dbda5fc214c15.rmeta"
+      ],
+      "executable": null,
+      "fresh": false
+    },
+    {
+      "reason": "compiler-artifact",
+      "package_id": "git+https://github.com/alphal00p/rustred?rev=c2ca815cc906bdeaf7cb8c63b637e81a80fba917#0.1.0",
+      "manifest_path": "/shared/codex-1/vakint_rustred/workspace/cargo/git/checkouts/rustred-971a3b8def498c77/c2ca815/crates/rustred-core/Cargo.toml",
+      "target": {
+        "kind": [
+          "custom-build"
+        ],
+        "crate_types": [
+          "bin"
+        ],
+        "name": "build-script-build",
+        "src_path": "/shared/codex-1/vakint_rustred/workspace/cargo/git/checkouts/rustred-971a3b8def498c77/c2ca815/crates/rustred-core/build.rs",
+        "edition": "2024",
+        "doc": false,
+        "doctest": false,
+        "test": false
+      },
+      "profile": {
+        "opt_level": "0",
+        "debuginfo": 0,
+        "debug_assertions": false,
+        "overflow_checks": false,
+        "test": false
+      },
+      "features": [
+        "weighted-lowering-diagnostics"
+      ],
+      "filenames": [
+        "/shared/codex-1/vakint_rustred/workspace/build/vakint-q0-local-retained-2d70-release-20261028/release/build/rustred-5957ac4d4eec1f69/build-script-build"
+      ],
+      "executable": null,
+      "fresh": false
+    },
+    {
+      "reason": "compiler-artifact",
+      "package_id": "git+https://github.com/alphal00p/rustred?rev=c2ca815cc906bdeaf7cb8c63b637e81a80fba917#rustred-order@0.1.0",
+      "manifest_path": "/shared/codex-1/vakint_rustred/workspace/cargo/git/checkouts/rustred-971a3b8def498c77/c2ca815/crates/rustred-order/Cargo.toml",
+      "target": {
+        "kind": [
+          "lib"
+        ],
+        "crate_types": [
+          "lib"
+        ],
+        "name": "rustred_order",
+        "src_path": "/shared/codex-1/vakint_rustred/workspace/cargo/git/checkouts/rustred-971a3b8def498c77/c2ca815/crates/rustred-order/src/lib.rs",
+        "edition": "2024",
+        "doc": true,
+        "doctest": true,
+        "test": true
+      },
+      "profile": {
+        "opt_level": "3",
+        "debuginfo": 0,
+        "debug_assertions": false,
+        "overflow_checks": false,
+        "test": false
+      },
+      "features": [],
+      "filenames": [
+        "/shared/codex-1/vakint_rustred/workspace/build/vakint-q0-local-retained-2d70-release-20261028/release/deps/librustred_order-ed4755e037dfedd8.rlib",
+        "/shared/codex-1/vakint_rustred/workspace/build/vakint-q0-local-retained-2d70-release-20261028/release/deps/librustred_order-ed4755e037dfedd8.rmeta"
+      ],
+      "executable": null,
+      "fresh": false
+    },
+    {
+      "reason": "compiler-artifact",
+      "package_id": "git+https://github.com/alphal00p/rustred?rev=c2ca815cc906bdeaf7cb8c63b637e81a80fba917#0.1.0",
+      "manifest_path": "/shared/codex-1/vakint_rustred/workspace/cargo/git/checkouts/rustred-971a3b8def498c77/c2ca815/crates/rustred-core/Cargo.toml",
+      "target": {
+        "kind": [
+          "lib"
+        ],
+        "crate_types": [
+          "lib"
+        ],
+        "name": "rustred",
+        "src_path": "/shared/codex-1/vakint_rustred/workspace/cargo/git/checkouts/rustred-971a3b8def498c77/c2ca815/crates/rustred-core/src/lib.rs",
+        "edition": "2024",
+        "doc": true,
+        "doctest": true,
+        "test": true
+      },
+      "profile": {
+        "opt_level": "3",
+        "debuginfo": 0,
+        "debug_assertions": false,
+        "overflow_checks": false,
+        "test": false
+      },
+      "features": [
+        "weighted-lowering-diagnostics"
+      ],
+      "filenames": [
+        "/shared/codex-1/vakint_rustred/workspace/build/vakint-q0-local-retained-2d70-release-20261028/release/deps/librustred-448d4063abc0fe29.rlib",
+        "/shared/codex-1/vakint_rustred/workspace/build/vakint-q0-local-retained-2d70-release-20261028/release/deps/librustred-448d4063abc0fe29.rmeta"
+      ],
+      "executable": null,
+      "fresh": false
+    },
+    {
+      "reason": "compiler-artifact",
+      "package_id": "git+https://github.com/alphal00p/rustred?rev=c2ca815cc906bdeaf7cb8c63b637e81a80fba917#rustred-app@0.1.0",
+      "manifest_path": "/shared/codex-1/vakint_rustred/workspace/cargo/git/checkouts/rustred-971a3b8def498c77/c2ca815/crates/rustred-app/Cargo.toml",
+      "target": {
+        "kind": [
+          "lib"
+        ],
+        "crate_types": [
+          "lib"
+        ],
+        "name": "rustred_app",
+        "src_path": "/shared/codex-1/vakint_rustred/workspace/cargo/git/checkouts/rustred-971a3b8def498c77/c2ca815/crates/rustred-app/src/lib.rs",
+        "edition": "2024",
+        "doc": true,
+        "doctest": true,
+        "test": true
+      },
+      "profile": {
+        "opt_level": "3",
+        "debuginfo": 0,
+        "debug_assertions": false,
+        "overflow_checks": false,
+        "test": false
+      },
+      "features": [],
+      "filenames": [
+        "/shared/codex-1/vakint_rustred/workspace/build/vakint-q0-local-retained-2d70-release-20261028/release/deps/librustred_app-1efda0346b730689.rlib",
+        "/shared/codex-1/vakint_rustred/workspace/build/vakint-q0-local-retained-2d70-release-20261028/release/deps/librustred_app-1efda0346b730689.rmeta"
+      ],
+      "executable": null,
+      "fresh": false
+    }
+  ],
+  "reused_dependency_provenance": {
+    "result": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/03e80-release-collectors-20261027/result.json",
+      "sha256": "be880a3910b5a25d309344501f87b399bddda8a94f6fa315f752ae4f434636dc"
+    },
+    "release_elfs": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/03e80-release-collectors-20261027/release-elfs.json",
+      "sha256": "47240c1f7f954c3dca2ed319b125b9e6deb2c00c4ff4ce44d12da26be287171b"
+    },
+    "source_freeze": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/03e80-release-collectors-20261027/source-freeze.json",
+      "sha256": "3dd00a44a45325217b61822263d809f255244f66e44d8f8a1a1ed24127911142"
+    },
+    "compile_proof": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/03e80-release-collectors-20261027/compile-proof-environment.json",
+      "sha256": "9553fe9ba603a76a3df6d86ee79627c0bbea815f80f23c674b6853fa19ca6228"
+    }
+  },
+  "reused_dependencies_are_not_claimed_fresh": true,
+  "freshly_compiled_crates": [
+    "five_loop_qcd_ladder",
+    "graphica",
+    "measure_cache",
+    "numerica",
+    "rustred",
+    "rustred_app",
+    "rustred_order",
+    "symbolica",
+    "vakint"
+  ],
+  "physical_executions": 0,
+  "cache_imports": 0,
+  "cache_writes": 0,
+  "nixci_result_claim": false
+}

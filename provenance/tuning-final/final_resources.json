@@ -1,0 +1,18 @@
+{
+  "utc": "2026-10-28T06:30:10.846830+00:00",
+  "MemAvailable_bytes": 681098489856,
+  "output_filesystem_available_bytes": 2760136196096,
+  "supervisor": {
+    "pid": 38033,
+    "start_ticks": 120218058
+  },
+  "worker": {
+    "pid": 38307,
+    "start_ticks": 120218086
+  },
+  "worker_pidfd_terminal": true,
+  "supervisor_memory": {
+    "VmRSS_bytes": 36126720,
+    "VmHWM_bytes": 36126720
+  }
+}

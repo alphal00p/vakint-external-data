@@ -1,0 +1,21 @@
+{
+  "schema": "vakint.light-cache.user-directed-freeze.v1",
+  "utc": "2026-10-28T12:51:34.111268+00:00",
+  "user_prompt_verbatim": "Continue as planned, but assume that the smaller cache you built right now is good enough, and just fully complete the objective and the vakint commit+push to a final tested form.",
+  "selection": "existing validated B:54Route+2048Apply",
+  "selected_records": 2102,
+  "compressed_bytes": 89635796,
+  "decoded_bytes": 104661730,
+  "sha256": "708361954e61e853666d5bb637ad0d58a4336385d4bc9f23133d6ed7e3330021",
+  "decoded_sha256": "2a9e18b58e33b875ad469d6c0f5a975270d475cef2b0be166d731e4791fa04e1",
+  "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-cache-selection-next-actions-20261028/physical-route-budget-additions-pilot-run1/native-core-54-plus-2048-export-run1/cache-output/cache.rrcache.gz",
+  "native_validation": "actual complete2102selected/reimported/complete;0missing/partial; exactcoefficients+originalorderedguards; unchanged2658source/bindingcodec6/knownterminals",
+  "user_acceptance_scope": "good-enough assumption waives further selection/tuning/optimization; not a measured performance winner or new certification",
+  "frozen_before_final_heldout": true,
+  "all_heldout_outcomes_used_for_selection": false,
+  "performance_claim": false,
+  "future_tuning_allowed": false,
+  "preserve_all_precious_work": true,
+  "current_cost_run": "finishstrictcloseandarchive, no newselection after",
+  "pending_delivery": "adoptvalidatedbytes/provenance+native/data checks; finishfinaltests/publication/actualdownloads+offline/MainCIupload+directbranchpush"
+}

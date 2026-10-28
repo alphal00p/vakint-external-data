@@ -1,0 +1,239 @@
+{
+  "schema": "vakint.native-producer-build-only-controller.v1",
+  "status": "FAILED_PRESERVED_NO_CACHE_RUNTIME",
+  "root_go_sha256": "fde7134feb7d20f6263481eeffdc423dc2601cfead628c04ecddc9504cf05686",
+  "proposal_sha256": "0743085f4d2f5bf33f40eedbc77e1b11e08fa8adf2d66f8216f5a6e20d451c9f",
+  "cpus": [
+    200,
+    201
+  ],
+  "jobs": 2,
+  "memory_floor_bytes": 50000000000,
+  "marker": "native-producer-build-only-10ff5b5b41bc45bb9a4633f2ffcea489",
+  "steps": [
+    {
+      "name": "copy-readonly-c2ca-donor",
+      "argv": [
+        "cp",
+        "-a",
+        "--reflink=auto",
+        "/shared/codex-1/vakint_rustred/workspace/build/heavy-native-finalization-ci-optim-c2ca",
+        "/shared/codex-1/vakint_rustred/workspace/build/native-producer-c2ca-v2-ci-optim"
+      ],
+      "started_utc": "2026-10-27T22:19:43Z",
+      "child": {
+        "pid": 912591,
+        "uid": 1124,
+        "start_ticks": 117328465,
+        "state": "R"
+      },
+      "returncode": 0,
+      "seconds": 11.056154842022806,
+      "minimum_mem_available_bytes": 422883094528,
+      "maximum_observed_child_rss_bytes": 3010560,
+      "maximum_observed_child_vmhwm_bytes": 3010560,
+      "maximum_observed_cohort_rss_sum_bytes": 3010560,
+      "signals": [],
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "seed-authentic03-lock",
+      "argv": [
+        "cp",
+        "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/Main03-Cargo.lock.seed",
+        "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-c2ca-source/Cargo.lock"
+      ],
+      "started_utc": "2026-10-27T22:19:54Z",
+      "child": {
+        "pid": 919061,
+        "uid": 1124,
+        "start_ticks": 117329588,
+        "state": "R"
+      },
+      "returncode": 0,
+      "seconds": 1.6534213859122247,
+      "minimum_mem_available_bytes": 422626131968,
+      "maximum_observed_child_rss_bytes": null,
+      "maximum_observed_child_vmhwm_bytes": null,
+      "maximum_observed_cohort_rss_sum_bytes": null,
+      "signals": [],
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "ordinary-private-resolver",
+      "argv": [
+        "cargo",
+        "metadata",
+        "--offline",
+        "--format-version",
+        "1",
+        "--manifest-path",
+        "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-c2ca-source/Cargo.toml"
+      ],
+      "started_utc": "2026-10-27T22:19:56Z",
+      "child": {
+        "pid": 919776,
+        "uid": 1124,
+        "start_ticks": 117329754,
+        "state": "R"
+      },
+      "returncode": 0,
+      "seconds": 1.690440348116681,
+      "minimum_mem_available_bytes": 422306811904,
+      "maximum_observed_child_rss_bytes": null,
+      "maximum_observed_child_vmhwm_bytes": null,
+      "maximum_observed_cohort_rss_sum_bytes": null,
+      "signals": [],
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "build-producer",
+      "argv": [
+        "cargo",
+        "build",
+        "--locked",
+        "--offline",
+        "--profile",
+        "ci-optim",
+        "--manifest-path",
+        "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-c2ca-source/Cargo.toml",
+        "--bin",
+        "native-selected-cache-producer",
+        "--message-format=json-render-diagnostics"
+      ],
+      "started_utc": "2026-10-27T22:19:58Z",
+      "child": {
+        "pid": 920753,
+        "uid": 1124,
+        "start_ticks": 117329925,
+        "state": "R"
+      },
+      "returncode": 0,
+      "seconds": 821.269419281045,
+      "minimum_mem_available_bytes": 406950334464,
+      "maximum_observed_child_rss_bytes": 51605504,
+      "maximum_observed_child_vmhwm_bytes": 51605504,
+      "maximum_observed_cohort_rss_sum_bytes": 5231702016,
+      "signals": [],
+      "log_sha256": "437b8f466a3973e9e54977bfc211ad4cbd6f926d94b30cb619c7222f667136b1"
+    },
+    {
+      "name": "parser-tests",
+      "argv": [
+        "cargo",
+        "test",
+        "--locked",
+        "--offline",
+        "--profile",
+        "ci-optim",
+        "--manifest-path",
+        "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-c2ca-source/Cargo.toml",
+        "--bin",
+        "native-selected-cache-producer",
+        "--",
+        "--test-threads=1"
+      ],
+      "started_utc": "2026-10-27T22:33:39Z",
+      "child": {
+        "pid": 1396794,
+        "uid": 1124,
+        "start_ticks": 117412056,
+        "state": "R"
+      },
+      "returncode": 0,
+      "seconds": 11.720679574878886,
+      "minimum_mem_available_bytes": 407417528320,
+      "maximum_observed_child_rss_bytes": 47783936,
+      "maximum_observed_child_vmhwm_bytes": 47783936,
+      "maximum_observed_cohort_rss_sum_bytes": 622399488,
+      "signals": [],
+      "log_sha256": "6ec1cf2b173f2fda41d71c4babed4c8caa47669e7ea1d855c98904c2afb8f1a7"
+    },
+    {
+      "name": "clippy",
+      "argv": [
+        "cargo",
+        "clippy",
+        "--locked",
+        "--offline",
+        "--profile",
+        "ci-optim",
+        "--manifest-path",
+        "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-c2ca-source/Cargo.toml",
+        "--bin",
+        "native-selected-cache-producer",
+        "--all-targets",
+        "--no-deps",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "started_utc": "2026-10-27T22:33:51Z",
+      "child": {
+        "pid": 1401473,
+        "uid": 1124,
+        "start_ticks": 117413228,
+        "state": "R"
+      },
+      "returncode": 0,
+      "seconds": 72.98612329503521,
+      "minimum_mem_available_bytes": 403495604224,
+      "maximum_observed_child_rss_bytes": 24330240,
+      "maximum_observed_child_vmhwm_bytes": 24330240,
+      "maximum_observed_cohort_rss_sum_bytes": 1882447872,
+      "signals": [],
+      "log_sha256": "99da9845ceb2a469a8f97182e3808cd6deff0adff70feaa0a08461faa84f2d16"
+    },
+    {
+      "name": "build-info",
+      "argv": [
+        "/shared/codex-1/vakint_rustred/workspace/build/native-producer-c2ca-v2-ci-optim/ci-optim/native-selected-cache-producer",
+        "build-info"
+      ],
+      "started_utc": "2026-10-27T22:35:04Z",
+      "child": {
+        "pid": 1445055,
+        "uid": 1124,
+        "start_ticks": 117420527,
+        "state": "R"
+      },
+      "returncode": 0,
+      "seconds": 1.6790652920026332,
+      "minimum_mem_available_bytes": 403469664256,
+      "maximum_observed_child_rss_bytes": null,
+      "maximum_observed_child_vmhwm_bytes": null,
+      "maximum_observed_cohort_rss_sum_bytes": null,
+      "signals": [],
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "Main_linked": false,
+  "cache_payload_reads_authorized": false,
+  "union_copy_export_reimport_authorized": false,
+  "controller": {
+    "pid": 908181,
+    "uid": 1124,
+    "start_ticks": 117327675,
+    "state": "R"
+  },
+  "controller_sha256": "2565d3ea4a156fd3234ac75f4c5ae3bed498bb8a9ecb92f1304265d8f232c583",
+  "approved_input_hashes": {
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-c2ca-source/Cargo.toml": "98f6ebe93245988c09aaa25ef1e2b231cd83a37d600037b21d41df06dc65286d",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-c2ca-source/build.rs": "bdb1e13d7d57635aaf10b55cd2009ab99f9b37bd77a4a875bad0af3263b18f99",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-c2ca-source/src/main.rs": "84c4c016855af710c30bed62530d37e3ab27a536f6d55bdb2a3db560d32bf7b1",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-c2ca-source/src/selection.rs": "bed2e34853e6654a6c1903a3ec59db81d695b1bd1d1f0190ab3d68ce4ce3de1b",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-c2ca-source/src/union.rs": "1808b73180a0061044d3741a7fa3869836e15b21b931db7f4815bf3d3a36a5e4",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-c2ca-source/src/index_identity.rs": "9c0bcb8aab60ccde38c7a406d719e26632bfb164829d1ef5e6c5a9ab23ec432e",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-c2ca-source/src/proof_reference.rs": "e8ce76485fac54f11fba173cfa4405fe08c8b9750758ce493c99251f22d2adfd",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/producer-c2ca-source/src/resource_guard_admission.rs": "bb3223d27584b42069d3813ebdcaefa6598a0935ca4531714a50248b334870cb",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/build_c2ca.py": "2565d3ea4a156fd3234ac75f4c5ae3bed498bb8a9ecb92f1304265d8f232c583",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/source-origin.json": "f701da736a0d06315f5d9db9a53dfd54625d6ee8f5161bf5ca65ed62e5cf7176",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/request.json": "9a0fc58a40226013322ebaa70ff3b1bdaecb5517e3cb85026d432d90817b96ff",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/heavy-five-source-finalization-20261027/metadata-preparation/compiled-inventory-preparation/inventory_native_compiled_inputs.py": "94c208fb12975f6fdcbb74b3dc247cd88d6314ab04575a5fcd14bf13fd5bd63c",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/Main03-Cargo.lock.seed": "015da1c446c4aa538c36c17eb64da46d7d0a612cf9989926e7f53d496f77e8ea",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/root-build-only-go.json": "fde7134feb7d20f6263481eeffdc423dc2601cfead628c04ecddc9504cf05686",
+    "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/light-selection-final-plan-20261027/all5-index-union/build-packet.json": "0743085f4d2f5bf33f40eedbc77e1b11e08fa8adf2d66f8216f5a6e20d451c9f"
+  },
+  "error": "AssertionError: /shared/codex-1/vakint_rustred/workspace/5l-push/native-cache-monitor-integration/crates",
+  "finished_utc": "2026-10-27T22:35:11Z"
+}

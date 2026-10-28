@@ -1,0 +1,70 @@
+{
+  "schema": "vakint.actual-off-projection-handoff.v1",
+  "status": "PASS_ACTUAL_RAW_EVIDENCE_PROJECTED_AFTER_FULL_SCIENTIFIC_PROOF",
+  "utc": "2026-10-28T03:13:52.320942+00:00",
+  "projection_controller": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-off-projection-run1/control.json",
+    "sha256": "a460240692280947a7f60fd0e0e494820dd57cde640c83e31876ef5f7add103b",
+    "bytes": 1239
+  },
+  "actual_accepted_completion": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-off-projection-run1/accepted-completion.json",
+    "sha256": "6ab3ad615c49c766e15581e195c5851bb50cb6d6e570a01853c19635f1235fc4",
+    "bytes": 4613
+  },
+  "actual_launch_bytes_unchanged": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-off-projection-run1/accepted-launch.json",
+    "sha256": "ab35b1312b0ed1576e3f5aaa0b8d60cebc2463aa127784c5bd790f0da1852207",
+    "bytes": 2079
+  },
+  "full_scientific_acceptance": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-off-scientific-handoff.json",
+    "sha256": "4bec1f2b9b5b895de87fa9eb75ceac9381b3713f0fda3855265490aa563a85e3",
+    "bytes": 4243
+  },
+  "raw_origins_preserved_byte_for_byte": {
+    "raw-execution.json": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-off-projection-run1/raw-execution.json",
+      "sha256": "ad799a43b5938858e4f3278460eb5737aa6c915f13ba7c3ee6f80ad53e9c0c12",
+      "bytes": 6512
+    },
+    "raw-launch.json": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-off-projection-run1/raw-launch.json",
+      "sha256": "ab35b1312b0ed1576e3f5aaa0b8d60cebc2463aa127784c5bd790f0da1852207",
+      "bytes": 2079
+    },
+    "raw-verification.json": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-off-projection-run1/raw-verification.json",
+      "sha256": "d11fb036865e9169563f2a6e88b909819c7cab54e0a9505a1e4dc092e223d834",
+      "bytes": 8381
+    },
+    "raw-full58-proof.json": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-off-projection-run1/raw-full58-proof.json",
+      "sha256": "06d8872b7f65e91746ff30562aab871588d41c3eaf72da40fd1abfab9bc93d64",
+      "bytes": 26233
+    },
+    "raw-benchmark.json": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-off-projection-run1/raw-benchmark.json",
+      "sha256": "0b67ab6f51220b060564ee6306b2f8ca24eb131d43ce25e9b5bcd0316b6d86e2",
+      "bytes": 38729
+    }
+  },
+  "Root_projection_GO": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/physical-off-projection-binding/root-project-go.json",
+    "sha256": "5bc2d5e25ff7251765ba4059a3612b9c77b2fce7f57935eb621e90e2bbd1d397",
+    "bytes": 852
+  },
+  "post_executable": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-release-2d70-20261028/run/artifacts/five_loop_qcd_ladder",
+    "sha256": "ca89f4eb6776c88bb28a1147a6363233638517b1d52cc026a03798cdeb8ed1e1",
+    "bytes": 148891512
+  },
+  "functional_acceptance": true,
+  "performance_eligible": false,
+  "projection_seconds": 1.6115498151630163,
+  "new_physical_or_Native_or_cache_loads": 0,
+  "canonical_physical_v1_pair_acceptance": "Pending same-cohort usageON and unchanged owner validator; this is authentic OFF evidence only.",
+  "no_automatic_successor": true,
+  "all_my_workers_terminal": true,
+  "timing_lane_released_to_Root": true
+}

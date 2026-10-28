@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/tuning.py", line 596, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/q0-coefficient-local-usage-2d70-20261028/tuning.py", line 589, in main
+    common.persist(output / "completion.json", result)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/physical-memavailable-floor-20261026/real-rust-admission-gate/actor.py", line 67, in persist
+    require(not path.exists(), "one-shot receipt already exists")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/physical-memavailable-floor-20261026/real-rust-admission-gate/actor.py", line 21, in require
+    raise ValueError(message)
+ValueError: one-shot receipt already exists

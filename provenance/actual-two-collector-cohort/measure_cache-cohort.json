@@ -1,0 +1,24 @@
+{
+  "main_revision": "2d70bfe439d84b6888cbd29d2574df9c1ed7aae6",
+  "native_revision": "c2ca815cc906bdeaf7cb8c63b637e81a80fba917",
+  "kernel_revision": "9cd57678d8817ec33c05cacba4925162f1c86b0b",
+  "main_source_snapshot_sha256": "d415bf7d142d57b386bd5656471a7551dd43c5ddb0c0ea82c7f2fc3436abc29a",
+  "native_source_snapshot_sha256": "3cdfaaacc4619f3adb3ceddb3185106338e2352523ecc778858a633a80055b0c",
+  "collector": "measure_cache",
+  "profile": "release",
+  "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)",
+  "measurement_executable_sha256": "dc11710dab03050c3ceb259c431ba717f69810412b7ef17ba9f7ae9e91f3c9ea",
+  "collector_source_sha256": "a27007e87a590ec25443e422a339563decce58b11d5f30aee51fba44e0235d6f",
+  "collector_artifacts": {
+    "path_hint": "provenance/actual-two-collector-cohort/collector-artifacts.json",
+    "sha256": "9bf61b213956dbed1f3a2667d16c3b906c9931834e018b234e0d178433c0fb7e"
+  },
+  "main_source_snapshot": {
+    "path_hint": "provenance/actual-two-collector-cohort/main-source-snapshot.json",
+    "sha256": "d415bf7d142d57b386bd5656471a7551dd43c5ddb0c0ea82c7f2fc3436abc29a"
+  },
+  "native_source_snapshot": {
+    "path_hint": "provenance/actual-two-collector-cohort/native-source-snapshot.json",
+    "sha256": "3cdfaaacc4619f3adb3ceddb3185106338e2352523ecc778858a633a80055b0c"
+  }
+}

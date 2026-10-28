@@ -1,0 +1,27 @@
+{
+  "schema": "vakint.physical-cache-usage-receipt.v1",
+  "benchmark": {
+    "path_hint": "provenance/physical-q0/on/benchmark.json",
+    "sha256": "6069c8c9c8cea2d656b25d0c4c64690977d29d847b02ab09bb55a3ac957fc33b"
+  },
+  "completion": {
+    "path_hint": "provenance/physical-q0/on/completion.json",
+    "sha256": "3a6960f61d80dccce18d4f02e7443ce9fa9c2096c61e3d63c56ab102fa4637b3"
+  },
+  "launch": {
+    "path_hint": "provenance/physical-q0/on/launch.json",
+    "sha256": "a4b463305f5cb82b94e2f06c43f4db5226fd81e278a58552158bfdcbd6abbb13"
+  },
+  "reference_benchmark": {
+    "path_hint": "provenance/physical-q0/off/benchmark.json",
+    "sha256": "0b67ab6f51220b060564ee6306b2f8ca24eb131d43ce25e9b5bcd0316b6d86e2"
+  },
+  "reference_completion": {
+    "path_hint": "provenance/physical-q0/off/completion.json",
+    "sha256": "6ab3ad615c49c766e15581e195c5851bb50cb6d6e570a01853c19635f1235fc4"
+  },
+  "reference_launch": {
+    "path_hint": "provenance/physical-q0/off/launch.json",
+    "sha256": "ab35b1312b0ed1576e3f5aaa0b8d60cebc2463aa127784c5bd790f0da1852207"
+  }
+}
