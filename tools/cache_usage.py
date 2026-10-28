@@ -1774,6 +1774,7 @@ def author_candidates(
     tuning_ref,
     additions,
     output_relative,
+    physical_route_limit=None,
 ):
     """Author existing profile/key formats from accepted observations only.
 
@@ -1801,6 +1802,10 @@ def author_candidates(
         and all(value == "all" or integer(value, 0, U64_MAX) for value in additions)
         and len(set(additions)) == len(additions),
         "additional-key counts must be unique nonnegative integers or all",
+    )
+    require(
+        physical_route_limit is None or integer(physical_route_limit, 1, U64_MAX),
+        "physical-route limit must be a positive integer",
     )
     binding = selection_source(root, source)
     if isinstance(manifest.get("cache"), dict):
@@ -1887,6 +1892,15 @@ def author_candidates(
     core, extras, cases, dispatches = rank_observed_work(
         physical, tuning, binding["physical_arity"], frequencies
     )
+    require(
+        physical_route_limit is None or physical_route_limit <= len(core),
+        "physical-route limit exceeds observed physical CORE",
+    )
+    ranked_core = sorted(
+        core,
+        key=lambda key: (-len(cases[key]), -dispatches[key], -frequencies[key], key),
+    )
+    selected_core = set(ranked_core[:physical_route_limit])
     counts = sorted(
         {0, *(len(extras) if value == "all" else value for value in additions)}
     )
@@ -1951,7 +1965,7 @@ def author_candidates(
     files = {"usage-profile.json.gz": profile_bytes, "ranking.json.gz": ranking_bytes}
     candidates = []
     for count in counts:
-        keys = sorted(core | set(extras[:count]))
+        keys = sorted(selected_core | set(extras[:count]))
         document = {
             "schema": "vakint.cache-record-selection.v1",
             "semantic_binding": binding,
@@ -1961,7 +1975,7 @@ def author_candidates(
             "selection": {
                 "method": ranking["method"],
                 "max_compressed_bytes": data.FIVE_LOOP_LIGHT_CACHE_BYTES_LIMIT,
-                "core_keys": len(core),
+                "core_keys": len(selected_core),
                 "additional_keys": count,
                 "ranking_sha256": ranking_ref["sha256"],
             },
@@ -1971,7 +1985,9 @@ def author_candidates(
         candidates.append(
             {
                 "keys": reference(name, files[name]),
-                "core_keys": len(core),
+                "core_keys": len(selected_core),
+                "total_core_keys": len(core),
+                "selected_core_keys": len(selected_core),
                 "additional_keys": count,
                 "unique_keys": len(keys),
                 "compressed_cache_bytes": None,
@@ -1987,7 +2003,9 @@ def author_candidates(
         "usage_profile": profile_ref,
         "ranking": ranking_ref,
         "eligible_case_ids": eligible,
-        "core_keys": len(core),
+        "core_keys": len(selected_core),
+        "total_core_keys": len(core),
+        "selected_core_keys": len(selected_core),
         "eligible_unique_keys": len(frequencies),
         "candidates": candidates,
         "final_held_out_used": False,
@@ -2224,7 +2242,13 @@ def main(argv=None):
         "--additional-keys",
         action="append",
         default=None,
-        help="Cumulative extra-key count, or all; repeat to freeze a schedule. CORE is always included.",
+        help="Cumulative extra-key count, or all; repeat to freeze a schedule. Selected physical CORE is always included.",
+    )
+    author.add_argument(
+        "--physical-route-limit",
+        type=int,
+        default=None,
+        help="Positive count of physical CORE routes ranked by observed case/dispatch/hit frequency; default includes all",
     )
     author.add_argument(
         "--output-dir",
@@ -2269,6 +2293,7 @@ def main(argv=None):
             reference("tuning_profile"),
             additions,
             args.output_dir,
+            physical_route_limit=args.physical_route_limit,
         )
     except (ValueError, KeyError, TypeError, AttributeError, OSError) as error:
         parser.exit(2, f"cache usage authoring failed: {error}\n")

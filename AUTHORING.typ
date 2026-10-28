@@ -453,22 +453,31 @@ sampled, failed, mixed-cohort and held-out observations remain errors.
 
 `usage-profile.json.gz` uses the unchanged v2 schema. Every
 `selected-keys-NNNNNN.json.gz` uses the unchanged selected-key v1 schema. CORE
-contains only unique positively observed physical requested Route keys. It is
-included in every candidate. Remaining positively observed keys are ordered by
+contains only unique positively observed physical requested Route keys. By
+default every CORE key is included in every candidate. Optional
+`--physical-route-limit N` selects a positive-sized prefix of CORE, ordered by
 independent-case reuse, dispatch occurrence count, backing-hit multiplicity,
-then exact canonical work identity. Route and Apply records remain distinct;
-Apply owner sectors are preserved. Repeated `--additional-keys N` freezes
-cumulative prefixes of that order; `all` adds every eligible remaining key.
+then exact canonical work identity. N cannot exceed the observed CORE count.
+This enables smaller physical subsets for actual Native budget trials while
+preserving the complete authenticated profiles and original ranking.
+
+Remaining positively observed keys use the same ordering, excluding every
+original CORE key even when the physical limit omits it. Route and Apply
+records remain distinct; Apply owner sectors are preserved. Repeated
+`--additional-keys N` freezes cumulative prefixes of that remaining order;
+`all` adds every eligible remaining key.
 
 `ranking.json.gz` records those observed frequencies and explicitly leaves
 per-key avoided work and compressed cost unavailable. Shared coefficients and
 gzip make costs nonadditive. `authoring-report.json` binds the profiles, ranking
 and candidate keys, with actual cache bytes and Native acceptance still unset.
+The report and each candidate distinguish `total_core_keys` from
+`selected_core_keys`; `core_keys` is the selected physical count.
 Authoring alone neither creates a cache nor certifies a budget or algebra.
 
-Export CORE first with the existing Native `export-selected` command. Retain
-the completed candidate while trying additions. Actual successful encodings
-decide both the 95,000,000-byte compressed budget and default 1 GiB decoded
+Export the selected CORE first with the existing Native `export-selected`
+command. Retain the completed candidate while trying additions. Actual successful
+encodings decide both the 95,000,000-byte compressed budget and default 1 GiB decoded
 budget; a refusal is not a measured over-budget size. Keep HEAVY and every raw
 source intact. Compare eligible-input performance only before freezing the
 final selection, and never use the twelve final held-out observations to tune

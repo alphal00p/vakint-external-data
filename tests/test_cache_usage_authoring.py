@@ -50,6 +50,67 @@ class UsageCandidateAuthoringTests(unittest.TestCase):
             "authoring/" + member + ".json", self.composed.children[member]
         )
 
+    def ranked_physical_core(self):
+        """Seal five requested routes with independent ranking discriminators."""
+        twice, many_hits, first_tie, second_tie = [
+            {"kind": "route", "powers": [power] + [1] * 14} for power in (2, 3, 4, 5)
+        ]
+        case = self.fixture.case
+        first = case["dispatches"][0]
+        roots = [self.fixture.route, twice, many_hits, first_tie, second_tie]
+        first.update(
+            requested_roots=len(roots),
+            completed_roots=len(roots),
+            collected_roots=list(reversed(roots)),
+            persistent={
+                "lookups": 117,
+                "misses": 2,
+                "route_hits": 112,
+                "apply_hits": 3,
+                "requested_root_hits": 112,
+                "intermediate_hits": 3,
+            },
+            records=[
+                {"work": work, "backing_hits": hits}
+                for work, hits in (
+                    (second_tie, 5),
+                    (first_tie, 5),
+                    (many_hits, 100),
+                    (twice, 1),
+                    (self.fixture.route, 1),
+                    (self.fixture.apply, 3),
+                )
+            ],
+        )
+        case["dispatches"].append(
+            {
+                "ordinal": 1,
+                "requested_roots": 1,
+                "completed_roots": 1,
+                "collected_roots": [twice],
+                "persistent": {
+                    "lookups": 1,
+                    "misses": 0,
+                    "route_hits": 1,
+                    "apply_hits": 0,
+                    "requested_root_hits": 1,
+                    "intermediate_hits": 0,
+                },
+                "records": [{"work": twice, "backing_hits": 1}],
+            }
+        )
+        case["input_dispatch_count"] = len(case["dispatches"])
+        totals = {
+            name: sum(dispatch["persistent"][name] for dispatch in case["dispatches"])
+            for name in first["persistent"]
+        }
+        for report in self.fixture.physical_reports:
+            report["saved_application_cache"]["persistent"].update(totals)
+        self.fixture.seal_physical()
+        self.composed.children["physical"] = copy.deepcopy(self.fixture.profile)
+        self.reseal_profile("physical")
+        return roots
+
     def snapshot(self):
         result = {}
         for path in self.fixture.repo.rglob("*"):
@@ -251,6 +312,102 @@ class UsageCandidateAuthoringTests(unittest.TestCase):
                 (self.fixture.repo / second / name).read_bytes(),
             )
 
+    def test_default_none_and_full_core_limit_preserve_candidate_bytes(self):
+        core = self.ranked_physical_core()
+        report = self.author()
+        first = self.fixture.repo / self.output
+        self.assertEqual(report["core_keys"], len(core))
+        self.assertEqual(report["total_core_keys"], len(core))
+        self.assertEqual(report["selected_core_keys"], len(core))
+        for label, limit in (("none", None), ("full", len(core))):
+            with self.subTest(physical_route_limit=limit):
+                output = self.output + "-" + label
+                self.author(output_relative=output, physical_route_limit=limit)
+                for name in (
+                    "usage-profile.json.gz",
+                    "selected-keys-000000.json.gz",
+                    "selected-keys-000001.json.gz",
+                    "ranking.json.gz",
+                ):
+                    self.assertEqual(
+                        (first / name).read_bytes(),
+                        (self.fixture.repo / output / name).read_bytes(),
+                    )
+
+    def test_limited_physical_prefix_keeps_complete_authenticated_profiles(self):
+        core = self.ranked_physical_core()
+        before = self.snapshot()
+        self.author(additions=[0, "all"])
+        full = self.fixture.repo / self.output
+        for limit in range(1, len(core)):
+            with self.subTest(physical_route_limit=limit):
+                output = self.output + f"-limit-{limit}"
+                report = self.author(
+                    additions=[0, "all"],
+                    output_relative=output,
+                    physical_route_limit=limit,
+                )
+                directory = self.fixture.repo / output
+                # The evidence and original CORE ranking remain complete even
+                # when fewer physical routes are selected for export.
+                for name in ("usage-profile.json.gz", "ranking.json.gz"):
+                    self.assertEqual(
+                        (full / name).read_bytes(), (directory / name).read_bytes()
+                    )
+                profile = self.read_gzip(directory / "usage-profile.json.gz")
+                self.assertEqual(profile["schema"], cache_usage.PROFILE_V2_SCHEMA)
+                for member in profile["members"]:
+                    self.assertEqual(member["profile"], self.references[member["id"]])
+                    self.assertEqual(
+                        cache_usage.source_json(self.fixture.repo, member["profile"]),
+                        self.composed.children[member["id"]],
+                    )
+                self.assertEqual(report["total_core_keys"], len(core))
+                self.assertEqual(report["selected_core_keys"], limit)
+                self.assertEqual(report["core_keys"], limit)
+                self.assertFalse(report["final_held_out_used"])
+                self.assertEqual(len(report["candidates"]), 2)
+                for candidate in report["candidates"]:
+                    extra = candidate["additional_keys"]
+                    self.assertIn(extra, (0, 1))
+                    self.assertEqual(candidate["total_core_keys"], len(core))
+                    self.assertEqual(candidate["selected_core_keys"], limit)
+                    self.assertEqual(candidate["core_keys"], limit)
+                    selection = self.read_gzip(
+                        directory / f"selected-keys-{extra:06d}.json.gz"
+                    )
+                    self.assertEqual(
+                        selection["schema"], "vakint.cache-record-selection.v1"
+                    )
+                    self.assertEqual(selection["selection"]["core_keys"], limit)
+                    expected = core[:limit] + ([self.fixture.apply] if extra else [])
+                    self.assertEqual(
+                        {cache_usage.work(row, 15) for row in selection["keys"]},
+                        {cache_usage.work(row, 15) for row in expected},
+                    )
+                    frequencies = cache_usage.admitted_profile_frequencies(
+                        self.fixture.repo,
+                        profile,
+                        selection,
+                        self.fixture.binding,
+                        self.fixture.root,
+                        self.fixture.metadata["selection"]["source"],
+                        self.fixture.manifest,
+                    )
+                    # Omitted CORE routes retain their complete observations;
+                    # even `all` extras does not reintroduce them.
+                    self.assertEqual(len(frequencies), len(core) + 1)
+                    self.assertEqual(frequencies[cache_usage.work(core[2], 15)], 100)
+                    self.assertEqual(frequencies[cache_usage.work(core[4], 15)], 5)
+        after = self.snapshot()
+        self.assertEqual({key: after[key] for key in before}, before)
+
+    def test_invalid_physical_limits_fail_before_any_output(self):
+        core = self.ranked_physical_core()
+        for limit in (0, -1, True, False, 1.0, 1.5, len(core) + 1):
+            with self.subTest(physical_route_limit=limit):
+                self.rejected(physical_route_limit=limit)
+
     def test_swapping_collectors_is_rejected_before_any_output(self):
         self.rejected(
             physical_ref=self.references["tuning"],
@@ -299,6 +456,16 @@ class UsageCandidateAuthoringTests(unittest.TestCase):
         )
         self.reseal_profile("physical")
         self.rejected()
+
+    def test_physical_limit_cannot_bypass_held_out_exclusion(self):
+        self.ranked_physical_core()
+        authority = copy.deepcopy(self.fixture.document)
+        authority["held_out"] = [{"id": "alias", "public_input": "vacuum( 1 )"}]
+        self.composed.children["physical"]["eligibility_documents"].append(
+            self.fixture.embed(authority)
+        )
+        self.reseal_profile("physical")
+        self.rejected(physical_route_limit=1)
 
     def test_cohort_changes_are_not_authoring_shortcuts(self):
         self.composed.children["tuning"]["compiled_cohort"]["kernel_revision"] = (
@@ -428,7 +595,7 @@ class UsageCandidateAuthoringTests(unittest.TestCase):
             list((self.fixture.repo / "provenance").glob(".light-authoring-*")), []
         )
 
-    def test_cli_accepts_authenticated_ordinary_loop_manifest(self):
+    def cli_arguments(self):
         manifest = self.fixture.root / "manifest.json"
         manifest.write_text(json.dumps(self.fixture.manifest))
         source = self.fixture.save(
@@ -456,14 +623,48 @@ class UsageCandidateAuthoringTests(unittest.TestCase):
                 ]
             )
         arguments.extend(["--additional-keys", "0", "--output-dir", self.output])
+        return arguments
+
+    def test_cli_accepts_authenticated_ordinary_loop_manifest(self):
         with patch("sys.stdout", new_callable=io.StringIO) as output:
-            cache_usage.main(arguments)
+            cache_usage.main(self.cli_arguments())
         report = json.loads(output.getvalue())
         self.assertFalse(report["native_payloads_opened"])
         self.assertEqual(report["core_keys"], 1)
         self.assertTrue(
             (self.fixture.repo / self.output / "authoring-report.json").is_file()
         )
+
+    def test_cli_physical_limit_selects_the_ranked_subset(self):
+        core = self.ranked_physical_core()
+        arguments = self.cli_arguments() + ["--physical-route-limit", "2"]
+        with patch("sys.stdout", new_callable=io.StringIO) as output:
+            cache_usage.main(arguments)
+        report = json.loads(output.getvalue())
+        self.assertEqual(report["total_core_keys"], len(core))
+        self.assertEqual(report["selected_core_keys"], 2)
+        selection = self.read_gzip(
+            self.fixture.repo / self.output / "selected-keys-000000.json.gz"
+        )
+        self.assertEqual(
+            {cache_usage.work(row, 15) for row in selection["keys"]},
+            {cache_usage.work(row, 15) for row in core[:2]},
+        )
+
+    def test_cli_rejects_nonpositive_noninteger_and_excessive_physical_limits(self):
+        core = self.ranked_physical_core()
+        arguments = self.cli_arguments()
+        before = self.snapshot()
+        for limit in ("0", "-1", "true", "1.5", str(len(core) + 1)):
+            with self.subTest(physical_route_limit=limit):
+                with (
+                    patch("sys.stderr", new_callable=io.StringIO),
+                    self.assertRaises(SystemExit) as raised,
+                ):
+                    cache_usage.main(arguments + ["--physical-route-limit", limit])
+                self.assertEqual(raised.exception.code, 2)
+                self.assertEqual(self.snapshot(), before)
+                self.assertFalse((self.fixture.repo / self.output).exists())
 
 
 if __name__ == "__main__":
