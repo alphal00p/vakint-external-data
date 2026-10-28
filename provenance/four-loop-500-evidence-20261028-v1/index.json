@@ -1,0 +1,1796 @@
+{
+  "schema": "vakint.external-data.accepted500-evidence-index.v1",
+  "ledger": {
+    "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/adaptive500-end-to-end-postprocess-source-v7/batches/subset500-current26-ledger-20261028-v1/output-ledger-v1/coverage500.json",
+    "sha256": "e8aeafde031434001b162cd61455487f54c1f6ce78dc1ade5058524a04219c2e"
+  },
+  "Root_adoption": {
+    "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/adaptive500-end-to-end-postprocess-source-v7/batches/subset500-current26-ledger-20261028-v1/Root-actual-current26-cumulative-ledger-adoption-v1.json",
+    "sha256": "a0c3f45b0ad121789ac01cfdaab456232a48095d96bab6f37039f662feeedbbe"
+  },
+  "records": [
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p0_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/computed.json",
+        "sha256": "f417e2f34ebafd7731a6af216284a3157354b314b9eb94c2eb41e5cdd269c0e2"
+      },
+      "archive_member": "records/f417e2f34ebafd7731a6af216284a3157354b314b9eb94c2eb41e5cdd269c0e2.json",
+      "bytes": 3169
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p0_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "8405ae84e3c38bd7a2628d73a2902913b050b4ddb679ca29e80f1a7714f1c87b"
+      },
+      "archive_member": "records/8405ae84e3c38bd7a2628d73a2902913b050b4ddb679ca29e80f1a7714f1c87b.json",
+      "bytes": 1616
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p0_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/transaction-committed.json",
+        "sha256": "4ebe79c597a4a412717f77e04cf8a81790c45fb5099ed54362cda0b7919b22db"
+      },
+      "archive_member": "records/4ebe79c597a4a412717f77e04cf8a81790c45fb5099ed54362cda0b7919b22db.json",
+      "bytes": 11470
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p0_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/validation.json",
+        "sha256": "cc84334d38462c72b06b5d6a4140a978a45a4f1ae1425b8e7f6e809fd3fbca6b"
+      },
+      "archive_member": "records/cc84334d38462c72b06b5d6a4140a978a45a4f1ae1425b8e7f6e809fd3fbca6b.json",
+      "bytes": 745709
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p0_p2_p1_p1_p1_p1_p1_p1_p0/artifacts/catalogue-derived-publication-stage50-v1/reference_provenance.json",
+        "sha256": "411ab3cabe3b8b055b3f7a2310c9de01b5f8cbb261baafab7a72332ee06400bd"
+      },
+      "archive_member": "records/411ab3cabe3b8b055b3f7a2310c9de01b5f8cbb261baafab7a72332ee06400bd.json",
+      "bytes": 30792
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p0_p2_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/computed.json",
+        "sha256": "4a83c83b2ae1dc5b8ace9a50c63e3e2e31ac8871c42708eef80f7f449c0fcb82"
+      },
+      "archive_member": "records/4a83c83b2ae1dc5b8ace9a50c63e3e2e31ac8871c42708eef80f7f449c0fcb82.json",
+      "bytes": 2164
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p0_p2_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "86bcc5687847278eadb8ea20c0b3e62c047a0ae056e9707aab42f3bef70ca040"
+      },
+      "archive_member": "records/86bcc5687847278eadb8ea20c0b3e62c047a0ae056e9707aab42f3bef70ca040.json",
+      "bytes": 1213
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p0_p2_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/transaction-committed.json",
+        "sha256": "bced5e60a1d9a5b4fbeff267160fcfbc24b7f7aadcebbcdfca87dd9ef57a5cec"
+      },
+      "archive_member": "records/bced5e60a1d9a5b4fbeff267160fcfbc24b7f7aadcebbcdfca87dd9ef57a5cec.json",
+      "bytes": 11576
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p0_p2_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/validation.json",
+        "sha256": "3132ae8476423dc2e9d759a6e6fcbc542d40d1fa0a5d646302851d91640a445e"
+      },
+      "archive_member": "records/3132ae8476423dc2e9d759a6e6fcbc542d40d1fa0a5d646302851d91640a445e.json",
+      "bytes": 724892
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p1_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/computed.json",
+        "sha256": "4a3584a58d249cec552e6dc3b980719723db18d5ea4b7040096fbbb139310b8c"
+      },
+      "archive_member": "records/4a3584a58d249cec552e6dc3b980719723db18d5ea4b7040096fbbb139310b8c.json",
+      "bytes": 1661
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p1_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "720c50931aca1b3c70987d7d452284090a99ccc4c6afc2acd3a07b3ebf053669"
+      },
+      "archive_member": "records/720c50931aca1b3c70987d7d452284090a99ccc4c6afc2acd3a07b3ebf053669.json",
+      "bytes": 1177
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p1_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/transaction-committed.json",
+        "sha256": "978165c8343f138519093ffea65acac73db30bf05994502cf9088ed4ae67d847"
+      },
+      "archive_member": "records/978165c8343f138519093ffea65acac73db30bf05994502cf9088ed4ae67d847.json",
+      "bytes": 11470
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p1_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/validation.json",
+        "sha256": "c5feaf66acf27c9255e0c83b5e966f7d52817042dd574eab3eef59fdd113a96a"
+      },
+      "archive_member": "records/c5feaf66acf27c9255e0c83b5e966f7d52817042dd574eab3eef59fdd113a96a.json",
+      "bytes": 801806
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p2_p1_p0_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/computed.json",
+        "sha256": "759d750e8543f94a87e2e6eec319619c5504f1f3a4740a4767f4d94fb7c9fa40"
+      },
+      "archive_member": "records/759d750e8543f94a87e2e6eec319619c5504f1f3a4740a4767f4d94fb7c9fa40.json",
+      "bytes": 3171
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p2_p1_p0_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "891580509dfc58c3d02507ba27e2f982050275cccc2f55da50e373e239b396e6"
+      },
+      "archive_member": "records/891580509dfc58c3d02507ba27e2f982050275cccc2f55da50e373e239b396e6.json",
+      "bytes": 4057
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p2_p1_p0_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/transaction-committed.json",
+        "sha256": "09104b8fbe5a8ed359f9621d492a40a53ab57aab7528111366612d34a22eaf75"
+      },
+      "archive_member": "records/09104b8fbe5a8ed359f9621d492a40a53ab57aab7528111366612d34a22eaf75.json",
+      "bytes": 11576
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p2_p1_p0_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/validation.json",
+        "sha256": "cae1802832e07e90139515a3f4c5e4a61aaf9ded77f09484a6e51ec0a530927d"
+      },
+      "archive_member": "records/cae1802832e07e90139515a3f4c5e4a61aaf9ded77f09484a6e51ec0a530927d.json",
+      "bytes": 692915
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p2_p1_p1_p1_p0_p1_p1_p1_p0/artifacts/catalogue-derived-publication-stage50-v1/reference_provenance.json",
+        "sha256": "686788d5de99152c60fd82b067bd2b16ac004ac6c5e1519cf39eebf0f61f5c03"
+      },
+      "archive_member": "records/686788d5de99152c60fd82b067bd2b16ac004ac6c5e1519cf39eebf0f61f5c03.json",
+      "bytes": 28192
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p2_p1_p1_p1_p0_p1_p1_p1_p0/artifacts/uniform-stage500-v1/computed.json",
+        "sha256": "7773db7c9a8f9e2833efa92cc049f79e3dcb3698f553156370f65702e6171c0a"
+      },
+      "archive_member": "records/7773db7c9a8f9e2833efa92cc049f79e3dcb3698f553156370f65702e6171c0a.json",
+      "bytes": 3171
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p2_p1_p1_p1_p0_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "6853e9c1e6b679841799bcb3b10b29bafbb4bd1a573ad614a978195887ffd03d"
+      },
+      "archive_member": "records/6853e9c1e6b679841799bcb3b10b29bafbb4bd1a573ad614a978195887ffd03d.json",
+      "bytes": 4079
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p2_p1_p1_p1_p0_p1_p1_p1_p0/artifacts/uniform-stage500-v1/transaction-committed.json",
+        "sha256": "55496706099f3bc19e4e0bc5b71a7dde01b17c53256cc07d6e5b3d39ae848ea4"
+      },
+      "archive_member": "records/55496706099f3bc19e4e0bc5b71a7dde01b17c53256cc07d6e5b3d39ae848ea4.json",
+      "bytes": 11576
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p2_p1_p1_p1_p0_p1_p1_p1_p0/artifacts/uniform-stage500-v1/validation.json",
+        "sha256": "cb5115b02b835fa183183291bc63ae31795e7f05f026f94b9c56770bd4b0a04f"
+      },
+      "archive_member": "records/cb5115b02b835fa183183291bc63ae31795e7f05f026f94b9c56770bd4b0a04f.json",
+      "bytes": 689121
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p2_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/computed.json",
+        "sha256": "27131d144f20d786e9eeacdc34761b8d27420396ea98858202a32f3fba975613"
+      },
+      "archive_member": "records/27131d144f20d786e9eeacdc34761b8d27420396ea98858202a32f3fba975613.json",
+      "bytes": 1158
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p2_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "27131d144f20d786e9eeacdc34761b8d27420396ea98858202a32f3fba975613"
+      },
+      "archive_member": "records/27131d144f20d786e9eeacdc34761b8d27420396ea98858202a32f3fba975613.json",
+      "bytes": 1158
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p2_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/transaction-committed.json",
+        "sha256": "6374594b48b17fae1a4ecf6c9896d517862ae621d7d603bd09b146d14b0c0fd3"
+      },
+      "archive_member": "records/6374594b48b17fae1a4ecf6c9896d517862ae621d7d603bd09b146d14b0c0fd3.json",
+      "bytes": 11577
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p2_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/validation.json",
+        "sha256": "5b2bedf419b924ae0a2e93f218ee1a8dd43ab18c0ec86b55d0330533643076ee"
+      },
+      "archive_member": "records/5b2bedf419b924ae0a2e93f218ee1a8dd43ab18c0ec86b55d0330533643076ee.json",
+      "bytes": 782655
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p1_p1_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/computed.json",
+        "sha256": "a93bd689c930cc741cff9e4e877502590d09071b839f467a34081b6e0e27a606"
+      },
+      "archive_member": "records/a93bd689c930cc741cff9e4e877502590d09071b839f467a34081b6e0e27a606.json",
+      "bytes": 1158
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p1_p1_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "a93bd689c930cc741cff9e4e877502590d09071b839f467a34081b6e0e27a606"
+      },
+      "archive_member": "records/a93bd689c930cc741cff9e4e877502590d09071b839f467a34081b6e0e27a606.json",
+      "bytes": 1158
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p1_p1_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/transaction-committed.json",
+        "sha256": "fc2ed3585516f9e1bedbed401d7c5d8c66d936cbdd89e77210e91d82014743dd"
+      },
+      "archive_member": "records/fc2ed3585516f9e1bedbed401d7c5d8c66d936cbdd89e77210e91d82014743dd.json",
+      "bytes": 11339
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p1_p1_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/validation.json",
+        "sha256": "e12b7d97dc32d726bc966cfb5983934466ba3c9b97140f7c4ef32803621de300"
+      },
+      "archive_member": "records/e12b7d97dc32d726bc966cfb5983934466ba3c9b97140f7c4ef32803621de300.json",
+      "bytes": 138122
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p2_p1_p0_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/computed.json",
+        "sha256": "13432f0eedea8224353ae7b095cc6acb23c3151ab35b75851ad71e0b75d1360d"
+      },
+      "archive_member": "records/13432f0eedea8224353ae7b095cc6acb23c3151ab35b75851ad71e0b75d1360d.json",
+      "bytes": 1158
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p2_p1_p0_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "1ebebb62014999e32cf5811b4fb28bcedb5429a0ff22687ffaaa6eee01d8cefd"
+      },
+      "archive_member": "records/1ebebb62014999e32cf5811b4fb28bcedb5429a0ff22687ffaaa6eee01d8cefd.json",
+      "bytes": 694
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p2_p1_p0_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/transaction-committed.json",
+        "sha256": "4f45739c9c4b15fdfae22cb0c377a9e3286105fab5096484d912ff549f0a0353"
+      },
+      "archive_member": "records/4f45739c9c4b15fdfae22cb0c377a9e3286105fab5096484d912ff549f0a0353.json",
+      "bytes": 11575
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p2_p1_p0_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/validation.json",
+        "sha256": "28e3a2aa454d0a176b0f2c2a75ff8428efa55559808f4691fd3deea1f45f3a4c"
+      },
+      "archive_member": "records/28e3a2aa454d0a176b0f2c2a75ff8428efa55559808f4691fd3deea1f45f3a4c.json",
+      "bytes": 783981
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p1_p1_p1_p0_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/computed.json",
+        "sha256": "f417e2f34ebafd7731a6af216284a3157354b314b9eb94c2eb41e5cdd269c0e2"
+      },
+      "archive_member": "records/f417e2f34ebafd7731a6af216284a3157354b314b9eb94c2eb41e5cdd269c0e2.json",
+      "bytes": 3169
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p1_p1_p1_p0_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "8405ae84e3c38bd7a2628d73a2902913b050b4ddb679ca29e80f1a7714f1c87b"
+      },
+      "archive_member": "records/8405ae84e3c38bd7a2628d73a2902913b050b4ddb679ca29e80f1a7714f1c87b.json",
+      "bytes": 1616
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p1_p1_p1_p0_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/transaction-committed.json",
+        "sha256": "2787325d2101d738f541bc6a89cbb798cc3191b1fc586a28370a502e43f8c33f"
+      },
+      "archive_member": "records/2787325d2101d738f541bc6a89cbb798cc3191b1fc586a28370a502e43f8c33f.json",
+      "bytes": 11470
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p1_p1_p1_p0_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/validation.json",
+        "sha256": "39f28ddd90c1a8a8446274b43e87f44e13391aae04668f2394ef2108057c1b75"
+      },
+      "archive_member": "records/39f28ddd90c1a8a8446274b43e87f44e13391aae04668f2394ef2108057c1b75.json",
+      "bytes": 745709
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p1_p1_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/computed.json",
+        "sha256": "34c64320996ff97d26377cff7c0c0a81b2e33404291c11d9c8b111d65aea0b1c"
+      },
+      "archive_member": "records/34c64320996ff97d26377cff7c0c0a81b2e33404291c11d9c8b111d65aea0b1c.json",
+      "bytes": 2165
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p1_p1_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "e76eeacec74dd7e4ac895810cf2e0798c20b2348652301f1e4141559d7175c79"
+      },
+      "archive_member": "records/e76eeacec74dd7e4ac895810cf2e0798c20b2348652301f1e4141559d7175c79.json",
+      "bytes": 1560
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p1_p1_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/transaction-committed.json",
+        "sha256": "fcdde01a8ed9a059a87c3c777b78827fb41146862d2d76b9387fb5df8c612a8a"
+      },
+      "archive_member": "records/fcdde01a8ed9a059a87c3c777b78827fb41146862d2d76b9387fb5df8c612a8a.json",
+      "bytes": 11351
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p1_p1_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/validation.json",
+        "sha256": "40c1419aa99d5b6ec5a371d886f558d3bceef8728eb8db074911522c84c62df7"
+      },
+      "archive_member": "records/40c1419aa99d5b6ec5a371d886f558d3bceef8728eb8db074911522c84c62df7.json",
+      "bytes": 444339
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p2_p1_p1_p0_p1_p1_p1_p1_p0_p0/artifacts/catalogue-derived-publication-stage50-v1/reference_provenance.json",
+        "sha256": "59f8e7acec99fa661d0a931a9b42ddef2e1e9a5306becf483b11494f2e963587"
+      },
+      "archive_member": "records/59f8e7acec99fa661d0a931a9b42ddef2e1e9a5306becf483b11494f2e963587.json",
+      "bytes": 28192
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p2_p1_p1_p0_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/computed.json",
+        "sha256": "7773db7c9a8f9e2833efa92cc049f79e3dcb3698f553156370f65702e6171c0a"
+      },
+      "archive_member": "records/7773db7c9a8f9e2833efa92cc049f79e3dcb3698f553156370f65702e6171c0a.json",
+      "bytes": 3171
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p2_p1_p1_p0_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "6853e9c1e6b679841799bcb3b10b29bafbb4bd1a573ad614a978195887ffd03d"
+      },
+      "archive_member": "records/6853e9c1e6b679841799bcb3b10b29bafbb4bd1a573ad614a978195887ffd03d.json",
+      "bytes": 4079
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p2_p1_p1_p0_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/transaction-committed.json",
+        "sha256": "8f5b4f4892dbad4e6c580af3838a108a47fb5062297371c84a01c7a960aec88d"
+      },
+      "archive_member": "records/8f5b4f4892dbad4e6c580af3838a108a47fb5062297371c84a01c7a960aec88d.json",
+      "bytes": 11576
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p2_p1_p1_p0_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/validation.json",
+        "sha256": "409bc10c7407d8a2c8d49daa0a1fde063938cc3b0e13793599dc5b9bfda968c7"
+      },
+      "archive_member": "records/409bc10c7407d8a2c8d49daa0a1fde063938cc3b0e13793599dc5b9bfda968c7.json",
+      "bytes": 689121
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p0_p1_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/computed.json",
+        "sha256": "f417e2f34ebafd7731a6af216284a3157354b314b9eb94c2eb41e5cdd269c0e2"
+      },
+      "archive_member": "records/f417e2f34ebafd7731a6af216284a3157354b314b9eb94c2eb41e5cdd269c0e2.json",
+      "bytes": 3169
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p0_p1_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "8405ae84e3c38bd7a2628d73a2902913b050b4ddb679ca29e80f1a7714f1c87b"
+      },
+      "archive_member": "records/8405ae84e3c38bd7a2628d73a2902913b050b4ddb679ca29e80f1a7714f1c87b.json",
+      "bytes": 1616
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p0_p1_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/transaction-committed.json",
+        "sha256": "30dccbf9bc6557008ba1ee568d3bcf62b0609f97ccc271596800676579de3608"
+      },
+      "archive_member": "records/30dccbf9bc6557008ba1ee568d3bcf62b0609f97ccc271596800676579de3608.json",
+      "bytes": 11470
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p0_p1_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/validation.json",
+        "sha256": "3cf14445dba8b9a34b31d4df30cac2c24b2d42e21a0a76ddd92f725e1cb47a70"
+      },
+      "archive_member": "records/3cf14445dba8b9a34b31d4df30cac2c24b2d42e21a0a76ddd92f725e1cb47a70.json",
+      "bytes": 745709
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p0_p2_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/catalogue-derived-publication-stage50-v1/reference_provenance.json",
+        "sha256": "cd94501d5baa9e12efa3780397c8a018aedd80414d0249b7f7df4268331884fe"
+      },
+      "archive_member": "records/cd94501d5baa9e12efa3780397c8a018aedd80414d0249b7f7df4268331884fe.json",
+      "bytes": 30792
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p0_p2_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/computed.json",
+        "sha256": "4a83c83b2ae1dc5b8ace9a50c63e3e2e31ac8871c42708eef80f7f449c0fcb82"
+      },
+      "archive_member": "records/4a83c83b2ae1dc5b8ace9a50c63e3e2e31ac8871c42708eef80f7f449c0fcb82.json",
+      "bytes": 2164
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p0_p2_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "86bcc5687847278eadb8ea20c0b3e62c047a0ae056e9707aab42f3bef70ca040"
+      },
+      "archive_member": "records/86bcc5687847278eadb8ea20c0b3e62c047a0ae056e9707aab42f3bef70ca040.json",
+      "bytes": 1213
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p0_p2_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/transaction-committed.json",
+        "sha256": "7755860320a8929189f9c421716e5af19a7e9483bd5b13a68836c5dd89d48245"
+      },
+      "archive_member": "records/7755860320a8929189f9c421716e5af19a7e9483bd5b13a68836c5dd89d48245.json",
+      "bytes": 11576
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p0_p2_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/validation.json",
+        "sha256": "b6f01ef6368ad54799170789c8f0cec0f353d6094a8018d2ea771db4890de238"
+      },
+      "archive_member": "records/b6f01ef6368ad54799170789c8f0cec0f353d6094a8018d2ea771db4890de238.json",
+      "bytes": 724892
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p1_p1_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/computed.json",
+        "sha256": "4a3584a58d249cec552e6dc3b980719723db18d5ea4b7040096fbbb139310b8c"
+      },
+      "archive_member": "records/4a3584a58d249cec552e6dc3b980719723db18d5ea4b7040096fbbb139310b8c.json",
+      "bytes": 1661
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p1_p1_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "720c50931aca1b3c70987d7d452284090a99ccc4c6afc2acd3a07b3ebf053669"
+      },
+      "archive_member": "records/720c50931aca1b3c70987d7d452284090a99ccc4c6afc2acd3a07b3ebf053669.json",
+      "bytes": 1177
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p1_p1_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/transaction-committed.json",
+        "sha256": "2c24f379c7fb58bc3bd2440d92cd228e14142f2e5dd59c6b792d9d079bec0b81"
+      },
+      "archive_member": "records/2c24f379c7fb58bc3bd2440d92cd228e14142f2e5dd59c6b792d9d079bec0b81.json",
+      "bytes": 11470
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p1_p1_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/validation.json",
+        "sha256": "7dbd16cab27ae01b786510a4589864da82a2b065c87c2d59cf40564d7e0f0734"
+      },
+      "archive_member": "records/7dbd16cab27ae01b786510a4589864da82a2b065c87c2d59cf40564d7e0f0734.json",
+      "bytes": 801806
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p2_p1_p0_p1_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/computed.json",
+        "sha256": "759d750e8543f94a87e2e6eec319619c5504f1f3a4740a4767f4d94fb7c9fa40"
+      },
+      "archive_member": "records/759d750e8543f94a87e2e6eec319619c5504f1f3a4740a4767f4d94fb7c9fa40.json",
+      "bytes": 3171
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p2_p1_p0_p1_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "891580509dfc58c3d02507ba27e2f982050275cccc2f55da50e373e239b396e6"
+      },
+      "archive_member": "records/891580509dfc58c3d02507ba27e2f982050275cccc2f55da50e373e239b396e6.json",
+      "bytes": 4057
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p2_p1_p0_p1_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/transaction-committed.json",
+        "sha256": "26c160c73e090b6ae3010b1a7b5ec747b6e5ee1fdd82c815abe7dcd7e4956be9"
+      },
+      "archive_member": "records/26c160c73e090b6ae3010b1a7b5ec747b6e5ee1fdd82c815abe7dcd7e4956be9.json",
+      "bytes": 11576
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p2_p1_p0_p1_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/validation.json",
+        "sha256": "215941775ce828e0040264e458f8ee4d0d91ff380b2287b63d8c8940880c2c82"
+      },
+      "archive_member": "records/215941775ce828e0040264e458f8ee4d0d91ff380b2287b63d8c8940880c2c82.json",
+      "bytes": 692915
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p2_p1_p1_p1_p0_p1_p1_p1_p0_p0/artifacts/catalogue-derived-publication-stage50-v1/reference_provenance.json",
+        "sha256": "6afed7d04d2d992bcf67aa3d6f055dcfd2be8f79b5e0466166f4cd6259803f2b"
+      },
+      "archive_member": "records/6afed7d04d2d992bcf67aa3d6f055dcfd2be8f79b5e0466166f4cd6259803f2b.json",
+      "bytes": 28192
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p2_p1_p1_p1_p0_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/computed.json",
+        "sha256": "7773db7c9a8f9e2833efa92cc049f79e3dcb3698f553156370f65702e6171c0a"
+      },
+      "archive_member": "records/7773db7c9a8f9e2833efa92cc049f79e3dcb3698f553156370f65702e6171c0a.json",
+      "bytes": 3171
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p2_p1_p1_p1_p0_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "6853e9c1e6b679841799bcb3b10b29bafbb4bd1a573ad614a978195887ffd03d"
+      },
+      "archive_member": "records/6853e9c1e6b679841799bcb3b10b29bafbb4bd1a573ad614a978195887ffd03d.json",
+      "bytes": 4079
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p2_p1_p1_p1_p0_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/transaction-committed.json",
+        "sha256": "27d8cb474f51e9fc5869bce9af50ba2eee1f6b7f4631d6b447028e74477faf22"
+      },
+      "archive_member": "records/27d8cb474f51e9fc5869bce9af50ba2eee1f6b7f4631d6b447028e74477faf22.json",
+      "bytes": 11576
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p2_p1_p1_p1_p0_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/validation.json",
+        "sha256": "5b29ab1fabd1488f124f7cdf1b02ebeee21279739f722803dad879f4edd295be"
+      },
+      "archive_member": "records/5b29ab1fabd1488f124f7cdf1b02ebeee21279739f722803dad879f4edd295be.json",
+      "bytes": 689121
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p2_p1_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/computed.json",
+        "sha256": "27131d144f20d786e9eeacdc34761b8d27420396ea98858202a32f3fba975613"
+      },
+      "archive_member": "records/27131d144f20d786e9eeacdc34761b8d27420396ea98858202a32f3fba975613.json",
+      "bytes": 1158
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p2_p1_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "27131d144f20d786e9eeacdc34761b8d27420396ea98858202a32f3fba975613"
+      },
+      "archive_member": "records/27131d144f20d786e9eeacdc34761b8d27420396ea98858202a32f3fba975613.json",
+      "bytes": 1158
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p2_p1_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/transaction-committed.json",
+        "sha256": "e11f63385a148d095476f58faddab1fc3000aab73345ef3667a863f896a498b6"
+      },
+      "archive_member": "records/e11f63385a148d095476f58faddab1fc3000aab73345ef3667a863f896a498b6.json",
+      "bytes": 11577
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p2_p1_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/validation.json",
+        "sha256": "71f5479460af451dbc2ba8507e145e69d4fe731154c3451d85ba89948a24fec6"
+      },
+      "archive_member": "records/71f5479460af451dbc2ba8507e145e69d4fe731154c3451d85ba89948a24fec6.json",
+      "bytes": 782655
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p1_p0_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/computed.json",
+        "sha256": "f417e2f34ebafd7731a6af216284a3157354b314b9eb94c2eb41e5cdd269c0e2"
+      },
+      "archive_member": "records/f417e2f34ebafd7731a6af216284a3157354b314b9eb94c2eb41e5cdd269c0e2.json",
+      "bytes": 3169
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p1_p0_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "8405ae84e3c38bd7a2628d73a2902913b050b4ddb679ca29e80f1a7714f1c87b"
+      },
+      "archive_member": "records/8405ae84e3c38bd7a2628d73a2902913b050b4ddb679ca29e80f1a7714f1c87b.json",
+      "bytes": 1616
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p1_p0_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/transaction-committed.json",
+        "sha256": "39bc3843bcff77f48ba244d41e2f5fc7abc194ac0e6763028d10d90f7feeded9"
+      },
+      "archive_member": "records/39bc3843bcff77f48ba244d41e2f5fc7abc194ac0e6763028d10d90f7feeded9.json",
+      "bytes": 11470
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p1_p0_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/validation.json",
+        "sha256": "10250255fc439b657457c6e1289200d9fe0a66b0fd268d45f624a4bb82be9990"
+      },
+      "archive_member": "records/10250255fc439b657457c6e1289200d9fe0a66b0fd268d45f624a4bb82be9990.json",
+      "bytes": 745709
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/computed.json",
+        "sha256": "34c64320996ff97d26377cff7c0c0a81b2e33404291c11d9c8b111d65aea0b1c"
+      },
+      "archive_member": "records/34c64320996ff97d26377cff7c0c0a81b2e33404291c11d9c8b111d65aea0b1c.json",
+      "bytes": 2165
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "e76eeacec74dd7e4ac895810cf2e0798c20b2348652301f1e4141559d7175c79"
+      },
+      "archive_member": "records/e76eeacec74dd7e4ac895810cf2e0798c20b2348652301f1e4141559d7175c79.json",
+      "bytes": 1560
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/transaction-committed.json",
+        "sha256": "25a4c2cf64fdcabb2c40913dcc896c36307986509c1e74d8cdece2df77b99599"
+      },
+      "archive_member": "records/25a4c2cf64fdcabb2c40913dcc896c36307986509c1e74d8cdece2df77b99599.json",
+      "bytes": 11351
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/validation.json",
+        "sha256": "5369db1936861e15495c3eaebdf7d3076766d6ff5d100c2ed54f92ed19486ebb"
+      },
+      "archive_member": "records/5369db1936861e15495c3eaebdf7d3076766d6ff5d100c2ed54f92ed19486ebb.json",
+      "bytes": 444339
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p2_p1_p0_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/computed.json",
+        "sha256": "759d750e8543f94a87e2e6eec319619c5504f1f3a4740a4767f4d94fb7c9fa40"
+      },
+      "archive_member": "records/759d750e8543f94a87e2e6eec319619c5504f1f3a4740a4767f4d94fb7c9fa40.json",
+      "bytes": 3171
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p2_p1_p0_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "891580509dfc58c3d02507ba27e2f982050275cccc2f55da50e373e239b396e6"
+      },
+      "archive_member": "records/891580509dfc58c3d02507ba27e2f982050275cccc2f55da50e373e239b396e6.json",
+      "bytes": 4057
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p2_p1_p0_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/transaction-committed.json",
+        "sha256": "5ec30ee84d9a4a0a7b0de4b80a19272061efb1163bf4ba46d0f6d5acfbd5c24c"
+      },
+      "archive_member": "records/5ec30ee84d9a4a0a7b0de4b80a19272061efb1163bf4ba46d0f6d5acfbd5c24c.json",
+      "bytes": 11576
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p2_p1_p0_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/validation.json",
+        "sha256": "c0c0d6c1da0ddc42877ff15464d6ef0803232ccb5f92c1aa611081b789722a94"
+      },
+      "archive_member": "records/c0c0d6c1da0ddc42877ff15464d6ef0803232ccb5f92c1aa611081b789722a94.json",
+      "bytes": 692915
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p1_p1_p0_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/computed.json",
+        "sha256": "4a3584a58d249cec552e6dc3b980719723db18d5ea4b7040096fbbb139310b8c"
+      },
+      "archive_member": "records/4a3584a58d249cec552e6dc3b980719723db18d5ea4b7040096fbbb139310b8c.json",
+      "bytes": 1661
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p1_p1_p0_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "720c50931aca1b3c70987d7d452284090a99ccc4c6afc2acd3a07b3ebf053669"
+      },
+      "archive_member": "records/720c50931aca1b3c70987d7d452284090a99ccc4c6afc2acd3a07b3ebf053669.json",
+      "bytes": 1177
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p1_p1_p0_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/transaction-committed.json",
+        "sha256": "aa037139a030fd858d152d1e72cb120d56ff46222ae8a719f77886fd66b9bf32"
+      },
+      "archive_member": "records/aa037139a030fd858d152d1e72cb120d56ff46222ae8a719f77886fd66b9bf32.json",
+      "bytes": 11470
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p1_p1_p0_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/validation.json",
+        "sha256": "a5a37e246264df28494bc3e99da000d89cd7e71b57fa2a6e2389b14a54a34ace"
+      },
+      "archive_member": "records/a5a37e246264df28494bc3e99da000d89cd7e71b57fa2a6e2389b14a54a34ace.json",
+      "bytes": 801806
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p1_p1_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/computed.json",
+        "sha256": "9323b1407b0f75f4e7473ce55906db3f282cf6754c4d74a30476aaf897352a69"
+      },
+      "archive_member": "records/9323b1407b0f75f4e7473ce55906db3f282cf6754c4d74a30476aaf897352a69.json",
+      "bytes": 1158
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p1_p1_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "9323b1407b0f75f4e7473ce55906db3f282cf6754c4d74a30476aaf897352a69"
+      },
+      "archive_member": "records/9323b1407b0f75f4e7473ce55906db3f282cf6754c4d74a30476aaf897352a69.json",
+      "bytes": 1158
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p1_p1_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/transaction-committed.json",
+        "sha256": "2d45ff2fc5bff2dae21389946be893b314a7a45d7d4119bdda39822e0c7e9e03"
+      },
+      "archive_member": "records/2d45ff2fc5bff2dae21389946be893b314a7a45d7d4119bdda39822e0c7e9e03.json",
+      "bytes": 11341
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p1_p1_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/validation.json",
+        "sha256": "d69989dcacb9835ccb2667dce7f41e3caf9fe999ee44f55bc1749651a85e1320"
+      },
+      "archive_member": "records/d69989dcacb9835ccb2667dce7f41e3caf9fe999ee44f55bc1749651a85e1320.json",
+      "bytes": 138064
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p0_p0_p1_p1_p1_p1_p1_p0/artifacts/catalogue-derived-publication-stage50-v1/reference_provenance.json",
+        "sha256": "8a259e5c756df710f4d07b43f6aee0b368bef6b0d583aadac350669f8fd29d1e"
+      },
+      "archive_member": "records/8a259e5c756df710f4d07b43f6aee0b368bef6b0d583aadac350669f8fd29d1e.json",
+      "bytes": 28192
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p0_p0_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/computed.json",
+        "sha256": "7773db7c9a8f9e2833efa92cc049f79e3dcb3698f553156370f65702e6171c0a"
+      },
+      "archive_member": "records/7773db7c9a8f9e2833efa92cc049f79e3dcb3698f553156370f65702e6171c0a.json",
+      "bytes": 3171
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p0_p0_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "6853e9c1e6b679841799bcb3b10b29bafbb4bd1a573ad614a978195887ffd03d"
+      },
+      "archive_member": "records/6853e9c1e6b679841799bcb3b10b29bafbb4bd1a573ad614a978195887ffd03d.json",
+      "bytes": 4079
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p0_p0_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/transaction-committed.json",
+        "sha256": "b375cbdfce76678bacd3d3b624bb94507eea389f37a1c1bdb738a3bc25abd611"
+      },
+      "archive_member": "records/b375cbdfce76678bacd3d3b624bb94507eea389f37a1c1bdb738a3bc25abd611.json",
+      "bytes": 11576
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p0_p0_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/validation.json",
+        "sha256": "c9853e2aa974bcbc2f7d24f4a4b986a8bb711f2b2c651365e30ca1d06dec64a6"
+      },
+      "archive_member": "records/c9853e2aa974bcbc2f7d24f4a4b986a8bb711f2b2c651365e30ca1d06dec64a6.json",
+      "bytes": 689121
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p0_p1_p1_p1_p0_p1_p1_p0/artifacts/catalogue-derived-publication-stage50-v1/reference_provenance.json",
+        "sha256": "665ed9b151be5425f4e0028ebeeb6a1c77079e40e8a1c6c114a4f69aac718da1"
+      },
+      "archive_member": "records/665ed9b151be5425f4e0028ebeeb6a1c77079e40e8a1c6c114a4f69aac718da1.json",
+      "bytes": 30792
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p0_p1_p1_p1_p0_p1_p1_p0/artifacts/uniform-stage500-v1/computed.json",
+        "sha256": "4a83c83b2ae1dc5b8ace9a50c63e3e2e31ac8871c42708eef80f7f449c0fcb82"
+      },
+      "archive_member": "records/4a83c83b2ae1dc5b8ace9a50c63e3e2e31ac8871c42708eef80f7f449c0fcb82.json",
+      "bytes": 2164
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p0_p1_p1_p1_p0_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "86bcc5687847278eadb8ea20c0b3e62c047a0ae056e9707aab42f3bef70ca040"
+      },
+      "archive_member": "records/86bcc5687847278eadb8ea20c0b3e62c047a0ae056e9707aab42f3bef70ca040.json",
+      "bytes": 1213
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p0_p1_p1_p1_p0_p1_p1_p0/artifacts/uniform-stage500-v1/transaction-committed.json",
+        "sha256": "bd99736e3d86cd7afc3034201eb2613edb549beb0ca90c2f0b00650afb02cd85"
+      },
+      "archive_member": "records/bd99736e3d86cd7afc3034201eb2613edb549beb0ca90c2f0b00650afb02cd85.json",
+      "bytes": 11576
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p0_p1_p1_p1_p0_p1_p1_p0/artifacts/uniform-stage500-v1/validation.json",
+        "sha256": "8e52d04835be54b045da168217b233cbbcf6594110b19d3699e4269940bf1be6"
+      },
+      "archive_member": "records/8e52d04835be54b045da168217b233cbbcf6594110b19d3699e4269940bf1be6.json",
+      "bytes": 724892
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p0_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/computed.json",
+        "sha256": "13432f0eedea8224353ae7b095cc6acb23c3151ab35b75851ad71e0b75d1360d"
+      },
+      "archive_member": "records/13432f0eedea8224353ae7b095cc6acb23c3151ab35b75851ad71e0b75d1360d.json",
+      "bytes": 1158
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p0_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "1ebebb62014999e32cf5811b4fb28bcedb5429a0ff22687ffaaa6eee01d8cefd"
+      },
+      "archive_member": "records/1ebebb62014999e32cf5811b4fb28bcedb5429a0ff22687ffaaa6eee01d8cefd.json",
+      "bytes": 694
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p0_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/transaction-committed.json",
+        "sha256": "168b82fcb8a87a66984dfe07b2fdcfc9e62a746c2ddb2da40aa4b8810b44646a"
+      },
+      "archive_member": "records/168b82fcb8a87a66984dfe07b2fdcfc9e62a746c2ddb2da40aa4b8810b44646a.json",
+      "bytes": 11575
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p0_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/validation.json",
+        "sha256": "da1894e78881f1ac82d04c9c1d96f987287981bd35ef03bd57473048cfc1669a"
+      },
+      "archive_member": "records/da1894e78881f1ac82d04c9c1d96f987287981bd35ef03bd57473048cfc1669a.json",
+      "bytes": 783981
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p1_p0_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/computed.json",
+        "sha256": "27131d144f20d786e9eeacdc34761b8d27420396ea98858202a32f3fba975613"
+      },
+      "archive_member": "records/27131d144f20d786e9eeacdc34761b8d27420396ea98858202a32f3fba975613.json",
+      "bytes": 1158
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p1_p0_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "27131d144f20d786e9eeacdc34761b8d27420396ea98858202a32f3fba975613"
+      },
+      "archive_member": "records/27131d144f20d786e9eeacdc34761b8d27420396ea98858202a32f3fba975613.json",
+      "bytes": 1158
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p1_p0_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/transaction-committed.json",
+        "sha256": "04efc718ef22bc23203973ba775370261847f03ba402ca3c27946effb6a2ce3d"
+      },
+      "archive_member": "records/04efc718ef22bc23203973ba775370261847f03ba402ca3c27946effb6a2ce3d.json",
+      "bytes": 11577
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p1_p0_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/validation.json",
+        "sha256": "a6456c7b2674a422b5c1dbadb6daad497c8a2625fc23dcfb3ca0461abd1bbf32"
+      },
+      "archive_member": "records/a6456c7b2674a422b5c1dbadb6daad497c8a2625fc23dcfb3ca0461abd1bbf32.json",
+      "bytes": 782655
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/PR15-pole99-reference-accuracy-witness-source-v1/Root-actual-independent-reference-only-witness99-adoption-v1.json",
+        "sha256": "d72181d74e6ecb1373a842599148f205800ebf54c5b483f434334079c6276a23"
+      },
+      "archive_member": "records/d72181d74e6ecb1373a842599148f205800ebf54c5b483f434334079c6276a23.json",
+      "bytes": 3007
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/PR15-pole99-reference-accuracy-witness-source-v1/controller-v1/guard.json",
+        "sha256": "01d6e34ed551ef9709a7f3306778c7b4c1a259362974a40a487016490ae3f301"
+      },
+      "archive_member": "records/01d6e34ed551ef9709a7f3306778c7b4c1a259362974a40a487016490ae3f301.json",
+      "bytes": 1551
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/PR15-pole99-reference-accuracy-witness-source-v1/output-v1/qualification.json",
+        "sha256": "86ad0180e102f8594b4d5ef3e97389c469cbb20233ab826dc9ac997643287e01"
+      },
+      "archive_member": "records/86ad0180e102f8594b4d5ef3e97389c469cbb20233ab826dc9ac997643287e01.json",
+      "bytes": 2615
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/PR15-pole99-reference-accuracy-witness-source-v1/output-v1/witness.json",
+        "sha256": "c5ceff0a230b28eeda9ebd648c0d5562ac235ce046ab0d7bdfe489fe5f7aa839"
+      },
+      "archive_member": "records/c5ceff0a230b28eeda9ebd648c0d5562ac235ce046ab0d7bdfe489fe5f7aa839.json",
+      "bytes": 16591
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/PR15-pole99-reference-accuracy-witness-source-v1/plan.json",
+        "sha256": "ef3f4ed593133c18a772636119bb0d6f651c3444f338b0ecfbe8487e7d9d722b"
+      },
+      "archive_member": "records/ef3f4ed593133c18a772636119bb0d6f651c3444f338b0ecfbe8487e7d9d722b.json",
+      "bytes": 4060
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/parent500-completed-subset-source-v1/plans/PR0/output-candidates-v1/primary-p0/physical.json",
+        "sha256": "e11326969a2764cfaea1305371535b64de303e24723b9a236ceadab82777ac79"
+      },
+      "archive_member": "records/e11326969a2764cfaea1305371535b64de303e24723b9a236ceadab82777ac79.json",
+      "bytes": 98664
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/parent500-completed-subset-source-v1/plans/PR0/output-candidates-v1/primary-p1/physical.json",
+        "sha256": "7a9b8fef89d309b8eb0c2370d5fbe2ae518df3c888155f24df778121d74c23d3"
+      },
+      "archive_member": "records/7a9b8fef89d309b8eb0c2370d5fbe2ae518df3c888155f24df778121d74c23d3.json",
+      "bytes": 98812
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/parent500-completed-subset-source-v1/plans/PR0/reference-forward-v4/controller-compare-v1/guard.json",
+        "sha256": "d388e04d32ec2d9eb1c010b1a8dda400cc8af6504af9c68f35dae0a1929575c7"
+      },
+      "archive_member": "records/d388e04d32ec2d9eb1c010b1a8dda400cc8af6504af9c68f35dae0a1929575c7.json",
+      "bytes": 1768
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/parent500-completed-subset-source-v1/plans/PR0/reference-forward-v4/output-compare-v1/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p1_p1_p1_p1_p1_p1_p1_p1_p1_p0-independent-reference-provenance.json",
+        "sha256": "00a4299a74eb5e25b3ee626cfb425678e7672e72326cb3b6c2661a3f147ae1bb"
+      },
+      "archive_member": "records/00a4299a74eb5e25b3ee626cfb425678e7672e72326cb3b6c2661a3f147ae1bb.json",
+      "bytes": 22694
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/parent500-completed-subset-source-v1/plans/PR0/reference-forward-v4/output-compare-v1/acceptance.json",
+        "sha256": "b14c5952975571d9e711aa7dd1b33c39d8bfd71f45ee9109a1d45bd5f437ea1d"
+      },
+      "archive_member": "records/b14c5952975571d9e711aa7dd1b33c39d8bfd71f45ee9109a1d45bd5f437ea1d.json",
+      "bytes": 921319
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/parent500-completed-subset-source-v1/plans/PR12/output-candidates-v1/primary-p0/physical.json",
+        "sha256": "4d94a93e4c9ad08183fa50832c659631bd3da265155af8b198cbd622801a4516"
+      },
+      "archive_member": "records/4d94a93e4c9ad08183fa50832c659631bd3da265155af8b198cbd622801a4516.json",
+      "bytes": 98664
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/parent500-completed-subset-source-v1/plans/PR12/output-candidates-v1/primary-p1/physical.json",
+        "sha256": "c1067705c21d1da39158b6ca1284f765d7b453b13546cff356dc5d73c507322c"
+      },
+      "archive_member": "records/c1067705c21d1da39158b6ca1284f765d7b453b13546cff356dc5d73c507322c.json",
+      "bytes": 98812
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/parent500-completed-subset-source-v1/plans/PR12/reference-forward-v4/controller-compare-v1/guard.json",
+        "sha256": "bb3972baa105f3c4110081b38788d2ba1414450c5afab2a1f376078a25814c32"
+      },
+      "archive_member": "records/bb3972baa105f3c4110081b38788d2ba1414450c5afab2a1f376078a25814c32.json",
+      "bytes": 1771
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/parent500-completed-subset-source-v1/plans/PR12/reference-forward-v4/output-compare-v1/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p1_p1_p1_p1_p1_p1_p1_p1_p1_p0-independent-reference-provenance.json",
+        "sha256": "a1921e7d46ee8aaffcac126c2881dc93a8193ef54bee6669a8774a4fa0e6a706"
+      },
+      "archive_member": "records/a1921e7d46ee8aaffcac126c2881dc93a8193ef54bee6669a8774a4fa0e6a706.json",
+      "bytes": 22561
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/parent500-completed-subset-source-v1/plans/PR12/reference-forward-v4/output-compare-v1/acceptance.json",
+        "sha256": "c46d15575d809f1c22004ff3214a6fb5629ff0d84f608207ddc88fcbcd9022bd"
+      },
+      "archive_member": "records/c46d15575d809f1c22004ff3214a6fb5629ff0d84f608207ddc88fcbcd9022bd.json",
+      "bytes": 921858
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/parent500-completed-subset-source-v1/plans/PR15/alias-forward-v4/output-candidates-v1/primary-p0/physical.json",
+        "sha256": "36dd76f9f743ebb6ac3359b42f412abf6f9203cd13b3e2fcc51c68092333c400"
+      },
+      "archive_member": "records/36dd76f9f743ebb6ac3359b42f412abf6f9203cd13b3e2fcc51c68092333c400.json",
+      "bytes": 194662
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/parent500-completed-subset-source-v1/plans/PR15/alias-forward-v4/output-candidates-v1/primary-p1/physical.json",
+        "sha256": "c192ba333971d4d7de211d456cd8fd54dc846c35c7c2714001ed8cc180f038e4"
+      },
+      "archive_member": "records/c192ba333971d4d7de211d456cd8fd54dc846c35c7c2714001ed8cc180f038e4.json",
+      "bytes": 194958
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/parent500-completed-subset-source-v1/plans/PR15/reference-accuracy-v5/controller-compare-v2/guard.json",
+        "sha256": "8b7398be92ec210be6e4d8ea432b81477b0b18a77e2004213bdbc530a2f1c77f"
+      },
+      "archive_member": "records/8b7398be92ec210be6e4d8ea432b81477b0b18a77e2004213bdbc530a2f1c77f.json",
+      "bytes": 1741
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/parent500-completed-subset-source-v1/plans/PR15/reference-accuracy-v5/output-compare-v2/L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p1_p1_p1_p1_p1_p1_p1_p1_p0_p0-pole99-comparison-provenance.json",
+        "sha256": "be9a805a11471184820665b7189743516a33b7be6a66dfe08efa165f23587db1"
+      },
+      "archive_member": "records/be9a805a11471184820665b7189743516a33b7be6a66dfe08efa165f23587db1.json",
+      "bytes": 28502
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/parent500-completed-subset-source-v1/plans/PR15/reference-accuracy-v5/output-compare-v2/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p1_p1_p1_p1_p1_p1_p1_p0-pole99-comparison-provenance.json",
+        "sha256": "f3688fe6434c2e9d579e1dd3112c9b2960735bec50955360d59f6f84adc9e3ad"
+      },
+      "archive_member": "records/f3688fe6434c2e9d579e1dd3112c9b2960735bec50955360d59f6f84adc9e3ad.json",
+      "bytes": 28595
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/parent500-completed-subset-source-v1/plans/PR15/reference-accuracy-v5/output-compare-v2/acceptance.json",
+        "sha256": "d9353cf761c20dfa75e2dedc620613c235b2004172f3e8014e24177186449b78"
+      },
+      "archive_member": "records/d9353cf761c20dfa75e2dedc620613c235b2004172f3e8014e24177186449b78.json",
+      "bytes": 1818116
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-lineage-history-source-v1/batches/shared22-compare-cutoff379-v2/plan-compare-current-history-output-v1-controller/guard.json",
+        "sha256": "e7114d35c42135a3bc9fb3c595370222fa0b1fe8cb96213a2cdf6b6a3d8eb259"
+      },
+      "archive_member": "records/e7114d35c42135a3bc9fb3c595370222fa0b1fe8cb96213a2cdf6b6a3d8eb259.json",
+      "bytes": 1867
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-lineage-history-source-v1/batches/shared22-compare-cutoff379-v2/plan-compare-current-history-output-v1/acceptance.json",
+        "sha256": "64d2b4f8ac6cb9cd87148cecefeceb300ede1bf0bb90f8ab5a292de4227964c9"
+      },
+      "archive_member": "records/64d2b4f8ac6cb9cd87148cecefeceb300ede1bf0bb90f8ab5a292de4227964c9.json",
+      "bytes": 11338383
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-lineage-history-source-v1/batches/shared22-current-master-00-commit-v3/plan-commit-current-history-output-v1-controller/guard.json",
+        "sha256": "db77fc36d2cf5985f4410c7803ef9f25f435a81d1150e17484517f0d7a767723"
+      },
+      "archive_member": "records/db77fc36d2cf5985f4410c7803ef9f25f435a81d1150e17484517f0d7a767723.json",
+      "bytes": 1867
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-lineage-history-source-v1/batches/shared22-current-master-01-commit-v3/plan-commit-current-history-output-v1-controller/guard.json",
+        "sha256": "7ebfa5fbe92195e1a865aa6bec8beefdb9fd76f75772f586678913e253a20994"
+      },
+      "archive_member": "records/7ebfa5fbe92195e1a865aa6bec8beefdb9fd76f75772f586678913e253a20994.json",
+      "bytes": 1866
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-lineage-history-source-v1/batches/shared22-current-master-02-commit-v3/plan-commit-current-history-output-v1-controller/guard.json",
+        "sha256": "a183a1708beb51d4f3c8c21871638e95bb403cd82b42425fa6d66840557a41f3"
+      },
+      "archive_member": "records/a183a1708beb51d4f3c8c21871638e95bb403cd82b42425fa6d66840557a41f3.json",
+      "bytes": 1866
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-lineage-history-source-v1/batches/shared22-current-master-03-commit-v3/plan-commit-current-history-output-v1-controller/guard.json",
+        "sha256": "b53447773b033dcc7fa0b7de2d4f3ed2bf8ce02ed3ae2b7149f58f59b5bb9a31"
+      },
+      "archive_member": "records/b53447773b033dcc7fa0b7de2d4f3ed2bf8ce02ed3ae2b7149f58f59b5bb9a31.json",
+      "bytes": 1867
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-lineage-history-source-v1/batches/shared22-current-master-04-commit-v3/plan-commit-current-history-output-v1-controller/guard.json",
+        "sha256": "259a7b60333bce0219dfdeda342b2452ed53f9e230750e0675b813ddbe48cf2f"
+      },
+      "archive_member": "records/259a7b60333bce0219dfdeda342b2452ed53f9e230750e0675b813ddbe48cf2f.json",
+      "bytes": 1866
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-lineage-history-source-v1/batches/shared22-current-master-05-commit-v3/plan-commit-current-history-output-v1-controller/guard.json",
+        "sha256": "776032658d412db6cf802dfd0fdd43326ae860d279fb84b7c0fbd46dda2b6af2"
+      },
+      "archive_member": "records/776032658d412db6cf802dfd0fdd43326ae860d279fb84b7c0fbd46dda2b6af2.json",
+      "bytes": 1867
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-lineage-history-source-v1/batches/shared22-current-master-06-commit-v3/plan-commit-current-history-output-v1-controller/guard.json",
+        "sha256": "76b892eac4ea93b91f8864f047cd82920d4388fbf9172d6ee155646c5f75fa5b"
+      },
+      "archive_member": "records/76b892eac4ea93b91f8864f047cd82920d4388fbf9172d6ee155646c5f75fa5b.json",
+      "bytes": 1867
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-lineage-history-source-v1/batches/shared22-current-master-07-commit-v3/plan-commit-current-history-output-v1-controller/guard.json",
+        "sha256": "315f5e9230eb3d0830437f0986fed8c5a1c9bcb7b705d5323d98d4411a4b9698"
+      },
+      "archive_member": "records/315f5e9230eb3d0830437f0986fed8c5a1c9bcb7b705d5323d98d4411a4b9698.json",
+      "bytes": 1867
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-lineage-history-source-v1/batches/shared22-current-master-08-commit-v3/plan-commit-current-history-output-v1-controller/guard.json",
+        "sha256": "e524cace027ac75306a3ef7582343a493c38db5e03c558e207ce3be1ec38a789"
+      },
+      "archive_member": "records/e524cace027ac75306a3ef7582343a493c38db5e03c558e207ce3be1ec38a789.json",
+      "bytes": 1866
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-lineage-history-source-v1/batches/shared22-current-master-09-commit-v3/plan-commit-current-history-output-v1-controller/guard.json",
+        "sha256": "e3e207cff6f77d0923faa4f5430d4023037c77a95ea0ee6766a817162b5f0c9e"
+      },
+      "archive_member": "records/e3e207cff6f77d0923faa4f5430d4023037c77a95ea0ee6766a817162b5f0c9e.json",
+      "bytes": 1867
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-lineage-history-source-v1/batches/shared22-current-master-10-commit-v3/plan-commit-current-history-output-v1-controller/guard.json",
+        "sha256": "f96d90cbc8d13876bd2dacb0502153343f4352e59cccd48e62440d795536e93e"
+      },
+      "archive_member": "records/f96d90cbc8d13876bd2dacb0502153343f4352e59cccd48e62440d795536e93e.json",
+      "bytes": 1867
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-lineage-history-source-v1/batches/shared22-current-master-11-commit-v3/plan-commit-current-history-output-v1-controller/guard.json",
+        "sha256": "4238a7c26169570ff60cf2856d105a3dba71b52069eb2e010a8c3737c31956e8"
+      },
+      "archive_member": "records/4238a7c26169570ff60cf2856d105a3dba71b52069eb2e010a8c3737c31956e8.json",
+      "bytes": 1860
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-lineage-history-source-v1/batches/shared22-current-master-12-commit-v3/plan-commit-current-history-output-v1-controller/guard.json",
+        "sha256": "aca22a8bf6c0d35a5d08e5e36756d78e01ddda5fe109e80702c1d97a7dee87c2"
+      },
+      "archive_member": "records/aca22a8bf6c0d35a5d08e5e36756d78e01ddda5fe109e80702c1d97a7dee87c2.json",
+      "bytes": 1860
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-lineage-history-source-v1/batches/shared22-current-master-13-commit-v3/plan-commit-current-history-output-v1-controller/guard.json",
+        "sha256": "be28c179ce3ec8a434d2f3159c96f117900003f54aa93573989c3ba9be91f1f5"
+      },
+      "archive_member": "records/be28c179ce3ec8a434d2f3159c96f117900003f54aa93573989c3ba9be91f1f5.json",
+      "bytes": 1867
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-lineage-history-source-v1/batches/shared22-current-master-14-commit-v3/plan-commit-current-history-output-v1-controller/guard.json",
+        "sha256": "01888e400425fbf0f4fde3be2b15297dba2f9234194bbccca42a684d8fe479bf"
+      },
+      "archive_member": "records/01888e400425fbf0f4fde3be2b15297dba2f9234194bbccca42a684d8fe479bf.json",
+      "bytes": 1867
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-lineage-history-source-v1/batches/shared22-current-preparation-v3/plan-prepare-current-history-output-v1-controller/guard.json",
+        "sha256": "ceecfdda9fcba6e858fc60b221835e3145d7c7c073878e3723765330873f075f"
+      },
+      "archive_member": "records/ceecfdda9fcba6e858fc60b221835e3145d7c7c073878e3723765330873f075f.json",
+      "bytes": 1852
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-postprocess-source-v1/batches/shared22-candidates-v2/plan-candidates-resolved-history-output-v1/profile-0/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p0_p1_p1_p1_p1_p1_p1_p1_p0.json",
+        "sha256": "716358e35e9c094123ab7c2447ef1ca83ef67ee82c820043ce58d5a1a606507a"
+      },
+      "archive_member": "records/716358e35e9c094123ab7c2447ef1ca83ef67ee82c820043ce58d5a1a606507a.json",
+      "bytes": 289176
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-postprocess-source-v1/batches/shared22-candidates-v2/plan-candidates-resolved-history-output-v1/profile-0/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p0_p2_p1_p1_p1_p1_p1_p1_p0.json",
+        "sha256": "df092d7186b6a01a6335f26276cb0948d0542ccfcdc89ce7225de319fd1a9bf8"
+      },
+      "archive_member": "records/df092d7186b6a01a6335f26276cb0948d0542ccfcdc89ce7225de319fd1a9bf8.json",
+      "bytes": 287853
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-postprocess-source-v1/batches/shared22-candidates-v2/plan-candidates-resolved-history-output-v1/profile-0/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p2_p1_p0_p1_p1_p1_p1_p1_p0.json",
+        "sha256": "7bd6fae070d627b8d796cec1575af7ea26575572c253a1398f169df891631334"
+      },
+      "archive_member": "records/7bd6fae070d627b8d796cec1575af7ea26575572c253a1398f169df891631334.json",
+      "bytes": 289184
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-postprocess-source-v1/batches/shared22-candidates-v2/plan-candidates-resolved-history-output-v1/profile-0/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p2_p1_p1_p1_p0_p1_p1_p1_p0.json",
+        "sha256": "cd97d591373baa15acfbf53cb60d6b1dfa485a3699788982bf858f9c89b39387"
+      },
+      "archive_member": "records/cd97d591373baa15acfbf53cb60d6b1dfa485a3699788982bf858f9c89b39387.json",
+      "bytes": 289190
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-postprocess-source-v1/batches/shared22-candidates-v2/plan-candidates-resolved-history-output-v1/profile-0/L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p1_p1_p1_p0_p1_p1_p1_p1_p0_p0.json",
+        "sha256": "9d8dcf98cd64f540c77757cae7916d31f8eab5d14846ef6d6ac7925c26f0bd62"
+      },
+      "archive_member": "records/9d8dcf98cd64f540c77757cae7916d31f8eab5d14846ef6d6ac7925c26f0bd62.json",
+      "bytes": 289176
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-postprocess-source-v1/batches/shared22-candidates-v2/plan-candidates-resolved-history-output-v1/profile-0/L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p2_p1_p1_p0_p1_p1_p1_p1_p0_p0.json",
+        "sha256": "4e9f516e40a05688b3df692e323550972a63ea072b852f16ce1933b31980606a"
+      },
+      "archive_member": "records/4e9f516e40a05688b3df692e323550972a63ea072b852f16ce1933b31980606a.json",
+      "bytes": 289190
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-postprocess-source-v1/batches/shared22-candidates-v2/plan-candidates-resolved-history-output-v1/profile-0/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p0_p1_p1_p1_p1_p1_p1_p1_p0_p0.json",
+        "sha256": "e9fbf2fcf908cf6d7315411426fcd8f3be541a5c2a521d934e164ceef06e551d"
+      },
+      "archive_member": "records/e9fbf2fcf908cf6d7315411426fcd8f3be541a5c2a521d934e164ceef06e551d.json",
+      "bytes": 289176
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-postprocess-source-v1/batches/shared22-candidates-v2/plan-candidates-resolved-history-output-v1/profile-0/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p0_p2_p1_p1_p1_p1_p1_p1_p0_p0.json",
+        "sha256": "7d9349a9c8f9cb6d4d28400e6c115a8d6e5686cd01f0b8245465ac7e94475724"
+      },
+      "archive_member": "records/7d9349a9c8f9cb6d4d28400e6c115a8d6e5686cd01f0b8245465ac7e94475724.json",
+      "bytes": 287853
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-postprocess-source-v1/batches/shared22-candidates-v2/plan-candidates-resolved-history-output-v1/profile-0/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p2_p1_p0_p1_p1_p1_p1_p1_p0_p0.json",
+        "sha256": "69e3e25e0e4253e2a3aa1201eb6bc12028347614408e1c507c146660b1b7153f"
+      },
+      "archive_member": "records/69e3e25e0e4253e2a3aa1201eb6bc12028347614408e1c507c146660b1b7153f.json",
+      "bytes": 289184
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-postprocess-source-v1/batches/shared22-candidates-v2/plan-candidates-resolved-history-output-v1/profile-0/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p2_p1_p1_p1_p0_p1_p1_p1_p0_p0.json",
+        "sha256": "bc168b6dadce1be7c69527da1320378c30a3ce0eac55d6b0c03a30aa71b6f088"
+      },
+      "archive_member": "records/bc168b6dadce1be7c69527da1320378c30a3ce0eac55d6b0c03a30aa71b6f088.json",
+      "bytes": 289190
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-postprocess-source-v1/batches/shared22-candidates-v2/plan-candidates-resolved-history-output-v1/profile-0/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p1_p0_p1_p1_p1_p1_p1_p0.json",
+        "sha256": "41596ea505387495a35d03f9fe7fb86993679e8669c24c5e85e2b696af1ce99d"
+      },
+      "archive_member": "records/41596ea505387495a35d03f9fe7fb86993679e8669c24c5e85e2b696af1ce99d.json",
+      "bytes": 289176
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-postprocess-source-v1/batches/shared22-candidates-v2/plan-candidates-resolved-history-output-v1/profile-0/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p2_p1_p0_p1_p1_p1_p1_p1_p0.json",
+        "sha256": "b8cbb9ef1505ae8f8fd7ee4b118026e7177e665f99c5560931ed93bb67c12f0d"
+      },
+      "archive_member": "records/b8cbb9ef1505ae8f8fd7ee4b118026e7177e665f99c5560931ed93bb67c12f0d.json",
+      "bytes": 289184
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-postprocess-source-v1/batches/shared22-candidates-v2/plan-candidates-resolved-history-output-v1/profile-0/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p0_p0_p1_p1_p1_p1_p1_p0.json",
+        "sha256": "f258a5def635bd75eacf839fc46c0023fca277f4d2ce89d10816c783e619f5ff"
+      },
+      "archive_member": "records/f258a5def635bd75eacf839fc46c0023fca277f4d2ce89d10816c783e619f5ff.json",
+      "bytes": 289190
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-postprocess-source-v1/batches/shared22-candidates-v2/plan-candidates-resolved-history-output-v1/profile-0/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p0_p1_p1_p1_p0_p1_p1_p0.json",
+        "sha256": "d886bbbf8497c0a14c8105fa66b7e2d08a403024bce3aa9bde6cca5769efa8a7"
+      },
+      "archive_member": "records/d886bbbf8497c0a14c8105fa66b7e2d08a403024bce3aa9bde6cca5769efa8a7.json",
+      "bytes": 287853
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-postprocess-source-v1/batches/shared22-candidates-v2/plan-candidates-resolved-history-output-v1/profile-0/PR11-physical.json",
+        "sha256": "332beb699b7076a3638b57ec0e56b945dd54241fcac80fc4eba2584d8e897d96"
+      },
+      "archive_member": "records/332beb699b7076a3638b57ec0e56b945dd54241fcac80fc4eba2584d8e897d96.json",
+      "bytes": 290689
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-postprocess-source-v1/batches/shared22-candidates-v2/plan-candidates-resolved-history-output-v1/profile-0/PR11_combination-physical.json",
+        "sha256": "8c056dbb993d96fa1d2149454771c2f8b0f23418bddf775f02936c24e5b7d1d8"
+      },
+      "archive_member": "records/8c056dbb993d96fa1d2149454771c2f8b0f23418bddf775f02936c24e5b7d1d8.json",
+      "bytes": 290730
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-postprocess-source-v1/batches/shared22-candidates-v2/plan-candidates-resolved-history-output-v1/profile-0/PR11d-physical.json",
+        "sha256": "6d6aaf2ff4e488ae9d232e094cdf13dc7ebe5d32455f6d2acaabc7eac74207cd"
+      },
+      "archive_member": "records/6d6aaf2ff4e488ae9d232e094cdf13dc7ebe5d32455f6d2acaabc7eac74207cd.json",
+      "bytes": 290697
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-postprocess-source-v1/batches/shared22-candidates-v2/plan-candidates-resolved-history-output-v1/profile-1/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p0_p1_p1_p1_p1_p1_p1_p1_p0.json",
+        "sha256": "403fec3194c610a2730bce8a52ecde69032915e531c2b8af8ba5245ba7ffcdc8"
+      },
+      "archive_member": "records/403fec3194c610a2730bce8a52ecde69032915e531c2b8af8ba5245ba7ffcdc8.json",
+      "bytes": 289626
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-postprocess-source-v1/batches/shared22-candidates-v2/plan-candidates-resolved-history-output-v1/profile-1/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p0_p2_p1_p1_p1_p1_p1_p1_p0.json",
+        "sha256": "c6a5772b128fc38fdf8fea957129f138ec79f97a033be4532e7df65b315853a8"
+      },
+      "archive_member": "records/c6a5772b128fc38fdf8fea957129f138ec79f97a033be4532e7df65b315853a8.json",
+      "bytes": 288232
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-postprocess-source-v1/batches/shared22-candidates-v2/plan-candidates-resolved-history-output-v1/profile-1/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p2_p1_p0_p1_p1_p1_p1_p1_p0.json",
+        "sha256": "737b4a3e7e21468bc658bfca8f85e8530021fbbf3ae29d809c645d2e4d64bf1d"
+      },
+      "archive_member": "records/737b4a3e7e21468bc658bfca8f85e8530021fbbf3ae29d809c645d2e4d64bf1d.json",
+      "bytes": 289635
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-postprocess-source-v1/batches/shared22-candidates-v2/plan-candidates-resolved-history-output-v1/profile-1/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p2_p1_p1_p1_p0_p1_p1_p1_p0.json",
+        "sha256": "b1bb202ea34a49d57de503f3c89dfd5f98b4b98e3ff4a20740cca5e03a8d08fd"
+      },
+      "archive_member": "records/b1bb202ea34a49d57de503f3c89dfd5f98b4b98e3ff4a20740cca5e03a8d08fd.json",
+      "bytes": 289642
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-postprocess-source-v1/batches/shared22-candidates-v2/plan-candidates-resolved-history-output-v1/profile-1/L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p1_p1_p1_p0_p1_p1_p1_p1_p0_p0.json",
+        "sha256": "df0d91e5bacde508a4ef87e94e5e64f0ebd911e5d4b84dd8368a1e54f4c17d71"
+      },
+      "archive_member": "records/df0d91e5bacde508a4ef87e94e5e64f0ebd911e5d4b84dd8368a1e54f4c17d71.json",
+      "bytes": 289626
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-postprocess-source-v1/batches/shared22-candidates-v2/plan-candidates-resolved-history-output-v1/profile-1/L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p2_p1_p1_p0_p1_p1_p1_p1_p0_p0.json",
+        "sha256": "89d3c185a332303006b4d298c90764d9c549abd384be0a0ee0ebef477acafbaf"
+      },
+      "archive_member": "records/89d3c185a332303006b4d298c90764d9c549abd384be0a0ee0ebef477acafbaf.json",
+      "bytes": 289642
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-postprocess-source-v1/batches/shared22-candidates-v2/plan-candidates-resolved-history-output-v1/profile-1/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p0_p1_p1_p1_p1_p1_p1_p1_p0_p0.json",
+        "sha256": "4b3b1df5b57fb475fb44d0924006e974d75f5613d8b666fe569870d232bb42f3"
+      },
+      "archive_member": "records/4b3b1df5b57fb475fb44d0924006e974d75f5613d8b666fe569870d232bb42f3.json",
+      "bytes": 289626
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-postprocess-source-v1/batches/shared22-candidates-v2/plan-candidates-resolved-history-output-v1/profile-1/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p0_p2_p1_p1_p1_p1_p1_p1_p0_p0.json",
+        "sha256": "df61f57d8346b6f3bd01827463c1b8ab2b1b70fe721e9707a9c3e751069a520f"
+      },
+      "archive_member": "records/df61f57d8346b6f3bd01827463c1b8ab2b1b70fe721e9707a9c3e751069a520f.json",
+      "bytes": 288232
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-postprocess-source-v1/batches/shared22-candidates-v2/plan-candidates-resolved-history-output-v1/profile-1/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p2_p1_p0_p1_p1_p1_p1_p1_p0_p0.json",
+        "sha256": "b09ec7677d037188727dcec66c75b2defe84f16e1c740f1de06613056f7cb8ee"
+      },
+      "archive_member": "records/b09ec7677d037188727dcec66c75b2defe84f16e1c740f1de06613056f7cb8ee.json",
+      "bytes": 289635
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-postprocess-source-v1/batches/shared22-candidates-v2/plan-candidates-resolved-history-output-v1/profile-1/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p2_p1_p1_p1_p0_p1_p1_p1_p0_p0.json",
+        "sha256": "110c41ae93a4f03dd4c96a115bfb04bd37ebf9a23a1464486a34dd016376ff8f"
+      },
+      "archive_member": "records/110c41ae93a4f03dd4c96a115bfb04bd37ebf9a23a1464486a34dd016376ff8f.json",
+      "bytes": 289642
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-postprocess-source-v1/batches/shared22-candidates-v2/plan-candidates-resolved-history-output-v1/profile-1/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p1_p0_p1_p1_p1_p1_p1_p0.json",
+        "sha256": "1519814b1952ec56ac2fc3e231c5ea2cefbd62169800cb6dd23717bf4568c85e"
+      },
+      "archive_member": "records/1519814b1952ec56ac2fc3e231c5ea2cefbd62169800cb6dd23717bf4568c85e.json",
+      "bytes": 289626
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-postprocess-source-v1/batches/shared22-candidates-v2/plan-candidates-resolved-history-output-v1/profile-1/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p2_p1_p0_p1_p1_p1_p1_p1_p0.json",
+        "sha256": "896bab5b4f490a468c9191f77f0d07cae30f89ede1844b35405eb79da1265674"
+      },
+      "archive_member": "records/896bab5b4f490a468c9191f77f0d07cae30f89ede1844b35405eb79da1265674.json",
+      "bytes": 289635
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-postprocess-source-v1/batches/shared22-candidates-v2/plan-candidates-resolved-history-output-v1/profile-1/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p0_p0_p1_p1_p1_p1_p1_p0.json",
+        "sha256": "e9dc3dfb578d6058dc48f18e0a964b52f3d69db24a80362cfc13b5d7c6166652"
+      },
+      "archive_member": "records/e9dc3dfb578d6058dc48f18e0a964b52f3d69db24a80362cfc13b5d7c6166652.json",
+      "bytes": 289642
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-postprocess-source-v1/batches/shared22-candidates-v2/plan-candidates-resolved-history-output-v1/profile-1/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p0_p1_p1_p1_p0_p1_p1_p0.json",
+        "sha256": "3b9f6a38a6d0180d9eb0869042da13d5bf5199c0ff10a1a93927175dbc983d3e"
+      },
+      "archive_member": "records/3b9f6a38a6d0180d9eb0869042da13d5bf5199c0ff10a1a93927175dbc983d3e.json",
+      "bytes": 288232
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-postprocess-source-v1/batches/shared22-candidates-v2/plan-candidates-resolved-history-output-v1/profile-1/PR11-physical.json",
+        "sha256": "416d0e5c8e57ddc336763c5695d96c16f3992d6b777a84cf15e50433c2db18a6"
+      },
+      "archive_member": "records/416d0e5c8e57ddc336763c5695d96c16f3992d6b777a84cf15e50433c2db18a6.json",
+      "bytes": 291134
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-postprocess-source-v1/batches/shared22-candidates-v2/plan-candidates-resolved-history-output-v1/profile-1/PR11_combination-physical.json",
+        "sha256": "1bae3a176380ff40c25422da9453cef0d61c860c52784df1c198eabf2f02d16f"
+      },
+      "archive_member": "records/1bae3a176380ff40c25422da9453cef0d61c860c52784df1c198eabf2f02d16f.json",
+      "bytes": 291176
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-postprocess-source-v1/batches/shared22-candidates-v2/plan-candidates-resolved-history-output-v1/profile-1/PR11d-physical.json",
+        "sha256": "f40d724c89618e534b0f361ede7cbe2c39e08b2a486bbdb2c887a49a731f9376"
+      },
+      "archive_member": "records/f40d724c89618e534b0f361ede7cbe2c39e08b2a486bbdb2c887a49a731f9376.json",
+      "bytes": 291141
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-reference-versions-source-v1/batches/shared7-independent-references379-v1/plan-compare-current-history-output-v1-controller/guard.json",
+        "sha256": "9d19e44272112db35a434d2190cb88d185ced465172a5590397856e1749c619d"
+      },
+      "archive_member": "records/9d19e44272112db35a434d2190cb88d185ced465172a5590397856e1749c619d.json",
+      "bytes": 1885
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-reference-versions-source-v1/batches/shared7-independent-references379-v1/plan-compare-current-history-output-v1/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p0_p1_p1_p1_p1_p1_p1_p1_p0-independent-reference-provenance.json",
+        "sha256": "6f4df4675415a88e3ca4833cfd2dcb6c96aad8d7807d01af9e8ba8eb7bafdeb3"
+      },
+      "archive_member": "records/6f4df4675415a88e3ca4833cfd2dcb6c96aad8d7807d01af9e8ba8eb7bafdeb3.json",
+      "bytes": 28979
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-reference-versions-source-v1/batches/shared7-independent-references379-v1/plan-compare-current-history-output-v1/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p1_p1_p1_p1_p1_p1_p1_p1_p0-independent-reference-provenance.json",
+        "sha256": "79daeba1a0b243f74e603bc6b80e1d4315736a2190f13a8bf0719bc3e8f26239"
+      },
+      "archive_member": "records/79daeba1a0b243f74e603bc6b80e1d4315736a2190f13a8bf0719bc3e8f26239.json",
+      "bytes": 23890
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-reference-versions-source-v1/batches/shared7-independent-references379-v1/plan-compare-current-history-output-v1/L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p1_p1_p1_p0_p1_p1_p1_p1_p0_p0-independent-reference-provenance.json",
+        "sha256": "4c24ecfe5c03cd4bebdb707bd98b36c6029888f85c2c54f58c23c3604631dcc9"
+      },
+      "archive_member": "records/4c24ecfe5c03cd4bebdb707bd98b36c6029888f85c2c54f58c23c3604631dcc9.json",
+      "bytes": 28877
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-reference-versions-source-v1/batches/shared7-independent-references379-v1/plan-compare-current-history-output-v1/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p0_p1_p1_p1_p1_p1_p1_p1_p0_p0-independent-reference-provenance.json",
+        "sha256": "78b2db1f216cf2416ba4fc7dbf0b9d476302f3567f86a10b9864dda593ed53f0"
+      },
+      "archive_member": "records/78b2db1f216cf2416ba4fc7dbf0b9d476302f3567f86a10b9864dda593ed53f0.json",
+      "bytes": 28928
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-reference-versions-source-v1/batches/shared7-independent-references379-v1/plan-compare-current-history-output-v1/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p1_p1_p1_p1_p1_p1_p1_p1_p0_p0-independent-reference-provenance.json",
+        "sha256": "af6b41817acf405aad1270ac1bff68f07b0f76845224102e6ac223a25246189b"
+      },
+      "archive_member": "records/af6b41817acf405aad1270ac1bff68f07b0f76845224102e6ac223a25246189b.json",
+      "bytes": 23803
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-reference-versions-source-v1/batches/shared7-independent-references379-v1/plan-compare-current-history-output-v1/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p1_p0_p1_p1_p1_p1_p1_p0-independent-reference-provenance.json",
+        "sha256": "0143d9f63725f387b05f4c188ff61ac78382ea2b9d1c4467df2be92533b1d529"
+      },
+      "archive_member": "records/0143d9f63725f387b05f4c188ff61ac78382ea2b9d1c4467df2be92533b1d529.json",
+      "bytes": 28928
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-reference-versions-source-v1/batches/shared7-independent-references379-v1/plan-compare-current-history-output-v1/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p1_p1_p0_p1_p1_p1_p1_p1_p1_p0-independent-reference-provenance.json",
+        "sha256": "4e3d78815c52622031799d32ecebd326d12675baebfea17e9ce66afa15ca0dcc"
+      },
+      "archive_member": "records/4e3d78815c52622031799d32ecebd326d12675baebfea17e9ce66afa15ca0dcc.json",
+      "bytes": 23800
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-reference-versions-source-v1/batches/shared7-independent-references379-v1/plan-compare-current-history-output-v1/acceptance.json",
+        "sha256": "041d85c8a0a4e75147d008d19e2265bfae6d7ac4b01248d43ab6086be423f009"
+      },
+      "archive_member": "records/041d85c8a0a4e75147d008d19e2265bfae6d7ac4b01248d43ab6086be423f009.json",
+      "bytes": 7064748
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-reference-versions-source-v1/batches/shared7-references-master-00-commit-v3/plan-commit-current-history-output-v1-controller/guard.json",
+        "sha256": "da63a46404734eaddc57eaa5329e604b3bdfe0197dce974a2a5be599f8693a13"
+      },
+      "archive_member": "records/da63a46404734eaddc57eaa5329e604b3bdfe0197dce974a2a5be599f8693a13.json",
+      "bytes": 1872
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-reference-versions-source-v1/batches/shared7-references-master-01-commit-v3/plan-commit-current-history-output-v1-controller/guard.json",
+        "sha256": "f6a34a7690f4c4051c77f5c9e39281ff0277d170541e8ce84774e90c157172ed"
+      },
+      "archive_member": "records/f6a34a7690f4c4051c77f5c9e39281ff0277d170541e8ce84774e90c157172ed.json",
+      "bytes": 1871
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-reference-versions-source-v1/batches/shared7-references-master-02-commit-v3/plan-commit-current-history-output-v1-controller/guard.json",
+        "sha256": "19c41ff7ff7da92cb6f5758f58bf61823e45ceb403221d68ec0a3ceda7ba53a9"
+      },
+      "archive_member": "records/19c41ff7ff7da92cb6f5758f58bf61823e45ceb403221d68ec0a3ceda7ba53a9.json",
+      "bytes": 1871
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-reference-versions-source-v1/batches/shared7-references-master-03-commit-v3/plan-commit-current-history-output-v1-controller/guard.json",
+        "sha256": "1a19916a6cf3fb79472ae16eb11ead62f0572cbf6a6eb586d14ead598251c73d"
+      },
+      "archive_member": "records/1a19916a6cf3fb79472ae16eb11ead62f0572cbf6a6eb586d14ead598251c73d.json",
+      "bytes": 1871
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-reference-versions-source-v1/batches/shared7-references-master-04-commit-v3/plan-commit-current-history-output-v1-controller/guard.json",
+        "sha256": "de364e5fd045c8c4dda16b0e6c09cf026c69bb0f2aeba5bef49c356c31ec1f3a"
+      },
+      "archive_member": "records/de364e5fd045c8c4dda16b0e6c09cf026c69bb0f2aeba5bef49c356c31ec1f3a.json",
+      "bytes": 1872
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-reference-versions-source-v1/batches/shared7-references-master-05-commit-v3/plan-commit-current-history-output-v1-controller/guard.json",
+        "sha256": "0be17f7b1a81d701673237b00c7be6e88168fb187c8e9e625bda71775146efcf"
+      },
+      "archive_member": "records/0be17f7b1a81d701673237b00c7be6e88168fb187c8e9e625bda71775146efcf.json",
+      "bytes": 1871
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-reference-versions-source-v1/batches/shared7-references-master-06-commit-v3/plan-commit-current-history-output-v1-controller/guard.json",
+        "sha256": "8b6a4dd1937e47187c4fbdf41f5b67f33deaf1c1b3a3d82298eed845baee9512"
+      },
+      "archive_member": "records/8b6a4dd1937e47187c4fbdf41f5b67f33deaf1c1b3a3d82298eed845baee9512.json",
+      "bytes": 1864
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/active48-qualified-build-and-parent-execution-source-v1/shared500-reference-versions-source-v1/batches/shared7-references-preparation-v3/plan-prepare-current-history-output-v1-controller/guard.json",
+        "sha256": "cb62bded9ad559e7bc60b889fc1576a17f839cf357c3a0a6eb005b06a445b2b6"
+      },
+      "archive_member": "records/cb62bded9ad559e7bc60b889fc1576a17f839cf357c3a0a6eb005b06a445b2b6.json",
+      "bytes": 1859
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/adaptive500-end-to-end-postprocess-source-v7/batches/subset500-PR0-commit-20261028-v1/controller-commit-v1/guard.json",
+        "sha256": "282eedc5fe0430ac647ae7507c3918cccd57476ab391b2d7b5615e5ca5102aad"
+      },
+      "archive_member": "records/282eedc5fe0430ac647ae7507c3918cccd57476ab391b2d7b5615e5ca5102aad.json",
+      "bytes": 1636
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/adaptive500-end-to-end-postprocess-source-v7/batches/subset500-PR0-prepare-20261028-v1/controller-prepare-v1/guard.json",
+        "sha256": "07757ec771086bb9a490b17be4ff8540ce5e919f3e6823a2db1668d00264d7e0"
+      },
+      "archive_member": "records/07757ec771086bb9a490b17be4ff8540ce5e919f3e6823a2db1668d00264d7e0.json",
+      "bytes": 1638
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/adaptive500-end-to-end-postprocess-source-v7/batches/subset500-PR12-commit-20261028-v1/controller-commit-v1/guard.json",
+        "sha256": "75f5c1c309566e1410fd7ead46a4dbd341650ae6de35375b5e25897851344f37"
+      },
+      "archive_member": "records/75f5c1c309566e1410fd7ead46a4dbd341650ae6de35375b5e25897851344f37.json",
+      "bytes": 1637
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/adaptive500-end-to-end-postprocess-source-v7/batches/subset500-PR12-prepare-20261028-v1/controller-prepare-v1/guard.json",
+        "sha256": "0aac683e284a7a2e13c692846449ae2628cb3dee80ef20e66416a183bd8d7676"
+      },
+      "archive_member": "records/0aac683e284a7a2e13c692846449ae2628cb3dee80ef20e66416a183bd8d7676.json",
+      "bytes": 1640
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/adaptive500-end-to-end-postprocess-source-v7/batches/subset500-PR15-commit0-20261028-v1/controller-commit-v1/guard.json",
+        "sha256": "0402ccc7be9eb5f5678e961adcb05a184a279d64a04bee892aec7b9f2c8d53e7"
+      },
+      "archive_member": "records/0402ccc7be9eb5f5678e961adcb05a184a279d64a04bee892aec7b9f2c8d53e7.json",
+      "bytes": 1646
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/adaptive500-end-to-end-postprocess-source-v7/batches/subset500-PR15-commit1-20261028-v1/controller-commit-v1/guard.json",
+        "sha256": "d295ffeeba2b32755c04a9118e071b4de575e61469b1c3398f480b4039d36231"
+      },
+      "archive_member": "records/d295ffeeba2b32755c04a9118e071b4de575e61469b1c3398f480b4039d36231.json",
+      "bytes": 1645
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/adaptive500-end-to-end-postprocess-source-v7/batches/subset500-PR15-prepare-20261028-v1/controller-prepare-v1/guard.json",
+        "sha256": "58947b91f2dfbe884c1f592918a696b3b27c09a6036e1658c3db53bedc0e5468"
+      },
+      "archive_member": "records/58947b91f2dfbe884c1f592918a696b3b27c09a6036e1658c3db53bedc0e5468.json",
+      "bytes": 1646
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/adaptive500-end-to-end-postprocess-source-v7/batches/subset500-current26-ledger-20261028-v1/Root-actual-current26-cumulative-ledger-adoption-v1.json",
+        "sha256": "a0c3f45b0ad121789ac01cfdaab456232a48095d96bab6f37039f662feeedbbe"
+      },
+      "archive_member": "records/a0c3f45b0ad121789ac01cfdaab456232a48095d96bab6f37039f662feeedbbe.json",
+      "bytes": 1540
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/adaptive500-end-to-end-postprocess-source-v7/batches/subset500-current26-ledger-20261028-v1/controller-ledger-v1/guard.json",
+        "sha256": "81be95a062ccd96dde80bb3c3fc9d45118c143e40e1f0038a02ce91b7fbe47de"
+      },
+      "archive_member": "records/81be95a062ccd96dde80bb3c3fc9d45118c143e40e1f0038a02ce91b7fbe47de.json",
+      "bytes": 1662
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/adaptive500-end-to-end-postprocess-source-v7/batches/subset500-current26-ledger-20261028-v1/controller-ledger.process.json",
+        "sha256": "810d960d888863a8e5473d01bbd7d632957bc32779ebbff632bc6fdd4236f1c3"
+      },
+      "archive_member": "records/810d960d888863a8e5473d01bbd7d632957bc32779ebbff632bc6fdd4236f1c3.json",
+      "bytes": 1500
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/adaptive500-end-to-end-postprocess-source-v7/batches/subset500-current26-ledger-20261028-v1/output-ledger-v1/coverage500.json",
+        "sha256": "e8aeafde031434001b162cd61455487f54c1f6ce78dc1ade5058524a04219c2e"
+      },
+      "archive_member": "records/e8aeafde031434001b162cd61455487f54c1f6ce78dc1ade5058524a04219c2e.json",
+      "bytes": 2138061
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/reference-evaluation80-accuracy-witness-v2/controller-v1-2gib/guard.json",
+        "sha256": "8d795d2b1a675de155f5f9dea9d9c6190ad2202216df95064de9cdd6b2852dbf"
+      },
+      "archive_member": "records/8d795d2b1a675de155f5f9dea9d9c6190ad2202216df95064de9cdd6b2852dbf.json",
+      "bytes": 1362
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/reference-evaluation80-accuracy-witness-v2/witness-v1/witness.json",
+        "sha256": "2506c9f7651e2f6708f5fbc11a59cf172a5898497f93f9fca9f64c427f83f021"
+      },
+      "archive_member": "records/2506c9f7651e2f6708f5fbc11a59cf172a5898497f93f9fca9f64c427f83f021.json",
+      "bytes": 4449516
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/shared-bank-postprocess-stage200-v7/comparison-20261020-v1/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p2_p1_p0_p1_p1_p1_p1_p1_p0-reference_provenance.json",
+        "sha256": "d9f228e4ed0606aab2eeebd6ccf01e8f00d116e15f958dd70565ea71f960c60a"
+      },
+      "archive_member": "records/d9f228e4ed0606aab2eeebd6ccf01e8f00d116e15f958dd70565ea71f960c60a.json",
+      "bytes": 113306
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/shared-bank-postprocess-stage200-v7/comparison-20261020-v1/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p2_p1_p1_p1_p1_p1_p1_p1_p0-reference_provenance.json",
+        "sha256": "bfaf6fd84567a763d693617ac52e0b6d60e14234fef587da3f38d912d7436af9"
+      },
+      "archive_member": "records/bfaf6fd84567a763d693617ac52e0b6d60e14234fef587da3f38d912d7436af9.json",
+      "bytes": 32222
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/shared-bank-postprocess-stage200-v7/comparison-20261020-v1/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p2_p1_p0_p1_p1_p1_p1_p1_p1_p0-reference_provenance.json",
+        "sha256": "f2febb5cbe77b93d4024bb6d3e5ab1a3616a78a4eeb589349d2cb625bbd8ec46"
+      },
+      "archive_member": "records/f2febb5cbe77b93d4024bb6d3e5ab1a3616a78a4eeb589349d2cb625bbd8ec46.json",
+      "bytes": 33558
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/shared-bank-postprocess-stage200-v7/comparison-20261020-v1/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p2_p1_p0_p1_p1_p1_p1_p1_p0_p0-reference_provenance.json",
+        "sha256": "6b47d44b78fa79788ab46ca055948210c852fdd5ddf311ed7194df477fce51fe"
+      },
+      "archive_member": "records/6b47d44b78fa79788ab46ca055948210c852fdd5ddf311ed7194df477fce51fe.json",
+      "bytes": 113306
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/shared-bank-postprocess-stage200-v7/comparison-20261020-v1/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p2_p1_p1_p1_p1_p1_p1_p1_p0_p0-reference_provenance.json",
+        "sha256": "8cb7e1b0dde254e75f8707d90be7c193d6672979a9cf844fc573920d29a3980b"
+      },
+      "archive_member": "records/8cb7e1b0dde254e75f8707d90be7c193d6672979a9cf844fc573920d29a3980b.json",
+      "bytes": 32222
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/shared-bank-postprocess-stage200-v7/comparison-20261020-v1/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p2_p1_p0_p1_p1_p1_p1_p1_p0-reference_provenance.json",
+        "sha256": "48ecdfd635c051bf6c1916753344b80850ce0dcd1ca3201ddfb1d2e348d4ba52"
+      },
+      "archive_member": "records/48ecdfd635c051bf6c1916753344b80850ce0dcd1ca3201ddfb1d2e348d4ba52.json",
+      "bytes": 113306
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/shared-bank-postprocess-stage200-v7/comparison-20261020-v1/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p0_p1_p1_p1_p1_p1_p1_p0-reference_provenance.json",
+        "sha256": "7db944550cfd2f6864ecf6ebb10abb341c9b485a9ef03368abd6d709ceda537f"
+      },
+      "archive_member": "records/7db944550cfd2f6864ecf6ebb10abb341c9b485a9ef03368abd6d709ceda537f.json",
+      "bytes": 33558
+    },
+    {
+      "original_reference": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/shared-bank-postprocess-stage200-v7/comparison-20261020-v1/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p1_p0_p1_p1_p1_p1_p1_p0-reference_provenance.json",
+        "sha256": "cd0456d2bffa7cf311ee54e5b15d5848dc19e13eaeb436abbd50c962cf0b2e65"
+      },
+      "archive_member": "records/cd0456d2bffa7cf311ee54e5b15d5848dc19e13eaeb436abbd50c962cf0b2e65.json",
+      "bytes": 32222
+    }
+  ],
+  "archive": {
+    "path": "provenance/four-loop-500-evidence-20261028-v1/accepted500-evidence.tar.gz",
+    "sha256": "fdd7aa563610f696efe86d58446d8ce5c378ce89a0cc6594b7a233d52b3b6cb7",
+    "bytes": 17026983
+  },
+  "numerical_accuracy_evidence": "Accepted independent profiles and publication receipts; empirical, not an interval proof",
+  "complete_scientific_proof_bundle": false
+}

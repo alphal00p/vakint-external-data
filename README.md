@@ -1,5 +1,12 @@
 # Vakint external data
 
+The 28 October 2026 source update gives all six coefficients (epsilon^-4 through
+epsilon^1) of 26 selected four-loop masters at least 500 validated digits. All
+43 remaining numerical fallbacks have at least that precision. The three PR11d
+finite aliases retain their stronger 20,000-digit values and bounded evidence.
+Known formulas, supplementary orders and the five-loop publication are preserved.
+This source update creates no new release and does not change `data-latest`.
+
 Versioned native RustRed reductions, master-integral Laurent coefficients and
 graphs, and prepared reduction caches for
 [Vakint](https://github.com/alphal00p/gammaloop/tree/6cdaa993ee9b413189ae077a8f783de6223cc42e/crates/vakint).
@@ -102,16 +109,17 @@ entries. The historical all-loop `tools/data.py generate` command refuses to
 overwrite a current five-loop publication. Staging and installing a source
 update do not publish a GitHub release or change `data-latest`.
 
-The `v0.1.1` dataset contains 739 numerical coefficient rows:
-696 have exact symbolic expressions and 43 retain numerical fallbacks. These
-counts include 49 additional orders preserved from the previous export.
-The numerical fallback rows have 20,000 validated digits at 1L and 2L. Most
-3L and 4L fallbacks provide 200 digits; exceptions include the three-loop D6
-master at 2,000, PR4/PR4d at epsilon zero and one at 20,000, and PR11d at
-epsilon zero at 20,000. The upgraded four-loop rows include bounded absolute
-errors and preserved independent validation. Other orders retain their own
-limits. Exact formulas can support greater precision than their archived
-numerical fallbacks, subject to any finite periods they contain.
+The lower-loop data contains 739 numerical coefficient rows: 696 have exact
+symbolic expressions and 43 retain numerical fallbacks. These counts include
+49 additional orders preserved from the previous export.
+The six-coefficient windows have 20,000 validated digits at 1L and 2L, and
+200 digits at 3L with D6 at 2,000. At 4L, 26 complete windows now have at least
+500 digits; the other windows retain their existing precision. PR4/PR4d at
+epsilon zero and one, and PR11d at epsilon zero, retain their stronger
+20,000-digit values and bounded errors. The new 500-digit accuracy evidence
+uses independent numerical refinements through 520 digits and is not an
+interval proof. Per-coefficient limits remain authoritative; exact formulas
+can support greater precision subject to the finite periods they contain.
 An [additive oracle correction](validation/bessel-20000-anchor-one/coverage-correction.json)
 supplies the missing reference at the actual integration anchor 1; the original
 certificates and public numerical values are preserved unchanged.

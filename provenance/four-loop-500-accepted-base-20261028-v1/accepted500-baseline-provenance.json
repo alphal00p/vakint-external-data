@@ -1,0 +1,28 @@
+{
+  "ledger": {
+    "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/adaptive500-end-to-end-postprocess-source-v7/batches/subset500-current26-ledger-20261028-v1/output-ledger-v1/coverage500.json",
+    "sha256": "e8aeafde031434001b162cd61455487f54c1f6ce78dc1ade5058524a04219c2e"
+  },
+  "Root_adoption": {
+    "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/adaptive500-end-to-end-postprocess-source-v7/batches/subset500-current26-ledger-20261028-v1/Root-actual-current26-cumulative-ledger-adoption-v1.json",
+    "sha256": "a0c3f45b0ad121789ac01cfdaab456232a48095d96bab6f37039f662feeedbbe"
+  },
+  "portable_archive": {
+    "path": "provenance/four-loop-500-evidence-20261028-v1/accepted500-evidence.tar.gz",
+    "sha256": "fdd7aa563610f696efe86d58446d8ce5c378ce89a0cc6594b7a233d52b3b6cb7",
+    "bytes": 17026983
+  },
+  "portable_index": {
+    "path": "provenance/four-loop-500-evidence-20261028-v1/index.json",
+    "sha256": "c5dfcac518a45cc78c7701d38e5127fdff1e22200a3acff949f1866a101a7a44"
+  },
+  "selected_windows": 26,
+  "selected_coefficients": 156,
+  "numerical_fallbacks_at_least500": 43,
+  "stronger_PR11d_finite_values_retained": 3,
+  "target_digits": 500,
+  "internal_comparison_digits": 520,
+  "accepted500_baseline_is_staged_not_previous_published20k": true,
+  "no_new_interval_bound_or_scientific_proof_claim": true,
+  "release_policy": "repository_only_no_tag_assets_or_latest_update"
+}

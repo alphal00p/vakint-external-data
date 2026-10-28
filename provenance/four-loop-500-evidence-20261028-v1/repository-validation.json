@@ -1,0 +1,54 @@
+{
+  "clean_guard": {
+    "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/external-data500-sync-source-v1/validation-controller-v1/guard.json",
+    "sha256": "1ade54c87a012e8a2498bb595c3aa03b9c5c3537b395229f57c95d6e1c16b17c"
+  },
+  "data_validator_passed": true,
+  "documentation_updated_after_data_checks_only": true,
+  "no_release_or_tag_or_data_latest_update": true,
+  "processes": [
+    {
+      "exit_code": 0,
+      "log": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/external-data500-sync-source-v1/validation-output-v1/validate.log",
+        "sha256": "d80fe7a2254df73570500ca357de0154e20e8c31608f6e3f6d46b8ebafd102ac"
+      },
+      "name": "validate",
+      "seconds": 108.63894612411968
+    },
+    {
+      "exit_code": 0,
+      "log": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/external-data500-sync-source-v1/validation-output-v1/unittest.log",
+        "sha256": "d576510a98de0ff7589281aa177e737f12ff3d3d08a3dc3e8f52f28a23c1c65e"
+      },
+      "name": "unittest",
+      "seconds": 14.921830782899633
+    },
+    {
+      "exit_code": 0,
+      "log": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/external-data500-sync-source-v1/validation-output-v1/runtime-pack.log",
+        "sha256": "5f3d38a6716b1dd778023835823f7a163d248aecdf45bed9e0cf1c8ab6ae8b17"
+      },
+      "name": "runtime-pack",
+      "seconds": 149.39145548199303
+    }
+  ],
+  "runtime_only_pack_passed": true,
+  "runtime_validation_archives_not_published": true,
+  "schema": "vakint.external-data.four-loop500-repository-validation.v1",
+  "source_validation": {
+    "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/artifacts/external-data500-sync-source-v1/validation-output-v1/qualification.json",
+    "sha256": "e361ed92b12743a5d45cfa82ebad5c35a3ffc2f35c1075c8efb0c65a1626ee43"
+  },
+  "unittest_count": 238,
+  "validated_four_loop_manifest": {
+    "path": "/shared/codex-2/vacuum_masters/SOURCES/vakint-external-data-500digits-20261028-v1/4L/manifest.json",
+    "sha256": "956a273a06365407de0776d0abef88514550d2fc4d32cae0f45c2952358ecbc9"
+  },
+  "validated_root_manifest": {
+    "path": "/shared/codex-2/vacuum_masters/SOURCES/vakint-external-data-500digits-20261028-v1/manifest.json",
+    "sha256": "027c85e7325a2430e01e8a40fcb91c177a4388c87ca9a43b7b67851ab75b4675"
+  }
+}
