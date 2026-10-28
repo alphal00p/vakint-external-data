@@ -423,6 +423,56 @@ The output must not already exist. Its
 `vakint.light-cache-selection-admission.v1` receipt binds the cache metadata,
 keys, usage, inventory and raw Native validation hashes, semantic/source-index
 identity, actual distinct counts and the independently recomputed checks.
+
+==== Reproducible candidate authoring
+
+After accepting the physical normal/classification pair and the single frozen
+tuning case, use the existing source validators to compose their authentic v1
+profiles and freeze selected keys. Place all unchanged original receipts,
+profiles, manifests and source/cohort proofs beneath one provenance/data root.
+The `source.json` object is the same cumulative `selection.source` record used
+by source admission, including its producer and inventory references.
+
+```sh
+python3 tools/cache_usage.py author \
+  --root /absolute/workspace/proof-root \
+  --loop-manifest 5L/manifest.json --loop-manifest-sha256 SHA \
+  --source provenance/source.json --source-sha256 SHA \
+  --physical-profile provenance/physical/profile.json.gz --physical-profile-sha256 SHA \
+  --tuning-profile provenance/tuning/profile.json.gz --tuning-profile-sha256 SHA \
+  --additional-keys 0 --additional-keys all \
+  --output-dir provenance/light-candidates
+```
+
+All paths except `--root` are root-relative. Output must be new and cannot
+overwrite observations. The command performs no Native imports, reductions or
+payload/index scans. It calls the full existing composed-profile validator,
+preserving the actual distinct collector ELFs, source/compiler cohort, original
+data, immutable INDEX, frozen held-out authority and resolved settings. Missing,
+sampled, failed, mixed-cohort and held-out observations remain errors.
+
+`usage-profile.json.gz` uses the unchanged v2 schema. Every
+`selected-keys-NNNNNN.json.gz` uses the unchanged selected-key v1 schema. CORE
+contains only unique positively observed physical requested Route keys. It is
+included in every candidate. Remaining positively observed keys are ordered by
+independent-case reuse, dispatch occurrence count, backing-hit multiplicity,
+then exact canonical work identity. Route and Apply records remain distinct;
+Apply owner sectors are preserved. Repeated `--additional-keys N` freezes
+cumulative prefixes of that order; `all` adds every eligible remaining key.
+
+`ranking.json.gz` records those observed frequencies and explicitly leaves
+per-key avoided work and compressed cost unavailable. Shared coefficients and
+gzip make costs nonadditive. `authoring-report.json` binds the profiles, ranking
+and candidate keys, with actual cache bytes and Native acceptance still unset.
+Authoring alone neither creates a cache nor certifies a budget or algebra.
+
+Export CORE first with the existing Native `export-selected` command. Retain
+the completed candidate while trying additions. Actual successful encodings
+decide both the 95,000,000-byte compressed budget and default 1 GiB decoded
+budget; a refusal is not a measured over-budget size. Keep HEAVY and every raw
+source intact. Compare eligible-input performance only before freezing the
+final selection, and never use the twelve final held-out observations to tune
+or silently reselect these candidates.
 The top export proof references this admission and the metadata; neither
 `cache.json` nor the raw Native receipt links back to that top proof or to the
 admission, avoiding a hash cycle. Runtime clients authenticate the ordinary

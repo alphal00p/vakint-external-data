@@ -4,13 +4,18 @@ This checks authenticated public eligibility, summary arithmetic and Native
 validation bindings. It neither decodes Native records nor replays large traces.
 """
 
+import argparse
 import base64
 import collections
+import gzip
 import hashlib
 import json
+import os
 import re
+import shutil
+import tempfile
 import zlib
-from pathlib import PurePosixPath
+from pathlib import Path, PurePosixPath
 
 import data
 from saved_cache import hash256, integer
@@ -1687,6 +1692,334 @@ def admitted_profile_frequencies(
     return frequencies
 
 
+def selection_source(root, source):
+    """Authenticate the existing cumulative source without opening Native data."""
+    fields(
+        source,
+        (
+            "producer",
+            "data_manifest_sha256",
+            "cache_native_index_identity",
+            "inventory",
+        ),
+        "invalid cumulative source provenance",
+    )
+    require(
+        hash256(source["data_manifest_sha256"]),
+        "invalid cumulative source data identity",
+    )
+    native_index_identity(source["cache_native_index_identity"])
+    producer = source_json(root, source["producer"])
+    require(isinstance(producer, dict), "cumulative producer must be an object")
+    binding = producer.get("semantic_binding")
+    semantic_binding(binding)
+    require(
+        isinstance(producer, dict)
+        and producer.get("schema") == "vakint.cumulative-native-cache-report.v1"
+        and producer.get("cache_sha256") is None
+        and same(
+            producer.get("cache_native_index_identity"),
+            source["cache_native_index_identity"],
+        )
+        and producer.get("data_manifest_sha256") == source["data_manifest_sha256"]
+        and isinstance(producer.get("sources"), list)
+        and producer["sources"],
+        "selected cache source is not the authenticated cumulative producer",
+    )
+    source_file(root, source["inventory"])
+    return binding
+
+
+def work_document(key):
+    result = {"kind": key[0], "powers": list(key[1])}
+    if key[0] == "apply":
+        result["owner_sector"] = list(key[2])
+    return result
+
+
+def rank_observed_work(physical, tuning, arity, frequencies):
+    """Rank validated observations; counts are neither work nor byte estimates."""
+    cases, dispatches, recomputed = {}, collections.Counter(), collections.Counter()
+    core = set()
+    for child in (physical, tuning):
+        case = child["cases"][0]
+        for dispatch in case["dispatches"]:
+            roots = {work(row, arity) for row in dispatch["collected_roots"]}
+            for row in dispatch["records"]:
+                key = work(row["work"], arity)
+                count = row["backing_hits"]
+                if count:
+                    cases.setdefault(key, set()).add(case["case_id"])
+                    dispatches[key] += 1
+                    recomputed[key] = checked_sum((recomputed[key], count))
+                    if child is physical and key[0] == "route" and key in roots:
+                        core.add(key)
+    require(
+        recomputed == frequencies, "ranked observations differ from validated usage"
+    )
+    require(core, "physical usage has no positively hit requested Route CORE")
+    extras = sorted(
+        set(frequencies) - core,
+        key=lambda key: (-len(cases[key]), -dispatches[key], -frequencies[key], key),
+    )
+    return core, extras, cases, dispatches
+
+
+def author_candidates(
+    root,
+    directory,
+    manifest,
+    source,
+    physical_ref,
+    tuning_ref,
+    additions,
+    output_relative,
+):
+    """Author existing profile/key formats from accepted observations only.
+
+    No Native payloads, reductions or byte-cost estimates are involved. Actual
+    selected exports decide the compressed and decoded budgets independently.
+    """
+    root, directory = Path(root), Path(directory)
+    require(
+        root.is_absolute() and root.is_dir() and not root.is_symlink(),
+        "invalid authoring proof root",
+    )
+    require(
+        isinstance(output_relative, str) and output_relative.startswith("provenance/"),
+        "authoring output must be a new root-relative provenance directory",
+    )
+    output = data.checked_path(root, output_relative)
+    require(not output.exists(), "authoring output already exists")
+    for path in (output, *output.parents):
+        if path == root.parent:
+            break
+        require(not path.is_symlink(), "symlink in authoring output path")
+    require(
+        isinstance(additions, list)
+        and additions
+        and all(value == "all" or integer(value, 0, U64_MAX) for value in additions)
+        and len(set(additions)) == len(additions),
+        "additional-key counts must be unique nonnegative integers or all",
+    )
+    binding = selection_source(root, source)
+    if isinstance(manifest.get("cache"), dict):
+        require(
+            same(binding, manifest["cache"].get("binding")),
+            "active cache binding differs from selected source",
+        )
+    physical = source_json(root, physical_ref)
+    tuning = source_json(root, tuning_ref)
+    for profile, collector, role in (
+        (physical, "five_loop_qcd_ladder", "physical-example"),
+        (tuning, "measure_cache", "tuning"),
+    ):
+        require(
+            isinstance(profile, dict)
+            and profile.get("schema") == "vakint.cache-record-usage-profile.v1"
+            and isinstance(profile.get("compiled_cohort"), dict)
+            and profile["compiled_cohort"].get("collector", "measure_cache")
+            == collector
+            and isinstance(profile.get("cases"), list)
+            and len(profile["cases"]) == 1
+            and isinstance(profile["cases"][0], dict)
+            and profile["cases"][0].get("role") == role,
+            "authoring requires one physical case and one frozen tuning case",
+        )
+    compiled = physical["compiled_cohort"]
+    require(
+        all(name in compiled for name in COMMON_COHORT_FIELDS),
+        "physical profile lacks its complete compiled source cohort",
+    )
+    snapshot = referenced_json(root, compiled["main_source_snapshot"])
+    authority = (
+        snapshot.get("files", {})
+        .get("crates/vakint/examples/build_cache/frozen-public-suites.json", {})
+        .get("sha256")
+    )
+    require(
+        hash256(authority), "physical source lacks its compiled frozen-suite authority"
+    )
+    tuning_receipt = referenced_json(root, tuning["cases"][0]["receipt"])
+    conventions = tuning_receipt.get("conventions", {})
+    profile = {
+        "schema": PROFILE_V2_SCHEMA,
+        "semantic_binding": binding,
+        "common": {
+            "source_cache_native_index_identity": source["cache_native_index_identity"],
+            "data": physical["data"],
+            "compiled_source_cohort": {
+                name: compiled[name] for name in COMMON_COHORT_FIELDS
+            },
+            "raw_reduction_settings": tuning_receipt.get("raw_reduction_settings"),
+            "output_conventions": {
+                name: conventions.get(name)
+                for name in (
+                    "integral_normalization",
+                    "integral_normalization_expression",
+                    "epsilon_symbol",
+                )
+            },
+            "held_out_authority_sha256": authority,
+        },
+        "members": [
+            {
+                "id": name,
+                "profile": reference,
+                "eligible_case_ids": [child["cases"][0]["case_id"]],
+            }
+            for name, reference, child in (
+                ("physical", physical_ref, physical),
+                ("tuning", tuning_ref, tuning),
+            )
+        ],
+    }
+    eligible = sorted(child["cases"][0]["case_id"] for child in (physical, tuning))
+    frequencies = admitted_profile_frequencies(
+        root,
+        profile,
+        {"eligible_case_ids": eligible},
+        binding,
+        directory,
+        source,
+        manifest,
+    )
+    core, extras, cases, dispatches = rank_observed_work(
+        physical, tuning, binding["physical_arity"], frequencies
+    )
+    counts = sorted(
+        {0, *(len(extras) if value == "all" else value for value in additions)}
+    )
+    require(
+        all(count <= len(extras) for count in counts),
+        "additional-key count exceeds eligible keys",
+    )
+
+    def json_bytes(value):
+        raw = (
+            json.dumps(
+                value,
+                sort_keys=True,
+                separators=(",", ":"),
+                ensure_ascii=False,
+                allow_nan=False,
+            )
+            + "\n"
+        ).encode()
+        require(
+            len(raw) < GIT_FILE_BYTES_LIMIT,
+            "authoring proof exceeds decoded file limit",
+        )
+        return raw
+
+    def encoded(value):
+        raw = gzip.compress(json_bytes(value), mtime=0)
+        require(
+            len(raw) < GIT_FILE_BYTES_LIMIT,
+            "authoring proof exceeds encoded file limit",
+        )
+        return raw
+
+    def reference(name, raw):
+        return {
+            "path": f"{output_relative}/{name}",
+            "sha256": hashlib.sha256(raw).hexdigest(),
+        }
+
+    profile_bytes = encoded(profile)
+    profile_ref = reference("usage-profile.json.gz", profile_bytes)
+    ranking = {
+        "schema": "vakint.cache-record-selection-ranking.v1",
+        "usage_profile_sha256": profile_ref["sha256"],
+        "method": "physical-requested-route-core-then-case-dispatch-hit-frequency",
+        "per_key_native_work_avoided": None,
+        "per_key_compressed_bytes": None,
+        "cost_policy": "Actual Native exports determine nonadditive compressed/decoded cost.",
+        "rows": [
+            {
+                "work": work_document(key),
+                "core": key in core,
+                "eligible_case_ids": sorted(cases[key]),
+                "dispatch_occurrences": dispatches[key],
+                "backing_hits": frequencies[key],
+            }
+            for key in (*sorted(core), *extras)
+        ],
+    }
+    ranking_bytes = encoded(ranking)
+    ranking_ref = reference("ranking.json.gz", ranking_bytes)
+    files = {"usage-profile.json.gz": profile_bytes, "ranking.json.gz": ranking_bytes}
+    candidates = []
+    for count in counts:
+        keys = sorted(core | set(extras[:count]))
+        document = {
+            "schema": "vakint.cache-record-selection.v1",
+            "semantic_binding": binding,
+            "usage_profile_sha256": profile_ref["sha256"],
+            "eligible_case_ids": eligible,
+            "keys": [work_document(key) for key in keys],
+            "selection": {
+                "method": ranking["method"],
+                "max_compressed_bytes": data.FIVE_LOOP_LIGHT_CACHE_BYTES_LIMIT,
+                "core_keys": len(core),
+                "additional_keys": count,
+                "ranking_sha256": ranking_ref["sha256"],
+            },
+        }
+        name = f"selected-keys-{count:06d}.json.gz"
+        files[name] = encoded(document)
+        candidates.append(
+            {
+                "keys": reference(name, files[name]),
+                "core_keys": len(core),
+                "additional_keys": count,
+                "unique_keys": len(keys),
+                "compressed_cache_bytes": None,
+                "decoded_cache_bytes": None,
+                "native_export_accepted": False,
+            }
+        )
+    report = {
+        "schema": "vakint.light-cache-selection-authoring.v1",
+        "status": "VALIDATED_USAGE_METADATA_ONLY_NATIVE_EXPORT_PENDING",
+        "source": source,
+        "semantic_binding": binding,
+        "usage_profile": profile_ref,
+        "ranking": ranking_ref,
+        "eligible_case_ids": eligible,
+        "core_keys": len(core),
+        "eligible_unique_keys": len(frequencies),
+        "candidates": candidates,
+        "final_held_out_used": False,
+        "coverage_claim": False,
+        "native_payloads_opened": False,
+        "native_reduction_performed": False,
+    }
+    files["authoring-report.json"] = json_bytes(report)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    staging = Path(tempfile.mkdtemp(prefix=".light-authoring-", dir=output.parent))
+    reserved = None
+    try:
+        for name, raw in files.items():
+            (staging / name).write_bytes(raw)
+        # Reserve with exclusive mkdir: rename must not replace another
+        # concurrently created empty directory between exists() and rename().
+        output.mkdir()
+        reserved = output.stat()
+        os.rename(staging, output)
+    finally:
+        if staging.exists():
+            shutil.rmtree(staging)
+            if reserved is not None and output.exists():
+                current = output.stat()
+                if (current.st_dev, current.st_ino) == (
+                    reserved.st_dev,
+                    reserved.st_ino,
+                ):
+                    output.rmdir()
+    return report
+
+
 def validate(directory, manifest, metadata):
     """Return a recomputed admission record, never a new Native algebra claim."""
     require(
@@ -1729,39 +2062,11 @@ def validate(directory, manifest, metadata):
     )
     root = directory.parent
     source = selection["source"]
-    fields(
-        source,
-        (
-            "producer",
-            "data_manifest_sha256",
-            "cache_native_index_identity",
-            "inventory",
-        ),
-        "invalid cumulative source provenance",
-    )
+    binding = selection_source(root, source)
     require(
-        hash256(source["data_manifest_sha256"]),
-        "invalid cumulative source data identity",
+        same(binding, manifest["cache"]["binding"]),
+        "selected cache source binding differs from manifest",
     )
-    native_index_identity(source["cache_native_index_identity"])
-    producer = source_json(root, source["producer"])
-    binding = manifest["cache"]["binding"]
-    semantic_binding(binding)
-    require(
-        isinstance(producer, dict)
-        and producer.get("schema") == "vakint.cumulative-native-cache-report.v1"
-        and producer.get("cache_sha256") is None
-        and same(
-            producer.get("cache_native_index_identity"),
-            source["cache_native_index_identity"],
-        )
-        and same(producer.get("semantic_binding"), binding)
-        and producer.get("data_manifest_sha256") == source["data_manifest_sha256"]
-        and isinstance(producer.get("sources"), list)
-        and producer["sources"],
-        "selected cache source is not the authenticated cumulative producer",
-    )
-    source_file(root, source["inventory"])
     profile = source_json(root, selection["usage_profile"])
     keys = source_json(root, selection["keys"])
     fields(
@@ -1895,3 +2200,80 @@ def validate(directory, manifest, metadata):
         },
         "scope": "Portable source eligibility and frequency admission; actual Native validation remains its separately authenticated receipt. Raw traces remain hash-bound audit material, not replayed here.",
     }
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    commands = parser.add_subparsers(dest="command", required=True)
+    author = commands.add_parser(
+        "author",
+        help="Compose accepted observations and freeze candidate keys; no Native work",
+    )
+    author.add_argument(
+        "--root",
+        type=Path,
+        required=True,
+        help="Absolute provenance/data root containing all authenticated references",
+    )
+    for name in ("loop-manifest", "source", "physical-profile", "tuning-profile"):
+        author.add_argument(
+            f"--{name}", required=True, help="Safe path relative to --root"
+        )
+        author.add_argument(f"--{name}-sha256", required=True)
+    author.add_argument(
+        "--additional-keys",
+        action="append",
+        default=None,
+        help="Cumulative extra-key count, or all; repeat to freeze a schedule. CORE is always included.",
+    )
+    author.add_argument(
+        "--output-dir",
+        required=True,
+        help="NEW root-relative provenance directory; never overwritten",
+    )
+    args = parser.parse_args(argv)
+    try:
+
+        def reference(name):
+            return {
+                "path": getattr(args, name),
+                "sha256": getattr(args, name + "_sha256"),
+            }
+
+        # The active manifest lives in 5L/, unlike immutable proof references.
+        # Do not relax source_file's provenance-only policy to read it.
+        manifest_path = data.checked_path(args.root, args.loop_manifest)
+        current = args.root
+        for part in PurePosixPath(args.loop_manifest).parts:
+            current /= part
+            require(not current.is_symlink(), "loop manifest path contains a symlink")
+        require(
+            hash256(args.loop_manifest_sha256)
+            and manifest_path.is_file()
+            and manifest_path.stat().st_size < GIT_FILE_BYTES_LIMIT
+            and data.digest(manifest_path) == args.loop_manifest_sha256,
+            "active loop manifest SHA256 or file differs",
+        )
+        manifest = decode_json(manifest_path.read_bytes())
+        source = source_json(args.root, reference("source"))
+        additions = [
+            value if value == "all" else int(value)
+            for value in (args.additional_keys or ["0"])
+        ]
+        report = author_candidates(
+            args.root,
+            data.checked_path(args.root, args.loop_manifest).parent,
+            manifest,
+            source,
+            reference("physical_profile"),
+            reference("tuning_profile"),
+            additions,
+            args.output_dir,
+        )
+    except (ValueError, KeyError, TypeError, AttributeError, OSError) as error:
+        parser.exit(2, f"cache usage authoring failed: {error}\n")
+    print(json.dumps(report, indent=2, ensure_ascii=False))
+
+
+if __name__ == "__main__":
+    main()
