@@ -612,7 +612,20 @@ def _derive_takeover_v3(root):
         if center != cell["center"]:
             raise ValueError("takeover D2 center differs from its archived source")
         value = Decimal(center)
+        # The published centre is a shortened decimal: its error must contain
+        # the storage rounding, one unit of the last stored digit, exactly once.
+        if (
+            sum(1 for term in cell["error_terms"] if term.get("kind") == "last_digit_unit")
+            != 1
+        ):
+            raise ValueError(
+                "takeover D2 error must include the storage rounding of the published centre once"
+            )
         error = takeover_v3_error(value, source, cell["error_terms"])
+        if error < Decimal(1).scaleb(value.as_tuple().exponent):
+            raise ValueError(
+                "takeover D2 error is below the storage rounding of the published centre"
+            )
         digits = cell["validated_significant_digits"]
         stored = len(value.as_tuple().digits)
         if (
@@ -638,7 +651,9 @@ def _derive_takeover_v3(root):
             "center_json_pointer": cell["center_json_pointer"],
             "center_negated_raw_to_hat": cell["negate_raw_to_hat"],
             "error_terms": cell["error_terms"],
-            "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+            "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); "
+            "last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), "
+            "rounded up to six significant digits",
             "accepted_significant_digits": digits,
             "stored_digits_do_not_extend_source_cap": True,
         }

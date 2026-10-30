@@ -6010,6 +6010,13 @@
       "uncompressed_bytes": 9992
     },
     {
+      "path": "takeover-4L-closures-v1-06f11a0fe4dae6fc67b78b4f2c7b22137641f7dee5c23b23ea02c288d1963f07.json.gz",
+      "sha256": "695fd588ab540d618a4e1e1988c2da381809541d9c7a2834564b033ee812b344",
+      "bytes": 8691,
+      "uncompressed_sha256": "06f11a0fe4dae6fc67b78b4f2c7b22137641f7dee5c23b23ea02c288d1963f07",
+      "uncompressed_bytes": 74699
+    },
+    {
       "path": "takeover-4L-closures-v1-218f822c12f1279e9d0f59d09374a59bdb9249e37a11706c63017df694afc521.json.gz",
       "sha256": "c04e32ad0335a0347036bb04cfb6f3a0c0e215928cf4b0bcb3823a0bccebbb55",
       "bytes": 42059,

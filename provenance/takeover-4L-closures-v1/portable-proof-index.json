@@ -301,6 +301,19 @@
         "uncompressed_sha256": "f0b49ed3d11ddb0fb8aead1bae76086ec6039090757a18af439be12f620f2dab",
         "uncompressed_bytes": 493757
       }
+    },
+    {
+      "original_source": {
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/external-data/fix-v2/out/vakeval-gate-v2.json",
+        "sha256": "06f11a0fe4dae6fc67b78b4f2c7b22137641f7dee5c23b23ea02c288d1963f07"
+      },
+      "portable_archive": {
+        "path": "validation/takeover-4L-closures-v1-06f11a0fe4dae6fc67b78b4f2c7b22137641f7dee5c23b23ea02c288d1963f07.json.gz",
+        "sha256": "695fd588ab540d618a4e1e1988c2da381809541d9c7a2834564b033ee812b344",
+        "bytes": 8691,
+        "uncompressed_sha256": "06f11a0fe4dae6fc67b78b4f2c7b22137641f7dee5c23b23ea02c288d1963f07",
+        "uncompressed_bytes": 74699
+      }
     }
   ],
   "resolution": "Resolve portable_archive.path from the repository root; verify compressed and uncompressed SHA256. Original absolute paths are provenance only."

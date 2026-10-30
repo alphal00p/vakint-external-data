@@ -320,6 +320,60 @@ class FiniteConstantTests(unittest.TestCase):
             self.assertEqual(record["error_quality"], "estimated")
             self.assertEqual(record["symbolic_definition"], period["symbolic_definition"])
 
+    def test_takeover_v3_errors_include_storage_rounding(self):
+        import d2_constants
+
+        registry_path = d2_constants.TAKEOVER_V3_REGISTRY
+        index_path = d2_constants.TAKEOVER_V3_INDEX
+        index = data.read_json(data.ROOT / index_path)
+        live = {r["symbol"]: r for r in data.read_json(data.ROOT / "4L/constants.json")}
+        registry = data.read_json(data.ROOT / registry_path)
+        owned = {period["public_symbol"] for period in registry["periods"]}
+        for symbol in owned:
+            record = live[symbol]
+            with self.subTest(symbol=symbol):
+                unit = Decimal(1).scaleb(Decimal(record["value"]).as_tuple().exponent)
+                self.assertGreaterEqual(Decimal(record["absolute_error"]), unit)
+
+        def derive_with(mutate):
+            with tempfile.TemporaryDirectory() as temporary:
+                root = Path(temporary)
+                for archive_entry in index["archives"]:
+                    relative = archive_entry["portable_archive"]["path"]
+                    (root / relative).parent.mkdir(parents=True, exist_ok=True)
+                    (root / relative).write_bytes((data.ROOT / relative).read_bytes())
+                (root / index_path).write_bytes((data.ROOT / index_path).read_bytes())
+                changed = copy.deepcopy(registry)
+                mutate(changed)
+                data.write_json(root / registry_path, changed)
+                return d2_constants.derive_takeover_v3(root)
+
+        records, _, _ = derive_with(lambda registry: None)
+        self.assertEqual([r["symbol"] for r in records], [p["public_symbol"] for p in registry["periods"]])
+
+        def cell(changed, symbol):
+            return next(
+                p["value_cell"] for p in changed["periods"] if p["public_symbol"] == symbol
+            )
+
+        def drop_unit(changed):
+            terms = cell(changed, "vakint::PR9D2Eps1")["error_terms"]
+            terms[:] = [t for t in terms if t["kind"] != "last_digit_unit"]
+
+        def double_unit(changed):
+            cell(changed, "vakint::T111bar5")["error_terms"].append({"kind": "last_digit_unit"})
+
+        for mutate in [drop_unit, double_unit]:
+            with self.subTest(mutation=mutate.__name__), self.assertRaisesRegex(
+                ValueError, "storage rounding"
+            ):
+                derive_with(mutate)
+        with (
+            mock.patch.object(d2_constants, "takeover_v3_error", return_value=Decimal(0)),
+            self.assertRaisesRegex(ValueError, "below the storage rounding"),
+        ):
+            derive_with(lambda registry: None)
+
     def test_symbolic_definition_lint_rejects_floats_unbound_and_unknown_heads(self):
         good = "vakint::Integral(vakint::t^3*(symbolica::bessel_k(0,vakint::t))^5,vakint::Interval(vakint::t,0,∞))"
         finite_constants.lint_symbolic_definition(good)

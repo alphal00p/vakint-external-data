@@ -227,19 +227,19 @@
   "new_exact_cells": 43,
   "constants_adapter": {
     "path": "provenance/takeover-4l-closures-runtime-v3/projection.json",
-    "sha256": "bb34f4266e0789063e1cc8fbad1761e22d1efa510a878a072954d45eef097c69"
+    "sha256": "4f834edd4d7dab48e899a2686dfb4d0837b45a7a44d9b192c6ed1aeed3118a5b"
   },
   "period_definitions": {
     "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-    "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+    "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
   },
   "symbolic_acceptance": {
     "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
-    "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
+    "sha256": "d5f2f4e23ac55cbfc73cd5000cd9bcb5065cbe83703ddb5cdf340143003a3ca5"
   },
   "portable_proof_index": {
     "path": "provenance/takeover-4L-closures-v1/portable-proof-index.json",
-    "sha256": "2f0d7db39c8927431dc8d0b254b229b3a789f03f217c0eebe414bc2824dedb21"
+    "sha256": "36903dbfee92128d9c5159e4c346a65e789f8d71bdcdff76bf62bee2f9e7236f"
   },
   "P19_P73_epsilon0_PR11dep0_rows_unchanged": true,
   "numerical_json_unchanged": true,

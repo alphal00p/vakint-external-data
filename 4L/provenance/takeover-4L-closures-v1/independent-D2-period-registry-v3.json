@@ -7,7 +7,7 @@
   "empirical_not_interval_proof": true,
   "portable_validation_proof_index": {
     "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-    "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+    "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
   },
   "periods": [
     {
@@ -598,7 +598,92 @@
           0
         ],
         "total_physical_propagator_power": 7,
-        "unit_mass_squared": true
+        "unit_mass_squared": true,
+        "symbolic_definition_routing_isomorphism": {
+          "definition_family_sha256": "693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1",
+          "definition_powers": [
+            0,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "definition_shared_with": "vakint::PR10D2Eps2 and the other Taylor jets of the same object (one integrand per object)",
+          "loop_momentum_substitution": {
+            "rule": "k_metadata = M k_definition (column k(1..4)); q_metadata_e(M k) = sign_e * q_definition_sigma(e)(k)",
+            "M": [
+              [
+                0,
+                0,
+                1,
+                0
+              ],
+              [
+                1,
+                1,
+                -1,
+                -1
+              ],
+              [
+                0,
+                1,
+                0,
+                -1
+              ],
+              [
+                0,
+                0,
+                0,
+                1
+              ]
+            ],
+            "det_M": 1
+          },
+          "edge_map": [
+            {
+              "metadata_slot": 1,
+              "definition_family_slot": 8,
+              "momentum_sign": 1
+            },
+            {
+              "metadata_slot": 3,
+              "definition_family_slot": 3,
+              "momentum_sign": 1
+            },
+            {
+              "metadata_slot": 4,
+              "definition_family_slot": 7,
+              "momentum_sign": -1
+            },
+            {
+              "metadata_slot": 5,
+              "definition_family_slot": 4,
+              "momentum_sign": 1
+            },
+            {
+              "metadata_slot": 6,
+              "definition_family_slot": 5,
+              "momentum_sign": -1
+            },
+            {
+              "metadata_slot": 7,
+              "definition_family_slot": 6,
+              "momentum_sign": 1
+            },
+            {
+              "metadata_slot": 8,
+              "definition_family_slot": 1,
+              "momentum_sign": 1
+            }
+          ],
+          "statement": "The metadata integral (pinned producer routing, family fingerprint of this record) and the symbolic_definition integral are equal in every dimension D: the unimodular substitution k -> M k (|det M| = 1, measure invariant) maps every denominator q_E^2+1 of one routing onto a distinct denominator of the other with the same power. Checked exactly (integer arithmetic) by prep/external-data/fix-v2/src/momiso.py; equal U and F polynomials follow.",
+          "review_note": "external-data-adv-v1 NOTE-3 (U-isomorphism verified by the reviewer; this records the explicit map)"
+        }
       },
       "source_kind": "independent convergent D2 integral; no master coefficient inversion",
       "status": "ACCEPTED-500 (codex-2 Root adoption, empirical two-profile); restated at 520 validated digits by the takeover P1 step from existing independent re-derivations (no new numerical run); estimated, not an interval proof",
@@ -1198,7 +1283,97 @@
           0
         ],
         "total_physical_propagator_power": 8,
-        "unit_mass_squared": true
+        "unit_mass_squared": true,
+        "symbolic_definition_routing_isomorphism": {
+          "definition_family_sha256": "bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76",
+          "definition_powers": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "definition_shared_with": "vakint::PR15D2Eps1 and the other Taylor jets of the same object (one integrand per object)",
+          "loop_momentum_substitution": {
+            "rule": "k_metadata = M k_definition (column k(1..4)); q_metadata_e(M k) = sign_e * q_definition_sigma(e)(k)",
+            "M": [
+              [
+                0,
+                1,
+                -1,
+                1
+              ],
+              [
+                0,
+                1,
+                0,
+                0
+              ],
+              [
+                -1,
+                1,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                -1,
+                0
+              ]
+            ],
+            "det_M": 1
+          },
+          "edge_map": [
+            {
+              "metadata_slot": 1,
+              "definition_family_slot": 1,
+              "momentum_sign": 1
+            },
+            {
+              "metadata_slot": 2,
+              "definition_family_slot": 7,
+              "momentum_sign": -1
+            },
+            {
+              "metadata_slot": 3,
+              "definition_family_slot": 3,
+              "momentum_sign": 1
+            },
+            {
+              "metadata_slot": 4,
+              "definition_family_slot": 6,
+              "momentum_sign": 1
+            },
+            {
+              "metadata_slot": 5,
+              "definition_family_slot": 0,
+              "momentum_sign": 1
+            },
+            {
+              "metadata_slot": 6,
+              "definition_family_slot": 4,
+              "momentum_sign": 1
+            },
+            {
+              "metadata_slot": 7,
+              "definition_family_slot": 2,
+              "momentum_sign": 1
+            },
+            {
+              "metadata_slot": 8,
+              "definition_family_slot": 5,
+              "momentum_sign": 1
+            }
+          ],
+          "statement": "The metadata integral (pinned producer routing, family fingerprint of this record) and the symbolic_definition integral are equal in every dimension D: the unimodular substitution k -> M k (|det M| = 1, measure invariant) maps every denominator q_E^2+1 of one routing onto a distinct denominator of the other with the same power. Checked exactly (integer arithmetic) by prep/external-data/fix-v2/src/momiso.py; equal U and F polynomials follow.",
+          "review_note": "external-data-adv-v1 NOTE-3 (U-isomorphism verified by the reviewer; this records the explicit map)"
+        }
       },
       "source_kind": "independent convergent D2 integral; no master coefficient inversion",
       "status": "ACCEPTED-500 (codex-2 Root adoption, empirical two-profile); restated at 520 validated digits by the takeover P1 step from existing independent re-derivations (no new numerical run); estimated, not an interval proof",
@@ -1794,6 +1969,91 @@
           "readable": "vakint::PR10D2Eps1",
           "readable_Unicode_all_namespaces_no_attributes_no_ANSI": true,
           "temporary_valid_Wolfram_names_are_transport_aliases_not_new_period_definitions": true
+        },
+        "symbolic_definition_routing_isomorphism": {
+          "definition_family_sha256": "693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1",
+          "definition_powers": [
+            0,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "definition_shared_with": "vakint::PR10D2Eps2 and the other Taylor jets of the same object (one integrand per object)",
+          "loop_momentum_substitution": {
+            "rule": "k_metadata = M k_definition (column k(1..4)); q_metadata_e(M k) = sign_e * q_definition_sigma(e)(k)",
+            "M": [
+              [
+                0,
+                0,
+                1,
+                0
+              ],
+              [
+                1,
+                1,
+                -1,
+                -1
+              ],
+              [
+                0,
+                1,
+                0,
+                -1
+              ],
+              [
+                0,
+                0,
+                0,
+                1
+              ]
+            ],
+            "det_M": 1
+          },
+          "edge_map": [
+            {
+              "metadata_slot": 1,
+              "definition_family_slot": 8,
+              "momentum_sign": 1
+            },
+            {
+              "metadata_slot": 3,
+              "definition_family_slot": 3,
+              "momentum_sign": 1
+            },
+            {
+              "metadata_slot": 4,
+              "definition_family_slot": 7,
+              "momentum_sign": -1
+            },
+            {
+              "metadata_slot": 5,
+              "definition_family_slot": 4,
+              "momentum_sign": 1
+            },
+            {
+              "metadata_slot": 6,
+              "definition_family_slot": 5,
+              "momentum_sign": -1
+            },
+            {
+              "metadata_slot": 7,
+              "definition_family_slot": 6,
+              "momentum_sign": 1
+            },
+            {
+              "metadata_slot": 8,
+              "definition_family_slot": 1,
+              "momentum_sign": 1
+            }
+          ],
+          "statement": "The metadata integral (pinned producer routing, family fingerprint of this record) and the symbolic_definition integral are equal in every dimension D: the unimodular substitution k -> M k (|det M| = 1, measure invariant) maps every denominator q_E^2+1 of one routing onto a distinct denominator of the other with the same power. Checked exactly (integer arithmetic) by prep/external-data/fix-v2/src/momiso.py; equal U and F polynomials follow.",
+          "review_note": "external-data-adv-v1 NOTE-3 (U-isomorphism verified by the reviewer; this records the explicit map)"
         }
       },
       "source_kind": "independent convergent D2 integral Taylor coefficient; no master coefficient inversion",
@@ -3835,7 +4095,8 @@
         "previous_statement": "COMPUTED+VALIDATED-500 (J8-jet3), serialised to 520 digits",
         "supportable_digits_N_sup": 580,
         "acceptance_rule": "campaign precedent D3(a): two independent profiles agreeing beyond the validated digits plus an independent-method control; empirical, not interval",
-        "ledger": "ledger v1 + P1 fixes (ledger/v2-prep/P1/out/ledger-P1.json, leaves-515.json)"
+        "ledger": "ledger v1 + P1 fixes (ledger/v2-prep/P1/out/ledger-P1.json, leaves-515.json)",
+        "push1_decision": "kept as the numeric 520-digit period for push 1 (the publication of the current closed formulas); its exact J8 formula (ACCEPTED-260, confirmed to 520.29 digits) is a push-2 basis question (review external-data-adv-v1 NOTE-2; orchestrator decision 30 Oct 2026)"
       },
       "public_conventions": {
         "hat": "positive Euclidean, exp(4 EulerGamma delta), unit mass, measure d^Dk/pi^(D/2) per loop, no symmetry factor; ordinary Taylor coefficients",
@@ -4053,10 +4314,13 @@
             "kind": "rel_floor",
             "pointer": "/periods/E9_delta1/claimed_rel_error_digits_B",
             "offset": 0
+          },
+          {
+            "kind": "last_digit_unit"
           }
         ],
         "validated_significant_digits": 520,
-        "absolute_error": "1.21332E-568"
+        "absolute_error": "1.00001E-545"
       }
     },
     {
@@ -4253,10 +4517,13 @@
             "kind": "rel_floor",
             "pointer": "/periods/E9_delta2/claimed_rel_error_digits_B",
             "offset": 0
+          },
+          {
+            "kind": "last_digit_unit"
           }
         ],
         "validated_significant_digits": 520,
-        "absolute_error": "3.30237E-568"
+        "absolute_error": "1.00001E-544"
       }
     },
     {
@@ -4453,10 +4720,13 @@
             "kind": "rel_floor",
             "pointer": "/periods/E9_delta3/claimed_rel_error_digits_B",
             "offset": 0
+          },
+          {
+            "kind": "last_digit_unit"
           }
         ],
         "validated_significant_digits": 520,
-        "absolute_error": "2.30333E-568"
+        "absolute_error": "1.00001E-544"
       }
     },
     {
@@ -4652,10 +4922,13 @@
             "kind": "rel_floor",
             "pointer": "/periods/V9_delta2/claimed_rel_error_digits_B",
             "offset": 0
+          },
+          {
+            "kind": "last_digit_unit"
           }
         ],
         "validated_significant_digits": 520,
-        "absolute_error": "1.18460E-570"
+        "absolute_error": "1.00001E-544"
       }
     },
     {
@@ -4851,10 +5124,13 @@
             "kind": "rel_floor",
             "pointer": "/periods/V9_delta3/claimed_rel_error_digits_B",
             "offset": 0
+          },
+          {
+            "kind": "last_digit_unit"
           }
         ],
         "validated_significant_digits": 520,
-        "absolute_error": "1.09251E-570"
+        "absolute_error": "1.00001E-544"
       }
     },
     {
@@ -5050,10 +5326,13 @@
             "kind": "rel_floor",
             "pointer": "/periods/E10_delta3/claimed_rel_error_digits_B",
             "offset": 0
+          },
+          {
+            "kind": "last_digit_unit"
           }
         ],
         "validated_significant_digits": 520,
-        "absolute_error": "3.76240E-570"
+        "absolute_error": "1.00001E-544"
       }
     },
     {
@@ -5266,10 +5545,13 @@
             "kind": "rel_floor",
             "pointer": "/periods/E15_delta3/claimed_rel_error_digits_B",
             "offset": 0
+          },
+          {
+            "kind": "last_digit_unit"
           }
         ],
         "validated_significant_digits": 520,
-        "absolute_error": "1.04329E-570"
+        "absolute_error": "1.00001E-544"
       }
     },
     {
@@ -5448,10 +5730,13 @@
             "kind": "rel_floor",
             "pointer": "/periods/P7_delta3/claimed_rel_error_digits_B",
             "offset": 0
+          },
+          {
+            "kind": "last_digit_unit"
           }
         ],
         "validated_significant_digits": 520,
-        "absolute_error": "1.44693E-546"
+        "absolute_error": "1.00015E-542"
       }
     },
     {
@@ -5647,10 +5932,13 @@
             "kind": "rel_floor",
             "pointer": "/new_leaves/E9hat[4]/evidence/rel_digits_rigorous_ball_A_B/1",
             "offset": 0
+          },
+          {
+            "kind": "last_digit_unit"
           }
         ],
         "validated_significant_digits": 600,
-        "absolute_error": "8.88921E-716"
+        "absolute_error": "1.00001E-601"
       }
     },
     {
@@ -5845,10 +6133,13 @@
             "kind": "rel_floor",
             "pointer": "/new_leaves/V9hat[4]/evidence/rel_digits_rigorous_ball_A_B/1",
             "offset": 0
+          },
+          {
+            "kind": "last_digit_unit"
           }
         ],
         "validated_significant_digits": 600,
-        "absolute_error": "1.98784E-715"
+        "absolute_error": "1.00001E-601"
       }
     },
     {
@@ -6026,10 +6317,13 @@
             "kind": "rel_floor",
             "pointer": "/new_leaves/P7hat[4]/evidence/rel_digits_rigorous_ball_A_B/1",
             "offset": 0
+          },
+          {
+            "kind": "last_digit_unit"
           }
         ],
         "validated_significant_digits": 600,
-        "absolute_error": "4.34391E-724"
+        "absolute_error": "1.00001E-599"
       }
     },
     {
@@ -6186,20 +6480,45 @@
         ]
       },
       "source_kind": "independent convergent D2 integral Taylor coefficient; no master coefficient inversion",
-      "status": "COMPUTED (takeover): two-profile validation at 560 digits; independent-method control pending (P2); estimated, not an interval proof",
+      "status": "COMPUTED+VALIDATED (takeover, not a codex-2 Root adoption): two-profile validation at 560 digits (X8 J10 A/B 641.86) + independent-method control at 139.35 digits (carrier F and C5-95 radial delta^4 lifts vs the X8 eta-flow, smoke W140); estimated, not an interval proof",
       "validation": {
         "validated_significant_digits": 560,
         "two_profile_agreement": "X8 J10 A/B 641.86 (profiles share tree, admissions, recipes, single P853 file)",
         "independent_method_controls": [
-          "NONE at delta^4 (indirect: same-run PR10 jets 0..3 vs raw carrier 642.6-654.7; same-transport wheel jets 4 vs SX 572.5-591.3)"
+          "139.35 digits: the P2 radial carrier F (18x5) and C5-95 (19x5) smoke profiles W140 reproduce E10hat[4] of the X8 eta-flow J10 (independent method: radial cut ODE vs eta-flow)"
         ],
-        "ledger_label": "NOT VALIDATED: no independent-method control yet (two-profile only)",
+        "ledger_label": "COMPUTED+VALIDATED 560 (two-profile validation + independent-method control at 139.35 digits; ledger v2)",
         "producer_label": "COMPUTED (single-method X8 J10 A/B 641.9; NO independent-method control)",
         "previous_statement": null,
         "supportable_digits_N_sup": null,
         "acceptance_rule": "campaign precedent D3(a): two independent profiles agreeing beyond the validated digits plus an independent-method control; empirical, not interval",
         "ledger": "ledger v1 + P1 fixes (ledger/v2-prep/P1/out/ledger-P1.json, leaves-515.json)",
-        "pending": "two-profile validation; independent-method control pending (P2)"
+        "superseded_label": {
+          "status": "COMPUTED (takeover): two-profile validation at 560 digits; independent-method control pending (P2); estimated, not an interval proof",
+          "ledger_label": "NOT VALIDATED: no independent-method control yet (two-profile only)",
+          "independent_method_controls": [
+            "NONE at delta^4 (indirect: same-run PR10 jets 0..3 vs raw carrier 642.6-654.7; same-transport wheel jets 4 vs SX 572.5-591.3)"
+          ],
+          "pending": "two-profile validation; independent-method control pending (P2)",
+          "reason": "relabelled after the round-1 review (external-data-adv-v1 MINOR-1) under the user control rule"
+        },
+        "independent_method_control_evidence": [
+          {
+            "original_path": "/shared/vhirschi/vacuum_masters_takeover/runs/P2-controls/controls.json",
+            "uncompressed_sha256": "b2a75b23413fdaf635f34b9b9743e2a652b4b652c313c9cd21d0aef742a2e0f5",
+            "portable_archive": "provenance/takeover-4l-closures-runtime-v3/objects/b2a75b23413fdaf635f34b9b9743e2a652b4b652c313c9cd21d0aef742a2e0f5.json.gz",
+            "json_pointer": "/delta4_lifts/rows",
+            "select": "quantity == \"E10[4]\"",
+            "digits": 139.35
+          },
+          {
+            "original_path": "/shared/vhirschi/vacuum_masters_takeover/runs/P2-controls/analysis/smoke-W140.json",
+            "uncompressed_sha256": "b095cfebb03664cc81862fe345941027dcd568f2bb041d9bb854fadbab98e041",
+            "portable_archive": "provenance/takeover-4l-closures-runtime-v3/objects/b095cfebb03664cc81862fe345941027dcd568f2bb041d9bb854fadbab98e041.json.gz",
+            "note": "analysis output of the same smoke profiles"
+          }
+        ],
+        "independent_method_control_rule": "user decision 30 Oct 2026, 12:3x UTC: an independent-method control only has to catch systematic errors (wrong definition, normalisation or boundary data); 30-50 digits suffice, no 500-digit second-method production"
       },
       "public_conventions": {
         "hat": "positive Euclidean, exp(4 EulerGamma delta), unit mass, measure d^Dk/pi^(D/2) per loop, no symmetry factor; ordinary Taylor coefficients",
@@ -6225,10 +6544,13 @@
             "kind": "rel_floor",
             "pointer": "/new_leaves/E10hat[4]/evidence/X8_rel_digits_A_B/1",
             "offset": 0
+          },
+          {
+            "kind": "last_digit_unit"
           }
         ],
         "validated_significant_digits": 560,
-        "absolute_error": "2.16584E-640"
+        "absolute_error": "1.00001E-600"
       }
     },
     {
@@ -6441,6 +6763,9 @@
             "kind": "rel_floor",
             "pointer": "/new_leaves/D2_PR11[4]/evidence/X8_rel_digits_A_B/1",
             "offset": 0
+          },
+          {
+            "kind": "last_digit_unit"
           }
         ],
         "validated_significant_digits": 560,
@@ -6657,6 +6982,9 @@
             "kind": "rel_floor",
             "pointer": "/new_leaves/D2_PR11d[4]/evidence/X8_rel_digits_A_B/1",
             "offset": 0
+          },
+          {
+            "kind": "last_digit_unit"
           }
         ],
         "validated_significant_digits": 560,
@@ -6873,6 +7201,9 @@
             "kind": "rel_floor",
             "pointer": "/entries/7/ball_rel_digits_B",
             "offset": 0
+          },
+          {
+            "kind": "last_digit_unit"
           }
         ],
         "validated_significant_digits": 587,
@@ -7089,6 +7420,9 @@
             "kind": "rel_floor",
             "pointer": "/entries/9/ball_rel_digits_B",
             "offset": 0
+          },
+          {
+            "kind": "last_digit_unit"
           }
         ],
         "validated_significant_digits": 586,
@@ -7305,6 +7639,9 @@
             "kind": "rel_floor",
             "pointer": "/entries/1/ball_rel_digits_B",
             "offset": 0
+          },
+          {
+            "kind": "last_digit_unit"
           }
         ],
         "validated_significant_digits": 588,
@@ -7521,6 +7858,9 @@
             "kind": "rel_floor",
             "pointer": "/entries/6/ball_rel_digits_B",
             "offset": 0
+          },
+          {
+            "kind": "last_digit_unit"
           }
         ],
         "validated_significant_digits": 586,
@@ -7737,6 +8077,9 @@
             "kind": "rel_floor",
             "pointer": "/entries/8/ball_rel_digits_B",
             "offset": 0
+          },
+          {
+            "kind": "last_digit_unit"
           }
         ],
         "validated_significant_digits": 585,
@@ -7959,10 +8302,13 @@
             "kind": "rel_floor",
             "pointer": "/values/PR12[2]/AB_agreement_digits",
             "offset": -1
+          },
+          {
+            "kind": "last_digit_unit"
           }
         ],
         "validated_significant_digits": 520,
-        "absolute_error": "7.08424E-579"
+        "absolute_error": "1.00001E-560"
       }
     },
     {
@@ -8153,20 +8499,39 @@
         ]
       },
       "source_kind": "independent convergent D2 integral Taylor coefficient; no master coefficient inversion",
-      "status": "COMPUTED (takeover): two-profile validation at 520 digits; independent-method control pending (P2); estimated, not an interval proof",
+      "status": "COMPUTED (takeover): two-profile validation at 520 digits (SX prod-A/prod-B 576.0); control on record: >= 421 digits, closure-implied (the PR12[1] closure against the independent codex-2 D4 physical value; INFERENCE, control only, not an independent computation of E12[3]; ledger v2 decision D13 open); estimated, not an interval proof",
       "validation": {
         "validated_significant_digits": 520,
         "two_profile_agreement": "SX prod-A/prod-B 576.0",
         "independent_method_controls": [
-          "NONE (no literature print, single method)"
+          ">= 421 digits, closure-implied (INFERENCE, control only): PR12[1] is one equation in which E12[3] is the only leaf without its own second method; floor set by the 424-digit PR14ep3 refit (518.4 with PR14ep3 at its radial level)"
         ],
-        "ledger_label": "NOT VALIDATED: no independent-method control yet (two-profile only)",
+        "ledger_label": "COMPUTED 520 (two-profile validation + closure-implied control >= 421 digits, INFERENCE; ledger v2 D13 open)",
         "producer_label": "COMPUTED+VALIDATED 520 (SX radial cut-kernel, prod-A/prod-B)",
         "previous_statement": null,
         "supportable_digits_N_sup": null,
         "acceptance_rule": "campaign precedent D3(a): two independent profiles agreeing beyond the validated digits plus an independent-method control; empirical, not interval",
         "ledger": "ledger v1 + P1 fixes (ledger/v2-prep/P1/out/ledger-P1.json, leaves-515.json)",
-        "pending": "two-profile validation; independent-method control pending (P2)"
+        "superseded_label": {
+          "status": "COMPUTED (takeover): two-profile validation at 520 digits; independent-method control pending (P2); estimated, not an interval proof",
+          "ledger_label": "NOT VALIDATED: no independent-method control yet (two-profile only)",
+          "independent_method_controls": [
+            "NONE (no literature print, single method)"
+          ],
+          "pending": "two-profile validation; independent-method control pending (P2)",
+          "reason": "relabelled after the round-1 review (external-data-adv-v1 MINOR-1) under the user control rule"
+        },
+        "independent_method_control_evidence": [
+          {
+            "original_path": "/shared/vhirschi/vacuum_masters_takeover/runs/P2-controls/e12-closure/e12-closure-control.json",
+            "uncompressed_sha256": "5f52e7efa9a8ed2605aa7c8a60eb0d48a571dc745924d91388f6498841b736bc",
+            "portable_archive": "provenance/takeover-4l-closures-runtime-v3/objects/5f52e7efa9a8ed2605aa7c8a60eb0d48a571dc745924d91388f6498841b736bc.json.gz",
+            "json_pointer": "/implied_E12_3_control_digits",
+            "digits": 420.98,
+            "label": "INFERENCE (arithmetic on COMPUTED files; no new run). CONTROL ONLY."
+          }
+        ],
+        "independent_method_control_rule": "user decision 30 Oct 2026, 12:3x UTC: an independent-method control only has to catch systematic errors (wrong definition, normalisation or boundary data); 30-50 digits suffice, no 500-digit second-method production"
       },
       "public_conventions": {
         "hat": "positive Euclidean, exp(4 EulerGamma delta), unit mass, measure d^Dk/pi^(D/2) per loop, no symmetry factor; ordinary Taylor coefficients",
@@ -8182,10 +8547,13 @@
             "kind": "rel_floor",
             "pointer": "/values/PR12[3]/AB_agreement_digits",
             "offset": -1
+          },
+          {
+            "kind": "last_digit_unit"
           }
         ],
         "validated_significant_digits": 520,
-        "absolute_error": "1.06503E-575"
+        "absolute_error": "1.00001E-559"
       }
     },
     {
@@ -8409,10 +8777,13 @@
           {
             "kind": "abs",
             "pointer": "/entries/Ehat/jets/1/empirical_abs_error"
+          },
+          {
+            "kind": "last_digit_unit"
           }
         ],
         "validated_significant_digits": 520,
-        "absolute_error": "4.02155E-582"
+        "absolute_error": "4.02165E-582"
       }
     },
     {
@@ -8635,10 +9006,13 @@
           {
             "kind": "abs",
             "pointer": "/entries/Ehat/jets/2/empirical_abs_error"
+          },
+          {
+            "kind": "last_digit_unit"
           }
         ],
         "validated_significant_digits": 520,
-        "absolute_error": "7.47184E-582"
+        "absolute_error": "7.47194E-582"
       }
     },
     {
@@ -8824,10 +9198,13 @@
             "kind": "rel_floor",
             "pointer": "/values/PR14[2]/AB_agreement_rel_digits",
             "offset": -1
+          },
+          {
+            "kind": "last_digit_unit"
           }
         ],
         "validated_significant_digits": 600,
-        "absolute_error": "9.05576E-628"
+        "absolute_error": "1.00001E-616"
       }
     },
     {
@@ -8984,20 +9361,38 @@
         ]
       },
       "source_kind": "D=4-2eps master coefficient of a published master (auxiliary, decision D5(a)); no target inversion",
-      "status": "COMPUTED (takeover): two-profile validation at 600 digits; independent-method control pending (P2); estimated, not an interval proof",
+      "status": "COMPUTED+VALIDATED (takeover, not a codex-2 Root adoption): two-profile validation at 600 digits (radial A/B 632) + independent-method control at 424.0 digits (refit of the codex-2 stage-200 D4 auxiliary-mass eta-flow samples, profile 1); estimated, not an interval proof",
       "validation": {
         "validated_significant_digits": 600,
         "two_profile_agreement": "radial A/B 632",
         "independent_method_controls": [
-          "NONE (same radial code validated on sunset eps^5, FIVE eps^4, PR5 eps^3)"
+          "424.0 digits: refit of the codex-2 stage-200 D4 auxiliary-mass eta-flow samples of the 127-state PR14-PR15 system (profile 1; profile 0 gives 344.72); the radial PR14[2] is not an input"
         ],
-        "ledger_label": "NOT VALIDATED: no independent-method control yet (two-profile only)",
+        "ledger_label": "COMPUTED+VALIDATED 600 (two-profile validation + independent-method control at 424.0 digits; ledger v2)",
         "producer_label": "COMPUTED+VALIDATED-600 (two radial profiles A/B, A/B >= 615 digits; controls below)",
         "previous_statement": null,
         "supportable_digits_N_sup": null,
         "acceptance_rule": "campaign precedent D3(a): two independent profiles agreeing beyond the validated digits plus an independent-method control; empirical, not interval",
         "ledger": "ledger v1 + P1 fixes (ledger/v2-prep/P1/out/ledger-P1.json, leaves-515.json)",
-        "pending": "two-profile validation; independent-method control pending (P2)"
+        "superseded_label": {
+          "status": "COMPUTED (takeover): two-profile validation at 600 digits; independent-method control pending (P2); estimated, not an interval proof",
+          "ledger_label": "NOT VALIDATED: no independent-method control yet (two-profile only)",
+          "independent_method_controls": [
+            "NONE (same radial code validated on sunset eps^5, FIVE eps^4, PR5 eps^3)"
+          ],
+          "pending": "two-profile validation; independent-method control pending (P2)",
+          "reason": "relabelled after the round-1 review (external-data-adv-v1 MINOR-1) under the user control rule"
+        },
+        "independent_method_control_evidence": [
+          {
+            "original_path": "/shared/vhirschi/vacuum_masters_takeover/runs/P2-controls/pr14-eps3/out/pr14-eps3-refit-control.json",
+            "uncompressed_sha256": "2f5bfe2641fcdc2b5cf07a8dde54779c2b960e9ba71a9e11edbda84ee8e508e4",
+            "portable_archive": "provenance/takeover-4l-closures-runtime-v3/objects/2f5bfe2641fcdc2b5cf07a8dde54779c2b960e9ba71a9e11edbda84ee8e508e4.json.gz",
+            "json_pointer": "/summary/control_digits_profile1_full_interpolation",
+            "digits": 424.0
+          }
+        ],
+        "independent_method_control_rule": "user decision 30 Oct 2026, 12:3x UTC: an independent-method control only has to catch systematic errors (wrong definition, normalisation or boundary data); 30-50 digits suffice, no 500-digit second-method production"
       },
       "public_conventions": {
         "hat": "positive Euclidean, exp(4 EulerGamma delta), unit mass, measure d^Dk/pi^(D/2) per loop, no symmetry factor; ordinary Taylor coefficients",
@@ -9013,10 +9408,13 @@
             "kind": "rel_floor",
             "pointer": "/values/PR14[3]/AB_agreement_rel_digits",
             "offset": -1
+          },
+          {
+            "kind": "last_digit_unit"
           }
         ],
         "validated_significant_digits": 600,
-        "absolute_error": "2.00455E-627"
+        "absolute_error": "1.00001E-615"
       }
     },
     {
@@ -9061,10 +9459,13 @@
             "kind": "rel_floor",
             "pointer": "/values/T111bar5/A_vs_B_digits",
             "offset": -1
+          },
+          {
+            "kind": "last_digit_unit"
           }
         ],
         "validated_significant_digits": 650,
-        "absolute_error": "1.66306E-891"
+        "absolute_error": "1.00001E-697"
       }
     },
     {
@@ -9107,6 +9508,9 @@
             "kind": "rel_floor",
             "pointer": "/final_values/vakint::BNbar5/AB_agreement_digits",
             "offset": -1
+          },
+          {
+            "kind": "last_digit_unit"
           }
         ],
         "validated_significant_digits": 581,
@@ -9153,6 +9557,9 @@
             "kind": "rel_floor",
             "pointer": "/final_values/vakint::D5bar3/AB_agreement_digits",
             "offset": -1
+          },
+          {
+            "kind": "last_digit_unit"
           }
         ],
         "validated_significant_digits": 600,
@@ -9199,6 +9606,9 @@
               "/value_lo"
             ],
             "factor": 2
+          },
+          {
+            "kind": "last_digit_unit"
           }
         ],
         "validated_significant_digits": 20000,

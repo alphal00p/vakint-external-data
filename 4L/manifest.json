@@ -58512,8 +58512,8 @@
       "bytes": 64066
     },
     "constants.json": {
-      "sha256": "69c898df33829b01bc3e8cea1b5b43a6e7fd9fad98fbd09308464ae7166d518f",
-      "bytes": 554209
+      "sha256": "981d59a731665eb81a45374013249b3ca7f55f51142c592b68f1c16994fc8811",
+      "bytes": 574824
     },
     "coverage.json": {
       "sha256": "0ec430d4fcf1cb566c3b40651ca09e4e6c87f355c9d015e5e6c13a39f2042b3e",
@@ -59516,11 +59516,11 @@
       "bytes": 6697
     },
     "numerical-precision-supplement.json": {
-      "sha256": "fcadbd3cbf81975cb4cba51a73da16fe71913d4f60394b85ba919cd424fc6941",
+      "sha256": "d9e866577d748aa2a761140be12202fd1390a2de97641d043177f79827a84686",
       "bytes": 335274
     },
     "producer-update.json": {
-      "sha256": "c5e9d6a57147983909d0b6168a843d51456e4e8613a555b692a9d27de7053509",
+      "sha256": "423301bd81168fd2e17f4e16e01bb8f1126763ac6bf893b56cd725f5024ec663",
       "bytes": 446333
     },
     "provenance/PR10-PR15-v24/independent-D2-periods-v1.json": {
@@ -59536,14 +59536,14 @@
       "bytes": 2068
     },
     "provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json": {
-      "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636",
-      "bytes": 431542
+      "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471",
+      "bytes": 447823
     }
   },
   "producer_update": "producer-update.json",
   "numerical_precision_supplement": "numerical-precision-supplement.json",
   "constant_bindings": {
     "path": "constants.json",
-    "sha256": "69c898df33829b01bc3e8cea1b5b43a6e7fd9fad98fbd09308464ae7166d518f"
+    "sha256": "981d59a731665eb81a45374013249b3ca7f55f51142c592b68f1c16994fc8811"
   }
 }

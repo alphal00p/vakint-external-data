@@ -222,11 +222,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/a0b631c177cb332a0b26e950fa1c6e893dfc05cb6bf09654f81a830637803a47.json.gz",
@@ -246,7 +246,7 @@
           "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 520,
       "stored_digits_do_not_extend_source_cap": true,
       "supersedes": {
@@ -797,15 +797,100 @@
           0
         ],
         "total_physical_propagator_power": 7,
-        "unit_mass_squared": true
+        "unit_mass_squared": true,
+        "symbolic_definition_routing_isomorphism": {
+          "definition_family_sha256": "693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1",
+          "definition_powers": [
+            0,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "definition_shared_with": "vakint::PR10D2Eps2 and the other Taylor jets of the same object (one integrand per object)",
+          "loop_momentum_substitution": {
+            "rule": "k_metadata = M k_definition (column k(1..4)); q_metadata_e(M k) = sign_e * q_definition_sigma(e)(k)",
+            "M": [
+              [
+                0,
+                0,
+                1,
+                0
+              ],
+              [
+                1,
+                1,
+                -1,
+                -1
+              ],
+              [
+                0,
+                1,
+                0,
+                -1
+              ],
+              [
+                0,
+                0,
+                0,
+                1
+              ]
+            ],
+            "det_M": 1
+          },
+          "edge_map": [
+            {
+              "metadata_slot": 1,
+              "definition_family_slot": 8,
+              "momentum_sign": 1
+            },
+            {
+              "metadata_slot": 3,
+              "definition_family_slot": 3,
+              "momentum_sign": 1
+            },
+            {
+              "metadata_slot": 4,
+              "definition_family_slot": 7,
+              "momentum_sign": -1
+            },
+            {
+              "metadata_slot": 5,
+              "definition_family_slot": 4,
+              "momentum_sign": 1
+            },
+            {
+              "metadata_slot": 6,
+              "definition_family_slot": 5,
+              "momentum_sign": -1
+            },
+            {
+              "metadata_slot": 7,
+              "definition_family_slot": 6,
+              "momentum_sign": 1
+            },
+            {
+              "metadata_slot": 8,
+              "definition_family_slot": 1,
+              "momentum_sign": 1
+            }
+          ],
+          "statement": "The metadata integral (pinned producer routing, family fingerprint of this record) and the symbolic_definition integral are equal in every dimension D: the unimodular substitution k -> M k (|det M| = 1, measure invariant) maps every denominator q_E^2+1 of one routing onto a distinct denominator of the other with the same power. Checked exactly (integer arithmetic) by prep/external-data/fix-v2/src/momiso.py; equal U and F polynomials follow.",
+          "review_note": "external-data-adv-v1 NOTE-3 (U-isomorphism verified by the reviewer; this records the explicit map)"
+        }
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/a0b631c177cb332a0b26e950fa1c6e893dfc05cb6bf09654f81a830637803a47.json.gz",
@@ -825,7 +910,7 @@
           "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 520,
       "stored_digits_do_not_extend_source_cap": true,
       "supersedes": {
@@ -1412,15 +1497,105 @@
           0
         ],
         "total_physical_propagator_power": 8,
-        "unit_mass_squared": true
+        "unit_mass_squared": true,
+        "symbolic_definition_routing_isomorphism": {
+          "definition_family_sha256": "bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76",
+          "definition_powers": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "definition_shared_with": "vakint::PR15D2Eps1 and the other Taylor jets of the same object (one integrand per object)",
+          "loop_momentum_substitution": {
+            "rule": "k_metadata = M k_definition (column k(1..4)); q_metadata_e(M k) = sign_e * q_definition_sigma(e)(k)",
+            "M": [
+              [
+                0,
+                1,
+                -1,
+                1
+              ],
+              [
+                0,
+                1,
+                0,
+                0
+              ],
+              [
+                -1,
+                1,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                -1,
+                0
+              ]
+            ],
+            "det_M": 1
+          },
+          "edge_map": [
+            {
+              "metadata_slot": 1,
+              "definition_family_slot": 1,
+              "momentum_sign": 1
+            },
+            {
+              "metadata_slot": 2,
+              "definition_family_slot": 7,
+              "momentum_sign": -1
+            },
+            {
+              "metadata_slot": 3,
+              "definition_family_slot": 3,
+              "momentum_sign": 1
+            },
+            {
+              "metadata_slot": 4,
+              "definition_family_slot": 6,
+              "momentum_sign": 1
+            },
+            {
+              "metadata_slot": 5,
+              "definition_family_slot": 0,
+              "momentum_sign": 1
+            },
+            {
+              "metadata_slot": 6,
+              "definition_family_slot": 4,
+              "momentum_sign": 1
+            },
+            {
+              "metadata_slot": 7,
+              "definition_family_slot": 2,
+              "momentum_sign": 1
+            },
+            {
+              "metadata_slot": 8,
+              "definition_family_slot": 5,
+              "momentum_sign": 1
+            }
+          ],
+          "statement": "The metadata integral (pinned producer routing, family fingerprint of this record) and the symbolic_definition integral are equal in every dimension D: the unimodular substitution k -> M k (|det M| = 1, measure invariant) maps every denominator q_E^2+1 of one routing onto a distinct denominator of the other with the same power. Checked exactly (integer arithmetic) by prep/external-data/fix-v2/src/momiso.py; equal U and F polynomials follow.",
+          "review_note": "external-data-adv-v1 NOTE-3 (U-isomorphism verified by the reviewer; this records the explicit map)"
+        }
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/a0b631c177cb332a0b26e950fa1c6e893dfc05cb6bf09654f81a830637803a47.json.gz",
@@ -1440,7 +1615,7 @@
           "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 520,
       "stored_digits_do_not_extend_source_cap": true,
       "supersedes": {
@@ -2023,15 +2198,100 @@
           "readable": "vakint::PR10D2Eps1",
           "readable_Unicode_all_namespaces_no_attributes_no_ANSI": true,
           "temporary_valid_Wolfram_names_are_transport_aliases_not_new_period_definitions": true
+        },
+        "symbolic_definition_routing_isomorphism": {
+          "definition_family_sha256": "693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1",
+          "definition_powers": [
+            0,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "definition_shared_with": "vakint::PR10D2Eps2 and the other Taylor jets of the same object (one integrand per object)",
+          "loop_momentum_substitution": {
+            "rule": "k_metadata = M k_definition (column k(1..4)); q_metadata_e(M k) = sign_e * q_definition_sigma(e)(k)",
+            "M": [
+              [
+                0,
+                0,
+                1,
+                0
+              ],
+              [
+                1,
+                1,
+                -1,
+                -1
+              ],
+              [
+                0,
+                1,
+                0,
+                -1
+              ],
+              [
+                0,
+                0,
+                0,
+                1
+              ]
+            ],
+            "det_M": 1
+          },
+          "edge_map": [
+            {
+              "metadata_slot": 1,
+              "definition_family_slot": 8,
+              "momentum_sign": 1
+            },
+            {
+              "metadata_slot": 3,
+              "definition_family_slot": 3,
+              "momentum_sign": 1
+            },
+            {
+              "metadata_slot": 4,
+              "definition_family_slot": 7,
+              "momentum_sign": -1
+            },
+            {
+              "metadata_slot": 5,
+              "definition_family_slot": 4,
+              "momentum_sign": 1
+            },
+            {
+              "metadata_slot": 6,
+              "definition_family_slot": 5,
+              "momentum_sign": -1
+            },
+            {
+              "metadata_slot": 7,
+              "definition_family_slot": 6,
+              "momentum_sign": 1
+            },
+            {
+              "metadata_slot": 8,
+              "definition_family_slot": 1,
+              "momentum_sign": 1
+            }
+          ],
+          "statement": "The metadata integral (pinned producer routing, family fingerprint of this record) and the symbolic_definition integral are equal in every dimension D: the unimodular substitution k -> M k (|det M| = 1, measure invariant) maps every denominator q_E^2+1 of one routing onto a distinct denominator of the other with the same power. Checked exactly (integer arithmetic) by prep/external-data/fix-v2/src/momiso.py; equal U and F polynomials follow.",
+          "review_note": "external-data-adv-v1 NOTE-3 (U-isomorphism verified by the reviewer; this records the explicit map)"
         }
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/a0b631c177cb332a0b26e950fa1c6e893dfc05cb6bf09654f81a830637803a47.json.gz",
@@ -2051,7 +2311,7 @@
           "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 520,
       "stored_digits_do_not_extend_source_cap": true,
       "supersedes": {
@@ -2602,11 +2862,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/a0b631c177cb332a0b26e950fa1c6e893dfc05cb6bf09654f81a830637803a47.json.gz",
@@ -2626,7 +2886,7 @@
           "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 520,
       "stored_digits_do_not_extend_source_cap": true,
       "supersedes": {
@@ -2811,11 +3071,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/a0b631c177cb332a0b26e950fa1c6e893dfc05cb6bf09654f81a830637803a47.json.gz",
@@ -2835,7 +3095,7 @@
           "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 520,
       "stored_digits_do_not_extend_source_cap": true
     }
@@ -3031,11 +3291,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/a0b631c177cb332a0b26e950fa1c6e893dfc05cb6bf09654f81a830637803a47.json.gz",
@@ -3055,7 +3315,7 @@
           "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 520,
       "stored_digits_do_not_extend_source_cap": true
     }
@@ -3251,11 +3511,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/a0b631c177cb332a0b26e950fa1c6e893dfc05cb6bf09654f81a830637803a47.json.gz",
@@ -3275,7 +3535,7 @@
           "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 520,
       "stored_digits_do_not_extend_source_cap": true
     }
@@ -3441,11 +3701,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/a0b631c177cb332a0b26e950fa1c6e893dfc05cb6bf09654f81a830637803a47.json.gz",
@@ -3469,7 +3729,7 @@
           "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 520,
       "stored_digits_do_not_extend_source_cap": true
     }
@@ -3515,11 +3775,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/a0b631c177cb332a0b26e950fa1c6e893dfc05cb6bf09654f81a830637803a47.json.gz",
@@ -3539,7 +3799,7 @@
           "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 520,
       "stored_digits_do_not_extend_source_cap": true
     }
@@ -3585,11 +3845,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/a0b631c177cb332a0b26e950fa1c6e893dfc05cb6bf09654f81a830637803a47.json.gz",
@@ -3609,7 +3869,7 @@
           "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 520,
       "stored_digits_do_not_extend_source_cap": true
     }
@@ -3658,11 +3918,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/a0b631c177cb332a0b26e950fa1c6e893dfc05cb6bf09654f81a830637803a47.json.gz",
@@ -3682,7 +3942,7 @@
           "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 520,
       "stored_digits_do_not_extend_source_cap": true
     }
@@ -3730,11 +3990,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/a0b631c177cb332a0b26e950fa1c6e893dfc05cb6bf09654f81a830637803a47.json.gz",
@@ -3754,7 +4014,7 @@
           "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 520,
       "stored_digits_do_not_extend_source_cap": true
     }
@@ -3803,11 +4063,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/a0b631c177cb332a0b26e950fa1c6e893dfc05cb6bf09654f81a830637803a47.json.gz",
@@ -3827,7 +4087,7 @@
           "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 520,
       "stored_digits_do_not_extend_source_cap": true
     }
@@ -3875,11 +4135,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/a0b631c177cb332a0b26e950fa1c6e893dfc05cb6bf09654f81a830637803a47.json.gz",
@@ -3899,7 +4159,7 @@
           "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 520,
       "stored_digits_do_not_extend_source_cap": true
     }
@@ -4064,11 +4324,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/a0b631c177cb332a0b26e950fa1c6e893dfc05cb6bf09654f81a830637803a47.json.gz",
@@ -4088,7 +4348,7 @@
           "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 520,
       "stored_digits_do_not_extend_source_cap": true
     }
@@ -4114,7 +4374,8 @@
         "previous_statement": "COMPUTED+VALIDATED-500 (J8-jet3), serialised to 520 digits",
         "supportable_digits_N_sup": 580,
         "acceptance_rule": "campaign precedent D3(a): two independent profiles agreeing beyond the validated digits plus an independent-method control; empirical, not interval",
-        "ledger": "ledger v1 + P1 fixes (ledger/v2-prep/P1/out/ledger-P1.json, leaves-515.json)"
+        "ledger": "ledger v1 + P1 fixes (ledger/v2-prep/P1/out/ledger-P1.json, leaves-515.json)",
+        "push1_decision": "kept as the numeric 520-digit period for push 1 (the publication of the current closed formulas); its exact J8 formula (ACCEPTED-260, confirmed to 520.29 digits) is a push-2 basis question (review external-data-adv-v1 NOTE-2; orchestrator decision 30 Oct 2026)"
       },
       "definition_metadata": {
         "object": "PR5 graph (triangle of three unit-mass double edges = DREAM T8)",
@@ -4250,11 +4511,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/a0b631c177cb332a0b26e950fa1c6e893dfc05cb6bf09654f81a830637803a47.json.gz",
@@ -4274,7 +4535,7 @@
           "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 520,
       "stored_digits_do_not_extend_source_cap": true
     }
@@ -4283,7 +4544,7 @@
     "symbol": "vakint::PR9D2Eps1",
     "value": "-0.12133131736979590164009066546475644956697361386433691780536009404774124247124176276972592775651619854108043394814980296469841364469665059238123150244946788823807129375132550802380373912132474497027929463275754119986322311358385831833292546556603264424874907621748853517182626734174746182903760304094831783568043729068568788713483749632988771317934472346274400055793827366176354843207006585040200296314355553885974839164500456151366586440814865735309772361769589319457391354310377103552290702572268220229705841875490363760760325101285688180531226",
     "significant_digits": 520,
-    "absolute_error": "1.21332E-568",
+    "absolute_error": "1.00001E-545",
     "error_quality": "estimated",
     "definition": "[delta^1] of X_hat(delta) = exp(4 EulerGamma delta) * integral prod_(l=1..4) d^(2-2delta)k_l/pi^(1-delta) prod_e (q_e^2+1)^(-a_e) for the unit-mass scalar PR9 cat-eye (seven lines, K4 with one doubled edge) (FMFT PR9 = RustRed P8; family 693719b1bc3d, powers [0, 0, 1, 1, 1, 1, 1, 1, 1, 0]), positive Euclidean, D = 2-2delta, no coupling or symmetry factor; ordinary Taylor coefficient (not a factorial-scaled derivative); raw Minkowski jets satisfy raw = (-1)^(sum a) hat",
     "symbolic_definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,1)",
@@ -4457,11 +4718,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/d8dcb17af1b0ffa08db87a087b0b37dfafbf89b863bd00f8b30fd1be686b767a.json.gz",
@@ -4487,9 +4748,12 @@
           "kind": "rel_floor",
           "pointer": "/periods/E9_delta1/claimed_rel_error_digits_B",
           "offset": 0
+        },
+        {
+          "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 520,
       "stored_digits_do_not_extend_source_cap": true
     }
@@ -4498,7 +4762,7 @@
     "symbol": "vakint::PR9D2Eps2",
     "value": "3.3023630668932515469191519202635318870212883193588101488638722689298527757122266728986502710013471591790247892923543054325214826009821097918813276211843152409638206948692286306237277145205029024656903203910989273548020175164055822429924173813266971506981550771135465536784212731604554399980158302097890204803471024423264719176566316377572079125382947461948946106571272376229484370022291983041390209002467668812856695146541746781507716072051889162208514397790971400127198093494951645678203844289679304015491230205022771818956611745193897196424789",
     "significant_digits": 520,
-    "absolute_error": "3.30237E-568",
+    "absolute_error": "1.00001E-544",
     "error_quality": "estimated",
     "definition": "[delta^2] of X_hat(delta) = exp(4 EulerGamma delta) * integral prod_(l=1..4) d^(2-2delta)k_l/pi^(1-delta) prod_e (q_e^2+1)^(-a_e) for the unit-mass scalar PR9 cat-eye (seven lines, K4 with one doubled edge) (FMFT PR9 = RustRed P8; family 693719b1bc3d, powers [0, 0, 1, 1, 1, 1, 1, 1, 1, 0]), positive Euclidean, D = 2-2delta, no coupling or symmetry factor; ordinary Taylor coefficient (not a factorial-scaled derivative); raw Minkowski jets satisfy raw = (-1)^(sum a) hat",
     "symbolic_definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,2)",
@@ -4672,11 +4936,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/d8dcb17af1b0ffa08db87a087b0b37dfafbf89b863bd00f8b30fd1be686b767a.json.gz",
@@ -4702,9 +4966,12 @@
           "kind": "rel_floor",
           "pointer": "/periods/E9_delta2/claimed_rel_error_digits_B",
           "offset": 0
+        },
+        {
+          "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 520,
       "stored_digits_do_not_extend_source_cap": true
     }
@@ -4713,7 +4980,7 @@
     "symbol": "vakint::PR9D2Eps3",
     "value": "-2.3033209372232471791596622837834942445691751278082604563983008914629928907228533667745733377353052928120508056675076778684076432721814304914689093495295159440597375797765054367034361854720767036829221476828801769610063643464119194393375738452692501482496682863750516456892067960016031699121728886545537101671815736114667779083918084529955765563561491787233691231468055246446254989298656375886826079025294274536110075536270794254386118653319369716970106676253718764367902579238184242042351422546766530494646650261574250643142087701129737610513691",
     "significant_digits": 520,
-    "absolute_error": "2.30333E-568",
+    "absolute_error": "1.00001E-544",
     "error_quality": "estimated",
     "definition": "[delta^3] of X_hat(delta) = exp(4 EulerGamma delta) * integral prod_(l=1..4) d^(2-2delta)k_l/pi^(1-delta) prod_e (q_e^2+1)^(-a_e) for the unit-mass scalar PR9 cat-eye (seven lines, K4 with one doubled edge) (FMFT PR9 = RustRed P8; family 693719b1bc3d, powers [0, 0, 1, 1, 1, 1, 1, 1, 1, 0]), positive Euclidean, D = 2-2delta, no coupling or symmetry factor; ordinary Taylor coefficient (not a factorial-scaled derivative); raw Minkowski jets satisfy raw = (-1)^(sum a) hat",
     "symbolic_definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,3)",
@@ -4887,11 +5154,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/d8dcb17af1b0ffa08db87a087b0b37dfafbf89b863bd00f8b30fd1be686b767a.json.gz",
@@ -4917,9 +5184,12 @@
           "kind": "rel_floor",
           "pointer": "/periods/E9_delta3/claimed_rel_error_digits_B",
           "offset": 0
+        },
+        {
+          "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 520,
       "stored_digits_do_not_extend_source_cap": true
     }
@@ -4928,7 +5198,7 @@
     "symbol": "vakint::PR9pD2Eps2",
     "value": "1.1845914176540802336889925851802225308453778863675048172881145813844591493212610073619644594807052966712471366642050959193445961367958367316799592049667019826156340681237923670239055349399219690943957289059558751987529837065832789529173562180130245374524651327413228556029536131163004056117874435884514309124866409389638485736405835407772570265390266397355379304749610816589529594749090408396022562056378718413604840974412421172428403944872078978079470994416294905103783483804456563882704231137025081076160055675661831176510249889118377137091368",
     "significant_digits": 520,
-    "absolute_error": "1.18460E-570",
+    "absolute_error": "1.00001E-544",
     "error_quality": "estimated",
     "definition": "[delta^2] of X_hat(delta) = exp(4 EulerGamma delta) * integral prod_(l=1..4) d^(2-2delta)k_l/pi^(1-delta) prod_e (q_e^2+1)^(-a_e) for the unit-mass scalar PR9 with one dot on a doubled-edge line (NOT the central-dot PR9d) (RustRed P10 graph; family 693719b1bc3d, powers [0, 0, 2, 1, 1, 1, 1, 1, 1, 0]), positive Euclidean, D = 2-2delta, no coupling or symmetry factor; ordinary Taylor coefficient (not a factorial-scaled derivative); raw Minkowski jets satisfy raw = (-1)^(sum a) hat",
     "symbolic_definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-2)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,2)",
@@ -5101,11 +5371,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/d8dcb17af1b0ffa08db87a087b0b37dfafbf89b863bd00f8b30fd1be686b767a.json.gz",
@@ -5131,9 +5401,12 @@
           "kind": "rel_floor",
           "pointer": "/periods/V9_delta2/claimed_rel_error_digits_B",
           "offset": 0
+        },
+        {
+          "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 520,
       "stored_digits_do_not_extend_source_cap": true
     }
@@ -5142,7 +5415,7 @@
     "symbol": "vakint::PR9pD2Eps3",
     "value": "1.0925077382947514334422305307804119087988179069868374433085489377112622528032583762144319704149802624497063122021174472172236515753238571729865317874493674889275695008181389864729981632954437703985068046212697495516552059827568270164990112602719396940461803932365238912359911878611686416081825626514135738573544589577062435008371316078745010001247327648529180354600528448972180570206557609490233154107212563936449973457093224269483589464734808144638742866638770178797801526906734223351948754621929193127268225389391767995095752118161622193089704",
     "significant_digits": 520,
-    "absolute_error": "1.09251E-570",
+    "absolute_error": "1.00001E-544",
     "error_quality": "estimated",
     "definition": "[delta^3] of X_hat(delta) = exp(4 EulerGamma delta) * integral prod_(l=1..4) d^(2-2delta)k_l/pi^(1-delta) prod_e (q_e^2+1)^(-a_e) for the unit-mass scalar PR9 with one dot on a doubled-edge line (NOT the central-dot PR9d) (RustRed P10 graph; family 693719b1bc3d, powers [0, 0, 2, 1, 1, 1, 1, 1, 1, 0]), positive Euclidean, D = 2-2delta, no coupling or symmetry factor; ordinary Taylor coefficient (not a factorial-scaled derivative); raw Minkowski jets satisfy raw = (-1)^(sum a) hat",
     "symbolic_definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-2)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,3)",
@@ -5315,11 +5588,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/d8dcb17af1b0ffa08db87a087b0b37dfafbf89b863bd00f8b30fd1be686b767a.json.gz",
@@ -5345,9 +5618,12 @@
           "kind": "rel_floor",
           "pointer": "/periods/V9_delta3/claimed_rel_error_digits_B",
           "offset": 0
+        },
+        {
+          "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 520,
       "stored_digits_do_not_extend_source_cap": true
     }
@@ -5356,7 +5632,7 @@
     "symbol": "vakint::PR10D2Eps3",
     "value": "-3.7623943589956968281636067062233121447081727107587002200744319456573579542793562258334644967522029439998188230819642801486323777485191109469577297647109795147600768307863274130364619880343532920317783066692216140094699691829911494342179900375205160328494966511222479447485123814892966859258779333036438414521473603712126476397125336799972413217870833570766801008121723342881209941657598360373675554329017265990261179499799953234325698269398429750273478642975710903494033230456806106165794868343506486799900647294187342362254371518155586752417126",
     "significant_digits": 520,
-    "absolute_error": "3.76240E-570",
+    "absolute_error": "1.00001E-544",
     "error_quality": "estimated",
     "definition": "[delta^3] of X_hat(delta) = exp(4 EulerGamma delta) * integral prod_(l=1..4) d^(2-2delta)k_l/pi^(1-delta) prod_e (q_e^2+1)^(-a_e) for the unit-mass scalar PR10 (FMFT PR10 = RustRed P13; family 693719b1bc3d, powers [0, 1, 0, 1, 1, 1, 1, 1, 1, 0]), positive Euclidean, D = 2-2delta, no coupling or symmetry factor; ordinary Taylor coefficient (not a factorial-scaled derivative); raw Minkowski jets satisfy raw = (-1)^(sum a) hat",
     "symbolic_definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,3)",
@@ -5529,11 +5805,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/d8dcb17af1b0ffa08db87a087b0b37dfafbf89b863bd00f8b30fd1be686b767a.json.gz",
@@ -5559,9 +5835,12 @@
           "kind": "rel_floor",
           "pointer": "/periods/E10_delta3/claimed_rel_error_digits_B",
           "offset": 0
+        },
+        {
+          "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 520,
       "stored_digits_do_not_extend_source_cap": true
     }
@@ -5570,7 +5849,7 @@
     "symbol": "vakint::PR15D2Eps3",
     "value": "1.0432815069111745047596648267895301098316435504152349171541890660493497948894942481411355601552732309594264784068407861338732749475986393042728488257102930280047622215082117524785352082992194292934348374432202968669441900391791220159997987517722329306039922824690792966555268174529265371927960378421234699270988467073276552539942714538928224974414593125740360810856832287655752418206302811032279792976434958023450131707797348053060781299548673361826890992878042623790584833361145728533080868369829134340339991082304435771605337855793286587919815",
     "significant_digits": 520,
-    "absolute_error": "1.04329E-570",
+    "absolute_error": "1.00001E-544",
     "error_quality": "estimated",
     "definition": "[delta^3] of X_hat(delta) = exp(4 EulerGamma delta) * integral prod_(l=1..4) d^(2-2delta)k_l/pi^(1-delta) prod_e (q_e^2+1)^(-a_e) for the unit-mass scalar PR15 (FMFT PR15 = RustRed P34; family bb95c283ed3c, powers [1, 1, 1, 1, 1, 1, 1, 1, 0, 0]), positive Euclidean, D = 2-2delta, no coupling or symmetry factor; ordinary Taylor coefficient (not a factorial-scaled derivative); raw Minkowski jets satisfy raw = (-1)^(sum a) hat",
     "symbolic_definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(1),vakint::k(1)))^(-1)*(1+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,3)",
@@ -5760,11 +6039,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/d8dcb17af1b0ffa08db87a087b0b37dfafbf89b863bd00f8b30fd1be686b767a.json.gz",
@@ -5790,9 +6069,12 @@
           "kind": "rel_floor",
           "pointer": "/periods/E15_delta3/claimed_rel_error_digits_B",
           "offset": 0
+        },
+        {
+          "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 520,
       "stored_digits_do_not_extend_source_cap": true
     }
@@ -5801,7 +6083,7 @@
     "symbol": "vakint::PR7D2Eps3",
     "value": "-144.69271823137953437109321686867580451777546702182616194402698595032210970013677006621565422989332417976242842937733799795903503393464090290709921853421026636670855028959458708258924034454871464495009083623323549253057414216573730342200253630785672320336394374903109388801339326635518573514284210722330236691934479948390225038121194804417523885844393533674429040268953108500401601358690218010190159267717422675452993920908646369210709681757817644778142167833808403016351074419089954936703120332682109206834507002700275934825484159084571740881190",
     "significant_digits": 520,
-    "absolute_error": "1.44693E-546",
+    "absolute_error": "1.00015E-542",
     "error_quality": "estimated",
     "definition": "[delta^3] of X_hat(delta) = exp(4 EulerGamma delta) * integral prod_(l=1..4) d^(2-2delta)k_l/pi^(1-delta) prod_e (q_e^2+1)^(-a_e) for the unit-mass scalar proper six-line PR7 (triangle(3,2,1)) (FMFT PR7; family 693719b1bc3d, powers [0, 0, 1, 1, 0, 1, 1, 1, 1, 0]), positive Euclidean, D = 2-2delta, no coupling or symmetry factor; ordinary Taylor coefficient (not a factorial-scaled derivative); raw Minkowski jets satisfy raw = (-1)^(sum a) hat",
     "symbolic_definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,3)",
@@ -5957,11 +6239,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/6b61eb865c68de272e8b1515ecf57975e0fe7a707c99c1c434b065a23b4ea208.json.gz",
@@ -5987,9 +6269,12 @@
           "kind": "rel_floor",
           "pointer": "/periods/P7_delta3/claimed_rel_error_digits_B",
           "offset": 0
+        },
+        {
+          "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 520,
       "stored_digits_do_not_extend_source_cap": true
     }
@@ -5998,7 +6283,7 @@
     "symbol": "vakint::PR9D2Eps4",
     "value": "8.0737568518776415877793240453698834267840792489973336334304719890248749490440909865709675936334093031416747087947917701665699263738246919055661213476306316451528653525014901448458498278885858048076825758176704804865435172178777885575387699461108227649527857635184013285793168986947830189719950514347803514534709080164541946533853931187035466400969750488496843025189521052250885723487989801481454244502555760482366215702357085056580219528559909156220796687352273459808328992378778233562867911257111834261681680342353047775694473621957785499230808707064241049255428607697634711823327546175951855726468328",
     "significant_digits": 600,
-    "absolute_error": "8.88921E-716",
+    "absolute_error": "1.00001E-601",
     "error_quality": "estimated",
     "definition": "[delta^4] of X_hat(delta) = exp(4 EulerGamma delta) * integral prod_(l=1..4) d^(2-2delta)k_l/pi^(1-delta) prod_e (q_e^2+1)^(-a_e) for the unit-mass scalar PR9 cat-eye (seven lines, K4 with one doubled edge) (FMFT PR9 = RustRed P8; family 693719b1bc3d, powers [0, 0, 1, 1, 1, 1, 1, 1, 1, 0]), positive Euclidean, D = 2-2delta, no coupling or symmetry factor; ordinary Taylor coefficient (not a factorial-scaled derivative); raw Minkowski jets satisfy raw = (-1)^(sum a) hat",
     "symbolic_definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,4)",
@@ -6171,11 +6456,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/222ba5d668a13f4e21ac7c6f9402029fa8e272c8b546a5b7c13d989ecf8e20ca.json.gz",
@@ -6201,9 +6486,12 @@
           "kind": "rel_floor",
           "pointer": "/new_leaves/E9hat[4]/evidence/rel_digits_rigorous_ball_A_B/1",
           "offset": 0
+        },
+        {
+          "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 600,
       "stored_digits_do_not_extend_source_cap": true
     }
@@ -6212,7 +6500,7 @@
     "symbol": "vakint::PR9pD2Eps4",
     "value": "1.8054838151476034356494261090688311376843714257622012690216544008502512630675926946599129302893916420310054328555451813279270553599674655519553241435304927585037361956319592561088391307835967928214276211739329015639680605808123242214035834970835019056051357684471631118361629872991249942451669062549676732983091225388721143925591491156855702599587231210972111395926272969706587671339629180330685919681459459020399406156473020948451149679954260415571146881696149327096131188238146554928221631077778097384476222091116214811197252095775952441957059689347596575719098938854077622644036649169976768198955317",
     "significant_digits": 600,
-    "absolute_error": "1.98784E-715",
+    "absolute_error": "1.00001E-601",
     "error_quality": "estimated",
     "definition": "[delta^4] of X_hat(delta) = exp(4 EulerGamma delta) * integral prod_(l=1..4) d^(2-2delta)k_l/pi^(1-delta) prod_e (q_e^2+1)^(-a_e) for the unit-mass scalar PR9 with one dot on a doubled-edge line (NOT the central-dot PR9d) (RustRed P10 graph; family 693719b1bc3d, powers [0, 0, 2, 1, 1, 1, 1, 1, 1, 0]), positive Euclidean, D = 2-2delta, no coupling or symmetry factor; ordinary Taylor coefficient (not a factorial-scaled derivative); raw Minkowski jets satisfy raw = (-1)^(sum a) hat",
     "symbolic_definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-2)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,4)",
@@ -6384,11 +6672,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/222ba5d668a13f4e21ac7c6f9402029fa8e272c8b546a5b7c13d989ecf8e20ca.json.gz",
@@ -6414,9 +6702,12 @@
           "kind": "rel_floor",
           "pointer": "/new_leaves/V9hat[4]/evidence/rel_digits_rigorous_ball_A_B/1",
           "offset": 0
+        },
+        {
+          "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 600,
       "stored_digits_do_not_extend_source_cap": true
     }
@@ -6425,7 +6716,7 @@
     "symbol": "vakint::PR7D2Eps4",
     "value": "394.54219298852641323138297166941924785643835217069315049968852436867585841555651393198557888281022450291225731879352543983722843081714367229894155752650725031612945167399632988271255701627534426661637139917298866295612103583408452954511957866584450795848879309236789868062453409818935089915143630275182863881965339709938032392283187902456763248011405521353929526720271895524757399130474332933661765765598078340876744085808568334141046999261354300383513884636977299991526357776118357742073758109722866779244964992217219644979251853693499762942046231151718747438373887696296475815725783792123020789773192",
     "significant_digits": 600,
-    "absolute_error": "4.34391E-724",
+    "absolute_error": "1.00001E-599",
     "error_quality": "estimated",
     "definition": "[delta^4] of X_hat(delta) = exp(4 EulerGamma delta) * integral prod_(l=1..4) d^(2-2delta)k_l/pi^(1-delta) prod_e (q_e^2+1)^(-a_e) for the unit-mass scalar proper six-line PR7 (triangle(3,2,1)) (FMFT PR7; family 693719b1bc3d, powers [0, 0, 1, 1, 0, 1, 1, 1, 1, 0]), positive Euclidean, D = 2-2delta, no coupling or symmetry factor; ordinary Taylor coefficient (not a factorial-scaled derivative); raw Minkowski jets satisfy raw = (-1)^(sum a) hat",
     "symbolic_definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,4)",
@@ -6580,11 +6871,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/222ba5d668a13f4e21ac7c6f9402029fa8e272c8b546a5b7c13d989ecf8e20ca.json.gz",
@@ -6610,9 +6901,12 @@
           "kind": "rel_floor",
           "pointer": "/new_leaves/P7hat[4]/evidence/rel_digits_rigorous_ball_A_B/1",
           "offset": 0
+        },
+        {
+          "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 600,
       "stored_digits_do_not_extend_source_cap": true
     }
@@ -6621,27 +6915,52 @@
     "symbol": "vakint::PR10D2Eps4",
     "value": "10.829199244533188658789595216539711721596445549442154217424331047038181287764579250345032910483598357197586522550734084000008411405376902271143155202949312732668200790018094433112942892779760196955492646876934477029239026516467707721494045763750565616122355312978124856598601270687181356391917038725789402958394215457446994186078842522705023221697714324594018228834484598827709271039114584010183259388706944834156996959245456468975918469045964601751059143832755607360267095126441435608235167775449869892177700723451813823699294056249620179427705908575774266800282193393555450429416727342125697295030398",
     "significant_digits": 560,
-    "absolute_error": "2.16584E-640",
+    "absolute_error": "1.00001E-600",
     "error_quality": "estimated",
     "definition": "[delta^4] of X_hat(delta) = exp(4 EulerGamma delta) * integral prod_(l=1..4) d^(2-2delta)k_l/pi^(1-delta) prod_e (q_e^2+1)^(-a_e) for the unit-mass scalar PR10 (FMFT PR10 = RustRed P13; family 693719b1bc3d, powers [0, 1, 0, 1, 1, 1, 1, 1, 1, 0]), positive Euclidean, D = 2-2delta, no coupling or symmetry factor; ordinary Taylor coefficient (not a factorial-scaled derivative); raw Minkowski jets satisfy raw = (-1)^(sum a) hat",
     "symbolic_definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,4)",
     "provenance": {
       "source_kind": "independent convergent D2 integral Taylor coefficient; no master coefficient inversion",
       "error_authority": "both validated empirical profile neighbourhoods; not an interval certificate",
-      "status": "COMPUTED (takeover): two-profile validation at 560 digits; independent-method control pending (P2); estimated, not an interval proof",
+      "status": "COMPUTED+VALIDATED (takeover, not a codex-2 Root adoption): two-profile validation at 560 digits (X8 J10 A/B 641.86) + independent-method control at 139.35 digits (carrier F and C5-95 radial delta^4 lifts vs the X8 eta-flow, smoke W140); estimated, not an interval proof",
       "validation": {
         "validated_significant_digits": 560,
         "two_profile_agreement": "X8 J10 A/B 641.86 (profiles share tree, admissions, recipes, single P853 file)",
         "independent_method_controls": [
-          "NONE at delta^4 (indirect: same-run PR10 jets 0..3 vs raw carrier 642.6-654.7; same-transport wheel jets 4 vs SX 572.5-591.3)"
+          "139.35 digits: the P2 radial carrier F (18x5) and C5-95 (19x5) smoke profiles W140 reproduce E10hat[4] of the X8 eta-flow J10 (independent method: radial cut ODE vs eta-flow)"
         ],
-        "ledger_label": "NOT VALIDATED: no independent-method control yet (two-profile only)",
+        "ledger_label": "COMPUTED+VALIDATED 560 (two-profile validation + independent-method control at 139.35 digits; ledger v2)",
         "producer_label": "COMPUTED (single-method X8 J10 A/B 641.9; NO independent-method control)",
         "previous_statement": null,
         "supportable_digits_N_sup": null,
         "acceptance_rule": "campaign precedent D3(a): two independent profiles agreeing beyond the validated digits plus an independent-method control; empirical, not interval",
         "ledger": "ledger v1 + P1 fixes (ledger/v2-prep/P1/out/ledger-P1.json, leaves-515.json)",
-        "pending": "two-profile validation; independent-method control pending (P2)"
+        "superseded_label": {
+          "status": "COMPUTED (takeover): two-profile validation at 560 digits; independent-method control pending (P2); estimated, not an interval proof",
+          "ledger_label": "NOT VALIDATED: no independent-method control yet (two-profile only)",
+          "independent_method_controls": [
+            "NONE at delta^4 (indirect: same-run PR10 jets 0..3 vs raw carrier 642.6-654.7; same-transport wheel jets 4 vs SX 572.5-591.3)"
+          ],
+          "pending": "two-profile validation; independent-method control pending (P2)",
+          "reason": "relabelled after the round-1 review (external-data-adv-v1 MINOR-1) under the user control rule"
+        },
+        "independent_method_control_evidence": [
+          {
+            "original_path": "/shared/vhirschi/vacuum_masters_takeover/runs/P2-controls/controls.json",
+            "uncompressed_sha256": "b2a75b23413fdaf635f34b9b9743e2a652b4b652c313c9cd21d0aef742a2e0f5",
+            "portable_archive": "provenance/takeover-4l-closures-runtime-v3/objects/b2a75b23413fdaf635f34b9b9743e2a652b4b652c313c9cd21d0aef742a2e0f5.json.gz",
+            "json_pointer": "/delta4_lifts/rows",
+            "select": "quantity == \"E10[4]\"",
+            "digits": 139.35
+          },
+          {
+            "original_path": "/shared/vhirschi/vacuum_masters_takeover/runs/P2-controls/analysis/smoke-W140.json",
+            "uncompressed_sha256": "b095cfebb03664cc81862fe345941027dcd568f2bb041d9bb854fadbab98e041",
+            "portable_archive": "provenance/takeover-4l-closures-runtime-v3/objects/b095cfebb03664cc81862fe345941027dcd568f2bb041d9bb854fadbab98e041.json.gz",
+            "note": "analysis output of the same smoke profiles"
+          }
+        ],
+        "independent_method_control_rule": "user decision 30 Oct 2026, 12:3x UTC: an independent-method control only has to catch systematic errors (wrong definition, normalisation or boundary data); 30-50 digits suffice, no 500-digit second-method production"
       },
       "definition_metadata": {
         "object": "PR10",
@@ -6794,11 +7113,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/222ba5d668a13f4e21ac7c6f9402029fa8e272c8b546a5b7c13d989ecf8e20ca.json.gz",
@@ -6824,9 +7143,12 @@
           "kind": "rel_floor",
           "pointer": "/new_leaves/E10hat[4]/evidence/X8_rel_digits_A_B/1",
           "offset": 0
+        },
+        {
+          "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 560,
       "stored_digits_do_not_extend_source_cap": true
     }
@@ -7025,11 +7347,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/222ba5d668a13f4e21ac7c6f9402029fa8e272c8b546a5b7c13d989ecf8e20ca.json.gz",
@@ -7055,9 +7377,12 @@
           "kind": "rel_floor",
           "pointer": "/new_leaves/D2_PR11[4]/evidence/X8_rel_digits_A_B/1",
           "offset": 0
+        },
+        {
+          "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 560,
       "stored_digits_do_not_extend_source_cap": true
     }
@@ -7256,11 +7581,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/222ba5d668a13f4e21ac7c6f9402029fa8e272c8b546a5b7c13d989ecf8e20ca.json.gz",
@@ -7286,9 +7611,12 @@
           "kind": "rel_floor",
           "pointer": "/new_leaves/D2_PR11d[4]/evidence/X8_rel_digits_A_B/1",
           "offset": 0
+        },
+        {
+          "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 560,
       "stored_digits_do_not_extend_source_cap": true
     }
@@ -7487,11 +7815,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/082cc879f47aeab0d028ad2ae3d86c075999d2fcb70cd8f192d6ff2666c06420.json.gz",
@@ -7517,9 +7845,12 @@
           "kind": "rel_floor",
           "pointer": "/entries/7/ball_rel_digits_B",
           "offset": 0
+        },
+        {
+          "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 587,
       "stored_digits_do_not_extend_source_cap": true
     }
@@ -7718,11 +8049,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/082cc879f47aeab0d028ad2ae3d86c075999d2fcb70cd8f192d6ff2666c06420.json.gz",
@@ -7748,9 +8079,12 @@
           "kind": "rel_floor",
           "pointer": "/entries/9/ball_rel_digits_B",
           "offset": 0
+        },
+        {
+          "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 586,
       "stored_digits_do_not_extend_source_cap": true
     }
@@ -7949,11 +8283,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/082cc879f47aeab0d028ad2ae3d86c075999d2fcb70cd8f192d6ff2666c06420.json.gz",
@@ -7979,9 +8313,12 @@
           "kind": "rel_floor",
           "pointer": "/entries/1/ball_rel_digits_B",
           "offset": 0
+        },
+        {
+          "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 588,
       "stored_digits_do_not_extend_source_cap": true
     }
@@ -8180,11 +8517,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/082cc879f47aeab0d028ad2ae3d86c075999d2fcb70cd8f192d6ff2666c06420.json.gz",
@@ -8210,9 +8547,12 @@
           "kind": "rel_floor",
           "pointer": "/entries/6/ball_rel_digits_B",
           "offset": 0
+        },
+        {
+          "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 586,
       "stored_digits_do_not_extend_source_cap": true
     }
@@ -8411,11 +8751,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/082cc879f47aeab0d028ad2ae3d86c075999d2fcb70cd8f192d6ff2666c06420.json.gz",
@@ -8441,9 +8781,12 @@
           "kind": "rel_floor",
           "pointer": "/entries/8/ball_rel_digits_B",
           "offset": 0
+        },
+        {
+          "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 585,
       "stored_digits_do_not_extend_source_cap": true
     }
@@ -8452,7 +8795,7 @@
     "symbol": "vakint::PR12D2Eps2",
     "value": "0.70842359292363324498622688283861836399763802038093779997519024017660538665547278458473055552590971907689350574378063538792387137916181057950649080941728425669007493597658147582555926967878066564394361250009585674957783963679884629489116030858376847127485306171233946040656460024819197830433290674447974451779061831029183828141356382467108821698752889860808034147224743511499522002386138450607732156563573237251390883950239465471389126578729953129043301953538186757181862159115800584722767370315624496517089314619723277823382280227479805655267501208727329533436",
     "significant_digits": 520,
-    "absolute_error": "7.08424E-579",
+    "absolute_error": "1.00001E-560",
     "error_quality": "estimated",
     "definition": "[delta^2] of X_hat(delta) = exp(4 EulerGamma delta) * integral prod_(l=1..4) d^(2-2delta)k_l/pi^(1-delta) prod_e (q_e^2+1)^(-a_e) for the unit-mass scalar prism PR12 (GLS I1022, Laporta V12) (FMFT PR12 = RustRed P70; family eb225daea1dd, powers [1, 1, 1, 1, 1, 1, 1, 1, 1, 0]), positive Euclidean, D = 2-2delta, no coupling or symmetry factor; ordinary Taylor coefficient (not a factorial-scaled derivative); raw Minkowski jets satisfy raw = (-1)^(sum a) hat",
     "symbolic_definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(1+vakint::EuclideanDot(vakint::k(1),vakint::k(1)))^(-1)*(1+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,2)",
@@ -8658,11 +9001,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/f6627fcc044b2dcd97f2703409ecd32b0a49f73e6e3b73da6e338de7ff96b2c7.json.gz",
@@ -8678,9 +9021,12 @@
           "kind": "rel_floor",
           "pointer": "/values/PR12[2]/AB_agreement_digits",
           "offset": -1
+        },
+        {
+          "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 520,
       "stored_digits_do_not_extend_source_cap": true
     }
@@ -8689,27 +9035,46 @@
     "symbol": "vakint::PR12D2Eps3",
     "value": "1.0650256498674428328812459621101793828686297582343574789845623211867922980567515285607831056676583496671101517898428028393818332408754446102990865500601011574110310579474930533283809971226281256391383079076062272619505429653783811834075387995337371840927292506218182997863401848352099259266050747116322709594810783584158094557330776599541624131637735523947180777184538649075747268070927088090722653695352271328862319740793113382271905626884719153589801333559483347416890717881716883338135644148885375030182433769044448786962231864976251657832127452350059562713",
     "significant_digits": 520,
-    "absolute_error": "1.06503E-575",
+    "absolute_error": "1.00001E-559",
     "error_quality": "estimated",
     "definition": "[delta^3] of X_hat(delta) = exp(4 EulerGamma delta) * integral prod_(l=1..4) d^(2-2delta)k_l/pi^(1-delta) prod_e (q_e^2+1)^(-a_e) for the unit-mass scalar prism PR12 (GLS I1022, Laporta V12) (FMFT PR12 = RustRed P70; family eb225daea1dd, powers [1, 1, 1, 1, 1, 1, 1, 1, 1, 0]), positive Euclidean, D = 2-2delta, no coupling or symmetry factor; ordinary Taylor coefficient (not a factorial-scaled derivative); raw Minkowski jets satisfy raw = (-1)^(sum a) hat",
     "symbolic_definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(1+vakint::EuclideanDot(vakint::k(1),vakint::k(1)))^(-1)*(1+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,3)",
     "provenance": {
       "source_kind": "independent convergent D2 integral Taylor coefficient; no master coefficient inversion",
       "error_authority": "both validated empirical profile neighbourhoods; not an interval certificate",
-      "status": "COMPUTED (takeover): two-profile validation at 520 digits; independent-method control pending (P2); estimated, not an interval proof",
+      "status": "COMPUTED (takeover): two-profile validation at 520 digits (SX prod-A/prod-B 576.0); control on record: >= 421 digits, closure-implied (the PR12[1] closure against the independent codex-2 D4 physical value; INFERENCE, control only, not an independent computation of E12[3]; ledger v2 decision D13 open); estimated, not an interval proof",
       "validation": {
         "validated_significant_digits": 520,
         "two_profile_agreement": "SX prod-A/prod-B 576.0",
         "independent_method_controls": [
-          "NONE (no literature print, single method)"
+          ">= 421 digits, closure-implied (INFERENCE, control only): PR12[1] is one equation in which E12[3] is the only leaf without its own second method; floor set by the 424-digit PR14ep3 refit (518.4 with PR14ep3 at its radial level)"
         ],
-        "ledger_label": "NOT VALIDATED: no independent-method control yet (two-profile only)",
+        "ledger_label": "COMPUTED 520 (two-profile validation + closure-implied control >= 421 digits, INFERENCE; ledger v2 D13 open)",
         "producer_label": "COMPUTED+VALIDATED 520 (SX radial cut-kernel, prod-A/prod-B)",
         "previous_statement": null,
         "supportable_digits_N_sup": null,
         "acceptance_rule": "campaign precedent D3(a): two independent profiles agreeing beyond the validated digits plus an independent-method control; empirical, not interval",
         "ledger": "ledger v1 + P1 fixes (ledger/v2-prep/P1/out/ledger-P1.json, leaves-515.json)",
-        "pending": "two-profile validation; independent-method control pending (P2)"
+        "superseded_label": {
+          "status": "COMPUTED (takeover): two-profile validation at 520 digits; independent-method control pending (P2); estimated, not an interval proof",
+          "ledger_label": "NOT VALIDATED: no independent-method control yet (two-profile only)",
+          "independent_method_controls": [
+            "NONE (no literature print, single method)"
+          ],
+          "pending": "two-profile validation; independent-method control pending (P2)",
+          "reason": "relabelled after the round-1 review (external-data-adv-v1 MINOR-1) under the user control rule"
+        },
+        "independent_method_control_evidence": [
+          {
+            "original_path": "/shared/vhirschi/vacuum_masters_takeover/runs/P2-controls/e12-closure/e12-closure-control.json",
+            "uncompressed_sha256": "5f52e7efa9a8ed2605aa7c8a60eb0d48a571dc745924d91388f6498841b736bc",
+            "portable_archive": "provenance/takeover-4l-closures-runtime-v3/objects/5f52e7efa9a8ed2605aa7c8a60eb0d48a571dc745924d91388f6498841b736bc.json.gz",
+            "json_pointer": "/implied_E12_3_control_digits",
+            "digits": 420.98,
+            "label": "INFERENCE (arithmetic on COMPUTED files; no new run). CONTROL ONLY."
+          }
+        ],
+        "independent_method_control_rule": "user decision 30 Oct 2026, 12:3x UTC: an independent-method control only has to catch systematic errors (wrong definition, normalisation or boundary data); 30-50 digits suffice, no 500-digit second-method production"
       },
       "definition_metadata": {
         "object": "prism PR12 (GLS I1022, Laporta V12)",
@@ -8896,11 +9261,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/f6627fcc044b2dcd97f2703409ecd32b0a49f73e6e3b73da6e338de7ff96b2c7.json.gz",
@@ -8916,9 +9281,12 @@
           "kind": "rel_floor",
           "pointer": "/values/PR12[3]/AB_agreement_digits",
           "offset": -1
+        },
+        {
+          "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 520,
       "stored_digits_do_not_extend_source_cap": true
     }
@@ -8927,7 +9295,7 @@
     "symbol": "vakint::PR0D2Eps1",
     "value": "0.3117547219541633763351461670518867617161781823227981664448462859284550265731404134805645442042094898632098687279996679103884620298831305221094662457405087050017838281814113179300877736935002135347654206114963620615216607691865558036965448405292823219690177869297601931617341416397033538471703298118852091567350467572712219080628864523054310759009756460232421215742401299137812353350174432368876983243728484567494868037995300365295428179084512005182820758857372555718851879091554415854866036802311291971070290694374983492406676781597778698425005795875499012588980539292928612131634657117",
     "significant_digits": 520,
-    "absolute_error": "4.02155E-582",
+    "absolute_error": "4.02165E-582",
     "error_quality": "estimated",
     "definition": "[delta^1] of X_hat(delta) = exp(4 EulerGamma delta) * integral prod_(l=1..4) d^(2-2delta)k_l/pi^(1-delta) prod_e (q_e^2+1)^(-a_e) for the unit-mass scalar non-planar K3,3 PR0 (GLS I511) (FMFT PR0 = RustRed P18; family 693719b1bc3d, powers [1, 1, 1, 1, 1, 1, 1, 1, 1, 0]), positive Euclidean, D = 2-2delta, no coupling or symmetry factor; ordinary Taylor coefficient (not a factorial-scaled derivative); raw Minkowski jets satisfy raw = (-1)^(sum a) hat",
     "symbolic_definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(1),vakint::k(1)))^(-1)*(1+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,1)",
@@ -9134,11 +9502,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/a28fb68e06db912e6d0f4d495798875c500a857d582c6a22c1eeaa81d7d6fb13.json.gz",
@@ -9158,9 +9526,12 @@
         {
           "kind": "abs",
           "pointer": "/entries/Ehat/jets/1/empirical_abs_error"
+        },
+        {
+          "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 520,
       "stored_digits_do_not_extend_source_cap": true
     }
@@ -9169,7 +9540,7 @@
     "symbol": "vakint::PR0D2Eps2",
     "value": "0.6747835435052579460275725642301857201822556227359090293871088269832162919439201713881219391872693903181751047380412219789084578364065134474822790382119690796096388074707411342469108814260727080092639388645978075983486439425159321142535901409671332264843315735797767912000238276089198028914841941465412173888499682727016895098034490485259384892161170921117701502260438619011130481241058212269878638001981061606751904231380780114177212660099132668339495559855557142850138853866660716975743813119190182020038734885543880130326641732026551287323167332225515187222254919030160924415504483456",
     "significant_digits": 520,
-    "absolute_error": "7.47184E-582",
+    "absolute_error": "7.47194E-582",
     "error_quality": "estimated",
     "definition": "[delta^2] of X_hat(delta) = exp(4 EulerGamma delta) * integral prod_(l=1..4) d^(2-2delta)k_l/pi^(1-delta) prod_e (q_e^2+1)^(-a_e) for the unit-mass scalar non-planar K3,3 PR0 (GLS I511) (FMFT PR0 = RustRed P18; family 693719b1bc3d, powers [1, 1, 1, 1, 1, 1, 1, 1, 1, 0]), positive Euclidean, D = 2-2delta, no coupling or symmetry factor; ordinary Taylor coefficient (not a factorial-scaled derivative); raw Minkowski jets satisfy raw = (-1)^(sum a) hat",
     "symbolic_definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(1),vakint::k(1)))^(-1)*(1+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,2)",
@@ -9375,11 +9746,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/a28fb68e06db912e6d0f4d495798875c500a857d582c6a22c1eeaa81d7d6fb13.json.gz",
@@ -9399,9 +9770,12 @@
         {
           "kind": "abs",
           "pointer": "/entries/Ehat/jets/2/empirical_abs_error"
+        },
+        {
+          "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 520,
       "stored_digits_do_not_extend_source_cap": true
     }
@@ -9410,7 +9784,7 @@
     "symbol": "vakint::PR14ep2",
     "value": "9055.7590949669359716338055984983754403527370483409530853859841196695783725015470489117016530029532281884441046075176927140843639125168937421183321228397869023696588688869311923875650274054036878899064585413903456577230385549930001180496366772697852547311554184514002480408959682622561239497547420077342343280295405532873448293305574302273252218912271097065096308075923704086498456059810353571229033311742790017365660798739087726778259266484029230025477606139265085807726660950502279201095519957029818239784916737297430927781264422286121266860878737594031900947192361214562183916281128485467225060303194145759161740982217",
     "significant_digits": 600,
-    "absolute_error": "9.05576E-628",
+    "absolute_error": "1.00001E-616",
     "error_quality": "estimated",
     "definition": "[eps^2] of the FMFT/MATAD D=4-2eps master FMFT PR14 = RustRed P31: M = (-1)^(sum a) exp(4 EulerGamma eps) * integral prod_(l=1..4) d^(4-2eps)k_l/pi^(2-eps) prod_e (q_e^2+1)^(-a_e) (Euclidean, unit mass; PR14 (ring of three one-loop bubbles + one line, GLS I1016); family bb95c283ed3c, powers [1, 0, 1, 1, 1, 1, 1, 1, 0, 0], sum a = 7); same normalisation as the published 4L coefficients of this master (P31 rows eps^-4..1)",
     "symbolic_definition": "vakint::SeriesCoefficient(-1*vakint::LoopIntegral(-2*vakint::ep+4,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(1),vakint::k(1)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::ep),vakint::ep,0,2)",
@@ -9583,11 +9957,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/1a5dd7751af285ed450f8ec5c675daf07a6789499b15988b26aa5ef6d105e926.json.gz",
@@ -9603,9 +9977,12 @@
           "kind": "rel_floor",
           "pointer": "/values/PR14[2]/AB_agreement_rel_digits",
           "offset": -1
+        },
+        {
+          "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 600,
       "stored_digits_do_not_extend_source_cap": true
     }
@@ -9614,27 +9991,45 @@
     "symbol": "vakint::PR14ep3",
     "value": "20045.418700998489499347457000206666014629469330361318841032353006928147245848927517050073200654348674428263088171589289532500369452358934991802882790676727232962359052739810867056347452550093078234718861415514576702400791861705956363481138994653512195626095853470062988463687975856940197502080137440617397666086457998329048754920225298010425906761774493573092782191888841904703638892545747118716304429840947101857886961419186158415125114583181632808592790220943242054588734862331908031481798172331858737767961484112953766798063495386935426182290626564107960199948177075304794293955546913531548718250767616419445989954867",
     "significant_digits": 600,
-    "absolute_error": "2.00455E-627",
+    "absolute_error": "1.00001E-615",
     "error_quality": "estimated",
     "definition": "[eps^3] of the FMFT/MATAD D=4-2eps master FMFT PR14 = RustRed P31: M = (-1)^(sum a) exp(4 EulerGamma eps) * integral prod_(l=1..4) d^(4-2eps)k_l/pi^(2-eps) prod_e (q_e^2+1)^(-a_e) (Euclidean, unit mass; PR14 (ring of three one-loop bubbles + one line, GLS I1016); family bb95c283ed3c, powers [1, 0, 1, 1, 1, 1, 1, 1, 0, 0], sum a = 7); same normalisation as the published 4L coefficients of this master (P31 rows eps^-4..1)",
     "symbolic_definition": "vakint::SeriesCoefficient(-1*vakint::LoopIntegral(-2*vakint::ep+4,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(1),vakint::k(1)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::ep),vakint::ep,0,3)",
     "provenance": {
       "source_kind": "D=4-2eps master coefficient of a published master (auxiliary, decision D5(a)); no target inversion",
       "error_authority": "both validated empirical profile neighbourhoods; not an interval certificate",
-      "status": "COMPUTED (takeover): two-profile validation at 600 digits; independent-method control pending (P2); estimated, not an interval proof",
+      "status": "COMPUTED+VALIDATED (takeover, not a codex-2 Root adoption): two-profile validation at 600 digits (radial A/B 632) + independent-method control at 424.0 digits (refit of the codex-2 stage-200 D4 auxiliary-mass eta-flow samples, profile 1); estimated, not an interval proof",
       "validation": {
         "validated_significant_digits": 600,
         "two_profile_agreement": "radial A/B 632",
         "independent_method_controls": [
-          "NONE (same radial code validated on sunset eps^5, FIVE eps^4, PR5 eps^3)"
+          "424.0 digits: refit of the codex-2 stage-200 D4 auxiliary-mass eta-flow samples of the 127-state PR14-PR15 system (profile 1; profile 0 gives 344.72); the radial PR14[2] is not an input"
         ],
-        "ledger_label": "NOT VALIDATED: no independent-method control yet (two-profile only)",
+        "ledger_label": "COMPUTED+VALIDATED 600 (two-profile validation + independent-method control at 424.0 digits; ledger v2)",
         "producer_label": "COMPUTED+VALIDATED-600 (two radial profiles A/B, A/B >= 615 digits; controls below)",
         "previous_statement": null,
         "supportable_digits_N_sup": null,
         "acceptance_rule": "campaign precedent D3(a): two independent profiles agreeing beyond the validated digits plus an independent-method control; empirical, not interval",
         "ledger": "ledger v1 + P1 fixes (ledger/v2-prep/P1/out/ledger-P1.json, leaves-515.json)",
-        "pending": "two-profile validation; independent-method control pending (P2)"
+        "superseded_label": {
+          "status": "COMPUTED (takeover): two-profile validation at 600 digits; independent-method control pending (P2); estimated, not an interval proof",
+          "ledger_label": "NOT VALIDATED: no independent-method control yet (two-profile only)",
+          "independent_method_controls": [
+            "NONE (same radial code validated on sunset eps^5, FIVE eps^4, PR5 eps^3)"
+          ],
+          "pending": "two-profile validation; independent-method control pending (P2)",
+          "reason": "relabelled after the round-1 review (external-data-adv-v1 MINOR-1) under the user control rule"
+        },
+        "independent_method_control_evidence": [
+          {
+            "original_path": "/shared/vhirschi/vacuum_masters_takeover/runs/P2-controls/pr14-eps3/out/pr14-eps3-refit-control.json",
+            "uncompressed_sha256": "2f5bfe2641fcdc2b5cf07a8dde54779c2b960e9ba71a9e11edbda84ee8e508e4",
+            "portable_archive": "provenance/takeover-4l-closures-runtime-v3/objects/2f5bfe2641fcdc2b5cf07a8dde54779c2b960e9ba71a9e11edbda84ee8e508e4.json.gz",
+            "json_pointer": "/summary/control_digits_profile1_full_interpolation",
+            "digits": 424.0
+          }
+        ],
+        "independent_method_control_rule": "user decision 30 Oct 2026, 12:3x UTC: an independent-method control only has to catch systematic errors (wrong definition, normalisation or boundary data); 30-50 digits suffice, no 500-digit second-method production"
       },
       "definition_metadata": {
         "object": "PR14 (ring of three one-loop bubbles + one line, GLS I1016)",
@@ -9787,11 +10182,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/1a5dd7751af285ed450f8ec5c675daf07a6789499b15988b26aa5ef6d105e926.json.gz",
@@ -9807,9 +10202,12 @@
           "kind": "rel_floor",
           "pointer": "/values/PR14[3]/AB_agreement_rel_digits",
           "offset": -1
+        },
+        {
+          "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 600,
       "stored_digits_do_not_extend_source_cap": true
     }
@@ -9818,7 +10216,7 @@
     "symbol": "vakint::T111bar5",
     "value": "166.3058670086850776845335553545335834509619186813242179926359128158950518993305042237215672094876532055126861462211543260585604377869965563972543682028275649001108575307426386726826583572139491816496707723788791970668573302036388942462169754508140874851919328134431080558156096042816533108200728277977911167750355849499633805210878277645266575853476731530655342839745012897800096618442126142507682431289687782932890739132116179134092931790865634868141380707184562419027061666156572872481090261801714316848413781323060405703639111868725209692839148893083114109294294108795013343896384743339662485647162880428133952315652870504838245397841668960150683473943813264332632030065175248970150148700997119092",
     "significant_digits": 650,
-    "absolute_error": "1.66306E-891",
+    "absolute_error": "1.00001E-697",
     "error_quality": "estimated",
     "definition": "T111bar(5) in the MATAD convention of vakint matad.rs: sum_k T111bar(k) eps^k = sqrt3 (1-2eps)(1-eps) Sunset2(eps)/G(eps)^2 - 3 sqrt3/(2 eps^2), G = exp(EulerGamma eps) Gamma(1+eps), Sunset2 = -miT111, miT111 = exp(2 EulerGamma eps) * integral d^dk d^dl/pi^d [(k^2+1)(l^2+1)((k+l)^2+1)]^-1 (Euclidean, d = 4-2eps); weight-7 coefficient at eps^5",
     "symbolic_definition": "vakint::SeriesCoefficient((-1+vakint::ep)*(-2*vakint::ep+1)*(symbolica::gamma(1+vakint::ep))^(-2)*3^(1/2)*vakint::LoopIntegral(-2*vakint::ep+4,(1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(1+vakint::EuclideanDot(vakint::k(1),vakint::k(1)))^(-1)*(1+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1),vakint::k(1),vakint::k(2))+-3/2*3^(1/2)*vakint::ep^(-2),vakint::ep,0,5)",
@@ -9850,11 +10248,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/aab2a7af5760d6ac10f169425b3718b848f622e3475ee47a393f11315e25785a.json.gz",
@@ -9870,9 +10268,12 @@
           "kind": "rel_floor",
           "pointer": "/values/T111bar5/A_vs_B_digits",
           "offset": -1
+        },
+        {
+          "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 650,
       "stored_digits_do_not_extend_source_cap": true
     }
@@ -9911,11 +10312,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/b661453a5288a3a96c6e593e36a0bd449e7eaa8d56a47df8ea235223cccdd464.json.gz",
@@ -9931,9 +10332,12 @@
           "kind": "rel_floor",
           "pointer": "/final_values/vakint::BNbar5/AB_agreement_digits",
           "offset": -1
+        },
+        {
+          "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 581,
       "stored_digits_do_not_extend_source_cap": true
     }
@@ -9972,11 +10376,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/b661453a5288a3a96c6e593e36a0bd449e7eaa8d56a47df8ea235223cccdd464.json.gz",
@@ -9992,9 +10396,12 @@
           "kind": "rel_floor",
           "pointer": "/final_values/vakint::D5bar3/AB_agreement_digits",
           "offset": -1
+        },
+        {
+          "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 600,
       "stored_digits_do_not_extend_source_cap": true
     }
@@ -10030,11 +10437,11 @@
       },
       "definition": {
         "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+        "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
       },
       "portable_proof_index": {
         "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
-        "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+        "sha256": "807f5a82c1dacfa55e1faa8b587528bc07ffb5c86ec9b33bd24f02da74aa79bc"
       },
       "source": {
         "path": "provenance/takeover-4l-closures-runtime-v3/objects/2baa23acb0c564d8c57fe5aa29db4967f6b7369b283211e00bf9cf07c439fca1.json.gz",
@@ -10053,9 +10460,12 @@
             "/value_lo"
           ],
           "factor": 2
+        },
+        {
+          "kind": "last_digit_unit"
         }
       ],
-      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+      "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset); last_digit_unit: one unit of the last stored digit of the published centre, present exactly once), rounded up to six significant digits",
       "accepted_significant_digits": 20000,
       "stored_digits_do_not_extend_source_cap": true
     }

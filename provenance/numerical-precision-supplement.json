@@ -47,7 +47,7 @@
         "base_commit": "ca49f32854050fdaa434ad11d743e6db88adb674",
         "receipt": {
           "path": "provenance/takeover-4L-closures-v1/receipt.json",
-          "sha256": "728baec7a02351e05e72093236801960804a88ed6ea76ff3dc0aec3cc094a8ff"
+          "sha256": "532e7d6f7f20a99669adc9a00df4aba844d15a149b1347dbb7e23d0a43ce4d54"
         }
       }
     },

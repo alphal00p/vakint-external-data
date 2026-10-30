@@ -3,7 +3,7 @@
   "loop_count": 4,
   "runtime_payload": {
     "path": "4L/constants.json",
-    "sha256": "69c898df33829b01bc3e8cea1b5b43a6e7fd9fad98fbd09308464ae7166d518f"
+    "sha256": "981d59a731665eb81a45374013249b3ca7f55f51142c592b68f1c16994fc8811"
   },
   "source_payload": {
     "path": "validation/bessel-k5-moments-20000/constants.json",
@@ -43,7 +43,7 @@
     },
     "takeover-4l-closures-v3": {
       "path": "provenance/takeover-4l-closures-runtime-v3/projection.json",
-      "sha256": "bb34f4266e0789063e1cc8fbad1761e22d1efa510a878a072954d45eef097c69"
+      "sha256": "4f834edd4d7dab48e899a2686dfb4d0837b45a7a44d9b192c6ed1aeed3118a5b"
     }
   }
 }

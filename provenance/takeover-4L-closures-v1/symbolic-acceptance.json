@@ -3,7 +3,7 @@
   "base_commit": "ca49f32854050fdaa434ad11d743e6db88adb674",
   "accepted": true,
   "acceptance_authority": "takeover publication of the user-restarted 4L reconstruction; ledger v1 + P1 fixes; decisions D1(a), D3(a), D5(a), D9(a), D10(a); not a codex-2 Root adoption",
-  "rule": "each closed formula (exact composition of accepted/two-engine-replayed maps with named periods) reproduces the independent physical 500-digit value of every slot (within 0.483 units of the 500th digit) and the raw physical profiles to 516.8-548 digits; the formula cap is min(constant digits, floor(P1 S2 statement budget))",
+  "rule": "each closed formula (exact composition of accepted/two-engine-replayed maps with named periods) reproduces the independent physical 500-digit value of every slot (within 0.483 units of the 500th digit) and the raw physical profiles to 543.6-548.1 digits (independent review external-data-adv-v1, with the committed constants); the formula cap is min(constant digits, floor(P1 S2 statement budget))",
   "empirical_not_interval_proof": true,
   "directions": {
     "PR9[0]": {
@@ -632,17 +632,17 @@
         "P10 eps^1": {
           "digits_vs_numerical_json": 500.102,
           "ulps_of_numerical_json_last_digit": 0.169,
-          "statement_budget_relative_digits": 548.95
+          "statement_budget_relative_digits": 545.03
         },
         "P45 eps^1": {
           "digits_vs_numerical_json": 500.102,
           "ulps_of_numerical_json_last_digit": 0.169,
-          "statement_budget_relative_digits": 548.95
+          "statement_budget_relative_digits": 545.03
         },
         "P72 eps^1": {
           "digits_vs_numerical_json": 500.102,
           "ulps_of_numerical_json_last_digit": 0.169,
-          "statement_budget_relative_digits": 548.95
+          "statement_budget_relative_digits": 545.03
         }
       },
       "symbolic_validation_cap": {
@@ -1543,7 +1543,7 @@
         "float_atoms": false,
         "digits_vs_ledger_original_formula_X8": 543.64
       },
-      "closure_label": "COMPUTED-conditional; CLOSED conditional on COMPUTED (single-method) E10hat[4]",
+      "closure_label": "COMPUTED+VALIDATED closure (ledger v2): E10hat[4] = vakint::PR10D2Eps4 now has an independent-method control at 139.35 digits; no remaining condition",
       "maps": "B4 conditional wheel eps^1 quotient + exact tail elimination (BNbar5, T111bar5, D5bar3 -> BN[5], Sunset2[5], FIVE[4]); Mathematica re-derivation equal exactly (review)",
       "ledger_digits_vs_physical_500": [
         500.04,
@@ -1624,7 +1624,9 @@
         "vakint::T1ep2",
         "vakint::s6weak"
       ],
-      "conditional_on": "vakint::PR10D2Eps4 (two-profile only; independent-method control pending P2)"
+      "conditional_on": null,
+      "ledger_v1_closure_label": "COMPUTED-conditional; CLOSED conditional on COMPUTED (single-method) E10hat[4]",
+      "previous_conditional_on": "vakint::PR10D2Eps4 (two-profile only; independent-method control pending P2)"
     },
     "PR12[1]": {
       "slots": [
@@ -1667,7 +1669,7 @@
         "float_atoms": false,
         "digits_vs_ledger_original_formula_X8": 518.53
       },
-      "closure_label": "COMPUTED-conditional (exact map, conditional on the accepted generic conditions); CLOSED conditional on the COMPUTED single-method vakint::PR12D2Eps3 (E12[3], SX radial only) and vakint::PR14ep3 (PR14[3], radial only) - no independent control yet",
+      "closure_label": "COMPUTED-conditional (exact map, conditional on the accepted generic conditions); CLOSED; vakint::PR14ep3 now has an independent-method control at 424.0 digits; vakint::PR12D2Eps3 has two-profile validation 520 and only a closure-implied control >= 421 digits (INFERENCE; ledger v2 D13 open)",
       "maps": "ACCEPTED H75 Tarasov shift solved for PR12 (all orders) composed with ACCEPTED maps; 5/17 r_F re-derived from source by reviewer; ledger aux-free variant uses PR12 poles = 0 exactly",
       "ledger_digits_vs_physical_500": [
         500.24
@@ -1738,10 +1740,37 @@
         "vakint::T1ep2",
         "vakint::s6weak"
       ],
-      "conditional_on": "vakint::PR12D2Eps3 and vakint::PR14ep3 (two-profile only; independent-method control pending P2)"
+      "conditional_on": "the label of vakint::PR12D2Eps3 only: two-profile validation 520 + closure-implied control >= 421 digits (INFERENCE, ledger v2 decision D13 open)",
+      "ledger_v1_closure_label": "COMPUTED-conditional (exact map, conditional on the accepted generic conditions); CLOSED conditional on the COMPUTED single-method vakint::PR12D2Eps3 (E12[3], SX radial only) and vakint::PR14ep3 (PR14[3], radial only) - no independent control yet",
+      "previous_conditional_on": "vakint::PR12D2Eps3 and vakint::PR14ep3 (two-profile only; independent-method control pending P2)"
     }
   },
   "gate": {
+    "engine": "vakeval v2 (Symbolica 3.0.0 evaluate; HPL/GPL/zeta/polylog leaves from the vakeval v2 registry; every vakint:: constant leaf bound from 4L/constants.json value + absolute_error)",
+    "constants_sha256": "981d59a731665eb81a45374013249b3ca7f55f51142c592b68f1c16994fc8811",
+    "summary": {
+      "slots": 43,
+      "min_digits_vs_numerical_json": 499.483,
+      "n_below_499_5": 1,
+      "below_499_5": [
+        "P70 eps^0"
+      ],
+      "max_ulps_500_digit_rows": 0.4826,
+      "min_statement_budget": 532.45
+    },
+    "evidence": {
+      "path": "validation/takeover-4L-closures-v1-06f11a0fe4dae6fc67b78b4f2c7b22137641f7dee5c23b23ea02c288d1963f07.json.gz",
+      "sha256": "695fd588ab540d618a4e1e1988c2da381809541d9c7a2834564b033ee812b344",
+      "bytes": 8691,
+      "uncompressed_sha256": "06f11a0fe4dae6fc67b78b4f2c7b22137641f7dee5c23b23ea02c288d1963f07",
+      "uncompressed_bytes": 74699
+    }
+  },
+  "evidence_index": {
+    "path": "provenance/takeover-4L-closures-v1/portable-proof-index.json",
+    "sha256": "36903dbfee92128d9c5159e4c346a65e789f8d71bdcdff76bf62bee2f9e7236f"
+  },
+  "previous_gate": {
     "engine": "vakeval v2 (Symbolica 3.0.0 evaluate; HPL/GPL/zeta/polylog leaves from the vakeval v2 registry; every vakint:: constant leaf bound from 4L/constants.json value + absolute_error)",
     "constants_sha256": "69c898df33829b01bc3e8cea1b5b43a6e7fd9fad98fbd09308464ae7166d518f",
     "summary": {
@@ -1755,8 +1784,15 @@
       "min_statement_budget": 532.45
     }
   },
-  "evidence_index": {
-    "path": "provenance/takeover-4L-closures-v1/portable-proof-index.json",
-    "sha256": "2f0d7db39c8927431dc8d0b254b229b3a789f03f217c0eebe414bc2824dedb21"
+  "independent_method_control_rule": "user decision 30 Oct 2026, 12:3x UTC: an independent-method control only has to catch systematic errors (wrong definition, normalisation or boundary data); 30-50 digits suffice, no 500-digit second-method production",
+  "round1_review_fixes": {
+    "review": "reviews/external-data-adv-v1 (SOUND_WITH_FIXES)",
+    "MAJOR-1": "every constant error now includes the storage rounding of its published centre (29 cells gained last_digit_unit)",
+    "MINOR-1": "PR10D2Eps4 / PR14ep3 / PR12D2Eps3 relabelled with their controls on record",
+    "MINOR-2": "raw-profile agreement 543.6-548.1 digits",
+    "NOTE-3": "PR10D2/PR10D2Eps1/PR15D2 metadata gained an exact momentum-space isomorphism to their symbolic_definition routing",
+    "NOTE-2": "PR5D2Eps3 kept numeric for push 1; exact J8 formula deferred to push 2",
+    "formula_rows_unchanged": true,
+    "constant_values_and_digits_unchanged": true
   }
 }

@@ -4,6 +4,8 @@ Vakint ranks an exact formula with an unbound vakint:: leaf as arbitrary
 precision, prefers it over the numerical row and then cannot evaluate it.
 Exact rows may therefore only use Vakint's built-in special functions and
 constants, the recorded period aliases, or symbols of the loop's constants.json.
+Outside the vakint namespace only the native Symbolica functions and constants
+that Vakint evaluates are allowed (an unknown head would also stay unevaluated).
 """
 
 import re
@@ -18,6 +20,30 @@ BUILTIN_FUNCTIONS = {"HI", "HR", "GPLReal", "GPLImag"}
 BUILTIN_CONSTANTS = {"S2", "T1ep", "T1ep2"}
 RECORDED_PERIODS = {"PR4fin", "PR4dfin", "PR11dep0", "PR4ep1", "PR4dep1"}
 LEAF = re.compile(r"vakint::([A-Za-z_][A-Za-z0-9_]*)(\([0-9, ]*\))?")
+# Non-vakint heads and symbols of published exact rows: native Symbolica
+# special functions (namespaced), bare elementary functions and the builtin
+# constants. Anything else is an unknown head.
+NATIVE_FUNCTIONS = {"symbolica::zeta", "symbolica::polylog"}
+BARE_FUNCTIONS = {"log", "exp"}
+BARE_CONSTANTS = {"𝜋", "𝑖", "𝑒"}
+NAMESPACED = re.compile(r"([A-Za-z_][A-Za-z0-9_]*)::([^\W\d]\w*)")
+BARE = re.compile(r"(?<![\w:])([^\W\d]\w*)(?![\w:])")
+
+
+def unknown_native_heads(formula):
+    """Namespaced non-vakint heads and bare identifiers outside the whitelist."""
+    unknown = set()
+    for namespace, name in NAMESPACED.findall(formula):
+        if namespace != "vakint" and f"{namespace}::{name}" not in NATIVE_FUNCTIONS:
+            unknown.add(f"{namespace}::{name}")
+    for match in BARE.finditer(formula):
+        name = match.group(1)
+        if formula[match.end() :].startswith("("):
+            if name not in BARE_FUNCTIONS:
+                unknown.add(name)
+        elif name not in BARE_CONSTANTS:
+            unknown.add(name)
+    return unknown
 
 
 def exact_rows(loops):
@@ -58,6 +84,31 @@ class SymbolicBindingTests(unittest.TestCase):
                             or symbol in constants,
                             f"unbound exact-row leaf {symbol}",
                         )
+
+    def test_every_exact_row_uses_only_whitelisted_native_heads(self):
+        seen = set()
+        for loops in range(1, 5):
+            for name, power, formula in exact_rows(loops):
+                with self.subTest(loops=loops, master=name, power=power):
+                    self.assertEqual(unknown_native_heads(formula), set())
+                seen.update(
+                    f"{namespace}::{head}"
+                    for namespace, head in NAMESPACED.findall(formula)
+                    if namespace != "vakint"
+                )
+        self.assertEqual(seen, NATIVE_FUNCTIONS)
+        good = "symbolica::zeta(3)*log(2)+𝜋^2*vakint::S2+symbolica::polylog(4,1/2)*𝑖"
+        self.assertEqual(unknown_native_heads(good), set())
+        for bad, expected in [
+            ("symbolica::bessel_k(0,1)", {"symbolica::bessel_k"}),
+            ("symbolica::zeta(3)+python::f(2)", {"python::f"}),
+            ("sqrt(3)*symbolica::zeta(3)", {"sqrt"}),
+            ("Zeta(3)+log(2)", {"Zeta"}),
+            ("EulerGamma*log(2)", {"EulerGamma"}),
+            ("vakint::HR(1,0,om1)", {"om1"}),
+        ]:
+            with self.subTest(bad=bad):
+                self.assertEqual(unknown_native_heads(bad), expected)
 
     def test_four_loop_window_is_fully_exact(self):
         manifest = data.read_json(data.ROOT / "4L/manifest.json")

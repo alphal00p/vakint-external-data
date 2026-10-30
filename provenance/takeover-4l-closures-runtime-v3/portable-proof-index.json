@@ -145,6 +145,58 @@
         "uncompressed_sha256": "d8dcb17af1b0ffa08db87a087b0b37dfafbf89b863bd00f8b30fd1be686b767a",
         "uncompressed_bytes": 47253
       }
+    },
+    {
+      "original_source": {
+        "path": "/shared/vhirschi/vacuum_masters_takeover/runs/P2-controls/controls.json",
+        "sha256": "b2a75b23413fdaf635f34b9b9743e2a652b4b652c313c9cd21d0aef742a2e0f5"
+      },
+      "portable_archive": {
+        "path": "provenance/takeover-4l-closures-runtime-v3/objects/b2a75b23413fdaf635f34b9b9743e2a652b4b652c313c9cd21d0aef742a2e0f5.json.gz",
+        "sha256": "80bf17733fe333a8849c21733d861b62468c603b7771f90b1f666dae84172102",
+        "bytes": 2168,
+        "uncompressed_sha256": "b2a75b23413fdaf635f34b9b9743e2a652b4b652c313c9cd21d0aef742a2e0f5",
+        "uncompressed_bytes": 19470
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/vhirschi/vacuum_masters_takeover/runs/P2-controls/analysis/smoke-W140.json",
+        "sha256": "b095cfebb03664cc81862fe345941027dcd568f2bb041d9bb854fadbab98e041"
+      },
+      "portable_archive": {
+        "path": "provenance/takeover-4l-closures-runtime-v3/objects/b095cfebb03664cc81862fe345941027dcd568f2bb041d9bb854fadbab98e041.json.gz",
+        "sha256": "8c09d296c50a1ad59a191da1d0b13fa81c45319f004c3002d93dc36a2f3ed4e4",
+        "bytes": 4171,
+        "uncompressed_sha256": "b095cfebb03664cc81862fe345941027dcd568f2bb041d9bb854fadbab98e041",
+        "uncompressed_bytes": 23063
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/vhirschi/vacuum_masters_takeover/runs/P2-controls/pr14-eps3/out/pr14-eps3-refit-control.json",
+        "sha256": "2f5bfe2641fcdc2b5cf07a8dde54779c2b960e9ba71a9e11edbda84ee8e508e4"
+      },
+      "portable_archive": {
+        "path": "provenance/takeover-4l-closures-runtime-v3/objects/2f5bfe2641fcdc2b5cf07a8dde54779c2b960e9ba71a9e11edbda84ee8e508e4.json.gz",
+        "sha256": "587c3117e59bb1972106e7641e4f01fb382bd627c87fa80e27a936ec214f12dd",
+        "bytes": 6853,
+        "uncompressed_sha256": "2f5bfe2641fcdc2b5cf07a8dde54779c2b960e9ba71a9e11edbda84ee8e508e4",
+        "uncompressed_bytes": 38132
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/vhirschi/vacuum_masters_takeover/runs/P2-controls/e12-closure/e12-closure-control.json",
+        "sha256": "5f52e7efa9a8ed2605aa7c8a60eb0d48a571dc745924d91388f6498841b736bc"
+      },
+      "portable_archive": {
+        "path": "provenance/takeover-4l-closures-runtime-v3/objects/5f52e7efa9a8ed2605aa7c8a60eb0d48a571dc745924d91388f6498841b736bc.json.gz",
+        "sha256": "8b46ddd46d3f371f86768006b93dc8e083f536b2c3c3c46b61269127e7b5afed",
+        "bytes": 1730,
+        "uncompressed_sha256": "5f52e7efa9a8ed2605aa7c8a60eb0d48a571dc745924d91388f6498841b736bc",
+        "uncompressed_bytes": 3626
+      }
     }
   ],
   "resolution": "Resolve portable_archive.path from the repository root; verify compressed and uncompressed SHA256 before reading. Original absolute paths are provenance only."
