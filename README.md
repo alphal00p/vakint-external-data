@@ -1,6 +1,20 @@
 # Vakint external data
 
-The 30 October 2026 source update closes the four-loop window: the 43 coefficients
+A second 30 October 2026 source update replaces the numerical values of 644 of the
+739 lower-loop coefficient rows (112 three- and four-loop masters) by the values of
+their published exact formulas. Each formula was evaluated at 20,100 and 20,200
+working digits, and a row was replaced only where the formula supports more validated
+digits than the stored value and the two agree within their combined errors. 585 rows
+now have 20,000 validated digits (3L 250, 4L 335). 59 four-loop rows whose formulas
+contain D=2 periods, `K5MomentTaylor` or MATAD constants now have 516 to 520 digits,
+limited by the validated digits of those constants. The other 95 rows keep their bytes:
+the 1L and 2L rows are already at 20,000 digits, 57 rows are exact zeros, and PR4/PR4d
+at epsilon zero and one and PR11d at epsilon zero keep their bounded 20,000-digit values.
+The new errors are first-order estimates (`error_quality` `"estimated"`), not interval
+proofs. Exact formulas, constants and the five-loop data are unchanged. See
+[`provenance/symbolic-expression-evaluation-v1`](provenance/symbolic-expression-evaluation-v1).
+
+The first 30 October 2026 source update closes the four-loop window: the 43 coefficients
 that were numerical fallbacks now have exact formulas, so all 444 coefficients
 (epsilon^-4 through epsilon^1) of the 74 four-loop masters are symbolic. The new
 formulas use known constants and named D=2-2delta periods, D=4-2eps master
@@ -120,14 +134,19 @@ update do not publish a GitHub release or change `data-latest`.
 The lower-loop data contains 739 numerical coefficient rows: 739 have exact
 symbolic expressions and 0 retain numerical fallbacks. These counts include
 49 additional orders preserved from the previous export.
-The six-coefficient windows have 20,000 validated digits at 1L and 2L, and
-200 digits at 3L with D6 at 2,000. At 4L, 26 complete windows now have at least
-500 digits; the other windows retain their existing precision. PR4/PR4d at
-epsilon zero and one, and PR11d at epsilon zero, retain their stronger
-20,000-digit values and bounded errors. The new 500-digit accuracy evidence
-uses independent numerical refinements through 520 digits and is not an
-interval proof. Per-coefficient limits remain authoritative; exact formulas
-can support greater precision subject to the finite periods they contain.
+The six-coefficient windows have 20,000 validated digits at 1L and 2L. Every
+nonzero three-loop coefficient now has 20,000 validated digits; the two exact-zero
+rows of D6 keep their 2,000-digit entries. At 4L, every nonzero coefficient has at
+least 516 digits: 34 windows have 20,000 digits in every row, 6 more in every nonzero
+row (their exact zeros keep 200 or 500-digit entries), and the other 34 contain rows
+at 516 to 520 digits. These values are
+evaluations of the exact formulas, with estimated errors (publication
+`symbolic-expression-evaluation-v1`). PR4/PR4d at epsilon zero and one, and PR11d at
+epsilon zero, retain their 20,000-digit values and bounded errors. The 28 October
+500-digit evidence used independent numerical refinements through 520 digits; it
+remains the validation data of the formulas and is not an interval proof.
+Per-coefficient limits remain authoritative; exact formulas can support greater
+precision subject to the finite periods they contain.
 An [additive oracle correction](validation/bessel-20000-anchor-one/coverage-correction.json)
 supplies the missing reference at the actual integration anchor 1; the original
 certificates and public numerical values are preserved unchanged.

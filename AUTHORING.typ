@@ -116,6 +116,29 @@ sources and duplicate authoritative rows are rejected. The PR11 before-images
 and former complete supplement are preserved separately in
 `provenance/numerical-precision-pr11d-before`.
 
+A third reserved source, `symbolic-expression-evaluation-v1`, admits numerical
+values evaluated from already published exact rows. Its `additional_sources` entry
+names only the kind `vakint.symbolic-expression-evaluation.v1` and the receipt
+`provenance/symbolic-expression-evaluation-v1/receipt.json`, which is also listed in
+`accepted_symbolic_publications` so that new supplement entries can bind their exact
+rows. Every receipt row records the master, epsilon power, exact-row digest, value
+digest, validated and stored digits, absolute error, the finite constants of the
+formula (validated digits and value digests) and the replaced value (digest, digits,
+error). Source validation requires `error_quality` `"estimated"` for exactly these rows
+and `"bounded"` for every other source, an exact row whose text matches the receipt,
+constants identical to the current `4L/constants.json` or bounded payloads with at
+least the claimed digits, a strict gain over the replaced digits, and
+`|new - replaced| <= absolute_error(new) + error(replaced) + unit(replaced)/2`, where
+`unit` is one unit of the last stored digit. The receipt cannot create exactness; it keeps the exact rows of its base
+commit. Digits are capped at 20,000 and at the validated digits of the formula's finite
+constants; the stored value carries eight more digits. Exact-zero rows and ties keep
+their bytes. When the replaced file was itself an earlier upgrade (the Bessel and PR11d
+entries), the entry records it in `replaced_files` with its before-image; a producer
+binding may name that file only if it differs from the current payload in selected
+rows alone. New entries use the before-image of the replaced file as
+`previous_files.numerical.json`. A precision upgrade may raise the digits of a
+supplemented order but never its availability.
+
 The source-only `validation/pr11d-20000` bundle contains the immutable
 `proof-index.json`, period, acceptance, scientific read-set and compressed proof
 objects. Source validation runs the independently reviewed, fixed-SHA standard
