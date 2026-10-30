@@ -225,12 +225,20 @@ and the alternating Euler sum `vakint::s6weak`. Their definitions and evidence a
 `4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json`.
 Every formula agrees with the independent 500-digit numerical values of all its
 masters to within 0.483 units of the last stored digit, and with the raw numerical
-profiles to 516.8 to 548 digits. Its recorded symbolic cap is the minimum of its
+profiles to 543.6 to 548.1 digits. Its recorded symbolic cap is the minimum of its
 constants' digits and its first-order statement budget (516 to 519 digits).
-The constants carry estimated, empirical two-profile errors, not interval proofs.
-Three of them, `PR10D2Eps4`, `PR12D2Eps3` and `PR14ep3`, have two-profile validation
-only; their independent-method control is pending. The formulas of P14/P49/P69 at
-epsilon one and P70 at epsilon one depend on them. The numerical rows remain
+The constants carry estimated, empirical two-profile errors, not interval proofs;
+each error includes the rounding of the stored decimal (one unit of its last digit).
+Every constant has an independent-method control, except `PR12D2Eps3`. Under the rule
+that such a control only has to catch systematic errors (30-50 digits suffice),
+`PR10D2Eps4` has one at 139.35 digits and `PR14ep3` at 424.0 digits. `PR12D2Eps3`
+has two-profile validation at 520 digits; its only control is implied by the P70
+epsilon-one closure itself (at least 421 digits, an inference), so that formula
+remains conditional on its label. `PR5D2Eps3` stays a numerical period here; its
+exact formula belongs to the later rewrite in an independent constant basis.
+Every `symbolic_definition` writes out its defining integral and each normalisation
+factor (measure, signs, exponential and Gamma factors, Taylor coefficient, unit
+mass); none refers to another named constant. The numerical rows remain
 the validation data and are unchanged, as are all numerical precisions. P17/P52/P74
 at epsilon zero keep their bounded 20,000-digit values next to the new exact row.
 P19/P73 at epsilon zero keep their `PR11dep0` formulas.
@@ -245,3 +253,6 @@ It uses the inert heads `vakint::Integral(f, vakint::Interval(x,a,b), ...)` (fir
 interval outermost), `vakint::LoopIntegral(D, f, vakint::k(1), ...)` (Euclidean,
 measure d^Dk/pi^(D/2) per loop), `vakint::SeriesCoefficient(f, x, x0, n)` (the
 coefficient of (x-x0)^n) and `vakint::EuclideanDot`. The prose `definition` is unchanged.
+`PR10D2`, `PR10D2Eps1` and `PR15D2` keep their producer routing in the metadata; their
+`symbolic_definition` uses the routing shared by the other Taylor coefficients of the same
+integral, and the metadata records the exact loop-momentum substitution between the two.

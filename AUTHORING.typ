@@ -196,8 +196,15 @@ index) and the period registry
 `4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json`.
 The absolute error is the exact sum of the recorded empirical error terms
 (per-profile claims, two-profile agreement or frozen two-profile models, and
-storage rounding), rounded up to six significant digits. `review.json` is an
-independent exact-rational recomputation. All these errors are estimated.
+storage rounding), rounded up to six significant digits. Every value cell lists
+the storage rounding of its published centre (`last_digit_unit`, one unit of the
+last stored digit) exactly once; `tools/d2_constants.py` rejects a cell without it
+or with an error below that unit. `review.json` is an independent exact-rational
+recomputation that checks the same. All these errors are estimated. When a lifted
+record keeps its producer routing in `definition_metadata` while its
+`symbolic_definition` uses another routing of the same graph, the metadata entry
+`symbolic_definition_routing_isomorphism` records the unimodular loop-momentum
+substitution and the edge map between them.
 
 Records may carry the optional field `symbolic_definition`, a Symbolica atom
 with full namespaces and Unicode constants. It states the defining (multiple)
@@ -212,7 +219,9 @@ Bound variables are `vakint::t`, `vakint::x(i)`, `vakint::k(i)`, `vakint::delta`
 `exp`, `log`, `sin`, the Euler constant, `gamma`, `zeta`, `polylog`,
 `bessel_k`, `bessel_i`, `real_part`, `imaginary_part`, pi, e, i and infinity.
 Extra factors (signs, `exp(4 EulerGamma delta)`, Gamma normalisations, Taylor
-variables) are written explicitly outside the heads. The prose `definition`
+variables) are written explicitly outside the heads. A definition never refers to
+another named constant: every defining integral and every normalisation factor is
+written out. The prose `definition`
 remains authoritative and unchanged. `finite_constants.binding` accepts this one
 optional field and lints it with the standard library: no float literals,
 balanced parentheses, only these heads and symbols, and every bound variable
