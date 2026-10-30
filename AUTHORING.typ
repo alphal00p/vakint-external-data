@@ -97,10 +97,16 @@ include rounding to the published decimal center. Earlier producer receipts
 remain unchanged; the new receipt explicitly supersedes their selected rows.
 The PR11d finite coefficient now has the same 20,000 validated and 20,008 stored
 digits for the three existing direct aliases P17, P52 and P74. Its positive
-outward error includes published-center rounding. It remains numerical-only;
-epsilon one retains its 200-digit capability and all negative exact-zero rows
-remain unchanged. `PR11dep0` resolves this existing master coefficient and is
-not an additional `constants.json` entry.
+outward error includes published-center rounding. The finite period never
+promotes exactness by itself. Since the takeover 4L closures, the
+epsilon-zero rows of P17, P52 and P74 are also exact. The supplement entry then
+carries an `accepted_symbolic` record with a per-entry `source_commit` and a
+`source_publication`, and `provenance.accepted_symbolic_publications` names that
+publication's receipt. `tools/precision_supplement.py` admits a symbolic
+PR11-source row only when this authenticated receipt binds the exact text of
+that row. The numerical capability stays at 20,000 bounded digits.
+`PR11dep0` resolves this existing master coefficient and is not an additional
+`constants.json` entry.
 
 The cumulative supplement retains the original Bessel provenance unchanged.
 Its optional `provenance.additional_sources` map declares the fixed PR11 source
@@ -174,6 +180,44 @@ fail validation. Original four K5 records are retained exactly, and the former
 runtime payload, receipt and manifests are preserved as byte-exact before-images.
 The selected D2 values and their error metadata are carried in the ordinary
 authenticated `4L/constants.json`; consumers do not execute the source verifier.
+
+The adapter `takeover-4l-closures-v3`
+(`provenance/takeover-4l-closures-runtime-v3`) owns 46 records. It is the
+first adapter that supersedes earlier ones. It lifts `PR7D2`, `PR7D2Eps1`,
+`PR10D2`, `PR10D2Eps1` and `PR15D2` to 520 validated digits and adds the
+named periods of the takeover 4L closures. `tools/finite_constants.py`
+validates it first. It then replays the superseded `independent-d2-v1` and
+`independent-d2-taylor01-v2` projections unchanged against the adapter's
+authenticated before-image `before/4L/constants.json`, never against the new
+records, and requires the superseded symbols to be exactly the symbols of
+those two adapters. `tools/d2_constants.py --adapter takeover-v3` replays every
+value cell from the archived producer registries (`objects/`, portable proof
+index) and the period registry
+`4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json`.
+The absolute error is the exact sum of the recorded empirical error terms
+(per-profile claims, two-profile agreement or frozen two-profile models, and
+storage rounding), rounded up to six significant digits. `review.json` is an
+independent exact-rational recomputation. All these errors are estimated.
+
+Records may carry the optional field `symbolic_definition`, a Symbolica atom
+with full namespaces and Unicode constants. It states the defining (multiple)
+integral with the inert heads `vakint::Integral(f, vakint::Interval(x, a, b),
+...)` (iterated, first interval outermost, bounds may be infinite or depend on
+outer variables), `vakint::LoopIntegral(D, f, vakint::k(1), ..., vakint::k(L))`
+(the product of Euclidean `d^D k_i / pi^(D/2)` integrals of a function `f` of
+`vakint::EuclideanDot` products), `vakint::SeriesCoefficient(f, x, x0, n)` (the
+coefficient of `(x-x0)^n`, not the n-th derivative) and `vakint::EuclideanDot`.
+Bound variables are `vakint::t`, `vakint::x(i)`, `vakint::k(i)`, `vakint::delta`
+(D = 2-2 delta) and `vakint::ep` (d = 4-2 ep). Native heads are restricted to
+`exp`, `log`, `sin`, the Euler constant, `gamma`, `zeta`, `polylog`,
+`bessel_k`, `bessel_i`, `real_part`, `imaginary_part`, pi, e, i and infinity.
+Extra factors (signs, `exp(4 EulerGamma delta)`, Gamma normalisations, Taylor
+variables) are written explicitly outside the heads. The prose `definition`
+remains authoritative and unchanged. `finite_constants.binding` accepts this one
+optional field and lints it with the standard library: no float literals,
+balanced parentheses, only these heads and symbols, and every bound variable
+inside its integral or series head. Vakint parses and validates the atom
+natively.
 
 == Graph conventions and coverage
 

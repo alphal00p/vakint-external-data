@@ -1,11 +1,19 @@
 # Vakint external data
 
-The 28 October 2026 source update gives all six coefficients (epsilon^-4 through
-epsilon^1) of 26 selected four-loop masters at least 500 validated digits. All
-43 remaining numerical fallbacks have at least that precision. The three PR11d
-finite aliases retain their stronger 20,000-digit values and bounded evidence.
-Known formulas, supplementary orders and the five-loop publication are preserved.
-This source update creates no new release and does not change `data-latest`.
+The 30 October 2026 source update closes the four-loop window: the 43 coefficients
+that were numerical fallbacks now have exact formulas, so all 444 coefficients
+(epsilon^-4 through epsilon^1) of the 74 four-loop masters are symbolic. The new
+formulas use known constants and named D=2-2delta periods, D=4-2eps master
+coefficients and MATAD constants installed in `4L/constants.json` with 520 to 650
+validated digits (`s6weak`: 20,000). Each formula reproduces the independent
+500-digit numerical values of its masters. Every constant record now also carries a
+`symbolic_definition`, a Symbolica atom of its defining integral. Numerical values,
+their precision and the five-loop publication are unchanged. This source update
+creates no new release and does not change `data-latest`.
+
+The 28 October 2026 source update gave all six coefficients of 26 selected
+four-loop masters at least 500 validated digits; the three PR11d finite aliases
+retain their stronger 20,000-digit values and bounded evidence.
 
 Versioned native RustRed reductions, master-integral Laurent coefficients and
 graphs, and prepared reduction caches for
@@ -109,8 +117,8 @@ entries. The historical all-loop `tools/data.py generate` command refuses to
 overwrite a current five-loop publication. Staging and installing a source
 update do not publish a GitHub release or change `data-latest`.
 
-The lower-loop data contains 739 numerical coefficient rows: 696 have exact
-symbolic expressions and 43 retain numerical fallbacks. These counts include
+The lower-loop data contains 739 numerical coefficient rows: 739 have exact
+symbolic expressions and 0 retain numerical fallbacks. These counts include
 49 additional orders preserved from the previous export.
 The six-coefficient windows have 20,000 validated digits at 1L and 2L, and
 200 digits at 3L with D6 at 2,000. At 4L, 26 complete windows now have at least
@@ -201,3 +209,39 @@ seven unchanged previous bindings are recorded under
 [`provenance/independent-d2-taylor01-runtime-v2`](provenance/independent-d2-taylor01-runtime-v2).
 The source cap stays at 215 digits despite longer stored decimals. No producer
 record, numerical coefficient or existing bounded constant binding is changed.
+
+The 30 October 2026 four-loop closures (publication
+[`provenance/takeover-4L-closures-v1`](provenance/takeover-4L-closures-v1)) give the
+last 43 four-loop coefficients exact formulas. They cover 17 distinct directions of
+the PR9, PR9d, PR15, PR11, PR11d, PR12 and PR0 masters and their alias combinations
+on 26 masters. Each formula is an exact composition of accepted dimension-shift and
+DREAM maps with named periods. The new periods are positive-Euclidean D=2-2delta Taylor
+coefficients `vakint::<X>D2Eps<k>` of the hat integrals
+X_hat(delta) = exp(4 EulerGamma delta) int prod d^Dk/pi^(D/2) prod 1/(q^2+1)^a, with
+D = 2-2delta. They are complemented by the DREAM banana coefficients
+`vakint::K5MomentTaylor(k,j)`, the D=4-2eps coefficients `vakint::PR14ep2`/`PR14ep3`
+of master P31, the MATAD weight-7 constants `vakint::T111bar5`, `BNbar5`, `D5bar3`
+and the alternating Euler sum `vakint::s6weak`. Their definitions and evidence are in
+`4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json`.
+Every formula agrees with the independent 500-digit numerical values of all its
+masters to within 0.483 units of the last stored digit, and with the raw numerical
+profiles to 516.8 to 548 digits. Its recorded symbolic cap is the minimum of its
+constants' digits and its first-order statement budget (516 to 519 digits).
+The constants carry estimated, empirical two-profile errors, not interval proofs.
+Three of them, `PR10D2Eps4`, `PR12D2Eps3` and `PR14ep3`, have two-profile validation
+only; their independent-method control is pending. The formulas of P14/P49/P69 at
+epsilon one and P70 at epsilon one depend on them. The numerical rows remain
+the validation data and are unchanged, as are all numerical precisions. P17/P52/P74
+at epsilon zero keep their bounded 20,000-digit values next to the new exact row.
+P19/P73 at epsilon zero keep their `PR11dep0` formulas.
+
+The finite-constant adapter `takeover-4l-closures-v3`
+([`provenance/takeover-4l-closures-runtime-v3`](provenance/takeover-4l-closures-runtime-v3))
+lifts `PR7D2`, `PR7D2Eps1`, `PR10D2`, `PR10D2Eps1` and `PR15D2` from 215 to 520
+validated digits and adds 41 constants. The superseded 215-digit projections still
+replay unchanged against the archived before-image. Each `constants.json` record may
+carry an optional `symbolic_definition`, a Symbolica atom of the defining integral.
+It uses the inert heads `vakint::Integral(f, vakint::Interval(x,a,b), ...)` (first
+interval outermost), `vakint::LoopIntegral(D, f, vakint::k(1), ...)` (Euclidean,
+measure d^Dk/pi^(D/2) per loop), `vakint::SeriesCoefficient(f, x, x0, n)` (the
+coefficient of (x-x0)^n) and `vakint::EuclideanDot`. The prose `definition` is unchanged.
