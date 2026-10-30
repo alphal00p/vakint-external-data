@@ -9,7 +9,7 @@ import gzip
 import hashlib
 import io
 import json
-from decimal import Decimal, localcontext
+from decimal import ROUND_CEILING, ROUND_FLOOR, Decimal, localcontext
 from pathlib import Path
 
 import data
@@ -27,6 +27,11 @@ def reference(root, path):
 
 
 def archive(root, index, expected):
+    decoded, entry = archive_bytes(root, index, expected)
+    return json.loads(decoded), entry
+
+
+def archive_bytes(root, index, expected):
     entries = [
         e for e in index["archives"] if e["original_source"]["sha256"] == expected
     ]
@@ -46,7 +51,7 @@ def archive(root, index, expected):
         raise ValueError("independent D2 source acceptance or projection differs")
     if not (digest(decoded) == entry["uncompressed_sha256"] == expected):
         raise ValueError("independent D2 source acceptance or projection differs")
-    return json.loads(decoded), entry
+    return decoded, entry
 
 
 def scaled(item):
@@ -524,23 +529,169 @@ def _derive_taylor01(root):
     ]
 
 
+TAKEOVER_V3_REGISTRY = (
+    "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json"
+)
+TAKEOVER_V3_INDEX = "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json"
+TAKEOVER_V3_SCHEMA = "vakint.external-data.takeover-4L-closures-period-registry.v3"
+
+
+def _pointer(document, pointer):
+    if not isinstance(pointer, str) or not pointer.startswith("/"):
+        raise ValueError("takeover D2 source pointer differs")
+    for part in pointer.split("/")[1:]:
+        part = part.replace("~1", "/").replace("~0", "~")
+        document = document[int(part)] if isinstance(document, list) else document[part]
+    return document
+
+
+def _round_up(value, digits=6):
+    """Round a nonnegative decimal upward to `digits` significant digits."""
+    if value == 0:
+        return value
+    quantum = Decimal(1).scaleb(value.adjusted() - digits + 1)
+    return value.quantize(quantum, rounding=ROUND_CEILING)
+
+
+def takeover_v3_error(center, source, terms):
+    """Exactly combine the listed empirical error terms of one archived source."""
+    total = Decimal(0)
+    for term in terms:
+        kind = term["kind"]
+        if kind == "abs":
+            part = Decimal(_pointer(source, term["pointer"]))
+        elif kind == "rel_floor":
+            part = abs(center) * Decimal(10) ** -(
+                int(Decimal(_pointer(source, term["pointer"])).to_integral_value(rounding=ROUND_FLOOR))
+                + term["offset"]
+            )
+        elif kind == "last_digit_unit":
+            part = Decimal(1).scaleb(center.as_tuple().exponent)
+        elif kind == "abs_difference":
+            first, second = (Decimal(_pointer(source, p)) for p in term["pointers"])
+            part = abs(first - second) * term["factor"]
+        else:
+            raise ValueError("unknown takeover D2 error term")
+        if not part.is_finite() or part < 0:
+            raise ValueError("takeover D2 error term differs")
+        total += part
+    return _round_up(total)
+
+
+def derive_takeover_v3(root):
+    """Project the takeover 4L closure constants from their archived validated producers."""
+    with localcontext() as context:
+        # Sources contain at most a few hundred (s6weak: 20300) significant digits.
+        context.prec = 25000
+        return _derive_takeover_v3(root)
+
+
+def _derive_takeover_v3(root):
+    registry = json.loads(data.checked_path(root, TAKEOVER_V3_REGISTRY).read_bytes())
+    index = json.loads(data.checked_path(root, TAKEOVER_V3_INDEX).read_bytes())
+    if (
+        registry.get("schema") != TAKEOVER_V3_SCHEMA
+        or registry.get("portable_validation_proof_index")
+        != reference(root, TAKEOVER_V3_INDEX)
+        or registry.get("no_new_numerical_calculation_in_projection") is not True
+        or registry.get("empirical_not_interval_proof") is not True
+    ):
+        raise ValueError("takeover D2 registry authentication differs")
+    records = []
+    symbols = set()
+    for period in registry["periods"]:
+        cell = period["value_cell"]
+        symbol = period["public_symbol"]
+        decoded, source_ref = archive_bytes(root, index, cell["source_uncompressed_sha256"])
+        source = json.loads(decoded, parse_float=Decimal)
+        center = _pointer(source, cell["center_json_pointer"])
+        if not isinstance(center, str):
+            raise ValueError("takeover D2 center must be a decimal string")
+        if cell["negate_raw_to_hat"]:
+            center = center[1:] if center.startswith("-") else "-" + center
+        if center != cell["center"]:
+            raise ValueError("takeover D2 center differs from its archived source")
+        value = Decimal(center)
+        error = takeover_v3_error(value, source, cell["error_terms"])
+        digits = cell["validated_significant_digits"]
+        stored = len(value.as_tuple().digits)
+        if (
+            symbol in symbols
+            or str(error) != cell["absolute_error"]
+            or type(digits) is not int
+            or not value.is_finite()
+            or value == 0
+            or stored <= digits
+            or not error < abs(value) * Decimal(10) ** -digits
+        ):
+            raise ValueError("takeover D2 finite cap differs")
+        symbols.add(symbol)
+        provenance = {
+            "source_kind": period["source_kind"],
+            "error_authority": "both validated empirical profile neighbourhoods; not an interval certificate",
+            "status": period["status"],
+            "validation": period["validation"],
+            "definition_metadata": period["definition_metadata"],
+            "definition": reference(root, TAKEOVER_V3_REGISTRY),
+            "portable_proof_index": reference(root, TAKEOVER_V3_INDEX),
+            "source": source_ref,
+            "center_json_pointer": cell["center_json_pointer"],
+            "center_negated_raw_to_hat": cell["negate_raw_to_hat"],
+            "error_terms": cell["error_terms"],
+            "error_rule": "sum of the listed archived error terms (rel_floor: |center|*10^-(floor(digits)+offset)), rounded up to six significant digits",
+            "accepted_significant_digits": digits,
+            "stored_digits_do_not_extend_source_cap": True,
+        }
+        if "supersedes" in period:
+            provenance["supersedes"] = period["supersedes"]
+        records.append(
+            {
+                "symbol": symbol,
+                "value": center,
+                "significant_digits": digits,
+                "absolute_error": str(error),
+                "error_quality": "estimated",
+                "definition": period["mathematical_definition"],
+                "symbolic_definition": period["symbolic_definition"],
+                "provenance": provenance,
+            }
+        )
+    retained = registry["retained_symbolic_definitions"]
+    if not isinstance(retained, dict) or set(retained) & symbols:
+        raise ValueError("takeover D2 retained definitions differ")
+    return (
+        records,
+        [reference(root, path) for path in [TAKEOVER_V3_REGISTRY, TAKEOVER_V3_INDEX]],
+        retained,
+    )
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("root", type=Path)
     parser.add_argument("output", type=Path)
-    parser.add_argument("--adapter", choices=["d2-v1", "taylor01-v2"], default="d2-v1")
+    parser.add_argument(
+        "--adapter", choices=["d2-v1", "taylor01-v2", "takeover-v3"], default="d2-v1"
+    )
     args = parser.parse_args()
     with localcontext() as context:
         context.prec = 2000
-        records, readset = (
-            derive(args.root) if args.adapter == "d2-v1" else derive_taylor01(args.root)
-        )
-    filename = "constants-d2.json" if args.adapter == "d2-v1" else "constants-d2-taylor01.json"
-    schema = (
-        "vakint.external-data.independent-d2-runtime-projection.v1"
-        if args.adapter == "d2-v1"
-        else "vakint.external-data.independent-d2-taylor01-runtime-projection.v2"
-    )
+        if args.adapter == "d2-v1":
+            records, readset = derive(args.root)
+        elif args.adapter == "taylor01-v2":
+            records, readset = derive_taylor01(args.root)
+        else:
+            records, readset, _ = derive_takeover_v3(args.root)
+    filename = {
+        "d2-v1": "constants-d2.json",
+        "taylor01-v2": "constants-d2-taylor01.json",
+        "takeover-v3": "constants-takeover-v3.json",
+    }[args.adapter]
+    schema = {
+        "d2-v1": "vakint.external-data.independent-d2-runtime-projection.v1",
+        "taylor01-v2": "vakint.external-data.independent-d2-taylor01-runtime-projection.v2",
+        "takeover-v3": "vakint.external-data.takeover-4l-closures-runtime-projection.v3",
+    }[args.adapter]
     args.output.mkdir(parents=True, exist_ok=True)
     (args.output / filename).write_text(json.dumps(records, indent=2) + "\n")
     (args.output / "projection.json").write_text(

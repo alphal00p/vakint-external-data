@@ -1,0 +1,97 @@
+{
+  "schema": "vakint.external-data.takeover-4l-closures-runtime-projection.v3",
+  "accepted": true,
+  "no_new_numerical_calculation": true,
+  "no_master_coefficient_inversion": true,
+  "all_errors_estimated_not_bounded": true,
+  "readset": [
+    {
+      "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
+      "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+    },
+    {
+      "path": "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json",
+      "sha256": "746789bb1224bacb2bf00e88298fed0efdd7b6ca0e3cabaef941cfce51a8d9cd"
+    }
+  ],
+  "symbols": [
+    "vakint::PR7D2",
+    "vakint::PR10D2",
+    "vakint::PR15D2",
+    "vakint::PR10D2Eps1",
+    "vakint::PR7D2Eps1",
+    "vakint::PR10D2Eps2",
+    "vakint::PR15D2Eps1",
+    "vakint::PR15D2Eps2",
+    "vakint::PR7D2Eps2",
+    "vakint::K5MomentTaylor(1,2)",
+    "vakint::K5MomentTaylor(3,2)",
+    "vakint::K5MomentTaylor(1,3)",
+    "vakint::K5MomentTaylor(1,4)",
+    "vakint::K5MomentTaylor(3,3)",
+    "vakint::K5MomentTaylor(3,4)",
+    "vakint::PR5D2Eps4",
+    "vakint::PR5D2Eps3",
+    "vakint::PR9D2Eps1",
+    "vakint::PR9D2Eps2",
+    "vakint::PR9D2Eps3",
+    "vakint::PR9pD2Eps2",
+    "vakint::PR9pD2Eps3",
+    "vakint::PR10D2Eps3",
+    "vakint::PR15D2Eps3",
+    "vakint::PR7D2Eps3",
+    "vakint::PR9D2Eps4",
+    "vakint::PR9pD2Eps4",
+    "vakint::PR7D2Eps4",
+    "vakint::PR10D2Eps4",
+    "vakint::PR11D2Eps4",
+    "vakint::PR11dD2Eps4",
+    "vakint::PR11D2Eps2",
+    "vakint::PR11D2Eps3",
+    "vakint::PR11dD2Eps1",
+    "vakint::PR11dD2Eps2",
+    "vakint::PR11dD2Eps3",
+    "vakint::PR12D2Eps2",
+    "vakint::PR12D2Eps3",
+    "vakint::PR0D2Eps1",
+    "vakint::PR0D2Eps2",
+    "vakint::PR14ep2",
+    "vakint::PR14ep3",
+    "vakint::T111bar5",
+    "vakint::BNbar5",
+    "vakint::D5bar3",
+    "vakint::s6weak"
+  ],
+  "superseded_symbols": [
+    "vakint::PR10D2",
+    "vakint::PR10D2Eps1",
+    "vakint::PR15D2",
+    "vakint::PR7D2",
+    "vakint::PR7D2Eps1"
+  ],
+  "superseded_adapters": [
+    "independent-d2-taylor01-v2",
+    "independent-d2-v1"
+  ],
+  "source_payload": {
+    "path": "provenance/takeover-4l-closures-runtime-v3/constants-takeover-v3.json",
+    "sha256": "544948706294194829a9d979d6638c7bedf805312fed80b367af2d272240e0dd"
+  },
+  "previous_runtime_payload": {
+    "path": "provenance/takeover-4l-closures-runtime-v3/before/4L/constants.json",
+    "sha256": "cf38a751725f9e3ea130d55f871a9591c78e57bb99e7c5e1ec08c5c57b0474fa"
+  },
+  "previous_binding_receipt": {
+    "path": "provenance/takeover-4l-closures-runtime-v3/before/provenance/finite-constant-bindings.json",
+    "sha256": "f0f3888c2c2991f3da7431a7e8727beeb4be8baffecea0885af41c8c1c7f6402"
+  },
+  "derivation": "tools/d2_constants.py --adapter takeover-v3 replays every value cell from the archived validated producer registries (portable proof index) and combines the recorded empirical error terms exactly; no numerical engine",
+  "independent_review": {
+    "path": "provenance/takeover-4l-closures-runtime-v3/review.json",
+    "sha256": "4bf2bcb181ccc759f20cd7ae97b80e82129c4022b9be8b97cacef949e95296a9"
+  },
+  "output_sha256": "544948706294194829a9d979d6638c7bedf805312fed80b367af2d272240e0dd",
+  "script_sha256": "a15e35426cdd78dd3b854131a7fe1df485578085b6f5861d278580338d13f1d8",
+  "acceptance_status": "takeover publication (user-restarted reconstruction); decisions D1(a), D3(a), D5(a); not a codex-2 Root adoption",
+  "base_commit": "ca49f32854050fdaa434ad11d743e6db88adb674"
+}

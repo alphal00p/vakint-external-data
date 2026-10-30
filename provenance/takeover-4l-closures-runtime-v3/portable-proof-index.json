@@ -1,0 +1,151 @@
+{
+  "schema": "vakint.external-data.takeover-4l-closures-runtime-proof-index.v3",
+  "base_commit": "ca49f32854050fdaa434ad11d743e6db88adb674",
+  "source_path_names_are_historical_only": true,
+  "archives": [
+    {
+      "original_source": {
+        "path": "/shared/vhirschi/vacuum_masters_takeover/ledger/v2-prep/P1/leaves-515.json",
+        "sha256": "a0b631c177cb332a0b26e950fa1c6e893dfc05cb6bf09654f81a830637803a47"
+      },
+      "portable_archive": {
+        "path": "provenance/takeover-4l-closures-runtime-v3/objects/a0b631c177cb332a0b26e950fa1c6e893dfc05cb6bf09654f81a830637803a47.json.gz",
+        "sha256": "d64beffddbb45a51950136de71ed3c6781f9a3b5539145a7774e1c93db5bbf5c",
+        "bytes": 14751,
+        "uncompressed_sha256": "a0b631c177cb332a0b26e950fa1c6e893dfc05cb6bf09654f81a830637803a47",
+        "uncompressed_bytes": 105980
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/external-data/build/s6weak/s6weak-evidence.json",
+        "sha256": "2baa23acb0c564d8c57fe5aa29db4967f6b7369b283211e00bf9cf07c439fca1"
+      },
+      "portable_archive": {
+        "path": "provenance/takeover-4l-closures-runtime-v3/objects/2baa23acb0c564d8c57fe5aa29db4967f6b7369b283211e00bf9cf07c439fca1.json.gz",
+        "sha256": "e6aa1000779fbe89e016da6431608171b38ed5bbc6ebfc2f5ea6c6b7b3e51bdf",
+        "bytes": 11334,
+        "uncompressed_sha256": "2baa23acb0c564d8c57fe5aa29db4967f6b7369b283211e00bf9cf07c439fca1",
+        "uncompressed_bytes": 41334
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/vhirschi/vacuum_masters_takeover/runs/C5-P7-jet3/periods.json",
+        "sha256": "6b61eb865c68de272e8b1515ecf57975e0fe7a707c99c1c434b065a23b4ea208"
+      },
+      "portable_archive": {
+        "path": "provenance/takeover-4l-closures-runtime-v3/objects/6b61eb865c68de272e8b1515ecf57975e0fe7a707c99c1c434b065a23b4ea208.json.gz",
+        "sha256": "ea840006404fc0bb72e54e25f759bd3b00a0a7b842a491b3a708a2ee14a298d9",
+        "bytes": 6657,
+        "uncompressed_sha256": "6b61eb865c68de272e8b1515ecf57975e0fe7a707c99c1c434b065a23b4ea208",
+        "uncompressed_bytes": 22878
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/vhirschi/vacuum_masters_takeover/runs/D-PR0-K33/registry.json",
+        "sha256": "a28fb68e06db912e6d0f4d495798875c500a857d582c6a22c1eeaa81d7d6fb13"
+      },
+      "portable_archive": {
+        "path": "provenance/takeover-4l-closures-runtime-v3/objects/a28fb68e06db912e6d0f4d495798875c500a857d582c6a22c1eeaa81d7d6fb13.json.gz",
+        "sha256": "73cda6b3ba3341882ec0438e9ff2a5948a73339b4b7b4855478c84098e186989",
+        "bytes": 10740,
+        "uncompressed_sha256": "a28fb68e06db912e6d0f4d495798875c500a857d582c6a22c1eeaa81d7d6fb13",
+        "uncompressed_bytes": 39123
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/vhirschi/vacuum_masters_takeover/runs/D-PR12-prism/registry.json",
+        "sha256": "f6627fcc044b2dcd97f2703409ecd32b0a49f73e6e3b73da6e338de7ff96b2c7"
+      },
+      "portable_archive": {
+        "path": "provenance/takeover-4l-closures-runtime-v3/objects/f6627fcc044b2dcd97f2703409ecd32b0a49f73e6e3b73da6e338de7ff96b2c7.json.gz",
+        "sha256": "d5a38f46d6daecda481fd05e824bb9b70f003602560b60c94ace3cc6d42e6f5c",
+        "bytes": 17092,
+        "uncompressed_sha256": "f6627fcc044b2dcd97f2703409ecd32b0a49f73e6e3b73da6e338de7ff96b2c7",
+        "uncompressed_bytes": 52278
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/vhirschi/vacuum_masters_takeover/runs/D-X8-wheel/registry.json",
+        "sha256": "082cc879f47aeab0d028ad2ae3d86c075999d2fcb70cd8f192d6ff2666c06420"
+      },
+      "portable_archive": {
+        "path": "provenance/takeover-4l-closures-runtime-v3/objects/082cc879f47aeab0d028ad2ae3d86c075999d2fcb70cd8f192d6ff2666c06420.json.gz",
+        "sha256": "4ad0c9d93f9189bc017c6e854074d668c832713b4ca6b94bcb30a3c691769dd1",
+        "bytes": 5892,
+        "uncompressed_sha256": "082cc879f47aeab0d028ad2ae3d86c075999d2fcb70cd8f192d6ff2666c06420",
+        "uncompressed_bytes": 19954
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/vhirschi/vacuum_masters_takeover/runs/E-PR11-eps1/registry.json",
+        "sha256": "222ba5d668a13f4e21ac7c6f9402029fa8e272c8b546a5b7c13d989ecf8e20ca"
+      },
+      "portable_archive": {
+        "path": "provenance/takeover-4l-closures-runtime-v3/objects/222ba5d668a13f4e21ac7c6f9402029fa8e272c8b546a5b7c13d989ecf8e20ca.json.gz",
+        "sha256": "af9845b10424526e0c9f610c9c6437d881e8f3ab83fc8d72e434672bbda9a562",
+        "bytes": 9201,
+        "uncompressed_sha256": "222ba5d668a13f4e21ac7c6f9402029fa8e272c8b546a5b7c13d989ecf8e20ca",
+        "uncompressed_bytes": 22816
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/vhirschi/vacuum_masters_takeover/runs/E-PR12-eps1/out/lower-leaves.json",
+        "sha256": "b661453a5288a3a96c6e593e36a0bd449e7eaa8d56a47df8ea235223cccdd464"
+      },
+      "portable_archive": {
+        "path": "provenance/takeover-4l-closures-runtime-v3/objects/b661453a5288a3a96c6e593e36a0bd449e7eaa8d56a47df8ea235223cccdd464.json.gz",
+        "sha256": "6e7485af94299abc1ba5b68447aafbb1e8fb0a068c63431060b7ddfd1ceaf86b",
+        "bytes": 5802,
+        "uncompressed_sha256": "b661453a5288a3a96c6e593e36a0bd449e7eaa8d56a47df8ea235223cccdd464",
+        "uncompressed_bytes": 25934
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/vhirschi/vacuum_masters_takeover/runs/E-Sunset2-eps5/registry.json",
+        "sha256": "aab2a7af5760d6ac10f169425b3718b848f622e3475ee47a393f11315e25785a"
+      },
+      "portable_archive": {
+        "path": "provenance/takeover-4l-closures-runtime-v3/objects/aab2a7af5760d6ac10f169425b3718b848f622e3475ee47a393f11315e25785a.json.gz",
+        "sha256": "3414d77ca2c2b4634b6e03c211597120844ec67bd9800222690b9b33ae573bbc",
+        "bytes": 7372,
+        "uncompressed_sha256": "aab2a7af5760d6ac10f169425b3718b848f622e3475ee47a393f11315e25785a",
+        "uncompressed_bytes": 27096
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/vhirschi/vacuum_masters_takeover/runs/PR14-producer/registry.json",
+        "sha256": "1a5dd7751af285ed450f8ec5c675daf07a6789499b15988b26aa5ef6d105e926"
+      },
+      "portable_archive": {
+        "path": "provenance/takeover-4l-closures-runtime-v3/objects/1a5dd7751af285ed450f8ec5c675daf07a6789499b15988b26aa5ef6d105e926.json.gz",
+        "sha256": "9f9c3970d473618062f70b5aa5b4cef7d9e0d9b0a042a844c404b33b458b8ba7",
+        "bytes": 35096,
+        "uncompressed_sha256": "1a5dd7751af285ed450f8ec5c675daf07a6789499b15988b26aa5ef6d105e926",
+        "uncompressed_bytes": 117187
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/vhirschi/vacuum_masters_takeover/runs/PR9-carrier-delta3-v1/periods.json",
+        "sha256": "d8dcb17af1b0ffa08db87a087b0b37dfafbf89b863bd00f8b30fd1be686b767a"
+      },
+      "portable_archive": {
+        "path": "provenance/takeover-4l-closures-runtime-v3/objects/d8dcb17af1b0ffa08db87a087b0b37dfafbf89b863bd00f8b30fd1be686b767a.json.gz",
+        "sha256": "4def3c416380ec114693afe1b5cf023eed99b4021176619bd48fb867c61ba8db",
+        "bytes": 14358,
+        "uncompressed_sha256": "d8dcb17af1b0ffa08db87a087b0b37dfafbf89b863bd00f8b30fd1be686b767a",
+        "uncompressed_bytes": 47253
+      }
+    }
+  ],
+  "resolution": "Resolve portable_archive.path from the repository root; verify compressed and uncompressed SHA256 before reading. Original absolute paths are provenance only."
+}
