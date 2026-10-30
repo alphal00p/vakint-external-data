@@ -1,0 +1,172 @@
+{
+  "schema": "vakint.external-data.preimage-history.v1",
+  "base_commit": "ca49f32854050fdaa434ad11d743e6db88adb674",
+  "parent_commit": "1e60f7858478ab9975664effbeaa8076e7bb844f",
+  "files": [
+    {
+      "path": "4L/manifest.json",
+      "preserved_path": "provenance/takeover-4L-closures-v1-before/4L/manifest.json",
+      "sha256": "6972a1ea6a0a1b61a2c98f5a09872dd91f5960890171c0c9251447082f9d64b3"
+    },
+    {
+      "path": "4L/masters/P10/symbolic.json",
+      "preserved_path": "provenance/takeover-4L-closures-v1-before/4L/masters/P10/symbolic.json",
+      "sha256": "86bcc5687847278eadb8ea20c0b3e62c047a0ae056e9707aab42f3bef70ca040"
+    },
+    {
+      "path": "4L/masters/P14/symbolic.json",
+      "preserved_path": "provenance/takeover-4L-closures-v1-before/4L/masters/P14/symbolic.json",
+      "sha256": "720c50931aca1b3c70987d7d452284090a99ccc4c6afc2acd3a07b3ebf053669"
+    },
+    {
+      "path": "4L/masters/P15/symbolic.json",
+      "preserved_path": "provenance/takeover-4L-closures-v1-before/4L/masters/P15/symbolic.json",
+      "sha256": "891580509dfc58c3d02507ba27e2f982050275cccc2f55da50e373e239b396e6"
+    },
+    {
+      "path": "4L/masters/P16/symbolic.json",
+      "preserved_path": "provenance/takeover-4L-closures-v1-before/4L/masters/P16/symbolic.json",
+      "sha256": "6853e9c1e6b679841799bcb3b10b29bafbb4bd1a573ad614a978195887ffd03d"
+    },
+    {
+      "path": "4L/masters/P17/symbolic.json",
+      "preserved_path": "provenance/takeover-4L-closures-v1-before/4L/masters/P17/symbolic.json",
+      "sha256": "cea9eb73b39fa833d30c31ee37eaa8a3de2669903b86acbb35227f0f8cdaecd5"
+    },
+    {
+      "path": "4L/masters/P18/symbolic.json",
+      "preserved_path": "provenance/takeover-4L-closures-v1-before/4L/masters/P18/symbolic.json",
+      "sha256": "a93bd689c930cc741cff9e4e877502590d09071b839f467a34081b6e0e27a606"
+    },
+    {
+      "path": "4L/masters/P19/symbolic.json",
+      "preserved_path": "provenance/takeover-4L-closures-v1-before/4L/masters/P19/symbolic.json",
+      "sha256": "1ebebb62014999e32cf5811b4fb28bcedb5429a0ff22687ffaaa6eee01d8cefd"
+    },
+    {
+      "path": "4L/masters/P32/symbolic.json",
+      "preserved_path": "provenance/takeover-4L-closures-v1-before/4L/masters/P32/symbolic.json",
+      "sha256": "8405ae84e3c38bd7a2628d73a2902913b050b4ddb679ca29e80f1a7714f1c87b"
+    },
+    {
+      "path": "4L/masters/P34/symbolic.json",
+      "preserved_path": "provenance/takeover-4L-closures-v1-before/4L/masters/P34/symbolic.json",
+      "sha256": "e76eeacec74dd7e4ac895810cf2e0798c20b2348652301f1e4141559d7175c79"
+    },
+    {
+      "path": "4L/masters/P35/symbolic.json",
+      "preserved_path": "provenance/takeover-4L-closures-v1-before/4L/masters/P35/symbolic.json",
+      "sha256": "6853e9c1e6b679841799bcb3b10b29bafbb4bd1a573ad614a978195887ffd03d"
+    },
+    {
+      "path": "4L/masters/P43/symbolic.json",
+      "preserved_path": "provenance/takeover-4L-closures-v1-before/4L/masters/P43/symbolic.json",
+      "sha256": "8405ae84e3c38bd7a2628d73a2902913b050b4ddb679ca29e80f1a7714f1c87b"
+    },
+    {
+      "path": "4L/masters/P45/symbolic.json",
+      "preserved_path": "provenance/takeover-4L-closures-v1-before/4L/masters/P45/symbolic.json",
+      "sha256": "86bcc5687847278eadb8ea20c0b3e62c047a0ae056e9707aab42f3bef70ca040"
+    },
+    {
+      "path": "4L/masters/P49/symbolic.json",
+      "preserved_path": "provenance/takeover-4L-closures-v1-before/4L/masters/P49/symbolic.json",
+      "sha256": "720c50931aca1b3c70987d7d452284090a99ccc4c6afc2acd3a07b3ebf053669"
+    },
+    {
+      "path": "4L/masters/P50/symbolic.json",
+      "preserved_path": "provenance/takeover-4L-closures-v1-before/4L/masters/P50/symbolic.json",
+      "sha256": "891580509dfc58c3d02507ba27e2f982050275cccc2f55da50e373e239b396e6"
+    },
+    {
+      "path": "4L/masters/P51/symbolic.json",
+      "preserved_path": "provenance/takeover-4L-closures-v1-before/4L/masters/P51/symbolic.json",
+      "sha256": "6853e9c1e6b679841799bcb3b10b29bafbb4bd1a573ad614a978195887ffd03d"
+    },
+    {
+      "path": "4L/masters/P52/symbolic.json",
+      "preserved_path": "provenance/takeover-4L-closures-v1-before/4L/masters/P52/symbolic.json",
+      "sha256": "cea9eb73b39fa833d30c31ee37eaa8a3de2669903b86acbb35227f0f8cdaecd5"
+    },
+    {
+      "path": "4L/masters/P63/symbolic.json",
+      "preserved_path": "provenance/takeover-4L-closures-v1-before/4L/masters/P63/symbolic.json",
+      "sha256": "8405ae84e3c38bd7a2628d73a2902913b050b4ddb679ca29e80f1a7714f1c87b"
+    },
+    {
+      "path": "4L/masters/P65/symbolic.json",
+      "preserved_path": "provenance/takeover-4L-closures-v1-before/4L/masters/P65/symbolic.json",
+      "sha256": "e76eeacec74dd7e4ac895810cf2e0798c20b2348652301f1e4141559d7175c79"
+    },
+    {
+      "path": "4L/masters/P67/symbolic.json",
+      "preserved_path": "provenance/takeover-4L-closures-v1-before/4L/masters/P67/symbolic.json",
+      "sha256": "891580509dfc58c3d02507ba27e2f982050275cccc2f55da50e373e239b396e6"
+    },
+    {
+      "path": "4L/masters/P69/symbolic.json",
+      "preserved_path": "provenance/takeover-4L-closures-v1-before/4L/masters/P69/symbolic.json",
+      "sha256": "720c50931aca1b3c70987d7d452284090a99ccc4c6afc2acd3a07b3ebf053669"
+    },
+    {
+      "path": "4L/masters/P70/symbolic.json",
+      "preserved_path": "provenance/takeover-4L-closures-v1-before/4L/masters/P70/symbolic.json",
+      "sha256": "9323b1407b0f75f4e7473ce55906db3f282cf6754c4d74a30476aaf897352a69"
+    },
+    {
+      "path": "4L/masters/P71/symbolic.json",
+      "preserved_path": "provenance/takeover-4L-closures-v1-before/4L/masters/P71/symbolic.json",
+      "sha256": "6853e9c1e6b679841799bcb3b10b29bafbb4bd1a573ad614a978195887ffd03d"
+    },
+    {
+      "path": "4L/masters/P72/symbolic.json",
+      "preserved_path": "provenance/takeover-4L-closures-v1-before/4L/masters/P72/symbolic.json",
+      "sha256": "86bcc5687847278eadb8ea20c0b3e62c047a0ae056e9707aab42f3bef70ca040"
+    },
+    {
+      "path": "4L/masters/P73/symbolic.json",
+      "preserved_path": "provenance/takeover-4L-closures-v1-before/4L/masters/P73/symbolic.json",
+      "sha256": "1ebebb62014999e32cf5811b4fb28bcedb5429a0ff22687ffaaa6eee01d8cefd"
+    },
+    {
+      "path": "4L/masters/P74/symbolic.json",
+      "preserved_path": "provenance/takeover-4L-closures-v1-before/4L/masters/P74/symbolic.json",
+      "sha256": "cea9eb73b39fa833d30c31ee37eaa8a3de2669903b86acbb35227f0f8cdaecd5"
+    },
+    {
+      "path": "4L/masters/P8/symbolic.json",
+      "preserved_path": "provenance/takeover-4L-closures-v1-before/4L/masters/P8/symbolic.json",
+      "sha256": "8405ae84e3c38bd7a2628d73a2902913b050b4ddb679ca29e80f1a7714f1c87b"
+    },
+    {
+      "path": "4L/numerical-precision-supplement.json",
+      "preserved_path": "provenance/takeover-4L-closures-v1-before/4L/numerical-precision-supplement.json",
+      "sha256": "5715c1b7a0d392c5d3f40a0a90c3b6e5c430ebbc556471067b06e3f48cdcdd51"
+    },
+    {
+      "path": "4L/producer-update.json",
+      "preserved_path": "provenance/takeover-4L-closures-v1-before/4L/producer-update.json",
+      "sha256": "857690ed4c2ca84be268f50981f9d93eb7c537fd2193a6d1faae32caa464dee7"
+    },
+    {
+      "path": "manifest.json",
+      "preserved_path": "provenance/takeover-4L-closures-v1-before/manifest.json",
+      "sha256": "60b631ef1a48f7927776c26a719e3f7cd1510b4eaac8c3f73de49d989d4c96af"
+    },
+    {
+      "path": "provenance/numerical-precision-supplement.json",
+      "preserved_path": "provenance/takeover-4L-closures-v1-before/provenance/numerical-precision-supplement.json",
+      "sha256": "5715c1b7a0d392c5d3f40a0a90c3b6e5c430ebbc556471067b06e3f48cdcdd51"
+    },
+    {
+      "path": "provenance/producer-update.json",
+      "preserved_path": "provenance/takeover-4L-closures-v1-before/provenance/producer-update.json",
+      "sha256": "501121276d1e215838f2fd6e6d9eb27ddee16ef04d7318d02ad68ffd6a598570"
+    },
+    {
+      "path": "validation/manifest.json",
+      "preserved_path": "provenance/takeover-4L-closures-v1-before/validation/manifest.json",
+      "sha256": "10ed5b72c54df008de561c4ffd68abcb8cdf6b15ddc68ad7aab389fe5156b3ff"
+    }
+  ]
+}

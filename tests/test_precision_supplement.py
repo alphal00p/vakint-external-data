@@ -323,6 +323,87 @@ class PrecisionSupplementTests(unittest.TestCase):
         ):
             self.load_fixture(update, rows)
 
+    def published_fixture(self):
+        update, rows = self.source_fixture()
+        entry = update["masters"][self.identity]
+        entry["sources"]["0"]["source_id"] = precision.PR11_SOURCE_ID
+        entry["coefficients"][0]["symbolic"] = True
+        update["provenance"]["additional_sources"] = {
+            precision.PR11_SOURCE_ID: self.additional_reference()
+        }
+        contents = json.dumps([[-1, "2"], [0, "-5*symbolica::zeta(5)"], [1, "3.5"]])
+        archive = self.root / "provenance/published/P6/symbolic.json"
+        archive.parent.mkdir(parents=True, exist_ok=True)
+        archive.write_text(contents)
+        base = "c" * 40
+        entry["accepted_symbolic"] = {
+            "source_commit": base,
+            "source_publication": "takeover-fixture",
+            "path": "masters/P6/symbolic.json",
+            "sha256": precision.text_digest(contents),
+            "archive": "provenance/published/P6/symbolic.json",
+            "contents": contents,
+        }
+        receipt = self.root / "provenance/published/receipt.json"
+        data.write_json(
+            receipt,
+            {
+                "accepted": True,
+                "base_commit": base,
+                "exact_rows": {
+                    self.identity: {"0": precision.text_digest("-5*symbolica::zeta(5)")}
+                },
+            },
+        )
+        update["provenance"]["accepted_symbolic_publications"] = {
+            "takeover-fixture": {
+                "base_commit": base,
+                "receipt": {
+                    "path": "provenance/published/receipt.json",
+                    "sha256": data.digest(receipt),
+                },
+            }
+        }
+        return update, rows, receipt
+
+    def test_published_exact_rows_may_mark_pr11_finite_rows_symbolic(self):
+        update, rows, receipt = self.published_fixture()
+        with patch.object(precision, "_load_pr11_source", return_value=rows):
+            self.assertEqual(self.load_fixture(update, rows), update)
+        for change, message in [
+            (lambda u: u["masters"][self.identity]["accepted_symbolic"].update(source_commit="d" * 40),
+             "publication differs"),
+            (lambda u: u["provenance"]["accepted_symbolic_publications"]["takeover-fixture"]["receipt"].update(sha256="0" * 64),
+             "receipt changed"),
+            (lambda u: u["masters"][self.identity]["accepted_symbolic"].update(source_publication="unknown"),
+             "publication differs"),
+            (lambda u: u["provenance"].update(accepted_symbolic_publications=[]),
+             "invalid accepted exact symbolic publications"),
+        ]:
+            altered = copy.deepcopy(update)
+            change(altered)
+            with (
+                self.subTest(message=message),
+                patch.object(precision, "_load_pr11_source", return_value=rows),
+                self.assertRaisesRegex(ValueError, message),
+            ):
+                self.load_fixture(altered, rows)
+        # A receipt that does not bind the row text, or omits the row, fails.
+        for exact_rows, message in [
+            ({self.identity: {"0": precision.text_digest("invented")}}, "row differs"),
+            ({self.identity: {"1": precision.text_digest("3.5")}}, "remains numerical-only"),
+            ({}, "scope differs"),
+        ]:
+            altered = copy.deepcopy(update)
+            data.write_json(receipt, {"accepted": True, "base_commit": "c" * 40, "exact_rows": exact_rows})
+            altered["provenance"]["accepted_symbolic_publications"]["takeover-fixture"]["receipt"]["sha256"] = data.digest(receipt)
+            with (
+                self.subTest(exact_rows=exact_rows),
+                patch.object(precision, "_load_pr11_source", return_value=rows),
+                self.assertRaisesRegex(ValueError, message),
+            ):
+                self.load_fixture(altered, rows)
+
     def test_incomplete_source_records_and_extra_selection_fields_are_rejected(self):
         update, rows = self.source_fixture()
         source = update["masters"][self.identity]["sources"]["0"]

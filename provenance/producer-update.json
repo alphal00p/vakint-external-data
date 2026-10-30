@@ -21,8 +21,8 @@
     "retained_supplemented_coefficients": 49,
     "numerical_accuracy_evidence_not_interval_proof": true,
     "previous_producer_update": {
-      "path": "provenance/four-loop-500-before-20261028-v1/provenance/producer-update.json",
-      "sha256": "6e4cc61634be5ef53748aed0f223e9fb1d41a64e6d9a144c6f62fe41e0d30243"
+      "path": "provenance/takeover-4L-closures-v1-before/provenance/producer-update.json",
+      "sha256": "501121276d1e215838f2fd6e6d9eb27ddee16ef04d7318d02ad68ffd6a598570"
     },
     "actual_PR4_publication": {
       "path": "/shared/codex-2/vacuum_masters/MASTERS/pslq/artifacts/PR4-direct10-acceptance-publication-source-v1/publication-output-v1/publication.json",
@@ -246,6 +246,52 @@
       "accepted500_baseline_is_staged_not_previous_published20k": true,
       "no_new_interval_bound_or_scientific_proof_claim": true,
       "release_policy": "repository_only_no_tag_assets_or_latest_update"
+    },
+    "actual_takeover_4L_closures_publication": {
+      "path": "provenance/takeover-4L-closures-v1/receipt.json",
+      "sha256": "728baec7a02351e05e72093236801960804a88ed6ea76ff3dc0aec3cc094a8ff"
+    },
+    "actual_takeover_4L_closures_publication_audit": {
+      "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+      "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
+    },
+    "takeover_4L_closures_adoption": "takeover publication (user-restarted reconstruction, decisions D1(a)/D3(a)/D5(a)/D9(a)/D10(a)); local commit only; pushed by the orchestrator after an adversarial review",
+    "new_takeover_4L_closures_exact_cells": 43,
+    "takeover_4L_closures_validation": {
+      "symbolic_coefficient_digits": {
+        "PR9[0]": 518,
+        "combA[0]": 518,
+        "PR15[0]": 518,
+        "PR9d[1]": 519,
+        "combB[1]": 518,
+        "PR9[1]": 518,
+        "combA[1]": 518,
+        "PR15[1]": 518,
+        "PR11d[0]": 517,
+        "PR11[0]": 517,
+        "PR11d[1]": 517,
+        "combC[1]": 517,
+        "PR12[0]": 517,
+        "PR0[0]": 516,
+        "PR0[1]": 516,
+        "PR11[1]": 517,
+        "PR12[1]": 516
+      },
+      "independent_D2_source_cap": 520,
+      "empirical_refinement_not_interval_bound": true,
+      "runtime_binding_provided": true,
+      "period_definitions": {
+        "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
+        "sha256": "b324074d81d6345f359873295b60d42df486164756f9c15abed6370d76ee4636"
+      },
+      "portable_proof_index": {
+        "path": "provenance/takeover-4L-closures-v1/portable-proof-index.json",
+        "sha256": "2f0d7db39c8927431dc8d0b254b229b3a789f03f217c0eebe414bc2824dedb21"
+      },
+      "constants_adapter": {
+        "path": "provenance/takeover-4l-closures-runtime-v3/projection.json",
+        "sha256": "bb34f4266e0789063e1cc8fbad1761e22d1efa510a878a072954d45eef097c69"
+      }
     }
   },
   "masters": {
@@ -5149,13 +5195,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -5167,7 +5213,7 @@
         },
         "symbolic.json": {
           "path": "masters/P8/symbolic.json",
-          "sha256": "8405ae84e3c38bd7a2628d73a2902913b050b4ddb679ca29e80f1a7714f1c87b"
+          "sha256": "a5b33aa29e719fe1dca1e01188bbf64071b08c2590e93a2bdb58aaada49af2f8"
         },
         "graph.dot": {
           "path": "masters/P8/graph.dot",
@@ -5179,8 +5225,15 @@
         "sha256": "f417e2f34ebafd7731a6af216284a3157354b314b9eb94c2eb41e5cdd269c0e2"
       },
       "source_symbolic": {
-        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p0_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
-        "sha256": "8405ae84e3c38bd7a2628d73a2902913b050b4ddb679ca29e80f1a7714f1c87b"
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/external-data/build/stage/formulas-converted.json",
+        "sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee.json.gz",
+          "sha256": "801d5973ae434b7736699d70786426f1ada6b0a00ab3dde4bde11021f2d268cf",
+          "bytes": 68450,
+          "uncompressed_sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+          "uncompressed_bytes": 460054
+        }
       },
       "source_stage_digits": 500,
       "source_validation": {
@@ -5203,6 +5256,14 @@
         "-4": {
           "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p0_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/pslq/classical-poles-stage200-v1/epsilon_m4.json",
           "sha256": "9d03f2e529d9fcb7a7a35ac544e9e700a5e398b1a8b41bdd1a21bebe30a598c2"
+        },
+        "0": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
+        },
+        "1": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
         }
       },
       "before_payload_archives": {
@@ -5216,7 +5277,27 @@
         }
       },
       "rowwise_window_merge_not_whole_file_equivalence": true,
-      "retained_extra_coefficients": []
+      "retained_extra_coefficients": [],
+      "previous_source_symbolic": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p0_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "8405ae84e3c38bd7a2628d73a2902913b050b4ddb679ca29e80f1a7714f1c87b"
+      },
+      "symbolic_validation_caps": {
+        "0": 518,
+        "1": 518
+      },
+      "rowwise_symbolic_update": {
+        "epsilon_powers": [
+          0,
+          1
+        ],
+        "whole_file_equivalence_asserted": false,
+        "other_rows_preserved": true
+      },
+      "latest_before_symbolic_archive": {
+        "path": "provenance/takeover-4L-closures-v1-before/4L/masters/P8/symbolic.json",
+        "sha256": "8405ae84e3c38bd7a2628d73a2902913b050b4ddb679ca29e80f1a7714f1c87b"
+      }
     },
     "L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p0_p2_p1_p0_p0_p1_p1_p1_p0": {
       "coefficients": [
@@ -5359,13 +5440,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -5377,7 +5458,7 @@
         },
         "symbolic.json": {
           "path": "masters/P10/symbolic.json",
-          "sha256": "86bcc5687847278eadb8ea20c0b3e62c047a0ae056e9707aab42f3bef70ca040"
+          "sha256": "f30c62eb39a1ec77e5751388bbb2291aec87b98e4faff11a1ab7f9ad322d4e0f"
         },
         "graph.dot": {
           "path": "masters/P10/graph.dot",
@@ -5389,8 +5470,15 @@
         "sha256": "4a83c83b2ae1dc5b8ace9a50c63e3e2e31ac8871c42708eef80f7f449c0fcb82"
       },
       "source_symbolic": {
-        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p0_p2_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
-        "sha256": "86bcc5687847278eadb8ea20c0b3e62c047a0ae056e9707aab42f3bef70ca040"
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/external-data/build/stage/formulas-converted.json",
+        "sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee.json.gz",
+          "sha256": "801d5973ae434b7736699d70786426f1ada6b0a00ab3dde4bde11021f2d268cf",
+          "bytes": 68450,
+          "uncompressed_sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+          "uncompressed_bytes": 460054
+        }
       },
       "source_stage_digits": 500,
       "source_validation": {
@@ -5413,6 +5501,14 @@
         "-4": {
           "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p0_p2_p1_p1_p1_p1_p1_p1_p0/artifacts/pslq/exact-zero-inheritance-v1/acceptance.json",
           "sha256": "8401c4e6d827365b91510e613c45e0a169ce8ef18e733d9cc211c5e320ad17d9"
+        },
+        "0": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
+        },
+        "1": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
         }
       },
       "before_payload_archives": {
@@ -5426,7 +5522,27 @@
         }
       },
       "rowwise_window_merge_not_whole_file_equivalence": true,
-      "retained_extra_coefficients": []
+      "retained_extra_coefficients": [],
+      "previous_source_symbolic": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p0_p2_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "86bcc5687847278eadb8ea20c0b3e62c047a0ae056e9707aab42f3bef70ca040"
+      },
+      "symbolic_validation_caps": {
+        "0": 518,
+        "1": 518
+      },
+      "rowwise_symbolic_update": {
+        "epsilon_powers": [
+          0,
+          1
+        ],
+        "whole_file_equivalence_asserted": false,
+        "other_rows_preserved": true
+      },
+      "latest_before_symbolic_archive": {
+        "path": "provenance/takeover-4L-closures-v1-before/4L/masters/P10/symbolic.json",
+        "sha256": "86bcc5687847278eadb8ea20c0b3e62c047a0ae056e9707aab42f3bef70ca040"
+      }
     },
     "L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p0_p3_p1_p0_p0_p1_p1_p1_p0": {
       "coefficients": [
@@ -5796,13 +5912,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -5814,7 +5930,7 @@
         },
         "symbolic.json": {
           "path": "masters/P14/symbolic.json",
-          "sha256": "720c50931aca1b3c70987d7d452284090a99ccc4c6afc2acd3a07b3ebf053669"
+          "sha256": "a26d1567bf1dcd8ae2c3c33512f68705bf65c1f0310c409cdbf0620ba1e09f47"
         },
         "graph.dot": {
           "path": "masters/P14/graph.dot",
@@ -5826,8 +5942,15 @@
         "sha256": "4a3584a58d249cec552e6dc3b980719723db18d5ea4b7040096fbbb139310b8c"
       },
       "source_symbolic": {
-        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p1_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
-        "sha256": "720c50931aca1b3c70987d7d452284090a99ccc4c6afc2acd3a07b3ebf053669"
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/external-data/build/stage/formulas-converted.json",
+        "sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee.json.gz",
+          "sha256": "801d5973ae434b7736699d70786426f1ada6b0a00ab3dde4bde11021f2d268cf",
+          "bytes": 68450,
+          "uncompressed_sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+          "uncompressed_bytes": 460054
+        }
       },
       "source_stage_digits": 500,
       "source_validation": {
@@ -5850,6 +5973,14 @@
         "-4": {
           "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p1_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/pslq/exact-zero-inheritance-v1/acceptance.json",
           "sha256": "8b981ae4b5bae29a48bc34785cb50e2be60d564e8e29394aa50a024bcc24cdaa"
+        },
+        "0": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
+        },
+        "1": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
         }
       },
       "before_payload_archives": {
@@ -5863,7 +5994,27 @@
         }
       },
       "rowwise_window_merge_not_whole_file_equivalence": true,
-      "retained_extra_coefficients": []
+      "retained_extra_coefficients": [],
+      "previous_source_symbolic": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p1_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "720c50931aca1b3c70987d7d452284090a99ccc4c6afc2acd3a07b3ebf053669"
+      },
+      "symbolic_validation_caps": {
+        "0": 517,
+        "1": 517
+      },
+      "rowwise_symbolic_update": {
+        "epsilon_powers": [
+          0,
+          1
+        ],
+        "whole_file_equivalence_asserted": false,
+        "other_rows_preserved": true
+      },
+      "latest_before_symbolic_archive": {
+        "path": "provenance/takeover-4L-closures-v1-before/4L/masters/P14/symbolic.json",
+        "sha256": "720c50931aca1b3c70987d7d452284090a99ccc4c6afc2acd3a07b3ebf053669"
+      }
     },
     "L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p2_p1_p0_p1_p1_p1_p1_p1_p0": {
       "coefficients": [
@@ -5899,7 +6050,7 @@
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -5911,7 +6062,7 @@
         },
         "symbolic.json": {
           "path": "masters/P15/symbolic.json",
-          "sha256": "891580509dfc58c3d02507ba27e2f982050275cccc2f55da50e373e239b396e6"
+          "sha256": "d64142b946be7f545134467e124d946e5cdfd8da2a0699a850b46426b5f14418"
         },
         "graph.dot": {
           "path": "masters/P15/graph.dot",
@@ -5923,8 +6074,15 @@
         "sha256": "759d750e8543f94a87e2e6eec319619c5504f1f3a4740a4767f4d94fb7c9fa40"
       },
       "source_symbolic": {
-        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p2_p1_p0_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
-        "sha256": "891580509dfc58c3d02507ba27e2f982050275cccc2f55da50e373e239b396e6"
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/external-data/build/stage/formulas-converted.json",
+        "sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee.json.gz",
+          "sha256": "801d5973ae434b7736699d70786426f1ada6b0a00ab3dde4bde11021f2d268cf",
+          "bytes": 68450,
+          "uncompressed_sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+          "uncompressed_bytes": 460054
+        }
       },
       "source_stage_digits": 500,
       "source_validation": {
@@ -5951,6 +6109,10 @@
         "0": {
           "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p2_p1_p0_p1_p1_p1_p1_p1_p0/artifacts/pslq/PR10-PR15-direct-analytic-finite-stage200-v1/acceptance.json",
           "sha256": "fbb79a6faaa229fa61bbeded422c0f2c06c9a43a44cafcef38265d1ef798c351"
+        },
+        "1": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
         }
       },
       "before_payload_archives": {
@@ -5966,22 +6128,23 @@
       "rowwise_window_merge_not_whole_file_equivalence": true,
       "retained_extra_coefficients": [],
       "previous_source_symbolic": {
-        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p2_p1_p0_p1_p1_p1_p1_p1_p0/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p2_p1_p0_p1_p1_p1_p1_p1_p0_d200_symbolic.json",
-        "sha256": "492a38fe26a0963a74007493def03f39c39200403f7a9f9e9c8214f6dd836872"
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p2_p1_p0_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "891580509dfc58c3d02507ba27e2f982050275cccc2f55da50e373e239b396e6"
       },
       "symbolic_validation_caps": {
-        "0": 200
+        "0": 200,
+        "1": 519
       },
       "rowwise_symbolic_update": {
         "epsilon_powers": [
-          0
+          1
         ],
         "whole_file_equivalence_asserted": false,
         "other_rows_preserved": true
       },
       "latest_before_symbolic_archive": {
-        "path": "provenance/PR10-PR15-v24-before/4L/masters/P15/symbolic.json",
-        "sha256": "492a38fe26a0963a74007493def03f39c39200403f7a9f9e9c8214f6dd836872"
+        "path": "provenance/takeover-4L-closures-v1-before/4L/masters/P15/symbolic.json",
+        "sha256": "891580509dfc58c3d02507ba27e2f982050275cccc2f55da50e373e239b396e6"
       }
     },
     "L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p2_p1_p1_p1_p0_p1_p1_p1_p0": {
@@ -6018,7 +6181,7 @@
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -6030,7 +6193,7 @@
         },
         "symbolic.json": {
           "path": "masters/P16/symbolic.json",
-          "sha256": "6853e9c1e6b679841799bcb3b10b29bafbb4bd1a573ad614a978195887ffd03d"
+          "sha256": "6fa7df18b463ecdc8fd9a660467bebce1a0f1a152ab8f424506bcee65d09b180"
         },
         "graph.dot": {
           "path": "masters/P16/graph.dot",
@@ -6042,8 +6205,15 @@
         "sha256": "7773db7c9a8f9e2833efa92cc049f79e3dcb3698f553156370f65702e6171c0a"
       },
       "source_symbolic": {
-        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p2_p1_p1_p1_p0_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
-        "sha256": "6853e9c1e6b679841799bcb3b10b29bafbb4bd1a573ad614a978195887ffd03d"
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/external-data/build/stage/formulas-converted.json",
+        "sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee.json.gz",
+          "sha256": "801d5973ae434b7736699d70786426f1ada6b0a00ab3dde4bde11021f2d268cf",
+          "bytes": 68450,
+          "uncompressed_sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+          "uncompressed_bytes": 460054
+        }
       },
       "source_stage_digits": 500,
       "source_validation": {
@@ -6070,6 +6240,10 @@
         "0": {
           "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p2_p1_p1_p1_p0_p1_p1_p1_p0/artifacts/pslq/PR10-PR15-direct-analytic-finite-stage200-v1/acceptance.json",
           "sha256": "86111c4d863eb6f8edd03575f68c8e763f103de3b514838d979407056aa9b47e"
+        },
+        "1": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
         }
       },
       "before_payload_archives": {
@@ -6085,22 +6259,23 @@
       "rowwise_window_merge_not_whole_file_equivalence": true,
       "retained_extra_coefficients": [],
       "previous_source_symbolic": {
-        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p2_p1_p1_p1_p0_p1_p1_p1_p0/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p2_p1_p1_p1_p0_p1_p1_p1_p0_d200_symbolic.json",
-        "sha256": "28bfa5c4536a700b6c0b7b16f4be3eca833964c79e5f4829e3936a6ddc8478ee"
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p2_p1_p1_p1_p0_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "6853e9c1e6b679841799bcb3b10b29bafbb4bd1a573ad614a978195887ffd03d"
       },
       "symbolic_validation_caps": {
-        "0": 200
+        "0": 200,
+        "1": 518
       },
       "rowwise_symbolic_update": {
         "epsilon_powers": [
-          0
+          1
         ],
         "whole_file_equivalence_asserted": false,
         "other_rows_preserved": true
       },
       "latest_before_symbolic_archive": {
-        "path": "provenance/PR10-PR15-v24-before/4L/masters/P16/symbolic.json",
-        "sha256": "28bfa5c4536a700b6c0b7b16f4be3eca833964c79e5f4829e3936a6ddc8478ee"
+        "path": "provenance/takeover-4L-closures-v1-before/4L/masters/P16/symbolic.json",
+        "sha256": "6853e9c1e6b679841799bcb3b10b29bafbb4bd1a573ad614a978195887ffd03d"
       }
     },
     "L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p2_p1_p1_p1_p1_p1_p1_p1_p0": {
@@ -6131,13 +6306,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -6149,7 +6324,7 @@
         },
         "symbolic.json": {
           "path": "masters/P17/symbolic.json",
-          "sha256": "cea9eb73b39fa833d30c31ee37eaa8a3de2669903b86acbb35227f0f8cdaecd5"
+          "sha256": "ec2c754b6542c45e7c73f66951552123ccff9d9492b387db17e277fea04859a7"
         },
         "graph.dot": {
           "path": "masters/P17/graph.dot",
@@ -6161,8 +6336,15 @@
         "sha256": "27131d144f20d786e9eeacdc34761b8d27420396ea98858202a32f3fba975613"
       },
       "source_symbolic": {
-        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p2_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
-        "sha256": "27131d144f20d786e9eeacdc34761b8d27420396ea98858202a32f3fba975613"
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/external-data/build/stage/formulas-converted.json",
+        "sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee.json.gz",
+          "sha256": "801d5973ae434b7736699d70786426f1ada6b0a00ab3dde4bde11021f2d268cf",
+          "bytes": 68450,
+          "uncompressed_sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+          "uncompressed_bytes": 460054
+        }
       },
       "source_stage_digits": 500,
       "source_validation": {
@@ -6185,6 +6367,14 @@
         "-4": {
           "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p2_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/pslq/exact-zero-inheritance-v1/acceptance.json",
           "sha256": "c6bd87660fc80dac33c8946ed938428ba7998b387bc87409789f0ef07e927cce"
+        },
+        "0": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
+        },
+        "1": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
         }
       },
       "before_payload_archives": {
@@ -6201,7 +6391,27 @@
       "retained_extra_coefficients": [],
       "retained_stronger_precision_powers": [
         0
-      ]
+      ],
+      "previous_source_symbolic": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p0_p2_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "27131d144f20d786e9eeacdc34761b8d27420396ea98858202a32f3fba975613"
+      },
+      "symbolic_validation_caps": {
+        "0": 517,
+        "1": 517
+      },
+      "rowwise_symbolic_update": {
+        "epsilon_powers": [
+          0,
+          1
+        ],
+        "whole_file_equivalence_asserted": false,
+        "other_rows_preserved": true
+      },
+      "latest_before_symbolic_archive": {
+        "path": "provenance/takeover-4L-closures-v1-before/4L/masters/P17/symbolic.json",
+        "sha256": "cea9eb73b39fa833d30c31ee37eaa8a3de2669903b86acbb35227f0f8cdaecd5"
+      }
     },
     "L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p1_p1_p1_p1_p1_p1_p1_p1_p1_p0": {
       "coefficients": [
@@ -6231,13 +6441,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -6249,7 +6459,7 @@
         },
         "symbolic.json": {
           "path": "masters/P18/symbolic.json",
-          "sha256": "a93bd689c930cc741cff9e4e877502590d09071b839f467a34081b6e0e27a606"
+          "sha256": "cf0df223fdf796505ebf9979379ce3285b7ab7d33878a3f389c6ba449d141348"
         },
         "graph.dot": {
           "path": "masters/P18/graph.dot",
@@ -6261,8 +6471,15 @@
         "sha256": "a93bd689c930cc741cff9e4e877502590d09071b839f467a34081b6e0e27a606"
       },
       "source_symbolic": {
-        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p1_p1_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
-        "sha256": "a93bd689c930cc741cff9e4e877502590d09071b839f467a34081b6e0e27a606"
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/external-data/build/stage/formulas-converted.json",
+        "sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee.json.gz",
+          "sha256": "801d5973ae434b7736699d70786426f1ada6b0a00ab3dde4bde11021f2d268cf",
+          "bytes": 68450,
+          "uncompressed_sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+          "uncompressed_bytes": 460054
+        }
       },
       "source_stage_digits": 500,
       "source_validation": {
@@ -6285,6 +6502,14 @@
         "-4": {
           "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p1_p1_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/pslq/exact-zero-inheritance-v1/acceptance.json",
           "sha256": "56705806a1b34d147263f55ee6d5de10eb6f8638051da524bdfcf2b1c232f9a6"
+        },
+        "0": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
+        },
+        "1": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
         }
       },
       "before_payload_archives": {
@@ -6298,7 +6523,27 @@
         }
       },
       "rowwise_window_merge_not_whole_file_equivalence": true,
-      "retained_extra_coefficients": []
+      "retained_extra_coefficients": [],
+      "previous_source_symbolic": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p1_p1_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "a93bd689c930cc741cff9e4e877502590d09071b839f467a34081b6e0e27a606"
+      },
+      "symbolic_validation_caps": {
+        "0": 516,
+        "1": 516
+      },
+      "rowwise_symbolic_update": {
+        "epsilon_powers": [
+          0,
+          1
+        ],
+        "whole_file_equivalence_asserted": false,
+        "other_rows_preserved": true
+      },
+      "latest_before_symbolic_archive": {
+        "path": "provenance/takeover-4L-closures-v1-before/4L/masters/P18/symbolic.json",
+        "sha256": "a93bd689c930cc741cff9e4e877502590d09071b839f467a34081b6e0e27a606"
+      }
     },
     "L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p2_p1_p0_p1_p1_p1_p1_p1_p1_p0": {
       "coefficients": [
@@ -6334,7 +6579,7 @@
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -6346,7 +6591,7 @@
         },
         "symbolic.json": {
           "path": "masters/P19/symbolic.json",
-          "sha256": "1ebebb62014999e32cf5811b4fb28bcedb5429a0ff22687ffaaa6eee01d8cefd"
+          "sha256": "8d949738d45206aedf312518c5c877bbe428964e886e99a3be5b751f430a5a08"
         },
         "graph.dot": {
           "path": "masters/P19/graph.dot",
@@ -6358,8 +6603,15 @@
         "sha256": "13432f0eedea8224353ae7b095cc6acb23c3151ab35b75851ad71e0b75d1360d"
       },
       "source_symbolic": {
-        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p2_p1_p0_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
-        "sha256": "1ebebb62014999e32cf5811b4fb28bcedb5429a0ff22687ffaaa6eee01d8cefd"
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/external-data/build/stage/formulas-converted.json",
+        "sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee.json.gz",
+          "sha256": "801d5973ae434b7736699d70786426f1ada6b0a00ab3dde4bde11021f2d268cf",
+          "bytes": 68450,
+          "uncompressed_sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+          "uncompressed_bytes": 460054
+        }
       },
       "source_stage_digits": 500,
       "source_validation": {
@@ -6386,6 +6638,10 @@
         "0": {
           "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p2_p1_p0_p1_p1_p1_p1_p1_p1_p0/artifacts/pslq/PR11-finite-spoke-stage200-v1/acceptance.json",
           "sha256": "40131c8c0cab4d69ca850405823f113e5b9ca03c1e8ac8a810a3c3a26b61ecad"
+        },
+        "1": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
         }
       },
       "before_payload_archives": {
@@ -6399,7 +6655,25 @@
         }
       },
       "rowwise_window_merge_not_whole_file_equivalence": true,
-      "retained_extra_coefficients": []
+      "retained_extra_coefficients": [],
+      "previous_source_symbolic": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_693719b1bc3d2f1d4d32c9312df66ced667a542591a2ada6f6498844fc5d0de1_p2_p1_p0_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "1ebebb62014999e32cf5811b4fb28bcedb5429a0ff22687ffaaa6eee01d8cefd"
+      },
+      "symbolic_validation_caps": {
+        "1": 517
+      },
+      "rowwise_symbolic_update": {
+        "epsilon_powers": [
+          1
+        ],
+        "whole_file_equivalence_asserted": false,
+        "other_rows_preserved": true
+      },
+      "latest_before_symbolic_archive": {
+        "path": "provenance/takeover-4L-closures-v1-before/4L/masters/P19/symbolic.json",
+        "sha256": "1ebebb62014999e32cf5811b4fb28bcedb5429a0ff22687ffaaa6eee01d8cefd"
+      }
     },
     "L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p0_p0_p1_p0_p0_p1_p1_p1_p0_p0": {
       "coefficients": [
@@ -7750,13 +8024,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -7768,7 +8042,7 @@
         },
         "symbolic.json": {
           "path": "masters/P32/symbolic.json",
-          "sha256": "8405ae84e3c38bd7a2628d73a2902913b050b4ddb679ca29e80f1a7714f1c87b"
+          "sha256": "a5b33aa29e719fe1dca1e01188bbf64071b08c2590e93a2bdb58aaada49af2f8"
         },
         "graph.dot": {
           "path": "masters/P32/graph.dot",
@@ -7780,8 +8054,15 @@
         "sha256": "f417e2f34ebafd7731a6af216284a3157354b314b9eb94c2eb41e5cdd269c0e2"
       },
       "source_symbolic": {
-        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p1_p1_p1_p0_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/symbolic.json",
-        "sha256": "8405ae84e3c38bd7a2628d73a2902913b050b4ddb679ca29e80f1a7714f1c87b"
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/external-data/build/stage/formulas-converted.json",
+        "sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee.json.gz",
+          "sha256": "801d5973ae434b7736699d70786426f1ada6b0a00ab3dde4bde11021f2d268cf",
+          "bytes": 68450,
+          "uncompressed_sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+          "uncompressed_bytes": 460054
+        }
       },
       "source_stage_digits": 500,
       "source_validation": {
@@ -7804,6 +8085,14 @@
         "-4": {
           "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p1_p1_p1_p0_p1_p1_p1_p1_p0_p0/artifacts/pslq/classical-poles-stage200-v1/epsilon_m4.json",
           "sha256": "3284c73a74bcf7b31a53854de62373cb161d970165a5c857105c6fa7a5a9d82d"
+        },
+        "0": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
+        },
+        "1": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
         }
       },
       "before_payload_archives": {
@@ -7817,7 +8106,27 @@
         }
       },
       "rowwise_window_merge_not_whole_file_equivalence": true,
-      "retained_extra_coefficients": []
+      "retained_extra_coefficients": [],
+      "previous_source_symbolic": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p1_p1_p1_p0_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "8405ae84e3c38bd7a2628d73a2902913b050b4ddb679ca29e80f1a7714f1c87b"
+      },
+      "symbolic_validation_caps": {
+        "0": 518,
+        "1": 518
+      },
+      "rowwise_symbolic_update": {
+        "epsilon_powers": [
+          0,
+          1
+        ],
+        "whole_file_equivalence_asserted": false,
+        "other_rows_preserved": true
+      },
+      "latest_before_symbolic_archive": {
+        "path": "provenance/takeover-4L-closures-v1-before/4L/masters/P32/symbolic.json",
+        "sha256": "8405ae84e3c38bd7a2628d73a2902913b050b4ddb679ca29e80f1a7714f1c87b"
+      }
     },
     "L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p1_p1_p1_p1_p0_p1_p1_p1_p0_p0": {
       "coefficients": [
@@ -7943,13 +8252,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -7961,7 +8270,7 @@
         },
         "symbolic.json": {
           "path": "masters/P34/symbolic.json",
-          "sha256": "e76eeacec74dd7e4ac895810cf2e0798c20b2348652301f1e4141559d7175c79"
+          "sha256": "c2250b33e540abfc0f21e5f834cb79f2b29e99df8077a5935eeb9067aa50447d"
         },
         "graph.dot": {
           "path": "masters/P34/graph.dot",
@@ -7973,8 +8282,15 @@
         "sha256": "34c64320996ff97d26377cff7c0c0a81b2e33404291c11d9c8b111d65aea0b1c"
       },
       "source_symbolic": {
-        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p1_p1_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/symbolic.json",
-        "sha256": "e76eeacec74dd7e4ac895810cf2e0798c20b2348652301f1e4141559d7175c79"
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/external-data/build/stage/formulas-converted.json",
+        "sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee.json.gz",
+          "sha256": "801d5973ae434b7736699d70786426f1ada6b0a00ab3dde4bde11021f2d268cf",
+          "bytes": 68450,
+          "uncompressed_sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+          "uncompressed_bytes": 460054
+        }
       },
       "source_stage_digits": 500,
       "source_validation": {
@@ -7997,6 +8313,14 @@
         "-4": {
           "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p1_p1_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/pslq/exact-zero-inheritance-v1/acceptance.json",
           "sha256": "2c8a4316893fd8d178ad9565ce99698908089fc64891b694e6e8c623a963e075"
+        },
+        "0": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
+        },
+        "1": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
         }
       },
       "before_payload_archives": {
@@ -8010,7 +8334,27 @@
         }
       },
       "rowwise_window_merge_not_whole_file_equivalence": true,
-      "retained_extra_coefficients": []
+      "retained_extra_coefficients": [],
+      "previous_source_symbolic": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p1_p1_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "e76eeacec74dd7e4ac895810cf2e0798c20b2348652301f1e4141559d7175c79"
+      },
+      "symbolic_validation_caps": {
+        "0": 518,
+        "1": 518
+      },
+      "rowwise_symbolic_update": {
+        "epsilon_powers": [
+          0,
+          1
+        ],
+        "whole_file_equivalence_asserted": false,
+        "other_rows_preserved": true
+      },
+      "latest_before_symbolic_archive": {
+        "path": "provenance/takeover-4L-closures-v1-before/4L/masters/P34/symbolic.json",
+        "sha256": "e76eeacec74dd7e4ac895810cf2e0798c20b2348652301f1e4141559d7175c79"
+      }
     },
     "L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p2_p1_p1_p0_p1_p1_p1_p1_p0_p0": {
       "coefficients": [
@@ -8046,7 +8390,7 @@
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -8058,7 +8402,7 @@
         },
         "symbolic.json": {
           "path": "masters/P35/symbolic.json",
-          "sha256": "6853e9c1e6b679841799bcb3b10b29bafbb4bd1a573ad614a978195887ffd03d"
+          "sha256": "6fa7df18b463ecdc8fd9a660467bebce1a0f1a152ab8f424506bcee65d09b180"
         },
         "graph.dot": {
           "path": "masters/P35/graph.dot",
@@ -8070,8 +8414,15 @@
         "sha256": "7773db7c9a8f9e2833efa92cc049f79e3dcb3698f553156370f65702e6171c0a"
       },
       "source_symbolic": {
-        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p2_p1_p1_p0_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/symbolic.json",
-        "sha256": "6853e9c1e6b679841799bcb3b10b29bafbb4bd1a573ad614a978195887ffd03d"
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/external-data/build/stage/formulas-converted.json",
+        "sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee.json.gz",
+          "sha256": "801d5973ae434b7736699d70786426f1ada6b0a00ab3dde4bde11021f2d268cf",
+          "bytes": 68450,
+          "uncompressed_sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+          "uncompressed_bytes": 460054
+        }
       },
       "source_stage_digits": 500,
       "source_validation": {
@@ -8098,6 +8449,10 @@
         "0": {
           "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p2_p1_p1_p0_p1_p1_p1_p1_p0_p0/artifacts/pslq/PR10-PR15-direct-analytic-finite-stage200-v1/acceptance.json",
           "sha256": "fbf757eba0f28f085ef02e7b3157b2bcd7964b13363f7cd4bd573790208341f2"
+        },
+        "1": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
         }
       },
       "before_payload_archives": {
@@ -8113,22 +8468,23 @@
       "rowwise_window_merge_not_whole_file_equivalence": true,
       "retained_extra_coefficients": [],
       "previous_source_symbolic": {
-        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p2_p1_p1_p0_p1_p1_p1_p1_p0_p0/L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p2_p1_p1_p0_p1_p1_p1_p1_p0_p0_d200_symbolic.json",
-        "sha256": "28bfa5c4536a700b6c0b7b16f4be3eca833964c79e5f4829e3936a6ddc8478ee"
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bb95c283ed3c4ba9417f48ad48250f6b32944659c3bb2619f943de6a7b64ab76_p2_p1_p1_p0_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "6853e9c1e6b679841799bcb3b10b29bafbb4bd1a573ad614a978195887ffd03d"
       },
       "symbolic_validation_caps": {
-        "0": 200
+        "0": 200,
+        "1": 518
       },
       "rowwise_symbolic_update": {
         "epsilon_powers": [
-          0
+          1
         ],
         "whole_file_equivalence_asserted": false,
         "other_rows_preserved": true
       },
       "latest_before_symbolic_archive": {
-        "path": "provenance/PR10-PR15-v24-before/4L/masters/P35/symbolic.json",
-        "sha256": "28bfa5c4536a700b6c0b7b16f4be3eca833964c79e5f4829e3936a6ddc8478ee"
+        "path": "provenance/takeover-4L-closures-v1-before/4L/masters/P35/symbolic.json",
+        "sha256": "6853e9c1e6b679841799bcb3b10b29bafbb4bd1a573ad614a978195887ffd03d"
       }
     },
     "L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p0_p0_p0_p0_p1_p1_p1_p1_p0_p0": {
@@ -8918,13 +9274,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -8936,7 +9292,7 @@
         },
         "symbolic.json": {
           "path": "masters/P43/symbolic.json",
-          "sha256": "8405ae84e3c38bd7a2628d73a2902913b050b4ddb679ca29e80f1a7714f1c87b"
+          "sha256": "a5b33aa29e719fe1dca1e01188bbf64071b08c2590e93a2bdb58aaada49af2f8"
         },
         "graph.dot": {
           "path": "masters/P43/graph.dot",
@@ -8948,8 +9304,15 @@
         "sha256": "f417e2f34ebafd7731a6af216284a3157354b314b9eb94c2eb41e5cdd269c0e2"
       },
       "source_symbolic": {
-        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p0_p1_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/symbolic.json",
-        "sha256": "8405ae84e3c38bd7a2628d73a2902913b050b4ddb679ca29e80f1a7714f1c87b"
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/external-data/build/stage/formulas-converted.json",
+        "sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee.json.gz",
+          "sha256": "801d5973ae434b7736699d70786426f1ada6b0a00ab3dde4bde11021f2d268cf",
+          "bytes": 68450,
+          "uncompressed_sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+          "uncompressed_bytes": 460054
+        }
       },
       "source_stage_digits": 500,
       "source_validation": {
@@ -8972,6 +9335,14 @@
         "-4": {
           "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p0_p1_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/pslq/classical-poles-stage200-v1/epsilon_m4.json",
           "sha256": "92d8c5e2725180792a13e4a6e23119b0f3038d94ddf9d85a32014ace65697d3f"
+        },
+        "0": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
+        },
+        "1": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
         }
       },
       "before_payload_archives": {
@@ -8985,7 +9356,27 @@
         }
       },
       "rowwise_window_merge_not_whole_file_equivalence": true,
-      "retained_extra_coefficients": []
+      "retained_extra_coefficients": [],
+      "previous_source_symbolic": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p0_p1_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "8405ae84e3c38bd7a2628d73a2902913b050b4ddb679ca29e80f1a7714f1c87b"
+      },
+      "symbolic_validation_caps": {
+        "0": 518,
+        "1": 518
+      },
+      "rowwise_symbolic_update": {
+        "epsilon_powers": [
+          0,
+          1
+        ],
+        "whole_file_equivalence_asserted": false,
+        "other_rows_preserved": true
+      },
+      "latest_before_symbolic_archive": {
+        "path": "provenance/takeover-4L-closures-v1-before/4L/masters/P43/symbolic.json",
+        "sha256": "8405ae84e3c38bd7a2628d73a2902913b050b4ddb679ca29e80f1a7714f1c87b"
+      }
     },
     "L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p0_p2_p1_p0_p0_p1_p1_p1_p0_p0": {
       "coefficients": [
@@ -9128,13 +9519,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -9146,7 +9537,7 @@
         },
         "symbolic.json": {
           "path": "masters/P45/symbolic.json",
-          "sha256": "86bcc5687847278eadb8ea20c0b3e62c047a0ae056e9707aab42f3bef70ca040"
+          "sha256": "f30c62eb39a1ec77e5751388bbb2291aec87b98e4faff11a1ab7f9ad322d4e0f"
         },
         "graph.dot": {
           "path": "masters/P45/graph.dot",
@@ -9158,8 +9549,15 @@
         "sha256": "4a83c83b2ae1dc5b8ace9a50c63e3e2e31ac8871c42708eef80f7f449c0fcb82"
       },
       "source_symbolic": {
-        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p0_p2_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/symbolic.json",
-        "sha256": "86bcc5687847278eadb8ea20c0b3e62c047a0ae056e9707aab42f3bef70ca040"
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/external-data/build/stage/formulas-converted.json",
+        "sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee.json.gz",
+          "sha256": "801d5973ae434b7736699d70786426f1ada6b0a00ab3dde4bde11021f2d268cf",
+          "bytes": 68450,
+          "uncompressed_sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+          "uncompressed_bytes": 460054
+        }
       },
       "source_stage_digits": 500,
       "source_validation": {
@@ -9182,6 +9580,14 @@
         "-4": {
           "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p0_p2_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/pslq/exact-zero-inheritance-v1/acceptance.json",
           "sha256": "fe08541823917cc139d4dabd4d18349763503760b09d2bda4eda15fec63d4a8d"
+        },
+        "0": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
+        },
+        "1": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
         }
       },
       "before_payload_archives": {
@@ -9195,7 +9601,27 @@
         }
       },
       "rowwise_window_merge_not_whole_file_equivalence": true,
-      "retained_extra_coefficients": []
+      "retained_extra_coefficients": [],
+      "previous_source_symbolic": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p0_p2_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "86bcc5687847278eadb8ea20c0b3e62c047a0ae056e9707aab42f3bef70ca040"
+      },
+      "symbolic_validation_caps": {
+        "0": 518,
+        "1": 518
+      },
+      "rowwise_symbolic_update": {
+        "epsilon_powers": [
+          0,
+          1
+        ],
+        "whole_file_equivalence_asserted": false,
+        "other_rows_preserved": true
+      },
+      "latest_before_symbolic_archive": {
+        "path": "provenance/takeover-4L-closures-v1-before/4L/masters/P45/symbolic.json",
+        "sha256": "86bcc5687847278eadb8ea20c0b3e62c047a0ae056e9707aab42f3bef70ca040"
+      }
     },
     "L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p0_p3_p1_p0_p0_p1_p1_p1_p0_p0": {
       "coefficients": [
@@ -9565,13 +9991,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -9583,7 +10009,7 @@
         },
         "symbolic.json": {
           "path": "masters/P49/symbolic.json",
-          "sha256": "720c50931aca1b3c70987d7d452284090a99ccc4c6afc2acd3a07b3ebf053669"
+          "sha256": "a26d1567bf1dcd8ae2c3c33512f68705bf65c1f0310c409cdbf0620ba1e09f47"
         },
         "graph.dot": {
           "path": "masters/P49/graph.dot",
@@ -9595,8 +10021,15 @@
         "sha256": "4a3584a58d249cec552e6dc3b980719723db18d5ea4b7040096fbbb139310b8c"
       },
       "source_symbolic": {
-        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p1_p1_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/symbolic.json",
-        "sha256": "720c50931aca1b3c70987d7d452284090a99ccc4c6afc2acd3a07b3ebf053669"
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/external-data/build/stage/formulas-converted.json",
+        "sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee.json.gz",
+          "sha256": "801d5973ae434b7736699d70786426f1ada6b0a00ab3dde4bde11021f2d268cf",
+          "bytes": 68450,
+          "uncompressed_sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+          "uncompressed_bytes": 460054
+        }
       },
       "source_stage_digits": 500,
       "source_validation": {
@@ -9619,6 +10052,14 @@
         "-4": {
           "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p1_p1_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/pslq/exact-zero-inheritance-v1/acceptance.json",
           "sha256": "4825ae364c1411acd6cc0c1a9f0f53502616ed000dd14d4e2d90bd87be801757"
+        },
+        "0": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
+        },
+        "1": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
         }
       },
       "before_payload_archives": {
@@ -9632,7 +10073,27 @@
         }
       },
       "rowwise_window_merge_not_whole_file_equivalence": true,
-      "retained_extra_coefficients": []
+      "retained_extra_coefficients": [],
+      "previous_source_symbolic": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p1_p1_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "720c50931aca1b3c70987d7d452284090a99ccc4c6afc2acd3a07b3ebf053669"
+      },
+      "symbolic_validation_caps": {
+        "0": 517,
+        "1": 517
+      },
+      "rowwise_symbolic_update": {
+        "epsilon_powers": [
+          0,
+          1
+        ],
+        "whole_file_equivalence_asserted": false,
+        "other_rows_preserved": true
+      },
+      "latest_before_symbolic_archive": {
+        "path": "provenance/takeover-4L-closures-v1-before/4L/masters/P49/symbolic.json",
+        "sha256": "720c50931aca1b3c70987d7d452284090a99ccc4c6afc2acd3a07b3ebf053669"
+      }
     },
     "L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p2_p1_p0_p1_p1_p1_p1_p1_p0_p0": {
       "coefficients": [
@@ -9668,7 +10129,7 @@
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -9680,7 +10141,7 @@
         },
         "symbolic.json": {
           "path": "masters/P50/symbolic.json",
-          "sha256": "891580509dfc58c3d02507ba27e2f982050275cccc2f55da50e373e239b396e6"
+          "sha256": "d64142b946be7f545134467e124d946e5cdfd8da2a0699a850b46426b5f14418"
         },
         "graph.dot": {
           "path": "masters/P50/graph.dot",
@@ -9692,8 +10153,15 @@
         "sha256": "759d750e8543f94a87e2e6eec319619c5504f1f3a4740a4767f4d94fb7c9fa40"
       },
       "source_symbolic": {
-        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p2_p1_p0_p1_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/symbolic.json",
-        "sha256": "891580509dfc58c3d02507ba27e2f982050275cccc2f55da50e373e239b396e6"
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/external-data/build/stage/formulas-converted.json",
+        "sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee.json.gz",
+          "sha256": "801d5973ae434b7736699d70786426f1ada6b0a00ab3dde4bde11021f2d268cf",
+          "bytes": 68450,
+          "uncompressed_sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+          "uncompressed_bytes": 460054
+        }
       },
       "source_stage_digits": 500,
       "source_validation": {
@@ -9720,6 +10188,10 @@
         "0": {
           "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p2_p1_p0_p1_p1_p1_p1_p1_p0_p0/artifacts/pslq/PR10-PR15-direct-analytic-finite-stage200-v1/acceptance.json",
           "sha256": "a168bc871341b62d22795a11505f8741c423526daff9705f328dd91ec4fa43e6"
+        },
+        "1": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
         }
       },
       "before_payload_archives": {
@@ -9735,22 +10207,23 @@
       "rowwise_window_merge_not_whole_file_equivalence": true,
       "retained_extra_coefficients": [],
       "previous_source_symbolic": {
-        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p2_p1_p0_p1_p1_p1_p1_p1_p0_p0/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p2_p1_p0_p1_p1_p1_p1_p1_p0_p0_d200_symbolic.json",
-        "sha256": "492a38fe26a0963a74007493def03f39c39200403f7a9f9e9c8214f6dd836872"
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p2_p1_p0_p1_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "891580509dfc58c3d02507ba27e2f982050275cccc2f55da50e373e239b396e6"
       },
       "symbolic_validation_caps": {
-        "0": 200
+        "0": 200,
+        "1": 519
       },
       "rowwise_symbolic_update": {
         "epsilon_powers": [
-          0
+          1
         ],
         "whole_file_equivalence_asserted": false,
         "other_rows_preserved": true
       },
       "latest_before_symbolic_archive": {
-        "path": "provenance/PR10-PR15-v24-before/4L/masters/P50/symbolic.json",
-        "sha256": "492a38fe26a0963a74007493def03f39c39200403f7a9f9e9c8214f6dd836872"
+        "path": "provenance/takeover-4L-closures-v1-before/4L/masters/P50/symbolic.json",
+        "sha256": "891580509dfc58c3d02507ba27e2f982050275cccc2f55da50e373e239b396e6"
       }
     },
     "L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p2_p1_p1_p1_p0_p1_p1_p1_p0_p0": {
@@ -9787,7 +10260,7 @@
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -9799,7 +10272,7 @@
         },
         "symbolic.json": {
           "path": "masters/P51/symbolic.json",
-          "sha256": "6853e9c1e6b679841799bcb3b10b29bafbb4bd1a573ad614a978195887ffd03d"
+          "sha256": "6fa7df18b463ecdc8fd9a660467bebce1a0f1a152ab8f424506bcee65d09b180"
         },
         "graph.dot": {
           "path": "masters/P51/graph.dot",
@@ -9811,8 +10284,15 @@
         "sha256": "7773db7c9a8f9e2833efa92cc049f79e3dcb3698f553156370f65702e6171c0a"
       },
       "source_symbolic": {
-        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p2_p1_p1_p1_p0_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/symbolic.json",
-        "sha256": "6853e9c1e6b679841799bcb3b10b29bafbb4bd1a573ad614a978195887ffd03d"
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/external-data/build/stage/formulas-converted.json",
+        "sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee.json.gz",
+          "sha256": "801d5973ae434b7736699d70786426f1ada6b0a00ab3dde4bde11021f2d268cf",
+          "bytes": 68450,
+          "uncompressed_sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+          "uncompressed_bytes": 460054
+        }
       },
       "source_stage_digits": 500,
       "source_validation": {
@@ -9839,6 +10319,10 @@
         "0": {
           "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p2_p1_p1_p1_p0_p1_p1_p1_p0_p0/artifacts/pslq/PR10-PR15-direct-analytic-finite-stage200-v1/acceptance.json",
           "sha256": "24603671fb05d1b978b2bbf713e03c66ef47f6fbd9c2b13c0699ceca69f811d4"
+        },
+        "1": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
         }
       },
       "before_payload_archives": {
@@ -9854,22 +10338,23 @@
       "rowwise_window_merge_not_whole_file_equivalence": true,
       "retained_extra_coefficients": [],
       "previous_source_symbolic": {
-        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p2_p1_p1_p1_p0_p1_p1_p1_p0_p0/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p2_p1_p1_p1_p0_p1_p1_p1_p0_p0_d200_symbolic.json",
-        "sha256": "28bfa5c4536a700b6c0b7b16f4be3eca833964c79e5f4829e3936a6ddc8478ee"
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p2_p1_p1_p1_p0_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "6853e9c1e6b679841799bcb3b10b29bafbb4bd1a573ad614a978195887ffd03d"
       },
       "symbolic_validation_caps": {
-        "0": 200
+        "0": 200,
+        "1": 518
       },
       "rowwise_symbolic_update": {
         "epsilon_powers": [
-          0
+          1
         ],
         "whole_file_equivalence_asserted": false,
         "other_rows_preserved": true
       },
       "latest_before_symbolic_archive": {
-        "path": "provenance/PR10-PR15-v24-before/4L/masters/P51/symbolic.json",
-        "sha256": "28bfa5c4536a700b6c0b7b16f4be3eca833964c79e5f4829e3936a6ddc8478ee"
+        "path": "provenance/takeover-4L-closures-v1-before/4L/masters/P51/symbolic.json",
+        "sha256": "6853e9c1e6b679841799bcb3b10b29bafbb4bd1a573ad614a978195887ffd03d"
       }
     },
     "L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p2_p1_p1_p1_p1_p1_p1_p1_p0_p0": {
@@ -9900,13 +10385,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -9918,7 +10403,7 @@
         },
         "symbolic.json": {
           "path": "masters/P52/symbolic.json",
-          "sha256": "cea9eb73b39fa833d30c31ee37eaa8a3de2669903b86acbb35227f0f8cdaecd5"
+          "sha256": "ec2c754b6542c45e7c73f66951552123ccff9d9492b387db17e277fea04859a7"
         },
         "graph.dot": {
           "path": "masters/P52/graph.dot",
@@ -9930,8 +10415,15 @@
         "sha256": "27131d144f20d786e9eeacdc34761b8d27420396ea98858202a32f3fba975613"
       },
       "source_symbolic": {
-        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p2_p1_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/symbolic.json",
-        "sha256": "27131d144f20d786e9eeacdc34761b8d27420396ea98858202a32f3fba975613"
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/external-data/build/stage/formulas-converted.json",
+        "sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee.json.gz",
+          "sha256": "801d5973ae434b7736699d70786426f1ada6b0a00ab3dde4bde11021f2d268cf",
+          "bytes": 68450,
+          "uncompressed_sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+          "uncompressed_bytes": 460054
+        }
       },
       "source_stage_digits": 500,
       "source_validation": {
@@ -9954,6 +10446,14 @@
         "-4": {
           "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p2_p1_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/pslq/exact-zero-inheritance-v1/acceptance.json",
           "sha256": "877f804612051fa1b7376789fcbf5b717902739cc3aea148019a486d5583bc65"
+        },
+        "0": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
+        },
+        "1": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
         }
       },
       "before_payload_archives": {
@@ -9970,7 +10470,27 @@
       "retained_extra_coefficients": [],
       "retained_stronger_precision_powers": [
         0
-      ]
+      ],
+      "previous_source_symbolic": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_bce8ad63d8198605a16774264c9101933298bac9dcf7e7b1919a0c58b6558c7c_p2_p1_p1_p1_p1_p1_p1_p1_p0_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "27131d144f20d786e9eeacdc34761b8d27420396ea98858202a32f3fba975613"
+      },
+      "symbolic_validation_caps": {
+        "0": 517,
+        "1": 517
+      },
+      "rowwise_symbolic_update": {
+        "epsilon_powers": [
+          0,
+          1
+        ],
+        "whole_file_equivalence_asserted": false,
+        "other_rows_preserved": true
+      },
+      "latest_before_symbolic_archive": {
+        "path": "provenance/takeover-4L-closures-v1-before/4L/masters/P52/symbolic.json",
+        "sha256": "cea9eb73b39fa833d30c31ee37eaa8a3de2669903b86acbb35227f0f8cdaecd5"
+      }
     },
     "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p0_p0_p0_p0_p1_p1_p1_p1_p0": {
       "coefficients": [
@@ -11095,13 +11615,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -11113,7 +11633,7 @@
         },
         "symbolic.json": {
           "path": "masters/P63/symbolic.json",
-          "sha256": "8405ae84e3c38bd7a2628d73a2902913b050b4ddb679ca29e80f1a7714f1c87b"
+          "sha256": "a5b33aa29e719fe1dca1e01188bbf64071b08c2590e93a2bdb58aaada49af2f8"
         },
         "graph.dot": {
           "path": "masters/P63/graph.dot",
@@ -11125,8 +11645,15 @@
         "sha256": "f417e2f34ebafd7731a6af216284a3157354b314b9eb94c2eb41e5cdd269c0e2"
       },
       "source_symbolic": {
-        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p1_p0_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
-        "sha256": "8405ae84e3c38bd7a2628d73a2902913b050b4ddb679ca29e80f1a7714f1c87b"
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/external-data/build/stage/formulas-converted.json",
+        "sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee.json.gz",
+          "sha256": "801d5973ae434b7736699d70786426f1ada6b0a00ab3dde4bde11021f2d268cf",
+          "bytes": 68450,
+          "uncompressed_sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+          "uncompressed_bytes": 460054
+        }
       },
       "source_stage_digits": 500,
       "source_validation": {
@@ -11149,6 +11676,14 @@
         "-4": {
           "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p1_p0_p1_p1_p1_p1_p1_p0/artifacts/pslq/classical-poles-stage200-v1/epsilon_m4.json",
           "sha256": "6c2029b45d94d5b51732b7aea3379043e12cc3b3eed2f2e0e5ba551a1139d1ac"
+        },
+        "0": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
+        },
+        "1": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
         }
       },
       "before_payload_archives": {
@@ -11162,7 +11697,27 @@
         }
       },
       "rowwise_window_merge_not_whole_file_equivalence": true,
-      "retained_extra_coefficients": []
+      "retained_extra_coefficients": [],
+      "previous_source_symbolic": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p1_p0_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "8405ae84e3c38bd7a2628d73a2902913b050b4ddb679ca29e80f1a7714f1c87b"
+      },
+      "symbolic_validation_caps": {
+        "0": 518,
+        "1": 518
+      },
+      "rowwise_symbolic_update": {
+        "epsilon_powers": [
+          0,
+          1
+        ],
+        "whole_file_equivalence_asserted": false,
+        "other_rows_preserved": true
+      },
+      "latest_before_symbolic_archive": {
+        "path": "provenance/takeover-4L-closures-v1-before/4L/masters/P63/symbolic.json",
+        "sha256": "8405ae84e3c38bd7a2628d73a2902913b050b4ddb679ca29e80f1a7714f1c87b"
+      }
     },
     "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p1_p1_p0_p1_p1_p1_p1_p0": {
       "coefficients": [
@@ -11288,13 +11843,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -11306,7 +11861,7 @@
         },
         "symbolic.json": {
           "path": "masters/P65/symbolic.json",
-          "sha256": "e76eeacec74dd7e4ac895810cf2e0798c20b2348652301f1e4141559d7175c79"
+          "sha256": "c2250b33e540abfc0f21e5f834cb79f2b29e99df8077a5935eeb9067aa50447d"
         },
         "graph.dot": {
           "path": "masters/P65/graph.dot",
@@ -11318,8 +11873,15 @@
         "sha256": "34c64320996ff97d26377cff7c0c0a81b2e33404291c11d9c8b111d65aea0b1c"
       },
       "source_symbolic": {
-        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
-        "sha256": "e76eeacec74dd7e4ac895810cf2e0798c20b2348652301f1e4141559d7175c79"
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/external-data/build/stage/formulas-converted.json",
+        "sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee.json.gz",
+          "sha256": "801d5973ae434b7736699d70786426f1ada6b0a00ab3dde4bde11021f2d268cf",
+          "bytes": 68450,
+          "uncompressed_sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+          "uncompressed_bytes": 460054
+        }
       },
       "source_stage_digits": 500,
       "source_validation": {
@@ -11342,6 +11904,14 @@
         "-4": {
           "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/pslq/exact-zero-inheritance-v1/acceptance.json",
           "sha256": "4f8fb6b2641393f2fdc63c7f89dfc84f99cc5c7e3bcbb4ff8e283b7aa6985672"
+        },
+        "0": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
+        },
+        "1": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
         }
       },
       "before_payload_archives": {
@@ -11355,7 +11925,27 @@
         }
       },
       "rowwise_window_merge_not_whole_file_equivalence": true,
-      "retained_extra_coefficients": []
+      "retained_extra_coefficients": [],
+      "previous_source_symbolic": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p1_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "e76eeacec74dd7e4ac895810cf2e0798c20b2348652301f1e4141559d7175c79"
+      },
+      "symbolic_validation_caps": {
+        "0": 518,
+        "1": 518
+      },
+      "rowwise_symbolic_update": {
+        "epsilon_powers": [
+          0,
+          1
+        ],
+        "whole_file_equivalence_asserted": false,
+        "other_rows_preserved": true
+      },
+      "latest_before_symbolic_archive": {
+        "path": "provenance/takeover-4L-closures-v1-before/4L/masters/P65/symbolic.json",
+        "sha256": "e76eeacec74dd7e4ac895810cf2e0798c20b2348652301f1e4141559d7175c79"
+      }
     },
     "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p2_p0_p0_p1_p1_p1_p0_p1_p0": {
       "coefficients": [
@@ -11504,7 +12094,7 @@
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -11516,7 +12106,7 @@
         },
         "symbolic.json": {
           "path": "masters/P67/symbolic.json",
-          "sha256": "891580509dfc58c3d02507ba27e2f982050275cccc2f55da50e373e239b396e6"
+          "sha256": "d64142b946be7f545134467e124d946e5cdfd8da2a0699a850b46426b5f14418"
         },
         "graph.dot": {
           "path": "masters/P67/graph.dot",
@@ -11528,8 +12118,15 @@
         "sha256": "759d750e8543f94a87e2e6eec319619c5504f1f3a4740a4767f4d94fb7c9fa40"
       },
       "source_symbolic": {
-        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p2_p1_p0_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
-        "sha256": "891580509dfc58c3d02507ba27e2f982050275cccc2f55da50e373e239b396e6"
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/external-data/build/stage/formulas-converted.json",
+        "sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee.json.gz",
+          "sha256": "801d5973ae434b7736699d70786426f1ada6b0a00ab3dde4bde11021f2d268cf",
+          "bytes": 68450,
+          "uncompressed_sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+          "uncompressed_bytes": 460054
+        }
       },
       "source_stage_digits": 500,
       "source_validation": {
@@ -11556,6 +12153,10 @@
         "0": {
           "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p2_p1_p0_p1_p1_p1_p1_p1_p0/artifacts/pslq/PR10-PR15-direct-analytic-finite-stage200-v1/acceptance.json",
           "sha256": "1e47b66895eaf2545d49baee45a114e0770381653ac77bf421f3f0eab8174cb7"
+        },
+        "1": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
         }
       },
       "before_payload_archives": {
@@ -11571,22 +12172,23 @@
       "rowwise_window_merge_not_whole_file_equivalence": true,
       "retained_extra_coefficients": [],
       "previous_source_symbolic": {
-        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p2_p1_p0_p1_p1_p1_p1_p1_p0/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p2_p1_p0_p1_p1_p1_p1_p1_p0_d200_symbolic.json",
-        "sha256": "492a38fe26a0963a74007493def03f39c39200403f7a9f9e9c8214f6dd836872"
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p2_p1_p0_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "891580509dfc58c3d02507ba27e2f982050275cccc2f55da50e373e239b396e6"
       },
       "symbolic_validation_caps": {
-        "0": 200
+        "0": 200,
+        "1": 519
       },
       "rowwise_symbolic_update": {
         "epsilon_powers": [
-          0
+          1
         ],
         "whole_file_equivalence_asserted": false,
         "other_rows_preserved": true
       },
       "latest_before_symbolic_archive": {
-        "path": "provenance/PR10-PR15-v24-before/4L/masters/P67/symbolic.json",
-        "sha256": "492a38fe26a0963a74007493def03f39c39200403f7a9f9e9c8214f6dd836872"
+        "path": "provenance/takeover-4L-closures-v1-before/4L/masters/P67/symbolic.json",
+        "sha256": "891580509dfc58c3d02507ba27e2f982050275cccc2f55da50e373e239b396e6"
       }
     },
     "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p0_p3_p0_p0_p1_p1_p1_p0_p1_p0": {
@@ -11730,13 +12332,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -11748,7 +12350,7 @@
         },
         "symbolic.json": {
           "path": "masters/P69/symbolic.json",
-          "sha256": "720c50931aca1b3c70987d7d452284090a99ccc4c6afc2acd3a07b3ebf053669"
+          "sha256": "a26d1567bf1dcd8ae2c3c33512f68705bf65c1f0310c409cdbf0620ba1e09f47"
         },
         "graph.dot": {
           "path": "masters/P69/graph.dot",
@@ -11760,8 +12362,15 @@
         "sha256": "4a3584a58d249cec552e6dc3b980719723db18d5ea4b7040096fbbb139310b8c"
       },
       "source_symbolic": {
-        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p1_p1_p0_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
-        "sha256": "720c50931aca1b3c70987d7d452284090a99ccc4c6afc2acd3a07b3ebf053669"
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/external-data/build/stage/formulas-converted.json",
+        "sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee.json.gz",
+          "sha256": "801d5973ae434b7736699d70786426f1ada6b0a00ab3dde4bde11021f2d268cf",
+          "bytes": 68450,
+          "uncompressed_sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+          "uncompressed_bytes": 460054
+        }
       },
       "source_stage_digits": 500,
       "source_validation": {
@@ -11784,6 +12393,14 @@
         "-4": {
           "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p1_p1_p0_p1_p1_p1_p1_p1_p1_p0/artifacts/pslq/exact-zero-inheritance-v1/acceptance.json",
           "sha256": "580ca2638250919c00fabf8879f700c5a2fea73802c7e55536d02ff905a0a242"
+        },
+        "0": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
+        },
+        "1": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
         }
       },
       "before_payload_archives": {
@@ -11797,7 +12414,27 @@
         }
       },
       "rowwise_window_merge_not_whole_file_equivalence": true,
-      "retained_extra_coefficients": []
+      "retained_extra_coefficients": [],
+      "previous_source_symbolic": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p1_p1_p0_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "720c50931aca1b3c70987d7d452284090a99ccc4c6afc2acd3a07b3ebf053669"
+      },
+      "symbolic_validation_caps": {
+        "0": 517,
+        "1": 517
+      },
+      "rowwise_symbolic_update": {
+        "epsilon_powers": [
+          0,
+          1
+        ],
+        "whole_file_equivalence_asserted": false,
+        "other_rows_preserved": true
+      },
+      "latest_before_symbolic_archive": {
+        "path": "provenance/takeover-4L-closures-v1-before/4L/masters/P69/symbolic.json",
+        "sha256": "720c50931aca1b3c70987d7d452284090a99ccc4c6afc2acd3a07b3ebf053669"
+      }
     },
     "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p1_p1_p1_p1_p1_p1_p1_p1_p1_p0": {
       "coefficients": [
@@ -11827,13 +12464,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -11845,7 +12482,7 @@
         },
         "symbolic.json": {
           "path": "masters/P70/symbolic.json",
-          "sha256": "9323b1407b0f75f4e7473ce55906db3f282cf6754c4d74a30476aaf897352a69"
+          "sha256": "0e62c4a93d788ec7845d7203f1ae22ba03691998a90623887101f386d49b1d62"
         },
         "graph.dot": {
           "path": "masters/P70/graph.dot",
@@ -11857,8 +12494,15 @@
         "sha256": "9323b1407b0f75f4e7473ce55906db3f282cf6754c4d74a30476aaf897352a69"
       },
       "source_symbolic": {
-        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p1_p1_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
-        "sha256": "9323b1407b0f75f4e7473ce55906db3f282cf6754c4d74a30476aaf897352a69"
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/external-data/build/stage/formulas-converted.json",
+        "sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee.json.gz",
+          "sha256": "801d5973ae434b7736699d70786426f1ada6b0a00ab3dde4bde11021f2d268cf",
+          "bytes": 68450,
+          "uncompressed_sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+          "uncompressed_bytes": 460054
+        }
       },
       "source_stage_digits": 500,
       "source_validation": {
@@ -11881,6 +12525,14 @@
         "-4": {
           "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p1_p1_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/pslq/exact-zero-inheritance-v1/acceptance.json",
           "sha256": "b0024cdf0935cb34b2076458e4655117fc62613e756a0cc1a15ffc5be15c7b11"
+        },
+        "0": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
+        },
+        "1": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
         }
       },
       "before_payload_archives": {
@@ -11894,7 +12546,27 @@
         }
       },
       "rowwise_window_merge_not_whole_file_equivalence": true,
-      "retained_extra_coefficients": []
+      "retained_extra_coefficients": [],
+      "previous_source_symbolic": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p1_p1_p1_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "9323b1407b0f75f4e7473ce55906db3f282cf6754c4d74a30476aaf897352a69"
+      },
+      "symbolic_validation_caps": {
+        "0": 517,
+        "1": 516
+      },
+      "rowwise_symbolic_update": {
+        "epsilon_powers": [
+          0,
+          1
+        ],
+        "whole_file_equivalence_asserted": false,
+        "other_rows_preserved": true
+      },
+      "latest_before_symbolic_archive": {
+        "path": "provenance/takeover-4L-closures-v1-before/4L/masters/P70/symbolic.json",
+        "sha256": "9323b1407b0f75f4e7473ce55906db3f282cf6754c4d74a30476aaf897352a69"
+      }
     },
     "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p0_p0_p1_p1_p1_p1_p1_p0": {
       "coefficients": [
@@ -11930,7 +12602,7 @@
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -11942,7 +12614,7 @@
         },
         "symbolic.json": {
           "path": "masters/P71/symbolic.json",
-          "sha256": "6853e9c1e6b679841799bcb3b10b29bafbb4bd1a573ad614a978195887ffd03d"
+          "sha256": "6fa7df18b463ecdc8fd9a660467bebce1a0f1a152ab8f424506bcee65d09b180"
         },
         "graph.dot": {
           "path": "masters/P71/graph.dot",
@@ -11954,8 +12626,15 @@
         "sha256": "7773db7c9a8f9e2833efa92cc049f79e3dcb3698f553156370f65702e6171c0a"
       },
       "source_symbolic": {
-        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p0_p0_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
-        "sha256": "6853e9c1e6b679841799bcb3b10b29bafbb4bd1a573ad614a978195887ffd03d"
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/external-data/build/stage/formulas-converted.json",
+        "sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee.json.gz",
+          "sha256": "801d5973ae434b7736699d70786426f1ada6b0a00ab3dde4bde11021f2d268cf",
+          "bytes": 68450,
+          "uncompressed_sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+          "uncompressed_bytes": 460054
+        }
       },
       "source_stage_digits": 500,
       "source_validation": {
@@ -11982,6 +12661,10 @@
         "0": {
           "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p0_p0_p1_p1_p1_p1_p1_p0/artifacts/pslq/PR10-PR15-direct-analytic-finite-stage200-v1/acceptance.json",
           "sha256": "d37b0ec35f3de7acb3b1d6ca562c39e564bd4a06bdf17e39ad39f14e8b725530"
+        },
+        "1": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
         }
       },
       "before_payload_archives": {
@@ -11997,22 +12680,23 @@
       "rowwise_window_merge_not_whole_file_equivalence": true,
       "retained_extra_coefficients": [],
       "previous_source_symbolic": {
-        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p0_p0_p1_p1_p1_p1_p1_p0/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p0_p0_p1_p1_p1_p1_p1_p0_d200_symbolic.json",
-        "sha256": "28bfa5c4536a700b6c0b7b16f4be3eca833964c79e5f4829e3936a6ddc8478ee"
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p0_p0_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "6853e9c1e6b679841799bcb3b10b29bafbb4bd1a573ad614a978195887ffd03d"
       },
       "symbolic_validation_caps": {
-        "0": 200
+        "0": 200,
+        "1": 518
       },
       "rowwise_symbolic_update": {
         "epsilon_powers": [
-          0
+          1
         ],
         "whole_file_equivalence_asserted": false,
         "other_rows_preserved": true
       },
       "latest_before_symbolic_archive": {
-        "path": "provenance/PR10-PR15-v24-before/4L/masters/P71/symbolic.json",
-        "sha256": "28bfa5c4536a700b6c0b7b16f4be3eca833964c79e5f4829e3936a6ddc8478ee"
+        "path": "provenance/takeover-4L-closures-v1-before/4L/masters/P71/symbolic.json",
+        "sha256": "6853e9c1e6b679841799bcb3b10b29bafbb4bd1a573ad614a978195887ffd03d"
       }
     },
     "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p0_p1_p1_p1_p0_p1_p1_p0": {
@@ -12043,13 +12727,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -12061,7 +12745,7 @@
         },
         "symbolic.json": {
           "path": "masters/P72/symbolic.json",
-          "sha256": "86bcc5687847278eadb8ea20c0b3e62c047a0ae056e9707aab42f3bef70ca040"
+          "sha256": "f30c62eb39a1ec77e5751388bbb2291aec87b98e4faff11a1ab7f9ad322d4e0f"
         },
         "graph.dot": {
           "path": "masters/P72/graph.dot",
@@ -12073,8 +12757,15 @@
         "sha256": "4a83c83b2ae1dc5b8ace9a50c63e3e2e31ac8871c42708eef80f7f449c0fcb82"
       },
       "source_symbolic": {
-        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p0_p1_p1_p1_p0_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
-        "sha256": "86bcc5687847278eadb8ea20c0b3e62c047a0ae056e9707aab42f3bef70ca040"
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/external-data/build/stage/formulas-converted.json",
+        "sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee.json.gz",
+          "sha256": "801d5973ae434b7736699d70786426f1ada6b0a00ab3dde4bde11021f2d268cf",
+          "bytes": 68450,
+          "uncompressed_sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+          "uncompressed_bytes": 460054
+        }
       },
       "source_stage_digits": 500,
       "source_validation": {
@@ -12097,6 +12788,14 @@
         "-4": {
           "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p0_p1_p1_p1_p0_p1_p1_p0/artifacts/pslq/exact-zero-inheritance-v1/acceptance.json",
           "sha256": "60660ab54447c5c9c94eab0d5b0dd072a18a07e10a4a030d8d5eaaf33b628433"
+        },
+        "0": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
+        },
+        "1": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
         }
       },
       "before_payload_archives": {
@@ -12110,7 +12809,27 @@
         }
       },
       "rowwise_window_merge_not_whole_file_equivalence": true,
-      "retained_extra_coefficients": []
+      "retained_extra_coefficients": [],
+      "previous_source_symbolic": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p0_p1_p1_p1_p0_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "86bcc5687847278eadb8ea20c0b3e62c047a0ae056e9707aab42f3bef70ca040"
+      },
+      "symbolic_validation_caps": {
+        "0": 518,
+        "1": 518
+      },
+      "rowwise_symbolic_update": {
+        "epsilon_powers": [
+          0,
+          1
+        ],
+        "whole_file_equivalence_asserted": false,
+        "other_rows_preserved": true
+      },
+      "latest_before_symbolic_archive": {
+        "path": "provenance/takeover-4L-closures-v1-before/4L/masters/P72/symbolic.json",
+        "sha256": "86bcc5687847278eadb8ea20c0b3e62c047a0ae056e9707aab42f3bef70ca040"
+      }
     },
     "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p0_p1_p1_p1_p1_p1_p1_p0": {
       "coefficients": [
@@ -12146,7 +12865,7 @@
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -12158,7 +12877,7 @@
         },
         "symbolic.json": {
           "path": "masters/P73/symbolic.json",
-          "sha256": "1ebebb62014999e32cf5811b4fb28bcedb5429a0ff22687ffaaa6eee01d8cefd"
+          "sha256": "8d949738d45206aedf312518c5c877bbe428964e886e99a3be5b751f430a5a08"
         },
         "graph.dot": {
           "path": "masters/P73/graph.dot",
@@ -12170,8 +12889,15 @@
         "sha256": "13432f0eedea8224353ae7b095cc6acb23c3151ab35b75851ad71e0b75d1360d"
       },
       "source_symbolic": {
-        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p0_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
-        "sha256": "1ebebb62014999e32cf5811b4fb28bcedb5429a0ff22687ffaaa6eee01d8cefd"
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/external-data/build/stage/formulas-converted.json",
+        "sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee.json.gz",
+          "sha256": "801d5973ae434b7736699d70786426f1ada6b0a00ab3dde4bde11021f2d268cf",
+          "bytes": 68450,
+          "uncompressed_sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+          "uncompressed_bytes": 460054
+        }
       },
       "source_stage_digits": 500,
       "source_validation": {
@@ -12198,6 +12924,10 @@
         "0": {
           "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p0_p1_p1_p1_p1_p1_p1_p0/artifacts/pslq/PR11-finite-spoke-stage200-v1/acceptance.json",
           "sha256": "b9f5bc588d0a89b70b9dc8f718b19951d062eeec2c692d109ed84392cf463c09"
+        },
+        "1": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
         }
       },
       "before_payload_archives": {
@@ -12211,7 +12941,25 @@
         }
       },
       "rowwise_window_merge_not_whole_file_equivalence": true,
-      "retained_extra_coefficients": []
+      "retained_extra_coefficients": [],
+      "previous_source_symbolic": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p0_p1_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "1ebebb62014999e32cf5811b4fb28bcedb5429a0ff22687ffaaa6eee01d8cefd"
+      },
+      "symbolic_validation_caps": {
+        "1": 517
+      },
+      "rowwise_symbolic_update": {
+        "epsilon_powers": [
+          1
+        ],
+        "whole_file_equivalence_asserted": false,
+        "other_rows_preserved": true
+      },
+      "latest_before_symbolic_archive": {
+        "path": "provenance/takeover-4L-closures-v1-before/4L/masters/P73/symbolic.json",
+        "sha256": "1ebebb62014999e32cf5811b4fb28bcedb5429a0ff22687ffaaa6eee01d8cefd"
+      }
     },
     "L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p1_p0_p1_p1_p1_p1_p1_p0": {
       "coefficients": [
@@ -12241,13 +12989,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -12259,7 +13007,7 @@
         },
         "symbolic.json": {
           "path": "masters/P74/symbolic.json",
-          "sha256": "cea9eb73b39fa833d30c31ee37eaa8a3de2669903b86acbb35227f0f8cdaecd5"
+          "sha256": "ec2c754b6542c45e7c73f66951552123ccff9d9492b387db17e277fea04859a7"
         },
         "graph.dot": {
           "path": "masters/P74/graph.dot",
@@ -12271,8 +13019,15 @@
         "sha256": "27131d144f20d786e9eeacdc34761b8d27420396ea98858202a32f3fba975613"
       },
       "source_symbolic": {
-        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p1_p0_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
-        "sha256": "27131d144f20d786e9eeacdc34761b8d27420396ea98858202a32f3fba975613"
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/external-data/build/stage/formulas-converted.json",
+        "sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee.json.gz",
+          "sha256": "801d5973ae434b7736699d70786426f1ada6b0a00ab3dde4bde11021f2d268cf",
+          "bytes": 68450,
+          "uncompressed_sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+          "uncompressed_bytes": 460054
+        }
       },
       "source_stage_digits": 500,
       "source_validation": {
@@ -12295,6 +13050,14 @@
         "-4": {
           "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p1_p0_p1_p1_p1_p1_p1_p0/artifacts/pslq/exact-zero-inheritance-v1/acceptance.json",
           "sha256": "d823c4cdd72f5158efb42851d017d3bd513a7ba33162e38ff68217c7dce52ae0"
+        },
+        "0": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
+        },
+        "1": {
+          "path": "provenance/takeover-4L-closures-v1/symbolic-acceptance.json",
+          "sha256": "79a62e5b0b2257200fa48ba390489f75cdcfc048bee1325f21df7e2df7850892"
         }
       },
       "before_payload_archives": {
@@ -12311,7 +13074,27 @@
       "retained_extra_coefficients": [],
       "retained_stronger_precision_powers": [
         0
-      ]
+      ],
+      "previous_source_symbolic": {
+        "path": "/shared/codex-2/vacuum_masters/MASTERS/4L/L4_eb225daea1ddc8a4d61675a26b9b487f90278190fe874e314b7253aee632a5e7_p2_p1_p1_p0_p1_p1_p1_p1_p1_p0/artifacts/uniform-stage500-v1/symbolic.json",
+        "sha256": "27131d144f20d786e9eeacdc34761b8d27420396ea98858202a32f3fba975613"
+      },
+      "symbolic_validation_caps": {
+        "0": 517,
+        "1": 517
+      },
+      "rowwise_symbolic_update": {
+        "epsilon_powers": [
+          0,
+          1
+        ],
+        "whole_file_equivalence_asserted": false,
+        "other_rows_preserved": true
+      },
+      "latest_before_symbolic_archive": {
+        "path": "provenance/takeover-4L-closures-v1-before/4L/masters/P74/symbolic.json",
+        "sha256": "cea9eb73b39fa833d30c31ee37eaa8a3de2669903b86acbb35227f0f8cdaecd5"
+      }
     }
   }
 }

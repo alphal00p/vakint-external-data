@@ -6003,6 +6003,167 @@
       "uncompressed_bytes": 988306
     },
     {
+      "path": "takeover-4L-closures-v1-031361acc32b8b7155ba799311e8e6379732fe3682afae3292a34e6f43a4d8ea.json.gz",
+      "sha256": "566747b16a6fa6eac692f882859247fcf306e3d9b617b8bcbfa7b5ec57695e60",
+      "bytes": 1517,
+      "uncompressed_sha256": "031361acc32b8b7155ba799311e8e6379732fe3682afae3292a34e6f43a4d8ea",
+      "uncompressed_bytes": 9992
+    },
+    {
+      "path": "takeover-4L-closures-v1-218f822c12f1279e9d0f59d09374a59bdb9249e37a11706c63017df694afc521.json.gz",
+      "sha256": "c04e32ad0335a0347036bb04cfb6f3a0c0e215928cf4b0bcb3823a0bccebbb55",
+      "bytes": 42059,
+      "uncompressed_sha256": "218f822c12f1279e9d0f59d09374a59bdb9249e37a11706c63017df694afc521",
+      "uncompressed_bytes": 209094
+    },
+    {
+      "path": "takeover-4L-closures-v1-235d18edf874450d91e636033ac1ed193f143fc7d634b8e5b158f5d27d19fed0.json.gz",
+      "sha256": "cc40b254155891059755dde849ec25a92e9ea3504b30f0b27f39cccf8c1cd3ca",
+      "bytes": 9192,
+      "uncompressed_sha256": "235d18edf874450d91e636033ac1ed193f143fc7d634b8e5b158f5d27d19fed0",
+      "uncompressed_bytes": 37974
+    },
+    {
+      "path": "takeover-4L-closures-v1-35c204a5ac86d99fab3e783aafbdde7a88808c5bcb412f6a5890a230c716c926.json.gz",
+      "sha256": "00454ae091708884591c36ba9f5840d27d2e7a62f5cbf8e2b8803b2dd1a90efd",
+      "bytes": 32360,
+      "uncompressed_sha256": "35c204a5ac86d99fab3e783aafbdde7a88808c5bcb412f6a5890a230c716c926",
+      "uncompressed_bytes": 290420
+    },
+    {
+      "path": "takeover-4L-closures-v1-46a596d6854fb6c034cee9124d70e0c5eaf9e76ed0a22ed93770f2794abe67f4.json.gz",
+      "sha256": "4695747e0acc44cf89ce8cd751d3646958a2e94c853c2965c14e8f00b900f5af",
+      "bytes": 3816,
+      "uncompressed_sha256": "46a596d6854fb6c034cee9124d70e0c5eaf9e76ed0a22ed93770f2794abe67f4",
+      "uncompressed_bytes": 18005
+    },
+    {
+      "path": "takeover-4L-closures-v1-4a88cbcee8a69e20cf4fce2ee42da32fc64b354b1da26e74eacd90f25e4b4121.json.gz",
+      "sha256": "05b79cb44704aa1fb055d11e80fd5e1519fe8f1e03cfb4bc23e01a59ad54c6a3",
+      "bytes": 6370,
+      "uncompressed_sha256": "4a88cbcee8a69e20cf4fce2ee42da32fc64b354b1da26e74eacd90f25e4b4121",
+      "uncompressed_bytes": 44396
+    },
+    {
+      "path": "takeover-4L-closures-v1-6b320332393bde38f1e822560e6d88b349ad3290b18799e1d05657676e64a0f5.json.gz",
+      "sha256": "7a8c58f6ddc8c619fa12fcf25b63c9d7e0ed7bf371ed7218f29d0948ecd38026",
+      "bytes": 37879,
+      "uncompressed_sha256": "6b320332393bde38f1e822560e6d88b349ad3290b18799e1d05657676e64a0f5",
+      "uncompressed_bytes": 301073
+    },
+    {
+      "path": "takeover-4L-closures-v1-6b9920f94d7ad30e61424f0d4a80f29df84355108831c938e53f90bbda7ac9d5.json.gz",
+      "sha256": "400217ccd7ef1ecd1a23e012627f9502d47c8e755eebb2821bc3ec3cc43cb05f",
+      "bytes": 6487,
+      "uncompressed_sha256": "6b9920f94d7ad30e61424f0d4a80f29df84355108831c938e53f90bbda7ac9d5",
+      "uncompressed_bytes": 51634
+    },
+    {
+      "path": "takeover-4L-closures-v1-6f21037c69c003e3c47b9b77b4787bc658e10330358611e254cc58916db867e9.json.gz",
+      "sha256": "9ca3018eabc73be371989557225c9af5d95fd2e287016a8fb6f0cb355762a9f2",
+      "bytes": 14113,
+      "uncompressed_sha256": "6f21037c69c003e3c47b9b77b4787bc658e10330358611e254cc58916db867e9",
+      "uncompressed_bytes": 89482
+    },
+    {
+      "path": "takeover-4L-closures-v1-76336347a33944e55771ebba6e318ff160f710c916494271e538a56331bb20b2.json.gz",
+      "sha256": "7c537550dfe98a171aebe9d61901efacc5d59abe3ec3391c9ccb79c97a71e414",
+      "bytes": 16855,
+      "uncompressed_sha256": "76336347a33944e55771ebba6e318ff160f710c916494271e538a56331bb20b2",
+      "uncompressed_bytes": 164281
+    },
+    {
+      "path": "takeover-4L-closures-v1-77f7c750ca49ad71b99ac8a0a8ae63b548eb7c0da2b71e1e682d057311fd0233.json.gz",
+      "sha256": "5afd3ecada47a8c76ba8eda4edde5c10344347cfab62d500e3b98c3f9104727e",
+      "bytes": 24989,
+      "uncompressed_sha256": "77f7c750ca49ad71b99ac8a0a8ae63b548eb7c0da2b71e1e682d057311fd0233",
+      "uncompressed_bytes": 195042
+    },
+    {
+      "path": "takeover-4L-closures-v1-7cefe59cd48db7de11f9cb54295f4115a74ebbc609ca0fd154a3df4ad2df5562.json.gz",
+      "sha256": "ebd0aabef9a1e0c35664730473222a838cbce556609418215569e239401bca56",
+      "bytes": 47416,
+      "uncompressed_sha256": "7cefe59cd48db7de11f9cb54295f4115a74ebbc609ca0fd154a3df4ad2df5562",
+      "uncompressed_bytes": 426148
+    },
+    {
+      "path": "takeover-4L-closures-v1-946ee8162581183889c43225f72b24094623ee01089af226223db1019d1b9339.json.gz",
+      "sha256": "044794f27a47493686e03c27963e9155448937e2fef83e98ed9e33210656ca7c",
+      "bytes": 16565,
+      "uncompressed_sha256": "946ee8162581183889c43225f72b24094623ee01089af226223db1019d1b9339",
+      "uncompressed_bytes": 161426
+    },
+    {
+      "path": "takeover-4L-closures-v1-a32c72a651f2ab3abe0d1e5b44bea9489d45c959a36cb308ee33cb487665efa0.json.gz",
+      "sha256": "981c4d684c7e60a4a76a6c043489b0e92d7311d20c4759aaa81981b969e57318",
+      "bytes": 8300,
+      "uncompressed_sha256": "a32c72a651f2ab3abe0d1e5b44bea9489d45c959a36cb308ee33cb487665efa0",
+      "uncompressed_bytes": 49888
+    },
+    {
+      "path": "takeover-4L-closures-v1-a64be1e05f21de3ddce784757cbd7834c440df1f800e56ff4ed17e61b0000788.json.gz",
+      "sha256": "134ad3a475f2b8dec6b873e14aa35535b167ade8af0edf4aabcfaa08ced0caac",
+      "bytes": 39089,
+      "uncompressed_sha256": "a64be1e05f21de3ddce784757cbd7834c440df1f800e56ff4ed17e61b0000788",
+      "uncompressed_bytes": 325161
+    },
+    {
+      "path": "takeover-4L-closures-v1-ba50b84f415e97b8f4d46fdb3943ab1286447214e023edda52e45f56a49bd54d.json.gz",
+      "sha256": "9e5ea0d3c740fb692ba42483889fea823f8c3af9344abcaecd2cf46275db716a",
+      "bytes": 3174,
+      "uncompressed_sha256": "ba50b84f415e97b8f4d46fdb3943ab1286447214e023edda52e45f56a49bd54d",
+      "uncompressed_bytes": 48063
+    },
+    {
+      "path": "takeover-4L-closures-v1-bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee.json.gz",
+      "sha256": "801d5973ae434b7736699d70786426f1ada6b0a00ab3dde4bde11021f2d268cf",
+      "bytes": 68450,
+      "uncompressed_sha256": "bdbf8d729e2589c71509dfdaecde2be7c7d5590acfe191b8a2f40ef561c22eee",
+      "uncompressed_bytes": 460054
+    },
+    {
+      "path": "takeover-4L-closures-v1-bfaeb4fc99689c4a2d503b02df6659697665faef328cfc13ef13a9c195081372.json.gz",
+      "sha256": "a050aeb4adc9b25b5992d192858886985a7ab47b11666d491a54067ae298f7d1",
+      "bytes": 7679,
+      "uncompressed_sha256": "bfaeb4fc99689c4a2d503b02df6659697665faef328cfc13ef13a9c195081372",
+      "uncompressed_bytes": 81317
+    },
+    {
+      "path": "takeover-4L-closures-v1-c1869feef4e1a0ab0b5452c957cb7fb2bf22d568d32e51c7d68cbee47c37d853.json.gz",
+      "sha256": "0f284bdea7e509b85d4695a3a0b3c79d9e41f8e665c5219654d9925449e19ca6",
+      "bytes": 21265,
+      "uncompressed_sha256": "c1869feef4e1a0ab0b5452c957cb7fb2bf22d568d32e51c7d68cbee47c37d853",
+      "uncompressed_bytes": 172916
+    },
+    {
+      "path": "takeover-4L-closures-v1-c7ef89fe2b02371ada20f75e4838696f9fd05edf70bcb83b2df1ece426426a1c.json.gz",
+      "sha256": "0cc4d52bbdb2aa2029965d22e69c656cd1ae0bb2ff1eb628e39409a552e58f06",
+      "bytes": 10186,
+      "uncompressed_sha256": "c7ef89fe2b02371ada20f75e4838696f9fd05edf70bcb83b2df1ece426426a1c",
+      "uncompressed_bytes": 75781
+    },
+    {
+      "path": "takeover-4L-closures-v1-f0b49ed3d11ddb0fb8aead1bae76086ec6039090757a18af439be12f620f2dab.json.gz",
+      "sha256": "6bfcd65a6b92e2ecfcc89d5edc4d40344099221707ed3a32a2c067b4ed3944bd",
+      "bytes": 78627,
+      "uncompressed_sha256": "f0b49ed3d11ddb0fb8aead1bae76086ec6039090757a18af439be12f620f2dab",
+      "uncompressed_bytes": 493757
+    },
+    {
+      "path": "takeover-4L-closures-v1-f17dfd721c0d133b5c98cf90aa956ba9e312ed3766ca43ec34ff8fce37bf4777.json.gz",
+      "sha256": "a8324a3b392502a5a8e8900faae2906c89a72c2aba6b4813b8570da82f1cd72f",
+      "bytes": 2398,
+      "uncompressed_sha256": "f17dfd721c0d133b5c98cf90aa956ba9e312ed3766ca43ec34ff8fce37bf4777",
+      "uncompressed_bytes": 6149
+    },
+    {
+      "path": "takeover-4L-closures-v1-f9a945783469c76e76cca5f3a797c000ae1fe6940a658a841cb10655341c0f15.json.gz",
+      "sha256": "591d925d3aab0dfc9d60603617ddbf6b4c1b1440165074f569f9eec70e39e92a",
+      "bytes": 29408,
+      "uncompressed_sha256": "f9a945783469c76e76cca5f3a797c000ae1fe6940a658a841cb10655341c0f15",
+      "uncompressed_bytes": 292074
+    },
+    {
       "path": "validator-Cargo.lock.gz",
       "sha256": "fa58e700910a932f8e920bbd8b29cb681917975d31b73abe4b575e1fb696d3f2",
       "bytes": 5497,

@@ -1,0 +1,1762 @@
+{
+  "schema": "vakint.external-data.takeover-4L-closure-symbolic-acceptance.v1",
+  "base_commit": "ca49f32854050fdaa434ad11d743e6db88adb674",
+  "accepted": true,
+  "acceptance_authority": "takeover publication of the user-restarted 4L reconstruction; ledger v1 + P1 fixes; decisions D1(a), D3(a), D5(a), D9(a), D10(a); not a codex-2 Root adoption",
+  "rule": "each closed formula (exact composition of accepted/two-engine-replayed maps with named periods) reproduces the independent physical 500-digit value of every slot (within 0.483 units of the 500th digit) and the raw physical profiles to 516.8-548 digits; the formula cap is min(constant digits, floor(P1 S2 statement budget))",
+  "empirical_not_interval_proof": true,
+  "directions": {
+    "PR9[0]": {
+      "slots": [
+        "P8 eps^0",
+        "P32 eps^0",
+        "P43 eps^0",
+        "P63 eps^0"
+      ],
+      "formula_sha256": "56cce1763fd15e6ca06e080cde0df433958e255b96c8f95f2176b8c4e9020c35",
+      "formula_n_chars": 5052,
+      "source_formula": {
+        "file": "/shared/vhirschi/vacuum_masters_takeover/runs/A4-closure/v2/formulas-v2.json",
+        "sha256": "f9a945783469c76e76cca5f3a797c000ae1fe6940a658a841cb10655341c0f15",
+        "json_path": [
+          "directions",
+          "PR9[0]",
+          "expression_fully_closed"
+        ],
+        "expr_sha256": "91de07dd44e305f16fba25eb6c7cace531e03d88ccf32f8cbc65190088e3a304",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-f9a945783469c76e76cca5f3a797c000ae1fe6940a658a841cb10655341c0f15.json.gz",
+          "sha256": "591d925d3aab0dfc9d60603617ddbf6b4c1b1440165074f569f9eec70e39e92a",
+          "bytes": 29408,
+          "uncompressed_sha256": "f9a945783469c76e76cca5f3a797c000ae1fe6940a658a841cb10655341c0f15",
+          "uncompressed_bytes": 292074
+        }
+      },
+      "conversion": {
+        "unchanged_atoms_vs_ledger_source": true,
+        "substitutions": [],
+        "roundtrip_parse_equal": true,
+        "float_atoms": false,
+        "digits_vs_ledger_original_formula_X8": Infinity
+      },
+      "closure_label": "COMPUTED: exact composition of ACCEPTED maps",
+      "maps": "ACCEPTED global composition (B1 Mathematica replay 58/58) + exact Lm1/Lm2 + ACCEPTED hybrid/DREAM cat-eye maps",
+      "ledger_digits_vs_physical_500": [
+        499.57,
+        499.57,
+        499.57,
+        499.57
+      ],
+      "ledger_digits_note": null,
+      "ledger_digits_vs_raw_profiles": [
+        519.74,
+        519.74
+      ],
+      "gate_vakeval_vs_numerical_json": {
+        "P8 eps^0": {
+          "digits_vs_numerical_json": 499.571,
+          "ulps_of_numerical_json_last_digit": 0.473,
+          "statement_budget_relative_digits": 536.69
+        },
+        "P32 eps^0": {
+          "digits_vs_numerical_json": 499.571,
+          "ulps_of_numerical_json_last_digit": 0.473,
+          "statement_budget_relative_digits": 536.69
+        },
+        "P43 eps^0": {
+          "digits_vs_numerical_json": 499.571,
+          "ulps_of_numerical_json_last_digit": 0.473,
+          "statement_budget_relative_digits": 536.69
+        },
+        "P63 eps^0": {
+          "digits_vs_numerical_json": 499.571,
+          "ulps_of_numerical_json_last_digit": 0.473,
+          "statement_budget_relative_digits": 536.69
+        }
+      },
+      "symbolic_validation_cap": {
+        "closure_statement_budget_P1_S2": 518.95,
+        "min_constant_digits": 520,
+        "cap": 518
+      },
+      "leaves": [
+        "symbolica::log()",
+        "symbolica::polylog()",
+        "symbolica::zeta()",
+        "symbolica::𝜋",
+        "vakint::GPLImag()",
+        "vakint::GPLReal()",
+        "vakint::HI()",
+        "vakint::HR()",
+        "vakint::K5LogMoment()",
+        "vakint::K5Moment()",
+        "vakint::K5MomentTaylor()",
+        "vakint::PR10D2",
+        "vakint::PR15D2",
+        "vakint::PR7D2",
+        "vakint::PR7D2Eps1",
+        "vakint::PR7D2Eps2",
+        "vakint::PR9D2Eps1",
+        "vakint::PR9D2Eps2",
+        "vakint::PR9pD2Eps2",
+        "vakint::S2",
+        "vakint::T1ep",
+        "vakint::T1ep2"
+      ],
+      "conditional_on": null
+    },
+    "combA[0]": {
+      "slots": [
+        "P10 eps^0",
+        "P45 eps^0",
+        "P72 eps^0"
+      ],
+      "formula_sha256": "07dfaeaa741f4f8b6092be7a141a77ff2df54fe917ae9bd818123432739b1462",
+      "formula_n_chars": 5120,
+      "source_formula": {
+        "file": "/shared/vhirschi/vacuum_masters_takeover/runs/A4-closure/v2/formulas-v2.json",
+        "sha256": "f9a945783469c76e76cca5f3a797c000ae1fe6940a658a841cb10655341c0f15",
+        "json_path": [
+          "directions",
+          "combA[0]",
+          "expression_fully_closed"
+        ],
+        "expr_sha256": "a7291ed03697c4f8ccb8b10fcc6f325f531d6dc98aab85da39ca752ddbc316d9",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-f9a945783469c76e76cca5f3a797c000ae1fe6940a658a841cb10655341c0f15.json.gz",
+          "sha256": "591d925d3aab0dfc9d60603617ddbf6b4c1b1440165074f569f9eec70e39e92a",
+          "bytes": 29408,
+          "uncompressed_sha256": "f9a945783469c76e76cca5f3a797c000ae1fe6940a658a841cb10655341c0f15",
+          "uncompressed_bytes": 292074
+        }
+      },
+      "conversion": {
+        "unchanged_atoms_vs_ledger_source": true,
+        "substitutions": [],
+        "roundtrip_parse_equal": true,
+        "float_atoms": false,
+        "digits_vs_ledger_original_formula_X8": Infinity
+      },
+      "closure_label": "COMPUTED: exact composition of ACCEPTED maps",
+      "maps": "as PR9[0] + published PR3/PR4/PR4d/PR5/PR7 rows (catalogue expression of P10)",
+      "ledger_digits_vs_physical_500": [
+        500.09,
+        500.09,
+        500.09
+      ],
+      "ledger_digits_note": null,
+      "ledger_digits_vs_raw_profiles": [
+        519.27,
+        519.27
+      ],
+      "gate_vakeval_vs_numerical_json": {
+        "P10 eps^0": {
+          "digits_vs_numerical_json": 500.086,
+          "ulps_of_numerical_json_last_digit": 0.2452,
+          "statement_budget_relative_digits": 536.53
+        },
+        "P45 eps^0": {
+          "digits_vs_numerical_json": 500.086,
+          "ulps_of_numerical_json_last_digit": 0.2452,
+          "statement_budget_relative_digits": 536.53
+        },
+        "P72 eps^0": {
+          "digits_vs_numerical_json": 500.086,
+          "ulps_of_numerical_json_last_digit": 0.2452,
+          "statement_budget_relative_digits": 536.53
+        }
+      },
+      "symbolic_validation_cap": {
+        "closure_statement_budget_P1_S2": 518.49,
+        "min_constant_digits": 520,
+        "cap": 518
+      },
+      "leaves": [
+        "symbolica::log()",
+        "symbolica::polylog()",
+        "symbolica::zeta()",
+        "symbolica::𝜋",
+        "vakint::GPLImag()",
+        "vakint::GPLReal()",
+        "vakint::HI()",
+        "vakint::HR()",
+        "vakint::K5LogMoment()",
+        "vakint::K5Moment()",
+        "vakint::K5MomentTaylor()",
+        "vakint::PR10D2",
+        "vakint::PR15D2",
+        "vakint::PR4dfin",
+        "vakint::PR4fin",
+        "vakint::PR7D2",
+        "vakint::PR7D2Eps1",
+        "vakint::PR7D2Eps2",
+        "vakint::PR9D2Eps1",
+        "vakint::PR9D2Eps2",
+        "vakint::PR9pD2Eps2",
+        "vakint::S2",
+        "vakint::T1ep",
+        "vakint::T1ep2"
+      ],
+      "conditional_on": null
+    },
+    "PR15[0]": {
+      "slots": [
+        "P34 eps^0",
+        "P65 eps^0"
+      ],
+      "formula_sha256": "ec2d51ee12602c54984aa7d1c84f0641fd5fedda38d363aa9e50df5c190a5f64",
+      "formula_n_chars": 14702,
+      "source_formula": {
+        "file": "/shared/vhirschi/vacuum_masters_takeover/runs/A4-closure/v2/formulas-v2.json",
+        "sha256": "f9a945783469c76e76cca5f3a797c000ae1fe6940a658a841cb10655341c0f15",
+        "json_path": [
+          "directions",
+          "PR15[0]",
+          "expression_fully_closed"
+        ],
+        "expr_sha256": "afe7bd7246fe92444bce73c011ee89de005ab524d15828aa9596bcad5995d2f0",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-f9a945783469c76e76cca5f3a797c000ae1fe6940a658a841cb10655341c0f15.json.gz",
+          "sha256": "591d925d3aab0dfc9d60603617ddbf6b4c1b1440165074f569f9eec70e39e92a",
+          "bytes": 29408,
+          "uncompressed_sha256": "f9a945783469c76e76cca5f3a797c000ae1fe6940a658a841cb10655341c0f15",
+          "uncompressed_bytes": 292074
+        }
+      },
+      "conversion": {
+        "unchanged_atoms_vs_ledger_source": true,
+        "substitutions": [],
+        "roundtrip_parse_equal": true,
+        "float_atoms": false,
+        "digits_vs_ledger_original_formula_X8": Infinity
+      },
+      "closure_label": "COMPUTED: exact composition of ACCEPTED maps",
+      "maps": "ACCEPTED coalesced joint PR15 + 4/(45 eps) PR10 inverse",
+      "ledger_digits_vs_physical_500": [
+        500.12,
+        500.12
+      ],
+      "ledger_digits_note": null,
+      "ledger_digits_vs_raw_profiles": [
+        519.47,
+        519.47
+      ],
+      "gate_vakeval_vs_numerical_json": {
+        "P34 eps^0": {
+          "digits_vs_numerical_json": 500.119,
+          "ulps_of_numerical_json_last_digit": 0.365,
+          "statement_budget_relative_digits": 535.73
+        },
+        "P65 eps^0": {
+          "digits_vs_numerical_json": 500.119,
+          "ulps_of_numerical_json_last_digit": 0.365,
+          "statement_budget_relative_digits": 535.73
+        }
+      },
+      "symbolic_validation_cap": {
+        "closure_statement_budget_P1_S2": 518.7,
+        "min_constant_digits": 520,
+        "cap": 518
+      },
+      "leaves": [
+        "symbolica::log()",
+        "symbolica::polylog()",
+        "symbolica::zeta()",
+        "symbolica::𝜋",
+        "vakint::GPLImag()",
+        "vakint::GPLReal()",
+        "vakint::HI()",
+        "vakint::HR()",
+        "vakint::K5LogMoment()",
+        "vakint::K5Moment()",
+        "vakint::K5MomentTaylor()",
+        "vakint::PR10D2",
+        "vakint::PR10D2Eps1",
+        "vakint::PR15D2",
+        "vakint::PR15D2Eps1",
+        "vakint::PR4dfin",
+        "vakint::PR4fin",
+        "vakint::PR7D2",
+        "vakint::PR7D2Eps1",
+        "vakint::PR7D2Eps2",
+        "vakint::PR9D2Eps1",
+        "vakint::PR9D2Eps2",
+        "vakint::PR9pD2Eps2",
+        "vakint::S2",
+        "vakint::T1ep",
+        "vakint::T1ep2"
+      ],
+      "conditional_on": null
+    },
+    "PR9d[1]": {
+      "slots": [
+        "P15 eps^1",
+        "P50 eps^1",
+        "P67 eps^1"
+      ],
+      "formula_sha256": "a666f5e2d1399ec7298da8980c6ffb5d37cfbcf099b52a2fcb352338b78c4f73",
+      "formula_n_chars": 8006,
+      "source_formula": {
+        "file": "/shared/vhirschi/vacuum_masters_takeover/runs/A4-closure/v2/formulas-v2.json",
+        "sha256": "f9a945783469c76e76cca5f3a797c000ae1fe6940a658a841cb10655341c0f15",
+        "json_path": [
+          "directions",
+          "PR9d[1]",
+          "expression_fully_closed"
+        ],
+        "expr_sha256": "43b7b4e0e1d84ea2abbb248510f749e008c7eaac5c194ebcd7179a45148d1f2b",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-f9a945783469c76e76cca5f3a797c000ae1fe6940a658a841cb10655341c0f15.json.gz",
+          "sha256": "591d925d3aab0dfc9d60603617ddbf6b4c1b1440165074f569f9eec70e39e92a",
+          "bytes": 29408,
+          "uncompressed_sha256": "f9a945783469c76e76cca5f3a797c000ae1fe6940a658a841cb10655341c0f15",
+          "uncompressed_bytes": 292074
+        }
+      },
+      "conversion": {
+        "unchanged_atoms_vs_ledger_source": true,
+        "substitutions": [],
+        "roundtrip_parse_equal": true,
+        "float_atoms": false,
+        "digits_vs_ledger_original_formula_X8": Infinity
+      },
+      "closure_label": "COMPUTED: exact composition of ACCEPTED maps",
+      "maps": "ACCEPTED hybrid weighted-moment support (KQ) + A4 PR9[0]",
+      "ledger_digits_vs_physical_500": [
+        499.58,
+        499.58,
+        499.58
+      ],
+      "ledger_digits_note": null,
+      "ledger_digits_vs_raw_profiles": [
+        519.98,
+        519.98
+      ],
+      "gate_vakeval_vs_numerical_json": {
+        "P15 eps^1": {
+          "digits_vs_numerical_json": 499.576,
+          "ulps_of_numerical_json_last_digit": 0.4102,
+          "statement_budget_relative_digits": 535.54
+        },
+        "P50 eps^1": {
+          "digits_vs_numerical_json": 499.576,
+          "ulps_of_numerical_json_last_digit": 0.4102,
+          "statement_budget_relative_digits": 535.54
+        },
+        "P67 eps^1": {
+          "digits_vs_numerical_json": 499.576,
+          "ulps_of_numerical_json_last_digit": 0.4102,
+          "statement_budget_relative_digits": 535.54
+        }
+      },
+      "symbolic_validation_cap": {
+        "closure_statement_budget_P1_S2": 519.11,
+        "min_constant_digits": 520,
+        "cap": 519
+      },
+      "leaves": [
+        "symbolica::log()",
+        "symbolica::polylog()",
+        "symbolica::zeta()",
+        "symbolica::𝜋",
+        "vakint::GPLImag()",
+        "vakint::GPLReal()",
+        "vakint::HI()",
+        "vakint::HR()",
+        "vakint::K5LogMoment()",
+        "vakint::K5Moment()",
+        "vakint::K5MomentTaylor()",
+        "vakint::PR10D2",
+        "vakint::PR15D2",
+        "vakint::PR7D2",
+        "vakint::PR7D2Eps1",
+        "vakint::PR7D2Eps2",
+        "vakint::PR9D2Eps1",
+        "vakint::PR9D2Eps2",
+        "vakint::PR9pD2Eps2",
+        "vakint::S2",
+        "vakint::T1ep",
+        "vakint::T1ep2"
+      ],
+      "conditional_on": null
+    },
+    "combB[1]": {
+      "slots": [
+        "P16 eps^1",
+        "P35 eps^1",
+        "P51 eps^1",
+        "P71 eps^1"
+      ],
+      "formula_sha256": "93cffe612f3c67700ca1a78c67743f53865196ce68e04e91246a842c0191242f",
+      "formula_n_chars": 8036,
+      "source_formula": {
+        "file": "/shared/vhirschi/vacuum_masters_takeover/runs/A4-closure/v2/formulas-v2.json",
+        "sha256": "f9a945783469c76e76cca5f3a797c000ae1fe6940a658a841cb10655341c0f15",
+        "json_path": [
+          "directions",
+          "combB[1]",
+          "expression_fully_closed"
+        ],
+        "expr_sha256": "a2a051f7ba31fa1d99fa5cbdba8bf0d865af626e712f2b96f7904b4ed55524eb",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-f9a945783469c76e76cca5f3a797c000ae1fe6940a658a841cb10655341c0f15.json.gz",
+          "sha256": "591d925d3aab0dfc9d60603617ddbf6b4c1b1440165074f569f9eec70e39e92a",
+          "bytes": 29408,
+          "uncompressed_sha256": "f9a945783469c76e76cca5f3a797c000ae1fe6940a658a841cb10655341c0f15",
+          "uncompressed_bytes": 292074
+        }
+      },
+      "conversion": {
+        "unchanged_atoms_vs_ledger_source": true,
+        "substitutions": [],
+        "roundtrip_parse_equal": true,
+        "float_atoms": false,
+        "digits_vs_ledger_original_formula_X8": Infinity
+      },
+      "closure_label": "COMPUTED: exact composition of ACCEPTED maps",
+      "maps": "catalogue expression of P16 + A4 PR9[0], PR9d[1]",
+      "ledger_digits_vs_physical_500": [
+        500.06,
+        500.06,
+        500.06,
+        500.06
+      ],
+      "ledger_digits_note": null,
+      "ledger_digits_vs_raw_profiles": [
+        519.46,
+        519.46
+      ],
+      "gate_vakeval_vs_numerical_json": {
+        "P16 eps^1": {
+          "digits_vs_numerical_json": 500.057,
+          "ulps_of_numerical_json_last_digit": 0.4051,
+          "statement_budget_relative_digits": 535.37
+        },
+        "P35 eps^1": {
+          "digits_vs_numerical_json": 500.057,
+          "ulps_of_numerical_json_last_digit": 0.4051,
+          "statement_budget_relative_digits": 535.37
+        },
+        "P51 eps^1": {
+          "digits_vs_numerical_json": 500.057,
+          "ulps_of_numerical_json_last_digit": 0.4051,
+          "statement_budget_relative_digits": 535.37
+        },
+        "P71 eps^1": {
+          "digits_vs_numerical_json": 500.057,
+          "ulps_of_numerical_json_last_digit": 0.4051,
+          "statement_budget_relative_digits": 535.37
+        }
+      },
+      "symbolic_validation_cap": {
+        "closure_statement_budget_P1_S2": 518.64,
+        "min_constant_digits": 520,
+        "cap": 518
+      },
+      "leaves": [
+        "symbolica::log()",
+        "symbolica::polylog()",
+        "symbolica::zeta()",
+        "symbolica::𝜋",
+        "vakint::GPLImag()",
+        "vakint::GPLReal()",
+        "vakint::HI()",
+        "vakint::HR()",
+        "vakint::K5LogMoment()",
+        "vakint::K5Moment()",
+        "vakint::K5MomentTaylor()",
+        "vakint::PR10D2",
+        "vakint::PR15D2",
+        "vakint::PR4dfin",
+        "vakint::PR4fin",
+        "vakint::PR7D2",
+        "vakint::PR7D2Eps1",
+        "vakint::PR7D2Eps2",
+        "vakint::PR9D2Eps1",
+        "vakint::PR9D2Eps2",
+        "vakint::PR9pD2Eps2",
+        "vakint::S2",
+        "vakint::T1ep",
+        "vakint::T1ep2"
+      ],
+      "conditional_on": null
+    },
+    "PR9[1]": {
+      "slots": [
+        "P8 eps^1",
+        "P32 eps^1",
+        "P43 eps^1",
+        "P63 eps^1"
+      ],
+      "formula_sha256": "c6a3472bb0aca3c19a2184d42b9e4e4839d04fdaf65c52cf7d828df9d847b52e",
+      "formula_n_chars": 16142,
+      "source_formula": {
+        "file": "/shared/vhirschi/vacuum_masters_takeover/runs/A5-closure/formulas.json",
+        "sha256": "7cefe59cd48db7de11f9cb54295f4115a74ebbc609ca0fd154a3df4ad2df5562",
+        "json_path": [
+          "directions",
+          "PR9[1]",
+          "expression_fully_closed"
+        ],
+        "expr_sha256": "937ac8b8fe3f73f63717a8404edbed64f3d853369370d4a29d78f493a3f5a2fe",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-7cefe59cd48db7de11f9cb54295f4115a74ebbc609ca0fd154a3df4ad2df5562.json.gz",
+          "sha256": "ebd0aabef9a1e0c35664730473222a838cbce556609418215569e239401bca56",
+          "bytes": 47416,
+          "uncompressed_sha256": "7cefe59cd48db7de11f9cb54295f4115a74ebbc609ca0fd154a3df4ad2df5562",
+          "uncompressed_bytes": 426148
+        }
+      },
+      "conversion": {
+        "unchanged_atoms_vs_ledger_source": true,
+        "substitutions": [],
+        "roundtrip_parse_equal": true,
+        "float_atoms": false,
+        "digits_vs_ledger_original_formula_X8": Infinity
+      },
+      "closure_label": "COMPUTED (Symbolica; replayed exactly by Mathematica)",
+      "maps": "ACCEPTED weighted-moment support + B4 X2 identity (two-engine since E-wheel-crosscheck) + B4 D4 maps",
+      "ledger_digits_vs_physical_500": [
+        500.28,
+        500.28,
+        500.28,
+        500.28
+      ],
+      "ledger_digits_note": null,
+      "ledger_digits_vs_raw_profiles": [
+        519.45,
+        519.45
+      ],
+      "gate_vakeval_vs_numerical_json": {
+        "P8 eps^1": {
+          "digits_vs_numerical_json": 500.278,
+          "ulps_of_numerical_json_last_digit": 0.0582,
+          "statement_budget_relative_digits": 536.36
+        },
+        "P32 eps^1": {
+          "digits_vs_numerical_json": 500.278,
+          "ulps_of_numerical_json_last_digit": 0.0582,
+          "statement_budget_relative_digits": 536.36
+        },
+        "P43 eps^1": {
+          "digits_vs_numerical_json": 500.278,
+          "ulps_of_numerical_json_last_digit": 0.0582,
+          "statement_budget_relative_digits": 536.36
+        },
+        "P63 eps^1": {
+          "digits_vs_numerical_json": 500.278,
+          "ulps_of_numerical_json_last_digit": 0.0582,
+          "statement_budget_relative_digits": 536.36
+        }
+      },
+      "symbolic_validation_cap": {
+        "closure_statement_budget_P1_S2": 518.67,
+        "min_constant_digits": 520,
+        "cap": 518
+      },
+      "leaves": [
+        "symbolica::log()",
+        "symbolica::polylog()",
+        "symbolica::zeta()",
+        "symbolica::𝜋",
+        "vakint::GPLImag()",
+        "vakint::GPLReal()",
+        "vakint::HI()",
+        "vakint::HR()",
+        "vakint::K5LogMoment()",
+        "vakint::K5Moment()",
+        "vakint::K5MomentTaylor()",
+        "vakint::PR10D2",
+        "vakint::PR15D2",
+        "vakint::PR7D2",
+        "vakint::PR7D2Eps1",
+        "vakint::PR7D2Eps2",
+        "vakint::PR7D2Eps3",
+        "vakint::PR9D2Eps1",
+        "vakint::PR9D2Eps2",
+        "vakint::PR9D2Eps3",
+        "vakint::PR9pD2Eps2",
+        "vakint::PR9pD2Eps3",
+        "vakint::S2",
+        "vakint::T1ep",
+        "vakint::T1ep2",
+        "vakint::s6weak"
+      ],
+      "conditional_on": null
+    },
+    "combA[1]": {
+      "slots": [
+        "P10 eps^1",
+        "P45 eps^1",
+        "P72 eps^1"
+      ],
+      "formula_sha256": "f7924619c780de022306f74fc2b4b2757dc4af099e703ef4ad799044f9405cdd",
+      "formula_n_chars": 14831,
+      "source_formula": {
+        "file": "/shared/vhirschi/vacuum_masters_takeover/runs/A5-closure/formulas.json",
+        "sha256": "7cefe59cd48db7de11f9cb54295f4115a74ebbc609ca0fd154a3df4ad2df5562",
+        "json_path": [
+          "directions",
+          "combA[1]",
+          "expression_fully_closed"
+        ],
+        "expr_sha256": "5cfdbf959a5eb8f0c6f159da9ae02e98691141904bf7968e4ca39b654e2f0856",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-7cefe59cd48db7de11f9cb54295f4115a74ebbc609ca0fd154a3df4ad2df5562.json.gz",
+          "sha256": "ebd0aabef9a1e0c35664730473222a838cbce556609418215569e239401bca56",
+          "bytes": 47416,
+          "uncompressed_sha256": "7cefe59cd48db7de11f9cb54295f4115a74ebbc609ca0fd154a3df4ad2df5562",
+          "uncompressed_bytes": 426148
+        }
+      },
+      "conversion": {
+        "unchanged_atoms_vs_ledger_source": true,
+        "substitutions": [],
+        "roundtrip_parse_equal": true,
+        "float_atoms": false,
+        "digits_vs_ledger_original_formula_X8": Infinity
+      },
+      "closure_label": "COMPUTED (Symbolica; replayed exactly by Mathematica)",
+      "maps": "catalogue P10 eps^1 + A5 PR9[1] + A4 PR9d[1]",
+      "ledger_digits_vs_physical_500": [
+        500.1,
+        500.1,
+        500.1
+      ],
+      "ledger_digits_note": null,
+      "ledger_digits_vs_raw_profiles": [
+        519.09,
+        519.09
+      ],
+      "gate_vakeval_vs_numerical_json": {
+        "P10 eps^1": {
+          "digits_vs_numerical_json": 500.102,
+          "ulps_of_numerical_json_last_digit": 0.169,
+          "statement_budget_relative_digits": 548.95
+        },
+        "P45 eps^1": {
+          "digits_vs_numerical_json": 500.102,
+          "ulps_of_numerical_json_last_digit": 0.169,
+          "statement_budget_relative_digits": 548.95
+        },
+        "P72 eps^1": {
+          "digits_vs_numerical_json": 500.102,
+          "ulps_of_numerical_json_last_digit": 0.169,
+          "statement_budget_relative_digits": 548.95
+        }
+      },
+      "symbolic_validation_cap": {
+        "closure_statement_budget_P1_S2": 518.32,
+        "min_constant_digits": 520,
+        "cap": 518
+      },
+      "leaves": [
+        "symbolica::log()",
+        "symbolica::polylog()",
+        "symbolica::zeta()",
+        "symbolica::𝜋",
+        "vakint::HI()",
+        "vakint::HR()",
+        "vakint::K5LogMoment()",
+        "vakint::K5Moment()",
+        "vakint::K5MomentTaylor()",
+        "vakint::PR4dfin",
+        "vakint::PR4fin",
+        "vakint::PR7D2Eps1",
+        "vakint::PR7D2Eps2",
+        "vakint::PR7D2Eps3",
+        "vakint::PR9D2Eps1",
+        "vakint::PR9D2Eps2",
+        "vakint::PR9D2Eps3",
+        "vakint::PR9pD2Eps2",
+        "vakint::PR9pD2Eps3",
+        "vakint::S2",
+        "vakint::T1ep",
+        "vakint::s6weak"
+      ],
+      "conditional_on": null
+    },
+    "PR15[1]": {
+      "slots": [
+        "P34 eps^1",
+        "P65 eps^1"
+      ],
+      "formula_sha256": "50245367e6bd0ce1f33e7eacf446df7eb26b7dbcb4e726dfbdb12dfe37ecf616",
+      "formula_n_chars": 32210,
+      "source_formula": {
+        "file": "/shared/vhirschi/vacuum_masters_takeover/runs/A5-closure/formulas.json",
+        "sha256": "7cefe59cd48db7de11f9cb54295f4115a74ebbc609ca0fd154a3df4ad2df5562",
+        "json_path": [
+          "directions",
+          "PR15[1]",
+          "expression_fully_closed"
+        ],
+        "expr_sha256": "d71d0267a8b5ee717db9da2c4c3f7c8bbcb6b6fd92af8fc95f179ef2bb6c4609",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-7cefe59cd48db7de11f9cb54295f4115a74ebbc609ca0fd154a3df4ad2df5562.json.gz",
+          "sha256": "ebd0aabef9a1e0c35664730473222a838cbce556609418215569e239401bca56",
+          "bytes": 47416,
+          "uncompressed_sha256": "7cefe59cd48db7de11f9cb54295f4115a74ebbc609ca0fd154a3df4ad2df5562",
+          "uncompressed_bytes": 426148
+        }
+      },
+      "conversion": {
+        "unchanged_atoms_vs_ledger_source": true,
+        "substitutions": [],
+        "roundtrip_parse_equal": true,
+        "float_atoms": false,
+        "digits_vs_ledger_original_formula_X8": Infinity
+      },
+      "closure_label": "COMPUTED (Symbolica; replayed exactly by Mathematica)",
+      "maps": "ACCEPTED coalesced joint inverse at eps^1 (+ PR14[2], D4 supporting)",
+      "ledger_digits_vs_physical_500": [
+        499.73,
+        499.73
+      ],
+      "ledger_digits_note": null,
+      "ledger_digits_vs_raw_profiles": [
+        519.22,
+        519.22
+      ],
+      "gate_vakeval_vs_numerical_json": {
+        "P34 eps^1": {
+          "digits_vs_numerical_json": 499.728,
+          "ulps_of_numerical_json_last_digit": 0.4084,
+          "statement_budget_relative_digits": 536.09
+        },
+        "P65 eps^1": {
+          "digits_vs_numerical_json": 499.728,
+          "ulps_of_numerical_json_last_digit": 0.4084,
+          "statement_budget_relative_digits": 536.09
+        }
+      },
+      "symbolic_validation_cap": {
+        "closure_statement_budget_P1_S2": 518.44,
+        "min_constant_digits": 520,
+        "cap": 518
+      },
+      "leaves": [
+        "symbolica::log()",
+        "symbolica::polylog()",
+        "symbolica::zeta()",
+        "symbolica::𝜋",
+        "vakint::GPLImag()",
+        "vakint::GPLReal()",
+        "vakint::HI()",
+        "vakint::HR()",
+        "vakint::K5LogMoment()",
+        "vakint::K5Moment()",
+        "vakint::K5MomentTaylor()",
+        "vakint::PR10D2",
+        "vakint::PR10D2Eps1",
+        "vakint::PR10D2Eps2",
+        "vakint::PR14ep2",
+        "vakint::PR15D2",
+        "vakint::PR15D2Eps1",
+        "vakint::PR15D2Eps2",
+        "vakint::PR4dfin",
+        "vakint::PR4fin",
+        "vakint::PR7D2",
+        "vakint::PR7D2Eps2",
+        "vakint::PR7D2Eps3",
+        "vakint::PR9D2Eps1",
+        "vakint::PR9D2Eps2",
+        "vakint::PR9D2Eps3",
+        "vakint::PR9pD2Eps3",
+        "vakint::S2",
+        "vakint::T1ep",
+        "vakint::T1ep2",
+        "vakint::s6weak"
+      ],
+      "conditional_on": null
+    },
+    "PR11d[0]": {
+      "slots": [
+        "P17 eps^0",
+        "P52 eps^0",
+        "P74 eps^0"
+      ],
+      "formula_sha256": "798d4e0505c69a9bca3dd6a6e71b91137756ad9807e87db67fe994061413c485",
+      "formula_n_chars": 4506,
+      "source_formula": {
+        "file": "/shared/vhirschi/vacuum_masters_takeover/runs/B4-eps-structure/out/wheel-eps-quotients.json",
+        "sha256": "77f7c750ca49ad71b99ac8a0a8ae63b548eb7c0da2b71e1e682d057311fd0233",
+        "json_path": [
+          "results",
+          "PR11d[0]",
+          "expression_canonical"
+        ],
+        "expr_sha256": "ac7d93eaa2be012ab8a362e4946f114c7ce1868624f86a466c58a022f7cfab0c",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-77f7c750ca49ad71b99ac8a0a8ae63b548eb7c0da2b71e1e682d057311fd0233.json.gz",
+          "sha256": "5afd3ecada47a8c76ba8eda4edde5c10344347cfab62d500e3b98c3f9104727e",
+          "bytes": 24989,
+          "uncompressed_sha256": "77f7c750ca49ad71b99ac8a0a8ae63b548eb7c0da2b71e1e682d057311fd0233",
+          "uncompressed_bytes": 195042
+        }
+      },
+      "conversion": {
+        "unchanged_atoms_vs_ledger_source": false,
+        "substitutions": [
+          "iter0: b4w::R_1",
+          "iter0: gc::E9_0",
+          "iter0: gc::Q9",
+          "iter1: gc::E9_0"
+        ],
+        "roundtrip_parse_equal": true,
+        "float_atoms": false,
+        "digits_vs_ledger_original_formula_X8": 544.24
+      },
+      "closure_label": "COMPUTED-conditional (wheel28 generic conditions); map two-engine (B4-map-replay, E-wheel-crosscheck)",
+      "maps": "B4 quotient of the ACCEPTED wheel28 conditional inverse; equals the codex-2 ACCEPTED conditional expression E = O - 6 Q9 - 9/4 W1 exactly",
+      "ledger_digits_vs_physical_500": [
+        544.21,
+        544.21,
+        544.21
+      ],
+      "ledger_digits_note": null,
+      "ledger_digits_vs_raw_profiles": [
+        544.21,
+        544.21
+      ],
+      "gate_vakeval_vs_numerical_json": {
+        "P17 eps^0": {
+          "digits_vs_numerical_json": 545.355,
+          "ulps_of_numerical_json_last_digit": Infinity,
+          "statement_budget_relative_digits": 534.08
+        },
+        "P52 eps^0": {
+          "digits_vs_numerical_json": 545.355,
+          "ulps_of_numerical_json_last_digit": Infinity,
+          "statement_budget_relative_digits": 534.08
+        },
+        "P74 eps^0": {
+          "digits_vs_numerical_json": 545.355,
+          "ulps_of_numerical_json_last_digit": Infinity,
+          "statement_budget_relative_digits": 534.08
+        }
+      },
+      "symbolic_validation_cap": {
+        "closure_statement_budget_P1_S2": 517.68,
+        "min_constant_digits": 520,
+        "cap": 517
+      },
+      "leaves": [
+        "symbolica::log()",
+        "symbolica::polylog()",
+        "symbolica::zeta()",
+        "symbolica::𝜋",
+        "vakint::GPLImag()",
+        "vakint::GPLReal()",
+        "vakint::HI()",
+        "vakint::HR()",
+        "vakint::K5LogMoment()",
+        "vakint::K5Moment()",
+        "vakint::PR10D2",
+        "vakint::PR10D2Eps1",
+        "vakint::PR11dD2Eps1",
+        "vakint::PR15D2",
+        "vakint::PR4dfin",
+        "vakint::PR4fin",
+        "vakint::PR7D2",
+        "vakint::PR7D2Eps1",
+        "vakint::PR9D2Eps1",
+        "vakint::S2",
+        "vakint::T1ep",
+        "vakint::T1ep2"
+      ],
+      "conditional_on": null
+    },
+    "PR11[0]": {
+      "slots": [
+        "P14 eps^0",
+        "P49 eps^0",
+        "P69 eps^0"
+      ],
+      "formula_sha256": "7cedb1f7c06510e1eb05b923279740096af40a5274ee497cf344388a652be9fa",
+      "formula_n_chars": 41785,
+      "source_formula": {
+        "file": "/shared/vhirschi/vacuum_masters_takeover/runs/B4-eps-structure/out/wheel-eps-quotients.json",
+        "sha256": "77f7c750ca49ad71b99ac8a0a8ae63b548eb7c0da2b71e1e682d057311fd0233",
+        "json_path": [
+          "results",
+          "PR11[0]",
+          "expression_canonical"
+        ],
+        "expr_sha256": "e2a51e2b1bd7dff86216cb5e7e9ccbe37afa44a076709316fa52b98b025b2bf0",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-77f7c750ca49ad71b99ac8a0a8ae63b548eb7c0da2b71e1e682d057311fd0233.json.gz",
+          "sha256": "5afd3ecada47a8c76ba8eda4edde5c10344347cfab62d500e3b98c3f9104727e",
+          "bytes": 24989,
+          "uncompressed_sha256": "77f7c750ca49ad71b99ac8a0a8ae63b548eb7c0da2b71e1e682d057311fd0233",
+          "uncompressed_bytes": 195042
+        }
+      },
+      "conversion": {
+        "unchanged_atoms_vs_ledger_source": false,
+        "substitutions": [
+          "iter0: b4k::E10_3",
+          "iter0: b4k::P7_2",
+          "iter0: b4k::P7_3",
+          "iter0: b4k::k1_2",
+          "iter0: b4k::k1_3",
+          "iter0: b4k::k3_2",
+          "iter0: b4k::k3_3",
+          "iter0: b4w::R_1",
+          "iter0: b4w::R_2",
+          "iter0: b4w::R_3",
+          "iter0: b4w::U_2",
+          "iter0: b4w::U_3",
+          "iter0: gc::E9_0",
+          "iter0: gc::E9_2",
+          "iter0: gc::E9_3",
+          "iter0: gc::F9",
+          "iter0: gc::H9",
+          "iter0: gc::Q9",
+          "iter1: gc::E9_0",
+          "iter1: pr9_offset_leaf::Lm1",
+          "iter1: pr9_offset_leaf::Lm2"
+        ],
+        "roundtrip_parse_equal": true,
+        "float_atoms": false,
+        "digits_vs_ledger_original_formula_X8": 543.94
+      },
+      "closure_label": "COMPUTED-conditional; map two-engine (B4-map-replay 60/60, E-wheel-crosscheck 30/30)",
+      "maps": "B4 quotient of the ACCEPTED wheel28 conditional inverse",
+      "ledger_digits_vs_physical_500": [
+        500.46,
+        500.46,
+        500.46
+      ],
+      "ledger_digits_note": null,
+      "ledger_digits_vs_raw_profiles": [
+        519.53,
+        519.53
+      ],
+      "gate_vakeval_vs_numerical_json": {
+        "P14 eps^0": {
+          "digits_vs_numerical_json": 500.46,
+          "ulps_of_numerical_json_last_digit": 0.1351,
+          "statement_budget_relative_digits": 533.99
+        },
+        "P49 eps^0": {
+          "digits_vs_numerical_json": 500.46,
+          "ulps_of_numerical_json_last_digit": 0.1351,
+          "statement_budget_relative_digits": 533.99
+        },
+        "P69 eps^0": {
+          "digits_vs_numerical_json": 500.46,
+          "ulps_of_numerical_json_last_digit": 0.1351,
+          "statement_budget_relative_digits": 533.99
+        }
+      },
+      "symbolic_validation_cap": {
+        "closure_statement_budget_P1_S2": 517.46,
+        "min_constant_digits": 520,
+        "cap": 517
+      },
+      "leaves": [
+        "symbolica::log()",
+        "symbolica::polylog()",
+        "symbolica::zeta()",
+        "symbolica::𝜋",
+        "vakint::GPLImag()",
+        "vakint::GPLReal()",
+        "vakint::HI()",
+        "vakint::HR()",
+        "vakint::K5LogMoment()",
+        "vakint::K5Moment()",
+        "vakint::K5MomentTaylor()",
+        "vakint::PR10D2",
+        "vakint::PR10D2Eps1",
+        "vakint::PR10D2Eps3",
+        "vakint::PR11D2Eps2",
+        "vakint::PR11D2Eps3",
+        "vakint::PR11dD2Eps1",
+        "vakint::PR11dD2Eps2",
+        "vakint::PR11dD2Eps3",
+        "vakint::PR15D2",
+        "vakint::PR4dfin",
+        "vakint::PR4fin",
+        "vakint::PR7D2",
+        "vakint::PR7D2Eps1",
+        "vakint::PR7D2Eps2",
+        "vakint::PR7D2Eps3",
+        "vakint::PR9D2Eps1",
+        "vakint::PR9D2Eps2",
+        "vakint::PR9D2Eps3",
+        "vakint::PR9pD2Eps2",
+        "vakint::PR9pD2Eps3",
+        "vakint::S2",
+        "vakint::T1ep",
+        "vakint::T1ep2",
+        "vakint::s6weak"
+      ],
+      "conditional_on": null
+    },
+    "PR11d[1]": {
+      "slots": [
+        "P17 eps^1",
+        "P52 eps^1",
+        "P74 eps^1"
+      ],
+      "formula_sha256": "659b561da905bb9c0796cf7999f048625174e85855044cfdfd2b8fc73e05184f",
+      "formula_n_chars": 41904,
+      "source_formula": {
+        "file": "/shared/vhirschi/vacuum_masters_takeover/runs/B4-eps-structure/out/wheel-eps-quotients.json",
+        "sha256": "77f7c750ca49ad71b99ac8a0a8ae63b548eb7c0da2b71e1e682d057311fd0233",
+        "json_path": [
+          "results",
+          "PR11d[1]",
+          "expression_canonical"
+        ],
+        "expr_sha256": "b67d1acd21ef6e4608449d0d73f12cd1f3d74e8d84337b9f4633c51f6d5f8dda",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-77f7c750ca49ad71b99ac8a0a8ae63b548eb7c0da2b71e1e682d057311fd0233.json.gz",
+          "sha256": "5afd3ecada47a8c76ba8eda4edde5c10344347cfab62d500e3b98c3f9104727e",
+          "bytes": 24989,
+          "uncompressed_sha256": "77f7c750ca49ad71b99ac8a0a8ae63b548eb7c0da2b71e1e682d057311fd0233",
+          "uncompressed_bytes": 195042
+        }
+      },
+      "conversion": {
+        "unchanged_atoms_vs_ledger_source": false,
+        "substitutions": [
+          "iter0: b4k::E10_3",
+          "iter0: b4k::P7_2",
+          "iter0: b4k::P7_3",
+          "iter0: b4k::k1_2",
+          "iter0: b4k::k1_3",
+          "iter0: b4k::k3_2",
+          "iter0: b4k::k3_3",
+          "iter0: b4w::R_1",
+          "iter0: b4w::R_2",
+          "iter0: b4w::R_3",
+          "iter0: b4w::U_2",
+          "iter0: b4w::U_3",
+          "iter0: gc::E9_0",
+          "iter0: gc::E9_2",
+          "iter0: gc::E9_3",
+          "iter0: gc::F9",
+          "iter0: gc::H9",
+          "iter0: gc::Q9",
+          "iter1: gc::E9_0",
+          "iter1: pr9_offset_leaf::Lm1",
+          "iter1: pr9_offset_leaf::Lm2"
+        ],
+        "roundtrip_parse_equal": true,
+        "float_atoms": false,
+        "digits_vs_ledger_original_formula_X8": 543.68
+      },
+      "closure_label": "COMPUTED-conditional; map two-engine",
+      "maps": "B4 quotient of the ACCEPTED wheel28 conditional inverse (no codex-2 map existed)",
+      "ledger_digits_vs_physical_500": [
+        499.95,
+        499.95,
+        499.95
+      ],
+      "ledger_digits_note": null,
+      "ledger_digits_vs_raw_profiles": [
+        518.84,
+        518.84
+      ],
+      "gate_vakeval_vs_numerical_json": {
+        "P17 eps^1": {
+          "digits_vs_numerical_json": 499.951,
+          "ulps_of_numerical_json_last_digit": 0.25,
+          "statement_budget_relative_digits": 533.67
+        },
+        "P52 eps^1": {
+          "digits_vs_numerical_json": 499.951,
+          "ulps_of_numerical_json_last_digit": 0.25,
+          "statement_budget_relative_digits": 533.67
+        },
+        "P74 eps^1": {
+          "digits_vs_numerical_json": 499.951,
+          "ulps_of_numerical_json_last_digit": 0.25,
+          "statement_budget_relative_digits": 533.67
+        }
+      },
+      "symbolic_validation_cap": {
+        "closure_statement_budget_P1_S2": 517.2,
+        "min_constant_digits": 520,
+        "cap": 517
+      },
+      "leaves": [
+        "symbolica::log()",
+        "symbolica::polylog()",
+        "symbolica::zeta()",
+        "symbolica::𝜋",
+        "vakint::GPLImag()",
+        "vakint::GPLReal()",
+        "vakint::HI()",
+        "vakint::HR()",
+        "vakint::K5LogMoment()",
+        "vakint::K5Moment()",
+        "vakint::K5MomentTaylor()",
+        "vakint::PR10D2",
+        "vakint::PR10D2Eps1",
+        "vakint::PR10D2Eps3",
+        "vakint::PR11D2Eps2",
+        "vakint::PR11D2Eps3",
+        "vakint::PR11dD2Eps1",
+        "vakint::PR11dD2Eps2",
+        "vakint::PR11dD2Eps3",
+        "vakint::PR15D2",
+        "vakint::PR4dfin",
+        "vakint::PR4fin",
+        "vakint::PR7D2",
+        "vakint::PR7D2Eps1",
+        "vakint::PR7D2Eps2",
+        "vakint::PR7D2Eps3",
+        "vakint::PR9D2Eps1",
+        "vakint::PR9D2Eps2",
+        "vakint::PR9D2Eps3",
+        "vakint::PR9pD2Eps2",
+        "vakint::PR9pD2Eps3",
+        "vakint::S2",
+        "vakint::T1ep",
+        "vakint::T1ep2",
+        "vakint::s6weak"
+      ],
+      "conditional_on": null
+    },
+    "combC[1]": {
+      "slots": [
+        "P19 eps^1",
+        "P73 eps^1"
+      ],
+      "formula_sha256": "8b0e76bf7855da1438d48835a2f98e24cea48066a40a659d3ffe9dc64f19e433",
+      "formula_n_chars": 12954,
+      "source_formula": {
+        "file": "/shared/vhirschi/vacuum_masters_takeover/runs/B4-eps-structure/out/wheel-eps-quotients.json",
+        "sha256": "77f7c750ca49ad71b99ac8a0a8ae63b548eb7c0da2b71e1e682d057311fd0233",
+        "json_path": "-(results['PR11[0]'] + results['PR11d[1]'])",
+        "expr_sha256": "4240764f1b811a20365a37836e7c8b08a0d6c4dd381f47a3bd1aaff3c31f0744",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-77f7c750ca49ad71b99ac8a0a8ae63b548eb7c0da2b71e1e682d057311fd0233.json.gz",
+          "sha256": "5afd3ecada47a8c76ba8eda4edde5c10344347cfab62d500e3b98c3f9104727e",
+          "bytes": 24989,
+          "uncompressed_sha256": "77f7c750ca49ad71b99ac8a0a8ae63b548eb7c0da2b71e1e682d057311fd0233",
+          "uncompressed_bytes": 195042
+        }
+      },
+      "conversion": {
+        "unchanged_atoms_vs_ledger_source": false,
+        "substitutions": [
+          "iter0: b4k::P7_2",
+          "iter0: b4k::k1_2",
+          "iter0: b4k::k3_2",
+          "iter0: b4w::R_1",
+          "iter0: b4w::R_2",
+          "iter0: b4w::U_2",
+          "iter0: gc::E9_0",
+          "iter0: gc::E9_2",
+          "iter0: gc::F9",
+          "iter0: gc::Q9",
+          "iter1: gc::E9_0",
+          "iter1: pr9_offset_leaf::Lm1",
+          "iter1: pr9_offset_leaf::Lm2"
+        ],
+        "roundtrip_parse_equal": true,
+        "float_atoms": false,
+        "digits_vs_ledger_original_formula_X8": 545.15
+      },
+      "closure_label": "COMPUTED-conditional; exact alias",
+      "maps": "RustRed alias -(eps PR11 + PR11d) -> -(PR11[0] + PR11d[1]) (checked symbolically)",
+      "ledger_digits_vs_physical_500": [
+        499.64,
+        499.64
+      ],
+      "ledger_digits_note": null,
+      "ledger_digits_vs_raw_profiles": [
+        518.58,
+        518.58
+      ],
+      "gate_vakeval_vs_numerical_json": {
+        "P19 eps^1": {
+          "digits_vs_numerical_json": 499.636,
+          "ulps_of_numerical_json_last_digit": 0.3851,
+          "statement_budget_relative_digits": 534.31
+        },
+        "P73 eps^1": {
+          "digits_vs_numerical_json": 499.636,
+          "ulps_of_numerical_json_last_digit": 0.3851,
+          "statement_budget_relative_digits": 534.31
+        }
+      },
+      "symbolic_validation_cap": {
+        "closure_statement_budget_P1_S2": 517.65,
+        "min_constant_digits": 520,
+        "cap": 517
+      },
+      "leaves": [
+        "symbolica::log()",
+        "symbolica::polylog()",
+        "symbolica::zeta()",
+        "symbolica::𝜋",
+        "vakint::GPLImag()",
+        "vakint::GPLReal()",
+        "vakint::HI()",
+        "vakint::HR()",
+        "vakint::K5LogMoment()",
+        "vakint::K5Moment()",
+        "vakint::K5MomentTaylor()",
+        "vakint::PR10D2",
+        "vakint::PR10D2Eps1",
+        "vakint::PR11D2Eps2",
+        "vakint::PR11dD2Eps1",
+        "vakint::PR11dD2Eps2",
+        "vakint::PR15D2",
+        "vakint::PR4dfin",
+        "vakint::PR4fin",
+        "vakint::PR7D2",
+        "vakint::PR7D2Eps1",
+        "vakint::PR7D2Eps2",
+        "vakint::PR9D2Eps1",
+        "vakint::PR9D2Eps2",
+        "vakint::PR9pD2Eps2",
+        "vakint::S2",
+        "vakint::T1ep",
+        "vakint::T1ep2"
+      ],
+      "conditional_on": null
+    },
+    "PR12[0]": {
+      "slots": [
+        "P70 eps^0"
+      ],
+      "formula_sha256": "34aef124c520f7835d7151189f401878a3b789297e7172dc6b51ff5ca1d71d96",
+      "formula_n_chars": 33088,
+      "source_formula": {
+        "file": "/shared/vhirschi/vacuum_masters_takeover/runs/D-PR12-prism/closure.json",
+        "sha256": "6f21037c69c003e3c47b9b77b4787bc658e10330358611e254cc58916db867e9",
+        "json_path": [
+          "directions",
+          "PR12[0]",
+          "closed_canonical"
+        ],
+        "expr_sha256": "9d5ab58983e8f7284d61454ce1582eaef267c09a55ec292fac024ea47a88b91e",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-6f21037c69c003e3c47b9b77b4787bc658e10330358611e254cc58916db867e9.json.gz",
+          "sha256": "9ca3018eabc73be371989557225c9af5d95fd2e287016a8fb6f0cb355762a9f2",
+          "bytes": 14113,
+          "uncompressed_sha256": "6f21037c69c003e3c47b9b77b4787bc658e10330358611e254cc58916db867e9",
+          "uncompressed_bytes": 89482
+        }
+      },
+      "conversion": {
+        "unchanged_atoms_vs_ledger_source": true,
+        "substitutions": [],
+        "roundtrip_parse_equal": true,
+        "float_atoms": false,
+        "digits_vs_ledger_original_formula_X8": Infinity
+      },
+      "closure_label": "COMPUTED (two independent map routes agree)",
+      "maps": "ACCEPTED global-composition direction (conditional maps, B1-replayed) -> A5 closed coordinates; second route: E-PR12 H75 all-order map",
+      "ledger_digits_vs_physical_500": [
+        499.48
+      ],
+      "ledger_digits_note": null,
+      "ledger_digits_vs_raw_profiles": [
+        518.47,
+        518.47
+      ],
+      "gate_vakeval_vs_numerical_json": {
+        "P70 eps^0": {
+          "digits_vs_numerical_json": 499.483,
+          "ulps_of_numerical_json_last_digit": 0.4433,
+          "statement_budget_relative_digits": 532.96
+        }
+      },
+      "symbolic_validation_cap": {
+        "closure_statement_budget_P1_S2": 517.07,
+        "min_constant_digits": 520,
+        "cap": 517
+      },
+      "leaves": [
+        "symbolica::log()",
+        "symbolica::polylog()",
+        "symbolica::zeta()",
+        "symbolica::𝜋",
+        "vakint::GPLImag()",
+        "vakint::GPLReal()",
+        "vakint::HI()",
+        "vakint::HR()",
+        "vakint::K5LogMoment()",
+        "vakint::K5Moment()",
+        "vakint::K5MomentTaylor()",
+        "vakint::PR10D2",
+        "vakint::PR10D2Eps1",
+        "vakint::PR10D2Eps2",
+        "vakint::PR11D2Eps2",
+        "vakint::PR11dD2Eps1",
+        "vakint::PR11dD2Eps2",
+        "vakint::PR12D2Eps2",
+        "vakint::PR14ep2",
+        "vakint::PR15D2",
+        "vakint::PR15D2Eps2",
+        "vakint::PR4dfin",
+        "vakint::PR4fin",
+        "vakint::PR7D2",
+        "vakint::PR7D2Eps1",
+        "vakint::PR7D2Eps2",
+        "vakint::PR9D2Eps1",
+        "vakint::PR9D2Eps2",
+        "vakint::PR9pD2Eps2",
+        "vakint::S2",
+        "vakint::T1ep",
+        "vakint::T1ep2",
+        "vakint::s6weak"
+      ],
+      "conditional_on": null
+    },
+    "PR0[0]": {
+      "slots": [
+        "P18 eps^0"
+      ],
+      "formula_sha256": "2bcf43fa4eadaa4b630ca3bd80aeca0abfd164582a9f36dd363b055f3baf9e90",
+      "formula_n_chars": 10836,
+      "source_formula": {
+        "file": "/shared/vhirschi/vacuum_masters_takeover/runs/E-K33-closures/out/pr0_0-closed.json",
+        "sha256": "6b9920f94d7ad30e61424f0d4a80f29df84355108831c938e53f90bbda7ac9d5",
+        "json_path": [
+          "expression_fully_closed"
+        ],
+        "expr_sha256": "6e6030800eb64bc0e2e9de7119e743c9f65bf4b1db997746559681ea564bddbb",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-6b9920f94d7ad30e61424f0d4a80f29df84355108831c938e53f90bbda7ac9d5.json.gz",
+          "sha256": "400217ccd7ef1ecd1a23e012627f9502d47c8e755eebb2821bc3ec3cc43cb05f",
+          "bytes": 6487,
+          "uncompressed_sha256": "6b9920f94d7ad30e61424f0d4a80f29df84355108831c938e53f90bbda7ac9d5",
+          "uncompressed_bytes": 51634
+        }
+      },
+      "conversion": {
+        "unchanged_atoms_vs_ledger_source": false,
+        "substitutions": [
+          "E-K33 raw->hat: vakint::PR11dD2Eps{1,2} -> -vakint::PR11dD2Eps{1,2}"
+        ],
+        "roundtrip_parse_equal": true,
+        "float_atoms": false,
+        "digits_vs_ledger_original_formula_X8": Infinity
+      },
+      "closure_label": "COMPUTED (support re-derived by reviewer with sympy, identical)",
+      "maps": "ACCEPTED PR0 entire-known-offset + three-representative conditional inverse; O0 + A4 PR9[0], PR9d[1] + D-X8 PR11d[0]",
+      "ledger_digits_vs_physical_500": [
+        500.9
+      ],
+      "ledger_digits_note": null,
+      "ledger_digits_vs_raw_profiles": [
+        544.36,
+        544.36
+      ],
+      "gate_vakeval_vs_numerical_json": {
+        "P18 eps^0": {
+          "digits_vs_numerical_json": 500.901,
+          "ulps_of_numerical_json_last_digit": 0.1253,
+          "statement_budget_relative_digits": 532.45
+        }
+      },
+      "symbolic_validation_cap": {
+        "closure_statement_budget_P1_S2": 516.82,
+        "min_constant_digits": 520,
+        "cap": 516
+      },
+      "leaves": [
+        "symbolica::log()",
+        "symbolica::polylog()",
+        "symbolica::zeta()",
+        "symbolica::𝜋",
+        "vakint::GPLImag()",
+        "vakint::GPLReal()",
+        "vakint::HI()",
+        "vakint::HR()",
+        "vakint::K5LogMoment()",
+        "vakint::K5Moment()",
+        "vakint::PR0D2Eps1",
+        "vakint::PR10D2",
+        "vakint::PR10D2Eps1",
+        "vakint::PR11dD2Eps1",
+        "vakint::PR15D2",
+        "vakint::PR4dfin",
+        "vakint::PR4fin",
+        "vakint::PR7D2",
+        "vakint::PR7D2Eps1",
+        "vakint::PR9D2Eps1",
+        "vakint::S2",
+        "vakint::T1ep",
+        "vakint::T1ep2"
+      ],
+      "conditional_on": null
+    },
+    "PR0[1]": {
+      "slots": [
+        "P18 eps^1"
+      ],
+      "formula_sha256": "f71fd7947661539f5b5445d34513ead44176b006fb9aa9059e3a5307ea86cca6",
+      "formula_n_chars": 13945,
+      "source_formula": {
+        "file": "/shared/vhirschi/vacuum_masters_takeover/runs/E-K33-closures/out/pr0_1-closed-v2.json",
+        "sha256": "4a88cbcee8a69e20cf4fce2ee42da32fc64b354b1da26e74eacd90f25e4b4121",
+        "json_path": [
+          "expression_fully_closed"
+        ],
+        "expr_sha256": "0de76f356d3451d81a0091db597bb6276f9d24dd52295209d298049fddf47b83",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-4a88cbcee8a69e20cf4fce2ee42da32fc64b354b1da26e74eacd90f25e4b4121.json.gz",
+          "sha256": "05b79cb44704aa1fb055d11e80fd5e1519fe8f1e03cfb4bc23e01a59ad54c6a3",
+          "bytes": 6370,
+          "uncompressed_sha256": "4a88cbcee8a69e20cf4fce2ee42da32fc64b354b1da26e74eacd90f25e4b4121",
+          "uncompressed_bytes": 44396
+        }
+      },
+      "conversion": {
+        "unchanged_atoms_vs_ledger_source": false,
+        "substitutions": [
+          "E-K33 raw->hat: vakint::PR11dD2Eps{1,2} -> -vakint::PR11dD2Eps{1,2}"
+        ],
+        "roundtrip_parse_equal": true,
+        "float_atoms": false,
+        "digits_vs_ledger_original_formula_X8": Infinity
+      },
+      "closure_label": "COMPUTED-conditional, validated empirically",
+      "maps": "ACCEPTED PR0 conditional inverse at eps^1 + COMPUTED-conditional sub-maps (B4 wheel PR11[0], PR11d[1]; B4 X2 for PR9d[2]; B4 D2 maps PR4/PR4d/PR7 at eps^2, eps^3; A5 PR9[1])",
+      "ledger_digits_vs_physical_500": [
+        501.16
+      ],
+      "ledger_digits_note": null,
+      "ledger_digits_vs_raw_profiles": [
+        516.8,
+        516.8
+      ],
+      "gate_vakeval_vs_numerical_json": {
+        "P18 eps^1": {
+          "digits_vs_numerical_json": 501.162,
+          "ulps_of_numerical_json_last_digit": 0.0402,
+          "statement_budget_relative_digits": 533.3
+        }
+      },
+      "symbolic_validation_cap": {
+        "closure_statement_budget_P1_S2": 516.03,
+        "min_constant_digits": 520,
+        "cap": 516
+      },
+      "leaves": [
+        "symbolica::log()",
+        "symbolica::polylog()",
+        "symbolica::zeta()",
+        "symbolica::𝜋",
+        "vakint::GPLImag()",
+        "vakint::GPLReal()",
+        "vakint::HI()",
+        "vakint::HR()",
+        "vakint::K5LogMoment()",
+        "vakint::K5Moment()",
+        "vakint::K5MomentTaylor()",
+        "vakint::PR0D2Eps1",
+        "vakint::PR0D2Eps2",
+        "vakint::PR10D2",
+        "vakint::PR10D2Eps1",
+        "vakint::PR10D2Eps2",
+        "vakint::PR11D2Eps2",
+        "vakint::PR11dD2Eps1",
+        "vakint::PR11dD2Eps2",
+        "vakint::PR15D2",
+        "vakint::PR4dfin",
+        "vakint::PR4fin",
+        "vakint::PR7D2",
+        "vakint::PR7D2Eps1",
+        "vakint::PR7D2Eps2",
+        "vakint::PR9D2Eps1",
+        "vakint::PR9D2Eps2",
+        "vakint::PR9pD2Eps2",
+        "vakint::S2",
+        "vakint::T1ep",
+        "vakint::T1ep2"
+      ],
+      "conditional_on": null
+    },
+    "PR11[1]": {
+      "slots": [
+        "P14 eps^1",
+        "P49 eps^1",
+        "P69 eps^1"
+      ],
+      "formula_sha256": "b817b2414d4b1f809a82bfea498a9fe337d7beb4178e8686893af3e40c876add",
+      "formula_n_chars": 62130,
+      "source_formula": {
+        "file": "/shared/vhirschi/vacuum_masters_takeover/runs/E-PR11-eps1/out/formula-PR11e1.json",
+        "sha256": "c1869feef4e1a0ab0b5452c957cb7fb2bf22d568d32e51c7d68cbee47c37d853",
+        "json_path": [
+          "formula_canonical"
+        ],
+        "expr_sha256": "0244b45fa9e6b049d503bb39aae276f5fac12eb0669315b8161f86cde5a7b654",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-c1869feef4e1a0ab0b5452c957cb7fb2bf22d568d32e51c7d68cbee47c37d853.json.gz",
+          "sha256": "0f284bdea7e509b85d4695a3a0b3c79d9e41f8e665c5219654d9925449e19ca6",
+          "bytes": 21265,
+          "uncompressed_sha256": "c1869feef4e1a0ab0b5452c957cb7fb2bf22d568d32e51c7d68cbee47c37d853",
+          "uncompressed_bytes": 172916
+        }
+      },
+      "conversion": {
+        "unchanged_atoms_vs_ledger_source": false,
+        "substitutions": [
+          "iter0: b4k::E10_3",
+          "iter0: b4k::E10_4",
+          "iter0: b4k::P7_2",
+          "iter0: b4k::P7_3",
+          "iter0: b4k::P7_4",
+          "iter0: b4k::P8_4",
+          "iter0: b4k::k1_2",
+          "iter0: b4k::k1_3",
+          "iter0: b4k::k1_4",
+          "iter0: b4k::k3_2",
+          "iter0: b4k::k3_3",
+          "iter0: b4k::k3_4",
+          "iter0: b4w::R_1",
+          "iter0: b4w::R_2",
+          "iter0: b4w::R_3",
+          "iter0: b4w::R_4",
+          "iter0: b4w::U_2",
+          "iter0: b4w::U_3",
+          "iter0: b4w::U_4",
+          "iter0: e4::BN5",
+          "iter0: e4::FIVE4",
+          "iter0: e4::S2_5",
+          "iter0: gc::C4_9",
+          "iter0: gc::E9_0",
+          "iter0: gc::E9_2",
+          "iter0: gc::E9_3",
+          "iter0: gc::E9_4",
+          "iter0: gc::F9",
+          "iter0: gc::H9",
+          "iter0: gc::Q9",
+          "iter1: a5::V0",
+          "iter1: a5::V1",
+          "iter1: gc::E9_0",
+          "iter1: pr9_offset_leaf::Lm1",
+          "iter1: pr9_offset_leaf::Lm2"
+        ],
+        "roundtrip_parse_equal": true,
+        "float_atoms": false,
+        "digits_vs_ledger_original_formula_X8": 543.64
+      },
+      "closure_label": "COMPUTED-conditional; CLOSED conditional on COMPUTED (single-method) E10hat[4]",
+      "maps": "B4 conditional wheel eps^1 quotient + exact tail elimination (BNbar5, T111bar5, D5bar3 -> BN[5], Sunset2[5], FIVE[4]); Mathematica re-derivation equal exactly (review)",
+      "ledger_digits_vs_physical_500": [
+        500.04,
+        500.04,
+        500.04
+      ],
+      "ledger_digits_note": null,
+      "ledger_digits_vs_raw_profiles": [
+        518.93,
+        518.93
+      ],
+      "gate_vakeval_vs_numerical_json": {
+        "P14 eps^1": {
+          "digits_vs_numerical_json": 500.04,
+          "ulps_of_numerical_json_last_digit": 0.2131,
+          "statement_budget_relative_digits": 534.27
+        },
+        "P49 eps^1": {
+          "digits_vs_numerical_json": 500.04,
+          "ulps_of_numerical_json_last_digit": 0.2131,
+          "statement_budget_relative_digits": 534.27
+        },
+        "P69 eps^1": {
+          "digits_vs_numerical_json": 500.04,
+          "ulps_of_numerical_json_last_digit": 0.2131,
+          "statement_budget_relative_digits": 534.27
+        }
+      },
+      "symbolic_validation_cap": {
+        "closure_statement_budget_P1_S2": 517.32,
+        "min_constant_digits": 520,
+        "cap": 517
+      },
+      "leaves": [
+        "symbolica::log()",
+        "symbolica::polylog()",
+        "symbolica::zeta()",
+        "symbolica::𝜋",
+        "vakint::BNbar5",
+        "vakint::D5bar3",
+        "vakint::GPLImag()",
+        "vakint::GPLReal()",
+        "vakint::HI()",
+        "vakint::HR()",
+        "vakint::K5LogMoment()",
+        "vakint::K5Moment()",
+        "vakint::K5MomentTaylor()",
+        "vakint::PR10D2",
+        "vakint::PR10D2Eps1",
+        "vakint::PR10D2Eps3",
+        "vakint::PR10D2Eps4",
+        "vakint::PR11D2Eps2",
+        "vakint::PR11D2Eps3",
+        "vakint::PR11D2Eps4",
+        "vakint::PR11dD2Eps1",
+        "vakint::PR11dD2Eps2",
+        "vakint::PR11dD2Eps3",
+        "vakint::PR11dD2Eps4",
+        "vakint::PR15D2",
+        "vakint::PR4dfin",
+        "vakint::PR4fin",
+        "vakint::PR5D2Eps4",
+        "vakint::PR7D2",
+        "vakint::PR7D2Eps1",
+        "vakint::PR7D2Eps2",
+        "vakint::PR7D2Eps3",
+        "vakint::PR7D2Eps4",
+        "vakint::PR9D2Eps1",
+        "vakint::PR9D2Eps2",
+        "vakint::PR9D2Eps3",
+        "vakint::PR9D2Eps4",
+        "vakint::PR9pD2Eps2",
+        "vakint::PR9pD2Eps3",
+        "vakint::PR9pD2Eps4",
+        "vakint::S2",
+        "vakint::T111bar5",
+        "vakint::T1ep",
+        "vakint::T1ep2",
+        "vakint::s6weak"
+      ],
+      "conditional_on": "vakint::PR10D2Eps4 (two-profile only; independent-method control pending P2)"
+    },
+    "PR12[1]": {
+      "slots": [
+        "P70 eps^1"
+      ],
+      "formula_sha256": "2be243940cb9aa336c5770f791bcb2ffd6f7e5f5256fdbb4b0fdaff556e1f3c4",
+      "formula_n_chars": 58999,
+      "source_formula": {
+        "file": "/shared/vhirschi/vacuum_masters_takeover/ledger/out/PR12e1-auxfree-formula.json",
+        "sha256": "c7ef89fe2b02371ada20f75e4838696f9fd05edf70bcb83b2df1ece426426a1c",
+        "json_path": [
+          "expression_canonical"
+        ],
+        "expr_sha256": "4a2b0a09438001ccd205e89e6725901770c22fc5eae87595463c9392dc47985c",
+        "portable_archive": {
+          "path": "validation/takeover-4L-closures-v1-c7ef89fe2b02371ada20f75e4838696f9fd05edf70bcb83b2df1ece426426a1c.json.gz",
+          "sha256": "0cc4d52bbdb2aa2029965d22e69c656cd1ae0bb2ff1eb628e39409a552e58f06",
+          "bytes": 10186,
+          "uncompressed_sha256": "c7ef89fe2b02371ada20f75e4838696f9fd05edf70bcb83b2df1ece426426a1c",
+          "uncompressed_bytes": 75781
+        }
+      },
+      "conversion": {
+        "unchanged_atoms_vs_ledger_source": false,
+        "substitutions": [
+          "iter0: vakint::J8HatEps3",
+          "iter0: vakint::J8HatEps4",
+          "iter0: vakint::PR14ep0",
+          "iter0: vakint::PR14ep1",
+          "iter0: vakint::PR14epm1",
+          "iter0: vakint::PR14epm2",
+          "iter0: vakint::PR9D2",
+          "iter0: vakint::PR9pD2",
+          "iter0: vakint::PR9pD2Eps1",
+          "iter1: gc::E9_0",
+          "iter1: pr9_offset_leaf::Lm1",
+          "iter1: pr9_offset_leaf::Lm2"
+        ],
+        "roundtrip_parse_equal": true,
+        "float_atoms": false,
+        "digits_vs_ledger_original_formula_X8": 518.53
+      },
+      "closure_label": "COMPUTED-conditional (exact map, conditional on the accepted generic conditions); CLOSED conditional on the COMPUTED single-method vakint::PR12D2Eps3 (E12[3], SX radial only) and vakint::PR14ep3 (PR14[3], radial only) - no independent control yet",
+      "maps": "ACCEPTED H75 Tarasov shift solved for PR12 (all orders) composed with ACCEPTED maps; 5/17 r_F re-derived from source by reviewer; ledger aux-free variant uses PR12 poles = 0 exactly",
+      "ledger_digits_vs_physical_500": [
+        500.24
+      ],
+      "ledger_digits_note": "ledger values are for the original E-PR12 formula; the installed aux-free variant has 500.24 vs physical and 517.49 vs the raw profiles (ledger/out/PR12e1-auxfree-formula.json)",
+      "ledger_digits_vs_raw_profiles": [
+        517.46,
+        517.46
+      ],
+      "gate_vakeval_vs_numerical_json": {
+        "P70 eps^1": {
+          "digits_vs_numerical_json": 500.238,
+          "ulps_of_numerical_json_last_digit": 0.4826,
+          "statement_budget_relative_digits": 534.05
+        }
+      },
+      "symbolic_validation_cap": {
+        "closure_statement_budget_P1_S2": 516.68,
+        "min_constant_digits": 520,
+        "cap": 516
+      },
+      "leaves": [
+        "symbolica::log()",
+        "symbolica::polylog()",
+        "symbolica::zeta()",
+        "symbolica::𝜋",
+        "vakint::BNbar5",
+        "vakint::D5bar3",
+        "vakint::GPLImag()",
+        "vakint::GPLReal()",
+        "vakint::HI()",
+        "vakint::HR()",
+        "vakint::K5LogMoment()",
+        "vakint::K5Moment()",
+        "vakint::K5MomentTaylor()",
+        "vakint::PR10D2",
+        "vakint::PR10D2Eps1",
+        "vakint::PR10D2Eps2",
+        "vakint::PR10D2Eps3",
+        "vakint::PR11D2Eps2",
+        "vakint::PR11D2Eps3",
+        "vakint::PR11dD2Eps1",
+        "vakint::PR11dD2Eps2",
+        "vakint::PR11dD2Eps3",
+        "vakint::PR12D2Eps2",
+        "vakint::PR12D2Eps3",
+        "vakint::PR14ep2",
+        "vakint::PR14ep3",
+        "vakint::PR15D2",
+        "vakint::PR15D2Eps2",
+        "vakint::PR15D2Eps3",
+        "vakint::PR4dfin",
+        "vakint::PR4fin",
+        "vakint::PR5D2Eps3",
+        "vakint::PR5D2Eps4",
+        "vakint::PR7D2",
+        "vakint::PR7D2Eps1",
+        "vakint::PR7D2Eps2",
+        "vakint::PR7D2Eps3",
+        "vakint::PR9D2Eps1",
+        "vakint::PR9D2Eps2",
+        "vakint::PR9D2Eps3",
+        "vakint::PR9pD2Eps2",
+        "vakint::PR9pD2Eps3",
+        "vakint::S2",
+        "vakint::T111bar5",
+        "vakint::T1ep",
+        "vakint::T1ep2",
+        "vakint::s6weak"
+      ],
+      "conditional_on": "vakint::PR12D2Eps3 and vakint::PR14ep3 (two-profile only; independent-method control pending P2)"
+    }
+  },
+  "gate": {
+    "engine": "vakeval v2 (Symbolica 3.0.0 evaluate; HPL/GPL/zeta/polylog leaves from the vakeval v2 registry; every vakint:: constant leaf bound from 4L/constants.json value + absolute_error)",
+    "constants_sha256": "69c898df33829b01bc3e8cea1b5b43a6e7fd9fad98fbd09308464ae7166d518f",
+    "summary": {
+      "slots": 43,
+      "min_digits_vs_numerical_json": 499.483,
+      "n_below_499_5": 1,
+      "below_499_5": [
+        "P70 eps^0"
+      ],
+      "max_ulps_500_digit_rows": 0.4826,
+      "min_statement_budget": 532.45
+    }
+  },
+  "evidence_index": {
+    "path": "provenance/takeover-4L-closures-v1/portable-proof-index.json",
+    "sha256": "2f0d7db39c8927431dc8d0b254b229b3a789f03f217c0eebe414bc2824dedb21"
+  }
+}

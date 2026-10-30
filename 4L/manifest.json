@@ -2655,7 +2655,9 @@
         -4,
         -3,
         -2,
-        -1
+        -1,
+        0,
+        1
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -2811,7 +2813,7 @@
         },
         "symbolic.json": {
           "path": "masters/P8/symbolic.json",
-          "sha256": "8405ae84e3c38bd7a2628d73a2902913b050b4ddb679ca29e80f1a7714f1c87b"
+          "sha256": "a5b33aa29e719fe1dca1e01188bbf64071b08c2590e93a2bdb58aaada49af2f8"
         },
         "graph.dot": {
           "path": "masters/P8/graph.dot",
@@ -2861,13 +2863,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -3133,7 +3135,9 @@
         -4,
         -3,
         -2,
-        -1
+        -1,
+        0,
+        1
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -3289,7 +3293,7 @@
         },
         "symbolic.json": {
           "path": "masters/P10/symbolic.json",
-          "sha256": "86bcc5687847278eadb8ea20c0b3e62c047a0ae056e9707aab42f3bef70ca040"
+          "sha256": "f30c62eb39a1ec77e5751388bbb2291aec87b98e4faff11a1ab7f9ad322d4e0f"
         },
         "graph.dot": {
           "path": "masters/P10/graph.dot",
@@ -3339,13 +3343,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -4117,7 +4121,9 @@
         -4,
         -3,
         -2,
-        -1
+        -1,
+        0,
+        1
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -4283,7 +4289,7 @@
         },
         "symbolic.json": {
           "path": "masters/P14/symbolic.json",
-          "sha256": "720c50931aca1b3c70987d7d452284090a99ccc4c6afc2acd3a07b3ebf053669"
+          "sha256": "a26d1567bf1dcd8ae2c3c33512f68705bf65c1f0310c409cdbf0620ba1e09f47"
         },
         "graph.dot": {
           "path": "masters/P14/graph.dot",
@@ -4333,13 +4339,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -4376,7 +4382,8 @@
         -3,
         -2,
         -1,
-        0
+        0,
+        1
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -4532,7 +4539,7 @@
         },
         "symbolic.json": {
           "path": "masters/P15/symbolic.json",
-          "sha256": "891580509dfc58c3d02507ba27e2f982050275cccc2f55da50e373e239b396e6"
+          "sha256": "d64142b946be7f545134467e124d946e5cdfd8da2a0699a850b46426b5f14418"
         },
         "graph.dot": {
           "path": "masters/P15/graph.dot",
@@ -4588,7 +4595,7 @@
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -4625,7 +4632,8 @@
         -3,
         -2,
         -1,
-        0
+        0,
+        1
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -4781,7 +4789,7 @@
         },
         "symbolic.json": {
           "path": "masters/P16/symbolic.json",
-          "sha256": "6853e9c1e6b679841799bcb3b10b29bafbb4bd1a573ad614a978195887ffd03d"
+          "sha256": "6fa7df18b463ecdc8fd9a660467bebce1a0f1a152ab8f424506bcee65d09b180"
         },
         "graph.dot": {
           "path": "masters/P16/graph.dot",
@@ -4837,7 +4845,7 @@
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -4873,7 +4881,9 @@
         -4,
         -3,
         -2,
-        -1
+        -1,
+        0,
+        1
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -5039,7 +5049,7 @@
         },
         "symbolic.json": {
           "path": "masters/P17/symbolic.json",
-          "sha256": "cea9eb73b39fa833d30c31ee37eaa8a3de2669903b86acbb35227f0f8cdaecd5"
+          "sha256": "ec2c754b6542c45e7c73f66951552123ccff9d9492b387db17e277fea04859a7"
         },
         "graph.dot": {
           "path": "masters/P17/graph.dot",
@@ -5090,7 +5100,7 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 20000,
           "stored_significant_digits": 20008,
@@ -5099,7 +5109,7 @@
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -5135,7 +5145,9 @@
         -4,
         -3,
         -2,
-        -1
+        -1,
+        0,
+        1
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -5311,7 +5323,7 @@
         },
         "symbolic.json": {
           "path": "masters/P18/symbolic.json",
-          "sha256": "a93bd689c930cc741cff9e4e877502590d09071b839f467a34081b6e0e27a606"
+          "sha256": "cf0df223fdf796505ebf9979379ce3285b7ab7d33878a3f389c6ba449d141348"
         },
         "graph.dot": {
           "path": "masters/P18/graph.dot",
@@ -5361,13 +5373,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -5404,7 +5416,8 @@
         -3,
         -2,
         -1,
-        0
+        0,
+        1
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -5570,7 +5583,7 @@
         },
         "symbolic.json": {
           "path": "masters/P19/symbolic.json",
-          "sha256": "1ebebb62014999e32cf5811b4fb28bcedb5429a0ff22687ffaaa6eee01d8cefd"
+          "sha256": "8d949738d45206aedf312518c5c877bbe428964e886e99a3be5b751f430a5a08"
         },
         "graph.dot": {
           "path": "masters/P19/graph.dot",
@@ -5626,7 +5639,7 @@
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -8559,7 +8572,9 @@
         -4,
         -3,
         -2,
-        -1
+        -1,
+        0,
+        1
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -8715,7 +8730,7 @@
         },
         "symbolic.json": {
           "path": "masters/P32/symbolic.json",
-          "sha256": "8405ae84e3c38bd7a2628d73a2902913b050b4ddb679ca29e80f1a7714f1c87b"
+          "sha256": "a5b33aa29e719fe1dca1e01188bbf64071b08c2590e93a2bdb58aaada49af2f8"
         },
         "graph.dot": {
           "path": "masters/P32/graph.dot",
@@ -8765,13 +8780,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -9057,7 +9072,9 @@
         -4,
         -3,
         -2,
-        -1
+        -1,
+        0,
+        1
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -9223,7 +9240,7 @@
         },
         "symbolic.json": {
           "path": "masters/P34/symbolic.json",
-          "sha256": "e76eeacec74dd7e4ac895810cf2e0798c20b2348652301f1e4141559d7175c79"
+          "sha256": "c2250b33e540abfc0f21e5f834cb79f2b29e99df8077a5935eeb9067aa50447d"
         },
         "graph.dot": {
           "path": "masters/P34/graph.dot",
@@ -9273,13 +9290,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -9316,7 +9333,8 @@
         -3,
         -2,
         -1,
-        0
+        0,
+        1
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -9472,7 +9490,7 @@
         },
         "symbolic.json": {
           "path": "masters/P35/symbolic.json",
-          "sha256": "6853e9c1e6b679841799bcb3b10b29bafbb4bd1a573ad614a978195887ffd03d"
+          "sha256": "6fa7df18b463ecdc8fd9a660467bebce1a0f1a152ab8f424506bcee65d09b180"
         },
         "graph.dot": {
           "path": "masters/P35/graph.dot",
@@ -9528,7 +9546,7 @@
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -11245,7 +11263,9 @@
         -4,
         -3,
         -2,
-        -1
+        -1,
+        0,
+        1
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -11401,7 +11421,7 @@
         },
         "symbolic.json": {
           "path": "masters/P43/symbolic.json",
-          "sha256": "8405ae84e3c38bd7a2628d73a2902913b050b4ddb679ca29e80f1a7714f1c87b"
+          "sha256": "a5b33aa29e719fe1dca1e01188bbf64071b08c2590e93a2bdb58aaada49af2f8"
         },
         "graph.dot": {
           "path": "masters/P43/graph.dot",
@@ -11451,13 +11471,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -11723,7 +11743,9 @@
         -4,
         -3,
         -2,
-        -1
+        -1,
+        0,
+        1
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -11879,7 +11901,7 @@
         },
         "symbolic.json": {
           "path": "masters/P45/symbolic.json",
-          "sha256": "86bcc5687847278eadb8ea20c0b3e62c047a0ae056e9707aab42f3bef70ca040"
+          "sha256": "f30c62eb39a1ec77e5751388bbb2291aec87b98e4faff11a1ab7f9ad322d4e0f"
         },
         "graph.dot": {
           "path": "masters/P45/graph.dot",
@@ -11929,13 +11951,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -12707,7 +12729,9 @@
         -4,
         -3,
         -2,
-        -1
+        -1,
+        0,
+        1
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -12873,7 +12897,7 @@
         },
         "symbolic.json": {
           "path": "masters/P49/symbolic.json",
-          "sha256": "720c50931aca1b3c70987d7d452284090a99ccc4c6afc2acd3a07b3ebf053669"
+          "sha256": "a26d1567bf1dcd8ae2c3c33512f68705bf65c1f0310c409cdbf0620ba1e09f47"
         },
         "graph.dot": {
           "path": "masters/P49/graph.dot",
@@ -12923,13 +12947,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -12966,7 +12990,8 @@
         -3,
         -2,
         -1,
-        0
+        0,
+        1
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -13122,7 +13147,7 @@
         },
         "symbolic.json": {
           "path": "masters/P50/symbolic.json",
-          "sha256": "891580509dfc58c3d02507ba27e2f982050275cccc2f55da50e373e239b396e6"
+          "sha256": "d64142b946be7f545134467e124d946e5cdfd8da2a0699a850b46426b5f14418"
         },
         "graph.dot": {
           "path": "masters/P50/graph.dot",
@@ -13178,7 +13203,7 @@
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -13215,7 +13240,8 @@
         -3,
         -2,
         -1,
-        0
+        0,
+        1
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -13371,7 +13397,7 @@
         },
         "symbolic.json": {
           "path": "masters/P51/symbolic.json",
-          "sha256": "6853e9c1e6b679841799bcb3b10b29bafbb4bd1a573ad614a978195887ffd03d"
+          "sha256": "6fa7df18b463ecdc8fd9a660467bebce1a0f1a152ab8f424506bcee65d09b180"
         },
         "graph.dot": {
           "path": "masters/P51/graph.dot",
@@ -13427,7 +13453,7 @@
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -13463,7 +13489,9 @@
         -4,
         -3,
         -2,
-        -1
+        -1,
+        0,
+        1
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -13629,7 +13657,7 @@
         },
         "symbolic.json": {
           "path": "masters/P52/symbolic.json",
-          "sha256": "cea9eb73b39fa833d30c31ee37eaa8a3de2669903b86acbb35227f0f8cdaecd5"
+          "sha256": "ec2c754b6542c45e7c73f66951552123ccff9d9492b387db17e277fea04859a7"
         },
         "graph.dot": {
           "path": "masters/P52/graph.dot",
@@ -13680,7 +13708,7 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 20000,
           "stored_significant_digits": 20008,
@@ -13689,7 +13717,7 @@
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -16155,7 +16183,9 @@
         -4,
         -3,
         -2,
-        -1
+        -1,
+        0,
+        1
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -16311,7 +16341,7 @@
         },
         "symbolic.json": {
           "path": "masters/P63/symbolic.json",
-          "sha256": "8405ae84e3c38bd7a2628d73a2902913b050b4ddb679ca29e80f1a7714f1c87b"
+          "sha256": "a5b33aa29e719fe1dca1e01188bbf64071b08c2590e93a2bdb58aaada49af2f8"
         },
         "graph.dot": {
           "path": "masters/P63/graph.dot",
@@ -16361,13 +16391,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -16653,7 +16683,9 @@
         -4,
         -3,
         -2,
-        -1
+        -1,
+        0,
+        1
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -16819,7 +16851,7 @@
         },
         "symbolic.json": {
           "path": "masters/P65/symbolic.json",
-          "sha256": "e76eeacec74dd7e4ac895810cf2e0798c20b2348652301f1e4141559d7175c79"
+          "sha256": "c2250b33e540abfc0f21e5f834cb79f2b29e99df8077a5935eeb9067aa50447d"
         },
         "graph.dot": {
           "path": "masters/P65/graph.dot",
@@ -16869,13 +16901,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -17142,7 +17174,8 @@
         -3,
         -2,
         -1,
-        0
+        0,
+        1
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -17298,7 +17331,7 @@
         },
         "symbolic.json": {
           "path": "masters/P67/symbolic.json",
-          "sha256": "891580509dfc58c3d02507ba27e2f982050275cccc2f55da50e373e239b396e6"
+          "sha256": "d64142b946be7f545134467e124d946e5cdfd8da2a0699a850b46426b5f14418"
         },
         "graph.dot": {
           "path": "masters/P67/graph.dot",
@@ -17354,7 +17387,7 @@
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -17627,7 +17660,9 @@
         -4,
         -3,
         -2,
-        -1
+        -1,
+        0,
+        1
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -17793,7 +17828,7 @@
         },
         "symbolic.json": {
           "path": "masters/P69/symbolic.json",
-          "sha256": "720c50931aca1b3c70987d7d452284090a99ccc4c6afc2acd3a07b3ebf053669"
+          "sha256": "a26d1567bf1dcd8ae2c3c33512f68705bf65c1f0310c409cdbf0620ba1e09f47"
         },
         "graph.dot": {
           "path": "masters/P69/graph.dot",
@@ -17843,13 +17878,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -17885,7 +17920,9 @@
         -4,
         -3,
         -2,
-        -1
+        -1,
+        0,
+        1
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -18061,7 +18098,7 @@
         },
         "symbolic.json": {
           "path": "masters/P70/symbolic.json",
-          "sha256": "9323b1407b0f75f4e7473ce55906db3f282cf6754c4d74a30476aaf897352a69"
+          "sha256": "0e62c4a93d788ec7845d7203f1ae22ba03691998a90623887101f386d49b1d62"
         },
         "graph.dot": {
           "path": "masters/P70/graph.dot",
@@ -18111,13 +18148,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -18154,7 +18191,8 @@
         -3,
         -2,
         -1,
-        0
+        0,
+        1
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -18310,7 +18348,7 @@
         },
         "symbolic.json": {
           "path": "masters/P71/symbolic.json",
-          "sha256": "6853e9c1e6b679841799bcb3b10b29bafbb4bd1a573ad614a978195887ffd03d"
+          "sha256": "6fa7df18b463ecdc8fd9a660467bebce1a0f1a152ab8f424506bcee65d09b180"
         },
         "graph.dot": {
           "path": "masters/P71/graph.dot",
@@ -18366,7 +18404,7 @@
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -18402,7 +18440,9 @@
         -4,
         -3,
         -2,
-        -1
+        -1,
+        0,
+        1
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -18558,7 +18598,7 @@
         },
         "symbolic.json": {
           "path": "masters/P72/symbolic.json",
-          "sha256": "86bcc5687847278eadb8ea20c0b3e62c047a0ae056e9707aab42f3bef70ca040"
+          "sha256": "f30c62eb39a1ec77e5751388bbb2291aec87b98e4faff11a1ab7f9ad322d4e0f"
         },
         "graph.dot": {
           "path": "masters/P72/graph.dot",
@@ -18608,13 +18648,13 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -18651,7 +18691,8 @@
         -3,
         -2,
         -1,
-        0
+        0,
+        1
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -18817,7 +18858,7 @@
         },
         "symbolic.json": {
           "path": "masters/P73/symbolic.json",
-          "sha256": "1ebebb62014999e32cf5811b4fb28bcedb5429a0ff22687ffaaa6eee01d8cefd"
+          "sha256": "8d949738d45206aedf312518c5c877bbe428964e886e99a3be5b751f430a5a08"
         },
         "graph.dot": {
           "path": "masters/P73/graph.dot",
@@ -18873,7 +18914,7 @@
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -18909,7 +18950,9 @@
         -4,
         -3,
         -2,
-        -1
+        -1,
+        0,
+        1
       ],
       "graph_definition": {
         "dimension": "4-2*epsilon",
@@ -19075,7 +19118,7 @@
         },
         "symbolic.json": {
           "path": "masters/P74/symbolic.json",
-          "sha256": "cea9eb73b39fa833d30c31ee37eaa8a3de2669903b86acbb35227f0f8cdaecd5"
+          "sha256": "ec2c754b6542c45e7c73f66951552123ccff9d9492b387db17e277fea04859a7"
         },
         "graph.dot": {
           "path": "masters/P74/graph.dot",
@@ -19126,7 +19169,7 @@
         },
         {
           "epsilon_power": 0,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 20000,
           "stored_significant_digits": 20008,
@@ -19135,7 +19178,7 @@
         },
         {
           "epsilon_power": 1,
-          "symbolic": false,
+          "symbolic": true,
           "numerical": true,
           "significant_digits": 500
         }
@@ -58601,8 +58644,8 @@
       "bytes": 2164
     },
     "masters/P10/symbolic.json": {
-      "sha256": "86bcc5687847278eadb8ea20c0b3e62c047a0ae056e9707aab42f3bef70ca040",
-      "bytes": 1213
+      "sha256": "f30c62eb39a1ec77e5751388bbb2291aec87b98e4faff11a1ab7f9ad322d4e0f",
+      "bytes": 21268
     },
     "masters/P11/graph.dot": {
       "sha256": "59e6f92816e658baedf70e7bb37100bde02fe4f8ae765f8abd7abcab2664e1ef",
@@ -58649,8 +58692,8 @@
       "bytes": 1661
     },
     "masters/P14/symbolic.json": {
-      "sha256": "720c50931aca1b3c70987d7d452284090a99ccc4c6afc2acd3a07b3ebf053669",
-      "bytes": 1177
+      "sha256": "a26d1567bf1dcd8ae2c3c33512f68705bf65c1f0310c409cdbf0620ba1e09f47",
+      "bytes": 109969
     },
     "masters/P15/graph.dot": {
       "sha256": "3e5afb6312ae0c7d6ebc9a7b6846e35544ce0fa816e66b84ef32808e94cf9623",
@@ -58661,8 +58704,8 @@
       "bytes": 3171
     },
     "masters/P15/symbolic.json": {
-      "sha256": "891580509dfc58c3d02507ba27e2f982050275cccc2f55da50e373e239b396e6",
-      "bytes": 4057
+      "sha256": "d64142b946be7f545134467e124d946e5cdfd8da2a0699a850b46426b5f14418",
+      "bytes": 12039
     },
     "masters/P16/graph.dot": {
       "sha256": "40c0dc1f05a92fac3aa543fd44d41d2c425713f75b3c208794205d5a3c5c77a5",
@@ -58673,8 +58716,8 @@
       "bytes": 3171
     },
     "masters/P16/symbolic.json": {
-      "sha256": "6853e9c1e6b679841799bcb3b10b29bafbb4bd1a573ad614a978195887ffd03d",
-      "bytes": 4079
+      "sha256": "6fa7df18b463ecdc8fd9a660467bebce1a0f1a152ab8f424506bcee65d09b180",
+      "bytes": 12090
     },
     "masters/P17/graph.dot": {
       "sha256": "54517684f4fc163d8941056068b288b4fb82452b220653244e4afd41f729bdb7",
@@ -58685,8 +58728,8 @@
       "bytes": 20663
     },
     "masters/P17/symbolic.json": {
-      "sha256": "cea9eb73b39fa833d30c31ee37eaa8a3de2669903b86acbb35227f0f8cdaecd5",
-      "bytes": 20663
+      "sha256": "ec2c754b6542c45e7c73f66951552123ccff9d9492b387db17e277fea04859a7",
+      "bytes": 49025
     },
     "masters/P18/graph.dot": {
       "sha256": "ce961d8e60dded91a3354b48b3d27d3fcfea99b50d57edcd6ebcdffca7c37ed3",
@@ -58697,8 +58740,8 @@
       "bytes": 1158
     },
     "masters/P18/symbolic.json": {
-      "sha256": "a93bd689c930cc741cff9e4e877502590d09071b839f467a34081b6e0e27a606",
-      "bytes": 1158
+      "sha256": "cf0df223fdf796505ebf9979379ce3285b7ab7d33878a3f389c6ba449d141348",
+      "bytes": 26295
     },
     "masters/P19/graph.dot": {
       "sha256": "5d7ab578b7dd036ca293f644e14dc7702e473a948a4bcf72234d924285ae1bf0",
@@ -58709,8 +58752,8 @@
       "bytes": 1158
     },
     "masters/P19/symbolic.json": {
-      "sha256": "1ebebb62014999e32cf5811b4fb28bcedb5429a0ff22687ffaaa6eee01d8cefd",
-      "bytes": 694
+      "sha256": "8d949738d45206aedf312518c5c877bbe428964e886e99a3be5b751f430a5a08",
+      "bytes": 13876
     },
     "masters/P2/graph.dot": {
       "sha256": "21b01521a8f0f25d011166625701899f8c0ec8e1bbb75ddb502570eb6a1a2557",
@@ -58889,8 +58932,8 @@
       "bytes": 3169
     },
     "masters/P32/symbolic.json": {
-      "sha256": "8405ae84e3c38bd7a2628d73a2902913b050b4ddb679ca29e80f1a7714f1c87b",
-      "bytes": 1616
+      "sha256": "a5b33aa29e719fe1dca1e01188bbf64071b08c2590e93a2bdb58aaada49af2f8",
+      "bytes": 23020
     },
     "masters/P33/graph.dot": {
       "sha256": "69f4711e6d87ffe6bf7a41746f7884cb368e0458fbf53c2b9f4c2f707d3ca367",
@@ -58913,8 +58956,8 @@
       "bytes": 2165
     },
     "masters/P34/symbolic.json": {
-      "sha256": "e76eeacec74dd7e4ac895810cf2e0798c20b2348652301f1e4141559d7175c79",
-      "bytes": 1560
+      "sha256": "c2250b33e540abfc0f21e5f834cb79f2b29e99df8077a5935eeb9067aa50447d",
+      "bytes": 50865
     },
     "masters/P35/graph.dot": {
       "sha256": "93ae80baba3b2940cf5a21353b6ccd2af77961f11f2c1ab509e19438c429f85f",
@@ -58925,8 +58968,8 @@
       "bytes": 3171
     },
     "masters/P35/symbolic.json": {
-      "sha256": "6853e9c1e6b679841799bcb3b10b29bafbb4bd1a573ad614a978195887ffd03d",
-      "bytes": 4079
+      "sha256": "6fa7df18b463ecdc8fd9a660467bebce1a0f1a152ab8f424506bcee65d09b180",
+      "bytes": 12090
     },
     "masters/P36/graph.dot": {
       "sha256": "617e7c4d54ccbdebc541e459fdd6192c2d8f8b8b971bbdcfb1edc5e188c6e4f9",
@@ -59033,8 +59076,8 @@
       "bytes": 3169
     },
     "masters/P43/symbolic.json": {
-      "sha256": "8405ae84e3c38bd7a2628d73a2902913b050b4ddb679ca29e80f1a7714f1c87b",
-      "bytes": 1616
+      "sha256": "a5b33aa29e719fe1dca1e01188bbf64071b08c2590e93a2bdb58aaada49af2f8",
+      "bytes": 23020
     },
     "masters/P44/graph.dot": {
       "sha256": "bb0529030e9e3ff6f752ee0e42ef086b5e8beb00a14a409206f26e9b980fdb19",
@@ -59057,8 +59100,8 @@
       "bytes": 2164
     },
     "masters/P45/symbolic.json": {
-      "sha256": "86bcc5687847278eadb8ea20c0b3e62c047a0ae056e9707aab42f3bef70ca040",
-      "bytes": 1213
+      "sha256": "f30c62eb39a1ec77e5751388bbb2291aec87b98e4faff11a1ab7f9ad322d4e0f",
+      "bytes": 21268
     },
     "masters/P46/graph.dot": {
       "sha256": "742fa3e66e18477bf0e477dad78d245ddc1b3784bab4347f6cdc7f6662614fe4",
@@ -59105,8 +59148,8 @@
       "bytes": 1661
     },
     "masters/P49/symbolic.json": {
-      "sha256": "720c50931aca1b3c70987d7d452284090a99ccc4c6afc2acd3a07b3ebf053669",
-      "bytes": 1177
+      "sha256": "a26d1567bf1dcd8ae2c3c33512f68705bf65c1f0310c409cdbf0620ba1e09f47",
+      "bytes": 109969
     },
     "masters/P5/graph.dot": {
       "sha256": "192f1678321dc4cf19fec366a56a892e7281a1c5cb3f125ce8639f8a8bcc980a",
@@ -59129,8 +59172,8 @@
       "bytes": 3171
     },
     "masters/P50/symbolic.json": {
-      "sha256": "891580509dfc58c3d02507ba27e2f982050275cccc2f55da50e373e239b396e6",
-      "bytes": 4057
+      "sha256": "d64142b946be7f545134467e124d946e5cdfd8da2a0699a850b46426b5f14418",
+      "bytes": 12039
     },
     "masters/P51/graph.dot": {
       "sha256": "dfdf23ace45994efbec0f87be199cf01583d5ac48d3198f68a1a38908d66e0ef",
@@ -59141,8 +59184,8 @@
       "bytes": 3171
     },
     "masters/P51/symbolic.json": {
-      "sha256": "6853e9c1e6b679841799bcb3b10b29bafbb4bd1a573ad614a978195887ffd03d",
-      "bytes": 4079
+      "sha256": "6fa7df18b463ecdc8fd9a660467bebce1a0f1a152ab8f424506bcee65d09b180",
+      "bytes": 12090
     },
     "masters/P52/graph.dot": {
       "sha256": "1b28e198c529623ddddb7eb3c15b4a5ba699a714e47dcee6f6b2702488cbaaae",
@@ -59153,8 +59196,8 @@
       "bytes": 20663
     },
     "masters/P52/symbolic.json": {
-      "sha256": "cea9eb73b39fa833d30c31ee37eaa8a3de2669903b86acbb35227f0f8cdaecd5",
-      "bytes": 20663
+      "sha256": "ec2c754b6542c45e7c73f66951552123ccff9d9492b387db17e277fea04859a7",
+      "bytes": 49025
     },
     "masters/P53/graph.dot": {
       "sha256": "617e7c4d54ccbdebc541e459fdd6192c2d8f8b8b971bbdcfb1edc5e188c6e4f9",
@@ -59297,8 +59340,8 @@
       "bytes": 3169
     },
     "masters/P63/symbolic.json": {
-      "sha256": "8405ae84e3c38bd7a2628d73a2902913b050b4ddb679ca29e80f1a7714f1c87b",
-      "bytes": 1616
+      "sha256": "a5b33aa29e719fe1dca1e01188bbf64071b08c2590e93a2bdb58aaada49af2f8",
+      "bytes": 23020
     },
     "masters/P64/graph.dot": {
       "sha256": "b79ca9a37a9b32cd33edfac310a440eeb30f6f8c35f49e18adcaddf4a0177b07",
@@ -59321,8 +59364,8 @@
       "bytes": 2165
     },
     "masters/P65/symbolic.json": {
-      "sha256": "e76eeacec74dd7e4ac895810cf2e0798c20b2348652301f1e4141559d7175c79",
-      "bytes": 1560
+      "sha256": "c2250b33e540abfc0f21e5f834cb79f2b29e99df8077a5935eeb9067aa50447d",
+      "bytes": 50865
     },
     "masters/P66/graph.dot": {
       "sha256": "1f91aaa40c833ef7559c86e0a43ead66d0c9d0accab11110f3a68c679b26043e",
@@ -59345,8 +59388,8 @@
       "bytes": 3171
     },
     "masters/P67/symbolic.json": {
-      "sha256": "891580509dfc58c3d02507ba27e2f982050275cccc2f55da50e373e239b396e6",
-      "bytes": 4057
+      "sha256": "d64142b946be7f545134467e124d946e5cdfd8da2a0699a850b46426b5f14418",
+      "bytes": 12039
     },
     "masters/P68/graph.dot": {
       "sha256": "cf619a7861290bd2c368573ef7cf4d2044370135d78bb9250120b43de65cd584",
@@ -59369,8 +59412,8 @@
       "bytes": 1661
     },
     "masters/P69/symbolic.json": {
-      "sha256": "720c50931aca1b3c70987d7d452284090a99ccc4c6afc2acd3a07b3ebf053669",
-      "bytes": 1177
+      "sha256": "a26d1567bf1dcd8ae2c3c33512f68705bf65c1f0310c409cdbf0620ba1e09f47",
+      "bytes": 109969
     },
     "masters/P7/graph.dot": {
       "sha256": "e861e25803a6ebbaf6d66cdb53a394e8790732e905e2c31ac956d538d446dbae",
@@ -59393,8 +59436,8 @@
       "bytes": 1158
     },
     "masters/P70/symbolic.json": {
-      "sha256": "9323b1407b0f75f4e7473ce55906db3f282cf6754c4d74a30476aaf897352a69",
-      "bytes": 1158
+      "sha256": "0e62c4a93d788ec7845d7203f1ae22ba03691998a90623887101f386d49b1d62",
+      "bytes": 98395
     },
     "masters/P71/graph.dot": {
       "sha256": "5b41e43832d57e60565ba3697b0ddc37e33a985da9f88678737605feb5ef3c4d",
@@ -59405,8 +59448,8 @@
       "bytes": 3171
     },
     "masters/P71/symbolic.json": {
-      "sha256": "6853e9c1e6b679841799bcb3b10b29bafbb4bd1a573ad614a978195887ffd03d",
-      "bytes": 4079
+      "sha256": "6fa7df18b463ecdc8fd9a660467bebce1a0f1a152ab8f424506bcee65d09b180",
+      "bytes": 12090
     },
     "masters/P72/graph.dot": {
       "sha256": "764f2b36672a237b6cd13747db0a2e2b891ae0fafa355e6db5f97a5bc11ed796",
@@ -59417,8 +59460,8 @@
       "bytes": 2164
     },
     "masters/P72/symbolic.json": {
-      "sha256": "86bcc5687847278eadb8ea20c0b3e62c047a0ae056e9707aab42f3bef70ca040",
-      "bytes": 1213
+      "sha256": "f30c62eb39a1ec77e5751388bbb2291aec87b98e4faff11a1ab7f9ad322d4e0f",
+      "bytes": 21268
     },
     "masters/P73/graph.dot": {
       "sha256": "15d132722caa30f16b60ac56ffd35fb4abee3f6ea9f7364bcc77de16d24648bd",
@@ -59429,8 +59472,8 @@
       "bytes": 1158
     },
     "masters/P73/symbolic.json": {
-      "sha256": "1ebebb62014999e32cf5811b4fb28bcedb5429a0ff22687ffaaa6eee01d8cefd",
-      "bytes": 694
+      "sha256": "8d949738d45206aedf312518c5c877bbe428964e886e99a3be5b751f430a5a08",
+      "bytes": 13876
     },
     "masters/P74/graph.dot": {
       "sha256": "eb8653ad656a5568cca9e98eef663f66ad18c12d3dec8d8874941070960a6ce9",
@@ -59441,8 +59484,8 @@
       "bytes": 20663
     },
     "masters/P74/symbolic.json": {
-      "sha256": "cea9eb73b39fa833d30c31ee37eaa8a3de2669903b86acbb35227f0f8cdaecd5",
-      "bytes": 20663
+      "sha256": "ec2c754b6542c45e7c73f66951552123ccff9d9492b387db17e277fea04859a7",
+      "bytes": 49025
     },
     "masters/P8/graph.dot": {
       "sha256": "35dfc042b5d5451f7c042a23958b99b56ad973fc8c75184dedbe9ab10d8109dd",
@@ -59453,8 +59496,8 @@
       "bytes": 3169
     },
     "masters/P8/symbolic.json": {
-      "sha256": "8405ae84e3c38bd7a2628d73a2902913b050b4ddb679ca29e80f1a7714f1c87b",
-      "bytes": 1616
+      "sha256": "a5b33aa29e719fe1dca1e01188bbf64071b08c2590e93a2bdb58aaada49af2f8",
+      "bytes": 23020
     },
     "masters/P9/graph.dot": {
       "sha256": "3a6bf7e864187c59eb2693c189f51f0dc26279fefcdd08f6f61d6a3ed3628fcc",
@@ -59473,12 +59516,12 @@
       "bytes": 6697
     },
     "numerical-precision-supplement.json": {
-      "sha256": "5715c1b7a0d392c5d3f40a0a90c3b6e5c430ebbc556471067b06e3f48cdcdd51",
-      "bytes": 55429
+      "sha256": "fcadbd3cbf81975cb4cba51a73da16fe71913d4f60394b85ba919cd424fc6941",
+      "bytes": 335274
     },
     "producer-update.json": {
-      "sha256": "857690ed4c2ca84be268f50981f9d93eb7c537fd2193a6d1faae32caa464dee7",
-      "bytes": 411882
+      "sha256": "c5e9d6a57147983909d0b6168a843d51456e4e8613a555b692a9d27de7053509",
+      "bytes": 446333
     },
     "provenance/PR10-PR15-v24/independent-D2-periods-v1.json": {
       "sha256": "ac0f8f72e34660f873d17b4227e5aa5eb0f293592364cb9213f93c241f918c0c",

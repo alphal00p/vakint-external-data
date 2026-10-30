@@ -458,6 +458,37 @@ def _source_key(source, additional):
     return source_id, source["symbol"]
 
 
+def _published_symbolic_rows(root, publications, identity, accepted):
+    """Authenticate exact rows accepted by a later publication receipt."""
+    publication = publications.get(accepted["source_publication"])
+    if (
+        not isinstance(publication, dict)
+        or set(publication) != {"base_commit", "receipt"}
+        or accepted["source_commit"] != publication["base_commit"]
+    ):
+        raise ValueError("accepted exact symbolic publication differs")
+    path = data.checked_path(root, publication["receipt"]["path"])
+    if data.digest(path) != publication["receipt"]["sha256"]:
+        raise ValueError("accepted exact symbolic publication receipt changed")
+    receipt = data.read_json(path)
+    rows = receipt.get("exact_rows", {}).get(identity)
+    if (
+        receipt.get("base_commit") != publication["base_commit"]
+        or receipt.get("accepted") is not True
+        or not isinstance(rows, dict)
+        or not rows
+    ):
+        raise ValueError("accepted exact symbolic publication scope differs")
+    contents = dict(json.loads(accepted["contents"]))
+    powers = set()
+    for power, digest in rows.items():
+        power = int(power)
+        if power not in contents or text_digest(contents[power]) != digest:
+            raise ValueError("accepted exact symbolic row differs from its publication")
+        powers.add(power)
+    return powers
+
+
 def load_source(root=data.ROOT):
     root = Path(root)
     path = root / RECEIPT
@@ -494,14 +525,25 @@ def load_source(root=data.ROOT):
         authoritative.update(
             _index_source_rows(source_id, _load_pr11_source(root, reference))
         )
-    for entry in update["masters"].values():
+    publications = provenance.get("accepted_symbolic_publications", {})
+    if not isinstance(publications, dict):
+        raise ValueError("invalid accepted exact symbolic publications")
+    for identity, entry in update["masters"].items():
+        published = set()
         if accepted := entry.get("accepted_symbolic"):
             archived = data.checked_path(root, accepted["archive"])
             if (
                 data.digest(archived) != accepted["sha256"]
                 or archived.read_text() != accepted["contents"]
-                or accepted["source_commit"] != provenance["accepted_symbolic_commit"]
             ):
+                raise ValueError("accepted exact symbolic source changed")
+            if "source_publication" in accepted:
+                # A later publication may supply exact rows for a precision-
+                # supplemented master; its own receipt binds every row text.
+                published = _published_symbolic_rows(
+                    root, publications, identity, accepted
+                )
+            elif accepted["source_commit"] != provenance["accepted_symbolic_commit"]:
                 raise ValueError("accepted exact symbolic source changed")
         for previous in entry["previous_files"].values():
             archived = data.checked_path(root, previous["archive"])
@@ -515,7 +557,14 @@ def load_source(root=data.ROOT):
             key = _source_key(source, additional)
             if key not in authoritative:
                 raise ValueError("unknown authoritative numerical precision symbol")
-            if key[0] == PR11_SOURCE_ID and row["symbolic"] is not False:
+            # The finite period never promotes exactness by itself. Only an
+            # independently accepted exact row, bound by its publication
+            # receipt, may be declared symbolic beside the numerical value.
+            if (
+                key[0] == PR11_SOURCE_ID
+                and row["symbolic"] is not False
+                and row["epsilon_power"] not in published
+            ):
                 raise ValueError("PR11 finite-period precision remains numerical-only")
             original = authoritative[key]
             if (
