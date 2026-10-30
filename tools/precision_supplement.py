@@ -24,6 +24,28 @@ PR11_SOURCE_KIND = "vakint.pr11d.bounded-transport-20000.v1"
 PR11_VERIFIER_SHA256 = (
     "1cf290b886aeff1a80c34a39daf64f16fb647c89f5e22cc5610126f1bbf31ce7"
 )
+# Values evaluated from already-published exact rows. The receipt binds every
+# value to its exact row text, the replaced value and the finite constants used.
+FORMULA_SOURCE_ID = "symbolic-expression-evaluation-v1"
+FORMULA_SOURCE_KIND = "vakint.symbolic-expression-evaluation.v1"
+FORMULA_RECEIPT_SCHEMA = "vakint.external-data.symbolic-expression-evaluation.v1"
+FORMULA_DIGIT_CAP = 20000
+FORMULA_ROW_FIELDS = {
+    "loop_count",
+    "master_id",
+    "master_basis",
+    "epsilon_power",
+    "normalization",
+    "formula_sha256",
+    "value_sha256",
+    "significant_digits",
+    "stored_significant_digits",
+    "absolute_error",
+    "error_quality",
+    "finite_constants",
+    "previous",
+}
+ADDITIONAL_SOURCE_IDS = {PR11_SOURCE_ID, FORMULA_SOURCE_ID}
 CAPABILITY_FIELDS = {
     "epsilon_power",
     "symbolic",
@@ -60,6 +82,7 @@ def coefficients(update, known):
         rows = entry.get("coefficients")
         if not isinstance(rows, list) or not rows:
             raise ValueError("numerical precision supplement has no coefficients")
+        sources = entry.get("sources")
         selected = {}
         for row in rows:
             if not isinstance(row, dict) or set(row) != CAPABILITY_FIELDS:
@@ -69,6 +92,17 @@ def coefficients(update, known):
                 row["significant_digits"],
                 row["stored_significant_digits"],
             )
+            source = (
+                sources.get(str(power))
+                if isinstance(sources, dict) and type(power) is int
+                else None
+            )
+            # Only an evaluation of an exact row is an estimate; every other
+            # accepted source remains an interval-bounded finite payload.
+            formula = (
+                isinstance(source, dict)
+                and source.get("source_id") == FORMULA_SOURCE_ID
+            )
             if (
                 type(power) is not int
                 or type(digits) is not int
@@ -77,7 +111,11 @@ def coefficients(update, known):
                 or stored < digits
                 or type(row["symbolic"]) is not bool
                 or row["numerical"] is not True
-                or row["error_quality"] != "bounded"
+                or row["error_quality"] != ("estimated" if formula else "bounded")
+                or (
+                    formula
+                    and (row["symbolic"] is not True or digits > FORMULA_DIGIT_CAP)
+                )
             ):
                 raise ValueError("invalid numerical precision capability")
             if row["symbolic"] and not entry.get("accepted_symbolic"):
@@ -422,6 +460,203 @@ def _load_pr11_source(root, reference):
     ]
 
 
+def _hex_digest(value):
+    return (
+        isinstance(value, str)
+        and len(value) == 64
+        and all(c in "0123456789abcdef" for c in value)
+    )
+
+
+def _formula_portable_index(root, reference):
+    """Authenticate the archived evaluation evidence named by the receipt."""
+    if (
+        not isinstance(reference, dict)
+        or set(reference) != {"path", "sha256"}
+        or not _hex_digest(reference["sha256"])
+    ):
+        raise ValueError("invalid formula evaluation evidence index")
+    path = data.checked_path(root, reference["path"])
+    if data.digest(path) != reference["sha256"]:
+        raise ValueError("formula evaluation evidence index checksum differs")
+    index = json.loads(path.read_text(), object_pairs_hook=_unique_json)
+    archives = index.get("archives")
+    if (
+        index.get("schema")
+        != "vakint.external-data.portable-producer-evidence-index.v1"
+        or not isinstance(archives, list)
+        or not archives
+    ):
+        raise ValueError("unsupported formula evaluation evidence index")
+    for item in archives:
+        portable = item.get("portable_archive") if isinstance(item, dict) else None
+        if not isinstance(portable, dict) or not _hex_digest(portable.get("sha256")):
+            raise ValueError("invalid formula evaluation evidence archive")
+        archive = data.checked_path(root, portable["path"])
+        if data.file_record(archive) != {
+            "sha256": portable["sha256"],
+            "bytes": portable["bytes"],
+        }:
+            raise ValueError("formula evaluation evidence archive changed")
+
+
+def _load_formula_source(root, reference):
+    """Admit values evaluated from published exact rows; never new exactness."""
+    if (
+        not isinstance(reference, dict)
+        or set(reference) != {"kind", "receipt"}
+        or reference["kind"] != FORMULA_SOURCE_KIND
+        or not isinstance(reference["receipt"], dict)
+        or set(reference["receipt"]) != {"path", "sha256"}
+    ):
+        raise ValueError("invalid additional numerical precision source adapter")
+    root = Path(root)
+    path = data.checked_path(root, reference["receipt"]["path"])
+    if data.digest(path) != reference["receipt"]["sha256"]:
+        raise ValueError("formula evaluation receipt checksum differs")
+    receipt = json.loads(path.read_text(), object_pairs_hook=_unique_json)
+    working = receipt.get("working_decimal_digits")
+    if (
+        receipt.get("schema") != FORMULA_RECEIPT_SCHEMA
+        or receipt.get("accepted") is not True
+        or receipt.get("error_quality") != "estimated"
+        or receipt.get("digit_cap") != FORMULA_DIGIT_CAP
+        or not isinstance(receipt.get("base_commit"), str)
+        or len(receipt["base_commit"]) != 40
+        or not isinstance(working, list)
+        or len(working) != 2
+        or any(type(digits) is not int for digits in working)
+        or working[0] == working[1]
+        or min(working) <= FORMULA_DIGIT_CAP
+        or not isinstance(receipt.get("rows"), dict)
+        or not receipt["rows"]
+        or not isinstance(receipt.get("exact_rows"), dict)
+    ):
+        raise ValueError("unsupported formula evaluation receipt")
+    _formula_portable_index(root, receipt.get("portable_proof_index"))
+    result = []
+    for key, row in receipt["rows"].items():
+        if not isinstance(row, dict) or not FORMULA_ROW_FIELDS <= set(row):
+            raise ValueError("invalid formula evaluation row")
+        identity, power = row["master_id"], row["epsilon_power"]
+        if (
+            type(power) is not int
+            or key != f"{identity}:{power}"
+            or row["normalization"] != "FMFTandMATAD"
+            or row["error_quality"] != "estimated"
+            or not _hex_digest(row["formula_sha256"])
+            or not _hex_digest(row["value_sha256"])
+            or not isinstance(row["finite_constants"], dict)
+            or not isinstance(row["previous"], dict)
+        ):
+            raise ValueError("invalid formula evaluation row")
+        # The receipt itself binds the exact row text of every evaluation.
+        bound = receipt["exact_rows"].get(identity)
+        if (
+            not isinstance(bound, dict)
+            or bound.get(str(power)) != row["formula_sha256"]
+        ):
+            raise ValueError("formula evaluation is not bound to its exact row")
+        result.append(
+            {
+                "symbol": key,
+                "master_basis": row["master_basis"],
+                "epsilon_power": power,
+                "normalization": row["normalization"],
+                "significant_digits": row["significant_digits"],
+                "stored_significant_digits": row["stored_significant_digits"],
+                "numerical_sha256": row["value_sha256"],
+                "validation": {"absolute_error_bound": row["absolute_error"]},
+                "evaluation": row,
+            }
+        )
+    return result
+
+
+def _finite_constant_values(root, authoritative):
+    """Published finite constants that an evaluated formula may contain."""
+    constants = {}
+    path = Path(root) / "4L/constants.json"
+    if path.exists():
+        for record in data.read_json(path):
+            constants[record["symbol"]] = (
+                record["significant_digits"],
+                text_digest(record["value"]),
+            )
+    for (source_id, symbol), row in authoritative.items():
+        if source_id == FORMULA_SOURCE_ID or "numerical_value" not in row:
+            continue
+        name = symbol if symbol.startswith("vakint::") else f"vakint::{symbol}"
+        constants[name] = (
+            row["significant_digits"],
+            text_digest(row["numerical_value"]),
+        )
+    return constants
+
+
+def _check_formula_evaluation(root, identity, entry, row, original, constants):
+    """Bind an evaluated value to its exact row, constants and replaced value."""
+    evaluation, power = original["evaluation"], row["epsilon_power"]
+    if (
+        evaluation["master_id"] != identity
+        or evaluation["loop_count"] != entry.get("loop_count")
+        or row["symbolic"] is not True
+        or row["error_quality"] != "estimated"
+    ):
+        raise ValueError("formula evaluation master or capability differs")
+    accepted = entry.get("accepted_symbolic")
+    exact = dict(json.loads(accepted["contents"])) if accepted else {}
+    if power not in exact or text_digest(exact[power]) != evaluation["formula_sha256"]:
+        raise ValueError("formula evaluation differs from the published exact row")
+    for symbol, used in evaluation["finite_constants"].items():
+        current = constants.get(symbol)
+        if (
+            not isinstance(used, dict)
+            or current is None
+            or (used.get("significant_digits"), used.get("value_sha256")) != current
+            or row["significant_digits"] > current[0]
+        ):
+            raise ValueError("formula evaluation exceeds or differs from its constants")
+    before = evaluation["previous"]
+    previous = dict(json.loads(entry["previous_files"]["numerical.json"]["contents"]))
+    old_digits = before.get("significant_digits")
+    if (
+        power not in previous
+        or text_digest(previous[power]) != before.get("value_sha256")
+        or type(old_digits) is not int
+        or old_digits < 1
+        or row["significant_digits"] <= old_digits
+    ):
+        raise ValueError("formula evaluation does not improve the replaced value")
+    directory = Path(root) / f"{entry['loop_count']}L"
+    current = dict(
+        data.read_json(
+            data.checked_path(directory, entry["files"]["numerical.json"]["path"])
+        )
+    )
+    value = current.get(power)
+    if not isinstance(value, str) or text_digest(value) != original["numerical_sha256"]:
+        raise ValueError("formula evaluation value differs from its payload")
+    with localcontext() as context:
+        context.prec = max(len(value), len(previous[power])) + 50
+        new, old = Decimal(value), Decimal(previous[power])
+        old_error = (
+            Decimal(before["absolute_error"])
+            if before.get("absolute_error") is not None
+            else abs(old) * Decimal(10) ** -old_digits
+        )
+        # The replaced string is only correct to half a unit of its last digit.
+        storage = Decimal(5).scaleb(old.as_tuple().exponent - 1)
+        if (
+            not old.is_finite()
+            or old.is_zero()
+            or abs(new - old) > Decimal(row["absolute_error"]) + old_error + storage
+        ):
+            raise ValueError(
+                "formula evaluation is incompatible with the replaced value"
+            )
+
+
 def _index_source_rows(source_id, rows):
     authoritative = {}
     for row in rows:
@@ -510,7 +745,7 @@ def load_source(root=data.ROOT):
         ),
     )
     additional = provenance.get("additional_sources", {})
-    if not isinstance(additional, dict) or additional.keys() - {PR11_SOURCE_ID}:
+    if not isinstance(additional, dict) or additional.keys() - ADDITIONAL_SOURCE_IDS:
         raise ValueError("invalid or unknown additional numerical precision source")
     used = set()
     for entry in update["masters"].values():
@@ -520,11 +755,17 @@ def load_source(root=data.ROOT):
     if additional.keys() - used:
         raise ValueError("unused additional numerical precision source")
     for source_id, reference in additional.items():
-        # This fixed dispatch has one reserved additional source. Source text
+        # This fixed dispatch has two reserved additional sources. Source text
         # cannot select imports, callbacks, or a fallback to the Bessel rows.
-        authoritative.update(
-            _index_source_rows(source_id, _load_pr11_source(root, reference))
+        loader = (
+            _load_pr11_source if source_id == PR11_SOURCE_ID else _load_formula_source
         )
+        authoritative.update(_index_source_rows(source_id, loader(root, reference)))
+    constants = (
+        _finite_constant_values(root, authoritative)
+        if FORMULA_SOURCE_ID in additional
+        else {}
+    )
     publications = provenance.get("accepted_symbolic_publications", {})
     if not isinstance(publications, dict):
         raise ValueError("invalid accepted exact symbolic publications")
@@ -567,6 +808,13 @@ def load_source(root=data.ROOT):
             ):
                 raise ValueError("PR11 finite-period precision remains numerical-only")
             original = authoritative[key]
+            # Formula evaluations bind their value by digest; the value itself
+            # is published once, in the master's numerical payload.
+            value_digest = (
+                original["numerical_sha256"]
+                if key[0] == FORMULA_SOURCE_ID
+                else text_digest(original["numerical_value"])
+            )
             if (
                 original["master_basis"]
                 != entry["exact_basis_expression"].replace("::{}::", "::")
@@ -577,11 +825,14 @@ def load_source(root=data.ROOT):
                 != row["stored_significant_digits"]
                 or original["validation"]["absolute_error_bound"]
                 != row["absolute_error"]
-                or text_digest(original["numerical_value"])
-                != source["numerical_sha256"]
+                or value_digest != source["numerical_sha256"]
             ):
                 raise ValueError(
                     "numerical precision selection differs from accepted payload"
+                )
+            if key[0] == FORMULA_SOURCE_ID:
+                _check_formula_evaluation(
+                    root, identity, entry, row, original, constants
                 )
     return update
 
@@ -632,6 +883,36 @@ def validate_master(update, master, root=data.ROOT):
                 "numerical precision upgrade changed unselected epsilon rows"
             )
         current_rows[name] = new_map
+    # A later publication may supersede a payload that an earlier supplement
+    # or producer binding already references. Its archived replaced file must
+    # agree with the current payload on every unselected row.
+    replaced_files = entry.get("replaced_files", {})
+    if not isinstance(replaced_files, dict) or replaced_files.keys() - current_rows:
+        raise ValueError("invalid replaced numerical precision payload")
+    for name, replaced in replaced_files.items():
+        if (
+            not isinstance(replaced, dict)
+            or set(replaced) != {"path", "sha256", "archive"}
+            or replaced["path"] != entry["files"][name]["path"]
+        ):
+            raise ValueError("invalid replaced numerical precision payload")
+        archived = data.checked_path(Path(root), replaced["archive"])
+        if data.digest(archived) != replaced["sha256"]:
+            raise ValueError("replaced numerical precision payload changed")
+        rows = json.loads(archived.read_text())
+        mapping = dict(rows)
+        if (
+            len(mapping) != len(rows)
+            or mapping.keys() != current_rows[name].keys()
+            or any(
+                mapping[power] != current_rows[name][power]
+                for power in mapping
+                if power not in selected
+            )
+        ):
+            raise ValueError(
+                "replaced numerical precision payload is not an earlier upgrade"
+            )
     accepted = entry.get("accepted_symbolic")
     if accepted is not None and (
         accepted["path"] != entry["files"]["symbolic.json"]["path"]
@@ -668,7 +949,13 @@ def accepts_producer_binding(expected, master, name, root=data.ROOT):
     if entry is None or name not in entry["previous_files"]:
         return False
     previous = entry["previous_files"][name]
-    if expected != {key: previous[key] for key in ["path", "sha256"]}:
+    replaced = entry.get("replaced_files", {}).get(name)
+    bindings = [
+        {key: record.get(key) for key in ["path", "sha256"]}
+        for record in [previous, replaced]
+        if isinstance(record, dict)
+    ]
+    if expected not in bindings:
         return False
     validate_master(update, master, root)
     return True

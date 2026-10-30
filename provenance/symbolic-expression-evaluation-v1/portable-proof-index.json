@@ -1,0 +1,190 @@
+{
+  "schema": "vakint.external-data.portable-producer-evidence-index.v1",
+  "base_commit": "bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+  "source_path_names_are_historical_only": true,
+  "note": "Evidence of the evaluation of the published exact rows at 20100 and 20200 working digits (prep/numerical-from-formulas). The 20,000-digit leaf tables (two 11 MB files) are not archived; their digests are in final/receipt.json and they are reproducible from the bundled job files.",
+  "archives": [
+    {
+      "logical_name": "final/table.json",
+      "original_source": {
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/numerical-from-formulas/final/table.json",
+        "sha256": "b1bf8d08c3299f2a8cc98a46e1936571236f838486027f42a480d6eb293c7c89"
+      },
+      "portable_archive": {
+        "path": "validation/symbolic-expression-evaluation-v1-b1bf8d08c3299f2a8cc98a46e1936571236f838486027f42a480d6eb293c7c89.json.gz",
+        "sha256": "f6b8b060b5eb73da8264996fc821637686f4f3ce80bb93593892de97b76cef38",
+        "bytes": 107340,
+        "uncompressed_sha256": "b1bf8d08c3299f2a8cc98a46e1936571236f838486027f42a480d6eb293c7c89",
+        "uncompressed_bytes": 1259823
+      }
+    },
+    {
+      "logical_name": "final/new-values-metadata.json",
+      "original_source": {
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/numerical-from-formulas/final/new-values.json",
+        "sha256": "93e2dd6532017dadf59beda51f9c9804b74db1e027be9e89e7bbcb2993545de7"
+      },
+      "portable_archive": {
+        "path": "validation/symbolic-expression-evaluation-v1-fe9282b9a154ce478aadfa9a2b771f813344013ae331889a669162080889f109.json.gz",
+        "sha256": "c30a7bfc0909580b340ebf49942b848a32ac17af17dbdb2d1c82efccb6a3a3bd",
+        "bytes": 38109,
+        "uncompressed_sha256": "fe9282b9a154ce478aadfa9a2b771f813344013ae331889a669162080889f109",
+        "uncompressed_bytes": 382509
+      }
+    },
+    {
+      "logical_name": "final/totals.json",
+      "original_source": {
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/numerical-from-formulas/final/totals.json",
+        "sha256": "5f95dc74d5b30741f01c85ad19989d35f52a9f97beecce718aa7b3c2c490c79a"
+      },
+      "portable_archive": {
+        "path": "validation/symbolic-expression-evaluation-v1-5f95dc74d5b30741f01c85ad19989d35f52a9f97beecce718aa7b3c2c490c79a.json.gz",
+        "sha256": "92b313c90717cba8697e3fb876b61798473d8f600191eddfa85fa89cb9c24434",
+        "bytes": 238,
+        "uncompressed_sha256": "5f95dc74d5b30741f01c85ad19989d35f52a9f97beecce718aa7b3c2c490c79a",
+        "uncompressed_bytes": 548
+      }
+    },
+    {
+      "logical_name": "final/summary.json",
+      "original_source": {
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/numerical-from-formulas/final/summary.json",
+        "sha256": "a8c0d4bb93b177f62c6aaab199eae61f22de709abb231c10122ce2241d559c8a"
+      },
+      "portable_archive": {
+        "path": "validation/symbolic-expression-evaluation-v1-a8c0d4bb93b177f62c6aaab199eae61f22de709abb231c10122ce2241d559c8a.json.gz",
+        "sha256": "69df25791c193ce7d2ee31da96790e9abd680de50b4972e543c945d90d5ddbac",
+        "bytes": 919,
+        "uncompressed_sha256": "a8c0d4bb93b177f62c6aaab199eae61f22de709abb231c10122ce2241d559c8a",
+        "uncompressed_bytes": 2860
+      }
+    },
+    {
+      "logical_name": "final/receipt.json",
+      "original_source": {
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/numerical-from-formulas/final/receipt.json",
+        "sha256": "f3a43d2896e14d4cf326ce248a5483fc19bc869ff6cd020d98d5c5afa05fe72f"
+      },
+      "portable_archive": {
+        "path": "validation/symbolic-expression-evaluation-v1-f3a43d2896e14d4cf326ce248a5483fc19bc869ff6cd020d98d5c5afa05fe72f.json.gz",
+        "sha256": "1db343becaff8839104a022d5a441b5c182a70957e5c1987242664c9e37f7a86",
+        "bytes": 2106,
+        "uncompressed_sha256": "f3a43d2896e14d4cf326ce248a5483fc19bc869ff6cd020d98d5c5afa05fe72f",
+        "uncompressed_bytes": 4170
+      }
+    },
+    {
+      "logical_name": "final/verify-outputs.json",
+      "original_source": {
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/numerical-from-formulas/final/verify-outputs.json",
+        "sha256": "7862711521801c75a053f8760a2bdfd439c9ea3b7454094319953ddc58ea5a5b"
+      },
+      "portable_archive": {
+        "path": "validation/symbolic-expression-evaluation-v1-7862711521801c75a053f8760a2bdfd439c9ea3b7454094319953ddc58ea5a5b.json.gz",
+        "sha256": "1f71bb0f6ef8266611b1447a2c9352dd36e7aa5988bbfa0db4ffd7eb1d7cb0ab",
+        "bytes": 700,
+        "uncompressed_sha256": "7862711521801c75a053f8760a2bdfd439c9ea3b7454094319953ddc58ea5a5b",
+        "uncompressed_bytes": 7885
+      }
+    },
+    {
+      "logical_name": "final/check-leaves.json",
+      "original_source": {
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/numerical-from-formulas/final/check-leaves.json",
+        "sha256": "1698b31e47dc56f4c7d55526daf45159045d50816007d49067ca738d1e8a8e1a"
+      },
+      "portable_archive": {
+        "path": "validation/symbolic-expression-evaluation-v1-1698b31e47dc56f4c7d55526daf45159045d50816007d49067ca738d1e8a8e1a.json.gz",
+        "sha256": "7d5d5528ebffd250e7f3fc3b9dfa36aec86bf904f4fda4f32291d00430b87c26",
+        "bytes": 9069,
+        "uncompressed_sha256": "1698b31e47dc56f4c7d55526daf45159045d50816007d49067ca738d1e8a8e1a",
+        "uncompressed_bytes": 91279
+      }
+    },
+    {
+      "logical_name": "final/gpl-pari-5000.json",
+      "original_source": {
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/numerical-from-formulas/final/gpl-pari-5000.json",
+        "sha256": "5ffa923c16878bdf1eb876dd391882164d17c64a71ca8191ec872abb2fe05ecc"
+      },
+      "portable_archive": {
+        "path": "validation/symbolic-expression-evaluation-v1-5ffa923c16878bdf1eb876dd391882164d17c64a71ca8191ec872abb2fe05ecc.json.gz",
+        "sha256": "ef3055312ebaed2f4540198e5bcff27b80f33f3d2baf8dc4a20bb5a9063daa1a",
+        "bytes": 268,
+        "uncompressed_sha256": "5ffa923c16878bdf1eb876dd391882164d17c64a71ca8191ec872abb2fe05ecc",
+        "uncompressed_bytes": 798
+      }
+    },
+    {
+      "logical_name": "out/eval-20100-20200/evaluation.json",
+      "original_source": {
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/numerical-from-formulas/out/eval-20100-20200/evaluation.json",
+        "sha256": "a32167f078d128b9fd24777511ebd1b0447a9618a6f812d04803befac7e7b763"
+      },
+      "portable_archive": {
+        "path": "validation/symbolic-expression-evaluation-v1-a32167f078d128b9fd24777511ebd1b0447a9618a6f812d04803befac7e7b763.json.gz",
+        "sha256": "4e898db43c6aa3ecd23818e8d7b90b1ed61a96823f22abafba92911537f41440",
+        "bytes": 108477,
+        "uncompressed_sha256": "a32167f078d128b9fd24777511ebd1b0447a9618a6f812d04803befac7e7b763",
+        "uncompressed_bytes": 1410941
+      }
+    },
+    {
+      "logical_name": "out/spot/spot-43-560.json",
+      "original_source": {
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/numerical-from-formulas/out/spot/spot-43-560.json",
+        "sha256": "7537dd96ab617dc2568f09302cbc5ea54c46799da379f0ef90fe3d01f7e817e1"
+      },
+      "portable_archive": {
+        "path": "validation/symbolic-expression-evaluation-v1-7537dd96ab617dc2568f09302cbc5ea54c46799da379f0ef90fe3d01f7e817e1.json.gz",
+        "sha256": "62a7bd0aa2ab7209cec2971fe9ff1406263400bf6639d92c791ac5a7bcb50499",
+        "bytes": 6078,
+        "uncompressed_sha256": "7537dd96ab617dc2568f09302cbc5ea54c46799da379f0ef90fe3d01f7e817e1",
+        "uncompressed_bytes": 28389
+      }
+    },
+    {
+      "logical_name": "out/spot/spot-classical-2100.json",
+      "original_source": {
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/numerical-from-formulas/out/spot/spot-classical-2100.json",
+        "sha256": "7538cd3898b0078dce7305c352d00a7806def827aa15abba3c5fba8d8424f58b"
+      },
+      "portable_archive": {
+        "path": "validation/symbolic-expression-evaluation-v1-7538cd3898b0078dce7305c352d00a7806def827aa15abba3c5fba8d8424f58b.json.gz",
+        "sha256": "0d477d09fb609c8815f6b70baff1f7e3321a815e772c33ed95bfe18cc64cbb63",
+        "bytes": 15414,
+        "uncompressed_sha256": "7538cd3898b0078dce7305c352d00a7806def827aa15abba3c5fba8d8424f58b",
+        "uncompressed_bytes": 30801
+      }
+    },
+    {
+      "logical_name": "out/spot/spot-classical-20000.json",
+      "original_source": {
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/numerical-from-formulas/out/spot/spot-classical-20000.json",
+        "sha256": "491e56c2df61a85cdce476f0db018bb0fee4e9b4fea38f660e7988cf7f134ae8"
+      },
+      "portable_archive": {
+        "path": "validation/symbolic-expression-evaluation-v1-491e56c2df61a85cdce476f0db018bb0fee4e9b4fea38f660e7988cf7f134ae8.json.gz",
+        "sha256": "03394ddebb5432621ed6cef8b334f47a908abe353739b569a13b8a8c2b5be649",
+        "bytes": 67641,
+        "uncompressed_sha256": "491e56c2df61a85cdce476f0db018bb0fee4e9b4fea38f660e7988cf7f134ae8",
+        "uncompressed_bytes": 140865
+      }
+    },
+    {
+      "logical_name": "src/bundle.json",
+      "original_source": {
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/numerical-from-formulas/src",
+        "sha256": "efb70d67d7b5189a5793cb5cf6ec50dbfe278cb1294dd9003cc01416b7bc6915"
+      },
+      "portable_archive": {
+        "path": "validation/symbolic-expression-evaluation-v1-efb70d67d7b5189a5793cb5cf6ec50dbfe278cb1294dd9003cc01416b7bc6915.json.gz",
+        "sha256": "ec58bc21e25174d5dfedde80dcabd67ef7c188de26d34c2e91f29e3be5685d0a",
+        "bytes": 35941,
+        "uncompressed_sha256": "efb70d67d7b5189a5793cb5cf6ec50dbfe278cb1294dd9003cc01416b7bc6915",
+        "uncompressed_bytes": 163974
+      }
+    }
+  ]
+}

@@ -544,13 +544,36 @@ class PortableDataTests(unittest.TestCase):
                 "masters"
             ]
         }
+        # A numerical precision supplement may raise the precision of a
+        # supplemented order (never its availability); it then owns that row.
+        import precision_supplement
+
+        upgraded = {}
+        for loops in (2, 3, 4):
+            path = data.ROOT / f"{loops}L" / precision_supplement.LOOP_RECEIPT
+            if path.exists():
+                upgraded.update(
+                    precision_supplement.coefficients(data.read_json(path), masters)
+                )
         for entry in supplement["masters"]:
             actual = {
                 c["epsilon_power"]: c
                 for c in masters[entry["master_id"]]["coefficients"]
             }
             for expected in entry["coefficients"]:
-                self.assertEqual(actual[expected["epsilon_power"]], expected)
+                power = expected["epsilon_power"]
+                row = upgraded.get(entry["master_id"], {}).get(power)
+                if row is None:
+                    self.assertEqual(actual[power], expected)
+                    continue
+                self.assertEqual(actual[power], row)
+                self.assertEqual(
+                    (row["symbolic"], row["numerical"]),
+                    (expected["symbolic"], expected["numerical"]),
+                )
+                self.assertGreater(
+                    row["significant_digits"], expected["significant_digits"]
+                )
         preserved = [
             entry
             for entry in data.read_json(data.ROOT / "provenance/migration.json")[

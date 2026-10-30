@@ -157,7 +157,7 @@
       "name": "P1",
       "directory": "masters/P1",
       "status": "accepted",
-      "significant_digits": 200,
+      "significant_digits": 20000,
       "symbolic_powers": [
         -3,
         -2,
@@ -267,7 +267,7 @@
       "files": {
         "numerical.json": {
           "path": "masters/P1/numerical.json",
-          "sha256": "5f47198718d4a1c3d0e1295b8a66fa200229223b2c2a2cd9c128e908d093b432"
+          "sha256": "604a0b0d28ff1a62343bc768afd241f41c53bc2c6c55cacdd6d26cae9520080d"
         },
         "symbolic.json": {
           "path": "masters/P1/symbolic.json",
@@ -294,42 +294,61 @@
         2
       ],
       "producer_update": "producer-update.json",
+      "numerical_precision_supplement": "numerical-precision-supplement.json",
       "coefficients": [
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 0,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         }
       ]
     },
@@ -357,7 +376,7 @@
       "name": "P2",
       "directory": "masters/P2",
       "status": "accepted",
-      "significant_digits": 200,
+      "significant_digits": 20000,
       "symbolic_powers": [
         -3,
         -2,
@@ -467,7 +486,7 @@
       "files": {
         "numerical.json": {
           "path": "masters/P2/numerical.json",
-          "sha256": "5f47198718d4a1c3d0e1295b8a66fa200229223b2c2a2cd9c128e908d093b432"
+          "sha256": "604a0b0d28ff1a62343bc768afd241f41c53bc2c6c55cacdd6d26cae9520080d"
         },
         "symbolic.json": {
           "path": "masters/P2/symbolic.json",
@@ -494,42 +513,61 @@
         2
       ],
       "producer_update": "producer-update.json",
+      "numerical_precision_supplement": "numerical-precision-supplement.json",
       "coefficients": [
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 0,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         }
       ]
     },
@@ -557,7 +595,7 @@
       "name": "P3",
       "directory": "masters/P3",
       "status": "accepted",
-      "significant_digits": 200,
+      "significant_digits": 20000,
       "symbolic_powers": [
         -3,
         -2,
@@ -667,7 +705,7 @@
       "files": {
         "numerical.json": {
           "path": "masters/P3/numerical.json",
-          "sha256": "5f47198718d4a1c3d0e1295b8a66fa200229223b2c2a2cd9c128e908d093b432"
+          "sha256": "604a0b0d28ff1a62343bc768afd241f41c53bc2c6c55cacdd6d26cae9520080d"
         },
         "symbolic.json": {
           "path": "masters/P3/symbolic.json",
@@ -694,42 +732,61 @@
         2
       ],
       "producer_update": "producer-update.json",
+      "numerical_precision_supplement": "numerical-precision-supplement.json",
       "coefficients": [
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 0,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         }
       ]
     },
@@ -757,7 +814,7 @@
       "name": "P4",
       "directory": "masters/P4",
       "status": "accepted",
-      "significant_digits": 200,
+      "significant_digits": 20000,
       "symbolic_powers": [
         -3,
         -2,
@@ -878,7 +935,7 @@
       "files": {
         "numerical.json": {
           "path": "masters/P4/numerical.json",
-          "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb"
+          "sha256": "955a449cfb823a15a24dee69c90ebb074c1f5d25abaa5c65000c1c6656009e64"
         },
         "symbolic.json": {
           "path": "masters/P4/symbolic.json",
@@ -906,48 +963,70 @@
         3
       ],
       "producer_update": "producer-update.json",
+      "numerical_precision_supplement": "numerical-precision-supplement.json",
       "coefficients": [
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 0,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         }
       ],
       "coefficient_supplement": "coefficient-supplement.json"
@@ -976,7 +1055,7 @@
       "name": "P5",
       "directory": "masters/P5",
       "status": "accepted",
-      "significant_digits": 200,
+      "significant_digits": 20000,
       "symbolic_powers": [
         -3,
         -2,
@@ -1086,7 +1165,7 @@
       "files": {
         "numerical.json": {
           "path": "masters/P5/numerical.json",
-          "sha256": "5f47198718d4a1c3d0e1295b8a66fa200229223b2c2a2cd9c128e908d093b432"
+          "sha256": "604a0b0d28ff1a62343bc768afd241f41c53bc2c6c55cacdd6d26cae9520080d"
         },
         "symbolic.json": {
           "path": "masters/P5/symbolic.json",
@@ -1113,42 +1192,61 @@
         2
       ],
       "producer_update": "producer-update.json",
+      "numerical_precision_supplement": "numerical-precision-supplement.json",
       "coefficients": [
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 0,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         }
       ]
     },
@@ -1176,7 +1274,7 @@
       "name": "P6",
       "directory": "masters/P6",
       "status": "accepted",
-      "significant_digits": 200,
+      "significant_digits": 20000,
       "symbolic_powers": [
         -3,
         -2,
@@ -1286,7 +1384,7 @@
       "files": {
         "numerical.json": {
           "path": "masters/P6/numerical.json",
-          "sha256": "5f47198718d4a1c3d0e1295b8a66fa200229223b2c2a2cd9c128e908d093b432"
+          "sha256": "604a0b0d28ff1a62343bc768afd241f41c53bc2c6c55cacdd6d26cae9520080d"
         },
         "symbolic.json": {
           "path": "masters/P6/symbolic.json",
@@ -1313,42 +1411,61 @@
         2
       ],
       "producer_update": "producer-update.json",
+      "numerical_precision_supplement": "numerical-precision-supplement.json",
       "coefficients": [
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 0,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         }
       ]
     },
@@ -1376,7 +1493,7 @@
       "name": "P7",
       "directory": "masters/P7",
       "status": "accepted",
-      "significant_digits": 200,
+      "significant_digits": 20000,
       "symbolic_powers": [
         -3,
         -2,
@@ -1486,7 +1603,7 @@
       "files": {
         "numerical.json": {
           "path": "masters/P7/numerical.json",
-          "sha256": "5f47198718d4a1c3d0e1295b8a66fa200229223b2c2a2cd9c128e908d093b432"
+          "sha256": "604a0b0d28ff1a62343bc768afd241f41c53bc2c6c55cacdd6d26cae9520080d"
         },
         "symbolic.json": {
           "path": "masters/P7/symbolic.json",
@@ -1513,42 +1630,61 @@
         2
       ],
       "producer_update": "producer-update.json",
+      "numerical_precision_supplement": "numerical-precision-supplement.json",
       "coefficients": [
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 0,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         }
       ]
     },
@@ -1576,7 +1712,7 @@
       "name": "P8",
       "directory": "masters/P8",
       "status": "accepted",
-      "significant_digits": 200,
+      "significant_digits": 20000,
       "symbolic_powers": [
         -3,
         -2,
@@ -1697,7 +1833,7 @@
       "files": {
         "numerical.json": {
           "path": "masters/P8/numerical.json",
-          "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb"
+          "sha256": "955a449cfb823a15a24dee69c90ebb074c1f5d25abaa5c65000c1c6656009e64"
         },
         "symbolic.json": {
           "path": "masters/P8/symbolic.json",
@@ -1725,48 +1861,70 @@
         3
       ],
       "producer_update": "producer-update.json",
+      "numerical_precision_supplement": "numerical-precision-supplement.json",
       "coefficients": [
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 0,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         }
       ],
       "coefficient_supplement": "coefficient-supplement.json"
@@ -1795,7 +1953,7 @@
       "name": "P9",
       "directory": "masters/P9",
       "status": "accepted",
-      "significant_digits": 200,
+      "significant_digits": 20000,
       "symbolic_powers": [
         -3,
         -2,
@@ -1905,7 +2063,7 @@
       "files": {
         "numerical.json": {
           "path": "masters/P9/numerical.json",
-          "sha256": "5f47198718d4a1c3d0e1295b8a66fa200229223b2c2a2cd9c128e908d093b432"
+          "sha256": "604a0b0d28ff1a62343bc768afd241f41c53bc2c6c55cacdd6d26cae9520080d"
         },
         "symbolic.json": {
           "path": "masters/P9/symbolic.json",
@@ -1932,42 +2090,61 @@
         2
       ],
       "producer_update": "producer-update.json",
+      "numerical_precision_supplement": "numerical-precision-supplement.json",
       "coefficients": [
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 0,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         }
       ]
     },
@@ -1995,7 +2172,7 @@
       "name": "P10",
       "directory": "masters/P10",
       "status": "accepted",
-      "significant_digits": 200,
+      "significant_digits": 20000,
       "symbolic_powers": [
         -3,
         -2,
@@ -2116,7 +2293,7 @@
       "files": {
         "numerical.json": {
           "path": "masters/P10/numerical.json",
-          "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb"
+          "sha256": "955a449cfb823a15a24dee69c90ebb074c1f5d25abaa5c65000c1c6656009e64"
         },
         "symbolic.json": {
           "path": "masters/P10/symbolic.json",
@@ -2144,48 +2321,70 @@
         3
       ],
       "producer_update": "producer-update.json",
+      "numerical_precision_supplement": "numerical-precision-supplement.json",
       "coefficients": [
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 0,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         }
       ],
       "coefficient_supplement": "coefficient-supplement.json"
@@ -2214,7 +2413,7 @@
       "name": "P11",
       "directory": "masters/P11",
       "status": "accepted",
-      "significant_digits": 200,
+      "significant_digits": 20000,
       "symbolic_powers": [
         -3,
         -2,
@@ -2324,7 +2523,7 @@
       "files": {
         "numerical.json": {
           "path": "masters/P11/numerical.json",
-          "sha256": "5f47198718d4a1c3d0e1295b8a66fa200229223b2c2a2cd9c128e908d093b432"
+          "sha256": "604a0b0d28ff1a62343bc768afd241f41c53bc2c6c55cacdd6d26cae9520080d"
         },
         "symbolic.json": {
           "path": "masters/P11/symbolic.json",
@@ -2351,42 +2550,61 @@
         2
       ],
       "producer_update": "producer-update.json",
+      "numerical_precision_supplement": "numerical-precision-supplement.json",
       "coefficients": [
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 0,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         }
       ]
     },
@@ -2414,7 +2632,7 @@
       "name": "P12",
       "directory": "masters/P12",
       "status": "accepted",
-      "significant_digits": 200,
+      "significant_digits": 20000,
       "symbolic_powers": [
         -3,
         -2,
@@ -2535,7 +2753,7 @@
       "files": {
         "numerical.json": {
           "path": "masters/P12/numerical.json",
-          "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb"
+          "sha256": "955a449cfb823a15a24dee69c90ebb074c1f5d25abaa5c65000c1c6656009e64"
         },
         "symbolic.json": {
           "path": "masters/P12/symbolic.json",
@@ -2563,48 +2781,70 @@
         3
       ],
       "producer_update": "producer-update.json",
+      "numerical_precision_supplement": "numerical-precision-supplement.json",
       "coefficients": [
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 0,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         }
       ],
       "coefficient_supplement": "coefficient-supplement.json"
@@ -2633,7 +2873,7 @@
       "name": "P13",
       "directory": "masters/P13",
       "status": "accepted",
-      "significant_digits": 200,
+      "significant_digits": 20000,
       "symbolic_powers": [
         -3,
         -2,
@@ -2755,7 +2995,7 @@
       "files": {
         "numerical.json": {
           "path": "masters/P13/numerical.json",
-          "sha256": "22cec8ec1ac3768334266d369e34b8b904f4a17ecdf6b3c81eab3d41b272329a"
+          "sha256": "cae348a309a55304eeca4487999f189562463be2b4ede50cedf7b01554f65982"
         },
         "symbolic.json": {
           "path": "masters/P13/symbolic.json",
@@ -2784,54 +3024,79 @@
         4
       ],
       "producer_update": "producer-update.json",
+      "numerical_precision_supplement": "numerical-precision-supplement.json",
       "coefficients": [
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 0,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20005",
+          "error_quality": "estimated"
         }
       ],
       "coefficient_supplement": "coefficient-supplement.json"
@@ -2860,7 +3125,7 @@
       "name": "P14",
       "directory": "masters/P14",
       "status": "accepted",
-      "significant_digits": 200,
+      "significant_digits": 20000,
       "symbolic_powers": [
         -3,
         -2,
@@ -2991,7 +3256,7 @@
       "files": {
         "numerical.json": {
           "path": "masters/P14/numerical.json",
-          "sha256": "7fed26d22b87a9d077a5e1d7a9680d8632821a5315e410a4ce931c760904e7dd"
+          "sha256": "9e995f3cef17919ed511cf920d07fa2e8a00a31959e712cc0b8dd8ffe7ff105b"
         },
         "symbolic.json": {
           "path": "masters/P14/symbolic.json",
@@ -3019,48 +3284,70 @@
         3
       ],
       "producer_update": "producer-update.json",
+      "numerical_precision_supplement": "numerical-precision-supplement.json",
       "coefficients": [
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 0,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20005",
+          "error_quality": "estimated"
         }
       ],
       "coefficient_supplement": "coefficient-supplement.json"
@@ -3089,7 +3376,7 @@
       "name": "P15",
       "directory": "masters/P15",
       "status": "accepted",
-      "significant_digits": 200,
+      "significant_digits": 20000,
       "symbolic_powers": [
         -3,
         -2,
@@ -3199,7 +3486,7 @@
       "files": {
         "numerical.json": {
           "path": "masters/P15/numerical.json",
-          "sha256": "5f47198718d4a1c3d0e1295b8a66fa200229223b2c2a2cd9c128e908d093b432"
+          "sha256": "604a0b0d28ff1a62343bc768afd241f41c53bc2c6c55cacdd6d26cae9520080d"
         },
         "symbolic.json": {
           "path": "masters/P15/symbolic.json",
@@ -3226,42 +3513,61 @@
         2
       ],
       "producer_update": "producer-update.json",
+      "numerical_precision_supplement": "numerical-precision-supplement.json",
       "coefficients": [
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 0,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         }
       ]
     },
@@ -3289,7 +3595,7 @@
       "name": "P16",
       "directory": "masters/P16",
       "status": "accepted",
-      "significant_digits": 200,
+      "significant_digits": 20000,
       "symbolic_powers": [
         -3,
         -2,
@@ -3399,7 +3705,7 @@
       "files": {
         "numerical.json": {
           "path": "masters/P16/numerical.json",
-          "sha256": "5f47198718d4a1c3d0e1295b8a66fa200229223b2c2a2cd9c128e908d093b432"
+          "sha256": "604a0b0d28ff1a62343bc768afd241f41c53bc2c6c55cacdd6d26cae9520080d"
         },
         "symbolic.json": {
           "path": "masters/P16/symbolic.json",
@@ -3426,42 +3732,61 @@
         2
       ],
       "producer_update": "producer-update.json",
+      "numerical_precision_supplement": "numerical-precision-supplement.json",
       "coefficients": [
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 0,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         }
       ]
     },
@@ -3489,7 +3814,7 @@
       "name": "P17",
       "directory": "masters/P17",
       "status": "accepted",
-      "significant_digits": 200,
+      "significant_digits": 20000,
       "symbolic_powers": [
         -3,
         -2,
@@ -3599,7 +3924,7 @@
       "files": {
         "numerical.json": {
           "path": "masters/P17/numerical.json",
-          "sha256": "5f47198718d4a1c3d0e1295b8a66fa200229223b2c2a2cd9c128e908d093b432"
+          "sha256": "604a0b0d28ff1a62343bc768afd241f41c53bc2c6c55cacdd6d26cae9520080d"
         },
         "symbolic.json": {
           "path": "masters/P17/symbolic.json",
@@ -3626,42 +3951,61 @@
         2
       ],
       "producer_update": "producer-update.json",
+      "numerical_precision_supplement": "numerical-precision-supplement.json",
       "coefficients": [
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 0,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         }
       ]
     },
@@ -3689,7 +4033,7 @@
       "name": "P18",
       "directory": "masters/P18",
       "status": "accepted",
-      "significant_digits": 200,
+      "significant_digits": 20000,
       "symbolic_powers": [
         -3,
         -2,
@@ -3810,7 +4154,7 @@
       "files": {
         "numerical.json": {
           "path": "masters/P18/numerical.json",
-          "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb"
+          "sha256": "955a449cfb823a15a24dee69c90ebb074c1f5d25abaa5c65000c1c6656009e64"
         },
         "symbolic.json": {
           "path": "masters/P18/symbolic.json",
@@ -3838,48 +4182,70 @@
         3
       ],
       "producer_update": "producer-update.json",
+      "numerical_precision_supplement": "numerical-precision-supplement.json",
       "coefficients": [
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 0,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         }
       ],
       "coefficient_supplement": "coefficient-supplement.json"
@@ -3908,7 +4274,7 @@
       "name": "P19",
       "directory": "masters/P19",
       "status": "accepted",
-      "significant_digits": 200,
+      "significant_digits": 20000,
       "symbolic_powers": [
         -3,
         -2,
@@ -4018,7 +4384,7 @@
       "files": {
         "numerical.json": {
           "path": "masters/P19/numerical.json",
-          "sha256": "5f47198718d4a1c3d0e1295b8a66fa200229223b2c2a2cd9c128e908d093b432"
+          "sha256": "604a0b0d28ff1a62343bc768afd241f41c53bc2c6c55cacdd6d26cae9520080d"
         },
         "symbolic.json": {
           "path": "masters/P19/symbolic.json",
@@ -4045,42 +4411,61 @@
         2
       ],
       "producer_update": "producer-update.json",
+      "numerical_precision_supplement": "numerical-precision-supplement.json",
       "coefficients": [
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 0,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         }
       ]
     },
@@ -4108,7 +4493,7 @@
       "name": "P20",
       "directory": "masters/P20",
       "status": "accepted",
-      "significant_digits": 200,
+      "significant_digits": 20000,
       "symbolic_powers": [
         -3,
         -2,
@@ -4218,7 +4603,7 @@
       "files": {
         "numerical.json": {
           "path": "masters/P20/numerical.json",
-          "sha256": "5f47198718d4a1c3d0e1295b8a66fa200229223b2c2a2cd9c128e908d093b432"
+          "sha256": "604a0b0d28ff1a62343bc768afd241f41c53bc2c6c55cacdd6d26cae9520080d"
         },
         "symbolic.json": {
           "path": "masters/P20/symbolic.json",
@@ -4245,42 +4630,61 @@
         2
       ],
       "producer_update": "producer-update.json",
+      "numerical_precision_supplement": "numerical-precision-supplement.json",
       "coefficients": [
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 0,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         }
       ]
     },
@@ -4308,7 +4712,7 @@
       "name": "P21",
       "directory": "masters/P21",
       "status": "accepted",
-      "significant_digits": 200,
+      "significant_digits": 20000,
       "symbolic_powers": [
         -3,
         -2,
@@ -4430,7 +4834,7 @@
       "files": {
         "numerical.json": {
           "path": "masters/P21/numerical.json",
-          "sha256": "22cec8ec1ac3768334266d369e34b8b904f4a17ecdf6b3c81eab3d41b272329a"
+          "sha256": "cae348a309a55304eeca4487999f189562463be2b4ede50cedf7b01554f65982"
         },
         "symbolic.json": {
           "path": "masters/P21/symbolic.json",
@@ -4459,54 +4863,79 @@
         4
       ],
       "producer_update": "producer-update.json",
+      "numerical_precision_supplement": "numerical-precision-supplement.json",
       "coefficients": [
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 0,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20005",
+          "error_quality": "estimated"
         }
       ],
       "coefficient_supplement": "coefficient-supplement.json"
@@ -4535,7 +4964,7 @@
       "name": "P22",
       "directory": "masters/P22",
       "status": "accepted",
-      "significant_digits": 200,
+      "significant_digits": 20000,
       "symbolic_powers": [
         -3,
         -2,
@@ -4656,7 +5085,7 @@
       "files": {
         "numerical.json": {
           "path": "masters/P22/numerical.json",
-          "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb"
+          "sha256": "955a449cfb823a15a24dee69c90ebb074c1f5d25abaa5c65000c1c6656009e64"
         },
         "symbolic.json": {
           "path": "masters/P22/symbolic.json",
@@ -4684,48 +5113,70 @@
         3
       ],
       "producer_update": "producer-update.json",
+      "numerical_precision_supplement": "numerical-precision-supplement.json",
       "coefficients": [
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 0,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         }
       ],
       "coefficient_supplement": "coefficient-supplement.json"
@@ -4754,7 +5205,7 @@
       "name": "P23",
       "directory": "masters/P23",
       "status": "accepted",
-      "significant_digits": 200,
+      "significant_digits": 20000,
       "symbolic_powers": [
         -3,
         -2,
@@ -4875,7 +5326,7 @@
       "files": {
         "numerical.json": {
           "path": "masters/P23/numerical.json",
-          "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb"
+          "sha256": "955a449cfb823a15a24dee69c90ebb074c1f5d25abaa5c65000c1c6656009e64"
         },
         "symbolic.json": {
           "path": "masters/P23/symbolic.json",
@@ -4903,48 +5354,70 @@
         3
       ],
       "producer_update": "producer-update.json",
+      "numerical_precision_supplement": "numerical-precision-supplement.json",
       "coefficients": [
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 0,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         }
       ],
       "coefficient_supplement": "coefficient-supplement.json"
@@ -4973,7 +5446,7 @@
       "name": "P24",
       "directory": "masters/P24",
       "status": "accepted",
-      "significant_digits": 200,
+      "significant_digits": 20000,
       "symbolic_powers": [
         -3,
         -2,
@@ -5104,7 +5577,7 @@
       "files": {
         "numerical.json": {
           "path": "masters/P24/numerical.json",
-          "sha256": "7fed26d22b87a9d077a5e1d7a9680d8632821a5315e410a4ce931c760904e7dd"
+          "sha256": "9e995f3cef17919ed511cf920d07fa2e8a00a31959e712cc0b8dd8ffe7ff105b"
         },
         "symbolic.json": {
           "path": "masters/P24/symbolic.json",
@@ -5132,48 +5605,70 @@
         3
       ],
       "producer_update": "producer-update.json",
+      "numerical_precision_supplement": "numerical-precision-supplement.json",
       "coefficients": [
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 0,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20005",
+          "error_quality": "estimated"
         }
       ],
       "coefficient_supplement": "coefficient-supplement.json"
@@ -5202,7 +5697,7 @@
       "name": "P25",
       "directory": "masters/P25",
       "status": "accepted",
-      "significant_digits": 200,
+      "significant_digits": 20000,
       "symbolic_powers": [
         -3,
         -2,
@@ -5312,7 +5807,7 @@
       "files": {
         "numerical.json": {
           "path": "masters/P25/numerical.json",
-          "sha256": "5f47198718d4a1c3d0e1295b8a66fa200229223b2c2a2cd9c128e908d093b432"
+          "sha256": "604a0b0d28ff1a62343bc768afd241f41c53bc2c6c55cacdd6d26cae9520080d"
         },
         "symbolic.json": {
           "path": "masters/P25/symbolic.json",
@@ -5339,42 +5834,61 @@
         2
       ],
       "producer_update": "producer-update.json",
+      "numerical_precision_supplement": "numerical-precision-supplement.json",
       "coefficients": [
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 0,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         }
       ]
     },
@@ -5402,7 +5916,7 @@
       "name": "P26",
       "directory": "masters/P26",
       "status": "accepted",
-      "significant_digits": 200,
+      "significant_digits": 20000,
       "symbolic_powers": [
         -3,
         -2,
@@ -5523,7 +6037,7 @@
       "files": {
         "numerical.json": {
           "path": "masters/P26/numerical.json",
-          "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb"
+          "sha256": "955a449cfb823a15a24dee69c90ebb074c1f5d25abaa5c65000c1c6656009e64"
         },
         "symbolic.json": {
           "path": "masters/P26/symbolic.json",
@@ -5551,48 +6065,70 @@
         3
       ],
       "producer_update": "producer-update.json",
+      "numerical_precision_supplement": "numerical-precision-supplement.json",
       "coefficients": [
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 0,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         }
       ],
       "coefficient_supplement": "coefficient-supplement.json"
@@ -5621,7 +6157,7 @@
       "name": "P27",
       "directory": "masters/P27",
       "status": "accepted",
-      "significant_digits": 200,
+      "significant_digits": 20000,
       "symbolic_powers": [
         -3,
         -2,
@@ -5731,7 +6267,7 @@
       "files": {
         "numerical.json": {
           "path": "masters/P27/numerical.json",
-          "sha256": "5f47198718d4a1c3d0e1295b8a66fa200229223b2c2a2cd9c128e908d093b432"
+          "sha256": "604a0b0d28ff1a62343bc768afd241f41c53bc2c6c55cacdd6d26cae9520080d"
         },
         "symbolic.json": {
           "path": "masters/P27/symbolic.json",
@@ -5758,42 +6294,61 @@
         2
       ],
       "producer_update": "producer-update.json",
+      "numerical_precision_supplement": "numerical-precision-supplement.json",
       "coefficients": [
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 0,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         }
       ]
     },
@@ -5821,7 +6376,7 @@
       "name": "P28",
       "directory": "masters/P28",
       "status": "accepted",
-      "significant_digits": 200,
+      "significant_digits": 20000,
       "symbolic_powers": [
         -3,
         -2,
@@ -5943,7 +6498,7 @@
       "files": {
         "numerical.json": {
           "path": "masters/P28/numerical.json",
-          "sha256": "22cec8ec1ac3768334266d369e34b8b904f4a17ecdf6b3c81eab3d41b272329a"
+          "sha256": "cae348a309a55304eeca4487999f189562463be2b4ede50cedf7b01554f65982"
         },
         "symbolic.json": {
           "path": "masters/P28/symbolic.json",
@@ -5972,54 +6527,79 @@
         4
       ],
       "producer_update": "producer-update.json",
+      "numerical_precision_supplement": "numerical-precision-supplement.json",
       "coefficients": [
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 0,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 4,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20005",
+          "error_quality": "estimated"
         }
       ],
       "coefficient_supplement": "coefficient-supplement.json"
@@ -6048,7 +6628,7 @@
       "name": "P29",
       "directory": "masters/P29",
       "status": "accepted",
-      "significant_digits": 200,
+      "significant_digits": 20000,
       "symbolic_powers": [
         -3,
         -2,
@@ -6169,7 +6749,7 @@
       "files": {
         "numerical.json": {
           "path": "masters/P29/numerical.json",
-          "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb"
+          "sha256": "955a449cfb823a15a24dee69c90ebb074c1f5d25abaa5c65000c1c6656009e64"
         },
         "symbolic.json": {
           "path": "masters/P29/symbolic.json",
@@ -6197,48 +6777,70 @@
         3
       ],
       "producer_update": "producer-update.json",
+      "numerical_precision_supplement": "numerical-precision-supplement.json",
       "coefficients": [
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 0,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         }
       ],
       "coefficient_supplement": "coefficient-supplement.json"
@@ -6267,7 +6869,7 @@
       "name": "P30",
       "directory": "masters/P30",
       "status": "accepted",
-      "significant_digits": 200,
+      "significant_digits": 20000,
       "symbolic_powers": [
         -3,
         -2,
@@ -6398,7 +7000,7 @@
       "files": {
         "numerical.json": {
           "path": "masters/P30/numerical.json",
-          "sha256": "7fed26d22b87a9d077a5e1d7a9680d8632821a5315e410a4ce931c760904e7dd"
+          "sha256": "9e995f3cef17919ed511cf920d07fa2e8a00a31959e712cc0b8dd8ffe7ff105b"
         },
         "symbolic.json": {
           "path": "masters/P30/symbolic.json",
@@ -6426,48 +7028,70 @@
         3
       ],
       "producer_update": "producer-update.json",
+      "numerical_precision_supplement": "numerical-precision-supplement.json",
       "coefficients": [
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 0,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20005",
+          "error_quality": "estimated"
         }
       ],
       "coefficient_supplement": "coefficient-supplement.json"
@@ -6496,7 +7120,7 @@
       "name": "P31",
       "directory": "masters/P31",
       "status": "accepted",
-      "significant_digits": 200,
+      "significant_digits": 20000,
       "symbolic_powers": [
         -3,
         -2,
@@ -6606,7 +7230,7 @@
       "files": {
         "numerical.json": {
           "path": "masters/P31/numerical.json",
-          "sha256": "5f47198718d4a1c3d0e1295b8a66fa200229223b2c2a2cd9c128e908d093b432"
+          "sha256": "604a0b0d28ff1a62343bc768afd241f41c53bc2c6c55cacdd6d26cae9520080d"
         },
         "symbolic.json": {
           "path": "masters/P31/symbolic.json",
@@ -6633,42 +7257,61 @@
         2
       ],
       "producer_update": "producer-update.json",
+      "numerical_precision_supplement": "numerical-precision-supplement.json",
       "coefficients": [
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 0,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         }
       ]
     },
@@ -6696,7 +7339,7 @@
       "name": "P32",
       "directory": "masters/P32",
       "status": "accepted",
-      "significant_digits": 200,
+      "significant_digits": 20000,
       "symbolic_powers": [
         -3,
         -2,
@@ -6817,7 +7460,7 @@
       "files": {
         "numerical.json": {
           "path": "masters/P32/numerical.json",
-          "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb"
+          "sha256": "955a449cfb823a15a24dee69c90ebb074c1f5d25abaa5c65000c1c6656009e64"
         },
         "symbolic.json": {
           "path": "masters/P32/symbolic.json",
@@ -6845,48 +7488,70 @@
         3
       ],
       "producer_update": "producer-update.json",
+      "numerical_precision_supplement": "numerical-precision-supplement.json",
       "coefficients": [
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 0,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         }
       ],
       "coefficient_supplement": "coefficient-supplement.json"
@@ -6915,7 +7580,7 @@
       "name": "P33",
       "directory": "masters/P33",
       "status": "accepted",
-      "significant_digits": 200,
+      "significant_digits": 20000,
       "symbolic_powers": [
         -3,
         -2,
@@ -7036,7 +7701,7 @@
       "files": {
         "numerical.json": {
           "path": "masters/P33/numerical.json",
-          "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb"
+          "sha256": "955a449cfb823a15a24dee69c90ebb074c1f5d25abaa5c65000c1c6656009e64"
         },
         "symbolic.json": {
           "path": "masters/P33/symbolic.json",
@@ -7064,48 +7729,70 @@
         3
       ],
       "producer_update": "producer-update.json",
+      "numerical_precision_supplement": "numerical-precision-supplement.json",
       "coefficients": [
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 0,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         }
       ],
       "coefficient_supplement": "coefficient-supplement.json"
@@ -7134,7 +7821,7 @@
       "name": "P34",
       "directory": "masters/P34",
       "status": "accepted",
-      "significant_digits": 200,
+      "significant_digits": 20000,
       "symbolic_powers": [
         -3,
         -2,
@@ -7265,7 +7952,7 @@
       "files": {
         "numerical.json": {
           "path": "masters/P34/numerical.json",
-          "sha256": "7fed26d22b87a9d077a5e1d7a9680d8632821a5315e410a4ce931c760904e7dd"
+          "sha256": "9e995f3cef17919ed511cf920d07fa2e8a00a31959e712cc0b8dd8ffe7ff105b"
         },
         "symbolic.json": {
           "path": "masters/P34/symbolic.json",
@@ -7293,48 +7980,70 @@
         3
       ],
       "producer_update": "producer-update.json",
+      "numerical_precision_supplement": "numerical-precision-supplement.json",
       "coefficients": [
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 0,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20005",
+          "error_quality": "estimated"
         }
       ],
       "coefficient_supplement": "coefficient-supplement.json"
@@ -7363,7 +8072,7 @@
       "name": "P35",
       "directory": "masters/P35",
       "status": "accepted",
-      "significant_digits": 200,
+      "significant_digits": 20000,
       "symbolic_powers": [
         -3,
         -2,
@@ -7484,7 +8193,7 @@
       "files": {
         "numerical.json": {
           "path": "masters/P35/numerical.json",
-          "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb"
+          "sha256": "955a449cfb823a15a24dee69c90ebb074c1f5d25abaa5c65000c1c6656009e64"
         },
         "symbolic.json": {
           "path": "masters/P35/symbolic.json",
@@ -7512,48 +8221,70 @@
         3
       ],
       "producer_update": "producer-update.json",
+      "numerical_precision_supplement": "numerical-precision-supplement.json",
       "coefficients": [
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 0,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         }
       ],
       "coefficient_supplement": "coefficient-supplement.json"
@@ -7582,7 +8313,7 @@
       "name": "P36",
       "directory": "masters/P36",
       "status": "accepted",
-      "significant_digits": 200,
+      "significant_digits": 20000,
       "symbolic_powers": [
         -3,
         -2,
@@ -7713,7 +8444,7 @@
       "files": {
         "numerical.json": {
           "path": "masters/P36/numerical.json",
-          "sha256": "7fed26d22b87a9d077a5e1d7a9680d8632821a5315e410a4ce931c760904e7dd"
+          "sha256": "9e995f3cef17919ed511cf920d07fa2e8a00a31959e712cc0b8dd8ffe7ff105b"
         },
         "symbolic.json": {
           "path": "masters/P36/symbolic.json",
@@ -7741,48 +8472,70 @@
         3
       ],
       "producer_update": "producer-update.json",
+      "numerical_precision_supplement": "numerical-precision-supplement.json",
       "coefficients": [
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 0,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20005",
+          "error_quality": "estimated"
         }
       ],
       "coefficient_supplement": "coefficient-supplement.json"
@@ -7811,7 +8564,7 @@
       "name": "P37",
       "directory": "masters/P37",
       "status": "accepted",
-      "significant_digits": 200,
+      "significant_digits": 20000,
       "symbolic_powers": [
         -3,
         -2,
@@ -7942,7 +8695,7 @@
       "files": {
         "numerical.json": {
           "path": "masters/P37/numerical.json",
-          "sha256": "7fed26d22b87a9d077a5e1d7a9680d8632821a5315e410a4ce931c760904e7dd"
+          "sha256": "9e995f3cef17919ed511cf920d07fa2e8a00a31959e712cc0b8dd8ffe7ff105b"
         },
         "symbolic.json": {
           "path": "masters/P37/symbolic.json",
@@ -7970,48 +8723,70 @@
         3
       ],
       "producer_update": "producer-update.json",
+      "numerical_precision_supplement": "numerical-precision-supplement.json",
       "coefficients": [
         {
           "epsilon_power": -3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 0,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 3,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 200
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20005",
+          "error_quality": "estimated"
         }
       ],
       "coefficient_supplement": "coefficient-supplement.json"
@@ -8180,7 +8955,7 @@
       "files": {
         "numerical.json": {
           "path": "masters/P38/numerical.json",
-          "sha256": "431b57c83c531f71b2ef36a2ecf18bd0596eeb48a137e4ddbb8e45589f29ad90"
+          "sha256": "de0c0cd5d1c510d4fcdd2a32704e9b1c3ddf9df348ab088654df6117fb9642e4"
         },
         "symbolic.json": {
           "path": "masters/P38/symbolic.json",
@@ -8207,6 +8982,7 @@
         2
       ],
       "producer_update": "producer-update.json",
+      "numerical_precision_supplement": "numerical-precision-supplement.json",
       "coefficients": [
         {
           "epsilon_power": -3,
@@ -8224,25 +9000,37 @@
           "epsilon_power": -1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 2000
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20008",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 0,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 2000
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 1,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 2000
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20007",
+          "error_quality": "estimated"
         },
         {
           "epsilon_power": 2,
           "symbolic": true,
           "numerical": true,
-          "significant_digits": 2000
+          "significant_digits": 20000,
+          "stored_significant_digits": 20008,
+          "absolute_error": "5.000000e-20006",
+          "error_quality": "estimated"
         }
       ]
     }
@@ -8459,8 +9247,8 @@
       "bytes": 1364
     },
     "masters/P1/numerical.json": {
-      "sha256": "5f47198718d4a1c3d0e1295b8a66fa200229223b2c2a2cd9c128e908d093b432",
-      "bytes": 1368
+      "sha256": "604a0b0d28ff1a62343bc768afd241f41c53bc2c6c55cacdd6d26cae9520080d",
+      "bytes": 120216
     },
     "masters/P1/symbolic.json": {
       "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856",
@@ -8471,8 +9259,8 @@
       "bytes": 1715
     },
     "masters/P10/numerical.json": {
-      "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb",
-      "bytes": 1604
+      "sha256": "955a449cfb823a15a24dee69c90ebb074c1f5d25abaa5c65000c1c6656009e64",
+      "bytes": 140251
     },
     "masters/P10/symbolic.json": {
       "sha256": "602be2f4abe38838b6cbfcb74878d540888c6ac0489833812d5c301fd157527e",
@@ -8483,8 +9271,8 @@
       "bytes": 1364
     },
     "masters/P11/numerical.json": {
-      "sha256": "5f47198718d4a1c3d0e1295b8a66fa200229223b2c2a2cd9c128e908d093b432",
-      "bytes": 1368
+      "sha256": "604a0b0d28ff1a62343bc768afd241f41c53bc2c6c55cacdd6d26cae9520080d",
+      "bytes": 120216
     },
     "masters/P11/symbolic.json": {
       "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856",
@@ -8495,8 +9283,8 @@
       "bytes": 1715
     },
     "masters/P12/numerical.json": {
-      "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb",
-      "bytes": 1604
+      "sha256": "955a449cfb823a15a24dee69c90ebb074c1f5d25abaa5c65000c1c6656009e64",
+      "bytes": 140251
     },
     "masters/P12/symbolic.json": {
       "sha256": "602be2f4abe38838b6cbfcb74878d540888c6ac0489833812d5c301fd157527e",
@@ -8507,8 +9295,8 @@
       "bytes": 1714
     },
     "masters/P13/numerical.json": {
-      "sha256": "22cec8ec1ac3768334266d369e34b8b904f4a17ecdf6b3c81eab3d41b272329a",
-      "bytes": 1843
+      "sha256": "cae348a309a55304eeca4487999f189562463be2b4ede50cedf7b01554f65982",
+      "bytes": 160289
     },
     "masters/P13/symbolic.json": {
       "sha256": "8ea9b45152d86e95a29c1b3593ef5427b8d8c29dd1c2b0a4b66b1a4e34648bfc",
@@ -8519,8 +9307,8 @@
       "bytes": 2067
     },
     "masters/P14/numerical.json": {
-      "sha256": "7fed26d22b87a9d077a5e1d7a9680d8632821a5315e410a4ce931c760904e7dd",
-      "bytes": 1604
+      "sha256": "9e995f3cef17919ed511cf920d07fa2e8a00a31959e712cc0b8dd8ffe7ff105b",
+      "bytes": 140251
     },
     "masters/P14/symbolic.json": {
       "sha256": "b730ddd13db1aee0d620ecf46d89a384f7ab34c296579022d97df21791d9ce64",
@@ -8531,8 +9319,8 @@
       "bytes": 1364
     },
     "masters/P15/numerical.json": {
-      "sha256": "5f47198718d4a1c3d0e1295b8a66fa200229223b2c2a2cd9c128e908d093b432",
-      "bytes": 1368
+      "sha256": "604a0b0d28ff1a62343bc768afd241f41c53bc2c6c55cacdd6d26cae9520080d",
+      "bytes": 120216
     },
     "masters/P15/symbolic.json": {
       "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856",
@@ -8543,8 +9331,8 @@
       "bytes": 1364
     },
     "masters/P16/numerical.json": {
-      "sha256": "5f47198718d4a1c3d0e1295b8a66fa200229223b2c2a2cd9c128e908d093b432",
-      "bytes": 1368
+      "sha256": "604a0b0d28ff1a62343bc768afd241f41c53bc2c6c55cacdd6d26cae9520080d",
+      "bytes": 120216
     },
     "masters/P16/symbolic.json": {
       "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856",
@@ -8555,8 +9343,8 @@
       "bytes": 1364
     },
     "masters/P17/numerical.json": {
-      "sha256": "5f47198718d4a1c3d0e1295b8a66fa200229223b2c2a2cd9c128e908d093b432",
-      "bytes": 1368
+      "sha256": "604a0b0d28ff1a62343bc768afd241f41c53bc2c6c55cacdd6d26cae9520080d",
+      "bytes": 120216
     },
     "masters/P17/symbolic.json": {
       "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856",
@@ -8567,8 +9355,8 @@
       "bytes": 1716
     },
     "masters/P18/numerical.json": {
-      "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb",
-      "bytes": 1604
+      "sha256": "955a449cfb823a15a24dee69c90ebb074c1f5d25abaa5c65000c1c6656009e64",
+      "bytes": 140251
     },
     "masters/P18/symbolic.json": {
       "sha256": "602be2f4abe38838b6cbfcb74878d540888c6ac0489833812d5c301fd157527e",
@@ -8579,8 +9367,8 @@
       "bytes": 1364
     },
     "masters/P19/numerical.json": {
-      "sha256": "5f47198718d4a1c3d0e1295b8a66fa200229223b2c2a2cd9c128e908d093b432",
-      "bytes": 1368
+      "sha256": "604a0b0d28ff1a62343bc768afd241f41c53bc2c6c55cacdd6d26cae9520080d",
+      "bytes": 120216
     },
     "masters/P19/symbolic.json": {
       "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856",
@@ -8591,8 +9379,8 @@
       "bytes": 1364
     },
     "masters/P2/numerical.json": {
-      "sha256": "5f47198718d4a1c3d0e1295b8a66fa200229223b2c2a2cd9c128e908d093b432",
-      "bytes": 1368
+      "sha256": "604a0b0d28ff1a62343bc768afd241f41c53bc2c6c55cacdd6d26cae9520080d",
+      "bytes": 120216
     },
     "masters/P2/symbolic.json": {
       "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856",
@@ -8603,8 +9391,8 @@
       "bytes": 1364
     },
     "masters/P20/numerical.json": {
-      "sha256": "5f47198718d4a1c3d0e1295b8a66fa200229223b2c2a2cd9c128e908d093b432",
-      "bytes": 1368
+      "sha256": "604a0b0d28ff1a62343bc768afd241f41c53bc2c6c55cacdd6d26cae9520080d",
+      "bytes": 120216
     },
     "masters/P20/symbolic.json": {
       "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856",
@@ -8615,8 +9403,8 @@
       "bytes": 1716
     },
     "masters/P21/numerical.json": {
-      "sha256": "22cec8ec1ac3768334266d369e34b8b904f4a17ecdf6b3c81eab3d41b272329a",
-      "bytes": 1843
+      "sha256": "cae348a309a55304eeca4487999f189562463be2b4ede50cedf7b01554f65982",
+      "bytes": 160289
     },
     "masters/P21/symbolic.json": {
       "sha256": "8ea9b45152d86e95a29c1b3593ef5427b8d8c29dd1c2b0a4b66b1a4e34648bfc",
@@ -8627,8 +9415,8 @@
       "bytes": 1714
     },
     "masters/P22/numerical.json": {
-      "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb",
-      "bytes": 1604
+      "sha256": "955a449cfb823a15a24dee69c90ebb074c1f5d25abaa5c65000c1c6656009e64",
+      "bytes": 140251
     },
     "masters/P22/symbolic.json": {
       "sha256": "602be2f4abe38838b6cbfcb74878d540888c6ac0489833812d5c301fd157527e",
@@ -8639,8 +9427,8 @@
       "bytes": 1714
     },
     "masters/P23/numerical.json": {
-      "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb",
-      "bytes": 1604
+      "sha256": "955a449cfb823a15a24dee69c90ebb074c1f5d25abaa5c65000c1c6656009e64",
+      "bytes": 140251
     },
     "masters/P23/symbolic.json": {
       "sha256": "602be2f4abe38838b6cbfcb74878d540888c6ac0489833812d5c301fd157527e",
@@ -8651,8 +9439,8 @@
       "bytes": 2067
     },
     "masters/P24/numerical.json": {
-      "sha256": "7fed26d22b87a9d077a5e1d7a9680d8632821a5315e410a4ce931c760904e7dd",
-      "bytes": 1604
+      "sha256": "9e995f3cef17919ed511cf920d07fa2e8a00a31959e712cc0b8dd8ffe7ff105b",
+      "bytes": 140251
     },
     "masters/P24/symbolic.json": {
       "sha256": "b730ddd13db1aee0d620ecf46d89a384f7ab34c296579022d97df21791d9ce64",
@@ -8663,8 +9451,8 @@
       "bytes": 1364
     },
     "masters/P25/numerical.json": {
-      "sha256": "5f47198718d4a1c3d0e1295b8a66fa200229223b2c2a2cd9c128e908d093b432",
-      "bytes": 1368
+      "sha256": "604a0b0d28ff1a62343bc768afd241f41c53bc2c6c55cacdd6d26cae9520080d",
+      "bytes": 120216
     },
     "masters/P25/symbolic.json": {
       "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856",
@@ -8675,8 +9463,8 @@
       "bytes": 1715
     },
     "masters/P26/numerical.json": {
-      "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb",
-      "bytes": 1604
+      "sha256": "955a449cfb823a15a24dee69c90ebb074c1f5d25abaa5c65000c1c6656009e64",
+      "bytes": 140251
     },
     "masters/P26/symbolic.json": {
       "sha256": "602be2f4abe38838b6cbfcb74878d540888c6ac0489833812d5c301fd157527e",
@@ -8687,8 +9475,8 @@
       "bytes": 1364
     },
     "masters/P27/numerical.json": {
-      "sha256": "5f47198718d4a1c3d0e1295b8a66fa200229223b2c2a2cd9c128e908d093b432",
-      "bytes": 1368
+      "sha256": "604a0b0d28ff1a62343bc768afd241f41c53bc2c6c55cacdd6d26cae9520080d",
+      "bytes": 120216
     },
     "masters/P27/symbolic.json": {
       "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856",
@@ -8699,8 +9487,8 @@
       "bytes": 1714
     },
     "masters/P28/numerical.json": {
-      "sha256": "22cec8ec1ac3768334266d369e34b8b904f4a17ecdf6b3c81eab3d41b272329a",
-      "bytes": 1843
+      "sha256": "cae348a309a55304eeca4487999f189562463be2b4ede50cedf7b01554f65982",
+      "bytes": 160289
     },
     "masters/P28/symbolic.json": {
       "sha256": "8ea9b45152d86e95a29c1b3593ef5427b8d8c29dd1c2b0a4b66b1a4e34648bfc",
@@ -8711,8 +9499,8 @@
       "bytes": 1715
     },
     "masters/P29/numerical.json": {
-      "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb",
-      "bytes": 1604
+      "sha256": "955a449cfb823a15a24dee69c90ebb074c1f5d25abaa5c65000c1c6656009e64",
+      "bytes": 140251
     },
     "masters/P29/symbolic.json": {
       "sha256": "602be2f4abe38838b6cbfcb74878d540888c6ac0489833812d5c301fd157527e",
@@ -8723,8 +9511,8 @@
       "bytes": 1364
     },
     "masters/P3/numerical.json": {
-      "sha256": "5f47198718d4a1c3d0e1295b8a66fa200229223b2c2a2cd9c128e908d093b432",
-      "bytes": 1368
+      "sha256": "604a0b0d28ff1a62343bc768afd241f41c53bc2c6c55cacdd6d26cae9520080d",
+      "bytes": 120216
     },
     "masters/P3/symbolic.json": {
       "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856",
@@ -8735,8 +9523,8 @@
       "bytes": 2067
     },
     "masters/P30/numerical.json": {
-      "sha256": "7fed26d22b87a9d077a5e1d7a9680d8632821a5315e410a4ce931c760904e7dd",
-      "bytes": 1604
+      "sha256": "9e995f3cef17919ed511cf920d07fa2e8a00a31959e712cc0b8dd8ffe7ff105b",
+      "bytes": 140251
     },
     "masters/P30/symbolic.json": {
       "sha256": "b730ddd13db1aee0d620ecf46d89a384f7ab34c296579022d97df21791d9ce64",
@@ -8747,8 +9535,8 @@
       "bytes": 1364
     },
     "masters/P31/numerical.json": {
-      "sha256": "5f47198718d4a1c3d0e1295b8a66fa200229223b2c2a2cd9c128e908d093b432",
-      "bytes": 1368
+      "sha256": "604a0b0d28ff1a62343bc768afd241f41c53bc2c6c55cacdd6d26cae9520080d",
+      "bytes": 120216
     },
     "masters/P31/symbolic.json": {
       "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856",
@@ -8759,8 +9547,8 @@
       "bytes": 1715
     },
     "masters/P32/numerical.json": {
-      "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb",
-      "bytes": 1604
+      "sha256": "955a449cfb823a15a24dee69c90ebb074c1f5d25abaa5c65000c1c6656009e64",
+      "bytes": 140251
     },
     "masters/P32/symbolic.json": {
       "sha256": "602be2f4abe38838b6cbfcb74878d540888c6ac0489833812d5c301fd157527e",
@@ -8771,8 +9559,8 @@
       "bytes": 1715
     },
     "masters/P33/numerical.json": {
-      "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb",
-      "bytes": 1604
+      "sha256": "955a449cfb823a15a24dee69c90ebb074c1f5d25abaa5c65000c1c6656009e64",
+      "bytes": 140251
     },
     "masters/P33/symbolic.json": {
       "sha256": "602be2f4abe38838b6cbfcb74878d540888c6ac0489833812d5c301fd157527e",
@@ -8783,8 +9571,8 @@
       "bytes": 2068
     },
     "masters/P34/numerical.json": {
-      "sha256": "7fed26d22b87a9d077a5e1d7a9680d8632821a5315e410a4ce931c760904e7dd",
-      "bytes": 1604
+      "sha256": "9e995f3cef17919ed511cf920d07fa2e8a00a31959e712cc0b8dd8ffe7ff105b",
+      "bytes": 140251
     },
     "masters/P34/symbolic.json": {
       "sha256": "b730ddd13db1aee0d620ecf46d89a384f7ab34c296579022d97df21791d9ce64",
@@ -8795,8 +9583,8 @@
       "bytes": 1714
     },
     "masters/P35/numerical.json": {
-      "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb",
-      "bytes": 1604
+      "sha256": "955a449cfb823a15a24dee69c90ebb074c1f5d25abaa5c65000c1c6656009e64",
+      "bytes": 140251
     },
     "masters/P35/symbolic.json": {
       "sha256": "602be2f4abe38838b6cbfcb74878d540888c6ac0489833812d5c301fd157527e",
@@ -8807,8 +9595,8 @@
       "bytes": 2067
     },
     "masters/P36/numerical.json": {
-      "sha256": "7fed26d22b87a9d077a5e1d7a9680d8632821a5315e410a4ce931c760904e7dd",
-      "bytes": 1604
+      "sha256": "9e995f3cef17919ed511cf920d07fa2e8a00a31959e712cc0b8dd8ffe7ff105b",
+      "bytes": 140251
     },
     "masters/P36/symbolic.json": {
       "sha256": "b730ddd13db1aee0d620ecf46d89a384f7ab34c296579022d97df21791d9ce64",
@@ -8819,8 +9607,8 @@
       "bytes": 2066
     },
     "masters/P37/numerical.json": {
-      "sha256": "7fed26d22b87a9d077a5e1d7a9680d8632821a5315e410a4ce931c760904e7dd",
-      "bytes": 1604
+      "sha256": "9e995f3cef17919ed511cf920d07fa2e8a00a31959e712cc0b8dd8ffe7ff105b",
+      "bytes": 140251
     },
     "masters/P37/symbolic.json": {
       "sha256": "b730ddd13db1aee0d620ecf46d89a384f7ab34c296579022d97df21791d9ce64",
@@ -8831,8 +9619,8 @@
       "bytes": 2419
     },
     "masters/P38/numerical.json": {
-      "sha256": "431b57c83c531f71b2ef36a2ecf18bd0596eeb48a137e4ddbb8e45589f29ad90",
-      "bytes": 8164
+      "sha256": "de0c0cd5d1c510d4fcdd2a32704e9b1c3ddf9df348ab088654df6117fb9642e4",
+      "bytes": 80196
     },
     "masters/P38/symbolic.json": {
       "sha256": "54254d33ee69402517934b192cfa3bea904909d254296e8d37c95eb985aeba9e",
@@ -8843,8 +9631,8 @@
       "bytes": 1716
     },
     "masters/P4/numerical.json": {
-      "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb",
-      "bytes": 1604
+      "sha256": "955a449cfb823a15a24dee69c90ebb074c1f5d25abaa5c65000c1c6656009e64",
+      "bytes": 140251
     },
     "masters/P4/symbolic.json": {
       "sha256": "602be2f4abe38838b6cbfcb74878d540888c6ac0489833812d5c301fd157527e",
@@ -8855,8 +9643,8 @@
       "bytes": 1364
     },
     "masters/P5/numerical.json": {
-      "sha256": "5f47198718d4a1c3d0e1295b8a66fa200229223b2c2a2cd9c128e908d093b432",
-      "bytes": 1368
+      "sha256": "604a0b0d28ff1a62343bc768afd241f41c53bc2c6c55cacdd6d26cae9520080d",
+      "bytes": 120216
     },
     "masters/P5/symbolic.json": {
       "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856",
@@ -8867,8 +9655,8 @@
       "bytes": 1364
     },
     "masters/P6/numerical.json": {
-      "sha256": "5f47198718d4a1c3d0e1295b8a66fa200229223b2c2a2cd9c128e908d093b432",
-      "bytes": 1368
+      "sha256": "604a0b0d28ff1a62343bc768afd241f41c53bc2c6c55cacdd6d26cae9520080d",
+      "bytes": 120216
     },
     "masters/P6/symbolic.json": {
       "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856",
@@ -8879,8 +9667,8 @@
       "bytes": 1364
     },
     "masters/P7/numerical.json": {
-      "sha256": "5f47198718d4a1c3d0e1295b8a66fa200229223b2c2a2cd9c128e908d093b432",
-      "bytes": 1368
+      "sha256": "604a0b0d28ff1a62343bc768afd241f41c53bc2c6c55cacdd6d26cae9520080d",
+      "bytes": 120216
     },
     "masters/P7/symbolic.json": {
       "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856",
@@ -8891,8 +9679,8 @@
       "bytes": 1716
     },
     "masters/P8/numerical.json": {
-      "sha256": "037b34172757af299866d2031a87586154cb636497cce711277dbbd34a1bb8cb",
-      "bytes": 1604
+      "sha256": "955a449cfb823a15a24dee69c90ebb074c1f5d25abaa5c65000c1c6656009e64",
+      "bytes": 140251
     },
     "masters/P8/symbolic.json": {
       "sha256": "602be2f4abe38838b6cbfcb74878d540888c6ac0489833812d5c301fd157527e",
@@ -8903,8 +9691,8 @@
       "bytes": 1364
     },
     "masters/P9/numerical.json": {
-      "sha256": "5f47198718d4a1c3d0e1295b8a66fa200229223b2c2a2cd9c128e908d093b432",
-      "bytes": 1368
+      "sha256": "604a0b0d28ff1a62343bc768afd241f41c53bc2c6c55cacdd6d26cae9520080d",
+      "bytes": 120216
     },
     "masters/P9/symbolic.json": {
       "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856",
@@ -8914,10 +9702,15 @@
       "sha256": "d2628bb5672b18807039be6f9218c07701cfcb80320458277cda2b9f0ef47bd1",
       "bytes": 6697
     },
+    "numerical-precision-supplement.json": {
+      "sha256": "5d88b22e1130ad334446077d72c750d4c433e42cfb2d38967fcc24742f98570f",
+      "bytes": 1230467
+    },
     "producer-update.json": {
       "sha256": "6f587bfb02edaa8e843bd4ec2b027ff333b61ce45aebf48f9e75c4e80232d3b2",
       "bytes": 200116
     }
   },
-  "producer_update": "producer-update.json"
+  "producer_update": "producer-update.json",
+  "numerical_precision_supplement": "numerical-precision-supplement.json"
 }

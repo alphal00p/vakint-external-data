@@ -422,6 +422,361 @@ class PrecisionSupplementTests(unittest.TestCase):
             ):
                 self.load_fixture(update, rows)
 
+    def formula_fixture(self):
+        """A Bessel-supplemented fixture whose epsilon^-1 row is evaluated from its exact row."""
+        update, rows = self.source_fixture()
+        entry = update["masters"][self.identity]
+        formula, value, previous = "vakint::C1/3", "2.0000000000", "1.9999"
+        base = "e" * 40
+        # epsilon^2 is an unselected row that every file must keep unchanged.
+        files = {
+            "numerical.json": [[-1, value], [0, "1.2500000"], [1, "3.5000000"], [2, "7"]],
+            "symbolic.json": [[-1, formula], [0, "1.2500000"], [1, "3.5000000"], [2, "7"]],
+        }
+        olds = {
+            "numerical.json": [[-1, previous], [0, "1.25"], [1, "3.5"], [2, "7"]],
+            "symbolic.json": [[-1, formula], [0, "1.25"], [1, "3.5"], [2, "7"]],
+        }
+        for name, rows_ in files.items():
+            path = self.root / "4L" / entry["files"][name]["path"]
+            data.write_json(path, rows_)
+            record = {"path": entry["files"][name]["path"], "sha256": data.digest(path)}
+            entry["files"][name] = record
+            self.master["files"][name] = record.copy()
+            contents = json.dumps(olds[name]) + "\n"
+            archived = self.root / entry["previous_files"][name]["archive"]
+            archived.write_text(contents)
+            entry["previous_files"][name].update(
+                contents=contents, sha256=precision.text_digest(contents)
+            )
+        symbolic = self.root / "4L" / entry["files"]["symbolic.json"]["path"]
+        archive = self.root / "provenance/formula/accepted/symbolic.json"
+        archive.parent.mkdir(parents=True, exist_ok=True)
+        archive.write_text(symbolic.read_text())
+        entry["accepted_symbolic"] = {
+            "source_commit": base,
+            "source_publication": precision.FORMULA_SOURCE_ID,
+            "path": entry["files"]["symbolic.json"]["path"],
+            "sha256": data.digest(symbolic),
+            "archive": "provenance/formula/accepted/symbolic.json",
+            "contents": symbolic.read_text(),
+        }
+        entry["coefficients"].insert(
+            0,
+            {
+                "epsilon_power": -1,
+                "symbolic": True,
+                "numerical": True,
+                "significant_digits": 10,
+                "stored_significant_digits": 11,
+                "absolute_error": "1e-12",
+                "error_quality": "estimated",
+            },
+        )
+        key = f"{self.identity}:-1"
+        entry["sources"]["-1"] = {
+            "source_id": precision.FORMULA_SOURCE_ID,
+            "symbol": key,
+            "numerical_sha256": precision.text_digest(value),
+        }
+        data.write_json(
+            self.root / "4L/constants.json",
+            [{"symbol": "vakint::C1", "value": "6.00000000000000", "significant_digits": 14}],
+        )
+        evidence = self.root / "validation/formula-evidence.json.gz"
+        evidence.parent.mkdir(parents=True, exist_ok=True)
+        evidence.write_bytes(b"fixture evidence")
+        index = self.root / "provenance/formula/portable-proof-index.json"
+        data.write_json(
+            index,
+            {
+                "schema": "vakint.external-data.portable-producer-evidence-index.v1",
+                "archives": [
+                    {
+                        "portable_archive": {
+                            "path": "validation/formula-evidence.json.gz",
+                            **data.file_record(evidence),
+                        }
+                    }
+                ],
+            },
+        )
+        receipt = {
+            "schema": precision.FORMULA_RECEIPT_SCHEMA,
+            "accepted": True,
+            "base_commit": base,
+            "error_quality": "estimated",
+            "digit_cap": precision.FORMULA_DIGIT_CAP,
+            "working_decimal_digits": [20100, 20200],
+            "portable_proof_index": {
+                "path": "provenance/formula/portable-proof-index.json",
+                "sha256": data.digest(index),
+            },
+            "rows": {
+                key: {
+                    "loop_count": 4,
+                    "master_id": self.identity,
+                    "master_basis": "vakint::PR4",
+                    "epsilon_power": -1,
+                    "normalization": "FMFTandMATAD",
+                    "formula_sha256": precision.text_digest(formula),
+                    "value_sha256": precision.text_digest(value),
+                    "significant_digits": 10,
+                    "stored_significant_digits": 11,
+                    "absolute_error": "1e-12",
+                    "error_quality": "estimated",
+                    "finite_constants": {
+                        "vakint::C1": {
+                            "significant_digits": 14,
+                            "value_sha256": precision.text_digest("6.00000000000000"),
+                        }
+                    },
+                    "previous": {
+                        "value_sha256": precision.text_digest(previous),
+                        "significant_digits": 4,
+                        "absolute_error": None,
+                    },
+                }
+            },
+            "exact_rows": {self.identity: {"-1": precision.text_digest(formula)}},
+        }
+        update["provenance"]["additional_sources"] = {
+            precision.FORMULA_SOURCE_ID: {"kind": precision.FORMULA_SOURCE_KIND}
+        }
+        update["provenance"]["accepted_symbolic_publications"] = {
+            precision.FORMULA_SOURCE_ID: {"base_commit": base}
+        }
+        self.write_formula_receipt(update, receipt)
+        return update, rows, receipt
+
+    def write_formula_receipt(self, update, receipt):
+        path = self.root / "provenance/formula/receipt.json"
+        data.write_json(path, receipt)
+        reference = {"path": "provenance/formula/receipt.json", "sha256": data.digest(path)}
+        update["provenance"]["additional_sources"][precision.FORMULA_SOURCE_ID][
+            "receipt"
+        ] = reference
+        update["provenance"]["accepted_symbolic_publications"][
+            precision.FORMULA_SOURCE_ID
+        ]["receipt"] = dict(reference)
+
+    def rewrite_value(self, update, receipt, value):
+        entry = update["masters"][self.identity]
+        path = self.root / "4L" / entry["files"]["numerical.json"]["path"]
+        rows = data.read_json(path)
+        rows[0][1] = value
+        data.write_json(path, rows)
+        record = {"path": entry["files"]["numerical.json"]["path"], "sha256": data.digest(path)}
+        entry["files"]["numerical.json"] = record
+        self.master["files"]["numerical.json"] = record.copy()
+        entry["sources"]["-1"]["numerical_sha256"] = precision.text_digest(value)
+        receipt["rows"][f"{self.identity}:-1"]["value_sha256"] = precision.text_digest(value)
+        self.write_formula_receipt(update, receipt)
+
+    def test_formula_evaluation_admits_estimated_values_of_exact_rows(self):
+        update, rows, receipt = self.formula_fixture()
+        self.assertEqual(self.load_fixture(update, rows), update)
+        selected = precision.coefficients(update, {self.identity: self.master})
+        self.assertEqual(selected[self.identity][-1]["error_quality"], "estimated")
+        self.assertEqual(selected[self.identity][0]["error_quality"], "bounded")
+        precision.validate_master(update, self.master, self.root)
+
+    def test_formula_evaluation_quality_is_tied_to_its_source(self):
+        update, rows, receipt = self.formula_fixture()
+        known = {self.identity: self.master}
+        for power, field, value in [
+            (-1, "error_quality", "bounded"),
+            (-1, "symbolic", False),
+            (-1, "significant_digits", precision.FORMULA_DIGIT_CAP + 1),
+            (0, "error_quality", "estimated"),
+        ]:
+            altered = copy.deepcopy(update)
+            row = next(
+                row
+                for row in altered["masters"][self.identity]["coefficients"]
+                if row["epsilon_power"] == power
+            )
+            row[field] = value
+            if field == "significant_digits":
+                row["stored_significant_digits"] = value + 1
+            with (
+                self.subTest(power=power, field=field),
+                self.assertRaisesRegex(ValueError, "invalid numerical precision capability"),
+            ):
+                precision.coefficients(altered, known)
+
+    def test_formula_evaluation_mutations_are_rejected(self):
+        update, rows, receipt = self.formula_fixture()
+        key = f"{self.identity}:-1"
+        for change, message in [
+            (lambda u, r: r["rows"][key].update(significant_digits=9), "selection differs"),
+            (lambda u, r: r["rows"][key].update(absolute_error="1e-11"), "selection differs"),
+            (lambda u, r: r["rows"][key].update(value_sha256="0" * 64), "selection differs"),
+            (lambda u, r: r["exact_rows"].update({self.identity: {}}), "not bound to its exact row"),
+            (lambda u, r: (r["rows"][key].update(formula_sha256="0" * 64),
+                           r["exact_rows"][self.identity].update({"-1": "0" * 64}),
+                           # legacy acceptance, so the publication check is not the one hit
+                           u["provenance"].update(accepted_symbolic_commit="f" * 40),
+                           u["masters"][self.identity]["accepted_symbolic"].pop("source_publication"),
+                           u["masters"][self.identity]["accepted_symbolic"].update(source_commit="f" * 40)),
+             "differs from the published exact row"),
+            (lambda u, r: r["rows"][key]["previous"].update(value_sha256="0" * 64),
+             "does not improve"),
+            (lambda u, r: r["rows"][key]["previous"].update(significant_digits=10),
+             "does not improve"),
+            (lambda u, r: r["rows"][key]["finite_constants"]["vakint::C1"].update(
+                value_sha256="0" * 64), "differs from its constants"),
+            (lambda u, r: r["rows"][key]["finite_constants"].update(
+                {"vakint::Missing": {"significant_digits": 14, "value_sha256": "0" * 64}}),
+             "differs from its constants"),
+            (lambda u, r: r.update(working_decimal_digits=[20100, 20100]), "unsupported formula"),
+            (lambda u, r: r.update(working_decimal_digits=[20000, 20200]), "unsupported formula"),
+            (lambda u, r: r.update(error_quality="bounded"), "unsupported formula"),
+            (lambda u, r: r.update(accepted=False), "unsupported formula"),
+            (lambda u, r: r["rows"][key].update(error_quality="bounded"), "invalid formula evaluation row"),
+            (lambda u, r: r["rows"][key].update(master_id="L4_other"), "invalid formula evaluation row"),
+            (lambda u, r: r["rows"][key].pop("previous"), "invalid formula evaluation row"),
+            (lambda u, r: r["portable_proof_index"].update(sha256="0" * 64), "evidence index checksum"),
+        ]:
+            altered, receipt_ = copy.deepcopy(update), copy.deepcopy(receipt)
+            change(altered, receipt_)
+            self.write_formula_receipt(altered, receipt_)
+            with self.subTest(message=message), self.assertRaisesRegex(ValueError, message):
+                self.load_fixture(altered, rows)
+        # A stale receipt checksum and a tampered evidence archive are rejected.
+        self.write_formula_receipt(update, receipt)
+        self.assertEqual(self.load_fixture(update, rows), update)
+        altered = copy.deepcopy(update)
+        altered["provenance"]["additional_sources"][precision.FORMULA_SOURCE_ID]["receipt"][
+            "sha256"
+        ] = "0" * 64
+        with self.assertRaisesRegex(ValueError, "receipt checksum differs"):
+            self.load_fixture(altered, rows)
+        (self.root / "validation/formula-evidence.json.gz").write_bytes(b"tampered")
+        with self.assertRaisesRegex(ValueError, "evidence archive changed"):
+            self.load_fixture(update, rows)
+
+    def test_formula_evaluation_must_be_compatible_with_the_replaced_value(self):
+        update, rows, receipt = self.formula_fixture()
+        # 2.0003 differs from the replaced 1.9999 by 4e-4 > 1e-12 + 2e-4 + 5e-5.
+        self.rewrite_value(update, receipt, "2.0003000000")
+        with self.assertRaisesRegex(ValueError, "incompatible with the replaced value"):
+            self.load_fixture(update, rows)
+        # Within the replaced value's own error the new value is accepted.
+        self.rewrite_value(update, receipt, "2.0001000000")
+        self.assertEqual(self.load_fixture(update, rows), update)
+        # A payload edited behind the receipt and the source digest is rejected.
+        path = self.root / "4L" / update["masters"][self.identity]["files"]["numerical.json"]["path"]
+        edited = data.read_json(path)
+        edited[0][1] = "2.0001000001"
+        data.write_json(path, edited)
+        with self.assertRaisesRegex(ValueError, "value differs from its payload"):
+            self.load_fixture(update, rows)
+
+    def test_formula_source_kind_receipt_and_use_are_enforced(self):
+        update, rows, receipt = self.formula_fixture()
+        reference = update["provenance"]["additional_sources"][precision.FORMULA_SOURCE_ID]
+        for altered_reference in [
+            {**reference, "kind": precision.PR11_SOURCE_KIND},
+            {**reference, "extra": True},
+            {"kind": precision.FORMULA_SOURCE_KIND},
+        ]:
+            altered = copy.deepcopy(update)
+            altered["provenance"]["additional_sources"][precision.FORMULA_SOURCE_ID] = (
+                altered_reference
+            )
+            with self.subTest(reference=altered_reference), self.assertRaises(ValueError):
+                self.load_fixture(altered, rows)
+        unused = copy.deepcopy(update)
+        entry = unused["masters"][self.identity]
+        entry["coefficients"] = [
+            row for row in entry["coefficients"] if row["epsilon_power"] != -1
+        ]
+        del entry["sources"]["-1"]
+        with self.assertRaisesRegex(ValueError, "unused additional"):
+            self.load_fixture(unused, rows)
+
+    def test_replaced_files_accept_only_earlier_upgrades_on_the_chain(self):
+        update, rows, receipt = self.formula_fixture()
+        entry = update["masters"][self.identity]
+        # The file replaced by the formula publication: an earlier upgrade that
+        # changed only the selected epsilon^0 row of the archived previous file.
+        replaced = [[-1, "1.9999"], [0, "1.2500000"], [1, "3.5"], [2, "7"]]
+        archive = self.root / "provenance/formula-before/numerical.json"
+        data.write_json(archive, replaced)
+        binding = {
+            "path": entry["files"]["numerical.json"]["path"],
+            "sha256": data.digest(archive),
+        }
+        entry["replaced_files"] = {
+            "numerical.json": {**binding, "archive": "provenance/formula-before/numerical.json"}
+        }
+        data.write_json(self.root / "4L" / precision.LOOP_RECEIPT, update)
+        self.assertTrue(
+            precision.accepts_producer_binding(binding, self.master, "numerical.json", self.root)
+        )
+        self.assertFalse(
+            precision.accepts_producer_binding(
+                {**binding, "sha256": "0" * 64}, self.master, "numerical.json", self.root
+            )
+        )
+        for rows_, message in [
+            ([[-1, "1.9999"], [0, "1.2500000"], [1, "3.5"], [2, "8"]], "not an earlier upgrade"),
+            ([[-1, "1.9999"], [0, "1.25"], [1, "3.5"], [2, "7"], [3, "1"]], "not an earlier upgrade"),
+            ([[-2, "1.9999"], [0, "1.2500000"], [1, "3.5"], [2, "7"]], "not an earlier upgrade"),
+        ]:
+            data.write_json(archive, rows_)
+            entry["replaced_files"]["numerical.json"]["sha256"] = data.digest(archive)
+            with self.subTest(rows=rows_), self.assertRaisesRegex(ValueError, message):
+                precision.validate_master(update, self.master, self.root)
+        data.write_json(archive, replaced)
+        entry["replaced_files"]["numerical.json"]["sha256"] = binding["sha256"]
+        archive.write_text(archive.read_text() + " ")
+        with self.assertRaisesRegex(ValueError, "replaced numerical precision payload changed"):
+            precision.validate_master(update, self.master, self.root)
+        for invalid in [
+            {"numerical.json": {**binding}},
+            {"numerical.json": {**binding, "archive": "x", "path": "masters/P7/numerical.json"}},
+            {"graph.dot": {**binding, "archive": "x"}},
+            [],
+        ]:
+            entry["replaced_files"] = invalid
+            with self.subTest(invalid=invalid), self.assertRaisesRegex(
+                ValueError, "invalid replaced numerical precision payload"
+            ):
+                precision.validate_master(update, self.master, self.root)
+
+
+class FormulaEvaluationPublicationTests(unittest.TestCase):
+    """The published formula-evaluated rows and the manifests agree exactly."""
+
+    def test_estimated_rows_are_exactly_the_formula_evaluated_rows(self):
+        update = data.read_json(data.ROOT / precision.RECEIPT)
+        reference = update["provenance"]["additional_sources"][precision.FORMULA_SOURCE_ID]
+        receipt = data.read_json(data.ROOT / reference["receipt"]["path"])
+        selected = set()
+        for identity, entry in update["masters"].items():
+            for power, source in entry["sources"].items():
+                if source.get("source_id") == precision.FORMULA_SOURCE_ID:
+                    selected.add(f"{identity}:{power}")
+        self.assertEqual(selected, set(receipt["rows"]))
+        estimated = set()
+        for loops in range(1, 6):
+            manifest = data.read_json(data.ROOT / f"{loops}L/manifest.json")
+            for master in manifest["masters"]:
+                for row in master["coefficients"]:
+                    if row.get("error_quality") == "estimated":
+                        estimated.add(f"{master['master_id']}:{row['epsilon_power']}")
+                        self.assertTrue(row["symbolic"])
+                        self.assertLessEqual(
+                            row["significant_digits"], precision.FORMULA_DIGIT_CAP
+                        )
+        self.assertEqual(estimated, selected)
+        for key, row in receipt["rows"].items():
+            self.assertGreater(
+                row["significant_digits"], row["previous"]["significant_digits"]
+            )
+
 
 class OracleCoverageCorrectionTests(unittest.TestCase):
     def setUp(self):
