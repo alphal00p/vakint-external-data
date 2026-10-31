@@ -514,10 +514,30 @@
       "sha256": "d2628bb5672b18807039be6f9218c07701cfcb80320458277cda2b9f0ef47bd1",
       "bytes": 6697
     },
+    "ordered-cache.json": {
+      "sha256": "d886054d18f6b74bd3d0b0984f1c93f2449a08caee78e0d70e0207d9878a8e6b",
+      "bytes": 8817
+    },
+    "ordered-cache/2L-unit-mass-vacuum-k3/ordered-step-cache.txt": {
+      "sha256": "6d130f0f9969121db4725c868bec8a73656b6d733304945edb6b022a589d2713",
+      "bytes": 1214
+    },
+    "ordered-cache/2L-unit-mass-vacuum-k3/shards/integral-s02-0000000000000000.168b4442b074817c.rrstep": {
+      "sha256": "79f72014cdf4f2ca6ca2fb0970968b8968dfb77a3bb1c06186b387c5cd74fa51",
+      "bytes": 309
+    },
+    "ordered-cache/2L-unit-mass-vacuum-k3/shards/integral-s03-0000000000000000.04ff1a30e4dd1e8f.rrstep": {
+      "sha256": "27ec46a86323d58c475be6fce2674579467f7b149c9adb0ade7170b303bcc41a",
+      "bytes": 504
+    },
     "producer-update.json": {
       "sha256": "89b474c4f042c1c265cda1d269de6486418614193c85d3912acc78cc0edd581d",
       "bytes": 27089
     }
   },
-  "producer_update": "producer-update.json"
+  "producer_update": "producer-update.json",
+  "ordered_cache": {
+    "path": "ordered-cache",
+    "metadata": "ordered-cache.json"
+  }
 }

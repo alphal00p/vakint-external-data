@@ -21478,6 +21478,118 @@
       "sha256": "f7e021311105bf0abe854edb65c34bbd46a83e926f00a55be7039d278ef83250",
       "bytes": 3457530
     },
+    "ordered-cache.json": {
+      "sha256": "7cf03ba67da19e365ea6d5dd5407cc6f66f6dd759dde518f8d813eb09c30b743",
+      "bytes": 21505
+    },
+    "ordered-cache/4L-four-loop-bmw/ordered-step-cache.txt": {
+      "sha256": "929abd18f0249fe47cff2ec806ded1ead3bbb18e35d54aa6c7d3ca616cd494e9",
+      "bytes": 3898
+    },
+    "ordered-cache/4L-four-loop-bmw/shards/integral-s04-0000000000000000.ed87c5d63f7330b9.rrstep": {
+      "sha256": "26105df85f7e72f02cef7b5798205c56cfaf85f95d5512494c27fbca7167e4a0",
+      "bytes": 137186
+    },
+    "ordered-cache/4L-four-loop-bmw/shards/integral-s05-0000000000000000.1fff7f4e958a123b.rrstep": {
+      "sha256": "b995506e013bb2fe92480275f88dbec1d85015a27e125e884139ca9a67a0e997",
+      "bytes": 427822
+    },
+    "ordered-cache/4L-four-loop-bmw/shards/integral-s06-0000000000000000.45ca6f4103a4aadc.rrstep": {
+      "sha256": "d40815cf64111a84862407d6b7f5c516376eef95e48ad350b2fd9370389572d0",
+      "bytes": 333808
+    },
+    "ordered-cache/4L-four-loop-bmw/shards/integral-s07-0000000000000000.e9c7adc7367a0c87.rrstep": {
+      "sha256": "99184168a91408be2bb2bde29b5584324b0e4f6ef4cf83492e2a94c1cc902317",
+      "bytes": 159371
+    },
+    "ordered-cache/4L-four-loop-bmw/shards/integral-s08-0000000000000000.901af8101b7af658.rrstep": {
+      "sha256": "7c4b35afa4724810dbe4418c7bd92a65472ed9b23668457ba26a00e6364bc7cc",
+      "bytes": 15183
+    },
+    "ordered-cache/4L-four-loop-fg/ordered-step-cache.txt": {
+      "sha256": "2aed9934a85fb23446153c3b23f3d6c8bd42ba30dc1846700974843b630a849a",
+      "bytes": 4043
+    },
+    "ordered-cache/4L-four-loop-fg/shards/integral-s03-0000000000000000.2abd76c580651f30.rrstep": {
+      "sha256": "e13564210ecbe3bc5ae1155f67e6852f1dfd3bc662ba5636ae976e6002bf4fc5",
+      "bytes": 201
+    },
+    "ordered-cache/4L-four-loop-fg/shards/integral-s04-0000000000000000.902a3e6a2530f480.rrstep": {
+      "sha256": "2404725b6cdde995c15cac9a281ce1b2fc6dccf918a1d0be8e4595f8de17c36d",
+      "bytes": 233103
+    },
+    "ordered-cache/4L-four-loop-fg/shards/integral-s05-0000000000000000.7dc56289d5db27b0.rrstep": {
+      "sha256": "537452e39f7125dc832bd56d2074e168e55a2f1c3550b0a74f410d8319b982a4",
+      "bytes": 724667
+    },
+    "ordered-cache/4L-four-loop-fg/shards/integral-s06-0000000000000000.5918d83a775f37a6.rrstep": {
+      "sha256": "c8a67ae92404aa33dca3dc7e352ffe874fab515476c1a7a8823595b43902965f",
+      "bytes": 761119
+    },
+    "ordered-cache/4L-four-loop-fg/shards/integral-s07-0000000000000000.eda204c1b07de037.rrstep": {
+      "sha256": "e477818198484cad68ab1070bbd72ff758d843308e7308c800d5540f6ac0340c",
+      "bytes": 285931
+    },
+    "ordered-cache/4L-four-loop-fg/shards/integral-s08-0000000000000000.5db0c06b22bd0ae0.rrstep": {
+      "sha256": "9540c292e46655d903484d5af2adc752999a0fb52132b7bcf57ec71603ad263b",
+      "bytes": 1296
+    },
+    "ordered-cache/4L-four-loop-h/ordered-step-cache.txt": {
+      "sha256": "ac63f616cf87130bfd4ce4e6baff2573cd8d83de584261417b726d0be54c93eb",
+      "bytes": 4067
+    },
+    "ordered-cache/4L-four-loop-h/shards/integral-s04-0000000000000000.c9ae3ae13ab45d97.rrstep": {
+      "sha256": "b76fa0e0a1399b0a67ef0eb70927ba9fd16480c87a56409646cb4a2b4ec0eaea",
+      "bytes": 245439
+    },
+    "ordered-cache/4L-four-loop-h/shards/integral-s05-0000000000000000.cb226474351dd56a.rrstep": {
+      "sha256": "1aa48dcb3aaaccfd215cf2f644018232ff5cb56492cf9d1cf38c298a31fe0d91",
+      "bytes": 705800
+    },
+    "ordered-cache/4L-four-loop-h/shards/integral-s06-0000000000000000.897d28ae082d43c0.rrstep": {
+      "sha256": "1f314f68e91e2645f215e5228fe70be9bc1160c1dfecc6ac0a981812fea83734",
+      "bytes": 572848
+    },
+    "ordered-cache/4L-four-loop-h/shards/integral-s07-0000000000000000.dbf36d95dbec0a11.rrstep": {
+      "sha256": "e11e0763958d7847078746796a3d0dc4371c34156b4a161d2520fab0b935edda",
+      "bytes": 251340
+    },
+    "ordered-cache/4L-four-loop-h/shards/integral-s08-0000000000000000.d795ac767ed929c6.rrstep": {
+      "sha256": "ace72ebfdad448795dd538aafbf981c54561c568b63d6ded176cba707b7e899b",
+      "bytes": 53138
+    },
+    "ordered-cache/4L-four-loop-h/shards/integral-s09-0000000000000000.57c6e966ac36a07b.rrstep": {
+      "sha256": "57f0ac4a5c2994cea4c77c325610a38f6a13b88061f8d70020244ac497edcf2d",
+      "bytes": 2331
+    },
+    "ordered-cache/4L-four-loop-x/ordered-step-cache.txt": {
+      "sha256": "cb65a8551b537824f7bdc11be320ba180d19fe41765f924599c2cc6dcc994c61",
+      "bytes": 4125
+    },
+    "ordered-cache/4L-four-loop-x/shards/integral-s04-0000000000000000.e695f9571c6c152b.rrstep": {
+      "sha256": "b391ffd1c273ee727d0e9f99175a58ecaf3200a60e195ee3b07c99f74b7742bc",
+      "bytes": 518121
+    },
+    "ordered-cache/4L-four-loop-x/shards/integral-s05-0000000000000000.327ac6a96e5edb7d.rrstep": {
+      "sha256": "767c6ece950d6a801e1e7c1bf682e8f7c23d17b76f136b25ea1adab59132cfb0",
+      "bytes": 1857578
+    },
+    "ordered-cache/4L-four-loop-x/shards/integral-s06-0000000000000000.5dbbdc0a90f7c05c.rrstep": {
+      "sha256": "6150acfb8851c87feb5f2705a5f1d7b729e37dc11d8b82dd9d3db4089984a30d",
+      "bytes": 2008396
+    },
+    "ordered-cache/4L-four-loop-x/shards/integral-s07-0000000000000000.76aa6dfeaf1a33a0.rrstep": {
+      "sha256": "b3141fde0be321b1ad86cb2bc469d0041f0bc2a6163860b7aeb7afcbbc81eedc",
+      "bytes": 1416263
+    },
+    "ordered-cache/4L-four-loop-x/shards/integral-s08-0000000000000000.a3ddeebb65e183ce.rrstep": {
+      "sha256": "e135029aa38fb1df6f6aba1e2d0ecf4cbeba91058a6ed10a35459fced82b4544",
+      "bytes": 399598
+    },
+    "ordered-cache/4L-four-loop-x/shards/integral-s09-0000000000000000.fbcc97afeeb3cea1.rrstep": {
+      "sha256": "708fc2deffbd6920eca171c9b8bfc74b1865ff9da254f292be481b2a8bc51ff1",
+      "bytes": 25219
+    },
     "producer-update.json": {
       "sha256": "78b492c15c7c7a9df51fb518dac21cbc1a3d8ab6f00a340eef427d377bafecaf",
       "bytes": 532663
@@ -21504,5 +21616,9 @@
   "constant_bindings": {
     "path": "constants.json",
     "sha256": "482e7049fdf896f1a7ec24c1f7c72b150c349bc19bf406b8321069a393df3747"
+  },
+  "ordered_cache": {
+    "path": "ordered-cache",
+    "metadata": "ordered-cache.json"
   }
 }

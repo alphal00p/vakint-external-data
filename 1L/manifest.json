@@ -232,10 +232,26 @@
       "sha256": "d7e113a7e3fb019045e4c1436e03eeb3b49da85de1234f7ed1e110416079215e",
       "bytes": 3477
     },
+    "ordered-cache.json": {
+      "sha256": "dc2bee8c8b004c98924d81d66ae1c8255417c4ab28d094a2ddaf25586cbfe6a3",
+      "bytes": 8553
+    },
+    "ordered-cache/1L-unit-mass-vacuum-k1/ordered-step-cache.txt": {
+      "sha256": "c8ac659ff836757c6b76f26eb0f1d4962d7656ee80260e54d9064f48e04e7a09",
+      "bytes": 784
+    },
+    "ordered-cache/1L-unit-mass-vacuum-k1/shards/integral-s01-0000000000000000.267d2e0077b8a294.rrstep": {
+      "sha256": "4a33cbf6ce5ac1acf6234734bdcd442e058835dd496fc67c2c0f08d243f9c595",
+      "bytes": 226
+    },
     "producer-update.json": {
       "sha256": "c2a7a05a917ac68ad65d214907ac7cd6930e7b5b7112e0f1fbd663f85c578a2f",
       "bytes": 20543
     }
   },
-  "producer_update": "producer-update.json"
+  "producer_update": "producer-update.json",
+  "ordered_cache": {
+    "path": "ordered-cache",
+    "metadata": "ordered-cache.json"
+  }
 }

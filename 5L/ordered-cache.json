@@ -1,0 +1,180 @@
+{
+  "schema": "vakint.external-data.ordered-cache.v1",
+  "loop_count": 5,
+  "producer": {
+    "command": "ordered_cache_maintenance prepare --loops 1,2,3,4,5 (VAKINT_ORDERED_WEIGHT_ARITHMETIC=modular:threads=6)",
+    "rustred": {
+      "engine": "rustred 0.1.0 sources 0719695518e5479eaa34e6132e3b49b4a86a846fb8fb9f42d49afe5ba6230a84 symbolica git-9cd5767",
+      "ordered_step_cache_schema": "rustred.ordered-step-cache.v2",
+      "ordered_step_semantics": "rustred-ordered-steps-2026-10-31",
+      "revision": "ec9d549b"
+    },
+    "vakint": {
+      "revision": "f3423b7b7",
+      "version": "0.1.2"
+    }
+  },
+  "workload": [
+    {
+      "input_sha256": "12a19f0fe74a5a82f013dcb78f43cf590ad805a4a2d5a6fc44c64a6e26f3f626",
+      "kind": "qcd-ladder-rung",
+      "loop_count": 1,
+      "name": "1L-zero-momentum",
+      "projection": "zero-momentum",
+      "retained_sha256": "a8b3c3e944009c6ea0f2e97b1bd670bba45c6a67bc6a302dd2598f5af8357b6f",
+      "source": "crates/vakint/tests/fixtures/qcd_ladder (tests/ordered_reduction_rungs.rs)"
+    },
+    {
+      "input_sha256": "dcbe3c6d0193bf535f19da3d476d1e1da13989e643563bdb7c0be29e63108409",
+      "kind": "qcd-ladder-rung",
+      "loop_count": 1,
+      "name": "1L-quadratic",
+      "projection": "quadratic",
+      "retained_sha256": "20f08c848e9dfacb02c92f4389a1b5e3e5e4d6f041d832ce9c3008508ec3c460",
+      "source": "crates/vakint/tests/fixtures/qcd_ladder (tests/ordered_reduction_rungs.rs)"
+    },
+    {
+      "input_sha256": "c22bab37d05848f173c7c22cddc1d1bdc08c22c14067e597fc879e5c5b449ea6",
+      "kind": "qcd-ladder-rung",
+      "loop_count": 2,
+      "name": "2L-zero-momentum",
+      "projection": "zero-momentum",
+      "retained_sha256": "6f85f1401a94395a33dfcacb948b0c037c32940ee9496a6bb2de9c88e55fe9a4",
+      "source": "crates/vakint/tests/fixtures/qcd_ladder (tests/ordered_reduction_rungs.rs)"
+    },
+    {
+      "input_sha256": "3cac4446a7c525395a52b36269a503c1b19951212a4239fff96b991f76381744",
+      "kind": "qcd-ladder-rung",
+      "loop_count": 2,
+      "name": "2L-quadratic",
+      "projection": "quadratic",
+      "retained_sha256": "e95ed8dc528c9d440bd653a9bb3a9c6571734814bfb3be57770797ef255fb8a0",
+      "source": "crates/vakint/tests/fixtures/qcd_ladder (tests/ordered_reduction_rungs.rs)"
+    },
+    {
+      "input_sha256": "9d92612c562e56bdea26e888a797d21321705c48e7fbe7a02014f6c675ca0da0",
+      "kind": "qcd-ladder-rung",
+      "loop_count": 3,
+      "name": "3L-zero-momentum",
+      "projection": "zero-momentum",
+      "retained_sha256": "2f48233ca24979143ca839289877d18bdf4f0fde70bd68399d770227d73c6b2a",
+      "source": "crates/vakint/tests/fixtures/qcd_ladder (tests/ordered_reduction_rungs.rs)"
+    },
+    {
+      "input_sha256": "ae62eeb11d6ef31928c480b8fd03daee9c2d5649d47b22c0ac7abe558d68fc05",
+      "kind": "qcd-ladder-rung",
+      "loop_count": 3,
+      "name": "3L-quadratic",
+      "projection": "quadratic",
+      "retained_sha256": "5acbeebe2429d711d5cd9c1264efc469886c5c5e5961f6470be8f7970c400821",
+      "source": "crates/vakint/tests/fixtures/qcd_ladder (tests/ordered_reduction_rungs.rs)"
+    },
+    {
+      "input_sha256": "1b2d0500b557a43def79b51b1a583a0126dfad3308bdb5c56908bc2419639d4e",
+      "kind": "qcd-ladder-rung",
+      "loop_count": 4,
+      "name": "4L-zero-momentum",
+      "projection": "zero-momentum",
+      "retained_sha256": "b93080b3991149f79b41ffd37361e54dfa48daba068e8b640f9c44ef29ce3012",
+      "source": "crates/vakint/tests/fixtures/qcd_ladder (tests/ordered_reduction_rungs.rs)"
+    },
+    {
+      "input_sha256": "050c3d0fbd9b87046986de5f458b6626bdd5652aea464cd932fbe6c43f2abaa8",
+      "kind": "qcd-ladder-rung",
+      "loop_count": 4,
+      "name": "4L-quadratic",
+      "projection": "quadratic",
+      "retained_sha256": "6986f629362956bf28bfbb3bf5a941e5d1f4df667a626d93395dbde8059a8f77",
+      "source": "crates/vakint/tests/fixtures/qcd_ladder (tests/ordered_reduction_rungs.rs)"
+    },
+    {
+      "input_sha256": "84057e206c5b3fa57a709d24f20031d6b3787aa5e3e546cb08f81f23d63e9f0d",
+      "kind": "integral",
+      "loop_count": 4,
+      "name": "4L-integral-H-p2",
+      "retained_sha256": "90f730d85e5a402c26d9a23b7b0ec19377a9ac6b122f2d0aa1b12f7ca892f2f8",
+      "source": "crates/vakint/tests/fixtures/benchmark_reduction.json case \"0:2\""
+    },
+    {
+      "input_sha256": "1ddc8ddabdd655226cf9426a2901f6751fb6fe7294063916ea0372e658fff3f2",
+      "kind": "integral",
+      "loop_count": 4,
+      "name": "4L-integral-FG-p2",
+      "retained_sha256": "08ab4508bdb816716117181f35ea8b698388057c588100ab5b72181cf6b296a7",
+      "source": "crates/vakint/tests/fixtures/benchmark_reduction.json case \"1:2\""
+    },
+    {
+      "input_sha256": "f8770d2d3db320a48200a05a46d6883a75463268a991d8dce45f71b587bda31a",
+      "kind": "integral",
+      "loop_count": 4,
+      "name": "4L-integral-BMW-p2",
+      "retained_sha256": "cd17eddb3ae2c54653e44e5d2206f69c99ed4b798b201acf2bc5bdd2afeeb595",
+      "source": "crates/vakint/tests/fixtures/benchmark_reduction.json case \"2:2\""
+    },
+    {
+      "input_sha256": "96134e34f1b6addf6e3586c5992bb098ee9a41265b80484b3628ccd4c260b6bb",
+      "kind": "integral",
+      "loop_count": 4,
+      "name": "4L-integral-X-p2",
+      "retained_sha256": "844b5f4330745f76501028f94ddee7614967c02f3680fb0076ca7c5580c663ba",
+      "source": "crates/vakint/tests/fixtures/benchmark_reduction.json case \"3:2\""
+    },
+    {
+      "input_sha256": "76e01043ea67abdcb9d972989fdcc591dc5229e340a12cb51b7a1b88072e9494",
+      "kind": "integral",
+      "loop_count": 4,
+      "name": "4L-integral-H-p4",
+      "retained_sha256": "87f4052f8cfe357c03ab427f5d46419642b584f11b7b2dfb24b5a296d5b1027b",
+      "source": "crates/vakint/tests/fixtures/benchmark_reduction.json case \"0:4\""
+    },
+    {
+      "input_sha256": "fc11de689216ab5b200fd840da0109c4e522ff15b2767671f435688e80c06db8",
+      "kind": "integral",
+      "loop_count": 4,
+      "name": "4L-integral-FG-p4",
+      "retained_sha256": "469dfc711842a03f06f742a7ae896d0a68e173d4f17ddc36e7f5dd09ea24f804",
+      "source": "crates/vakint/tests/fixtures/benchmark_reduction.json case \"1:4\""
+    },
+    {
+      "input_sha256": "c9bb03a693350b29876acd311191b765914a41ff7dfabe50c7d4b82356c749ab",
+      "kind": "integral",
+      "loop_count": 4,
+      "name": "4L-integral-BMW-p4",
+      "retained_sha256": "0860fc8ebd10b391465aa6480f62f4bd399dae63aade8b4251f21cff915c6d2d",
+      "source": "crates/vakint/tests/fixtures/benchmark_reduction.json case \"2:4\""
+    },
+    {
+      "input_sha256": "8eb60ff006f3a0c91ea5fa8e8121856923999dccaa2e1ffc467831254be7e93c",
+      "kind": "integral",
+      "loop_count": 4,
+      "name": "4L-integral-X-p4",
+      "retained_sha256": "4b2c03129e171e0089136a91f50f3ca1c6dca3c0fa7edf54731e856385a2a817",
+      "source": "crates/vakint/tests/fixtures/benchmark_reduction.json case \"3:4\""
+    },
+    {
+      "input_sha256": "9814c3b49a1b486b9790bbe5458d8bc582c3fb3c299ba6a1a0362db8ba71cb16",
+      "kind": "five-loop-benchmark",
+      "loop_count": 5,
+      "name": "5L-zero-momentum",
+      "nonzero_conditions_sha256": "80641fc2a77301a4f89e062e4a774e86f4f4aeec38d8107b5f3c218354b55427",
+      "prepared_input": "5L/benchmarks/zero-momentum/prepared-input.json",
+      "prepared_input_sha256": "e8bd141e653944390fd48ba234f477173caa2f84089c7ca56ea9b39938f7b1f4",
+      "projection": "zero-momentum",
+      "retained_sha256": "cf415ec776cfe091c69d7bc1ccd4bf1f8c5acb4b8a71c0636290ba7866a01975"
+    }
+  ],
+  "programs": [
+    {
+      "label": "5L-tide-five-loop-common-basis",
+      "path": "ordered-cache/5L-tide-five-loop-common-basis",
+      "adapter": "saved-application",
+      "stamp": "83a9f69fd369d37003421d15a0f3cf079690e767eeb68e71b0ae9645486866a1",
+      "content_blake3": "a763faa82f64b02ab32db7b14ea63779a6dc5cccb84adf488a13cac0e1174222",
+      "records": 516384,
+      "shards": 32,
+      "bytes": 85784674,
+      "engine": "rustred 0.1.0 sources 0719695518e5479eaa34e6132e3b49b4a86a846fb8fb9f42d49afe5ba6230a84 symbolica git-9cd5767",
+      "description": "schema rustred.ordered-step-cache.v2\nsemantics rustred-ordered-steps-2026-10-31\nengine rustred 0.1.0 sources 0719695518e5479eaa34e6132e3b49b4a86a846fb8fb9f42d49afe5ba6230a84 symbolica git-9cd5767\nadapter saved-application\nfamily rustred-integral-family-v2;N27:tide_five_loop_common_basis;L5;2:k1;2:k2;2:k3;2:k4;2:k5;E0;P1;1:d;Q5,0,15;M;RY1,1;I+1;X1;Y1,1;I+1;X0;D15;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I+2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;G0;U15;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;\nprogram 1df6ab0e101cd852abde0caf3c24538385addc1b85bc9b1973ae3455b6004ee6\nvariables 1 d\nunresolved preserve\nterminals none\n"
+    }
+  ]
+}
