@@ -1099,20 +1099,31 @@ def validate(root=None, *, light_cache_admission=None):
                 not in bundle
             ):
                 raise ValueError("sealed program digest absent from cache binding")
+        from ordered_cache import validate_loop as validate_ordered_cache
+
+        ordered_cache_programs = validate_ordered_cache(path.parent, loop)
         counts.append(
             {
                 "loop_count": loop["loop_count"],
                 "files": len(loop["files"]),
                 "masters": len(loop["masters"]),
                 "cache": loop["cache"]["available"],
+                "ordered_cache_programs": ordered_cache_programs,
             }
         )
     migration = root / "provenance/migration.json"
     if migration.exists():
+        from ordered_cache import retired_dfs_files
+
+        retired = retired_dfs_files(root)
         for item in read_json(migration)["files"]:
-            if file_record(checked_path(root, item["path"])) != {
-                k: item[k] for k in ("sha256", "bytes")
-            }:
+            record = {k: item[k] for k in ("sha256", "bytes")}
+            if item["path"] in retired:
+                # Retired depth-first caches: Git history keeps the bytes.
+                if retired[item["path"]] != record or checked_path(root, item["path"]).exists():
+                    raise ValueError(f"retired migrated payload differs from its receipt: {item['path']}")
+                continue
+            if file_record(checked_path(root, item["path"])) != record:
                 raise ValueError(f"original migrated payload changed: {item['path']}")
     evidence = root / "validation/manifest.json"
     if evidence.exists():
