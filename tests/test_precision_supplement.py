@@ -901,10 +901,12 @@ class ExactSymbolicRewriteTests(unittest.TestCase):
             precision.validate_master(self.update, self.master, self.root)
         self.write_rewrite(rows)
         precision.validate_master(self.update, self.master, self.root)
-        # The rewrite may not add or drop rows.
-        self.write_rewrite(rows[:2])
-        with self.assertRaisesRegex(ValueError, "changes epsilon rows"):
-            precision.validate_master(self.update, self.master, self.root)
+        # The rewrite may not add or drop rows, also when the receipt lists the dropped row.
+        full = copy.deepcopy(self.receipt["rewrites"][self.identity]["rows"])
+        for receipt_rows in [None, full]:
+            self.write_rewrite(rows[:2], receipt_rows)
+            with self.assertRaisesRegex(ValueError, "changes epsilon rows"):
+                precision.validate_master(self.update, self.master, self.root)
         self.write_rewrite(rows)
         # A changed preserved pre-image is detected by its checksum ...
         archive = self.root / self.archive
