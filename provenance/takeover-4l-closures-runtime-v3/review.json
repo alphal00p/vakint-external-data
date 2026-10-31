@@ -6,8 +6,8 @@
   "no_new_numerical_calculation": true,
   "original_producer_archives_not_changed_by_review": true,
   "record_count": 46,
-  "source_projection_sha256": "3550b2b24e3e2dd8b62b5bd19969dbdb7710f4bb5d4eba33fb884a44aadcc3da",
-  "registry_sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471",
+  "source_projection_sha256": "1c382252ad17575c1ade9a8807095f64f129d4fcfd44b3c329b0a207c70baaf7",
+  "registry_sha256": "003d260e5b76e7e672d5522531de3e347d8666f8a10c5cb0715785b96b095f80",
   "records": [
     {
       "symbol": "vakint::PR7D2",

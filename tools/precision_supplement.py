@@ -46,6 +46,9 @@ FORMULA_ROW_FIELDS = {
     "previous",
 }
 ADDITIONAL_SOURCE_IDS = {PR11_SOURCE_ID, FORMULA_SOURCE_ID}
+# Exact restatements of published rows (same values, other constants). The
+# receipt binds every rewritten row text to its preserved pre-rewrite text.
+REWRITE_RECEIPT_SCHEMA = "vakint.external-data.exact-symbolic-rewrite.v1"
 CAPABILITY_FIELDS = {
     "epsilon_power",
     "symbolic",
@@ -848,6 +851,74 @@ def loop_slice(update, loops):
     return {**update, "masters": masters} if masters else None
 
 
+def _symbolic_rewrite(update, identity, entry, current, root):
+    """Authenticate an exact rewrite of a supplemented symbolic payload.
+
+    A later publication may restate every exact row in other constants (for
+    example an independent constant basis) without changing its value. The
+    accepted formulas, previous files and formula evaluations above remain the
+    authority: the rewrite receipt binds each current row text to the row text
+    of the preserved pre-rewrite payload, which is returned for those checks.
+    """
+    rewrite = entry.get("symbolic_rewrite")
+    if rewrite is None:
+        return None
+    publications = update.get("provenance", {}).get("exact_symbolic_rewrites")
+    if (
+        not isinstance(rewrite, dict)
+        or set(rewrite) != {"source_publication", "previous"}
+        or not isinstance(publications, dict)
+    ):
+        raise ValueError("invalid exact symbolic rewrite")
+    publication = publications.get(rewrite["source_publication"])
+    if not isinstance(publication, dict) or set(publication) != {
+        "base_commit",
+        "receipt",
+    }:
+        raise ValueError("unknown exact symbolic rewrite publication")
+    path = data.checked_path(Path(root), publication["receipt"]["path"])
+    if data.digest(path) != publication["receipt"]["sha256"]:
+        raise ValueError("exact symbolic rewrite receipt changed")
+    receipt = data.read_json(path)
+    rewrites = receipt.get("rewrites")
+    bound = rewrites.get(identity) if isinstance(rewrites, dict) else None
+    previous = rewrite["previous"]
+    if (
+        receipt.get("schema") != REWRITE_RECEIPT_SCHEMA
+        or receipt.get("accepted") is not True
+        or receipt.get("base_commit") != publication["base_commit"]
+        or not isinstance(bound, dict)
+        or not isinstance(previous, dict)
+        or set(previous) != {"path", "sha256", "archive"}
+        or previous["path"] != entry["files"]["symbolic.json"]["path"]
+        or bound.get("path") != previous["path"]
+        or bound.get("previous_sha256") != previous["sha256"]
+        or bound.get("sha256") != entry["files"]["symbolic.json"]["sha256"]
+    ):
+        raise ValueError("exact symbolic rewrite scope differs")
+    archived = data.checked_path(Path(root), previous["archive"])
+    if data.digest(archived) != previous["sha256"]:
+        raise ValueError("preserved pre-rewrite symbolic payload changed")
+    old = json.loads(archived.read_text())
+    rows = bound.get("rows")
+    if (
+        not isinstance(rows, dict)
+        or [power for power, _ in old] != [power for power, _ in current]
+        or len(dict(old)) != len(old)
+        or set(rows) != {str(power) for power, _ in old}
+    ):
+        raise ValueError("exact symbolic rewrite changes epsilon rows")
+    for (power, before), (_, after) in zip(old, current):
+        row = rows[str(power)]
+        if (
+            not isinstance(row, dict)
+            or row.get("previous_sha256") != text_digest(before)
+            or row.get("sha256") != text_digest(after)
+        ):
+            raise ValueError("exact symbolic rewrite row differs from its receipt")
+    return old
+
+
 def validate_master(update, master, root=data.ROOT):
     entry = update["masters"][master["master_id"]]
     selected = coefficients(
@@ -857,6 +928,7 @@ def validate_master(update, master, root=data.ROOT):
     selected = selected[master["master_id"]]
     directory = Path(root) / f"{master['loop_count']}L"
     current_rows = {}
+    rewritten = None
     for name in ["numerical.json", "symbolic.json"]:
         previous, current = entry["previous_files"][name], entry["files"][name]
         if (
@@ -870,6 +942,11 @@ def validate_master(update, master, root=data.ROOT):
             raise ValueError("numerical precision payload checksum differs")
         old = json.loads(previous["contents"])
         new = data.read_json(path)
+        if name == "symbolic.json":
+            preimage = _symbolic_rewrite(update, master["master_id"], entry, new, root)
+            if preimage is not None:
+                # The checks below apply to the authenticated pre-rewrite rows.
+                rewritten, new = dict(new), preimage
         old_map, new_map = dict(old), dict(new)
         if (
             len(old_map) != len(old)
@@ -914,18 +991,27 @@ def validate_master(update, master, root=data.ROOT):
                 "replaced numerical precision payload is not an earlier upgrade"
             )
     accepted = entry.get("accepted_symbolic")
+    symbolic_sha256 = (
+        entry["files"]["symbolic.json"]["sha256"]
+        if rewritten is None
+        else entry["symbolic_rewrite"]["previous"]["sha256"]
+    )
     if accepted is not None and (
         accepted["path"] != entry["files"]["symbolic.json"]["path"]
         or text_digest(accepted["contents"]) != accepted["sha256"]
-        or accepted["sha256"] != entry["files"]["symbolic.json"]["sha256"]
+        or accepted["sha256"] != symbolic_sha256
         or dict(json.loads(accepted["contents"])) != current_rows["symbolic.json"]
     ):
         raise ValueError("numerical upgrade changed accepted exact symbolic formulas")
     for power, row in selected.items():
         value = current_rows["numerical.json"][power]
         source = entry["sources"][str(power)]
+        # A numerical-only row must stay its numerical value, also after a rewrite.
+        texts = [current_rows["symbolic.json"][power]]
+        if rewritten is not None:
+            texts.append(rewritten[power])
         if (
-            not row["symbolic"] and current_rows["symbolic.json"][power] != value
+            not row["symbolic"] and any(text != value for text in texts)
         ) or text_digest(value) != source["numerical_sha256"]:
             raise ValueError("numerical precision value differs from accepted source")
         with localcontext() as context:

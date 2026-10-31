@@ -121,7 +121,7 @@
         },
         "symbolic.json": {
           "path": "masters/P1/symbolic.json",
-          "sha256": "dd594dcff7017cbe1794877e38a83b8cce6270b9fed680135888af42dd8d6f9a"
+          "sha256": "7ebbabf5c0e7a2bda90246a7e00ec2fe722a00ccbc572d7c0e0de41fd3161517"
         },
         "graph.dot": {
           "path": "masters/P1/graph.dot",
@@ -252,16 +252,16 @@
       "bytes": 120166
     },
     "masters/P1/symbolic.json": {
-      "sha256": "dd594dcff7017cbe1794877e38a83b8cce6270b9fed680135888af42dd8d6f9a",
-      "bytes": 350
+      "sha256": "7ebbabf5c0e7a2bda90246a7e00ec2fe722a00ccbc572d7c0e0de41fd3161517",
+      "bytes": 349
     },
     "model.json": {
       "sha256": "d7e113a7e3fb019045e4c1436e03eeb3b49da85de1234f7ed1e110416079215e",
       "bytes": 3477
     },
     "producer-update.json": {
-      "sha256": "6fc5cb3ee82f85412ad19a7ed44a53be6417f353f25e4286759bcba6e2bb34d8",
-      "bytes": 17676
+      "sha256": "1ae9e85aa97ff93932b5b9f289f24d5e4bd42c84b2d52824847dbf03320d1469",
+      "bytes": 20497
     }
   },
   "producer_update": "producer-update.json"

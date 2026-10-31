@@ -778,6 +778,190 @@ class FormulaEvaluationPublicationTests(unittest.TestCase):
             )
 
 
+class ExactSymbolicRewriteTests(unittest.TestCase):
+    """A rewrite restates accepted exact rows; the accepted rows stay the authority."""
+
+    def setUp(self):
+        PrecisionSupplementTests.setUp(self)
+        entry = self.entry = self.update["masters"][self.identity]
+        self.relative = entry["files"]["symbolic.json"]["path"]
+        self.path = self.root / "4L" / self.relative
+        data.write_json(
+            self.path, [[-1, "2"], [0, "2*K5Moment(1)/2"], [1, "K5LogMoment(1)"]]
+        )
+        accepted = self.path.read_text()
+        self.previous_sha256 = data.digest(self.path)
+        entry["accepted_symbolic"] = {
+            "path": self.relative,
+            "sha256": self.previous_sha256,
+            "contents": accepted,
+        }
+        for row in entry["coefficients"]:
+            row["symbolic"] = True
+        self.archive = "provenance/rewrite-before/4L/masters/P6/symbolic.json"
+        (self.root / self.archive).parent.mkdir(parents=True, exist_ok=True)
+        (self.root / self.archive).write_text(accepted)
+        entry["symbolic_rewrite"] = {
+            "source_publication": "rewrite-v1",
+            "previous": {
+                "path": self.relative,
+                "sha256": self.previous_sha256,
+                "archive": self.archive,
+            },
+        }
+        self.write_rewrite([[-1, "2"], [0, "K5Moment(1)"], [1, "K5LogMoment(1)"]])
+
+    def write_rewrite(self, rows, receipt_rows=None):
+        """Write the rewritten payload and a receipt binding it to the preserved rows."""
+        data.write_json(self.path, rows)
+        checksum = data.digest(self.path)
+        self.entry["files"]["symbolic.json"]["sha256"] = checksum
+        self.master["files"]["symbolic.json"]["sha256"] = checksum
+        before = json.loads((self.root / self.archive).read_text())
+        self.receipt = {
+            "schema": precision.REWRITE_RECEIPT_SCHEMA,
+            "accepted": True,
+            "base_commit": "base",
+            "rewrites": {
+                self.identity: {
+                    "path": self.relative,
+                    "previous_sha256": self.entry["symbolic_rewrite"]["previous"]["sha256"],
+                    "sha256": checksum,
+                    "rows": receipt_rows
+                    or {
+                        str(power): {
+                            "previous_sha256": precision.text_digest(old),
+                            "sha256": precision.text_digest(new),
+                        }
+                        for (power, old), (_, new) in zip(before, rows)
+                    },
+                }
+            },
+        }
+        self.bind_receipt()
+
+    def bind_receipt(self):
+        path = self.root / "provenance/rewrite-v1/receipt.json"
+        data.write_json(path, self.receipt)
+        self.update["provenance"] = {
+            "exact_symbolic_rewrites": {
+                "rewrite-v1": {
+                    "base_commit": "base",
+                    "receipt": {
+                        "path": "provenance/rewrite-v1/receipt.json",
+                        "sha256": data.digest(path),
+                    },
+                }
+            }
+        }
+
+    def test_bound_rewrite_keeps_the_accepted_formulas_as_authority(self):
+        precision.validate_master(self.update, self.master, self.root)
+        update = copy.deepcopy(self.update)
+        del update["masters"][self.identity]["symbolic_rewrite"]
+        with self.assertRaisesRegex(ValueError, "changed accepted exact"):
+            precision.validate_master(update, self.master, self.root)
+
+    def test_rewrite_receipt_and_scope_mutations_are_rejected(self):
+        cases = [
+            ("receipt changed", lambda u, r: r.update(accepted=True, extra=1)),
+            ("unknown exact symbolic rewrite publication",
+             lambda u, r: u["masters"][self.identity]["symbolic_rewrite"].update(
+                 source_publication="other")),
+            ("invalid exact symbolic rewrite",
+             lambda u, r: u["masters"][self.identity]["symbolic_rewrite"].update(extra=1)),
+            ("invalid exact symbolic rewrite",
+             lambda u, r: u["provenance"].pop("exact_symbolic_rewrites")),
+        ]
+        for message, mutate in cases:
+            update, receipt = copy.deepcopy(self.update), copy.deepcopy(self.receipt)
+            mutate(update, receipt)
+            data.write_json(self.root / "provenance/rewrite-v1/receipt.json", receipt)
+            with self.subTest(message=message), self.assertRaisesRegex(ValueError, message):
+                precision.validate_master(update, self.master, self.root)
+        for field, value in [
+            ("accepted", False),
+            ("schema", "other"),
+            ("base_commit", "other"),
+        ]:
+            self.receipt = {**copy.deepcopy(self.receipt), field: value}
+            self.bind_receipt()
+            with self.subTest(field=field), self.assertRaisesRegex(ValueError, "scope differs"):
+                precision.validate_master(self.update, self.master, self.root)
+            self.setUp()
+
+    def test_rewritten_rows_must_match_their_receipt_and_preimage(self):
+        # A row edited after the rewrite (checksums updated) differs from the receipt.
+        rows = [[-1, "2"], [0, "K5Moment(1)"], [1, "K5LogMoment(1)"]]
+        receipt_rows = copy.deepcopy(self.receipt["rewrites"][self.identity]["rows"])
+        self.write_rewrite(
+            [[-1, "2"], [0, "invented_formula"], [1, "K5LogMoment(1)"]], receipt_rows
+        )
+        with self.assertRaisesRegex(ValueError, "row differs from its receipt"):
+            precision.validate_master(self.update, self.master, self.root)
+        self.write_rewrite(rows)
+        precision.validate_master(self.update, self.master, self.root)
+        # The rewrite may not add or drop rows.
+        self.write_rewrite(rows[:2])
+        with self.assertRaisesRegex(ValueError, "changes epsilon rows"):
+            precision.validate_master(self.update, self.master, self.root)
+        self.write_rewrite(rows)
+        # A changed preserved pre-image is detected by its checksum ...
+        archive = self.root / self.archive
+        archive.write_text(archive.read_text().replace("2*K5Moment", "3*K5Moment"))
+        with self.assertRaisesRegex(ValueError, "pre-rewrite symbolic payload changed"):
+            precision.validate_master(self.update, self.master, self.root)
+        # ... and a consistently rebound pre-image is not the accepted formula.
+        self.entry["symbolic_rewrite"]["previous"]["sha256"] = data.digest(archive)
+        self.write_rewrite(rows)
+        with self.assertRaisesRegex(ValueError, "changed accepted exact"):
+            precision.validate_master(self.update, self.master, self.root)
+
+    def test_rewrite_cannot_change_unselected_or_numerical_only_rows(self):
+        archive = self.root / self.archive
+        before = json.loads(archive.read_text())
+        before[0][1] = "3"
+        archive.write_text(json.dumps(before) + "\n")
+        self.entry["symbolic_rewrite"]["previous"]["sha256"] = data.digest(archive)
+        self.entry["accepted_symbolic"]["contents"] = archive.read_text()
+        self.entry["accepted_symbolic"]["sha256"] = data.digest(archive)
+        self.write_rewrite([[-1, "3"], [0, "K5Moment(1)"], [1, "K5LogMoment(1)"]])
+        with self.assertRaisesRegex(ValueError, "unselected epsilon rows"):
+            precision.validate_master(self.update, self.master, self.root)
+        self.setUp()
+        # A numerical-only row must equal its value before and after the rewrite.
+        archive = self.root / self.archive
+        self.entry["coefficients"][1]["symbolic"] = False
+        archive.write_text(json.dumps([[-1, "2"], [0, "2*K5Moment(1)/2"], [1, "3.5000000"]]) + "\n")
+        self.entry["symbolic_rewrite"]["previous"]["sha256"] = data.digest(archive)
+        self.entry["accepted_symbolic"]["contents"] = archive.read_text()
+        self.entry["accepted_symbolic"]["sha256"] = data.digest(archive)
+        self.write_rewrite([[-1, "2"], [0, "K5Moment(1)"], [1, "3.5000000"]])
+        precision.validate_master(self.update, self.master, self.root)
+        self.write_rewrite([[-1, "2"], [0, "K5Moment(1)"], [1, "7/2"]])
+        with self.assertRaisesRegex(ValueError, "differs from accepted source"):
+            precision.validate_master(self.update, self.master, self.root)
+
+    def test_published_rewrite_binds_every_supplemented_symbolic_payload(self):
+        update = data.read_json(data.ROOT / precision.RECEIPT)
+        publications = update["provenance"].get("exact_symbolic_rewrites", {})
+        for name, publication in publications.items():
+            receipt = data.read_json(data.ROOT / publication["receipt"]["path"])
+            bound = {
+                identity
+                for identity, entry in update["masters"].items()
+                if entry.get("symbolic_rewrite", {}).get("source_publication") == name
+            }
+            self.assertTrue(bound)
+            self.assertLessEqual(bound, set(receipt["rewrites"]))
+            for identity in bound:
+                entry = update["masters"][identity]
+                self.assertEqual(
+                    receipt["rewrites"][identity]["sha256"],
+                    entry["files"]["symbolic.json"]["sha256"],
+                )
+
+
 class OracleCoverageCorrectionTests(unittest.TestCase):
     def setUp(self):
         self.provenance = data.read_json(data.ROOT / precision.RECEIPT)["provenance"]

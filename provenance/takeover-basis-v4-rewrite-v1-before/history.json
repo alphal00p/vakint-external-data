@@ -1,0 +1,697 @@
+{
+  "schema": "vakint.external-data.preimage-history.v1",
+  "base_commit": "f51bc5a29d65ea04f50c7e8beb8ef7b9d9432136",
+  "parent_commit": "f51bc5a29d65ea04f50c7e8beb8ef7b9d9432136",
+  "files": [
+    {
+      "path": "1L/manifest.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/1L/manifest.json",
+      "sha256": "acfc96c88b1cab5313a671687a1bb5dddde836ae7b1dc5920b2c27c5a358638c"
+    },
+    {
+      "path": "1L/masters/P1/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/1L/masters/P1/symbolic.json",
+      "sha256": "dd594dcff7017cbe1794877e38a83b8cce6270b9fed680135888af42dd8d6f9a"
+    },
+    {
+      "path": "1L/producer-update.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/1L/producer-update.json",
+      "sha256": "6fc5cb3ee82f85412ad19a7ed44a53be6417f353f25e4286759bcba6e2bb34d8"
+    },
+    {
+      "path": "2L/manifest.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/2L/manifest.json",
+      "sha256": "03300b42d6f1c0ad43ee77f8e4c4e451af0691f5d553f559afc76dfa0dcfa31b"
+    },
+    {
+      "path": "2L/masters/P1/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/2L/masters/P1/symbolic.json",
+      "sha256": "8ccd6def581567d7a52516ceecc556883b8bbaae0937914af06406fe89e46da8"
+    },
+    {
+      "path": "2L/masters/P2/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/2L/masters/P2/symbolic.json",
+      "sha256": "141b9f78676e63b4aeaf6bf5b09bdffc66109f5fd4f64cb875069924a627f0cd"
+    },
+    {
+      "path": "2L/producer-update.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/2L/producer-update.json",
+      "sha256": "b517990df60e2bfdbaa37d56de5045029ff563f14c7e98f798f520acd3a92576"
+    },
+    {
+      "path": "3L/manifest.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/3L/manifest.json",
+      "sha256": "9950e1bfef8a69d8952f315c1072ceeaa92588e0d1622a8c789a9d183ce67214"
+    },
+    {
+      "path": "3L/masters/P1/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/3L/masters/P1/symbolic.json",
+      "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856"
+    },
+    {
+      "path": "3L/masters/P10/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/3L/masters/P10/symbolic.json",
+      "sha256": "602be2f4abe38838b6cbfcb74878d540888c6ac0489833812d5c301fd157527e"
+    },
+    {
+      "path": "3L/masters/P11/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/3L/masters/P11/symbolic.json",
+      "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856"
+    },
+    {
+      "path": "3L/masters/P12/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/3L/masters/P12/symbolic.json",
+      "sha256": "602be2f4abe38838b6cbfcb74878d540888c6ac0489833812d5c301fd157527e"
+    },
+    {
+      "path": "3L/masters/P13/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/3L/masters/P13/symbolic.json",
+      "sha256": "8ea9b45152d86e95a29c1b3593ef5427b8d8c29dd1c2b0a4b66b1a4e34648bfc"
+    },
+    {
+      "path": "3L/masters/P14/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/3L/masters/P14/symbolic.json",
+      "sha256": "b730ddd13db1aee0d620ecf46d89a384f7ab34c296579022d97df21791d9ce64"
+    },
+    {
+      "path": "3L/masters/P15/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/3L/masters/P15/symbolic.json",
+      "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856"
+    },
+    {
+      "path": "3L/masters/P16/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/3L/masters/P16/symbolic.json",
+      "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856"
+    },
+    {
+      "path": "3L/masters/P17/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/3L/masters/P17/symbolic.json",
+      "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856"
+    },
+    {
+      "path": "3L/masters/P18/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/3L/masters/P18/symbolic.json",
+      "sha256": "602be2f4abe38838b6cbfcb74878d540888c6ac0489833812d5c301fd157527e"
+    },
+    {
+      "path": "3L/masters/P19/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/3L/masters/P19/symbolic.json",
+      "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856"
+    },
+    {
+      "path": "3L/masters/P2/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/3L/masters/P2/symbolic.json",
+      "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856"
+    },
+    {
+      "path": "3L/masters/P20/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/3L/masters/P20/symbolic.json",
+      "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856"
+    },
+    {
+      "path": "3L/masters/P21/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/3L/masters/P21/symbolic.json",
+      "sha256": "8ea9b45152d86e95a29c1b3593ef5427b8d8c29dd1c2b0a4b66b1a4e34648bfc"
+    },
+    {
+      "path": "3L/masters/P22/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/3L/masters/P22/symbolic.json",
+      "sha256": "602be2f4abe38838b6cbfcb74878d540888c6ac0489833812d5c301fd157527e"
+    },
+    {
+      "path": "3L/masters/P23/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/3L/masters/P23/symbolic.json",
+      "sha256": "602be2f4abe38838b6cbfcb74878d540888c6ac0489833812d5c301fd157527e"
+    },
+    {
+      "path": "3L/masters/P24/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/3L/masters/P24/symbolic.json",
+      "sha256": "b730ddd13db1aee0d620ecf46d89a384f7ab34c296579022d97df21791d9ce64"
+    },
+    {
+      "path": "3L/masters/P25/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/3L/masters/P25/symbolic.json",
+      "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856"
+    },
+    {
+      "path": "3L/masters/P26/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/3L/masters/P26/symbolic.json",
+      "sha256": "602be2f4abe38838b6cbfcb74878d540888c6ac0489833812d5c301fd157527e"
+    },
+    {
+      "path": "3L/masters/P27/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/3L/masters/P27/symbolic.json",
+      "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856"
+    },
+    {
+      "path": "3L/masters/P28/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/3L/masters/P28/symbolic.json",
+      "sha256": "8ea9b45152d86e95a29c1b3593ef5427b8d8c29dd1c2b0a4b66b1a4e34648bfc"
+    },
+    {
+      "path": "3L/masters/P29/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/3L/masters/P29/symbolic.json",
+      "sha256": "602be2f4abe38838b6cbfcb74878d540888c6ac0489833812d5c301fd157527e"
+    },
+    {
+      "path": "3L/masters/P3/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/3L/masters/P3/symbolic.json",
+      "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856"
+    },
+    {
+      "path": "3L/masters/P30/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/3L/masters/P30/symbolic.json",
+      "sha256": "b730ddd13db1aee0d620ecf46d89a384f7ab34c296579022d97df21791d9ce64"
+    },
+    {
+      "path": "3L/masters/P31/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/3L/masters/P31/symbolic.json",
+      "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856"
+    },
+    {
+      "path": "3L/masters/P32/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/3L/masters/P32/symbolic.json",
+      "sha256": "602be2f4abe38838b6cbfcb74878d540888c6ac0489833812d5c301fd157527e"
+    },
+    {
+      "path": "3L/masters/P33/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/3L/masters/P33/symbolic.json",
+      "sha256": "602be2f4abe38838b6cbfcb74878d540888c6ac0489833812d5c301fd157527e"
+    },
+    {
+      "path": "3L/masters/P34/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/3L/masters/P34/symbolic.json",
+      "sha256": "b730ddd13db1aee0d620ecf46d89a384f7ab34c296579022d97df21791d9ce64"
+    },
+    {
+      "path": "3L/masters/P35/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/3L/masters/P35/symbolic.json",
+      "sha256": "602be2f4abe38838b6cbfcb74878d540888c6ac0489833812d5c301fd157527e"
+    },
+    {
+      "path": "3L/masters/P36/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/3L/masters/P36/symbolic.json",
+      "sha256": "b730ddd13db1aee0d620ecf46d89a384f7ab34c296579022d97df21791d9ce64"
+    },
+    {
+      "path": "3L/masters/P37/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/3L/masters/P37/symbolic.json",
+      "sha256": "b730ddd13db1aee0d620ecf46d89a384f7ab34c296579022d97df21791d9ce64"
+    },
+    {
+      "path": "3L/masters/P38/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/3L/masters/P38/symbolic.json",
+      "sha256": "54254d33ee69402517934b192cfa3bea904909d254296e8d37c95eb985aeba9e"
+    },
+    {
+      "path": "3L/masters/P4/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/3L/masters/P4/symbolic.json",
+      "sha256": "602be2f4abe38838b6cbfcb74878d540888c6ac0489833812d5c301fd157527e"
+    },
+    {
+      "path": "3L/masters/P5/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/3L/masters/P5/symbolic.json",
+      "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856"
+    },
+    {
+      "path": "3L/masters/P6/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/3L/masters/P6/symbolic.json",
+      "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856"
+    },
+    {
+      "path": "3L/masters/P7/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/3L/masters/P7/symbolic.json",
+      "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856"
+    },
+    {
+      "path": "3L/masters/P8/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/3L/masters/P8/symbolic.json",
+      "sha256": "602be2f4abe38838b6cbfcb74878d540888c6ac0489833812d5c301fd157527e"
+    },
+    {
+      "path": "3L/masters/P9/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/3L/masters/P9/symbolic.json",
+      "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856"
+    },
+    {
+      "path": "3L/numerical-precision-supplement.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/3L/numerical-precision-supplement.json",
+      "sha256": "5d88b22e1130ad334446077d72c750d4c433e42cfb2d38967fcc24742f98570f"
+    },
+    {
+      "path": "3L/producer-update.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/3L/producer-update.json",
+      "sha256": "6f587bfb02edaa8e843bd4ec2b027ff333b61ce45aebf48f9e75c4e80232d3b2"
+    },
+    {
+      "path": "4L/constants.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/constants.json",
+      "sha256": "981d59a731665eb81a45374013249b3ca7f55f51142c592b68f1c16994fc8811"
+    },
+    {
+      "path": "4L/manifest.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/manifest.json",
+      "sha256": "942f974be071c2dca93f143df1374c2b2bb64321b23d83acd793b25b2762fbaf"
+    },
+    {
+      "path": "4L/masters/P1/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P1/symbolic.json",
+      "sha256": "356a05df0eb7048fca00edcef5546f4735cac3b1d762cdceea82bf2a43e2fcff"
+    },
+    {
+      "path": "4L/masters/P10/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P10/symbolic.json",
+      "sha256": "f30c62eb39a1ec77e5751388bbb2291aec87b98e4faff11a1ab7f9ad322d4e0f"
+    },
+    {
+      "path": "4L/masters/P11/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P11/symbolic.json",
+      "sha256": "2ba11cfbeeeed744e568d61496cdfc378b155fb84c4ef5f9345d780463f54a7a"
+    },
+    {
+      "path": "4L/masters/P12/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P12/symbolic.json",
+      "sha256": "07bbd518c93ac65c6a26dc2bb926635d743869a873745ca57cace5f7660d90e5"
+    },
+    {
+      "path": "4L/masters/P13/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P13/symbolic.json",
+      "sha256": "92415beef17aec86199b4f299d8f4e83f503464e214d0b9a4dedf4536c7b3805"
+    },
+    {
+      "path": "4L/masters/P14/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P14/symbolic.json",
+      "sha256": "a26d1567bf1dcd8ae2c3c33512f68705bf65c1f0310c409cdbf0620ba1e09f47"
+    },
+    {
+      "path": "4L/masters/P15/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P15/symbolic.json",
+      "sha256": "d64142b946be7f545134467e124d946e5cdfd8da2a0699a850b46426b5f14418"
+    },
+    {
+      "path": "4L/masters/P16/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P16/symbolic.json",
+      "sha256": "6fa7df18b463ecdc8fd9a660467bebce1a0f1a152ab8f424506bcee65d09b180"
+    },
+    {
+      "path": "4L/masters/P17/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P17/symbolic.json",
+      "sha256": "ec2c754b6542c45e7c73f66951552123ccff9d9492b387db17e277fea04859a7"
+    },
+    {
+      "path": "4L/masters/P18/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P18/symbolic.json",
+      "sha256": "cf0df223fdf796505ebf9979379ce3285b7ab7d33878a3f389c6ba449d141348"
+    },
+    {
+      "path": "4L/masters/P19/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P19/symbolic.json",
+      "sha256": "8d949738d45206aedf312518c5c877bbe428964e886e99a3be5b751f430a5a08"
+    },
+    {
+      "path": "4L/masters/P2/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P2/symbolic.json",
+      "sha256": "5c59346c18e31787ce4816f9bf6863500671431049d4010b4b691521321d5a8e"
+    },
+    {
+      "path": "4L/masters/P20/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P20/symbolic.json",
+      "sha256": "356a05df0eb7048fca00edcef5546f4735cac3b1d762cdceea82bf2a43e2fcff"
+    },
+    {
+      "path": "4L/masters/P21/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P21/symbolic.json",
+      "sha256": "5c59346c18e31787ce4816f9bf6863500671431049d4010b4b691521321d5a8e"
+    },
+    {
+      "path": "4L/masters/P22/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P22/symbolic.json",
+      "sha256": "8c57c93af5a41a196ab6c68cac41a1ea82a8b0715422e1c846900a6cdb0a3859"
+    },
+    {
+      "path": "4L/masters/P23/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P23/symbolic.json",
+      "sha256": "a1496b2a148dd993396bb6d1dc38331d41e5c2c3e602431942e0bebaa9321b4f"
+    },
+    {
+      "path": "4L/masters/P24/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P24/symbolic.json",
+      "sha256": "92181fe30eb495068fc1b875fc979f73843740f9b945130e71a5a645982dee83"
+    },
+    {
+      "path": "4L/masters/P25/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P25/symbolic.json",
+      "sha256": "e31923d0765a6e14ac9b051508860c19659ab10f524944bbbc3c69288ce13e30"
+    },
+    {
+      "path": "4L/masters/P26/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P26/symbolic.json",
+      "sha256": "07bbd518c93ac65c6a26dc2bb926635d743869a873745ca57cace5f7660d90e5"
+    },
+    {
+      "path": "4L/masters/P27/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P27/symbolic.json",
+      "sha256": "92415beef17aec86199b4f299d8f4e83f503464e214d0b9a4dedf4536c7b3805"
+    },
+    {
+      "path": "4L/masters/P28/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P28/symbolic.json",
+      "sha256": "9e9a5851c1760ca2639e66e6cd21f348e58656e69e81d5d464fbcf2319c52602"
+    },
+    {
+      "path": "4L/masters/P29/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P29/symbolic.json",
+      "sha256": "2ba11cfbeeeed744e568d61496cdfc378b155fb84c4ef5f9345d780463f54a7a"
+    },
+    {
+      "path": "4L/masters/P3/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P3/symbolic.json",
+      "sha256": "8c57c93af5a41a196ab6c68cac41a1ea82a8b0715422e1c846900a6cdb0a3859"
+    },
+    {
+      "path": "4L/masters/P30/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P30/symbolic.json",
+      "sha256": "d25c90befa6c823f963030fa6a71ca53e216d0dd46150d20cf1c990ca7192aac"
+    },
+    {
+      "path": "4L/masters/P31/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P31/symbolic.json",
+      "sha256": "842acaa9d1e198d927be064ad52d039293ff32f774a794ed85459f519a9e2333"
+    },
+    {
+      "path": "4L/masters/P32/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P32/symbolic.json",
+      "sha256": "a5b33aa29e719fe1dca1e01188bbf64071b08c2590e93a2bdb58aaada49af2f8"
+    },
+    {
+      "path": "4L/masters/P33/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P33/symbolic.json",
+      "sha256": "21618474c9fe664a04ad8d99197d6edf1ebcf171f3c2925a65e5888c2c3391a2"
+    },
+    {
+      "path": "4L/masters/P34/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P34/symbolic.json",
+      "sha256": "c2250b33e540abfc0f21e5f834cb79f2b29e99df8077a5935eeb9067aa50447d"
+    },
+    {
+      "path": "4L/masters/P35/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P35/symbolic.json",
+      "sha256": "6fa7df18b463ecdc8fd9a660467bebce1a0f1a152ab8f424506bcee65d09b180"
+    },
+    {
+      "path": "4L/masters/P36/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P36/symbolic.json",
+      "sha256": "356a05df0eb7048fca00edcef5546f4735cac3b1d762cdceea82bf2a43e2fcff"
+    },
+    {
+      "path": "4L/masters/P37/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P37/symbolic.json",
+      "sha256": "5c59346c18e31787ce4816f9bf6863500671431049d4010b4b691521321d5a8e"
+    },
+    {
+      "path": "4L/masters/P38/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P38/symbolic.json",
+      "sha256": "8c57c93af5a41a196ab6c68cac41a1ea82a8b0715422e1c846900a6cdb0a3859"
+    },
+    {
+      "path": "4L/masters/P39/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P39/symbolic.json",
+      "sha256": "a1496b2a148dd993396bb6d1dc38331d41e5c2c3e602431942e0bebaa9321b4f"
+    },
+    {
+      "path": "4L/masters/P4/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P4/symbolic.json",
+      "sha256": "a1496b2a148dd993396bb6d1dc38331d41e5c2c3e602431942e0bebaa9321b4f"
+    },
+    {
+      "path": "4L/masters/P40/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P40/symbolic.json",
+      "sha256": "d25c90befa6c823f963030fa6a71ca53e216d0dd46150d20cf1c990ca7192aac"
+    },
+    {
+      "path": "4L/masters/P41/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P41/symbolic.json",
+      "sha256": "92181fe30eb495068fc1b875fc979f73843740f9b945130e71a5a645982dee83"
+    },
+    {
+      "path": "4L/masters/P42/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P42/symbolic.json",
+      "sha256": "e31923d0765a6e14ac9b051508860c19659ab10f524944bbbc3c69288ce13e30"
+    },
+    {
+      "path": "4L/masters/P43/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P43/symbolic.json",
+      "sha256": "a5b33aa29e719fe1dca1e01188bbf64071b08c2590e93a2bdb58aaada49af2f8"
+    },
+    {
+      "path": "4L/masters/P44/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P44/symbolic.json",
+      "sha256": "9e9a5851c1760ca2639e66e6cd21f348e58656e69e81d5d464fbcf2319c52602"
+    },
+    {
+      "path": "4L/masters/P45/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P45/symbolic.json",
+      "sha256": "f30c62eb39a1ec77e5751388bbb2291aec87b98e4faff11a1ab7f9ad322d4e0f"
+    },
+    {
+      "path": "4L/masters/P46/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P46/symbolic.json",
+      "sha256": "2ba11cfbeeeed744e568d61496cdfc378b155fb84c4ef5f9345d780463f54a7a"
+    },
+    {
+      "path": "4L/masters/P47/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P47/symbolic.json",
+      "sha256": "07bbd518c93ac65c6a26dc2bb926635d743869a873745ca57cace5f7660d90e5"
+    },
+    {
+      "path": "4L/masters/P48/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P48/symbolic.json",
+      "sha256": "92415beef17aec86199b4f299d8f4e83f503464e214d0b9a4dedf4536c7b3805"
+    },
+    {
+      "path": "4L/masters/P49/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P49/symbolic.json",
+      "sha256": "a26d1567bf1dcd8ae2c3c33512f68705bf65c1f0310c409cdbf0620ba1e09f47"
+    },
+    {
+      "path": "4L/masters/P5/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P5/symbolic.json",
+      "sha256": "d25c90befa6c823f963030fa6a71ca53e216d0dd46150d20cf1c990ca7192aac"
+    },
+    {
+      "path": "4L/masters/P50/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P50/symbolic.json",
+      "sha256": "d64142b946be7f545134467e124d946e5cdfd8da2a0699a850b46426b5f14418"
+    },
+    {
+      "path": "4L/masters/P51/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P51/symbolic.json",
+      "sha256": "6fa7df18b463ecdc8fd9a660467bebce1a0f1a152ab8f424506bcee65d09b180"
+    },
+    {
+      "path": "4L/masters/P52/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P52/symbolic.json",
+      "sha256": "ec2c754b6542c45e7c73f66951552123ccff9d9492b387db17e277fea04859a7"
+    },
+    {
+      "path": "4L/masters/P53/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P53/symbolic.json",
+      "sha256": "356a05df0eb7048fca00edcef5546f4735cac3b1d762cdceea82bf2a43e2fcff"
+    },
+    {
+      "path": "4L/masters/P54/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P54/symbolic.json",
+      "sha256": "5c59346c18e31787ce4816f9bf6863500671431049d4010b4b691521321d5a8e"
+    },
+    {
+      "path": "4L/masters/P55/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P55/symbolic.json",
+      "sha256": "8c57c93af5a41a196ab6c68cac41a1ea82a8b0715422e1c846900a6cdb0a3859"
+    },
+    {
+      "path": "4L/masters/P56/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P56/symbolic.json",
+      "sha256": "a1496b2a148dd993396bb6d1dc38331d41e5c2c3e602431942e0bebaa9321b4f"
+    },
+    {
+      "path": "4L/masters/P57/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P57/symbolic.json",
+      "sha256": "d25c90befa6c823f963030fa6a71ca53e216d0dd46150d20cf1c990ca7192aac"
+    },
+    {
+      "path": "4L/masters/P58/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P58/symbolic.json",
+      "sha256": "842acaa9d1e198d927be064ad52d039293ff32f774a794ed85459f519a9e2333"
+    },
+    {
+      "path": "4L/masters/P59/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P59/symbolic.json",
+      "sha256": "92181fe30eb495068fc1b875fc979f73843740f9b945130e71a5a645982dee83"
+    },
+    {
+      "path": "4L/masters/P6/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P6/symbolic.json",
+      "sha256": "92181fe30eb495068fc1b875fc979f73843740f9b945130e71a5a645982dee83"
+    },
+    {
+      "path": "4L/masters/P60/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P60/symbolic.json",
+      "sha256": "e31923d0765a6e14ac9b051508860c19659ab10f524944bbbc3c69288ce13e30"
+    },
+    {
+      "path": "4L/masters/P61/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P61/symbolic.json",
+      "sha256": "07bbd518c93ac65c6a26dc2bb926635d743869a873745ca57cace5f7660d90e5"
+    },
+    {
+      "path": "4L/masters/P62/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P62/symbolic.json",
+      "sha256": "92415beef17aec86199b4f299d8f4e83f503464e214d0b9a4dedf4536c7b3805"
+    },
+    {
+      "path": "4L/masters/P63/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P63/symbolic.json",
+      "sha256": "a5b33aa29e719fe1dca1e01188bbf64071b08c2590e93a2bdb58aaada49af2f8"
+    },
+    {
+      "path": "4L/masters/P64/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P64/symbolic.json",
+      "sha256": "21618474c9fe664a04ad8d99197d6edf1ebcf171f3c2925a65e5888c2c3391a2"
+    },
+    {
+      "path": "4L/masters/P65/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P65/symbolic.json",
+      "sha256": "c2250b33e540abfc0f21e5f834cb79f2b29e99df8077a5935eeb9067aa50447d"
+    },
+    {
+      "path": "4L/masters/P66/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P66/symbolic.json",
+      "sha256": "9e9a5851c1760ca2639e66e6cd21f348e58656e69e81d5d464fbcf2319c52602"
+    },
+    {
+      "path": "4L/masters/P67/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P67/symbolic.json",
+      "sha256": "d64142b946be7f545134467e124d946e5cdfd8da2a0699a850b46426b5f14418"
+    },
+    {
+      "path": "4L/masters/P68/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P68/symbolic.json",
+      "sha256": "2ba11cfbeeeed744e568d61496cdfc378b155fb84c4ef5f9345d780463f54a7a"
+    },
+    {
+      "path": "4L/masters/P69/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P69/symbolic.json",
+      "sha256": "a26d1567bf1dcd8ae2c3c33512f68705bf65c1f0310c409cdbf0620ba1e09f47"
+    },
+    {
+      "path": "4L/masters/P7/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P7/symbolic.json",
+      "sha256": "e31923d0765a6e14ac9b051508860c19659ab10f524944bbbc3c69288ce13e30"
+    },
+    {
+      "path": "4L/masters/P70/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P70/symbolic.json",
+      "sha256": "0e62c4a93d788ec7845d7203f1ae22ba03691998a90623887101f386d49b1d62"
+    },
+    {
+      "path": "4L/masters/P71/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P71/symbolic.json",
+      "sha256": "6fa7df18b463ecdc8fd9a660467bebce1a0f1a152ab8f424506bcee65d09b180"
+    },
+    {
+      "path": "4L/masters/P72/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P72/symbolic.json",
+      "sha256": "f30c62eb39a1ec77e5751388bbb2291aec87b98e4faff11a1ab7f9ad322d4e0f"
+    },
+    {
+      "path": "4L/masters/P73/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P73/symbolic.json",
+      "sha256": "8d949738d45206aedf312518c5c877bbe428964e886e99a3be5b751f430a5a08"
+    },
+    {
+      "path": "4L/masters/P74/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P74/symbolic.json",
+      "sha256": "ec2c754b6542c45e7c73f66951552123ccff9d9492b387db17e277fea04859a7"
+    },
+    {
+      "path": "4L/masters/P8/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P8/symbolic.json",
+      "sha256": "a5b33aa29e719fe1dca1e01188bbf64071b08c2590e93a2bdb58aaada49af2f8"
+    },
+    {
+      "path": "4L/masters/P9/symbolic.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P9/symbolic.json",
+      "sha256": "9e9a5851c1760ca2639e66e6cd21f348e58656e69e81d5d464fbcf2319c52602"
+    },
+    {
+      "path": "4L/numerical-precision-supplement.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/numerical-precision-supplement.json",
+      "sha256": "f330703ab34eaf127ad6fc939d9342edb63fde4ea224c734f51e0cbbb14bfeeb"
+    },
+    {
+      "path": "4L/producer-update.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/producer-update.json",
+      "sha256": "423301bd81168fd2e17f4e16e01bb8f1126763ac6bf893b56cd725f5024ec663"
+    },
+    {
+      "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
+      "sha256": "07eb337e2bc40c0d8f25df87e89c7828cb5b895296262a91e18f28f7f81b3471"
+    },
+    {
+      "path": "manifest.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/manifest.json",
+      "sha256": "0e2e020c36d6acf7a2e15b2666c8f0d40b40bc384269c0e3c8fc6347b342f961"
+    },
+    {
+      "path": "provenance/finite-constant-bindings.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/provenance/finite-constant-bindings.json",
+      "sha256": "3bffcc77042dae0e38519a8451aac375b138d45ac6cfd5a485cf2571e2fb47e1"
+    },
+    {
+      "path": "provenance/migration.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/provenance/migration.json",
+      "sha256": "8d4088edc2ba4350ccfe91154aeddb355d271997c5257e98d288f2b77ccb5a1a"
+    },
+    {
+      "path": "provenance/numerical-precision-supplement.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/provenance/numerical-precision-supplement.json",
+      "sha256": "e38e4eedfaa283bb29e4fa399e52c2ddb898df06afef603a16cccc190874b36e"
+    },
+    {
+      "path": "provenance/producer-update.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/provenance/producer-update.json",
+      "sha256": "bdf55ef6b2a9c40a252a4b43c2eb7ba2ec0b4a83c12f99b85255c0f3a3e9202b"
+    },
+    {
+      "path": "provenance/takeover-4l-closures-runtime-v3/README.md",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/provenance/takeover-4l-closures-runtime-v3/README.md",
+      "sha256": "eb6d0271c1cc8ab9d40ba6d066e069fb49acc29c514c5362c32b7c352bc8818a"
+    },
+    {
+      "path": "provenance/takeover-4l-closures-runtime-v3/constants-takeover-v3.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/provenance/takeover-4l-closures-runtime-v3/constants-takeover-v3.json",
+      "sha256": "3550b2b24e3e2dd8b62b5bd19969dbdb7710f4bb5d4eba33fb884a44aadcc3da"
+    },
+    {
+      "path": "provenance/takeover-4l-closures-runtime-v3/projection.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/provenance/takeover-4l-closures-runtime-v3/projection.json",
+      "sha256": "4f834edd4d7dab48e899a2686dfb4d0837b45a7a44d9b192c6ed1aeed3118a5b"
+    },
+    {
+      "path": "provenance/takeover-4l-closures-runtime-v3/review.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/provenance/takeover-4l-closures-runtime-v3/review.json",
+      "sha256": "b3b6452fe45f5360d811eb0027c953c97f8a0bff6f36a4f7b2eea08a935d6493"
+    },
+    {
+      "path": "validation/manifest.json",
+      "preserved_path": "provenance/takeover-basis-v4-rewrite-v1-before/validation/manifest.json",
+      "sha256": "e014650e677ce807750d094519b4b995b0667347c3cbbf23ff02290d68f776d0"
+    }
+  ],
+  "created_files": [
+    "provenance/takeover-basis-v4-rewrite-v1/receipt.json",
+    "provenance/takeover-basis-v4-rewrite-v1/basis-v4.json",
+    "provenance/takeover-basis-v4-rewrite-v1/portable-proof-index.json"
+  ]
+}

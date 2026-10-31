@@ -1,0 +1,1767 @@
+{
+  "schema": "vakint.external-data.constant-basis.v1",
+  "name": "basis-v4",
+  "publication": "takeover-basis-v4-rewrite-v1",
+  "base_commit": "f51bc5a29d65ea04f50c7e8beb8ef7b9d9432136",
+  "n_generators": 68,
+  "plus": "sqrt(3) = 3^(1/2) as explicit parity factor (algebraic, not a generator): multiplies exactly the monomials with an odd number of Im-type factors (pi, Cl2, Cl4, Im Li3(i/sqrt3), Im Li4(i/sqrt3), the three ImG, T111bar4) -- verified on every term",
+  "conventions": {
+    "heads": "vakint::Integral(f, vakint::Interval(x,a,b), ...) first interval outermost; vakint::LoopIntegral(D, f, k(1..L)) = prod_i int d^D k_i/pi^(D/2) f (Euclidean); vakint::SeriesCoefficient(f, x, 0, n) = coefficient of x^n (not the derivative); vakint::EuclideanDot",
+    "bound_variables": "vakint::t, vakint::x(i), vakint::k(i), vakint::ep (d = 4-2ep), vakint::delta (D = 2-2delta)",
+    "native": "𝜋, 𝑒, 𝑖, symbolica::γ (Euler gamma), log, sin, symbolica::gamma, symbolica::bessel_k, symbolica::real_part/imaginary_part",
+    "no_named_constant_inside": true
+  },
+  "scope": "every exact 1L-4L master coefficient row of this repository is a polynomial with rational coefficients in these 68 generators (times 3^(1/2) for odd parity); no other constant occurs",
+  "generators": [
+    {
+      "index": 1,
+      "symbol": "𝜋",
+      "pretty": "π",
+      "meaning": "pi",
+      "sector": "MZV",
+      "weight": 1,
+      "parity": "Im",
+      "definition": "vakint::Integral((1+vakint::t^2)^(-1)*4,vakint::Interval(vakint::t,0,1))",
+      "definition_readable": "Integral(4/(1+t^2),Interval(t,0,1))",
+      "normalisation": "plain real number; no loop measure involved",
+      "definition_source": "new (basis-v3 src/defs.py)",
+      "definition_check": {
+        "method": "direct numerical evaluation of the definition atom (mpmath tanh-sinh quadrature, 50 working digits)",
+        "agreement_digits": 50.0
+      },
+      "value": {
+        "digits": "unlimited (classical constant)",
+        "how": "PARI/GP 2.17.3 (zeta, log, polylog, polylogmult), Symbolica native; HSS 4000-digit table for the GPLs; used here up to 19900 digits",
+        "status": "EXACT constant"
+      },
+      "rows_using": 477
+    },
+    {
+      "index": 2,
+      "symbol": "symbolica::zeta(3)",
+      "pretty": "ζ3",
+      "meaning": "Riemann zeta(3)",
+      "sector": "MZV",
+      "weight": 3,
+      "parity": "Re",
+      "definition": "1/2*vakint::Integral((-1*vakint::t+1)^(-1)*(log(vakint::t))^2,vakint::Interval(vakint::t,0,1))",
+      "definition_readable": "1/2*Integral(log(t)^2/(1-t),Interval(t,0,1))",
+      "normalisation": "plain real number; no loop measure involved",
+      "definition_source": "new (basis-v3 src/defs.py)",
+      "definition_check": {
+        "method": "direct numerical evaluation of the definition atom (mpmath tanh-sinh quadrature, 50 working digits)",
+        "agreement_digits": 50.0
+      },
+      "value": {
+        "digits": "unlimited (classical constant)",
+        "how": "PARI/GP 2.17.3 (zeta, log, polylog, polylogmult), Symbolica native; HSS 4000-digit table for the GPLs; used here up to 19900 digits",
+        "status": "EXACT constant"
+      },
+      "rows_using": 392
+    },
+    {
+      "index": 3,
+      "symbol": "symbolica::zeta(5)",
+      "pretty": "ζ5",
+      "meaning": "Riemann zeta(5)",
+      "sector": "MZV",
+      "weight": 5,
+      "parity": "Re",
+      "definition": "1/24*vakint::Integral((-1*vakint::t+1)^(-1)*(log(vakint::t))^4,vakint::Interval(vakint::t,0,1))",
+      "definition_readable": "1/24*Integral(log(t)^4/(1-t),Interval(t,0,1))",
+      "normalisation": "plain real number; no loop measure involved",
+      "definition_source": "new (basis-v3 src/defs.py)",
+      "definition_check": {
+        "method": "direct numerical evaluation of the definition atom (mpmath tanh-sinh quadrature, 50 working digits)",
+        "agreement_digits": 49.63
+      },
+      "value": {
+        "digits": "unlimited (classical constant)",
+        "how": "PARI/GP 2.17.3 (zeta, log, polylog, polylogmult), Symbolica native; HSS 4000-digit table for the GPLs; used here up to 19900 digits",
+        "status": "EXACT constant"
+      },
+      "rows_using": 176
+    },
+    {
+      "index": 4,
+      "symbol": "symbolica::zeta(7)",
+      "pretty": "ζ7",
+      "meaning": "Riemann zeta(7)",
+      "sector": "MZV",
+      "weight": 7,
+      "parity": "Re",
+      "definition": "1/720*vakint::Integral((-1*vakint::t+1)^(-1)*(log(vakint::t))^6,vakint::Interval(vakint::t,0,1))",
+      "definition_readable": "1/720*Integral(log(t)^6/(1-t),Interval(t,0,1))",
+      "normalisation": "plain real number; no loop measure involved",
+      "definition_source": "new (basis-v3 src/defs.py)",
+      "definition_check": {
+        "method": "direct numerical evaluation of the definition atom (mpmath tanh-sinh quadrature, 50 working digits)",
+        "agreement_digits": 45.49
+      },
+      "value": {
+        "digits": "unlimited (classical constant)",
+        "how": "PARI/GP 2.17.3 (zeta, log, polylog, polylogmult), Symbolica native; HSS 4000-digit table for the GPLs; used here up to 19900 digits",
+        "status": "EXACT constant"
+      },
+      "rows_using": 8
+    },
+    {
+      "index": 5,
+      "symbol": "symbolica::log(2)",
+      "pretty": "log2",
+      "meaning": "natural logarithm of 2",
+      "sector": "level2",
+      "weight": 1,
+      "parity": "Re",
+      "definition": "vakint::Integral((1+vakint::t)^(-1),vakint::Interval(vakint::t,0,1))",
+      "definition_readable": "Integral(1/(1+t),Interval(t,0,1))",
+      "normalisation": "plain real number (alternating/level-2 sum); no loop measure involved",
+      "definition_source": "new (basis-v3 src/defs.py)",
+      "definition_check": {
+        "method": "direct numerical evaluation of the definition atom (mpmath tanh-sinh quadrature, 50 working digits)",
+        "agreement_digits": 50.0
+      },
+      "value": {
+        "digits": "unlimited (classical constant)",
+        "how": "PARI/GP 2.17.3 (zeta, log, polylog, polylogmult), Symbolica native; HSS 4000-digit table for the GPLs; used here up to 19900 digits",
+        "status": "EXACT constant"
+      },
+      "rows_using": 176
+    },
+    {
+      "index": 6,
+      "symbol": "symbolica::polylog(4,1/2)",
+      "pretty": "Li4(1/2)",
+      "meaning": "Li_4(1/2) = sum_k 1/(2^k k^4)",
+      "sector": "level2",
+      "weight": 4,
+      "parity": "Re",
+      "definition": "1/6*vakint::Integral((-1*vakint::t+2)^(-1)*(log(vakint::t))^3*-1,vakint::Interval(vakint::t,0,1))",
+      "definition_readable": "1/6*Integral(-log(t)^3/(2-t),Interval(t,0,1))",
+      "normalisation": "plain real number (alternating/level-2 sum); no loop measure involved",
+      "definition_source": "new (basis-v3 src/defs.py)",
+      "definition_check": {
+        "method": "direct numerical evaluation of the definition atom (mpmath tanh-sinh quadrature, 50 working digits)",
+        "agreement_digits": 49.68
+      },
+      "value": {
+        "digits": "unlimited (classical constant)",
+        "how": "PARI/GP 2.17.3 (zeta, log, polylog, polylogmult), Symbolica native; HSS 4000-digit table for the GPLs; used here up to 19900 digits",
+        "status": "EXACT constant"
+      },
+      "rows_using": 176
+    },
+    {
+      "index": 7,
+      "symbol": "symbolica::polylog(5,1/2)",
+      "pretty": "Li5(1/2)",
+      "meaning": "Li_5(1/2) = sum_k 1/(2^k k^5)",
+      "sector": "level2",
+      "weight": 5,
+      "parity": "Re",
+      "definition": "1/24*vakint::Integral((-1*vakint::t+2)^(-1)*(log(vakint::t))^4,vakint::Interval(vakint::t,0,1))",
+      "definition_readable": "1/24*Integral(log(t)^4/(2-t),Interval(t,0,1))",
+      "normalisation": "plain real number (alternating/level-2 sum); no loop measure involved",
+      "definition_source": "new (basis-v3 src/defs.py)",
+      "definition_check": {
+        "method": "direct numerical evaluation of the definition atom (mpmath tanh-sinh quadrature, 50 working digits)",
+        "agreement_digits": 48.24
+      },
+      "value": {
+        "digits": "unlimited (classical constant)",
+        "how": "PARI/GP 2.17.3 (zeta, log, polylog, polylogmult), Symbolica native; HSS 4000-digit table for the GPLs; used here up to 19900 digits",
+        "status": "EXACT constant"
+      },
+      "rows_using": 63
+    },
+    {
+      "index": 8,
+      "symbol": "symbolica::polylog(6,1/2)",
+      "pretty": "Li6(1/2)",
+      "meaning": "Li_6(1/2) = sum_k 1/(2^k k^6)",
+      "sector": "level2",
+      "weight": 6,
+      "parity": "Re",
+      "definition": "1/120*vakint::Integral((-1*vakint::t+2)^(-1)*(log(vakint::t))^5*-1,vakint::Interval(vakint::t,0,1))",
+      "definition_readable": "1/120*Integral(-log(t)^5/(2-t),Interval(t,0,1))",
+      "normalisation": "plain real number (alternating/level-2 sum); no loop measure involved",
+      "definition_source": "new (basis-v3 src/defs.py)",
+      "definition_check": {
+        "method": "direct numerical evaluation of the definition atom (mpmath tanh-sinh quadrature, 50 working digits)",
+        "agreement_digits": 46.83
+      },
+      "value": {
+        "digits": "unlimited (classical constant)",
+        "how": "PARI/GP 2.17.3 (zeta, log, polylog, polylogmult), Symbolica native; HSS 4000-digit table for the GPLs; used here up to 19900 digits",
+        "status": "EXACT constant"
+      },
+      "rows_using": 26
+    },
+    {
+      "index": 9,
+      "symbol": "vakint::s6weak",
+      "pretty": "s6",
+      "meaning": "alternating double sum s6 = sum_{m>=k>=1} (-1)^(m+k)/(m^5 k) = zeta(-5,-1) + zeta(6)",
+      "sector": "level2",
+      "weight": 6,
+      "parity": "Re",
+      "definition": "vakint::Integral(((-1*vakint::x(1)*vakint::x(2)+1)^(-1)*vakint::x(2)+(1+vakint::x(1))^(-1))*(1+vakint::x(2))^(-1)*(log(vakint::x(1)))^4*1/24,vakint::Interval(vakint::x(1),0,1),vakint::Interval(vakint::x(2),0,1))",
+      "definition_readable": "Integral(1/24*(1/(1+x(1))+x(2)/(1-x(1)*x(2)))*log(x(1))^4/(1+x(2)),Interval(x(1),0,1),Interval(x(2),0,1))",
+      "normalisation": "plain real number (alternating/level-2 sum); no loop measure involved",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "direct numerical evaluation of the definition atom (mpmath tanh-sinh quadrature, 50 working digits)",
+        "agreement_digits": 48.23
+      },
+      "value": {
+        "digits": 20000,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab (PARI polylogmult); computable to any precision",
+        "status": "EXACT constant"
+      },
+      "rows_using": 26,
+      "spelling_without_4L_pack": "vakint::s6weak = 𝜋^6/945 + vakint::GPLReal(0,0,0,0,-1,1,1) (s6 = zeta(6) + Li_{5,1}(-1,-1); G(0,0,0,0,-1,1;1) = Li_{5,1}(-1,-1)); used in 3L P13/P21/P28 eps^4 because 4L/constants.json is not loaded for max_loop_count <= 3"
+    },
+    {
+      "index": 10,
+      "symbol": "symbolica::log(3)",
+      "pretty": "log3",
+      "meaning": "natural logarithm of 3",
+      "sector": "level6",
+      "weight": 1,
+      "parity": "Re",
+      "definition": "vakint::Integral((1+vakint::t)^(-1),vakint::Interval(vakint::t,0,2))",
+      "definition_readable": "Integral(1/(1+t),Interval(t,0,2))",
+      "normalisation": "plain real number; letters are sixth roots of unity, omega = e^{i pi/3}; Re/Im projections explicit",
+      "definition_source": "new (basis-v3 src/defs.py)",
+      "definition_check": {
+        "method": "direct numerical evaluation of the definition atom (mpmath tanh-sinh quadrature, 50 working digits)",
+        "agreement_digits": 50.0
+      },
+      "value": {
+        "digits": "unlimited (classical constant)",
+        "how": "PARI/GP 2.17.3 (zeta, log, polylog, polylogmult), Symbolica native; HSS 4000-digit table for the GPLs; used here up to 19900 digits",
+        "status": "EXACT constant"
+      },
+      "rows_using": 217
+    },
+    {
+      "index": 11,
+      "symbol": "vakint::cl2",
+      "pretty": "Cl2",
+      "meaning": "Clausen value Cl_2(pi/3) = Im Li_2(e^{i pi/3}) = sum_k sin(k pi/3)/k^2",
+      "sector": "level6",
+      "weight": 2,
+      "parity": "Im",
+      "definition": "-1*vakint::Integral(log(2*sin(1/2*vakint::t)),vakint::Interval(vakint::t,0,1/3*𝜋))",
+      "definition_readable": "-Integral(log(2*sin(1/2*t)),Interval(t,0,1/3*𝜋))",
+      "normalisation": "plain real number; letters are sixth roots of unity, omega = e^{i pi/3}; Re/Im projections explicit",
+      "definition_source": "new (basis-v3 src/defs.py)",
+      "definition_check": {
+        "method": "direct numerical evaluation of the definition atom (mpmath tanh-sinh quadrature, 50 working digits)",
+        "agreement_digits": 50.0
+      },
+      "value": {
+        "digits": "unlimited (classical constant)",
+        "how": "PARI/GP 2.17.3 (zeta, log, polylog, polylogmult), Symbolica native; HSS 4000-digit table for the GPLs; used here up to 19900 digits",
+        "status": "EXACT constant"
+      },
+      "rows_using": 277
+    },
+    {
+      "index": 12,
+      "symbol": "vakint::PolylogImag(3,3^(1/2)*𝑖/3)",
+      "pretty": "ImLi3(i/√3)",
+      "meaning": "Im Li_3(i/sqrt3) = inverse tangent integral Ti_3(1/sqrt3) = sum_k (-1)^(k+1) 3^(1/2-k)/(2k-1)^3 ... (Im part of the trilogarithm at i/sqrt3)",
+      "sector": "level6",
+      "weight": 3,
+      "parity": "Im",
+      "definition": "symbolica::imaginary_part(3^(1/2)*vakint::Integral((-𝑖/3*3^(1/2)*vakint::t+1)^(-1)*(log(vakint::t))^2,vakint::Interval(vakint::t,0,1))*𝑖/6)",
+      "definition_readable": "imaginary_part(1/2*3^(1/2)*𝑖/3*Integral((-log(t))^2*(1-3^(1/2)*𝑖/3*t)^(-1),Interval(t,0,1)))",
+      "normalisation": "plain real number: imaginary part of Li_3(z) at z = i/sqrt3 (= Ti_3(1/sqrt3), the inverse tangent integral), Li_3(z) = z/2! * Integral_0^1 (-log t)^2/(1 - z t) dt (Vakint builtin family PolylogImag(n, z)); no loop measure",
+      "definition_source": "new (basis-v4 src/defs4.py); the same integral as Vakint inspection/definitions.rs polylogarithm(order, point) for PolylogImag(n, 3^(1/2)*𝑖/3)",
+      "definition_check": {
+        "method": "direct numerical evaluation of the definition atom (mpmath 1.3.0 tanh-sinh quadrature of the t-integral, 80 working digits)",
+        "agreement_digits": "exact"
+      },
+      "value": {
+        "digits": "unlimited (classical constant)",
+        "how": "PARI/GP 2.17.3 imag(polylog(n, I/sqrt(3))) (5460 digits used); mpmath polylog cross-check (2020 digits, zero difference); Vakint builtin PolylogImag(n, 3^(1/2)*𝑖/3) evaluates it natively (gate test passed, vakint-check/)",
+        "status": "EXACT constant"
+      },
+      "rows_using": 214,
+      "replaces": "vakint::GPLImag(0,1,(-1-3^(1/2)*𝑖)/2,1)"
+    },
+    {
+      "index": 13,
+      "symbol": "vakint::cl4",
+      "pretty": "Cl4",
+      "meaning": "Clausen value Cl_4(pi/3) = Im Li_4(e^{i pi/3}) = sum_k sin(k pi/3)/k^4",
+      "sector": "level6",
+      "weight": 4,
+      "parity": "Im",
+      "definition": "1/12*3^(1/2)*vakint::Integral((-1*vakint::t+1+vakint::t^2)^(-1)*(log(vakint::t))^3*-1,vakint::Interval(vakint::t,0,1))",
+      "definition_readable": "1/12*3^(1/2)*Integral(-log(t)^3/(1-t+t^2),Interval(t,0,1))",
+      "normalisation": "plain real number; letters are sixth roots of unity, omega = e^{i pi/3}; Re/Im projections explicit",
+      "definition_source": "new (basis-v3 src/defs.py)",
+      "definition_check": {
+        "method": "direct numerical evaluation of the definition atom (mpmath tanh-sinh quadrature, 50 working digits)",
+        "agreement_digits": 50.84
+      },
+      "value": {
+        "digits": "unlimited (classical constant)",
+        "how": "PARI/GP 2.17.3 (zeta, log, polylog, polylogmult), Symbolica native; HSS 4000-digit table for the GPLs; used here up to 19900 digits",
+        "status": "EXACT constant"
+      },
+      "rows_using": 165
+    },
+    {
+      "index": 14,
+      "symbol": "vakint::PolylogImag(4,3^(1/2)*𝑖/3)",
+      "pretty": "ImLi4(i/√3)",
+      "meaning": "Im Li_4(i/sqrt3) = inverse tangent integral Ti_4(1/sqrt3) (Im part of the tetralogarithm at i/sqrt3)",
+      "sector": "level6",
+      "weight": 4,
+      "parity": "Im",
+      "definition": "symbolica::imaginary_part(3^(1/2)*vakint::Integral((-𝑖/3*3^(1/2)*vakint::t+1)^(-1)*(log(vakint::t))^3*-1,vakint::Interval(vakint::t,0,1))*𝑖/18)",
+      "definition_readable": "imaginary_part(1/6*3^(1/2)*𝑖/3*Integral((-log(t))^3*(1-3^(1/2)*𝑖/3*t)^(-1),Interval(t,0,1)))",
+      "normalisation": "plain real number: imaginary part of Li_4(z) at z = i/sqrt3 (= Ti_4(1/sqrt3), the inverse tangent integral), Li_4(z) = z/3! * Integral_0^1 (-log t)^3/(1 - z t) dt (Vakint builtin family PolylogImag(n, z)); no loop measure",
+      "definition_source": "new (basis-v4 src/defs4.py); the same integral as Vakint inspection/definitions.rs polylogarithm(order, point) for PolylogImag(n, 3^(1/2)*𝑖/3)",
+      "definition_check": {
+        "method": "direct numerical evaluation of the definition atom (mpmath 1.3.0 tanh-sinh quadrature of the t-integral, 80 working digits)",
+        "agreement_digits": 80.44
+      },
+      "value": {
+        "digits": "unlimited (classical constant)",
+        "how": "PARI/GP 2.17.3 imag(polylog(n, I/sqrt(3))) (5460 digits used); mpmath polylog cross-check (2020 digits, zero difference); Vakint builtin PolylogImag(n, 3^(1/2)*𝑖/3) evaluates it natively (gate test passed, vakint-check/)",
+        "status": "EXACT constant"
+      },
+      "rows_using": 159,
+      "replaces": "vakint::GPLImag(0,1,1,(-1-3^(1/2)*𝑖)/2,1)"
+    },
+    {
+      "index": 15,
+      "symbol": "vakint::GPLReal(0,0,(1-3^(1/2)*𝑖)/2,-1,1)",
+      "pretty": "ReG(0,0,ω̄,−1)",
+      "meaning": "Re G(0,0,omega-bar,-1;1), omega-bar = e^{-i pi/3}",
+      "sector": "level6",
+      "weight": 4,
+      "parity": "Re",
+      "definition": "symbolica::real_part(vakint::Integral(((-𝑖*3^(1/2)+1)*-1/2+vakint::x(3))^(-1)*(1+vakint::x(4))^(-1)*(vakint::x(1))^(-1)*(vakint::x(2))^(-1),vakint::Interval(vakint::x(1),0,1),vakint::Interval(vakint::x(2),0,vakint::x(1)),vakint::Interval(vakint::x(3),0,vakint::x(2)),vakint::Interval(vakint::x(4),0,vakint::x(3))))",
+      "definition_readable": "real_part(Integral(1/((1+x(4))*(x(3)-1/2*(1-𝑖*3^(1/2)))*x(1)*x(2)),Interval(x(1),0,1),Interval(x(2),0,x(1)),Interval(x(3),0,x(2)),Interval(x(4),0,x(3))))",
+      "normalisation": "plain real number; letters are sixth roots of unity, omega = e^{i pi/3}; Re/Im projections explicit",
+      "definition_source": "new (basis-v3 src/defs.py)",
+      "definition_check": {
+        "method": "direct numerical evaluation of the definition atom (mpmath spectral cumulative GPL integration, 70 working digits)",
+        "agreement_digits": 69.95
+      },
+      "value": {
+        "digits": "unlimited (classical constant)",
+        "how": "PARI/GP 2.17.3 (zeta, log, polylog, polylogmult), Symbolica native; HSS 4000-digit table for the GPLs; used here up to 19900 digits",
+        "status": "EXACT constant"
+      },
+      "rows_using": 140
+    },
+    {
+      "index": 16,
+      "symbol": "vakint::D5bar1",
+      "pretty": "D5bar1",
+      "meaning": "MATAD constant D5bar(1): eps^1 coefficient of (1-2eps)(1-eps) miD5 (3-loop tetrahedron, 5 massive + 1 massless line)",
+      "sector": "level6",
+      "weight": 5,
+      "parity": "Re",
+      "definition": "vakint::SeriesCoefficient((-1*vakint::ep+1)*(-2*vakint::ep+1)*vakint::LoopIntegral(-2*vakint::ep+4,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(1),vakint::k(1)))^(-1)*(1+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3))*𝑒^(3*symbolica::γ*vakint::ep),vakint::ep,0,1)",
+      "definition_readable": "SeriesCoefficient(𝑒^(3*γ*ep)*(1-2*ep)*(1-ep)*LoopIntegral(4-2*ep,1/((1+EuclideanDot(k(1),k(1)))*(1+EuclideanDot(k(2),k(2)))*(1+EuclideanDot(k(3),k(3)))*(EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(2))+EuclideanDot(k(2),k(2)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))+EuclideanDot(k(3),k(3)))),k(1),k(2),k(3)),ep,0,1)",
+      "normalisation": "MATAD bar of Vakint matad.rs, tetrahedron topology D5 (one massless line) / D6 (six unit-mass lines): Xbar(k) = ordinary Taylor coefficient [ep^k] (not a derivative) of (1-ep)(1-2ep) * exp(3 gamma ep) * LoopIntegral, Euclidean measure d^dk/pi^(d/2) per loop (3 loops, d = 4-2ep), unit masses, no sign, the propagators shown",
+      "definition_source": "new (basis-v3 src/defs.py)",
+      "definition_check": {
+        "method": "EXACT structural check (no numerical evaluation of the loop integral): Symanzik U and F polynomials of the definition equal those of the Vakint MATAD master miD5 (inspection/definitions.rs MATAD_MASTERS) up to a relabelling of lines (mass pattern included); prefactor = matad.rs normalisation (1-ep)(1-2ep) exp(3 gamma ep) LI",
+        "agreement_digits": null
+      },
+      "value": {
+        "digits": 20000,
+        "how": "exact rational combination of HPL values H(w; e^{i pi/3}) (Vakint crates/vakint/src/matad.rs) evaluated with the published 20000-digit HPL values (KPV 1705.05136 = Vakint validation/hpl-values-20000)",
+        "status": "EXACT expression (MATAD literature constant), value PUBLISHED-20000 inputs"
+      },
+      "rows_using": 65
+    },
+    {
+      "index": 17,
+      "symbol": "vakint::D6bar1",
+      "pretty": "D6bar1",
+      "meaning": "MATAD constant D6bar(1): eps^1 coefficient of (1-2eps)(1-eps) miD6 (3-loop tetrahedron, 6 massive lines)",
+      "sector": "level6",
+      "weight": 5,
+      "parity": "Re",
+      "definition": "vakint::SeriesCoefficient((-1*vakint::ep+1)*(-2*vakint::ep+1)*vakint::LoopIntegral(-2*vakint::ep+4,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(1),vakint::k(1)))^(-1)*(1+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3))*𝑒^(3*symbolica::γ*vakint::ep),vakint::ep,0,1)",
+      "definition_readable": "SeriesCoefficient(𝑒^(3*γ*ep)*(1-2*ep)*(1-ep)*LoopIntegral(4-2*ep,1/((1+EuclideanDot(k(1),k(1)))*(1+EuclideanDot(k(2),k(2)))*(1+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(2))+EuclideanDot(k(2),k(2)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))+EuclideanDot(k(3),k(3)))),k(1),k(2),k(3)),ep,0,1)",
+      "normalisation": "MATAD bar of Vakint matad.rs, tetrahedron topology D5 (one massless line) / D6 (six unit-mass lines): Xbar(k) = ordinary Taylor coefficient [ep^k] (not a derivative) of (1-ep)(1-2ep) * exp(3 gamma ep) * LoopIntegral, Euclidean measure d^dk/pi^(d/2) per loop (3 loops, d = 4-2ep), unit masses, no sign, the propagators shown",
+      "definition_source": "new (basis-v3 src/defs.py)",
+      "definition_check": {
+        "method": "EXACT structural check (no numerical evaluation of the loop integral): Symanzik U and F polynomials of the definition equal those of the Vakint MATAD master miD6 (inspection/definitions.rs MATAD_MASTERS) up to a relabelling of lines (mass pattern included); prefactor = matad.rs normalisation (1-ep)(1-2ep) exp(3 gamma ep) LI",
+        "agreement_digits": null
+      },
+      "value": {
+        "digits": 20000,
+        "how": "exact rational combination of HPL values H(w; e^{i pi/3}) (Vakint crates/vakint/src/matad.rs) evaluated with the published 20000-digit HPL values (KPV 1705.05136 = Vakint validation/hpl-values-20000)",
+        "status": "EXACT expression (MATAD literature constant), value PUBLISHED-20000 inputs"
+      },
+      "rows_using": 10
+    },
+    {
+      "index": 18,
+      "symbol": "vakint::GPLImag(0,1,1,1,(-1-3^(1/2)*𝑖)/2,1)",
+      "pretty": "ImG(0,1,1,1,−ω)",
+      "meaning": "Im G(0,1,1,1,-omega;1)",
+      "sector": "level6",
+      "weight": 5,
+      "parity": "Im",
+      "definition": "symbolica::imaginary_part(vakint::Integral(((-1+-𝑖*3^(1/2))*-1/2+vakint::x(5))^(-1)*(-1+vakint::x(2))^(-1)*(-1+vakint::x(3))^(-1)*(-1+vakint::x(4))^(-1)*(vakint::x(1))^(-1),vakint::Interval(vakint::x(1),0,1),vakint::Interval(vakint::x(2),0,vakint::x(1)),vakint::Interval(vakint::x(3),0,vakint::x(2)),vakint::Interval(vakint::x(4),0,vakint::x(3)),vakint::Interval(vakint::x(5),0,vakint::x(4))))",
+      "definition_readable": "imaginary_part(Integral(1/((-1+x(2))*(-1+x(3))*(-1+x(4))*(x(5)-1/2*(-1-𝑖*3^(1/2)))*x(1)),Interval(x(1),0,1),Interval(x(2),0,x(1)),Interval(x(3),0,x(2)),Interval(x(4),0,x(3)),Interval(x(5),0,x(4))))",
+      "normalisation": "plain real number; letters are sixth roots of unity, omega = e^{i pi/3}; Re/Im projections explicit",
+      "definition_source": "new (basis-v3 src/defs.py)",
+      "definition_check": {
+        "method": "direct numerical evaluation of the definition atom (mpmath spectral cumulative GPL integration, 70 working digits)",
+        "agreement_digits": 66.55
+      },
+      "value": {
+        "digits": "unlimited (classical constant)",
+        "how": "PARI/GP 2.17.3 (zeta, log, polylog, polylogmult), Symbolica native; HSS 4000-digit table for the GPLs; used here up to 19900 digits",
+        "status": "EXACT constant"
+      },
+      "rows_using": 99
+    },
+    {
+      "index": 19,
+      "symbol": "vakint::GPLImag(0,0,0,1,(1-3^(1/2)*𝑖)/2,1)",
+      "pretty": "ImG(0,0,0,1,ω̄)",
+      "meaning": "Im G(0,0,0,1,omega-bar;1)",
+      "sector": "level6",
+      "weight": 5,
+      "parity": "Im",
+      "definition": "symbolica::imaginary_part(vakint::Integral(((-𝑖*3^(1/2)+1)*-1/2+vakint::x(5))^(-1)*(-1+vakint::x(4))^(-1)*(vakint::x(1))^(-1)*(vakint::x(2))^(-1)*(vakint::x(3))^(-1),vakint::Interval(vakint::x(1),0,1),vakint::Interval(vakint::x(2),0,vakint::x(1)),vakint::Interval(vakint::x(3),0,vakint::x(2)),vakint::Interval(vakint::x(4),0,vakint::x(3)),vakint::Interval(vakint::x(5),0,vakint::x(4))))",
+      "definition_readable": "imaginary_part(Integral(1/((-1+x(4))*(x(5)-1/2*(1-𝑖*3^(1/2)))*x(1)*x(2)*x(3)),Interval(x(1),0,1),Interval(x(2),0,x(1)),Interval(x(3),0,x(2)),Interval(x(4),0,x(3)),Interval(x(5),0,x(4))))",
+      "normalisation": "plain real number; letters are sixth roots of unity, omega = e^{i pi/3}; Re/Im projections explicit",
+      "definition_source": "new (basis-v3 src/defs.py)",
+      "definition_check": {
+        "method": "direct numerical evaluation of the definition atom (mpmath spectral cumulative GPL integration, 70 working digits)",
+        "agreement_digits": 69.67
+      },
+      "value": {
+        "digits": "unlimited (classical constant)",
+        "how": "PARI/GP 2.17.3 (zeta, log, polylog, polylogmult), Symbolica native; HSS 4000-digit table for the GPLs; used here up to 19900 digits",
+        "status": "EXACT constant"
+      },
+      "rows_using": 8
+    },
+    {
+      "index": 20,
+      "symbol": "vakint::GPLImag(0,0,0,1,(-1-3^(1/2)*𝑖)/2,1)",
+      "pretty": "ImG(0,0,0,1,−ω)",
+      "meaning": "Im G(0,0,0,1,-omega;1)",
+      "sector": "level6",
+      "weight": 5,
+      "parity": "Im",
+      "definition": "symbolica::imaginary_part(vakint::Integral(((-1+-𝑖*3^(1/2))*-1/2+vakint::x(5))^(-1)*(-1+vakint::x(4))^(-1)*(vakint::x(1))^(-1)*(vakint::x(2))^(-1)*(vakint::x(3))^(-1),vakint::Interval(vakint::x(1),0,1),vakint::Interval(vakint::x(2),0,vakint::x(1)),vakint::Interval(vakint::x(3),0,vakint::x(2)),vakint::Interval(vakint::x(4),0,vakint::x(3)),vakint::Interval(vakint::x(5),0,vakint::x(4))))",
+      "definition_readable": "imaginary_part(Integral(1/((-1+x(4))*(x(5)-1/2*(-1-𝑖*3^(1/2)))*x(1)*x(2)*x(3)),Interval(x(1),0,1),Interval(x(2),0,x(1)),Interval(x(3),0,x(2)),Interval(x(4),0,x(3)),Interval(x(5),0,x(4))))",
+      "normalisation": "plain real number; letters are sixth roots of unity, omega = e^{i pi/3}; Re/Im projections explicit",
+      "definition_source": "new (basis-v3 src/defs.py)",
+      "definition_check": {
+        "method": "direct numerical evaluation of the definition atom (mpmath spectral cumulative GPL integration, 70 working digits)",
+        "agreement_digits": 69.9
+      },
+      "value": {
+        "digits": "unlimited (classical constant)",
+        "how": "PARI/GP 2.17.3 (zeta, log, polylog, polylogmult), Symbolica native; HSS 4000-digit table for the GPLs; used here up to 19900 digits",
+        "status": "EXACT constant"
+      },
+      "rows_using": 8
+    },
+    {
+      "index": 21,
+      "symbol": "vakint::D5bar2",
+      "pretty": "D5bar2",
+      "meaning": "MATAD constant D5bar(2): eps^2 coefficient of (1-2eps)(1-eps) miD5",
+      "sector": "level6",
+      "weight": 6,
+      "parity": "Re",
+      "definition": "vakint::SeriesCoefficient((-1*vakint::ep+1)*(-2*vakint::ep+1)*vakint::LoopIntegral(-2*vakint::ep+4,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(1),vakint::k(1)))^(-1)*(1+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3))*𝑒^(3*symbolica::γ*vakint::ep),vakint::ep,0,2)",
+      "definition_readable": "SeriesCoefficient(𝑒^(3*γ*ep)*(1-2*ep)*(1-ep)*LoopIntegral(4-2*ep,1/((1+EuclideanDot(k(1),k(1)))*(1+EuclideanDot(k(2),k(2)))*(1+EuclideanDot(k(3),k(3)))*(EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(2))+EuclideanDot(k(2),k(2)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))+EuclideanDot(k(3),k(3)))),k(1),k(2),k(3)),ep,0,2)",
+      "normalisation": "MATAD bar of Vakint matad.rs, tetrahedron topology D5 (one massless line) / D6 (six unit-mass lines): Xbar(k) = ordinary Taylor coefficient [ep^k] (not a derivative) of (1-ep)(1-2ep) * exp(3 gamma ep) * LoopIntegral, Euclidean measure d^dk/pi^(d/2) per loop (3 loops, d = 4-2ep), unit masses, no sign, the propagators shown",
+      "definition_source": "new (basis-v3 src/defs.py)",
+      "definition_check": {
+        "method": "EXACT structural check (no numerical evaluation of the loop integral): Symanzik U and F polynomials of the definition equal those of the Vakint MATAD master miD5 (inspection/definitions.rs MATAD_MASTERS) up to a relabelling of lines (mass pattern included); prefactor = matad.rs normalisation (1-ep)(1-2ep) exp(3 gamma ep) LI",
+        "agreement_digits": null
+      },
+      "value": {
+        "digits": 20000,
+        "how": "exact rational combination of HPL values H(w; e^{i pi/3}) (Vakint crates/vakint/src/matad.rs) evaluated with the published 20000-digit HPL values (KPV 1705.05136 = Vakint validation/hpl-values-20000)",
+        "status": "EXACT expression (MATAD literature constant), value PUBLISHED-20000 inputs"
+      },
+      "rows_using": 30
+    },
+    {
+      "index": 22,
+      "symbol": "vakint::D6bar2",
+      "pretty": "D6bar2",
+      "meaning": "MATAD constant D6bar(2): eps^2 coefficient of (1-2eps)(1-eps) miD6",
+      "sector": "level6",
+      "weight": 6,
+      "parity": "Re",
+      "definition": "vakint::SeriesCoefficient((-1*vakint::ep+1)*(-2*vakint::ep+1)*vakint::LoopIntegral(-2*vakint::ep+4,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(1),vakint::k(1)))^(-1)*(1+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3))*𝑒^(3*symbolica::γ*vakint::ep),vakint::ep,0,2)",
+      "definition_readable": "SeriesCoefficient(𝑒^(3*γ*ep)*(1-2*ep)*(1-ep)*LoopIntegral(4-2*ep,1/((1+EuclideanDot(k(1),k(1)))*(1+EuclideanDot(k(2),k(2)))*(1+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(2))+EuclideanDot(k(2),k(2)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))+EuclideanDot(k(3),k(3)))),k(1),k(2),k(3)),ep,0,2)",
+      "normalisation": "MATAD bar of Vakint matad.rs, tetrahedron topology D5 (one massless line) / D6 (six unit-mass lines): Xbar(k) = ordinary Taylor coefficient [ep^k] (not a derivative) of (1-ep)(1-2ep) * exp(3 gamma ep) * LoopIntegral, Euclidean measure d^dk/pi^(d/2) per loop (3 loops, d = 4-2ep), unit masses, no sign, the propagators shown",
+      "definition_source": "new (basis-v3 src/defs.py)",
+      "definition_check": {
+        "method": "EXACT structural check (no numerical evaluation of the loop integral): Symanzik U and F polynomials of the definition equal those of the Vakint MATAD master miD6 (inspection/definitions.rs MATAD_MASTERS) up to a relabelling of lines (mass pattern included); prefactor = matad.rs normalisation (1-ep)(1-2ep) exp(3 gamma ep) LI",
+        "agreement_digits": null
+      },
+      "value": {
+        "digits": 20000,
+        "how": "exact rational combination of HPL values H(w; e^{i pi/3}) (Vakint crates/vakint/src/matad.rs) evaluated with the published 20000-digit HPL values (KPV 1705.05136 = Vakint validation/hpl-values-20000)",
+        "status": "EXACT expression (MATAD literature constant), value PUBLISHED-20000 inputs"
+      },
+      "rows_using": 5
+    },
+    {
+      "index": 23,
+      "symbol": "vakint::T111bar4",
+      "pretty": "T111bar4",
+      "meaning": "MATAD constant T111bar(4): eps^4 coefficient of sqrt3 (1-2eps)(eps-1) miT111/(e^{2 gamma eps} Gamma(1+eps)^2) (2-loop equal-mass sunset)",
+      "sector": "level6",
+      "weight": 6,
+      "parity": "Im",
+      "definition": "vakint::SeriesCoefficient((-1+vakint::ep)*(-2*vakint::ep+1)*(symbolica::gamma(1+vakint::ep))^(-2)*3^(1/2)*vakint::LoopIntegral(-2*vakint::ep+4,(1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(1+vakint::EuclideanDot(vakint::k(1),vakint::k(1)))^(-1)*(1+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1),vakint::k(1),vakint::k(2))+-3/2*3^(1/2)*vakint::ep^(-2),vakint::ep,0,4)",
+      "definition_readable": "SeriesCoefficient(3^(1/2)*(-1+ep)*(1-2*ep)*LoopIntegral(4-2*ep,1/((1+EuclideanDot(k(1),k(1)))*(1+EuclideanDot(k(2),k(2)))*(1+EuclideanDot(k(1),k(1))+2*EuclideanDot(k(1),k(2))+EuclideanDot(k(2),k(2)))),k(1),k(2))/gamma(1+ep)^2-3/2*3^(1/2)/ep^2,ep,0,4)",
+      "normalisation": "MATAD bar of Vakint matad.rs, T111 = two-loop equal-mass sunset: T111bar(k) = ordinary Taylor coefficient [ep^k] of sqrt3 (1-2ep)(ep-1) * Gamma(1+ep)^(-2) * LoopIntegral, Euclidean measure d^dk/pi^(d/2) per loop (2 loops, d = 4-2ep), unit masses, no sign; NO factor exp(2 gamma ep) (Gamma(1+ep)^(-2) takes its place); the subtracted 3 sqrt3/(2 ep^2) only removes the double pole and does not change [ep^k] for k >= 0",
+      "definition_source": "new (basis-v3 src/defs.py)",
+      "definition_check": {
+        "method": "EXACT structural check (no numerical evaluation of the loop integral): Symanzik U and F polynomials of the definition equal those of the Vakint MATAD master miT111 (inspection/definitions.rs MATAD_MASTERS) up to a relabelling of lines (mass pattern included); prefactor = matad.rs normalisation sqrt3 (1-2ep)(ep-1) Gamma(1+ep)^-2 LI - 3 sqrt3/(2 ep^2)",
+        "agreement_digits": null
+      },
+      "value": {
+        "digits": 20000,
+        "how": "exact rational combination of HPL values H(w; e^{i pi/3}) (Vakint crates/vakint/src/matad.rs) evaluated with the published 20000-digit HPL values (KPV 1705.05136 = Vakint validation/hpl-values-20000)",
+        "status": "EXACT expression (MATAD literature constant), value PUBLISHED-20000 inputs"
+      },
+      "rows_using": 38
+    },
+    {
+      "index": 24,
+      "symbol": "vakint::K5Moment(1)",
+      "pretty": "B1",
+      "meaning": "int_0^oo t K0(t)^5 dt",
+      "sector": "Bessel",
+      "weight": null,
+      "parity": "-",
+      "definition": "vakint::Integral((symbolica::bessel_k(0,vakint::t))^5*vakint::t,vakint::Interval(vakint::t,0,∞))",
+      "definition_readable": "Integral(t*bessel_k(0,t)^5,Interval(t,0,∞))",
+      "normalisation": "one-dimensional integral over t in (0, oo) of modified Bessel functions K_nu(t); no loop measure; K5MomentTaylor is the ordinary Taylor coefficient (not a derivative) of the eps-deformed moment including the factor (e^gamma/2)^(3 eps)",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "direct numerical evaluation of the definition atom (mpmath tanh-sinh quadrature, 50 working digits)",
+        "agreement_digits": 50.0
+      },
+      "value": {
+        "digits": 20000,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "1.96316796308740478739727037106E-20009",
+        "error_quality": "bounded",
+        "status": null
+      },
+      "rows_using": 92
+    },
+    {
+      "index": 25,
+      "symbol": "vakint::K5Moment(3)",
+      "pretty": "B3",
+      "meaning": "int_0^oo t^3 K0(t)^5 dt",
+      "sector": "Bessel",
+      "weight": null,
+      "parity": "-",
+      "definition": "vakint::Integral((symbolica::bessel_k(0,vakint::t))^5*vakint::t^3,vakint::Interval(vakint::t,0,∞))",
+      "definition_readable": "Integral(t^3*bessel_k(0,t)^5,Interval(t,0,∞))",
+      "normalisation": "one-dimensional integral over t in (0, oo) of modified Bessel functions K_nu(t); no loop measure; K5MomentTaylor is the ordinary Taylor coefficient (not a derivative) of the eps-deformed moment including the factor (e^gamma/2)^(3 eps)",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "direct numerical evaluation of the definition atom (mpmath tanh-sinh quadrature, 50 working digits)",
+        "agreement_digits": 50.0
+      },
+      "value": {
+        "digits": 20000,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "4.81777141791285783168461761024E-20010",
+        "error_quality": "bounded",
+        "status": null
+      },
+      "rows_using": 88
+    },
+    {
+      "index": 26,
+      "symbol": "vakint::K5LogMoment(1)",
+      "pretty": "J1",
+      "meaning": "3 int_0^oo t K0(t)^5 (log t + gamma - log 2) dt",
+      "sector": "Bessel",
+      "weight": null,
+      "parity": "-",
+      "definition": "3*vakint::Integral((-1*log(2)+log(vakint::t)+symbolica::γ)*(symbolica::bessel_k(0,vakint::t))^5*vakint::t,vakint::Interval(vakint::t,0,∞))",
+      "definition_readable": "3*Integral(t*(γ-log(2)+log(t))*bessel_k(0,t)^5,Interval(t,0,∞))",
+      "normalisation": "one-dimensional integral over t in (0, oo) of modified Bessel functions K_nu(t); no loop measure; K5MomentTaylor is the ordinary Taylor coefficient (not a derivative) of the eps-deformed moment including the factor (e^gamma/2)^(3 eps)",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "direct numerical evaluation of the definition atom (mpmath tanh-sinh quadrature, 50 working digits)",
+        "agreement_digits": 50.0
+      },
+      "value": {
+        "digits": 20000,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "7.32916835282132041131273286610E-20009",
+        "error_quality": "bounded",
+        "status": null
+      },
+      "rows_using": 65
+    },
+    {
+      "index": 27,
+      "symbol": "vakint::K5LogMoment(3)",
+      "pretty": "J3",
+      "meaning": "3 int_0^oo t^3 K0(t)^5 (log t + gamma - log 2) dt",
+      "sector": "Bessel",
+      "weight": null,
+      "parity": "-",
+      "definition": "3*vakint::Integral((-1*log(2)+log(vakint::t)+symbolica::γ)*(symbolica::bessel_k(0,vakint::t))^5*vakint::t^3,vakint::Interval(vakint::t,0,∞))",
+      "definition_readable": "3*Integral(t^3*(γ-log(2)+log(t))*bessel_k(0,t)^5,Interval(t,0,∞))",
+      "normalisation": "one-dimensional integral over t in (0, oo) of modified Bessel functions K_nu(t); no loop measure; K5MomentTaylor is the ordinary Taylor coefficient (not a derivative) of the eps-deformed moment including the factor (e^gamma/2)^(3 eps)",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "direct numerical evaluation of the definition atom (mpmath tanh-sinh quadrature, 50 working digits)",
+        "agreement_digits": 50.0
+      },
+      "value": {
+        "digits": 20000,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "4.48949896650376143807272831547E-20009",
+        "error_quality": "bounded",
+        "status": null
+      },
+      "rows_using": 65
+    },
+    {
+      "index": 28,
+      "symbol": "vakint::K5MomentTaylor(1,2)",
+      "pretty": "κ1[2]",
+      "meaning": "[eps^2] (e^gamma/2)^(3 eps) int_0^oo t^(1+3 eps) K_eps(t)^5 dt",
+      "sector": "Bessel",
+      "weight": null,
+      "parity": "-",
+      "definition": "vakint::SeriesCoefficient((1/2*𝑒^symbolica::γ)^(3*vakint::ep)*vakint::Integral((symbolica::bessel_k(vakint::ep,vakint::t))^5*vakint::t^(1+3*vakint::ep),vakint::Interval(vakint::t,0,∞)),vakint::ep,0,2)",
+      "definition_readable": "SeriesCoefficient((1/2*𝑒^γ)^(3*ep)*Integral(t^(1+3*ep)*bessel_k(ep,t)^5,Interval(t,0,∞)),ep,0,2)",
+      "normalisation": "one-dimensional integral over t in (0, oo) of modified Bessel functions K_nu(t); no loop measure; K5MomentTaylor is the ordinary Taylor coefficient (not a derivative) of the eps-deformed moment including the factor (e^gamma/2)^(3 eps)",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "direct numerical evaluation of the definition atom (mpmath Cauchy trapezoid N=56, r=1/16 around ep=0 (radius of convergence 1/4 for k=1), inner tanh-sinh quadrature, 45 working digits)",
+        "agreement_digits": 33.26
+      },
+      "value": {
+        "digits": 520,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "1.00001E-557",
+        "error_quality": "estimated",
+        "status": "ACCEPTED-500 (codex-2 Root adoption, empirical two-profile); restated at 520 validated digits by the takeover P1 step from existing independent re-derivations (no new numerical run); estimated, not an interval proof"
+      },
+      "rows_using": 39
+    },
+    {
+      "index": 29,
+      "symbol": "vakint::K5MomentTaylor(3,2)",
+      "pretty": "κ3[2]",
+      "meaning": "[eps^2] (e^gamma/2)^(3 eps) int_0^oo t^(3+3 eps) K_eps(t)^5 dt",
+      "sector": "Bessel",
+      "weight": null,
+      "parity": "-",
+      "definition": "vakint::SeriesCoefficient((1/2*𝑒^symbolica::γ)^(3*vakint::ep)*vakint::Integral((symbolica::bessel_k(vakint::ep,vakint::t))^5*vakint::t^(3+3*vakint::ep),vakint::Interval(vakint::t,0,∞)),vakint::ep,0,2)",
+      "definition_readable": "SeriesCoefficient((1/2*𝑒^γ)^(3*ep)*Integral(t^(3+3*ep)*bessel_k(ep,t)^5,Interval(t,0,∞)),ep,0,2)",
+      "normalisation": "one-dimensional integral over t in (0, oo) of modified Bessel functions K_nu(t); no loop measure; K5MomentTaylor is the ordinary Taylor coefficient (not a derivative) of the eps-deformed moment including the factor (e^gamma/2)^(3 eps)",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "direct numerical evaluation of the definition atom (mpmath Cauchy trapezoid N=56, r=1/16 around ep=0 (radius of convergence 1/4 for k=1), inner tanh-sinh quadrature, 45 working digits)",
+        "agreement_digits": 45.36
+      },
+      "value": {
+        "digits": 520,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "1.00001E-560",
+        "error_quality": "estimated",
+        "status": "ACCEPTED-500 (codex-2 Root adoption, empirical two-profile); restated at 520 validated digits by the takeover P1 step from existing independent re-derivations (no new numerical run); estimated, not an interval proof"
+      },
+      "rows_using": 39
+    },
+    {
+      "index": 30,
+      "symbol": "vakint::K5MomentTaylor(1,3)",
+      "pretty": "κ1[3]",
+      "meaning": "[eps^3] (e^gamma/2)^(3 eps) int_0^oo t^(1+3 eps) K_eps(t)^5 dt",
+      "sector": "Bessel",
+      "weight": null,
+      "parity": "-",
+      "definition": "vakint::SeriesCoefficient((1/2*𝑒^symbolica::γ)^(3*vakint::ep)*vakint::Integral((symbolica::bessel_k(vakint::ep,vakint::t))^5*vakint::t^(1+3*vakint::ep),vakint::Interval(vakint::t,0,∞)),vakint::ep,0,3)",
+      "definition_readable": "SeriesCoefficient((1/2*𝑒^γ)^(3*ep)*Integral(t^(1+3*ep)*bessel_k(ep,t)^5,Interval(t,0,∞)),ep,0,3)",
+      "normalisation": "one-dimensional integral over t in (0, oo) of modified Bessel functions K_nu(t); no loop measure; K5MomentTaylor is the ordinary Taylor coefficient (not a derivative) of the eps-deformed moment including the factor (e^gamma/2)^(3 eps)",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "direct numerical evaluation of the definition atom (mpmath Cauchy trapezoid N=56, r=1/16 around ep=0 (radius of convergence 1/4 for k=1), inner tanh-sinh quadrature, 45 working digits)",
+        "agreement_digits": 33.39
+      },
+      "value": {
+        "digits": 520,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "1.00001E-557",
+        "error_quality": "estimated",
+        "status": "COMPUTED+VALIDATED (takeover, not a codex-2 Root adoption): two-profile only at >=500; independent-method control only below 500 digits (Bessel quadrature ~100; P4/P5 HAT route 320)"
+      },
+      "rows_using": 19
+    },
+    {
+      "index": 31,
+      "symbol": "vakint::K5MomentTaylor(3,3)",
+      "pretty": "κ3[3]",
+      "meaning": "[eps^3] (e^gamma/2)^(3 eps) int_0^oo t^(3+3 eps) K_eps(t)^5 dt",
+      "sector": "Bessel",
+      "weight": null,
+      "parity": "-",
+      "definition": "vakint::SeriesCoefficient((1/2*𝑒^symbolica::γ)^(3*vakint::ep)*vakint::Integral((symbolica::bessel_k(vakint::ep,vakint::t))^5*vakint::t^(3+3*vakint::ep),vakint::Interval(vakint::t,0,∞)),vakint::ep,0,3)",
+      "definition_readable": "SeriesCoefficient((1/2*𝑒^γ)^(3*ep)*Integral(t^(3+3*ep)*bessel_k(ep,t)^5,Interval(t,0,∞)),ep,0,3)",
+      "normalisation": "one-dimensional integral over t in (0, oo) of modified Bessel functions K_nu(t); no loop measure; K5MomentTaylor is the ordinary Taylor coefficient (not a derivative) of the eps-deformed moment including the factor (e^gamma/2)^(3 eps)",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "direct numerical evaluation of the definition atom (mpmath Cauchy trapezoid N=56, r=1/16 around ep=0 (radius of convergence 1/4 for k=1), inner tanh-sinh quadrature, 45 working digits)",
+        "agreement_digits": 44.42
+      },
+      "value": {
+        "digits": 520,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "1.00001E-559",
+        "error_quality": "estimated",
+        "status": "COMPUTED+VALIDATED (takeover, not a codex-2 Root adoption): two-profile only at >=500; independent-method control only below 500 digits (Bessel quadrature ~100; P4/P5 HAT route 320)"
+      },
+      "rows_using": 19
+    },
+    {
+      "index": 32,
+      "symbol": "vakint::K5MomentTaylor(1,4)",
+      "pretty": "κ1[4]",
+      "meaning": "[eps^4] (e^gamma/2)^(3 eps) int_0^oo t^(1+3 eps) K_eps(t)^5 dt",
+      "sector": "Bessel",
+      "weight": null,
+      "parity": "-",
+      "definition": "vakint::SeriesCoefficient((1/2*𝑒^symbolica::γ)^(3*vakint::ep)*vakint::Integral((symbolica::bessel_k(vakint::ep,vakint::t))^5*vakint::t^(1+3*vakint::ep),vakint::Interval(vakint::t,0,∞)),vakint::ep,0,4)",
+      "definition_readable": "SeriesCoefficient((1/2*𝑒^γ)^(3*ep)*Integral(t^(1+3*ep)*bessel_k(ep,t)^5,Interval(t,0,∞)),ep,0,4)",
+      "normalisation": "one-dimensional integral over t in (0, oo) of modified Bessel functions K_nu(t); no loop measure; K5MomentTaylor is the ordinary Taylor coefficient (not a derivative) of the eps-deformed moment including the factor (e^gamma/2)^(3 eps)",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "direct numerical evaluation of the definition atom (mpmath Cauchy trapezoid N=56, r=1/16 around ep=0 (radius of convergence 1/4 for k=1), inner tanh-sinh quadrature, 45 working digits)",
+        "agreement_digits": 33.48
+      },
+      "value": {
+        "digits": 520,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "1.00001E-556",
+        "error_quality": "estimated",
+        "status": "COMPUTED+VALIDATED (takeover, not a codex-2 Root adoption): two-profile only at >=500; independent-method control only below 500 digits (Bessel quadrature ~100)"
+      },
+      "rows_using": 3
+    },
+    {
+      "index": 33,
+      "symbol": "vakint::K5MomentTaylor(3,4)",
+      "pretty": "κ3[4]",
+      "meaning": "[eps^4] (e^gamma/2)^(3 eps) int_0^oo t^(3+3 eps) K_eps(t)^5 dt",
+      "sector": "Bessel",
+      "weight": null,
+      "parity": "-",
+      "definition": "vakint::SeriesCoefficient((1/2*𝑒^symbolica::γ)^(3*vakint::ep)*vakint::Integral((symbolica::bessel_k(vakint::ep,vakint::t))^5*vakint::t^(3+3*vakint::ep),vakint::Interval(vakint::t,0,∞)),vakint::ep,0,4)",
+      "definition_readable": "SeriesCoefficient((1/2*𝑒^γ)^(3*ep)*Integral(t^(3+3*ep)*bessel_k(ep,t)^5,Interval(t,0,∞)),ep,0,4)",
+      "normalisation": "one-dimensional integral over t in (0, oo) of modified Bessel functions K_nu(t); no loop measure; K5MomentTaylor is the ordinary Taylor coefficient (not a derivative) of the eps-deformed moment including the factor (e^gamma/2)^(3 eps)",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "direct numerical evaluation of the definition atom (mpmath Cauchy trapezoid N=56, r=1/16 around ep=0 (radius of convergence 1/4 for k=1), inner tanh-sinh quadrature, 45 working digits)",
+        "agreement_digits": 44.26
+      },
+      "value": {
+        "digits": 520,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "1.00001E-559",
+        "error_quality": "estimated",
+        "status": "COMPUTED+VALIDATED (takeover, not a codex-2 Root adoption): two-profile only at >=500; independent-method control only below 500 digits (Bessel quadrature ~100)"
+      },
+      "rows_using": 3
+    },
+    {
+      "index": 34,
+      "symbol": "vakint::PR7D2",
+      "pretty": "PR7D2",
+      "meaning": "D=2 value of the unit-mass six-line PR7 (triangle(3,2,1)) 4-loop vacuum integral, d^2k/pi per loop",
+      "sector": "D2",
+      "weight": null,
+      "parity": "-",
+      "definition": "vakint::LoopIntegral(2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))",
+      "definition_readable": "LoopIntegral(2,1/((1+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))+2*EuclideanDot(k(1),k(2))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))),k(1),k(2),k(3),k(4))",
+      "normalisation": "Euclidean measure d^Dk/pi^(D/2) per loop (D = 2-2delta), unit masses, every propagator (q^2+1)^(-a), factor exp(4 gamma delta) (L = 4 loops), NO sign (-1)^(sum a) (hat convention: raw Minkowski jet = (-1)^(sum a) hat), no symmetry factor; the constant is the ordinary Taylor coefficient [delta^k] (not a derivative); jet 0 (PR7D2) is the D = 2 value",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "EXACT structural check (no numerical evaluation): every propagator quadratic form, unit mass and power of the LoopIntegral equals the producer family rows (4L manifest family 693719b1bc3d…, powers [0, 0, 1, 1, 0, 1, 1, 1, 1, 0])",
+        "agreement_digits": null
+      },
+      "value": {
+        "digits": 520,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "5.34701E-535",
+        "error_quality": "estimated",
+        "status": "ACCEPTED-500 (codex-2 Root adoption, empirical two-profile); restated at 520 validated digits by the takeover P1 step from existing independent re-derivations (no new numerical run); estimated, not an interval proof"
+      },
+      "rows_using": 61
+    },
+    {
+      "index": 35,
+      "symbol": "vakint::PR7D2Eps1",
+      "pretty": "PR7D2Eps1",
+      "meaning": "[delta^1] of hat PR7(D=2-2delta)",
+      "sector": "D2",
+      "weight": null,
+      "parity": "-",
+      "definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,1)",
+      "definition_readable": "SeriesCoefficient(𝑒^(4*γ*delta)*LoopIntegral(2-2*delta,1/((1+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))+2*EuclideanDot(k(1),k(2))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))),k(1),k(2),k(3),k(4)),delta,0,1)",
+      "normalisation": "Euclidean measure d^Dk/pi^(D/2) per loop (D = 2-2delta), unit masses, every propagator (q^2+1)^(-a), factor exp(4 gamma delta) (L = 4 loops), NO sign (-1)^(sum a) (hat convention: raw Minkowski jet = (-1)^(sum a) hat), no symmetry factor; the constant is the ordinary Taylor coefficient [delta^k] (not a derivative); jet 0 (PR7D2) is the D = 2 value",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "EXACT structural check (no numerical evaluation): every propagator quadratic form, unit mass and power of the LoopIntegral equals the producer family rows (4L manifest family 693719b1bc3d…, powers [0, 0, 1, 1, 0, 1, 1, 1, 1, 0])",
+        "agreement_digits": null
+      },
+      "value": {
+        "digits": 520,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "1.00001E-558",
+        "error_quality": "estimated",
+        "status": "ACCEPTED-500 (codex-2 Root adoption, empirical two-profile); restated at 520 validated digits by the takeover P1 step from existing independent re-derivations (no new numerical run); estimated, not an interval proof"
+      },
+      "rows_using": 47
+    },
+    {
+      "index": 36,
+      "symbol": "vakint::PR7D2Eps2",
+      "pretty": "PR7D2Eps2",
+      "meaning": "[delta^2] of hat PR7",
+      "sector": "D2",
+      "weight": null,
+      "parity": "-",
+      "definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,2)",
+      "definition_readable": "SeriesCoefficient(𝑒^(4*γ*delta)*LoopIntegral(2-2*delta,1/((1+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))+2*EuclideanDot(k(1),k(2))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))),k(1),k(2),k(3),k(4)),delta,0,2)",
+      "normalisation": "Euclidean measure d^Dk/pi^(D/2) per loop (D = 2-2delta), unit masses, every propagator (q^2+1)^(-a), factor exp(4 gamma delta) (L = 4 loops), NO sign (-1)^(sum a) (hat convention: raw Minkowski jet = (-1)^(sum a) hat), no symmetry factor; the constant is the ordinary Taylor coefficient [delta^k] (not a derivative); jet 0 (PR7D2) is the D = 2 value",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "EXACT structural check (no numerical evaluation): every propagator quadratic form, unit mass and power of the LoopIntegral equals the producer family rows (4L manifest family 693719b1bc3d…, powers [0, 0, 1, 1, 0, 1, 1, 1, 1, 0])",
+        "agreement_digits": null
+      },
+      "value": {
+        "digits": 520,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "1.00001E-558",
+        "error_quality": "estimated",
+        "status": "COMPUTED+VALIDATED (takeover, not a codex-2 Root adoption): COMPUTED+VALIDATED 500 (two-profile + independent-method control >= 500)"
+      },
+      "rows_using": 37
+    },
+    {
+      "index": 37,
+      "symbol": "vakint::PR7D2Eps3",
+      "pretty": "PR7D2Eps3",
+      "meaning": "[delta^3] of hat PR7",
+      "sector": "D2",
+      "weight": null,
+      "parity": "-",
+      "definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,3)",
+      "definition_readable": "SeriesCoefficient(𝑒^(4*γ*delta)*LoopIntegral(2-2*delta,1/((1+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))+2*EuclideanDot(k(1),k(2))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))),k(1),k(2),k(3),k(4)),delta,0,3)",
+      "normalisation": "Euclidean measure d^Dk/pi^(D/2) per loop (D = 2-2delta), unit masses, every propagator (q^2+1)^(-a), factor exp(4 gamma delta) (L = 4 loops), NO sign (-1)^(sum a) (hat convention: raw Minkowski jet = (-1)^(sum a) hat), no symmetry factor; the constant is the ordinary Taylor coefficient [delta^k] (not a derivative); jet 0 (PR7D2) is the D = 2 value",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "EXACT structural check (no numerical evaluation): every propagator quadratic form, unit mass and power of the LoopIntegral equals the producer family rows (4L manifest family 693719b1bc3d…, powers [0, 0, 1, 1, 0, 1, 1, 1, 1, 0])",
+        "agreement_digits": null
+      },
+      "value": {
+        "digits": 520,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "1.00015E-542",
+        "error_quality": "estimated",
+        "status": "COMPUTED+VALIDATED (takeover, not a codex-2 Root adoption): COMPUTED+VALIDATED 520 (two-profile + independent-method control >= 500)"
+      },
+      "rows_using": 19
+    },
+    {
+      "index": 38,
+      "symbol": "vakint::PR7D2Eps4",
+      "pretty": "PR7D2Eps4",
+      "meaning": "[delta^4] of hat PR7",
+      "sector": "D2",
+      "weight": null,
+      "parity": "-",
+      "definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,4)",
+      "definition_readable": "SeriesCoefficient(𝑒^(4*γ*delta)*LoopIntegral(2-2*delta,1/((1+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))+2*EuclideanDot(k(1),k(2))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))),k(1),k(2),k(3),k(4)),delta,0,4)",
+      "normalisation": "Euclidean measure d^Dk/pi^(D/2) per loop (D = 2-2delta), unit masses, every propagator (q^2+1)^(-a), factor exp(4 gamma delta) (L = 4 loops), NO sign (-1)^(sum a) (hat convention: raw Minkowski jet = (-1)^(sum a) hat), no symmetry factor; the constant is the ordinary Taylor coefficient [delta^k] (not a derivative); jet 0 (PR7D2) is the D = 2 value",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "EXACT structural check (no numerical evaluation): every propagator quadratic form, unit mass and power of the LoopIntegral equals the producer family rows (4L manifest family 693719b1bc3d…, powers [0, 0, 1, 1, 0, 1, 1, 1, 1, 0])",
+        "agreement_digits": null
+      },
+      "value": {
+        "digits": 600,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "1.00001E-599",
+        "error_quality": "estimated",
+        "status": "COMPUTED+VALIDATED (takeover, not a codex-2 Root adoption): two-profile only at >=500; independent-method control only below 500 digits (DREAM D2 114.94)"
+      },
+      "rows_using": 3
+    },
+    {
+      "index": 39,
+      "symbol": "vakint::PR9D2Eps1",
+      "pretty": "PR9D2Eps1",
+      "meaning": "[delta^1] of hat PR9 (cat-eye, 7 lines)",
+      "sector": "D2",
+      "weight": null,
+      "parity": "-",
+      "definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,1)",
+      "definition_readable": "SeriesCoefficient(𝑒^(4*γ*delta)*LoopIntegral(2-2*delta,1/((1+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))+2*EuclideanDot(k(1),k(2))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))),k(1),k(2),k(3),k(4)),delta,0,1)",
+      "normalisation": "Euclidean measure d^Dk/pi^(D/2) per loop (D = 2-2delta), unit masses, every propagator (q^2+1)^(-a), factor exp(4 gamma delta) (L = 4 loops), NO sign (-1)^(sum a) (hat convention: raw Minkowski jet = (-1)^(sum a) hat), no symmetry factor; the constant is the ordinary Taylor coefficient [delta^k] (not a derivative); jet 0 (PR7D2) is the D = 2 value",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "EXACT structural check (no numerical evaluation): every propagator quadratic form, unit mass and power of the LoopIntegral equals the producer family rows (4L manifest family 693719b1bc3d…, powers [0, 0, 1, 1, 1, 1, 1, 1, 1, 0])",
+        "agreement_digits": null
+      },
+      "value": {
+        "digits": 520,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "1.00001E-545",
+        "error_quality": "estimated",
+        "status": "COMPUTED+VALIDATED (takeover, not a codex-2 Root adoption): COMPUTED+VALIDATED 520 (two-profile + independent-method control >= 500)"
+      },
+      "rows_using": 45
+    },
+    {
+      "index": 40,
+      "symbol": "vakint::PR9D2Eps2",
+      "pretty": "PR9D2Eps2",
+      "meaning": "[delta^2] of hat PR9",
+      "sector": "D2",
+      "weight": null,
+      "parity": "-",
+      "definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,2)",
+      "definition_readable": "SeriesCoefficient(𝑒^(4*γ*delta)*LoopIntegral(2-2*delta,1/((1+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))+2*EuclideanDot(k(1),k(2))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))),k(1),k(2),k(3),k(4)),delta,0,2)",
+      "normalisation": "Euclidean measure d^Dk/pi^(D/2) per loop (D = 2-2delta), unit masses, every propagator (q^2+1)^(-a), factor exp(4 gamma delta) (L = 4 loops), NO sign (-1)^(sum a) (hat convention: raw Minkowski jet = (-1)^(sum a) hat), no symmetry factor; the constant is the ordinary Taylor coefficient [delta^k] (not a derivative); jet 0 (PR7D2) is the D = 2 value",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "EXACT structural check (no numerical evaluation): every propagator quadratic form, unit mass and power of the LoopIntegral equals the producer family rows (4L manifest family 693719b1bc3d…, powers [0, 0, 1, 1, 1, 1, 1, 1, 1, 0])",
+        "agreement_digits": null
+      },
+      "value": {
+        "digits": 520,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "1.00001E-544",
+        "error_quality": "estimated",
+        "status": "COMPUTED+VALIDATED (takeover, not a codex-2 Root adoption): COMPUTED+VALIDATED 520 (two-profile + independent-method control >= 500)"
+      },
+      "rows_using": 39
+    },
+    {
+      "index": 41,
+      "symbol": "vakint::PR9D2Eps3",
+      "pretty": "PR9D2Eps3",
+      "meaning": "[delta^3] of hat PR9",
+      "sector": "D2",
+      "weight": null,
+      "parity": "-",
+      "definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,3)",
+      "definition_readable": "SeriesCoefficient(𝑒^(4*γ*delta)*LoopIntegral(2-2*delta,1/((1+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))+2*EuclideanDot(k(1),k(2))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))),k(1),k(2),k(3),k(4)),delta,0,3)",
+      "normalisation": "Euclidean measure d^Dk/pi^(D/2) per loop (D = 2-2delta), unit masses, every propagator (q^2+1)^(-a), factor exp(4 gamma delta) (L = 4 loops), NO sign (-1)^(sum a) (hat convention: raw Minkowski jet = (-1)^(sum a) hat), no symmetry factor; the constant is the ordinary Taylor coefficient [delta^k] (not a derivative); jet 0 (PR7D2) is the D = 2 value",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "EXACT structural check (no numerical evaluation): every propagator quadratic form, unit mass and power of the LoopIntegral equals the producer family rows (4L manifest family 693719b1bc3d…, powers [0, 0, 1, 1, 1, 1, 1, 1, 1, 0])",
+        "agreement_digits": null
+      },
+      "value": {
+        "digits": 520,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "1.00001E-544",
+        "error_quality": "estimated",
+        "status": "COMPUTED+VALIDATED (takeover, not a codex-2 Root adoption): COMPUTED+VALIDATED 520 (two-profile + independent-method control >= 500)"
+      },
+      "rows_using": 19
+    },
+    {
+      "index": 42,
+      "symbol": "vakint::PR9D2Eps4",
+      "pretty": "PR9D2Eps4",
+      "meaning": "[delta^4] of hat PR9",
+      "sector": "D2",
+      "weight": null,
+      "parity": "-",
+      "definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,4)",
+      "definition_readable": "SeriesCoefficient(𝑒^(4*γ*delta)*LoopIntegral(2-2*delta,1/((1+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))+2*EuclideanDot(k(1),k(2))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))),k(1),k(2),k(3),k(4)),delta,0,4)",
+      "normalisation": "Euclidean measure d^Dk/pi^(D/2) per loop (D = 2-2delta), unit masses, every propagator (q^2+1)^(-a), factor exp(4 gamma delta) (L = 4 loops), NO sign (-1)^(sum a) (hat convention: raw Minkowski jet = (-1)^(sum a) hat), no symmetry factor; the constant is the ordinary Taylor coefficient [delta^k] (not a derivative); jet 0 (PR7D2) is the D = 2 value",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "EXACT structural check (no numerical evaluation): every propagator quadratic form, unit mass and power of the LoopIntegral equals the producer family rows (4L manifest family 693719b1bc3d…, powers [0, 0, 1, 1, 1, 1, 1, 1, 1, 0])",
+        "agreement_digits": null
+      },
+      "value": {
+        "digits": 600,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "1.00001E-601",
+        "error_quality": "estimated",
+        "status": "COMPUTED+VALIDATED (takeover, not a codex-2 Root adoption): COMPUTED+VALIDATED 600 (two-profile + independent-method control >= 500)"
+      },
+      "rows_using": 3
+    },
+    {
+      "index": 43,
+      "symbol": "vakint::PR9pD2Eps2",
+      "pretty": "PR9pD2Eps2",
+      "meaning": "[delta^2] of hat PR9 with one dot on a doubled-edge line",
+      "sector": "D2",
+      "weight": null,
+      "parity": "-",
+      "definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-2)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,2)",
+      "definition_readable": "SeriesCoefficient(𝑒^(4*γ*delta)*LoopIntegral(2-2*delta,1/((1+EuclideanDot(k(3),k(3)))^2*(1+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))+2*EuclideanDot(k(1),k(2))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))),k(1),k(2),k(3),k(4)),delta,0,2)",
+      "normalisation": "Euclidean measure d^Dk/pi^(D/2) per loop (D = 2-2delta), unit masses, every propagator (q^2+1)^(-a), factor exp(4 gamma delta) (L = 4 loops), NO sign (-1)^(sum a) (hat convention: raw Minkowski jet = (-1)^(sum a) hat), no symmetry factor; the constant is the ordinary Taylor coefficient [delta^k] (not a derivative); jet 0 (PR7D2) is the D = 2 value",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "EXACT structural check (no numerical evaluation): every propagator quadratic form, unit mass and power of the LoopIntegral equals the producer family rows (4L manifest family 693719b1bc3d…, powers [0, 0, 2, 1, 1, 1, 1, 1, 1, 0])",
+        "agreement_digits": null
+      },
+      "value": {
+        "digits": 520,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "1.00001E-544",
+        "error_quality": "estimated",
+        "status": "COMPUTED+VALIDATED (takeover, not a codex-2 Root adoption): COMPUTED+VALIDATED 520 (two-profile + independent-method control >= 500)"
+      },
+      "rows_using": 37
+    },
+    {
+      "index": 44,
+      "symbol": "vakint::PR9pD2Eps3",
+      "pretty": "PR9pD2Eps3",
+      "meaning": "[delta^3] of hat dotted PR9",
+      "sector": "D2",
+      "weight": null,
+      "parity": "-",
+      "definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-2)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,3)",
+      "definition_readable": "SeriesCoefficient(𝑒^(4*γ*delta)*LoopIntegral(2-2*delta,1/((1+EuclideanDot(k(3),k(3)))^2*(1+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))+2*EuclideanDot(k(1),k(2))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))),k(1),k(2),k(3),k(4)),delta,0,3)",
+      "normalisation": "Euclidean measure d^Dk/pi^(D/2) per loop (D = 2-2delta), unit masses, every propagator (q^2+1)^(-a), factor exp(4 gamma delta) (L = 4 loops), NO sign (-1)^(sum a) (hat convention: raw Minkowski jet = (-1)^(sum a) hat), no symmetry factor; the constant is the ordinary Taylor coefficient [delta^k] (not a derivative); jet 0 (PR7D2) is the D = 2 value",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "EXACT structural check (no numerical evaluation): every propagator quadratic form, unit mass and power of the LoopIntegral equals the producer family rows (4L manifest family 693719b1bc3d…, powers [0, 0, 2, 1, 1, 1, 1, 1, 1, 0])",
+        "agreement_digits": null
+      },
+      "value": {
+        "digits": 520,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "1.00001E-544",
+        "error_quality": "estimated",
+        "status": "COMPUTED+VALIDATED (takeover, not a codex-2 Root adoption): COMPUTED+VALIDATED 520 (two-profile + independent-method control >= 500)"
+      },
+      "rows_using": 19
+    },
+    {
+      "index": 45,
+      "symbol": "vakint::PR9pD2Eps4",
+      "pretty": "PR9pD2Eps4",
+      "meaning": "[delta^4] of hat dotted PR9",
+      "sector": "D2",
+      "weight": null,
+      "parity": "-",
+      "definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-2)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,4)",
+      "definition_readable": "SeriesCoefficient(𝑒^(4*γ*delta)*LoopIntegral(2-2*delta,1/((1+EuclideanDot(k(3),k(3)))^2*(1+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))+2*EuclideanDot(k(1),k(2))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))),k(1),k(2),k(3),k(4)),delta,0,4)",
+      "normalisation": "Euclidean measure d^Dk/pi^(D/2) per loop (D = 2-2delta), unit masses, every propagator (q^2+1)^(-a), factor exp(4 gamma delta) (L = 4 loops), NO sign (-1)^(sum a) (hat convention: raw Minkowski jet = (-1)^(sum a) hat), no symmetry factor; the constant is the ordinary Taylor coefficient [delta^k] (not a derivative); jet 0 (PR7D2) is the D = 2 value",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "EXACT structural check (no numerical evaluation): every propagator quadratic form, unit mass and power of the LoopIntegral equals the producer family rows (4L manifest family 693719b1bc3d…, powers [0, 0, 2, 1, 1, 1, 1, 1, 1, 0])",
+        "agreement_digits": null
+      },
+      "value": {
+        "digits": 600,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "1.00001E-601",
+        "error_quality": "estimated",
+        "status": "COMPUTED+VALIDATED (takeover, not a codex-2 Root adoption): two-profile only at >=500; independent-method control only below 500 digits (DREAM D2 111.26)"
+      },
+      "rows_using": 3
+    },
+    {
+      "index": 46,
+      "symbol": "vakint::PR10D2Eps1",
+      "pretty": "PR10D2Eps1",
+      "meaning": "[delta^1] of hat PR10",
+      "sector": "D2",
+      "weight": null,
+      "parity": "-",
+      "definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,1)",
+      "definition_readable": "SeriesCoefficient(𝑒^(4*γ*delta)*LoopIntegral(2-2*delta,1/((1+EuclideanDot(k(2),k(2)))*(1+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))+2*EuclideanDot(k(1),k(2))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))),k(1),k(2),k(3),k(4)),delta,0,1)",
+      "normalisation": "Euclidean measure d^Dk/pi^(D/2) per loop (D = 2-2delta), unit masses, every propagator (q^2+1)^(-a), factor exp(4 gamma delta) (L = 4 loops), NO sign (-1)^(sum a) (hat convention: raw Minkowski jet = (-1)^(sum a) hat), no symmetry factor; the constant is the ordinary Taylor coefficient [delta^k] (not a derivative); jet 0 (PR7D2) is the D = 2 value",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "EXACT structural check (no numerical evaluation): every propagator quadratic form, unit mass and power of the LoopIntegral equals the producer family rows (4L manifest family eb225daea1dd…, powers [0, 1, 0, 1, 1, 1, 1, 1, 1, 0]); the definition uses a different (unimodular) loop-momentum routing, so the check is the exact Symanzik U and F polynomial isomorphism with matched powers and masses",
+        "agreement_digits": null
+      },
+      "value": {
+        "digits": 520,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "1.00001E-560",
+        "error_quality": "estimated",
+        "status": "ACCEPTED-500 (codex-2 Root adoption, empirical two-profile); restated at 520 validated digits by the takeover P1 step from existing independent re-derivations (no new numerical run); estimated, not an interval proof"
+      },
+      "rows_using": 28
+    },
+    {
+      "index": 47,
+      "symbol": "vakint::PR10D2Eps2",
+      "pretty": "PR10D2Eps2",
+      "meaning": "[delta^2] of hat PR10",
+      "sector": "D2",
+      "weight": null,
+      "parity": "-",
+      "definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,2)",
+      "definition_readable": "SeriesCoefficient(𝑒^(4*γ*delta)*LoopIntegral(2-2*delta,1/((1+EuclideanDot(k(2),k(2)))*(1+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))+2*EuclideanDot(k(1),k(2))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))),k(1),k(2),k(3),k(4)),delta,0,2)",
+      "normalisation": "Euclidean measure d^Dk/pi^(D/2) per loop (D = 2-2delta), unit masses, every propagator (q^2+1)^(-a), factor exp(4 gamma delta) (L = 4 loops), NO sign (-1)^(sum a) (hat convention: raw Minkowski jet = (-1)^(sum a) hat), no symmetry factor; the constant is the ordinary Taylor coefficient [delta^k] (not a derivative); jet 0 (PR7D2) is the D = 2 value",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "EXACT structural check (no numerical evaluation): every propagator quadratic form, unit mass and power of the LoopIntegral equals the producer family rows (4L manifest family 693719b1bc3d…, powers [0, 1, 0, 1, 1, 1, 1, 1, 1, 0])",
+        "agreement_digits": null
+      },
+      "value": {
+        "digits": 520,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "1.00001E-559",
+        "error_quality": "estimated",
+        "status": "ACCEPTED-500 (codex-2 Root adoption, empirical two-profile); restated at 520 validated digits by the takeover P1 step from existing independent re-derivations (no new numerical run); estimated, not an interval proof"
+      },
+      "rows_using": 16
+    },
+    {
+      "index": 48,
+      "symbol": "vakint::PR10D2Eps3",
+      "pretty": "PR10D2Eps3",
+      "meaning": "[delta^3] of hat PR10",
+      "sector": "D2",
+      "weight": null,
+      "parity": "-",
+      "definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,3)",
+      "definition_readable": "SeriesCoefficient(𝑒^(4*γ*delta)*LoopIntegral(2-2*delta,1/((1+EuclideanDot(k(2),k(2)))*(1+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))+2*EuclideanDot(k(1),k(2))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))),k(1),k(2),k(3),k(4)),delta,0,3)",
+      "normalisation": "Euclidean measure d^Dk/pi^(D/2) per loop (D = 2-2delta), unit masses, every propagator (q^2+1)^(-a), factor exp(4 gamma delta) (L = 4 loops), NO sign (-1)^(sum a) (hat convention: raw Minkowski jet = (-1)^(sum a) hat), no symmetry factor; the constant is the ordinary Taylor coefficient [delta^k] (not a derivative); jet 0 (PR7D2) is the D = 2 value",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "EXACT structural check (no numerical evaluation): every propagator quadratic form, unit mass and power of the LoopIntegral equals the producer family rows (4L manifest family 693719b1bc3d…, powers [0, 1, 0, 1, 1, 1, 1, 1, 1, 0])",
+        "agreement_digits": null
+      },
+      "value": {
+        "digits": 520,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "1.00001E-544",
+        "error_quality": "estimated",
+        "status": "COMPUTED+VALIDATED (takeover, not a codex-2 Root adoption): COMPUTED+VALIDATED 520 (two-profile + independent-method control >= 500)"
+      },
+      "rows_using": 10
+    },
+    {
+      "index": 49,
+      "symbol": "vakint::PR10D2Eps4",
+      "pretty": "PR10D2Eps4",
+      "meaning": "[delta^4] of hat PR10",
+      "sector": "D2",
+      "weight": null,
+      "parity": "-",
+      "definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,4)",
+      "definition_readable": "SeriesCoefficient(𝑒^(4*γ*delta)*LoopIntegral(2-2*delta,1/((1+EuclideanDot(k(2),k(2)))*(1+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))+2*EuclideanDot(k(1),k(2))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))),k(1),k(2),k(3),k(4)),delta,0,4)",
+      "normalisation": "Euclidean measure d^Dk/pi^(D/2) per loop (D = 2-2delta), unit masses, every propagator (q^2+1)^(-a), factor exp(4 gamma delta) (L = 4 loops), NO sign (-1)^(sum a) (hat convention: raw Minkowski jet = (-1)^(sum a) hat), no symmetry factor; the constant is the ordinary Taylor coefficient [delta^k] (not a derivative); jet 0 (PR7D2) is the D = 2 value",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "EXACT structural check (no numerical evaluation): every propagator quadratic form, unit mass and power of the LoopIntegral equals the producer family rows (4L manifest family 693719b1bc3d…, powers [0, 1, 0, 1, 1, 1, 1, 1, 1, 0])",
+        "agreement_digits": null
+      },
+      "value": {
+        "digits": 560,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "1.00001E-600",
+        "error_quality": "estimated",
+        "status": "COMPUTED+VALIDATED (takeover, not a codex-2 Root adoption): two-profile validation at 560 digits (X8 J10 A/B 641.86) + independent-method control at 139.35 digits (carrier F and C5-95 radial delta^4 lifts vs the X8 eta-flow, smoke W140); estimated, not an interval proof"
+      },
+      "rows_using": 3
+    },
+    {
+      "index": 50,
+      "symbol": "vakint::PR15D2Eps1",
+      "pretty": "PR15D2Eps1",
+      "meaning": "[delta^1] of hat PR15",
+      "sector": "D2",
+      "weight": null,
+      "parity": "-",
+      "definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(1),vakint::k(1)))^(-1)*(1+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,1)",
+      "definition_readable": "SeriesCoefficient(𝑒^(4*γ*delta)*LoopIntegral(2-2*delta,1/((1+EuclideanDot(k(1),k(1)))*(1+EuclideanDot(k(2),k(2)))*(1+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(2))+EuclideanDot(k(2),k(2)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))+2*EuclideanDot(k(1),k(4))+EuclideanDot(k(3),k(3))-2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))),k(1),k(2),k(3),k(4)),delta,0,1)",
+      "normalisation": "Euclidean measure d^Dk/pi^(D/2) per loop (D = 2-2delta), unit masses, every propagator (q^2+1)^(-a), factor exp(4 gamma delta) (L = 4 loops), NO sign (-1)^(sum a) (hat convention: raw Minkowski jet = (-1)^(sum a) hat), no symmetry factor; the constant is the ordinary Taylor coefficient [delta^k] (not a derivative); jet 0 (PR7D2) is the D = 2 value",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "EXACT structural check (no numerical evaluation): every propagator quadratic form, unit mass and power of the LoopIntegral equals the producer family rows (4L manifest family bb95c283ed3c…, powers [1, 1, 1, 1, 1, 1, 1, 1, 0, 0])",
+        "agreement_digits": null
+      },
+      "value": {
+        "digits": 520,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "1.00001E-560",
+        "error_quality": "estimated",
+        "status": "ACCEPTED-500 (codex-2 Root adoption, empirical two-profile); restated at 520 validated digits by the takeover P1 step from existing independent re-derivations (no new numerical run); estimated, not an interval proof"
+      },
+      "rows_using": 4
+    },
+    {
+      "index": 51,
+      "symbol": "vakint::PR15D2Eps2",
+      "pretty": "PR15D2Eps2",
+      "meaning": "[delta^2] of hat PR15",
+      "sector": "D2",
+      "weight": null,
+      "parity": "-",
+      "definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(1),vakint::k(1)))^(-1)*(1+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,2)",
+      "definition_readable": "SeriesCoefficient(𝑒^(4*γ*delta)*LoopIntegral(2-2*delta,1/((1+EuclideanDot(k(1),k(1)))*(1+EuclideanDot(k(2),k(2)))*(1+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(2))+EuclideanDot(k(2),k(2)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))+2*EuclideanDot(k(1),k(4))+EuclideanDot(k(3),k(3))-2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))),k(1),k(2),k(3),k(4)),delta,0,2)",
+      "normalisation": "Euclidean measure d^Dk/pi^(D/2) per loop (D = 2-2delta), unit masses, every propagator (q^2+1)^(-a), factor exp(4 gamma delta) (L = 4 loops), NO sign (-1)^(sum a) (hat convention: raw Minkowski jet = (-1)^(sum a) hat), no symmetry factor; the constant is the ordinary Taylor coefficient [delta^k] (not a derivative); jet 0 (PR7D2) is the D = 2 value",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "EXACT structural check (no numerical evaluation): every propagator quadratic form, unit mass and power of the LoopIntegral equals the producer family rows (4L manifest family bb95c283ed3c…, powers [1, 1, 1, 1, 1, 1, 1, 1, 0, 0])",
+        "agreement_digits": null
+      },
+      "value": {
+        "digits": 520,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "1.00001E-559",
+        "error_quality": "estimated",
+        "status": "ACCEPTED-500 (codex-2 Root adoption, empirical two-profile); restated at 520 validated digits by the takeover P1 step from existing independent re-derivations (no new numerical run); estimated, not an interval proof"
+      },
+      "rows_using": 4
+    },
+    {
+      "index": 52,
+      "symbol": "vakint::PR15D2Eps3",
+      "pretty": "PR15D2Eps3",
+      "meaning": "[delta^3] of hat PR15",
+      "sector": "D2",
+      "weight": null,
+      "parity": "-",
+      "definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(1),vakint::k(1)))^(-1)*(1+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,3)",
+      "definition_readable": "SeriesCoefficient(𝑒^(4*γ*delta)*LoopIntegral(2-2*delta,1/((1+EuclideanDot(k(1),k(1)))*(1+EuclideanDot(k(2),k(2)))*(1+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(2))+EuclideanDot(k(2),k(2)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))+2*EuclideanDot(k(1),k(4))+EuclideanDot(k(3),k(3))-2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))),k(1),k(2),k(3),k(4)),delta,0,3)",
+      "normalisation": "Euclidean measure d^Dk/pi^(D/2) per loop (D = 2-2delta), unit masses, every propagator (q^2+1)^(-a), factor exp(4 gamma delta) (L = 4 loops), NO sign (-1)^(sum a) (hat convention: raw Minkowski jet = (-1)^(sum a) hat), no symmetry factor; the constant is the ordinary Taylor coefficient [delta^k] (not a derivative); jet 0 (PR7D2) is the D = 2 value",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "EXACT structural check (no numerical evaluation): every propagator quadratic form, unit mass and power of the LoopIntegral equals the producer family rows (4L manifest family bb95c283ed3c…, powers [1, 1, 1, 1, 1, 1, 1, 1, 0, 0])",
+        "agreement_digits": null
+      },
+      "value": {
+        "digits": 520,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "1.00001E-544",
+        "error_quality": "estimated",
+        "status": "COMPUTED+VALIDATED (takeover, not a codex-2 Root adoption): COMPUTED+VALIDATED 520 (two-profile + independent-method control >= 500)"
+      },
+      "rows_using": 1
+    },
+    {
+      "index": 53,
+      "symbol": "vakint::PR11D2Eps2",
+      "pretty": "PR11D2Eps2",
+      "meaning": "[delta^2] of hat unit wheel PR11",
+      "sector": "D2",
+      "weight": null,
+      "parity": "-",
+      "definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,2)",
+      "definition_readable": "SeriesCoefficient(𝑒^(4*γ*delta)*LoopIntegral(2-2*delta,1/((1+EuclideanDot(k(2),k(2)))*(1+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))+2*EuclideanDot(k(1),k(2))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))),k(1),k(2),k(3),k(4)),delta,0,2)",
+      "normalisation": "Euclidean measure d^Dk/pi^(D/2) per loop (D = 2-2delta), unit masses, every propagator (q^2+1)^(-a), factor exp(4 gamma delta) (L = 4 loops), NO sign (-1)^(sum a) (hat convention: raw Minkowski jet = (-1)^(sum a) hat), no symmetry factor; the constant is the ordinary Taylor coefficient [delta^k] (not a derivative); jet 0 (PR7D2) is the D = 2 value",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "EXACT structural check (no numerical evaluation): every propagator quadratic form, unit mass and power of the LoopIntegral equals the producer family rows (4L manifest family 693719b1bc3d…, powers [0, 1, 1, 1, 1, 1, 1, 1, 1, 0])",
+        "agreement_digits": null
+      },
+      "value": {
+        "digits": 587,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "1.17428E-588",
+        "error_quality": "estimated",
+        "status": "COMPUTED+VALIDATED (takeover, not a codex-2 Root adoption): COMPUTED+VALIDATED 587 (two-profile + independent-method control >= 500)"
+      },
+      "rows_using": 11
+    },
+    {
+      "index": 54,
+      "symbol": "vakint::PR11D2Eps3",
+      "pretty": "PR11D2Eps3",
+      "meaning": "[delta^3] of hat unit wheel",
+      "sector": "D2",
+      "weight": null,
+      "parity": "-",
+      "definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,3)",
+      "definition_readable": "SeriesCoefficient(𝑒^(4*γ*delta)*LoopIntegral(2-2*delta,1/((1+EuclideanDot(k(2),k(2)))*(1+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))+2*EuclideanDot(k(1),k(2))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))),k(1),k(2),k(3),k(4)),delta,0,3)",
+      "normalisation": "Euclidean measure d^Dk/pi^(D/2) per loop (D = 2-2delta), unit masses, every propagator (q^2+1)^(-a), factor exp(4 gamma delta) (L = 4 loops), NO sign (-1)^(sum a) (hat convention: raw Minkowski jet = (-1)^(sum a) hat), no symmetry factor; the constant is the ordinary Taylor coefficient [delta^k] (not a derivative); jet 0 (PR7D2) is the D = 2 value",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "EXACT structural check (no numerical evaluation): every propagator quadratic form, unit mass and power of the LoopIntegral equals the producer family rows (4L manifest family 693719b1bc3d…, powers [0, 1, 1, 1, 1, 1, 1, 1, 1, 0])",
+        "agreement_digits": null
+      },
+      "value": {
+        "digits": 586,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "1.25412E-587",
+        "error_quality": "estimated",
+        "status": "COMPUTED+VALIDATED (takeover, not a codex-2 Root adoption): COMPUTED+VALIDATED 586 (two-profile + independent-method control >= 500)"
+      },
+      "rows_using": 10
+    },
+    {
+      "index": 55,
+      "symbol": "vakint::PR11D2Eps4",
+      "pretty": "PR11D2Eps4",
+      "meaning": "[delta^4] of hat unit wheel",
+      "sector": "D2",
+      "weight": null,
+      "parity": "-",
+      "definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,4)",
+      "definition_readable": "SeriesCoefficient(𝑒^(4*γ*delta)*LoopIntegral(2-2*delta,1/((1+EuclideanDot(k(2),k(2)))*(1+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))+2*EuclideanDot(k(1),k(2))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))),k(1),k(2),k(3),k(4)),delta,0,4)",
+      "normalisation": "Euclidean measure d^Dk/pi^(D/2) per loop (D = 2-2delta), unit masses, every propagator (q^2+1)^(-a), factor exp(4 gamma delta) (L = 4 loops), NO sign (-1)^(sum a) (hat convention: raw Minkowski jet = (-1)^(sum a) hat), no symmetry factor; the constant is the ordinary Taylor coefficient [delta^k] (not a derivative); jet 0 (PR7D2) is the D = 2 value",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "EXACT structural check (no numerical evaluation): every propagator quadratic form, unit mass and power of the LoopIntegral equals the producer family rows (4L manifest family 693719b1bc3d…, powers [0, 1, 1, 1, 1, 1, 1, 1, 1, 0])",
+        "agreement_digits": null
+      },
+      "value": {
+        "digits": 560,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "1.66497E-586",
+        "error_quality": "estimated",
+        "status": "COMPUTED+VALIDATED (takeover, not a codex-2 Root adoption): COMPUTED+VALIDATED 560 (two-profile + independent-method control >= 500)"
+      },
+      "rows_using": 3
+    },
+    {
+      "index": 56,
+      "symbol": "vakint::PR11dD2Eps1",
+      "pretty": "PR11dD2Eps1",
+      "meaning": "[delta^1] of hat rim-dotted wheel PR11d",
+      "sector": "D2",
+      "weight": null,
+      "parity": "-",
+      "definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-2)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,1)",
+      "definition_readable": "SeriesCoefficient(𝑒^(4*γ*delta)*LoopIntegral(2-2*delta,1/((1+EuclideanDot(k(2),k(2)))^2*(1+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))+2*EuclideanDot(k(1),k(2))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))),k(1),k(2),k(3),k(4)),delta,0,1)",
+      "normalisation": "Euclidean measure d^Dk/pi^(D/2) per loop (D = 2-2delta), unit masses, every propagator (q^2+1)^(-a), factor exp(4 gamma delta) (L = 4 loops), NO sign (-1)^(sum a) (hat convention: raw Minkowski jet = (-1)^(sum a) hat), no symmetry factor; the constant is the ordinary Taylor coefficient [delta^k] (not a derivative); jet 0 (PR7D2) is the D = 2 value",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "EXACT structural check (no numerical evaluation): every propagator quadratic form, unit mass and power of the LoopIntegral equals the producer family rows (4L manifest family 693719b1bc3d…, powers [0, 2, 1, 1, 1, 1, 1, 1, 1, 0])",
+        "agreement_digits": null
+      },
+      "value": {
+        "digits": 588,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "3.70218E-590",
+        "error_quality": "estimated",
+        "status": "COMPUTED+VALIDATED (takeover, not a codex-2 Root adoption): COMPUTED+VALIDATED 588 (two-profile + independent-method control >= 500)"
+      },
+      "rows_using": 20
+    },
+    {
+      "index": 57,
+      "symbol": "vakint::PR11dD2Eps3",
+      "pretty": "PR11dD2Eps3",
+      "meaning": "[delta^3] of hat rim-dotted wheel",
+      "sector": "D2",
+      "weight": null,
+      "parity": "-",
+      "definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-2)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,3)",
+      "definition_readable": "SeriesCoefficient(𝑒^(4*γ*delta)*LoopIntegral(2-2*delta,1/((1+EuclideanDot(k(2),k(2)))^2*(1+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))+2*EuclideanDot(k(1),k(2))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))),k(1),k(2),k(3),k(4)),delta,0,3)",
+      "normalisation": "Euclidean measure d^Dk/pi^(D/2) per loop (D = 2-2delta), unit masses, every propagator (q^2+1)^(-a), factor exp(4 gamma delta) (L = 4 loops), NO sign (-1)^(sum a) (hat convention: raw Minkowski jet = (-1)^(sum a) hat), no symmetry factor; the constant is the ordinary Taylor coefficient [delta^k] (not a derivative); jet 0 (PR7D2) is the D = 2 value",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "EXACT structural check (no numerical evaluation): every propagator quadratic form, unit mass and power of the LoopIntegral equals the producer family rows (4L manifest family 693719b1bc3d…, powers [0, 2, 1, 1, 1, 1, 1, 1, 1, 0])",
+        "agreement_digits": null
+      },
+      "value": {
+        "digits": 585,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "1.22295E-586",
+        "error_quality": "estimated",
+        "status": "COMPUTED+VALIDATED (takeover, not a codex-2 Root adoption): COMPUTED+VALIDATED 585 (two-profile + independent-method control >= 500)"
+      },
+      "rows_using": 10
+    },
+    {
+      "index": 58,
+      "symbol": "vakint::PR11dD2Eps4",
+      "pretty": "PR11dD2Eps4",
+      "meaning": "[delta^4] of hat rim-dotted wheel",
+      "sector": "D2",
+      "weight": null,
+      "parity": "-",
+      "definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-2)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,4)",
+      "definition_readable": "SeriesCoefficient(𝑒^(4*γ*delta)*LoopIntegral(2-2*delta,1/((1+EuclideanDot(k(2),k(2)))^2*(1+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))+2*EuclideanDot(k(1),k(2))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))),k(1),k(2),k(3),k(4)),delta,0,4)",
+      "normalisation": "Euclidean measure d^Dk/pi^(D/2) per loop (D = 2-2delta), unit masses, every propagator (q^2+1)^(-a), factor exp(4 gamma delta) (L = 4 loops), NO sign (-1)^(sum a) (hat convention: raw Minkowski jet = (-1)^(sum a) hat), no symmetry factor; the constant is the ordinary Taylor coefficient [delta^k] (not a derivative); jet 0 (PR7D2) is the D = 2 value",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "EXACT structural check (no numerical evaluation): every propagator quadratic form, unit mass and power of the LoopIntegral equals the producer family rows (4L manifest family 693719b1bc3d…, powers [0, 2, 1, 1, 1, 1, 1, 1, 1, 0])",
+        "agreement_digits": null
+      },
+      "value": {
+        "digits": 560,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "2.82078E-585",
+        "error_quality": "estimated",
+        "status": "COMPUTED+VALIDATED (takeover, not a codex-2 Root adoption): COMPUTED+VALIDATED 560 (two-profile + independent-method control >= 500)"
+      },
+      "rows_using": 3
+    },
+    {
+      "index": 59,
+      "symbol": "vakint::PR12D2Eps2",
+      "pretty": "PR12D2Eps2",
+      "meaning": "[delta^2] of hat prism PR12",
+      "sector": "D2",
+      "weight": null,
+      "parity": "-",
+      "definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(1+vakint::EuclideanDot(vakint::k(1),vakint::k(1)))^(-1)*(1+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,2)",
+      "definition_readable": "SeriesCoefficient(𝑒^(4*γ*delta)*LoopIntegral(2-2*delta,1/((1+EuclideanDot(k(1),k(1)))*(1+EuclideanDot(k(2),k(2)))*(1+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))),k(1),k(2),k(3),k(4)),delta,0,2)",
+      "normalisation": "Euclidean measure d^Dk/pi^(D/2) per loop (D = 2-2delta), unit masses, every propagator (q^2+1)^(-a), factor exp(4 gamma delta) (L = 4 loops), NO sign (-1)^(sum a) (hat convention: raw Minkowski jet = (-1)^(sum a) hat), no symmetry factor; the constant is the ordinary Taylor coefficient [delta^k] (not a derivative); jet 0 (PR7D2) is the D = 2 value",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "EXACT structural check (no numerical evaluation): every propagator quadratic form, unit mass and power of the LoopIntegral equals the producer family rows (4L manifest family eb225daea1dd…, powers [1, 1, 1, 1, 1, 1, 1, 1, 1, 0])",
+        "agreement_digits": null
+      },
+      "value": {
+        "digits": 520,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "1.00001E-560",
+        "error_quality": "estimated",
+        "status": "COMPUTED+VALIDATED (takeover, not a codex-2 Root adoption): two-profile only at >=500; independent-method control only below 500 digits (GLS print 48.7)"
+      },
+      "rows_using": 2
+    },
+    {
+      "index": 60,
+      "symbol": "vakint::PR12D2Eps3",
+      "pretty": "PR12D2Eps3",
+      "meaning": "[delta^3] of hat prism PR12",
+      "sector": "D2",
+      "weight": null,
+      "parity": "-",
+      "definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(1+vakint::EuclideanDot(vakint::k(1),vakint::k(1)))^(-1)*(1+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,3)",
+      "definition_readable": "SeriesCoefficient(𝑒^(4*γ*delta)*LoopIntegral(2-2*delta,1/((1+EuclideanDot(k(1),k(1)))*(1+EuclideanDot(k(2),k(2)))*(1+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))),k(1),k(2),k(3),k(4)),delta,0,3)",
+      "normalisation": "Euclidean measure d^Dk/pi^(D/2) per loop (D = 2-2delta), unit masses, every propagator (q^2+1)^(-a), factor exp(4 gamma delta) (L = 4 loops), NO sign (-1)^(sum a) (hat convention: raw Minkowski jet = (-1)^(sum a) hat), no symmetry factor; the constant is the ordinary Taylor coefficient [delta^k] (not a derivative); jet 0 (PR7D2) is the D = 2 value",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "EXACT structural check (no numerical evaluation): every propagator quadratic form, unit mass and power of the LoopIntegral equals the producer family rows (4L manifest family eb225daea1dd…, powers [1, 1, 1, 1, 1, 1, 1, 1, 1, 0])",
+        "agreement_digits": null
+      },
+      "value": {
+        "digits": 520,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "1.00001E-559",
+        "error_quality": "estimated",
+        "status": "COMPUTED+VALIDATED (takeover): two-profile validation at 520 digits (SX prod-A/prod-B 576.0); independent-method control: >= 421 digits closure-implied (the PR12[1] closure against the independent codex-2 D4 physical value), ACCEPTED as the control by user decision D13 (30 Oct 2026, 23:2x UTC); estimated, not an interval proof",
+        "status_basis_v3": "COMPUTED (takeover): two-profile validation at 520 digits (SX prod-A/prod-B 576.0); control on record: >= 421 digits, closure-implied (the PR12[1] closure against the independent codex-2 D4 physical value; INFERENCE, control only, not an independent computation of E12[3]; ledger v2 decision D13 open); estimated, not an interval proof"
+      },
+      "rows_using": 1
+    },
+    {
+      "index": 61,
+      "symbol": "vakint::PR0D2Eps1",
+      "pretty": "PR0D2Eps1",
+      "meaning": "[delta^1] of hat K3,3 PR0",
+      "sector": "D2",
+      "weight": null,
+      "parity": "-",
+      "definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(1),vakint::k(1)))^(-1)*(1+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,1)",
+      "definition_readable": "SeriesCoefficient(𝑒^(4*γ*delta)*LoopIntegral(2-2*delta,1/((1+EuclideanDot(k(1),k(1)))*(1+EuclideanDot(k(2),k(2)))*(1+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))+2*EuclideanDot(k(1),k(2))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))),k(1),k(2),k(3),k(4)),delta,0,1)",
+      "normalisation": "Euclidean measure d^Dk/pi^(D/2) per loop (D = 2-2delta), unit masses, every propagator (q^2+1)^(-a), factor exp(4 gamma delta) (L = 4 loops), NO sign (-1)^(sum a) (hat convention: raw Minkowski jet = (-1)^(sum a) hat), no symmetry factor; the constant is the ordinary Taylor coefficient [delta^k] (not a derivative); jet 0 (PR7D2) is the D = 2 value",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "EXACT structural check (no numerical evaluation): every propagator quadratic form, unit mass and power of the LoopIntegral equals the producer family rows (4L manifest family 693719b1bc3d…, powers [1, 1, 1, 1, 1, 1, 1, 1, 1, 0])",
+        "agreement_digits": null
+      },
+      "value": {
+        "digits": 520,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "4.02165E-582",
+        "error_quality": "estimated",
+        "status": "COMPUTED+VALIDATED (takeover, not a codex-2 Root adoption): two-profile only at >=500; independent-method control only below 500 digits (GLS 1609.05071 c17 print 48.5 (runs/D-PR0-K33/registry.json controls.A/B.E1_vs_GLS_c17_50))"
+      },
+      "rows_using": 2
+    },
+    {
+      "index": 62,
+      "symbol": "vakint::PR0D2Eps2",
+      "pretty": "PR0D2Eps2",
+      "meaning": "[delta^2] of hat K3,3 PR0",
+      "sector": "D2",
+      "weight": null,
+      "parity": "-",
+      "definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(1),vakint::k(1)))^(-1)*(1+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,2)",
+      "definition_readable": "SeriesCoefficient(𝑒^(4*γ*delta)*LoopIntegral(2-2*delta,1/((1+EuclideanDot(k(1),k(1)))*(1+EuclideanDot(k(2),k(2)))*(1+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))+2*EuclideanDot(k(1),k(2))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))),k(1),k(2),k(3),k(4)),delta,0,2)",
+      "normalisation": "Euclidean measure d^Dk/pi^(D/2) per loop (D = 2-2delta), unit masses, every propagator (q^2+1)^(-a), factor exp(4 gamma delta) (L = 4 loops), NO sign (-1)^(sum a) (hat convention: raw Minkowski jet = (-1)^(sum a) hat), no symmetry factor; the constant is the ordinary Taylor coefficient [delta^k] (not a derivative); jet 0 (PR7D2) is the D = 2 value",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "EXACT structural check (no numerical evaluation): every propagator quadratic form, unit mass and power of the LoopIntegral equals the producer family rows (4L manifest family 693719b1bc3d…, powers [1, 1, 1, 1, 1, 1, 1, 1, 1, 0])",
+        "agreement_digits": null
+      },
+      "value": {
+        "digits": 520,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "7.47194E-582",
+        "error_quality": "estimated",
+        "status": "COMPUTED+VALIDATED (takeover, not a codex-2 Root adoption): two-profile only at >=500; independent-method control only below 500 digits (GLS c32+2z2A0 print 51.2)"
+      },
+      "rows_using": 1
+    },
+    {
+      "index": 63,
+      "symbol": "vakint::PR5D2Eps4",
+      "pretty": "PR5D2Eps4",
+      "meaning": "[delta^4] of hat PR5 (triangle of three unit-mass double edges)",
+      "sector": "D2",
+      "weight": null,
+      "parity": "-",
+      "definition": "vakint::SeriesCoefficient(vakint::LoopIntegral(-2*vakint::delta+2,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(2),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::delta),vakint::delta,0,4)",
+      "definition_readable": "SeriesCoefficient(𝑒^(4*γ*delta)*LoopIntegral(2-2*delta,1/((1+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))+2*EuclideanDot(k(1),k(2))-2*EuclideanDot(k(1),k(3))-2*EuclideanDot(k(1),k(4))+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))-2*EuclideanDot(k(2),k(4))+EuclideanDot(k(3),k(3))+2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))),k(1),k(2),k(3),k(4)),delta,0,4)",
+      "normalisation": "Euclidean measure d^Dk/pi^(D/2) per loop (D = 2-2delta), unit masses, every propagator (q^2+1)^(-a), factor exp(4 gamma delta) (L = 4 loops), NO sign (-1)^(sum a) (hat convention: raw Minkowski jet = (-1)^(sum a) hat), no symmetry factor; the constant is the ordinary Taylor coefficient [delta^k] (not a derivative); jet 0 (PR7D2) is the D = 2 value",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "EXACT structural check (no numerical evaluation): every propagator quadratic form, unit mass and power of the LoopIntegral equals the producer family rows (4L manifest family 693719b1bc3d…, powers [0, 0, 1, 0, 1, 1, 1, 1, 1, 0])",
+        "agreement_digits": null
+      },
+      "value": {
+        "digits": 520,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "1.00001E-557",
+        "error_quality": "estimated",
+        "status": "COMPUTED+VALIDATED (takeover, not a codex-2 Root adoption): COMPUTED+VALIDATED 500 (two-profile + independent-method control >= 500)"
+      },
+      "rows_using": 4
+    },
+    {
+      "index": 64,
+      "symbol": "vakint::T111bar5",
+      "pretty": "T111bar5",
+      "meaning": "MATAD constant T111bar(5) (2-loop equal-mass sunset, eps^5)",
+      "sector": "W7",
+      "weight": 7,
+      "parity": "-",
+      "definition": "vakint::SeriesCoefficient((-1+vakint::ep)*(-2*vakint::ep+1)*(symbolica::gamma(1+vakint::ep))^(-2)*3^(1/2)*vakint::LoopIntegral(-2*vakint::ep+4,(1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(1+vakint::EuclideanDot(vakint::k(1),vakint::k(1)))^(-1)*(1+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1),vakint::k(1),vakint::k(2))+-3/2*3^(1/2)*vakint::ep^(-2),vakint::ep,0,5)",
+      "definition_readable": "SeriesCoefficient(3^(1/2)*(-1+ep)*(1-2*ep)*LoopIntegral(4-2*ep,1/((1+EuclideanDot(k(1),k(1)))*(1+EuclideanDot(k(2),k(2)))*(1+EuclideanDot(k(1),k(1))+2*EuclideanDot(k(1),k(2))+EuclideanDot(k(2),k(2)))),k(1),k(2))/gamma(1+ep)^2-3/2*3^(1/2)/ep^2,ep,0,5)",
+      "normalisation": "MATAD bar of Vakint matad.rs, T111 = two-loop equal-mass sunset: T111bar(k) = ordinary Taylor coefficient [ep^k] of sqrt3 (1-2ep)(ep-1) * Gamma(1+ep)^(-2) * LoopIntegral, Euclidean measure d^dk/pi^(d/2) per loop (2 loops, d = 4-2ep), unit masses, no sign; NO factor exp(2 gamma ep) (Gamma(1+ep)^(-2) takes its place); the subtracted 3 sqrt3/(2 ep^2) only removes the double pole and does not change [ep^k] for k >= 0",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "EXACT structural check (no numerical evaluation of the loop integral): Symanzik U and F polynomials of the definition equal those of the Vakint MATAD master miT111 (inspection/definitions.rs MATAD_MASTERS) up to a relabelling of lines (mass pattern included); prefactor = matad.rs normalisation sqrt3 (1-2ep)(ep-1) Gamma(1+ep)^-2 LI - 3 sqrt3/(2 ep^2)",
+        "agreement_digits": null
+      },
+      "value": {
+        "digits": 650,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "1.00001E-697",
+        "error_quality": "estimated",
+        "status": "COMPUTED+VALIDATED (takeover, not a codex-2 Root adoption): COMPUTED+VALIDATED 650 (two-profile + independent-method control >= 500)"
+      },
+      "rows_using": 1
+    },
+    {
+      "index": 65,
+      "symbol": "vakint::BNbar5",
+      "pretty": "BNbar5",
+      "meaning": "MATAD constant BNbar(5) (3-loop equal-mass banana, eps^5)",
+      "sector": "W7",
+      "weight": 7,
+      "parity": "-",
+      "definition": "vakint::SeriesCoefficient((-1*vakint::ep+1)*(-2*vakint::ep+1)*(-3*vakint::ep+1)*(-3*vakint::ep+2)*(symbolica::gamma(1+vakint::ep))^(-3)*vakint::LoopIntegral(-2*vakint::ep+4,(1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(1),vakint::k(1)))^(-1)*(1+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3)),vakint::ep,0,5)",
+      "definition_readable": "SeriesCoefficient((1-3*ep)*(1-2*ep)*(1-ep)*(2-3*ep)*LoopIntegral(4-2*ep,1/((1+EuclideanDot(k(1),k(1)))*(1+EuclideanDot(k(2),k(2)))*(1+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(1),k(1))+2*EuclideanDot(k(1),k(2))+2*EuclideanDot(k(1),k(3))+EuclideanDot(k(2),k(2))+2*EuclideanDot(k(2),k(3))+EuclideanDot(k(3),k(3)))),k(1),k(2),k(3))/gamma(1+ep)^3,ep,0,5)",
+      "normalisation": "MATAD bar of Vakint matad.rs, BN = three-loop equal-mass banana (4 unit-mass lines): BNbar(k) = ordinary Taylor coefficient [ep^k] of (1-ep)(1-2ep)(1-3ep)(2-3ep) * Gamma(1+ep)^(-3) * LoopIntegral, Euclidean measure d^dk/pi^(d/2) per loop (3 loops, d = 4-2ep), unit masses, no sign; NO factor exp(3 gamma ep) (Gamma(1+ep)^(-3) takes its place)",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "EXACT structural check (no numerical evaluation of the loop integral): Symanzik U and F polynomials of the definition equal those of the Vakint MATAD master miBN (inspection/definitions.rs MATAD_MASTERS) up to a relabelling of lines (mass pattern included); prefactor = matad.rs normalisation (1-ep)(1-2ep)(1-3ep)(2-3ep) Gamma(1+ep)^-3 LI",
+        "agreement_digits": null
+      },
+      "value": {
+        "digits": 581,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "1.74024E-591",
+        "error_quality": "estimated",
+        "status": "COMPUTED+VALIDATED (takeover, not a codex-2 Root adoption): COMPUTED+VALIDATED 581 (two-profile + independent-method control >= 500)"
+      },
+      "rows_using": 4
+    },
+    {
+      "index": 66,
+      "symbol": "vakint::D5bar3",
+      "pretty": "D5bar3",
+      "meaning": "MATAD constant D5bar(3) (3-loop tetrahedron with one massless line, eps^3)",
+      "sector": "W7",
+      "weight": 7,
+      "parity": "-",
+      "definition": "vakint::SeriesCoefficient((-1*vakint::ep+1)*(-2*vakint::ep+1)*vakint::LoopIntegral(-2*vakint::ep+4,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(1),vakint::k(1)))^(-1)*(1+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3))*𝑒^(3*symbolica::γ*vakint::ep),vakint::ep,0,3)",
+      "definition_readable": "SeriesCoefficient(𝑒^(3*γ*ep)*(1-2*ep)*(1-ep)*LoopIntegral(4-2*ep,1/((1+EuclideanDot(k(1),k(1)))*(1+EuclideanDot(k(2),k(2)))*(1+EuclideanDot(k(3),k(3)))*(EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(2))+EuclideanDot(k(2),k(2)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))+EuclideanDot(k(3),k(3)))),k(1),k(2),k(3)),ep,0,3)",
+      "normalisation": "MATAD bar of Vakint matad.rs, tetrahedron topology D5 (one massless line) / D6 (six unit-mass lines): Xbar(k) = ordinary Taylor coefficient [ep^k] (not a derivative) of (1-ep)(1-2ep) * exp(3 gamma ep) * LoopIntegral, Euclidean measure d^dk/pi^(d/2) per loop (3 loops, d = 4-2ep), unit masses, no sign, the propagators shown",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "EXACT structural check (no numerical evaluation of the loop integral): Symanzik U and F polynomials of the definition equal those of the Vakint MATAD master miD5 (inspection/definitions.rs MATAD_MASTERS) up to a relabelling of lines (mass pattern included); prefactor = matad.rs normalisation (1-ep)(1-2ep) exp(3 gamma ep) LI",
+        "agreement_digits": null
+      },
+      "value": {
+        "digits": 600,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "8.52316E-628",
+        "error_quality": "estimated",
+        "status": "COMPUTED+VALIDATED (takeover, not a codex-2 Root adoption): COMPUTED+VALIDATED 600 (two-profile + independent-method control >= 500)"
+      },
+      "rows_using": 4
+    },
+    {
+      "index": 67,
+      "symbol": "vakint::PR14ep2",
+      "pretty": "PR14ep2",
+      "meaning": "[eps^2] of the FMFT D=4-2eps master PR14 (ring of three bubbles)",
+      "sector": "W7",
+      "weight": null,
+      "parity": "-",
+      "definition": "vakint::SeriesCoefficient(-1*vakint::LoopIntegral(-2*vakint::ep+4,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(1),vakint::k(1)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::ep),vakint::ep,0,2)",
+      "definition_readable": "SeriesCoefficient(-𝑒^(4*γ*ep)*LoopIntegral(4-2*ep,1/((1+EuclideanDot(k(1),k(1)))*(1+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(2))+EuclideanDot(k(2),k(2)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))+2*EuclideanDot(k(1),k(4))+EuclideanDot(k(3),k(3))-2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))),k(1),k(2),k(3),k(4)),ep,0,2)",
+      "normalisation": "public FMFT master normalisation: Minkowski masters M = (-1)^(sum a) exp(4 gamma ep) LoopIntegral(4-2ep, ...), Euclidean measure d^dk/pi^(d/2) per loop, unit masses; the constant is the ordinary Taylor coefficient [ep^k]",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "EXACT structural check (no numerical evaluation): every propagator quadratic form, unit mass and power of the LoopIntegral equals the producer family rows (4L manifest family bb95c283ed3c…, powers [1, 0, 1, 1, 1, 1, 1, 1, 0, 0])",
+        "agreement_digits": null
+      },
+      "value": {
+        "digits": 600,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "1.00001E-616",
+        "error_quality": "estimated",
+        "status": "COMPUTED+VALIDATED (takeover, not a codex-2 Root adoption): two-profile only at >=500; independent-method control only below 500 digits (codex-2 D4 auxiliary-mass sample refit 423.8)"
+      },
+      "rows_using": 4
+    },
+    {
+      "index": 68,
+      "symbol": "vakint::PR14ep3",
+      "pretty": "PR14ep3",
+      "meaning": "[eps^3] of the FMFT master PR14",
+      "sector": "W7",
+      "weight": null,
+      "parity": "-",
+      "definition": "vakint::SeriesCoefficient(-1*vakint::LoopIntegral(-2*vakint::ep+4,(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(2))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(2),vakint::k(2)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+-2*vakint::EuclideanDot(vakint::k(3),vakint::k(4))+1+2*vakint::EuclideanDot(vakint::k(1),vakint::k(4))+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3))+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(1),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(1),vakint::k(1))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(-2*vakint::EuclideanDot(vakint::k(2),vakint::k(3))+1+vakint::EuclideanDot(vakint::k(2),vakint::k(2))+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(1),vakint::k(1)))^(-1)*(1+vakint::EuclideanDot(vakint::k(3),vakint::k(3)))^(-1)*(1+vakint::EuclideanDot(vakint::k(4),vakint::k(4)))^(-1),vakint::k(1),vakint::k(2),vakint::k(3),vakint::k(4))*𝑒^(4*symbolica::γ*vakint::ep),vakint::ep,0,3)",
+      "definition_readable": "SeriesCoefficient(-𝑒^(4*γ*ep)*LoopIntegral(4-2*ep,1/((1+EuclideanDot(k(1),k(1)))*(1+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(4),k(4)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(2))+EuclideanDot(k(2),k(2)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(2),k(2))-2*EuclideanDot(k(2),k(3))+EuclideanDot(k(3),k(3)))*(1+EuclideanDot(k(1),k(1))-2*EuclideanDot(k(1),k(3))+2*EuclideanDot(k(1),k(4))+EuclideanDot(k(3),k(3))-2*EuclideanDot(k(3),k(4))+EuclideanDot(k(4),k(4)))),k(1),k(2),k(3),k(4)),ep,0,3)",
+      "normalisation": "public FMFT master normalisation: Minkowski masters M = (-1)^(sum a) exp(4 gamma ep) LoopIntegral(4-2ep, ...), Euclidean measure d^dk/pi^(d/2) per loop, unit masses; the constant is the ordinary Taylor coefficient [ep^k]",
+      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "definition_check": {
+        "method": "EXACT structural check (no numerical evaluation): every propagator quadratic form, unit mass and power of the LoopIntegral equals the producer family rows (4L manifest family bb95c283ed3c…, powers [1, 0, 1, 1, 1, 1, 1, 1, 0, 0])",
+        "agreement_digits": null
+      },
+      "value": {
+        "digits": 600,
+        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab",
+        "absolute_error": "1.00001E-615",
+        "error_quality": "estimated",
+        "status": "COMPUTED+VALIDATED (takeover, not a codex-2 Root adoption): two-profile validation at 600 digits (radial A/B 632) + independent-method control at 424.0 digits (refit of the codex-2 stage-200 D4 auxiliary-mass eta-flow samples, profile 1); estimated, not an interval proof"
+      },
+      "rows_using": 1
+    }
+  ],
+  "not_generators": [
+    {
+      "name": "vakint::PR5D2Eps3",
+      "exactly_expressible": true,
+      "how": "J8 jet-3 formula in log 2, pi, zeta3, zeta5, Li4/5/6(1/2), s6 (relation PR5D2EPS3_J8)",
+      "status": "ACCEPTED-260, confirmed to 520.29 digits; re-checked 560.8 digits here",
+      "rows_rewritten_out": 1
+    },
+    {
+      "name": "vakint::PR10D2",
+      "exactly_expressible": true,
+      "how": "D2J0_PR10 (Cl4, K5Moment(1), PR7D2)",
+      "status": "ACCEPTED",
+      "rows_rewritten_out": 57
+    },
+    {
+      "name": "vakint::PR15D2",
+      "exactly_expressible": true,
+      "how": "D2J0_PR15 (zeta3, K5Moment(1), PR7D2)",
+      "status": "ACCEPTED",
+      "rows_rewritten_out": 49
+    },
+    {
+      "name": "vakint::PR11dep0",
+      "exactly_expressible": true,
+      "how": "closed formula of PR11d[0] (= 4L P17 eps^0 row): D2 jets, K5 moments, classical",
+      "status": "COMPUTED+VALIDATED (closure, 544 digits vs 20k)",
+      "rows_rewritten_out": 2
+    },
+    {
+      "name": "vakint::PR4fin, PR4dfin, PR4ep1, PR4dep1",
+      "exactly_expressible": true,
+      "how": "published K5-moment rows of P6/P11",
+      "status": "EXACT",
+      "rows_rewritten_out": 49
+    },
+    {
+      "name": "vakint::S2, T1ep, T1ep2",
+      "exactly_expressible": true,
+      "how": "MATAD definitions in Cl2 / HI words",
+      "status": "PROVEN / ACCEPTED",
+      "rows_rewritten_out": 60
+    },
+    {
+      "name": "vakint::BNbar4",
+      "exactly_expressible": true,
+      "how": "BNBAR4_LEVEL2: 1536 (12 Li6(1/2) + 5 s6) - MZV/level-2 products",
+      "status": "COMPUTED+VALIDATED numerical identity (19899.7 digits)",
+      "rows_rewritten_out": 27
+    },
+    {
+      "name": "342 HPL words H(w; e^{i pi/3}), 15 Vakint GPLs (9 not kept), Li2/Li4(e^{+-i pi/3}), Li3(+-i/sqrt3)",
+      "exactly_expressible": true,
+      "how": "HSS tables / proven identities -> generators (Li3(+-i/sqrt3) numerically, LI3_I_SQRT3_V1)",
+      "status": "EXACT except LI3 (COMPUTED)"
+    },
+    {
+      "name": "vakint::PR11dD2Eps2",
+      "exactly_expressible": true,
+      "how": "R1 (48 terms, height 10^6.28): PR11dD2Eps2 = 2/3 PR11D2Eps2 + 1/2 PR11dD2Eps1 - 4/9 PR10D2Eps1 - 2/9 PR10D2Eps2 + ... (relations-used.json R1_PR11dD2Eps2)",
+      "status": "COMPUTED+VALIDATED numerical relation (547 digits; user decision 30 Oct: adopted); GLS (c30): identical where comparable (gls-c30-comparison.json)",
+      "rows_rewritten_out": 14
+    },
+    {
+      "name": "vakint::GPLImag(0,1,(-1-3^(1/2)*𝑖)/2,1)",
+      "exactly_expressible": true,
+      "how": "X3_TI3 swap to Im Li3(i/sqrt3)",
+      "status": "COMPUTED+VALIDATED (4100 digits)",
+      "rows_rewritten_out": 217
+    },
+    {
+      "name": "vakint::GPLImag(0,1,1,(-1-3^(1/2)*𝑖)/2,1)",
+      "exactly_expressible": true,
+      "how": "X4_TI4 swap to Im Li4(i/sqrt3)",
+      "status": "COMPUTED+VALIDATED (4100 digits)",
+      "rows_rewritten_out": 159
+    }
+  ],
+  "remaining_non_classical_no_exact_formula": {
+    "Bessel (10)": "no Q-linear relation known among K5Moment(1,3), K5LogMoment(1,3), K5MomentTaylor(k,2..4) and classical constants (Broadhurst-Roberts/Zhou relations need I0K0^4 moments); census-review PSLQ found none below height 10^41 for jets 0-1.",
+    "weight 7 / D4 (5)": "no reduction tables beyond weight 6; T111bar5 is expected to be sqrt3 x (inverse-binomial/log-sine sum h7) + products and BNbar5 / PR5D2Eps4 may be level-2 (alternating) weight-7 objects (analogy with BNbar4, J8 jet 3) -- neither is an exact formula in the present generators (would need new weight-7 primitives such as Li7(1/2) or h7); recommended PSLQ scouts for the independence step.",
+    "D2 periods (30)": "PR11dD2Eps2 is removed by R1 (= GLS c30 where comparable). No exact formula is known or accepted for the remaining 30 jets. POSSIBLE jet-3 / jet-4 analogues of R1 (PR11dD2Eps3/4 in terms of PR11D2Eps3/4, lower jets, kappa[3]/kappa[4] and weight-6/7 classical products) are NOT EXCLUDED at the available precision (~500 digits): the blocks that could contain them have n >~ 90 and excluded heights H < 2 (independence/results.json, Z_jet3_core_v4); GLS give no jet-3 relation. no exact formula in other constants is known or accepted for any of the 31 jets. The ACCEPTED jet-0 relations (PR10D2, PR15D2, PR9D2, PR12D2, PR0D2 -> PR7D2, K5Moment(1), Cl4, zeta3) only remove jet-0 names that are not generators; the exact V9hat[1] relation removes PR9pD2Eps1 (not a generator); the GLS jet-1 PSLQ relations (I1022, I1011.1.2 eps^5) involve PR12D2Eps1, PR11D2Eps1 and the GLS constants c1 (3L D5 D2 jet) and c12 (PR14 D2 jet), none of which is a generator, so they cannot eliminate any of the 31 (PR11dD2Eps1 <-> PR11D2Eps1 is a trade, kept as W1). Ledger v2: the 43 slots test 12 combinations of the 34 proposed names (null space 22)."
+  },
+  "counts_by_sector": {
+    "MZV": 4,
+    "level2": 5,
+    "level6": 14,
+    "Bessel": 10,
+    "D2": 30,
+    "W7": 5
+  },
+  "vakint_definitions": "Vakint get_constant(symbol).definition() is the authoritative explicit definition (gammaloop PR #243); every generator is a Vakint built-in or a 4L/constants.json record."
+}

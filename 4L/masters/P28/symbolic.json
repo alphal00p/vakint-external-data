@@ -9,18 +9,18 @@
   ],
   [
     -2,
-    "(4565/144+5/6*𝜋^2)*3/5+-28/3"
+    "1/16*(8*𝜋^2+155)"
   ],
   [
     -1,
-    "(-10/3*symbolica::zeta(3)+35/9*𝜋^2+58345/864)*3/5+(4565/144+5/6*𝜋^2)*-4/5"
+    "-2*symbolica::zeta(3)+5/3*𝜋^2+485/32"
   ],
   [
     0,
-    "(-10/3*symbolica::zeta(3)+35/9*𝜋^2+58345/864)*-4/5+(-107/6*vakint::K5Moment(1)+-140/9*symbolica::zeta(3)+1/6*𝜋^4+4565/432*𝜋^2+525/8*vakint::K5Moment(3)+932645/5184)*3/5"
+    "1/960*(-10272*vakint::K5Moment(1)+37800*vakint::K5Moment(3)+96*𝜋^4-6400*symbolica::zeta(3)+3100*𝜋^2+51765)"
   ],
   [
     1,
-    "(-10/9*symbolica::zeta(3)*𝜋^2+-107/6*vakint::K5LogMoment(1)+-11389/36*vakint::K5Moment(1)+-2*symbolica::zeta(5)+-4565/108*symbolica::zeta(3)+13475/16*vakint::K5Moment(3)+28936285/31104+525/8*vakint::K5LogMoment(3)+58345/2592*𝜋^2+7/9*𝜋^4)*3/5+(-107/6*vakint::K5Moment(1)+-140/9*symbolica::zeta(3)+1/6*𝜋^4+4565/432*𝜋^2+525/8*vakint::K5Moment(3)+932645/5184)*-4/5"
+    "1/1920*(-337056*vakint::K5Moment(1)+869400*vakint::K5Moment(3)-20544*vakint::K5LogMoment(1)+75600*vakint::K5LogMoment(3)+(-1280*symbolica::zeta(3)*𝜋^2-2304*symbolica::zeta(5))+640*𝜋^4-24800*symbolica::zeta(3)+9700*𝜋^2+795375)"
   ]
 ]

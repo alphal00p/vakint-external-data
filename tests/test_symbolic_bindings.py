@@ -4,6 +4,8 @@ Vakint ranks an exact formula with an unbound vakint:: leaf as arbitrary
 precision, prefers it over the numerical row and then cannot evaluate it.
 Exact rows may therefore only use Vakint's built-in special functions and
 constants, the recorded period aliases, or symbols of the loop's constants.json.
+Built-in functions with non-integer arguments (for example
+vakint::PolylogImag(3,3^(1/2)*𝑖/3)) are matched by their head.
 Outside the vakint namespace only the native Symbolica functions and constants
 that Vakint evaluates are allowed (an unknown head would also stay unevaluated).
 """
@@ -16,8 +18,21 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "tools"))
 import data
 
-BUILTIN_FUNCTIONS = {"HI", "HR", "GPLReal", "GPLImag"}
-BUILTIN_CONSTANTS = {"S2", "T1ep", "T1ep2"}
+BUILTIN_FUNCTIONS = {"HI", "HR", "GPLReal", "GPLImag", "PolylogReal", "PolylogImag"}
+# Vakint built-in constants (never constants.json records): the MATAD/FMFT
+# constants and the Clausen values Cl2(pi/3), Cl4(pi/3) of the constant basis.
+BUILTIN_CONSTANTS = {
+    "S2",
+    "T1ep",
+    "T1ep2",
+    "cl2",
+    "cl4",
+    "D5bar1",
+    "D5bar2",
+    "D6bar1",
+    "D6bar2",
+    "T111bar4",
+}
 RECORDED_PERIODS = {"PR4fin", "PR4dfin", "PR11dep0", "PR4ep1", "PR4dep1"}
 LEAF = re.compile(r"vakint::([A-Za-z_][A-Za-z0-9_]*)(\([0-9, ]*\))?")
 # Non-vakint heads and symbols of published exact rows: native Symbolica

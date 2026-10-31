@@ -46,7 +46,7 @@
     },
     {
       "source": "1L/masters/P1/symbolic.json",
-      "path": "1L/masters/P1/symbolic.json",
+      "path": "provenance/takeover-basis-v4-rewrite-v1-before/1L/masters/P1/symbolic.json",
       "sha256": "dd594dcff7017cbe1794877e38a83b8cce6270b9fed680135888af42dd8d6f9a",
       "bytes": 350
     },
@@ -106,7 +106,7 @@
     },
     {
       "source": "2L/masters/P1/symbolic.json",
-      "path": "2L/masters/P1/symbolic.json",
+      "path": "provenance/original-coefficients/2L/masters/P1/symbolic.json",
       "sha256": "8ccd6def581567d7a52516ceecc556883b8bbaae0937914af06406fe89e46da8",
       "bytes": 344
     },
@@ -394,7 +394,7 @@
     },
     {
       "source": "3L/masters/P1/symbolic.json",
-      "path": "3L/masters/P1/symbolic.json",
+      "path": "provenance/original-coefficients/3L/masters/P1/symbolic.json",
       "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856",
       "bytes": 346
     },
@@ -430,7 +430,7 @@
     },
     {
       "source": "3L/masters/P11/symbolic.json",
-      "path": "3L/masters/P11/symbolic.json",
+      "path": "provenance/original-coefficients/3L/masters/P11/symbolic.json",
       "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856",
       "bytes": 346
     },
@@ -502,7 +502,7 @@
     },
     {
       "source": "3L/masters/P15/symbolic.json",
-      "path": "3L/masters/P15/symbolic.json",
+      "path": "provenance/original-coefficients/3L/masters/P15/symbolic.json",
       "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856",
       "bytes": 346
     },
@@ -520,7 +520,7 @@
     },
     {
       "source": "3L/masters/P16/symbolic.json",
-      "path": "3L/masters/P16/symbolic.json",
+      "path": "provenance/original-coefficients/3L/masters/P16/symbolic.json",
       "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856",
       "bytes": 346
     },
@@ -538,7 +538,7 @@
     },
     {
       "source": "3L/masters/P17/symbolic.json",
-      "path": "3L/masters/P17/symbolic.json",
+      "path": "provenance/original-coefficients/3L/masters/P17/symbolic.json",
       "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856",
       "bytes": 346
     },
@@ -574,7 +574,7 @@
     },
     {
       "source": "3L/masters/P19/symbolic.json",
-      "path": "3L/masters/P19/symbolic.json",
+      "path": "provenance/original-coefficients/3L/masters/P19/symbolic.json",
       "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856",
       "bytes": 346
     },
@@ -592,7 +592,7 @@
     },
     {
       "source": "3L/masters/P2/symbolic.json",
-      "path": "3L/masters/P2/symbolic.json",
+      "path": "provenance/original-coefficients/3L/masters/P2/symbolic.json",
       "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856",
       "bytes": 346
     },
@@ -610,7 +610,7 @@
     },
     {
       "source": "3L/masters/P20/symbolic.json",
-      "path": "3L/masters/P20/symbolic.json",
+      "path": "provenance/original-coefficients/3L/masters/P20/symbolic.json",
       "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856",
       "bytes": 346
     },
@@ -700,7 +700,7 @@
     },
     {
       "source": "3L/masters/P25/symbolic.json",
-      "path": "3L/masters/P25/symbolic.json",
+      "path": "provenance/original-coefficients/3L/masters/P25/symbolic.json",
       "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856",
       "bytes": 346
     },
@@ -736,7 +736,7 @@
     },
     {
       "source": "3L/masters/P27/symbolic.json",
-      "path": "3L/masters/P27/symbolic.json",
+      "path": "provenance/original-coefficients/3L/masters/P27/symbolic.json",
       "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856",
       "bytes": 346
     },
@@ -790,7 +790,7 @@
     },
     {
       "source": "3L/masters/P3/symbolic.json",
-      "path": "3L/masters/P3/symbolic.json",
+      "path": "provenance/original-coefficients/3L/masters/P3/symbolic.json",
       "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856",
       "bytes": 346
     },
@@ -826,7 +826,7 @@
     },
     {
       "source": "3L/masters/P31/symbolic.json",
-      "path": "3L/masters/P31/symbolic.json",
+      "path": "provenance/original-coefficients/3L/masters/P31/symbolic.json",
       "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856",
       "bytes": 346
     },
@@ -952,7 +952,7 @@
     },
     {
       "source": "3L/masters/P38/symbolic.json",
-      "path": "3L/masters/P38/symbolic.json",
+      "path": "provenance/original-coefficients/3L/masters/P38/symbolic.json",
       "sha256": "54254d33ee69402517934b192cfa3bea904909d254296e8d37c95eb985aeba9e",
       "bytes": 6426
     },
@@ -988,7 +988,7 @@
     },
     {
       "source": "3L/masters/P5/symbolic.json",
-      "path": "3L/masters/P5/symbolic.json",
+      "path": "provenance/original-coefficients/3L/masters/P5/symbolic.json",
       "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856",
       "bytes": 346
     },
@@ -1006,7 +1006,7 @@
     },
     {
       "source": "3L/masters/P6/symbolic.json",
-      "path": "3L/masters/P6/symbolic.json",
+      "path": "provenance/original-coefficients/3L/masters/P6/symbolic.json",
       "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856",
       "bytes": 346
     },
@@ -1024,7 +1024,7 @@
     },
     {
       "source": "3L/masters/P7/symbolic.json",
-      "path": "3L/masters/P7/symbolic.json",
+      "path": "provenance/original-coefficients/3L/masters/P7/symbolic.json",
       "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856",
       "bytes": 346
     },
@@ -1060,7 +1060,7 @@
     },
     {
       "source": "3L/masters/P9/symbolic.json",
-      "path": "3L/masters/P9/symbolic.json",
+      "path": "provenance/original-coefficients/3L/masters/P9/symbolic.json",
       "sha256": "b52b77be22f2367a948e371e2f27e15456593c5b895168392f4b211dbc936856",
       "bytes": 346
     },

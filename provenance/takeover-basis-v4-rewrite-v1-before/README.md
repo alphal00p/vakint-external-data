@@ -1,0 +1,3 @@
+# Before-images of the basis-v4 rewrite publication
+
+Byte-exact copies of every existing file changed by `provenance/takeover-basis-v4-rewrite-v1`: the 115 1L-4L `symbolic.json` payloads, the producer-update root and loop slices, the 1L-4L and root manifests, the numerical-precision supplements, `provenance/migration.json`, the validation manifest, `4L/constants.json`, the takeover period registry v3, the takeover-v3 constant projection files and the finite-constant bindings. They are taken from the parent commit recorded in `history.json` (origin/main f51bc5a2). Tools and tests are versioned by Git.
