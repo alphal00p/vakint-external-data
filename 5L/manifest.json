@@ -86913,129 +86913,13 @@
     ]
   },
   "cache": {
-    "available": true,
-    "path": "cache/prepared.rrcache.gz",
-    "metadata": "cache.json",
-    "format": "rustred.saved-application-cache-file.v1",
-    "identity": {
-      "compressed_blake3": [
-        219,
-        100,
-        29,
-        110,
-        2,
-        86,
-        119,
-        67,
-        178,
-        210,
-        192,
-        104,
-        167,
-        48,
-        180,
-        191,
-        176,
-        46,
-        227,
-        30,
-        72,
-        63,
-        149,
-        33,
-        158,
-        177,
-        27,
-        243,
-        244,
-        76,
-        47,
-        160
-      ],
-      "compressed_bytes": 89635796,
-      "decoded_blake3": [
-        8,
-        210,
-        220,
-        161,
-        177,
-        73,
-        19,
-        224,
-        61,
-        213,
-        86,
-        203,
-        160,
-        249,
-        70,
-        173,
-        98,
-        178,
-        93,
-        44,
-        254,
-        57,
-        104,
-        216,
-        234,
-        61,
-        50,
-        69,
-        154,
-        239,
-        228,
-        95
-      ],
-      "decoded_bytes": 104661730
-    },
-    "decoded_sha256": "2a9e18b58e33b875ad469d6c0f5a975270d475cef2b0be166d731e4791fa04e1",
-    "binding": {
-      "artifact_digest": [
-        162,
-        68,
-        185,
-        180,
-        206,
-        143,
-        114,
-        40,
-        199,
-        12,
-        133,
-        132,
-        8,
-        135,
-        208,
-        168,
-        201,
-        62,
-        78,
-        199,
-        29,
-        175,
-        102,
-        4,
-        104,
-        117,
-        83,
-        104,
-        97,
-        251,
-        210,
-        115
-      ],
-      "family_fingerprint": "rustred-integral-family-v2;N27:tide_five_loop_common_basis;L5;2:k1;2:k2;2:k3;2:k4;2:k5;E0;P1;1:d;Q5,0,15;M;RY1,1;I+1;X1;Y1,1;I+1;X0;D15;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I+2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-2;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;G0;U15;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;",
-      "layer": "saved-application-route-apply-v1",
-      "physical_arity": 15
-    }
+    "available": false
   },
   "coverage": "coverage.json",
   "provenance": {
     "current_publication": "provenance/current-publication.json",
     "master_producer_rustred_revision": "a39dfbc6fb01a9bf5e912c37b866941531e6361b",
-    "vakint_reference_revision": "6cdaa993ee9b413189ae077a8f783de6223cc42e",
-    "native_cache_rustred_revision": null
+    "vakint_reference_revision": "6cdaa993ee9b413189ae077a8f783de6223cc42e"
   },
   "files": {
     "README.md": {
@@ -87069,18 +86953,6 @@
     "benchmarks/zero-momentum/vakint-input.symbolica": {
       "sha256": "9814c3b49a1b486b9790bbe5458d8bc582c3fb3c299ba6a1a0362db8ba71cb16",
       "bytes": 380697
-    },
-    "cache/README.md": {
-      "sha256": "f1e161b3c72312be9e667d54e0cdc63ce2551c7cfde4e04c0454018ae71defd9",
-      "bytes": 2608
-    },
-    "cache/prepared.rrcache.gz": {
-      "sha256": "708361954e61e853666d5bb637ad0d58a4336385d4bc9f23133d6ed7e3330021",
-      "bytes": 89635796
-    },
-    "cache.json": {
-      "sha256": "903e83b43eb895af47c47cb3c3862717746408cb562eb99880efa71c744cedd4",
-      "bytes": 2038
     },
     "coverage.json": {
       "sha256": "f3f8cacb3225d1e6e7dc4dd22a645a7b7f2ac4302fb49085eef439d2bdfa2ec7",
@@ -90010,6 +89882,142 @@
       "sha256": "d2628bb5672b18807039be6f9218c07701cfcb80320458277cda2b9f0ef47bd1",
       "bytes": 6697
     },
+    "ordered-cache.json": {
+      "sha256": "a6d5e59018bf2cf2bae7f5b0b19ad380a032c257f5b41b3738ad24ccff95a765",
+      "bytes": 13495
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis/ordered-step-cache.txt": {
+      "sha256": "0b40076acc5a69112aa52c03e00fb5a65a2f8d4b2ef8c97eccf86aab418685fd",
+      "bytes": 10864
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis/shards/apply-s05-0000000000004990.67860ead48ba1921.rrstep": {
+      "sha256": "32b23341b5171bb20dc739dc523557333f7fc9840d0f2aa72d280852d080e3a9",
+      "bytes": 4617496
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis/shards/apply-s06-000000000000074a.fd62b91de67dd55e.rrstep": {
+      "sha256": "779ebb5831f0f8010b7340e0a81ecd7281761e1f9b72439e4a61098409f5b94b",
+      "bytes": 1063912
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis/shards/apply-s06-000000000000074c.ab7111d74bb6777a.rrstep": {
+      "sha256": "d9637a82ff9b9f6ad34c31045af03fa7d01ad1a05f0795352e046d7ed4a20179",
+      "bytes": 2787544
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis/shards/apply-s06-0000000000004615.51fcc30d11a08079.rrstep": {
+      "sha256": "1797f951e2c41339937be53c425167a5e63520275bb1960fe157fa7bbe5c55a8",
+      "bytes": 1017767
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis/shards/apply-s06-0000000000006930.7cef979bc9aa4bb0.rrstep": {
+      "sha256": "d036b4582d8542b00fc3c0386e539a40269a5a2d3fc09119155debbdb6199c3e",
+      "bytes": 7431222
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis/shards/apply-s07-0000000000000a6d.c50f485f6357eaf9.rrstep": {
+      "sha256": "b44d62426bbf1d4c15b05b6c94140dccec115b79130718c0e78abeb52049d979",
+      "bytes": 780107
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis/shards/apply-s07-0000000000004a87.8f2000a3a8e2a816.rrstep": {
+      "sha256": "a64f7c54e5595aeaa47c8fd94f4dfbe35afae66bbe621cfaef3844ed1f1ddd63",
+      "bytes": 2584011
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis/shards/apply-s07-0000000000004ba4.5e7c1176c606f727.rrstep": {
+      "sha256": "f512c70fdbdf81f3e8059130a0f0e704f35ae9df5e66fdcb8e146cf8ad254aa4",
+      "bytes": 254031
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis/shards/apply-s07-0000000000007826.a0cbbfe6a5c47d29.rrstep": {
+      "sha256": "044a77bf3487869a25ffab79212cf165b3f2efb5157c8ac5f503540f7b807a52",
+      "bytes": 1037308
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis/shards/apply-s07-0000000000007a24.654250b15579a354.rrstep": {
+      "sha256": "2506b50bd209a5c01ecdc7476b4cadb57f735831b5d3e88e4ba36597d4d19097",
+      "bytes": 266722
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis/shards/apply-s07-0000000000007a44.f07fac263ede6a78.rrstep": {
+      "sha256": "8669d02f846b3c240188c264f2013bb25b1ac749457ed155cb95c6eb4abab136",
+      "bytes": 836495
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis/shards/apply-s08-00000000000049ae.65ffe2c050ad753c.rrstep": {
+      "sha256": "e2f56b957071c790260a19df7c7fbfb5de51ab97d0179178d69de25261779e1d",
+      "bytes": 133544
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis/shards/apply-s08-0000000000006b46.6518d6fb0d11fbd9.rrstep": {
+      "sha256": "221ac9ef2bb9c2ac9aaa0984799acde2ff025b527a365f19d02e6a0ec532f777",
+      "bytes": 419662
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis/shards/apply-s08-0000000000007827.ab1a547b829fd812.rrstep": {
+      "sha256": "b6388bbf3f8b9c4c24c5c04396994a455175714f4d8e0dc04a36c8a2fbd3ec28",
+      "bytes": 195870
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis/shards/apply-s08-0000000000007a64.abc19a81cb10dc0e.rrstep": {
+      "sha256": "184a190ee94e07ee74eaec74f8f83ea7c2ff8b72121aaf5d1727589035d92fa7",
+      "bytes": 675381
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis/shards/apply-s09-0000000000004b76.01609ac2ca9072fe.rrstep": {
+      "sha256": "09750e9834f4da9c9f446ae8d08fd6d4ab1ec0c8635828389bb6ca1a08cd6246",
+      "bytes": 261641
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis/shards/route-s05-0000000000004990.92cacd1de2607ada.rrstep": {
+      "sha256": "627ab8ce0b2839a56b6be22283b46193fabdb343208940da1670b8480b435a6a",
+      "bytes": 35294666
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis/shards/route-s06-000000000000074a.c6f2afd9ad72f1f9.rrstep": {
+      "sha256": "e59bb771f3485dd18eec067047e19966a97069129cf7f0934003017ec1c3bc58",
+      "bytes": 7338198
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis/shards/route-s06-000000000000074c.bb3f9e4f1f8f9878.rrstep": {
+      "sha256": "9211828daae7306a8c1cf41623f7df3287128e7c76b5f7f6104e71cd92e14b88",
+      "bytes": 8092116
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis/shards/route-s06-0000000000004615.9e9c8c2b71f28dbc.rrstep": {
+      "sha256": "913b0c7136d9cfbc0f615ff49c28110d759bc9dad39253e1d6b8b6a8a7cc00ef",
+      "bytes": 1548988
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis/shards/route-s06-0000000000006930.9e5d5075c6553bee.rrstep": {
+      "sha256": "db86aa6030a05809673b7a1608650fc8fd092f2b4b365b1e6a2c1f05f759b737",
+      "bytes": 2407460
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis/shards/route-s07-0000000000000a6d.a8862dac0033977d.rrstep": {
+      "sha256": "a9ffcecf90e685323161b255d221daefd4c760231b39dfe3385ca428763fc960",
+      "bytes": 1741017
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis/shards/route-s07-0000000000004a87.e50b895b81f511f2.rrstep": {
+      "sha256": "30eb8e8740a3d19e6ea3272247e46e35c06f82e7c8b838270937c5b330fb0af3",
+      "bytes": 1161585
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis/shards/route-s07-0000000000004ba4.537af53e2e3c065d.rrstep": {
+      "sha256": "4b122a4f9f23e7188596c0495c8b5a9cebe2b69a59fd138ce42b8abac7bd5b61",
+      "bytes": 342219
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis/shards/route-s07-0000000000007826.5dddc24e3548ba9d.rrstep": {
+      "sha256": "14225cb4a79e6b17bef646f72dab321f7f2ccad51638d26f86a01412086def1b",
+      "bytes": 1778756
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis/shards/route-s07-0000000000007a24.27500e3979621a44.rrstep": {
+      "sha256": "17ee2a81d1d866e009a65b73e5ef59d1d50ee68c985fccfbfee6a2a1b2462f17",
+      "bytes": 165744
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis/shards/route-s07-0000000000007a44.a3260d14f8bcbcbe.rrstep": {
+      "sha256": "73cca705169440e00cf757d5ea1aa40a4c4c3bded0f9946dd001b8a4434ab8f2",
+      "bytes": 346504
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis/shards/route-s08-00000000000049ae.3700f7d08170f6d5.rrstep": {
+      "sha256": "6909945c82f7a448a550b11c878399b74e09c13535f658471befd9d3f43969e5",
+      "bytes": 77264
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis/shards/route-s08-0000000000006b46.472ccc59521c9015.rrstep": {
+      "sha256": "3a23224c4b48452e5733b229bbe250ce4b8d5c8bb68d9ed4f8029328b53cac1f",
+      "bytes": 476440
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis/shards/route-s08-0000000000007827.5a1ef46623640157.rrstep": {
+      "sha256": "e6cdfe1d3c781760fa5f5074daf5acb59a34cf0f010e20b5020de70b577c8cd5",
+      "bytes": 50030
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis/shards/route-s08-0000000000007a64.7e97a2600001f507.rrstep": {
+      "sha256": "b691b619d53b3621f27b63d80cae418099508ff0fa8ef56a20a14c353ef0de3b",
+      "bytes": 580236
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis/shards/route-s09-0000000000004b76.b9faffcf50a4499f.rrstep": {
+      "sha256": "575135b38c83c9e8cf3f55c5d9dd19421c7166d9d90c8126e5de9210b672135a",
+      "bytes": 20738
+    },
     "package.json": {
       "sha256": "b2645e705574d0534d510090e8707d443b6f8f7d7514bcb1ddcab63c50afbb73",
       "bytes": 15222
@@ -90182,5 +90190,9 @@
       "sha256": "3510ceb7c1990a8e3197fc8f3e9df7869d91c78eb3fed76fcd671ca051c7c6d0",
       "bytes": 3473292
     }
+  },
+  "ordered_cache": {
+    "path": "ordered-cache",
+    "metadata": "ordered-cache.json"
   }
 }

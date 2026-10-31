@@ -5,7 +5,7 @@
     {
       "loop_count": 1,
       "manifest": "1L/manifest.json",
-      "manifest_sha256": "e527f988c24ad87c52be92931f356c0d45a5df6901e885297ca015246706f9f5",
+      "manifest_sha256": "7bc8c3c3b2da83faa63f053bd5285a7a220665befec6816741564c179f613284",
       "archive": "vakint-external-data-v0.1.2-1L.tar.gz",
       "archive_sha256": null,
       "archive_bytes": null
@@ -13,7 +13,7 @@
     {
       "loop_count": 2,
       "manifest": "2L/manifest.json",
-      "manifest_sha256": "4613b7d51a0bb233accffb31361b0ad1e32c848a16cff02c901e75f35ec9a074",
+      "manifest_sha256": "558ba2886b190c1531b428f25f2cf514eebb78f4e67f69814b65ea7284a16209",
       "archive": "vakint-external-data-v0.1.2-2L.tar.gz",
       "archive_sha256": null,
       "archive_bytes": null
@@ -21,7 +21,7 @@
     {
       "loop_count": 3,
       "manifest": "3L/manifest.json",
-      "manifest_sha256": "e2e2a96d2edcb280eac93081252d135cdc5556b9250123b5a6d5e6dcf0236646",
+      "manifest_sha256": "45b44ecebb774a8a390f9e1afef4c36b7eb732c0ba98aec6c44c79c2fc2d6fa0",
       "archive": "vakint-external-data-v0.1.2-3L.tar.gz",
       "archive_sha256": null,
       "archive_bytes": null
@@ -29,7 +29,7 @@
     {
       "loop_count": 4,
       "manifest": "4L/manifest.json",
-      "manifest_sha256": "d0092a42d4ea3436cbbaeb31663ad3d8dd9904149d2f3b5f242ccc23c2d31b7a",
+      "manifest_sha256": "0a6d9e3218e4558b38efb19ddb98fd9b0f6f53e98ad3a237b6da9f5d845f5cf2",
       "archive": "vakint-external-data-v0.1.2-4L.tar.gz",
       "archive_sha256": null,
       "archive_bytes": null
@@ -37,7 +37,7 @@
     {
       "loop_count": 5,
       "manifest": "5L/manifest.json",
-      "manifest_sha256": "036858d6d8ca3e48a2a9c6edd2c944eab48c7fc4d92902a99df2f9cdfa9b2160",
+      "manifest_sha256": "027282410d59c75fed7a20b8e77730a65eb5d26d3c76cc0b225c55e12257a4e6",
       "archive": "vakint-external-data-v0.1.2-5L.tar.gz",
       "archive_sha256": null,
       "archive_bytes": null

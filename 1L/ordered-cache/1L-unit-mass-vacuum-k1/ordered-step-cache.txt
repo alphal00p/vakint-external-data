@@ -1,0 +1,12 @@
+schema rustred.ordered-step-cache.v2
+semantics rustred-ordered-steps-2026-10-31
+engine rustred 0.1.0 sources 0719695518e5479eaa34e6132e3b49b4a86a846fb8fb9f42d49afe5ba6230a84 symbolica git-9cd5767
+adapter closed-artifact
+family rustred-integral-family-v2;N37:rustred-one-loop-unit-mass-tadpole-v1;L1;1:k;E0;P1;1:d;Q1,0,1;M;RY1,1;I+1;X1;Y1,1;I+1;X0;D1;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;G0;U1;RY1,0;Y1,1;I+1;X0;
+program 890eb6f2033bc647fbe1fa29421458aa8581d1be76e9e1699744960e8f285ddc
+variables 1 d
+unresolved none
+terminals none
+stamp a0b5fdc656de3cf21fe7bb72431c157e0e5a69e4e65d04351f48fb5ee81faab0
+shard integral 1 0000000000000000 shards/integral-s01-0000000000000000.267d2e0077b8a294.rrstep 4 226 267d2e0077b8a2942cf61d645f472079c0327ac0f1772fbda9c32eb7036133fa
+end

@@ -1,5 +1,38 @@
 # Vakint external data
 
+A later 31 October 2026 source update replaces the depth-first prepared caches by
+**Ordered step caches**. Vakint reduces only with RustRed's ordered scheduler and
+never read the depth-first caches any more; they are removed from every pack
+(1L–4L `cache/` and `cache.json`, 9,867 files and 95.7 MB; the 5L LIGHT
+`cache/prepared.rrcache.gz` with its README and `cache.json`, 89.6 MB), each
+`cache` manifest section becomes `{"available": false}`, and
+[`provenance/retired-dfs-caches-v1`](provenance/retired-dfs-caches-v1) records
+every removed file and section (the bytes remain in Git history). Each pack now
+ships `ordered-cache/<label>/`, one RustRed `OrderedStepCache` directory per
+reduction program, described by `ordered-cache.json` and the loop manifest's
+`ordered_cache` section:
+
+| pack | programs | records | shards | bytes |
+|---|---|---:|---:|---:|
+| 1L | `1L-unit-mass-vacuum-k1` | 4 | 1 | 226 |
+| 2L | `2L-unit-mass-vacuum-k3` | 20 | 2 | 813 |
+| 3L | `3L-unit-mass-vacuum-k6` | 758 | 3 | 37,141 |
+| 4L | `4L-four-loop-{bmw,fg,h,x}` | 122,828 | 23 | 11,135,758 |
+| 5L | `5L-tide-five-loop-common-basis` | 516,384 | 32 | 85,784,674 |
+
+They record every checked Ordered step (children with exact step coefficients,
+emitted terminals and nonzero conditions in order; never weights or results) of a
+deterministic workload: the zero-momentum and quadratic QCD-ladder rungs at one to
+four loops, the eight four-loop benchmark integrals of Vakint's
+`tests/fixtures/benchmark_reduction.json`, and `5L/benchmarks/zero-momentum`.
+Vakint installs them, verified, into its own cache directory and replays them;
+results are identical with and without them. A cache recorded by another RustRed
+build is used only through an attestation compiled into Vakint (a cold
+regeneration produced exactly these records); otherwise it is rejected and the
+reduction runs cold. The 5L quadratic cache (about 0.94 GB) is not included. See
+[AUTHORING.typ](AUTHORING.typ) ("Ordered step caches"). Reduction tables,
+masters, constants, graphs, numerical data and the 5L benchmarks are unchanged.
+
 The 31 October 2026 source update rewrites every exact 1L–4L coefficient row (739 rows
 of 115 masters, 713 distinct coefficients) in one basis of 68 constants, with common
 factors pulled out and terms collected; see [`docs/basis.md`](docs/basis.md). The
@@ -57,7 +90,7 @@ four-loop masters at least 500 validated digits; the three PR11d finite aliases
 retain their stronger 20,000-digit values and bounded evidence.
 
 Versioned native RustRed reductions, master-integral Laurent coefficients and
-graphs, and prepared reduction caches for
+graphs, and Ordered step caches for
 [Vakint](https://github.com/alphal00p/gammaloop/tree/6cdaa993ee9b413189ae077a8f783de6223cc42e/crates/vakint).
 The data originates in Vakint's former `artifacts` directory. Original lower-loop
 payloads and migration checksums are retained; previous five-loop publications
@@ -115,13 +148,10 @@ The five-loop graph files retain the complete numerator, propagator powers,
 mass terms and explicit loop-momentum basis. Their names `P1` through `P640`
 are assigned anew for this publication; match integrals by their family-qualified
 signed index tuples, not by names from older releases. The selected five-loop
-LIGHT cache contains 2,102 strict-complete records (54 Route and 2,048 Apply)
-in one 89,635,796-byte native gzip file. The user froze this existing validated
-candidate as adequate; this is not a measured performance winner. It supplies
-no five-loop epsilon coefficients.
-See [`5L/cache/README.md`](5L/cache/README.md) for exact selection and compatibility scope.
-Prepared 1L–4L caches complete a declared finite workload; this does not certify
-arbitrary-index IBP coverage. See `coverage.json` and `cache.json` in each pack.
+Ordered step caches (`<L>L/ordered-cache/`, described by `<L>L/ordered-cache.json`)
+record the checked steps of RustRed's ordered scheduler for a deterministic workload
+(see "Ordered step caches" below). They supply no epsilon coefficients and do not
+certify IBP coverage.
 
 The current five-loop source is recorded in
 [`5L/provenance/current-publication.json`](5L/provenance/current-publication.json),
@@ -147,8 +177,8 @@ and exporter cohorts remain separate. The previous two-root fallback, its
 producer/consumer evidence and original manifests are preserved under
 [`provenance/replaced-fallback-20261028`](provenance/replaced-fallback-20261028).
 All five-loop noncache files, including their historical README, remain the
-unchanged input-data authority. Current cache status is recorded in
-[`5L/cache.json`](5L/cache.json) and [`5L/cache/README.md`](5L/cache/README.md).
+unchanged input-data authority. The LIGHT depth-first cache described there was
+retired (see below).
 
 For a subsequent five-loop refresh, use `tools/replace_five_loop.py stage` with
 the exported native application and its native terminal definitions, validate
@@ -213,7 +243,7 @@ explicitly estimated error. It preserves all existing numerical precision
 upgrades and the four bounded 20,000-digit constant bindings.
 
 Run `python3 tools/data.py validate` to verify payloads, coefficient availability,
-cache completion receipts and migration hashes. Release and authorship
+ordered cache inventories and migration hashes. Release and authorship
 instructions are in [AUTHORING.typ](AUTHORING.typ).
 
 The eleven PR10/PR9d/combination-B finite expressions are direct analytic results,

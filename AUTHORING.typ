@@ -327,7 +327,55 @@ are not replacements for the recorded query predicates. Five-loop declared
 terminals remain uncomputed, without a claim that the declared set is a complete
 known master basis.
 
-== Cache checks
+== Ordered step caches
+
+Vakint reduces only with RustRed's ordered scheduler. A pack may ship
+`ordered-cache/<label>/`, one RustRed Ordered step-cache directory per reduction
+program of that loop count (`ordered-step-cache.txt` plus `shards/*.rrstep`,
+exactly as `OrderedStepCache::save` writes them), with `ordered-cache.json`
+(`vakint.external-data.ordered-cache.v1`: producer revisions and engine, the
+workload with input and retained-result SHA-256, and per program the label,
+stamp, record content BLAKE3, records, shards, bytes and stamped binding
+description). The loop manifest names them with
+`"ordered_cache": {"path": "ordered-cache", "metadata": "ordered-cache.json"}`
+and lists every file. A record is one checked Ordered step (children, step
+coefficients, emitted terminals, nonzero conditions in order); records never hold
+weights, zero decisions or results, so replaying them reproduces every phase of an
+uncached run exactly.
+
+Produce them only with Vakint's maintenance example, cold, from the deterministic
+workload, and stage the export:
+
+```sh
+ordered_cache_maintenance prepare --artifacts <checkout> --work W --output EXPORT \
+    --vakint-revision <rev> --rustred-revision <rev>
+python3 tools/ordered_cache.py stage --export EXPORT
+python3 tools/data.py validate
+```
+
+`tools/ordered_cache.py` checks inventory, sizes (every shard below 95,000,000
+bytes, under GitHub's file limit), RustRed manifest structure, shard headers and
+the metadata. BLAKE3 stamps and payload digests are checked by RustRed when Vakint
+installs a cache. RustRed binds every cache to the engine that recorded it (a
+digest of its sources and Symbolica build) and the program bytes. Vakint therefore
+installs a shipped cache only into its own cache directory: unchanged when the
+running stamp equals the recorded one, restamped when Vakint's compiled
+attestation table proves that a cold regeneration with the running build produced
+exactly these records (`ordered_cache_maintenance verify`), and rejected (cold
+run, warning) otherwise. A RustRed update that leaves the records unchanged needs
+only a new attestation in Vakint; one that changes them needs new caches here.
+
+== Retired depth-first caches
+
+The depth-first prepared caches (1L–4L `cache/` bundles and `cache.json`, the 5L
+LIGHT `cache/prepared.rrcache.gz`) were retired with depth-first reduction.
+`tools/ordered_cache.py remove-dfs` recorded every removed file and manifest section
+in `provenance/retired-dfs-caches-v1/receipt.json`; the bytes remain in Git
+history at `76b0ee34`. `data.py validate` checks the retired rows of the original
+migration receipt against it. The sections below describe how those caches were
+checked and are kept as provenance for the historical releases.
+
+== Cache checks (historical depth-first caches)
 
 The existing workload consists of physical parent pinches, at most two extra
 positive powers and numerator rank at most one. Complete selected-root counts
