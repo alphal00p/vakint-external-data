@@ -1,5 +1,32 @@
 # Vakint external data
 
+The 31 October 2026 source update rewrites every exact 1L–4L coefficient row (739 rows
+of 115 masters, 713 distinct coefficients) in one basis of 68 constants, with common
+factors pulled out and terms collected; see [`docs/basis.md`](docs/basis.md). The
+generators are pi, zeta(3), zeta(5), zeta(7), log 2, Li4/5/6(1/2), the alternating sum
+`s6weak`, log 3, Cl2(pi/3), Cl4(pi/3), Im Li3(i/sqrt3), Im Li4(i/sqrt3), four sixth-root
+GPLs, the MATAD constants D5bar1/2, D6bar1/2 and T111bar4, ten Bessel moments and jets,
+30 D=2-2delta periods, and five weight-7 or D=4-2eps constants; `3^(1/2)` is an explicit
+parity factor. The coefficients shrink from 20,971 to 6,645 terms. Each new row equals its
+previous row once the identities listed in the publication receipt are applied. Most are
+published reduction tables or proved identities. Some are numerical identities, not proofs:
+the 48-term relation R1 among the D=2 jets, which removes `PR11dD2Eps2` (identical to
+relation (c30) of arXiv:1609.05071 where comparable, verified to 547 digits); the two
+identities that replace Im G(0,1,-omega) and Im G(0,1,1,-omega) by Im Li3(i/sqrt3) and
+Im Li4(i/sqrt3) (4,100 digits); and the earlier BNbar4 and Li3(i/sqrt3) reductions and
+the closed formula of `PR11dep0` (544 digits). Integer-relation searches at about 500 digits for
+the hard constants and 5,000 for the classical ones find no other stable relation among
+the generators or the products that occur. Possible jet-3 and jet-4 analogues of R1 are
+not excluded at the available precision. Rows no longer use the coefficient aliases
+`PR11dep0`, `PR4fin` and `PR4dfin`, the derived MATAD constants `S2`, `T1ep`, `T1ep2` and
+`BNbar4`, the HPL words, or `PR10D2`, `PR15D2`, `PR5D2Eps3` and `PR11dD2Eps2`, whose
+`4L/constants.json` records stay unchanged. Three
+three-loop rows write `s6weak` through its built-in GPL definition, because the four-loop
+constants are not loaded for three-loop use. `PR12D2Eps3` is now validated: its
+closure-implied control of at least 421 digits was accepted. Every `numerical.json`,
+numerical precision record and constant value is unchanged, as is the five-loop data. See
+[`provenance/takeover-basis-v4-rewrite-v1`](provenance/takeover-basis-v4-rewrite-v1).
+
 A second 30 October 2026 source update replaces the numerical values of 644 of the
 739 lower-loop coefficient rows (112 three- and four-loop masters) by the values of
 their published exact formulas. Each formula was evaluated at 20,100 and 20,200

@@ -139,6 +139,21 @@ rows alone. New entries use the before-image of the replaced file as
 `previous_files.numerical.json`. A precision upgrade may raise the digits of a
 supplemented order but never its availability.
 
+An exact restatement of published rows, such as the rewrite of every 1L-4L row
+into the constant basis of `docs/basis.md`, changes row texts but no value,
+availability or accepted formula. `provenance.exact_symbolic_rewrites` names each
+such publication's base commit and receipt (schema
+`vakint.external-data.exact-symbolic-rewrite.v1`). A supplement entry whose
+symbolic payload was rewritten carries `symbolic_rewrite` with the
+`source_publication` and the `previous` payload (`path`, `sha256` and an `archive`
+holding its byte-exact before-image). The receipt binds, for every row, the
+digests of the previous and of the current row text. `tools/precision_supplement.py`
+authenticates the receipt and the archive and then applies the unchanged checks
+(accepted exact source, unselected rows, formula evaluations) to the pre-rewrite
+rows. A numerical-only row must equal its numerical value both before and after
+the rewrite. The receipt also records the identities that make each new row equal
+to its previous row and their status (proved, accepted or numerical identity).
+
 The source-only `validation/pr11d-20000` bundle contains the immutable
 `proof-index.json`, period, acceptance, scientific read-set and compressed proof
 objects. Source validation runs the independently reviewed, fixed-SHA standard
@@ -228,6 +243,14 @@ record keeps its producer routing in `definition_metadata` while its
 `symbolic_definition` uses another routing of the same graph, the metadata entry
 `symbolic_definition_routing_isomorphism` records the unimodular loop-momentum
 substitution and the edge map between them.
+
+The basis-v4 rewrite (`provenance/takeover-basis-v4-rewrite-v1`) changes no value,
+digit count or error of this adapter. It relabels `PR12D2Eps3` in the period registry
+(closure-implied control accepted, user decision D13; previous label kept in
+`validation.superseded_label_D13`) and adds `validation.basis_v4` to `PR11dD2Eps2`,
+which is not a basis generator because the relation R1 expresses it. The projection,
+its exact-rational review and the runtime binding were re-derived; only provenance
+fields differ.
 
 Records may carry the optional field `symbolic_definition`, a Symbolica atom
 with full namespaces and Unicode constants. It states the defining (multiple)
