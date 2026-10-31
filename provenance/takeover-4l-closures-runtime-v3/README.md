@@ -66,5 +66,7 @@ control of at least 421 digits, which the user accepted as its independent-metho
 The previous label is kept in `validation.superseded_label_D13`. `vakint::PR11dD2Eps2` gains
 `validation.basis_v4`: it is not a basis generator, because the stable integer relation R1 (48 terms,
 height 10^6.28, verified to 547 digits; identical to GLS 1609.05071 (c30) where comparable) expresses it.
-Its record stays installed and unchanged. Only the registry, this payload, the exact-rational review,
-the projection receipt and the runtime binding hashes change.
+Its record stays installed and unchanged. `vakint::s6weak` gains `validation.basis_v4`: it holds the same
+number as the Vakint built-in `vakint::s6` (identical defining integral), which every published row now
+uses; no formula uses the record, which stays installed and unchanged. Only the registry, this payload,
+the exact-rational review, the projection receipt and the runtime binding hashes change.

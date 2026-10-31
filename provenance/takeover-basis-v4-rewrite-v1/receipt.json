@@ -3,8 +3,8 @@
   "accepted": true,
   "base_commit": "f51bc5a29d65ea04f50c7e8beb8ef7b9d9432136",
   "publication": "takeover-basis-v4-rewrite-v1",
-  "acceptance_authority": "takeover publication of the user-restarted reconstruction; user decisions of 30-31 Oct 2026 (basis A0-A6, drop PR11dD2Eps2 via R1, standard constants for fixed combinations, jet-3/4 statement, D13); not a codex-2 Root adoption",
-  "scope": "Every exact 1L-4L symbolic row (739 rows of 115 masters) is restated in the 68-generator constant basis v4 with collected, factorised terms. Values are unchanged: every numerical.json, every numerical precision record, every constant value and the five-loop data are byte-identical. 456 row texts change; 283 rows (rational numbers, exact zeros and rows already in the basis) keep their bytes.",
+  "acceptance_authority": "takeover publication of the user-restarted reconstruction; user decisions of 30-31 Oct 2026 (basis A0-A6, drop PR11dD2Eps2 via R1, standard constants for fixed combinations, jet-3/4 statement, D13; 31 Oct 2026: s6 as the Vakint built-in vakint::s6); not a codex-2 Root adoption",
+  "scope": "Every exact 1L-4L symbolic row (739 rows of 115 masters) is restated in the 68-generator constant basis v4 with collected, factorised terms. Values are unchanged: every numerical.json, every numerical precision record, every constant value and the five-loop data are byte-identical. 456 row texts change; 283 rows (rational numbers, exact zeros and rows already in the basis) keep their bytes. s6 is written as the Vakint built-in vakint::s6 in all 26 rows that contain it.",
   "equivalence": {
     "rule": "each new row equals its previous row exactly as a rational function of the constants, after the relations listed below are applied; the previous rows keep their own acceptance records",
     "relations_used": [
@@ -214,15 +214,38 @@
       "X3_TI3": "ImG(0,1,-w) through Im Li3(i/sqrt3): PARI lindep at 1500 digits, residual 10^-4102.8 at 4100 digits; not a proof; used in 217 rows",
       "X4_TI4": "ImG(0,1,1,-w) through Im Li4(i/sqrt3): residual 10^-4100.4 at 4100 digits; not a proof; used in 159 rows"
     },
-    "S6_WITHOUT_4L_PACK": {
-      "statement": "vakint::s6weak = 𝜋^6/945 + vakint::GPLReal(0,0,0,0,-1,1,1) (s6 = zeta(6) + Li_{5,1}(-1,-1); G(0,0,0,0,-1,1;1) = Li_{5,1}(-1,-1))",
-      "status": "EXACT (definition: s6 = sum_{m>=k>=1} (-1)^(m+k)/(m^5 k) = zeta(6) + Li_{5,1}(-1,-1), Li_{5,1}(-1,-1) = G(0,0,0,0,-1,1;1)); numerically PARI polylogmult 1048 digits and native Vakint GPLReal 299 digits against the published s6weak value",
+    "S6_BUILTIN": {
+      "statement": "vakint::s6weak = vakint::s6 (same number: the 4L record and the Vakint built-in have the identical defining integral; s6 = sum_{m>=k>=1} (-1)^(m+k)/(m^5 k) = zeta(-5,-1) + zeta(6))",
+      "status": "EXACT (identical definition: the Vakint built-in vakint::s6 and the 4L record vakint::s6weak have the same defining double integral; Vakint evaluates s6 as pi^6/945 + GPLReal(0,0,0,0,-1,1,1) = zeta(6) + Li_{5,1}(-1,-1)); numerically: built-in vs the s6weak value 520 digits (Vakint unit test), PARI polylogmult 1048 digits, native Vakint GPLReal 299 digits",
       "rows": [
         "3L P13 eps^4",
         "3L P21 eps^4",
-        "3L P28 eps^4"
+        "3L P28 eps^4",
+        "4L P10 eps^1",
+        "4L P14 eps^0",
+        "4L P14 eps^1",
+        "4L P17 eps^1",
+        "4L P2 eps^3",
+        "4L P21 eps^3",
+        "4L P32 eps^1",
+        "4L P34 eps^1",
+        "4L P37 eps^3",
+        "4L P43 eps^1",
+        "4L P45 eps^1",
+        "4L P49 eps^0",
+        "4L P49 eps^1",
+        "4L P52 eps^1",
+        "4L P54 eps^3",
+        "4L P63 eps^1",
+        "4L P65 eps^1",
+        "4L P69 eps^0",
+        "4L P69 eps^1",
+        "4L P70 eps^1",
+        "4L P72 eps^1",
+        "4L P74 eps^1",
+        "4L P8 eps^1"
       ],
-      "reason": "vakint::s6weak is a 4L/constants.json record; Vakint loads constants only from the loaded loop packs, so a max_loop_count = 3 load could not evaluate these 3L rows (native probe: get_master of 3L P13 failed). The GPL spelling is a Vakint built-in (arbitrary precision) at every loop count; the generator is still s6."
+      "reason": "user decision 31 Oct 2026 (~10:30 UTC): s6 is a Vakint built-in, so every published row uses the single name vakint::s6 and a max_loop_count = 3 load evaluates the 3L rows (a 4L/constants.json record is not loaded there). The data use exactly the 68 basis constants."
     },
     "weakest_rule_status_per_row": {
       "IDENTICAL (no rule needed)": 435,
@@ -234,7 +257,7 @@
   "verification": {
     "exact_second_code_path": "Symbolica: the basis-v3 string with R1/X3/X4 substituted, expanded, minus the expanded basis-v4 string = 0 for 739/739 rows; basis-v3 itself was checked exactly against an independent census code path",
     "parse_back": "739/739 strings parse back to the same Symbolica atom",
-    "three_loop_s6_spelling": "3L P13/P21/P28 eps^4: the published string minus the basis-v4 string with s6weak -> pi^6/945 + GPLReal(0,0,0,0,-1,1,1) expands to 0 (Symbolica, push2/s6-3L-override.json)",
+    "s6_builtin_spelling": "26 rows: the published string is the basis-v4 string with the symbol vakint::s6weak renamed to vakint::s6; renaming back gives the identical Symbolica atom (push2/s6-builtin-override.json)",
     "numerical_600": {
       "engine": "Symbolica 3.0.0 evaluate at 640 working digits (prep/basis-v4/src/verify_repo4.py)",
       "summary_min_agreement_digits": {
@@ -273,11 +296,13 @@
     },
     "numerical_2100": "classical/Bessel rows agree with the published strings to >= 2137.41 digits (out/verify-num-2100.json)",
     "consistency_checks": "24/24 pass (out/finish-consistency.json)",
-    "vakint_every_leaf_gate": "gammaloop PR #243 (d505df40b) acceptance test public_engine_every_published_leaf_has_an_explicit_definition passed with all 739 basis-v4 strings (436 distinct leaves, each explicitly defined)"
+    "vakint_every_leaf_gate": "Vakint follow-up bdde02b0b (s6 built-in) acceptance test public_engine_every_published_leaf_has_an_explicit_definition on these rows: exit 0; 739 published 1L-4L formulas, 68 distinct leaves, every one explicitly defined; 45 of 50 constant records occur in them",
+    "vakint_native_get_master": "Vakint follow-up bdde02b0b get_master at 40 digits: max_loop_count = 3, all 1L-3L masters (270 coefficients, errors 0, worst agreement with numerical.json (39.37, '2L P2 eps^3'); 3L P13/P21/P28 eps^4 evaluated from the published formula with vakint::s6); max_loop_count = 4, the 23 masters with s6 rows (151 coefficients, errors 0, worst (39.38, '4L P8 eps^-2')); other acceptance tests: public_engine_independent_d2_periods_and_formula_inventory exit 0; public_engine_four_loop_constants_have_definitions exit 0; public_engine_certified_periods_at_20000_digits exit 0",
+    "numerical_s6_rows": "the 26 rows with vakint::s6 (s6 mapped to its 20000-digit value) agree with numerical.json to 525.31 digits at least (Symbolica, 640 working digits; every row to its stored digits); all 739 rows: {\"repo_vs_published_symbolic\": {\"classical_rows\": [638.26, 675], \"hard_rows\": [544.16, 64]}, \"repo_vs_published_numerical\": {\"classical_rows\": [639.11, 675], \"hard_rows\": [524.41, 64]}, \"repo_vs_exact_polynomial\": {\"classical_rows\": [639.13, 675], \"hard_rows\": [636.88, 64]}}, rows below expected []"
   },
   "basis": {
     "path": "provenance/takeover-basis-v4-rewrite-v1/basis-v4.json",
-    "sha256": "e7d08141af5ecc57293d81e346d904aef587a753ccca2edf630a6c6ec39f7961"
+    "sha256": "220ac52e2d6b749f6d7aa48fdddb73759140876242c72b5d6b6da509a6c3b0d4"
   },
   "jet3_jet4_statement": "Possible jet-3/jet-4 analogues of R1 (PR11dD2Eps3/4 against PR11D2Eps3/4, lower jets, kappa[3]/kappa[4] and weight-6/7 classical products) are not excluded at the available precision (~500 digits).",
   "counts": {
@@ -1744,7 +1769,7 @@
       "path": "masters/P13/symbolic.json",
       "previous_sha256": "8ea9b45152d86e95a29c1b3593ef5427b8d8c29dd1c2b0a4b66b1a4e34648bfc",
       "previous_archive": "provenance/takeover-basis-v4-rewrite-v1-before/3L/masters/P13/symbolic.json",
-      "sha256": "8255b8f2cb9a05e3ec356b2170dfe468abc4216eaef7c8fd6fd8bce5581c960c",
+      "sha256": "c2fc472169767b9cc4cb56004e4e7cb15d77349773eb65eb121f4a60d6ac3d6f",
       "rows": {
         "-3": {
           "previous_sha256": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
@@ -1834,7 +1859,7 @@
         },
         "4": {
           "previous_sha256": "60f84dff32d73d7533260d5b45a4faaa05bf045bb59de29790536a9c17611a43",
-          "sha256": "00af8b030aba39a731c805a672b49f9589f2a6a52ee0f72dc286d7c1535fb2a6",
+          "sha256": "3680aa300cb3c537d48818c28b3aac2e8b8eac45e7fe5049950e86bf212b1bc7",
           "changed": true,
           "basis_v4_rules": [],
           "rules": [
@@ -1848,7 +1873,7 @@
           "overall_factor": "-1",
           "terms_published": 60,
           "terms_basis_v4": 24,
-          "s6_spelled_without_4L_pack": "vakint::s6weak = 𝜋^6/945 + vakint::GPLReal(0,0,0,0,-1,1,1) (s6 = zeta(6) + Li_{5,1}(-1,-1); G(0,0,0,0,-1,1;1) = Li_{5,1}(-1,-1))"
+          "s6_builtin": "vakint::s6weak = vakint::s6 (same number: the 4L record and the Vakint built-in have the identical defining integral; s6 = sum_{m>=k>=1} (-1)^(m+k)/(m^5 k) = zeta(-5,-1) + zeta(6))"
         }
       }
     },
@@ -2477,7 +2502,7 @@
       "path": "masters/P21/symbolic.json",
       "previous_sha256": "8ea9b45152d86e95a29c1b3593ef5427b8d8c29dd1c2b0a4b66b1a4e34648bfc",
       "previous_archive": "provenance/takeover-basis-v4-rewrite-v1-before/3L/masters/P21/symbolic.json",
-      "sha256": "8255b8f2cb9a05e3ec356b2170dfe468abc4216eaef7c8fd6fd8bce5581c960c",
+      "sha256": "c2fc472169767b9cc4cb56004e4e7cb15d77349773eb65eb121f4a60d6ac3d6f",
       "rows": {
         "-3": {
           "previous_sha256": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
@@ -2567,7 +2592,7 @@
         },
         "4": {
           "previous_sha256": "60f84dff32d73d7533260d5b45a4faaa05bf045bb59de29790536a9c17611a43",
-          "sha256": "00af8b030aba39a731c805a672b49f9589f2a6a52ee0f72dc286d7c1535fb2a6",
+          "sha256": "3680aa300cb3c537d48818c28b3aac2e8b8eac45e7fe5049950e86bf212b1bc7",
           "changed": true,
           "basis_v4_rules": [],
           "rules": [
@@ -2581,7 +2606,7 @@
           "overall_factor": "-1",
           "terms_published": 60,
           "terms_basis_v4": 24,
-          "s6_spelled_without_4L_pack": "vakint::s6weak = 𝜋^6/945 + vakint::GPLReal(0,0,0,0,-1,1,1) (s6 = zeta(6) + Li_{5,1}(-1,-1); G(0,0,0,0,-1,1;1) = Li_{5,1}(-1,-1))"
+          "s6_builtin": "vakint::s6weak = vakint::s6 (same number: the 4L record and the Vakint built-in have the identical defining integral; s6 = sum_{m>=k>=1} (-1)^(m+k)/(m^5 k) = zeta(-5,-1) + zeta(6))"
         }
       }
     },
@@ -3218,7 +3243,7 @@
       "path": "masters/P28/symbolic.json",
       "previous_sha256": "8ea9b45152d86e95a29c1b3593ef5427b8d8c29dd1c2b0a4b66b1a4e34648bfc",
       "previous_archive": "provenance/takeover-basis-v4-rewrite-v1-before/3L/masters/P28/symbolic.json",
-      "sha256": "8255b8f2cb9a05e3ec356b2170dfe468abc4216eaef7c8fd6fd8bce5581c960c",
+      "sha256": "c2fc472169767b9cc4cb56004e4e7cb15d77349773eb65eb121f4a60d6ac3d6f",
       "rows": {
         "-3": {
           "previous_sha256": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
@@ -3308,7 +3333,7 @@
         },
         "4": {
           "previous_sha256": "60f84dff32d73d7533260d5b45a4faaa05bf045bb59de29790536a9c17611a43",
-          "sha256": "00af8b030aba39a731c805a672b49f9589f2a6a52ee0f72dc286d7c1535fb2a6",
+          "sha256": "3680aa300cb3c537d48818c28b3aac2e8b8eac45e7fe5049950e86bf212b1bc7",
           "changed": true,
           "basis_v4_rules": [],
           "rules": [
@@ -3322,7 +3347,7 @@
           "overall_factor": "-1",
           "terms_published": 60,
           "terms_basis_v4": 24,
-          "s6_spelled_without_4L_pack": "vakint::s6weak = 𝜋^6/945 + vakint::GPLReal(0,0,0,0,-1,1,1) (s6 = zeta(6) + Li_{5,1}(-1,-1); G(0,0,0,0,-1,1;1) = Li_{5,1}(-1,-1))"
+          "s6_builtin": "vakint::s6weak = vakint::s6 (same number: the 4L record and the Vakint built-in have the identical defining integral; s6 = sum_{m>=k>=1} (-1)^(m+k)/(m^5 k) = zeta(-5,-1) + zeta(6))"
         }
       }
     },
@@ -4539,7 +4564,7 @@
       "path": "masters/P2/symbolic.json",
       "previous_sha256": "5c59346c18e31787ce4816f9bf6863500671431049d4010b4b691521321d5a8e",
       "previous_archive": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P2/symbolic.json",
-      "sha256": "8102725881b539050a7755c6d383d3080b8c820416f8fee677a5ee985c0b351d",
+      "sha256": "7595d126b6fbd8b5e34c2c8ac01f140da587ba4a24257c070e6c67386ef4500e",
       "rows": {
         "-4": {
           "previous_sha256": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
@@ -4627,7 +4652,7 @@
         },
         "3": {
           "previous_sha256": "7e1d49da596f735dbb2a9acd7c2ee68829ce0bf6dcfa44213d92fa12ab7e197f",
-          "sha256": "b87c74668d1427c1de433f2f48d24fd4535cadc109fa6d2e54795d74b70abd41",
+          "sha256": "683f142bfb0efa2cbd54a7119a890957b7bbbb2b1ca552e5947931d1b2bab09f",
           "changed": true,
           "basis_v4_rules": [],
           "rules": [
@@ -4640,7 +4665,8 @@
           "weakest_rule_status": "COMPUTED+VALIDATED",
           "overall_factor": "-1",
           "terms_published": 60,
-          "terms_basis_v4": 24
+          "terms_basis_v4": 24,
+          "s6_builtin": "vakint::s6weak = vakint::s6 (same number: the 4L record and the Vakint built-in have the identical defining integral; s6 = sum_{m>=k>=1} (-1)^(m+k)/(m^5 k) = zeta(-5,-1) + zeta(6))"
         }
       }
     },
@@ -5144,7 +5170,7 @@
       "path": "masters/P8/symbolic.json",
       "previous_sha256": "a5b33aa29e719fe1dca1e01188bbf64071b08c2590e93a2bdb58aaada49af2f8",
       "previous_archive": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P8/symbolic.json",
-      "sha256": "193ed3bcaa68b2995dc02d0dd5583067637757506ce3b8898906c2605ce05194",
+      "sha256": "737fc4f5ea6a36faa9f8fb4eda7fc23807030ceca4bb99b01b4251048056d6c0",
       "rows": {
         "-4": {
           "previous_sha256": "f70b94aeb67de2a5eb4bd8c2ea85128f13776cb545a661abe422b378a6cf3099",
@@ -5228,7 +5254,7 @@
         },
         "1": {
           "previous_sha256": "c6a3472bb0aca3c19a2184d42b9e4e4839d04fdaf65c52cf7d828df9d847b52e",
-          "sha256": "650d1d7d61e860bc07d813452f67e407ed40ac66ec1368ed32d76b56df7e4314",
+          "sha256": "a554a37ca9cb0f45a34a1b78829c63ff311b4262f9b717604e82d0d6c7093cc5",
           "changed": true,
           "basis_v4_rules": [
             "X3_TI3",
@@ -5255,7 +5281,8 @@
           "weakest_rule_status": "COMPUTED",
           "overall_factor": "-1",
           "terms_published": 308,
-          "terms_basis_v4": 74
+          "terms_basis_v4": 74,
+          "s6_builtin": "vakint::s6weak = vakint::s6 (same number: the 4L record and the Vakint built-in have the identical defining integral; s6 = sum_{m>=k>=1} (-1)^(m+k)/(m^5 k) = zeta(-5,-1) + zeta(6))"
         }
       }
     },
@@ -5341,7 +5368,7 @@
       "path": "masters/P10/symbolic.json",
       "previous_sha256": "f30c62eb39a1ec77e5751388bbb2291aec87b98e4faff11a1ab7f9ad322d4e0f",
       "previous_archive": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P10/symbolic.json",
-      "sha256": "74f191c78558eebb732127f0fa7d92c0b56b83bcdba76df27c719f5d715a7c34",
+      "sha256": "1debada274ac0b2a41778dd1ffcca5799b75595301c961e5828029ae35d099ea",
       "rows": {
         "-4": {
           "previous_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
@@ -5420,7 +5447,7 @@
         },
         "1": {
           "previous_sha256": "f7924619c780de022306f74fc2b4b2757dc4af099e703ef4ad799044f9405cdd",
-          "sha256": "dc00c5178bfd0e67e5fb90a76c4119c1c25553fc3c51409a55b37f5b5f538307",
+          "sha256": "accfbcd52483cc92467b2647094af3f8f6138245e508f51226c1b6ed2443bd29",
           "changed": true,
           "basis_v4_rules": [
             "X3_TI3",
@@ -5442,7 +5469,8 @@
           "weakest_rule_status": "COMPUTED+VALIDATED",
           "overall_factor": "-1",
           "terms_published": 284,
-          "terms_basis_v4": 68
+          "terms_basis_v4": 68,
+          "s6_builtin": "vakint::s6weak = vakint::s6 (same number: the 4L record and the Vakint built-in have the identical defining integral; s6 = sum_{m>=k>=1} (-1)^(m+k)/(m^5 k) = zeta(-5,-1) + zeta(6))"
         }
       }
     },
@@ -5753,7 +5781,7 @@
       "path": "masters/P14/symbolic.json",
       "previous_sha256": "a26d1567bf1dcd8ae2c3c33512f68705bf65c1f0310c409cdbf0620ba1e09f47",
       "previous_archive": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P14/symbolic.json",
-      "sha256": "ec0ddf18ef8876edf2d6b1697a6ee88b0fed149a9029b6611c59ffaa0fa06631",
+      "sha256": "b19f7a87f46bfbfb44fa6a5b02a550197268c79aaab6a88218b5b3a36cfc77db",
       "rows": {
         "-4": {
           "previous_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
@@ -5801,7 +5829,7 @@
         },
         "0": {
           "previous_sha256": "7cedb1f7c06510e1eb05b923279740096af40a5274ee497cf344388a652be9fa",
-          "sha256": "4cc0ceda967aaedfd10d9dbead76976d7e32cbbe924b3f92c8e2b1d90123ced2",
+          "sha256": "be932f049956ebfc583f201bde891f28a14b3bca498755a6ec4f94ac7d11ba5a",
           "changed": true,
           "basis_v4_rules": [
             "R1_PR11dD2Eps2",
@@ -5832,11 +5860,12 @@
           "weakest_rule_status": "COMPUTED",
           "overall_factor": "-1",
           "terms_published": 340,
-          "terms_basis_v4": 91
+          "terms_basis_v4": 91,
+          "s6_builtin": "vakint::s6weak = vakint::s6 (same number: the 4L record and the Vakint built-in have the identical defining integral; s6 = sum_{m>=k>=1} (-1)^(m+k)/(m^5 k) = zeta(-5,-1) + zeta(6))"
         },
         "1": {
           "previous_sha256": "b817b2414d4b1f809a82bfea498a9fe337d7beb4178e8686893af3e40c876add",
-          "sha256": "5308b3a6122459b9117bede9c5ba3aed1f7a988db0362c8cbc356403fdabdbba",
+          "sha256": "b2d4541579535be9e5f0ebd8c964127d22d5a1158e84c220b9eaf7e5782c981b",
           "changed": true,
           "basis_v4_rules": [
             "R1_PR11dD2Eps2",
@@ -5867,7 +5896,8 @@
           "weakest_rule_status": "COMPUTED",
           "overall_factor": "-1",
           "terms_published": 638,
-          "terms_basis_v4": 153
+          "terms_basis_v4": 153,
+          "s6_builtin": "vakint::s6weak = vakint::s6 (same number: the 4L record and the Vakint built-in have the identical defining integral; s6 = sum_{m>=k>=1} (-1)^(m+k)/(m^5 k) = zeta(-5,-1) + zeta(6))"
         }
       }
     },
@@ -6119,7 +6149,7 @@
       "path": "masters/P17/symbolic.json",
       "previous_sha256": "ec2c754b6542c45e7c73f66951552123ccff9d9492b387db17e277fea04859a7",
       "previous_archive": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P17/symbolic.json",
-      "sha256": "a382571437de9641786b13b34dabb0f5fa0e23c16190da94cb9764d575f9de14",
+      "sha256": "8e40fd1be488a884baca7ad073a965bc4cd554141492502c76ee4f232c8cd1ea",
       "rows": {
         "-4": {
           "previous_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
@@ -6195,7 +6225,7 @@
         },
         "1": {
           "previous_sha256": "659b561da905bb9c0796cf7999f048625174e85855044cfdfd2b8fc73e05184f",
-          "sha256": "ee7867145a19d018c7b0ea8acb8c1e01322a9f585027ba902738072c70e1fe70",
+          "sha256": "830c37f5228d69550e30ab39596add0fcc0b39de176630810ac17943ed9d650a",
           "changed": true,
           "basis_v4_rules": [
             "R1_PR11dD2Eps2",
@@ -6226,7 +6256,8 @@
           "weakest_rule_status": "COMPUTED",
           "overall_factor": "1",
           "terms_published": 340,
-          "terms_basis_v4": 90
+          "terms_basis_v4": 90,
+          "s6_builtin": "vakint::s6weak = vakint::s6 (same number: the 4L record and the Vakint built-in have the identical defining integral; s6 = sum_{m>=k>=1} (-1)^(m+k)/(m^5 k) = zeta(-5,-1) + zeta(6))"
         }
       }
     },
@@ -6554,7 +6585,7 @@
       "path": "masters/P21/symbolic.json",
       "previous_sha256": "5c59346c18e31787ce4816f9bf6863500671431049d4010b4b691521321d5a8e",
       "previous_archive": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P21/symbolic.json",
-      "sha256": "8102725881b539050a7755c6d383d3080b8c820416f8fee677a5ee985c0b351d",
+      "sha256": "7595d126b6fbd8b5e34c2c8ac01f140da587ba4a24257c070e6c67386ef4500e",
       "rows": {
         "-4": {
           "previous_sha256": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
@@ -6642,7 +6673,7 @@
         },
         "3": {
           "previous_sha256": "7e1d49da596f735dbb2a9acd7c2ee68829ce0bf6dcfa44213d92fa12ab7e197f",
-          "sha256": "b87c74668d1427c1de433f2f48d24fd4535cadc109fa6d2e54795d74b70abd41",
+          "sha256": "683f142bfb0efa2cbd54a7119a890957b7bbbb2b1ca552e5947931d1b2bab09f",
           "changed": true,
           "basis_v4_rules": [],
           "rules": [
@@ -6655,7 +6686,8 @@
           "weakest_rule_status": "COMPUTED+VALIDATED",
           "overall_factor": "-1",
           "terms_published": 60,
-          "terms_basis_v4": 24
+          "terms_basis_v4": 24,
+          "s6_builtin": "vakint::s6weak = vakint::s6 (same number: the 4L record and the Vakint built-in have the identical defining integral; s6 = sum_{m>=k>=1} (-1)^(m+k)/(m^5 k) = zeta(-5,-1) + zeta(6))"
         }
       }
     },
@@ -7641,7 +7673,7 @@
       "path": "masters/P32/symbolic.json",
       "previous_sha256": "a5b33aa29e719fe1dca1e01188bbf64071b08c2590e93a2bdb58aaada49af2f8",
       "previous_archive": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P32/symbolic.json",
-      "sha256": "193ed3bcaa68b2995dc02d0dd5583067637757506ce3b8898906c2605ce05194",
+      "sha256": "737fc4f5ea6a36faa9f8fb4eda7fc23807030ceca4bb99b01b4251048056d6c0",
       "rows": {
         "-4": {
           "previous_sha256": "f70b94aeb67de2a5eb4bd8c2ea85128f13776cb545a661abe422b378a6cf3099",
@@ -7725,7 +7757,7 @@
         },
         "1": {
           "previous_sha256": "c6a3472bb0aca3c19a2184d42b9e4e4839d04fdaf65c52cf7d828df9d847b52e",
-          "sha256": "650d1d7d61e860bc07d813452f67e407ed40ac66ec1368ed32d76b56df7e4314",
+          "sha256": "a554a37ca9cb0f45a34a1b78829c63ff311b4262f9b717604e82d0d6c7093cc5",
           "changed": true,
           "basis_v4_rules": [
             "X3_TI3",
@@ -7752,7 +7784,8 @@
           "weakest_rule_status": "COMPUTED",
           "overall_factor": "-1",
           "terms_published": 308,
-          "terms_basis_v4": 74
+          "terms_basis_v4": 74,
+          "s6_builtin": "vakint::s6weak = vakint::s6 (same number: the 4L record and the Vakint built-in have the identical defining integral; s6 = sum_{m>=k>=1} (-1)^(m+k)/(m^5 k) = zeta(-5,-1) + zeta(6))"
         }
       }
     },
@@ -7850,7 +7883,7 @@
       "path": "masters/P34/symbolic.json",
       "previous_sha256": "c2250b33e540abfc0f21e5f834cb79f2b29e99df8077a5935eeb9067aa50447d",
       "previous_archive": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P34/symbolic.json",
-      "sha256": "c9b364d2de134499ffc108232c78a8ebba875b5de176389b82a13e0cc84ddd5d",
+      "sha256": "754d96bac4ba32cbce99c0c17ec3c7be299fa9836336c0b0353c8efd7d900859",
       "rows": {
         "-4": {
           "previous_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
@@ -7932,7 +7965,7 @@
         },
         "1": {
           "previous_sha256": "50245367e6bd0ce1f33e7eacf446df7eb26b7dbcb4e726dfbdb12dfe37ecf616",
-          "sha256": "3f80a4cafc2f2049654a7e2f623dfdd24b7dccd61030bff2a5125e44be15f5cc",
+          "sha256": "f5e8c10cf909663a7ba3933dce2b04b009e9f78c5a4fcd38683ce23c71e9370e",
           "changed": true,
           "basis_v4_rules": [
             "X3_TI3",
@@ -7961,7 +7994,8 @@
           "weakest_rule_status": "COMPUTED",
           "overall_factor": "1",
           "terms_published": 506,
-          "terms_basis_v4": 90
+          "terms_basis_v4": 90,
+          "s6_builtin": "vakint::s6weak = vakint::s6 (same number: the 4L record and the Vakint built-in have the identical defining integral; s6 = sum_{m>=k>=1} (-1)^(m+k)/(m^5 k) = zeta(-5,-1) + zeta(6))"
         }
       }
     },
@@ -8180,7 +8214,7 @@
       "path": "masters/P37/symbolic.json",
       "previous_sha256": "5c59346c18e31787ce4816f9bf6863500671431049d4010b4b691521321d5a8e",
       "previous_archive": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P37/symbolic.json",
-      "sha256": "8102725881b539050a7755c6d383d3080b8c820416f8fee677a5ee985c0b351d",
+      "sha256": "7595d126b6fbd8b5e34c2c8ac01f140da587ba4a24257c070e6c67386ef4500e",
       "rows": {
         "-4": {
           "previous_sha256": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
@@ -8268,7 +8302,7 @@
         },
         "3": {
           "previous_sha256": "7e1d49da596f735dbb2a9acd7c2ee68829ce0bf6dcfa44213d92fa12ab7e197f",
-          "sha256": "b87c74668d1427c1de433f2f48d24fd4535cadc109fa6d2e54795d74b70abd41",
+          "sha256": "683f142bfb0efa2cbd54a7119a890957b7bbbb2b1ca552e5947931d1b2bab09f",
           "changed": true,
           "basis_v4_rules": [],
           "rules": [
@@ -8281,7 +8315,8 @@
           "weakest_rule_status": "COMPUTED+VALIDATED",
           "overall_factor": "-1",
           "terms_published": 60,
-          "terms_basis_v4": 24
+          "terms_basis_v4": 24,
+          "s6_builtin": "vakint::s6weak = vakint::s6 (same number: the 4L record and the Vakint built-in have the identical defining integral; s6 = sum_{m>=k>=1} (-1)^(m+k)/(m^5 k) = zeta(-5,-1) + zeta(6))"
         }
       }
     },
@@ -8785,7 +8820,7 @@
       "path": "masters/P43/symbolic.json",
       "previous_sha256": "a5b33aa29e719fe1dca1e01188bbf64071b08c2590e93a2bdb58aaada49af2f8",
       "previous_archive": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P43/symbolic.json",
-      "sha256": "193ed3bcaa68b2995dc02d0dd5583067637757506ce3b8898906c2605ce05194",
+      "sha256": "737fc4f5ea6a36faa9f8fb4eda7fc23807030ceca4bb99b01b4251048056d6c0",
       "rows": {
         "-4": {
           "previous_sha256": "f70b94aeb67de2a5eb4bd8c2ea85128f13776cb545a661abe422b378a6cf3099",
@@ -8869,7 +8904,7 @@
         },
         "1": {
           "previous_sha256": "c6a3472bb0aca3c19a2184d42b9e4e4839d04fdaf65c52cf7d828df9d847b52e",
-          "sha256": "650d1d7d61e860bc07d813452f67e407ed40ac66ec1368ed32d76b56df7e4314",
+          "sha256": "a554a37ca9cb0f45a34a1b78829c63ff311b4262f9b717604e82d0d6c7093cc5",
           "changed": true,
           "basis_v4_rules": [
             "X3_TI3",
@@ -8896,7 +8931,8 @@
           "weakest_rule_status": "COMPUTED",
           "overall_factor": "-1",
           "terms_published": 308,
-          "terms_basis_v4": 74
+          "terms_basis_v4": 74,
+          "s6_builtin": "vakint::s6weak = vakint::s6 (same number: the 4L record and the Vakint built-in have the identical defining integral; s6 = sum_{m>=k>=1} (-1)^(m+k)/(m^5 k) = zeta(-5,-1) + zeta(6))"
         }
       }
     },
@@ -8982,7 +9018,7 @@
       "path": "masters/P45/symbolic.json",
       "previous_sha256": "f30c62eb39a1ec77e5751388bbb2291aec87b98e4faff11a1ab7f9ad322d4e0f",
       "previous_archive": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P45/symbolic.json",
-      "sha256": "74f191c78558eebb732127f0fa7d92c0b56b83bcdba76df27c719f5d715a7c34",
+      "sha256": "1debada274ac0b2a41778dd1ffcca5799b75595301c961e5828029ae35d099ea",
       "rows": {
         "-4": {
           "previous_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
@@ -9061,7 +9097,7 @@
         },
         "1": {
           "previous_sha256": "f7924619c780de022306f74fc2b4b2757dc4af099e703ef4ad799044f9405cdd",
-          "sha256": "dc00c5178bfd0e67e5fb90a76c4119c1c25553fc3c51409a55b37f5b5f538307",
+          "sha256": "accfbcd52483cc92467b2647094af3f8f6138245e508f51226c1b6ed2443bd29",
           "changed": true,
           "basis_v4_rules": [
             "X3_TI3",
@@ -9083,7 +9119,8 @@
           "weakest_rule_status": "COMPUTED+VALIDATED",
           "overall_factor": "-1",
           "terms_published": 284,
-          "terms_basis_v4": 68
+          "terms_basis_v4": 68,
+          "s6_builtin": "vakint::s6weak = vakint::s6 (same number: the 4L record and the Vakint built-in have the identical defining integral; s6 = sum_{m>=k>=1} (-1)^(m+k)/(m^5 k) = zeta(-5,-1) + zeta(6))"
         }
       }
     },
@@ -9394,7 +9431,7 @@
       "path": "masters/P49/symbolic.json",
       "previous_sha256": "a26d1567bf1dcd8ae2c3c33512f68705bf65c1f0310c409cdbf0620ba1e09f47",
       "previous_archive": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P49/symbolic.json",
-      "sha256": "ec0ddf18ef8876edf2d6b1697a6ee88b0fed149a9029b6611c59ffaa0fa06631",
+      "sha256": "b19f7a87f46bfbfb44fa6a5b02a550197268c79aaab6a88218b5b3a36cfc77db",
       "rows": {
         "-4": {
           "previous_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
@@ -9442,7 +9479,7 @@
         },
         "0": {
           "previous_sha256": "7cedb1f7c06510e1eb05b923279740096af40a5274ee497cf344388a652be9fa",
-          "sha256": "4cc0ceda967aaedfd10d9dbead76976d7e32cbbe924b3f92c8e2b1d90123ced2",
+          "sha256": "be932f049956ebfc583f201bde891f28a14b3bca498755a6ec4f94ac7d11ba5a",
           "changed": true,
           "basis_v4_rules": [
             "R1_PR11dD2Eps2",
@@ -9473,11 +9510,12 @@
           "weakest_rule_status": "COMPUTED",
           "overall_factor": "-1",
           "terms_published": 340,
-          "terms_basis_v4": 91
+          "terms_basis_v4": 91,
+          "s6_builtin": "vakint::s6weak = vakint::s6 (same number: the 4L record and the Vakint built-in have the identical defining integral; s6 = sum_{m>=k>=1} (-1)^(m+k)/(m^5 k) = zeta(-5,-1) + zeta(6))"
         },
         "1": {
           "previous_sha256": "b817b2414d4b1f809a82bfea498a9fe337d7beb4178e8686893af3e40c876add",
-          "sha256": "5308b3a6122459b9117bede9c5ba3aed1f7a988db0362c8cbc356403fdabdbba",
+          "sha256": "b2d4541579535be9e5f0ebd8c964127d22d5a1158e84c220b9eaf7e5782c981b",
           "changed": true,
           "basis_v4_rules": [
             "R1_PR11dD2Eps2",
@@ -9508,7 +9546,8 @@
           "weakest_rule_status": "COMPUTED",
           "overall_factor": "-1",
           "terms_published": 638,
-          "terms_basis_v4": 153
+          "terms_basis_v4": 153,
+          "s6_builtin": "vakint::s6weak = vakint::s6 (same number: the 4L record and the Vakint built-in have the identical defining integral; s6 = sum_{m>=k>=1} (-1)^(m+k)/(m^5 k) = zeta(-5,-1) + zeta(6))"
         }
       }
     },
@@ -9760,7 +9799,7 @@
       "path": "masters/P52/symbolic.json",
       "previous_sha256": "ec2c754b6542c45e7c73f66951552123ccff9d9492b387db17e277fea04859a7",
       "previous_archive": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P52/symbolic.json",
-      "sha256": "a382571437de9641786b13b34dabb0f5fa0e23c16190da94cb9764d575f9de14",
+      "sha256": "8e40fd1be488a884baca7ad073a965bc4cd554141492502c76ee4f232c8cd1ea",
       "rows": {
         "-4": {
           "previous_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
@@ -9836,7 +9875,7 @@
         },
         "1": {
           "previous_sha256": "659b561da905bb9c0796cf7999f048625174e85855044cfdfd2b8fc73e05184f",
-          "sha256": "ee7867145a19d018c7b0ea8acb8c1e01322a9f585027ba902738072c70e1fe70",
+          "sha256": "830c37f5228d69550e30ab39596add0fcc0b39de176630810ac17943ed9d650a",
           "changed": true,
           "basis_v4_rules": [
             "R1_PR11dD2Eps2",
@@ -9867,7 +9906,8 @@
           "weakest_rule_status": "COMPUTED",
           "overall_factor": "1",
           "terms_published": 340,
-          "terms_basis_v4": 90
+          "terms_basis_v4": 90,
+          "s6_builtin": "vakint::s6weak = vakint::s6 (same number: the 4L record and the Vakint built-in have the identical defining integral; s6 = sum_{m>=k>=1} (-1)^(m+k)/(m^5 k) = zeta(-5,-1) + zeta(6))"
         }
       }
     },
@@ -9964,7 +10004,7 @@
       "path": "masters/P54/symbolic.json",
       "previous_sha256": "5c59346c18e31787ce4816f9bf6863500671431049d4010b4b691521321d5a8e",
       "previous_archive": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P54/symbolic.json",
-      "sha256": "8102725881b539050a7755c6d383d3080b8c820416f8fee677a5ee985c0b351d",
+      "sha256": "7595d126b6fbd8b5e34c2c8ac01f140da587ba4a24257c070e6c67386ef4500e",
       "rows": {
         "-4": {
           "previous_sha256": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
@@ -10052,7 +10092,7 @@
         },
         "3": {
           "previous_sha256": "7e1d49da596f735dbb2a9acd7c2ee68829ce0bf6dcfa44213d92fa12ab7e197f",
-          "sha256": "b87c74668d1427c1de433f2f48d24fd4535cadc109fa6d2e54795d74b70abd41",
+          "sha256": "683f142bfb0efa2cbd54a7119a890957b7bbbb2b1ca552e5947931d1b2bab09f",
           "changed": true,
           "basis_v4_rules": [],
           "rules": [
@@ -10065,7 +10105,8 @@
           "weakest_rule_status": "COMPUTED+VALIDATED",
           "overall_factor": "-1",
           "terms_published": 60,
-          "terms_basis_v4": 24
+          "terms_basis_v4": 24,
+          "s6_builtin": "vakint::s6weak = vakint::s6 (same number: the 4L record and the Vakint built-in have the identical defining integral; s6 = sum_{m>=k>=1} (-1)^(m+k)/(m^5 k) = zeta(-5,-1) + zeta(6))"
         }
       }
     },
@@ -10899,7 +10940,7 @@
       "path": "masters/P63/symbolic.json",
       "previous_sha256": "a5b33aa29e719fe1dca1e01188bbf64071b08c2590e93a2bdb58aaada49af2f8",
       "previous_archive": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P63/symbolic.json",
-      "sha256": "193ed3bcaa68b2995dc02d0dd5583067637757506ce3b8898906c2605ce05194",
+      "sha256": "737fc4f5ea6a36faa9f8fb4eda7fc23807030ceca4bb99b01b4251048056d6c0",
       "rows": {
         "-4": {
           "previous_sha256": "f70b94aeb67de2a5eb4bd8c2ea85128f13776cb545a661abe422b378a6cf3099",
@@ -10983,7 +11024,7 @@
         },
         "1": {
           "previous_sha256": "c6a3472bb0aca3c19a2184d42b9e4e4839d04fdaf65c52cf7d828df9d847b52e",
-          "sha256": "650d1d7d61e860bc07d813452f67e407ed40ac66ec1368ed32d76b56df7e4314",
+          "sha256": "a554a37ca9cb0f45a34a1b78829c63ff311b4262f9b717604e82d0d6c7093cc5",
           "changed": true,
           "basis_v4_rules": [
             "X3_TI3",
@@ -11010,7 +11051,8 @@
           "weakest_rule_status": "COMPUTED",
           "overall_factor": "-1",
           "terms_published": 308,
-          "terms_basis_v4": 74
+          "terms_basis_v4": 74,
+          "s6_builtin": "vakint::s6weak = vakint::s6 (same number: the 4L record and the Vakint built-in have the identical defining integral; s6 = sum_{m>=k>=1} (-1)^(m+k)/(m^5 k) = zeta(-5,-1) + zeta(6))"
         }
       }
     },
@@ -11108,7 +11150,7 @@
       "path": "masters/P65/symbolic.json",
       "previous_sha256": "c2250b33e540abfc0f21e5f834cb79f2b29e99df8077a5935eeb9067aa50447d",
       "previous_archive": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P65/symbolic.json",
-      "sha256": "c9b364d2de134499ffc108232c78a8ebba875b5de176389b82a13e0cc84ddd5d",
+      "sha256": "754d96bac4ba32cbce99c0c17ec3c7be299fa9836336c0b0353c8efd7d900859",
       "rows": {
         "-4": {
           "previous_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
@@ -11190,7 +11232,7 @@
         },
         "1": {
           "previous_sha256": "50245367e6bd0ce1f33e7eacf446df7eb26b7dbcb4e726dfbdb12dfe37ecf616",
-          "sha256": "3f80a4cafc2f2049654a7e2f623dfdd24b7dccd61030bff2a5125e44be15f5cc",
+          "sha256": "f5e8c10cf909663a7ba3933dce2b04b009e9f78c5a4fcd38683ce23c71e9370e",
           "changed": true,
           "basis_v4_rules": [
             "X3_TI3",
@@ -11219,7 +11261,8 @@
           "weakest_rule_status": "COMPUTED",
           "overall_factor": "1",
           "terms_published": 506,
-          "terms_basis_v4": 90
+          "terms_basis_v4": 90,
+          "s6_builtin": "vakint::s6weak = vakint::s6 (same number: the 4L record and the Vakint built-in have the identical defining integral; s6 = sum_{m>=k>=1} (-1)^(m+k)/(m^5 k) = zeta(-5,-1) + zeta(6))"
         }
       }
     },
@@ -11501,7 +11544,7 @@
       "path": "masters/P69/symbolic.json",
       "previous_sha256": "a26d1567bf1dcd8ae2c3c33512f68705bf65c1f0310c409cdbf0620ba1e09f47",
       "previous_archive": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P69/symbolic.json",
-      "sha256": "ec0ddf18ef8876edf2d6b1697a6ee88b0fed149a9029b6611c59ffaa0fa06631",
+      "sha256": "b19f7a87f46bfbfb44fa6a5b02a550197268c79aaab6a88218b5b3a36cfc77db",
       "rows": {
         "-4": {
           "previous_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
@@ -11549,7 +11592,7 @@
         },
         "0": {
           "previous_sha256": "7cedb1f7c06510e1eb05b923279740096af40a5274ee497cf344388a652be9fa",
-          "sha256": "4cc0ceda967aaedfd10d9dbead76976d7e32cbbe924b3f92c8e2b1d90123ced2",
+          "sha256": "be932f049956ebfc583f201bde891f28a14b3bca498755a6ec4f94ac7d11ba5a",
           "changed": true,
           "basis_v4_rules": [
             "R1_PR11dD2Eps2",
@@ -11580,11 +11623,12 @@
           "weakest_rule_status": "COMPUTED",
           "overall_factor": "-1",
           "terms_published": 340,
-          "terms_basis_v4": 91
+          "terms_basis_v4": 91,
+          "s6_builtin": "vakint::s6weak = vakint::s6 (same number: the 4L record and the Vakint built-in have the identical defining integral; s6 = sum_{m>=k>=1} (-1)^(m+k)/(m^5 k) = zeta(-5,-1) + zeta(6))"
         },
         "1": {
           "previous_sha256": "b817b2414d4b1f809a82bfea498a9fe337d7beb4178e8686893af3e40c876add",
-          "sha256": "5308b3a6122459b9117bede9c5ba3aed1f7a988db0362c8cbc356403fdabdbba",
+          "sha256": "b2d4541579535be9e5f0ebd8c964127d22d5a1158e84c220b9eaf7e5782c981b",
           "changed": true,
           "basis_v4_rules": [
             "R1_PR11dD2Eps2",
@@ -11615,7 +11659,8 @@
           "weakest_rule_status": "COMPUTED",
           "overall_factor": "-1",
           "terms_published": 638,
-          "terms_basis_v4": 153
+          "terms_basis_v4": 153,
+          "s6_builtin": "vakint::s6weak = vakint::s6 (same number: the 4L record and the Vakint built-in have the identical defining integral; s6 = sum_{m>=k>=1} (-1)^(m+k)/(m^5 k) = zeta(-5,-1) + zeta(6))"
         }
       }
     },
@@ -11625,7 +11670,7 @@
       "path": "masters/P70/symbolic.json",
       "previous_sha256": "0e62c4a93d788ec7845d7203f1ae22ba03691998a90623887101f386d49b1d62",
       "previous_archive": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P70/symbolic.json",
-      "sha256": "316948e25bad66aa52d645370f435d0e3f64b4f8150234fb23a73bb959630cba",
+      "sha256": "b6760331c2604bdb4cf94d3f1192acb8eb8494595212c10b833aa5e8264a1f55",
       "rows": {
         "-4": {
           "previous_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
@@ -11708,7 +11753,7 @@
         },
         "1": {
           "previous_sha256": "2be243940cb9aa336c5770f791bcb2ffd6f7e5f5256fdbb4b0fdaff556e1f3c4",
-          "sha256": "d84dbeb5f4a8494edee88e3efa537ec9caf14cd031c4c532ba1daa412dc41a40",
+          "sha256": "cb8cc3689bdcaf0ab095fbccedeafb5c94c5253ee02f8d69678d278a886c9bd8",
           "changed": true,
           "basis_v4_rules": [
             "R1_PR11dD2Eps2",
@@ -11740,7 +11785,8 @@
           "weakest_rule_status": "COMPUTED",
           "overall_factor": "-1",
           "terms_published": 677,
-          "terms_basis_v4": 146
+          "terms_basis_v4": 146,
+          "s6_builtin": "vakint::s6weak = vakint::s6 (same number: the 4L record and the Vakint built-in have the identical defining integral; s6 = sum_{m>=k>=1} (-1)^(m+k)/(m^5 k) = zeta(-5,-1) + zeta(6))"
         }
       }
     },
@@ -11872,7 +11918,7 @@
       "path": "masters/P72/symbolic.json",
       "previous_sha256": "f30c62eb39a1ec77e5751388bbb2291aec87b98e4faff11a1ab7f9ad322d4e0f",
       "previous_archive": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P72/symbolic.json",
-      "sha256": "74f191c78558eebb732127f0fa7d92c0b56b83bcdba76df27c719f5d715a7c34",
+      "sha256": "1debada274ac0b2a41778dd1ffcca5799b75595301c961e5828029ae35d099ea",
       "rows": {
         "-4": {
           "previous_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
@@ -11951,7 +11997,7 @@
         },
         "1": {
           "previous_sha256": "f7924619c780de022306f74fc2b4b2757dc4af099e703ef4ad799044f9405cdd",
-          "sha256": "dc00c5178bfd0e67e5fb90a76c4119c1c25553fc3c51409a55b37f5b5f538307",
+          "sha256": "accfbcd52483cc92467b2647094af3f8f6138245e508f51226c1b6ed2443bd29",
           "changed": true,
           "basis_v4_rules": [
             "X3_TI3",
@@ -11973,7 +12019,8 @@
           "weakest_rule_status": "COMPUTED+VALIDATED",
           "overall_factor": "-1",
           "terms_published": 284,
-          "terms_basis_v4": 68
+          "terms_basis_v4": 68,
+          "s6_builtin": "vakint::s6weak = vakint::s6 (same number: the 4L record and the Vakint built-in have the identical defining integral; s6 = sum_{m>=k>=1} (-1)^(m+k)/(m^5 k) = zeta(-5,-1) + zeta(6))"
         }
       }
     },
@@ -12099,7 +12146,7 @@
       "path": "masters/P74/symbolic.json",
       "previous_sha256": "ec2c754b6542c45e7c73f66951552123ccff9d9492b387db17e277fea04859a7",
       "previous_archive": "provenance/takeover-basis-v4-rewrite-v1-before/4L/masters/P74/symbolic.json",
-      "sha256": "a382571437de9641786b13b34dabb0f5fa0e23c16190da94cb9764d575f9de14",
+      "sha256": "8e40fd1be488a884baca7ad073a965bc4cd554141492502c76ee4f232c8cd1ea",
       "rows": {
         "-4": {
           "previous_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
@@ -12175,7 +12222,7 @@
         },
         "1": {
           "previous_sha256": "659b561da905bb9c0796cf7999f048625174e85855044cfdfd2b8fc73e05184f",
-          "sha256": "ee7867145a19d018c7b0ea8acb8c1e01322a9f585027ba902738072c70e1fe70",
+          "sha256": "830c37f5228d69550e30ab39596add0fcc0b39de176630810ac17943ed9d650a",
           "changed": true,
           "basis_v4_rules": [
             "R1_PR11dD2Eps2",
@@ -12206,14 +12253,15 @@
           "weakest_rule_status": "COMPUTED",
           "overall_factor": "1",
           "terms_published": 340,
-          "terms_basis_v4": 90
+          "terms_basis_v4": 90,
+          "s6_builtin": "vakint::s6weak = vakint::s6 (same number: the 4L record and the Vakint built-in have the identical defining integral; s6 = sum_{m>=k>=1} (-1)^(m+k)/(m^5 k) = zeta(-5,-1) + zeta(6))"
         }
       }
     }
   },
   "portable_proof_index": {
     "path": "provenance/takeover-basis-v4-rewrite-v1/portable-proof-index.json",
-    "sha256": "d10f6bb9e24f54f85b6aa090d1b172a6c79c50f93af86315c8a0a847941bb232"
+    "sha256": "8326fefb00269949d39ca6f76930f1296d1e7658543d026e1642dae5aaa493e3"
   },
   "before_images": {
     "path": "provenance/takeover-basis-v4-rewrite-v1-before/history.json",
@@ -12303,21 +12351,23 @@
       "vakint::PR12D2Eps3": "user decision D13 (30 Oct 2026, 23:2x UTC, recorded in the takeover STATE.md): the closure-implied control of at least 421 digits is accepted as the independent-method control of vakint::PR12D2Eps3; no second method is run"
     },
     "documented_not_basis_generator": {
-      "vakint::PR11dD2Eps2": "R1 expresses it (validation.basis_v4)"
+      "vakint::PR11dD2Eps2": "R1 expresses it (validation.basis_v4)",
+      "vakint::s6weak": "same number as the built-in vakint::s6; no formula uses it (validation.basis_v4)"
     },
     "records_not_used_by_any_row": [
       "vakint::PR10D2",
       "vakint::PR15D2",
       "vakint::PR5D2Eps3",
-      "vakint::PR11dD2Eps2"
+      "vakint::PR11dD2Eps2",
+      "vakint::s6weak"
     ],
     "registry": {
       "path": "4L/provenance/takeover-4L-closures-v1/independent-D2-period-registry-v3.json",
-      "sha256": "003d260e5b76e7e672d5522531de3e347d8666f8a10c5cb0715785b96b095f80"
+      "sha256": "12b88cf1e16881c8232a7123e16469a600c8a5b5ba23276d1ea4c85757d95f5e"
     },
     "projection": {
       "path": "provenance/takeover-4l-closures-runtime-v3/projection.json",
-      "sha256": "0a8d5921495fb9cd40c948bd57236fe426b36e3d88b359bacfe965a5e6008922"
+      "sha256": "23840b344a76a9422482ebcd17cfa32c0ebee873a2fd906e77e8b7d786263493"
     }
   },
   "numerical_json_unchanged": true,

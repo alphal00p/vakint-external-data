@@ -248,9 +248,11 @@ The basis-v4 rewrite (`provenance/takeover-basis-v4-rewrite-v1`) changes no valu
 digit count or error of this adapter. It relabels `PR12D2Eps3` in the period registry
 (closure-implied control accepted, user decision D13; previous label kept in
 `validation.superseded_label_D13`) and adds `validation.basis_v4` to `PR11dD2Eps2`,
-which is not a basis generator because the relation R1 expresses it. The projection,
-its exact-rational review and the runtime binding were re-derived; only provenance
-fields differ.
+which is not a basis generator because the relation R1 expresses it. It also adds
+`validation.basis_v4` to `s6weak`: the record holds the same number as the Vakint
+built-in `vakint::s6`, which every published row uses, and no formula uses the record.
+The projection, its exact-rational review and the runtime binding were re-derived;
+only provenance fields differ.
 
 Records may carry the optional field `symbolic_definition`, a Symbolica atom
 with full namespaces and Unicode constants. It states the defining (multiple)

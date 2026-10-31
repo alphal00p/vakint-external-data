@@ -20,13 +20,16 @@ import data
 
 BUILTIN_FUNCTIONS = {"HI", "HR", "GPLReal", "GPLImag", "PolylogReal", "PolylogImag"}
 # Vakint built-in constants (never constants.json records): the MATAD/FMFT
-# constants and the Clausen values Cl2(pi/3), Cl4(pi/3) of the constant basis.
+# constants, the Clausen values Cl2(pi/3), Cl4(pi/3) and the alternating Euler
+# sum s6 of the constant basis. The 4L record s6weak holds the same number as
+# the built-in s6, so that every loop count can evaluate rows that use s6.
 BUILTIN_CONSTANTS = {
     "S2",
     "T1ep",
     "T1ep2",
     "cl2",
     "cl4",
+    "s6",
     "D5bar1",
     "D5bar2",
     "D6bar1",
@@ -99,6 +102,20 @@ class SymbolicBindingTests(unittest.TestCase):
                             or symbol in constants,
                             f"unbound exact-row leaf {symbol}",
                         )
+
+    def test_no_constant_record_takes_a_builtin_name(self):
+        # Vakint reserves its built-in names and rejects a pack that defines one.
+        for loops in range(1, 6):
+            path = data.ROOT / f"{loops}L/constants.json"
+            if not path.exists():
+                continue
+            for record in data.read_json(path):
+                head = LEAF.fullmatch(record["symbol"])
+                with self.subTest(loops=loops, symbol=record["symbol"]):
+                    self.assertFalse(
+                        head is not None and head.group(1) in BUILTIN_CONSTANTS,
+                        f"constants.json record {record['symbol']} is a Vakint built-in",
+                    )
 
     def test_every_exact_row_uses_only_whitelisted_native_heads(self):
         seen = set()

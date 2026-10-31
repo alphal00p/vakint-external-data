@@ -3,10 +3,10 @@
 The 31 October 2026 source update rewrites every exact 1L–4L coefficient row (739 rows
 of 115 masters, 713 distinct coefficients) in one basis of 68 constants, with common
 factors pulled out and terms collected; see [`docs/basis.md`](docs/basis.md). The
-generators are pi, zeta(3), zeta(5), zeta(7), log 2, Li4/5/6(1/2), the alternating sum
-`s6weak`, log 3, Cl2(pi/3), Cl4(pi/3), Im Li3(i/sqrt3), Im Li4(i/sqrt3), four sixth-root
-GPLs, the MATAD constants D5bar1/2, D6bar1/2 and T111bar4, ten Bessel moments and jets,
-30 D=2-2delta periods, and five weight-7 or D=4-2eps constants; `3^(1/2)` is an explicit
+generators are pi, zeta(3), zeta(5), zeta(7), log 2, Li4/5/6(1/2), the alternating Euler
+sum s6 (the Vakint built-in `vakint::s6`), log 3, Cl2(pi/3), Cl4(pi/3), Im Li3(i/sqrt3),
+Im Li4(i/sqrt3), four sixth-root GPLs, the MATAD constants D5bar1/2, D6bar1/2 and
+T111bar4, ten Bessel moments and jets, 30 D=2-2delta periods, and five weight-7 or D=4-2eps constants; `3^(1/2)` is an explicit
 parity factor. The coefficients shrink from 20,971 to 6,645 terms. Each new row equals its
 previous row once the identities listed in the publication receipt are applied. Most are
 published reduction tables or proved identities. Some are numerical identities, not proofs:
@@ -20,10 +20,10 @@ the generators or the products that occur. Possible jet-3 and jet-4 analogues of
 not excluded at the available precision. Rows no longer use the coefficient aliases
 `PR11dep0`, `PR4fin` and `PR4dfin`, the derived MATAD constants `S2`, `T1ep`, `T1ep2` and
 `BNbar4`, the HPL words, or `PR10D2`, `PR15D2`, `PR5D2Eps3` and `PR11dD2Eps2`, whose
-`4L/constants.json` records stay unchanged. Three
-three-loop rows write `s6weak` through its built-in GPL definition, because the four-loop
-constants are not loaded for three-loop use. `PR12D2Eps3` is now validated: its
-closure-implied control of at least 421 digits was accepted. Every `numerical.json`,
+`4L/constants.json` records stay unchanged. Every row with s6 writes the built-in
+`vakint::s6`, so three-loop loads evaluate it too; the four-loop record `s6weak` holds
+the same number, stays unchanged, and no formula uses it. `PR12D2Eps3` is now validated:
+its closure-implied control of at least 421 digits was accepted. Every `numerical.json`,
 numerical precision record and constant value is unchanged, as is the five-loop data. See
 [`provenance/takeover-basis-v4-rewrite-v1`](provenance/takeover-basis-v4-rewrite-v1).
 

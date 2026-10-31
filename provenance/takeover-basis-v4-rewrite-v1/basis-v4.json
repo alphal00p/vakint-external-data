@@ -11,7 +11,7 @@
     "native": "𝜋, 𝑒, 𝑖, symbolica::γ (Euler gamma), log, sin, symbolica::gamma, symbolica::bessel_k, symbolica::real_part/imaginary_part",
     "no_named_constant_inside": true
   },
-  "scope": "every exact 1L-4L master coefficient row of this repository is a polynomial with rational coefficients in these 68 generators (times 3^(1/2) for odd parity); no other constant occurs",
+  "scope": "every exact 1L-4L master coefficient row of this repository is a polynomial with rational coefficients in these 68 generators (times 3^(1/2) for odd parity); no other constant occurs (s6 is the Vakint built-in vakint::s6 at every loop count)",
   "generators": [
     {
       "index": 1,
@@ -199,7 +199,7 @@
     },
     {
       "index": 9,
-      "symbol": "vakint::s6weak",
+      "symbol": "vakint::s6",
       "pretty": "s6",
       "meaning": "alternating double sum s6 = sum_{m>=k>=1} (-1)^(m+k)/(m^5 k) = zeta(-5,-1) + zeta(6)",
       "sector": "level2",
@@ -207,19 +207,19 @@
       "parity": "Re",
       "definition": "vakint::Integral(((-1*vakint::x(1)*vakint::x(2)+1)^(-1)*vakint::x(2)+(1+vakint::x(1))^(-1))*(1+vakint::x(2))^(-1)*(log(vakint::x(1)))^4*1/24,vakint::Interval(vakint::x(1),0,1),vakint::Interval(vakint::x(2),0,1))",
       "definition_readable": "Integral(1/24*(1/(1+x(1))+x(2)/(1-x(1)*x(2)))*log(x(1))^4/(1+x(2)),Interval(x(1),0,1),Interval(x(2),0,1))",
-      "normalisation": "plain real number (alternating/level-2 sum); no loop measure involved",
-      "definition_source": "published external-data 4L/constants.json symbolic_definition @bf1d6e8e",
+      "normalisation": "Alternating Euler sum s6 = Σ_(m≥k≥1) (-1)^(m+k)/(m^5 k) = ζ(-5,-1) + ζ(6), the diagonal m = k included; a plain real number given by the convergent double integral shown over [0,1]², first interval outermost; no loop measure and no further factor",
+      "definition_source": "Vakint built-in vakint::s6 (gammaloop follow-up bdde02b0b): get_constant(\"s6\") .definition() is this integral, identical to the symbolic_definition of the 4L record vakint::s6weak",
       "definition_check": {
         "method": "direct numerical evaluation of the definition atom (mpmath tanh-sinh quadrature, 50 working digits)",
         "agreement_digits": 48.23
       },
       "value": {
-        "digits": 20000,
-        "how": "4L/constants.json@bf1d6e8e34b92fe6b7221cee480852ffb42cabab (PARI polylogmult); computable to any precision",
+        "digits": "unlimited (Vakint built-in)",
+        "how": "Vakint evaluates s6 as π^6/945 + GPLReal(0,0,0,0,-1,1,1) at any precision; the 4L record vakint::s6weak holds the same number to 20000 digits (PARI polylogmult)",
         "status": "EXACT constant"
       },
       "rows_using": 26,
-      "spelling_without_4L_pack": "vakint::s6weak = 𝜋^6/945 + vakint::GPLReal(0,0,0,0,-1,1,1) (s6 = zeta(6) + Li_{5,1}(-1,-1); G(0,0,0,0,-1,1;1) = Li_{5,1}(-1,-1)); used in 3L P13/P21/P28 eps^4 because 4L/constants.json is not loaded for max_loop_count <= 3"
+      "same_number_record": "vakint::s6weak (4L/constants.json; kept, values unchanged; no formula uses it)"
     },
     {
       "index": 10,
@@ -1748,6 +1748,13 @@
       "how": "X4_TI4 swap to Im Li4(i/sqrt3)",
       "status": "COMPUTED+VALIDATED (4100 digits)",
       "rows_rewritten_out": 159
+    },
+    {
+      "name": "vakint::s6weak",
+      "exactly_expressible": true,
+      "how": "same number as the built-in vakint::s6 (identical defining integral); the 4L/constants.json record is kept with its values unchanged",
+      "status": "EXACT (same definition)",
+      "rows_rewritten_out": 26
     }
   ],
   "remaining_non_classical_no_exact_formula": {

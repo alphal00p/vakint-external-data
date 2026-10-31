@@ -260,8 +260,8 @@
       "bytes": 3477
     },
     "producer-update.json": {
-      "sha256": "1ae9e85aa97ff93932b5b9f289f24d5e4bd42c84b2d52824847dbf03320d1469",
-      "bytes": 20497
+      "sha256": "c2a7a05a917ac68ad65d214907ac7cd6930e7b5b7112e0f1fbd663f85c578a2f",
+      "bytes": 20543
     }
   },
   "producer_update": "producer-update.json"

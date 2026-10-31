@@ -29,6 +29,6 @@
   ],
   [
     3,
-    "-1*((8/45*symbolica::zeta(3)*𝜋^4+8/15*symbolica::zeta(5)*𝜋^2+8/7*symbolica::zeta(7))+(4142/567*𝜋^6+45032/27*symbolica::zeta(3)^2+2608/45*log(2)^2*𝜋^4+256/9*log(2)^4*𝜋^2-64/5*log(2)^6-256/3*symbolica::polylog(4,1/2)*𝜋^2-9216*symbolica::polylog(6,1/2)-3840*vakint::s6weak)+(-2530/27*symbolica::zeta(3)*𝜋^2+158426/15*symbolica::zeta(5)-2312/15*log(2)*𝜋^4-544/3*log(2)^3*𝜋^2+544/5*log(2)^5-13056*symbolica::polylog(5,1/2))+(23743/180*𝜋^4+1432/3*log(2)^2*𝜋^2-1432/3*log(2)^4-11456*symbolica::polylog(4,1/2))-126457/18*symbolica::zeta(3)+4549/48*𝜋^2+1451143/192)"
+    "-1*((8/45*symbolica::zeta(3)*𝜋^4+8/15*symbolica::zeta(5)*𝜋^2+8/7*symbolica::zeta(7))+(4142/567*𝜋^6+45032/27*symbolica::zeta(3)^2+2608/45*log(2)^2*𝜋^4+256/9*log(2)^4*𝜋^2-64/5*log(2)^6-256/3*symbolica::polylog(4,1/2)*𝜋^2-9216*symbolica::polylog(6,1/2)-3840*vakint::s6)+(-2530/27*symbolica::zeta(3)*𝜋^2+158426/15*symbolica::zeta(5)-2312/15*log(2)*𝜋^4-544/3*log(2)^3*𝜋^2+544/5*log(2)^5-13056*symbolica::polylog(5,1/2))+(23743/180*𝜋^4+1432/3*log(2)^2*𝜋^2-1432/3*log(2)^4-11456*symbolica::polylog(4,1/2))-126457/18*symbolica::zeta(3)+4549/48*𝜋^2+1451143/192)"
   ]
 ]

@@ -72,7 +72,7 @@
         "base_commit": "f51bc5a29d65ea04f50c7e8beb8ef7b9d9432136",
         "receipt": {
           "path": "provenance/takeover-basis-v4-rewrite-v1/receipt.json",
-          "sha256": "139b49a5d224c30f16a0a5cd28a0af4b00ba94988bc57d9d3ded6507a1d0bbad"
+          "sha256": "8c660d1cdaf567d6c2c4d19d9e003a56f772415fd7058871a5bc9ff3a2fd7d3d"
         }
       }
     },
@@ -1858,7 +1858,7 @@
         },
         "symbolic.json": {
           "path": "masters/P13/symbolic.json",
-          "sha256": "8255b8f2cb9a05e3ec356b2170dfe468abc4216eaef7c8fd6fd8bce5581c960c"
+          "sha256": "c2fc472169767b9cc4cb56004e4e7cb15d77349773eb65eb121f4a60d6ac3d6f"
         }
       },
       "previous_files": {
@@ -2978,7 +2978,7 @@
         },
         "symbolic.json": {
           "path": "masters/P21/symbolic.json",
-          "sha256": "8255b8f2cb9a05e3ec356b2170dfe468abc4216eaef7c8fd6fd8bce5581c960c"
+          "sha256": "c2fc472169767b9cc4cb56004e4e7cb15d77349773eb65eb121f4a60d6ac3d6f"
         }
       },
       "previous_files": {
@@ -3993,7 +3993,7 @@
         },
         "symbolic.json": {
           "path": "masters/P28/symbolic.json",
-          "sha256": "8255b8f2cb9a05e3ec356b2170dfe468abc4216eaef7c8fd6fd8bce5581c960c"
+          "sha256": "c2fc472169767b9cc4cb56004e4e7cb15d77349773eb65eb121f4a60d6ac3d6f"
         }
       },
       "previous_files": {

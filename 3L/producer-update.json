@@ -221,9 +221,9 @@
     },
     "actual_takeover_basis_v4_rewrite_publication": {
       "path": "provenance/takeover-basis-v4-rewrite-v1/receipt.json",
-      "sha256": "139b49a5d224c30f16a0a5cd28a0af4b00ba94988bc57d9d3ded6507a1d0bbad"
+      "sha256": "8c660d1cdaf567d6c2c4d19d9e003a56f772415fd7058871a5bc9ff3a2fd7d3d"
     },
-    "takeover_basis_v4_rewrite_adoption": "takeover publication (user decisions 30-31 Oct 2026: basis v4 with 68 generators, PR11dD2Eps2 dropped through R1, standard constants for fixed combinations, D13); local commit only; pushed by the orchestrator after an adversarial review",
+    "takeover_basis_v4_rewrite_adoption": "takeover publication (user decisions 30-31 Oct 2026: basis v4 with 68 generators, PR11dD2Eps2 dropped through R1, standard constants for fixed combinations, D13; 31 Oct: s6 as the Vakint built-in vakint::s6); local commit only; pushed by the orchestrator after an adversarial review",
     "takeover_basis_v4_rewrite_cells": {
       "rows": 739,
       "rows_changed": 456,
@@ -232,7 +232,7 @@
     "takeover_basis_v4_rewrite_validation": {
       "basis": {
         "path": "provenance/takeover-basis-v4-rewrite-v1/basis-v4.json",
-        "sha256": "e7d08141af5ecc57293d81e346d904aef587a753ccca2edf630a6c6ec39f7961"
+        "sha256": "220ac52e2d6b749f6d7aa48fdddb73759140876242c72b5d6b6da509a6c3b0d4"
       },
       "exact_equivalence": "739/739 (second code path)",
       "numerical_relations_used": [
@@ -243,7 +243,7 @@
       "numerical_values_unchanged": true,
       "portable_proof_index": {
         "path": "provenance/takeover-basis-v4-rewrite-v1/portable-proof-index.json",
-        "sha256": "d10f6bb9e24f54f85b6aa090d1b172a6c79c50f93af86315c8a0a847941bb232"
+        "sha256": "8326fefb00269949d39ca6f76930f1296d1e7658543d026e1642dae5aaa493e3"
       }
     }
   },
@@ -358,7 +358,7 @@
         "publication": "takeover-basis-v4-rewrite-v1",
         "receipt": {
           "path": "provenance/takeover-basis-v4-rewrite-v1/receipt.json",
-          "sha256": "139b49a5d224c30f16a0a5cd28a0af4b00ba94988bc57d9d3ded6507a1d0bbad"
+          "sha256": "8c660d1cdaf567d6c2c4d19d9e003a56f772415fd7058871a5bc9ff3a2fd7d3d"
         },
         "epsilon_powers_rewritten": [
           0,
@@ -488,7 +488,7 @@
         "publication": "takeover-basis-v4-rewrite-v1",
         "receipt": {
           "path": "provenance/takeover-basis-v4-rewrite-v1/receipt.json",
-          "sha256": "139b49a5d224c30f16a0a5cd28a0af4b00ba94988bc57d9d3ded6507a1d0bbad"
+          "sha256": "8c660d1cdaf567d6c2c4d19d9e003a56f772415fd7058871a5bc9ff3a2fd7d3d"
         },
         "epsilon_powers_rewritten": [
           0,
@@ -618,7 +618,7 @@
         "publication": "takeover-basis-v4-rewrite-v1",
         "receipt": {
           "path": "provenance/takeover-basis-v4-rewrite-v1/receipt.json",
-          "sha256": "139b49a5d224c30f16a0a5cd28a0af4b00ba94988bc57d9d3ded6507a1d0bbad"
+          "sha256": "8c660d1cdaf567d6c2c4d19d9e003a56f772415fd7058871a5bc9ff3a2fd7d3d"
         },
         "epsilon_powers_rewritten": [
           0,
@@ -755,7 +755,7 @@
         "publication": "takeover-basis-v4-rewrite-v1",
         "receipt": {
           "path": "provenance/takeover-basis-v4-rewrite-v1/receipt.json",
-          "sha256": "139b49a5d224c30f16a0a5cd28a0af4b00ba94988bc57d9d3ded6507a1d0bbad"
+          "sha256": "8c660d1cdaf567d6c2c4d19d9e003a56f772415fd7058871a5bc9ff3a2fd7d3d"
         },
         "epsilon_powers_rewritten": [
           -1,
@@ -886,7 +886,7 @@
         "publication": "takeover-basis-v4-rewrite-v1",
         "receipt": {
           "path": "provenance/takeover-basis-v4-rewrite-v1/receipt.json",
-          "sha256": "139b49a5d224c30f16a0a5cd28a0af4b00ba94988bc57d9d3ded6507a1d0bbad"
+          "sha256": "8c660d1cdaf567d6c2c4d19d9e003a56f772415fd7058871a5bc9ff3a2fd7d3d"
         },
         "epsilon_powers_rewritten": [
           0,
@@ -1016,7 +1016,7 @@
         "publication": "takeover-basis-v4-rewrite-v1",
         "receipt": {
           "path": "provenance/takeover-basis-v4-rewrite-v1/receipt.json",
-          "sha256": "139b49a5d224c30f16a0a5cd28a0af4b00ba94988bc57d9d3ded6507a1d0bbad"
+          "sha256": "8c660d1cdaf567d6c2c4d19d9e003a56f772415fd7058871a5bc9ff3a2fd7d3d"
         },
         "epsilon_powers_rewritten": [
           0,
@@ -1146,7 +1146,7 @@
         "publication": "takeover-basis-v4-rewrite-v1",
         "receipt": {
           "path": "provenance/takeover-basis-v4-rewrite-v1/receipt.json",
-          "sha256": "139b49a5d224c30f16a0a5cd28a0af4b00ba94988bc57d9d3ded6507a1d0bbad"
+          "sha256": "8c660d1cdaf567d6c2c4d19d9e003a56f772415fd7058871a5bc9ff3a2fd7d3d"
         },
         "epsilon_powers_rewritten": [
           0,
@@ -1283,7 +1283,7 @@
         "publication": "takeover-basis-v4-rewrite-v1",
         "receipt": {
           "path": "provenance/takeover-basis-v4-rewrite-v1/receipt.json",
-          "sha256": "139b49a5d224c30f16a0a5cd28a0af4b00ba94988bc57d9d3ded6507a1d0bbad"
+          "sha256": "8c660d1cdaf567d6c2c4d19d9e003a56f772415fd7058871a5bc9ff3a2fd7d3d"
         },
         "epsilon_powers_rewritten": [
           -1,
@@ -1414,7 +1414,7 @@
         "publication": "takeover-basis-v4-rewrite-v1",
         "receipt": {
           "path": "provenance/takeover-basis-v4-rewrite-v1/receipt.json",
-          "sha256": "139b49a5d224c30f16a0a5cd28a0af4b00ba94988bc57d9d3ded6507a1d0bbad"
+          "sha256": "8c660d1cdaf567d6c2c4d19d9e003a56f772415fd7058871a5bc9ff3a2fd7d3d"
         },
         "epsilon_powers_rewritten": [
           0,
@@ -1551,7 +1551,7 @@
         "publication": "takeover-basis-v4-rewrite-v1",
         "receipt": {
           "path": "provenance/takeover-basis-v4-rewrite-v1/receipt.json",
-          "sha256": "139b49a5d224c30f16a0a5cd28a0af4b00ba94988bc57d9d3ded6507a1d0bbad"
+          "sha256": "8c660d1cdaf567d6c2c4d19d9e003a56f772415fd7058871a5bc9ff3a2fd7d3d"
         },
         "epsilon_powers_rewritten": [
           -1,
@@ -1682,7 +1682,7 @@
         "publication": "takeover-basis-v4-rewrite-v1",
         "receipt": {
           "path": "provenance/takeover-basis-v4-rewrite-v1/receipt.json",
-          "sha256": "139b49a5d224c30f16a0a5cd28a0af4b00ba94988bc57d9d3ded6507a1d0bbad"
+          "sha256": "8c660d1cdaf567d6c2c4d19d9e003a56f772415fd7058871a5bc9ff3a2fd7d3d"
         },
         "epsilon_powers_rewritten": [
           0,
@@ -1819,7 +1819,7 @@
         "publication": "takeover-basis-v4-rewrite-v1",
         "receipt": {
           "path": "provenance/takeover-basis-v4-rewrite-v1/receipt.json",
-          "sha256": "139b49a5d224c30f16a0a5cd28a0af4b00ba94988bc57d9d3ded6507a1d0bbad"
+          "sha256": "8c660d1cdaf567d6c2c4d19d9e003a56f772415fd7058871a5bc9ff3a2fd7d3d"
         },
         "epsilon_powers_rewritten": [
           -1,
@@ -1886,7 +1886,7 @@
         },
         "symbolic.json": {
           "path": "masters/P13/symbolic.json",
-          "sha256": "8255b8f2cb9a05e3ec356b2170dfe468abc4216eaef7c8fd6fd8bce5581c960c"
+          "sha256": "c2fc472169767b9cc4cb56004e4e7cb15d77349773eb65eb121f4a60d6ac3d6f"
         },
         "graph.dot": {
           "path": "masters/P13/graph.dot",
@@ -1963,7 +1963,7 @@
         "publication": "takeover-basis-v4-rewrite-v1",
         "receipt": {
           "path": "provenance/takeover-basis-v4-rewrite-v1/receipt.json",
-          "sha256": "139b49a5d224c30f16a0a5cd28a0af4b00ba94988bc57d9d3ded6507a1d0bbad"
+          "sha256": "8c660d1cdaf567d6c2c4d19d9e003a56f772415fd7058871a5bc9ff3a2fd7d3d"
         },
         "epsilon_powers_rewritten": [
           -1,
@@ -2102,7 +2102,7 @@
         "publication": "takeover-basis-v4-rewrite-v1",
         "receipt": {
           "path": "provenance/takeover-basis-v4-rewrite-v1/receipt.json",
-          "sha256": "139b49a5d224c30f16a0a5cd28a0af4b00ba94988bc57d9d3ded6507a1d0bbad"
+          "sha256": "8c660d1cdaf567d6c2c4d19d9e003a56f772415fd7058871a5bc9ff3a2fd7d3d"
         },
         "epsilon_powers_rewritten": [
           -1,
@@ -2233,7 +2233,7 @@
         "publication": "takeover-basis-v4-rewrite-v1",
         "receipt": {
           "path": "provenance/takeover-basis-v4-rewrite-v1/receipt.json",
-          "sha256": "139b49a5d224c30f16a0a5cd28a0af4b00ba94988bc57d9d3ded6507a1d0bbad"
+          "sha256": "8c660d1cdaf567d6c2c4d19d9e003a56f772415fd7058871a5bc9ff3a2fd7d3d"
         },
         "epsilon_powers_rewritten": [
           0,
@@ -2363,7 +2363,7 @@
         "publication": "takeover-basis-v4-rewrite-v1",
         "receipt": {
           "path": "provenance/takeover-basis-v4-rewrite-v1/receipt.json",
-          "sha256": "139b49a5d224c30f16a0a5cd28a0af4b00ba94988bc57d9d3ded6507a1d0bbad"
+          "sha256": "8c660d1cdaf567d6c2c4d19d9e003a56f772415fd7058871a5bc9ff3a2fd7d3d"
         },
         "epsilon_powers_rewritten": [
           0,
@@ -2493,7 +2493,7 @@
         "publication": "takeover-basis-v4-rewrite-v1",
         "receipt": {
           "path": "provenance/takeover-basis-v4-rewrite-v1/receipt.json",
-          "sha256": "139b49a5d224c30f16a0a5cd28a0af4b00ba94988bc57d9d3ded6507a1d0bbad"
+          "sha256": "8c660d1cdaf567d6c2c4d19d9e003a56f772415fd7058871a5bc9ff3a2fd7d3d"
         },
         "epsilon_powers_rewritten": [
           0,
@@ -2630,7 +2630,7 @@
         "publication": "takeover-basis-v4-rewrite-v1",
         "receipt": {
           "path": "provenance/takeover-basis-v4-rewrite-v1/receipt.json",
-          "sha256": "139b49a5d224c30f16a0a5cd28a0af4b00ba94988bc57d9d3ded6507a1d0bbad"
+          "sha256": "8c660d1cdaf567d6c2c4d19d9e003a56f772415fd7058871a5bc9ff3a2fd7d3d"
         },
         "epsilon_powers_rewritten": [
           -1,
@@ -2761,7 +2761,7 @@
         "publication": "takeover-basis-v4-rewrite-v1",
         "receipt": {
           "path": "provenance/takeover-basis-v4-rewrite-v1/receipt.json",
-          "sha256": "139b49a5d224c30f16a0a5cd28a0af4b00ba94988bc57d9d3ded6507a1d0bbad"
+          "sha256": "8c660d1cdaf567d6c2c4d19d9e003a56f772415fd7058871a5bc9ff3a2fd7d3d"
         },
         "epsilon_powers_rewritten": [
           0,
@@ -2891,7 +2891,7 @@
         "publication": "takeover-basis-v4-rewrite-v1",
         "receipt": {
           "path": "provenance/takeover-basis-v4-rewrite-v1/receipt.json",
-          "sha256": "139b49a5d224c30f16a0a5cd28a0af4b00ba94988bc57d9d3ded6507a1d0bbad"
+          "sha256": "8c660d1cdaf567d6c2c4d19d9e003a56f772415fd7058871a5bc9ff3a2fd7d3d"
         },
         "epsilon_powers_rewritten": [
           0,
@@ -2957,7 +2957,7 @@
         },
         "symbolic.json": {
           "path": "masters/P21/symbolic.json",
-          "sha256": "8255b8f2cb9a05e3ec356b2170dfe468abc4216eaef7c8fd6fd8bce5581c960c"
+          "sha256": "c2fc472169767b9cc4cb56004e4e7cb15d77349773eb65eb121f4a60d6ac3d6f"
         },
         "graph.dot": {
           "path": "masters/P21/graph.dot",
@@ -3034,7 +3034,7 @@
         "publication": "takeover-basis-v4-rewrite-v1",
         "receipt": {
           "path": "provenance/takeover-basis-v4-rewrite-v1/receipt.json",
-          "sha256": "139b49a5d224c30f16a0a5cd28a0af4b00ba94988bc57d9d3ded6507a1d0bbad"
+          "sha256": "8c660d1cdaf567d6c2c4d19d9e003a56f772415fd7058871a5bc9ff3a2fd7d3d"
         },
         "epsilon_powers_rewritten": [
           -1,
@@ -3173,7 +3173,7 @@
         "publication": "takeover-basis-v4-rewrite-v1",
         "receipt": {
           "path": "provenance/takeover-basis-v4-rewrite-v1/receipt.json",
-          "sha256": "139b49a5d224c30f16a0a5cd28a0af4b00ba94988bc57d9d3ded6507a1d0bbad"
+          "sha256": "8c660d1cdaf567d6c2c4d19d9e003a56f772415fd7058871a5bc9ff3a2fd7d3d"
         },
         "epsilon_powers_rewritten": [
           -1,
@@ -3311,7 +3311,7 @@
         "publication": "takeover-basis-v4-rewrite-v1",
         "receipt": {
           "path": "provenance/takeover-basis-v4-rewrite-v1/receipt.json",
-          "sha256": "139b49a5d224c30f16a0a5cd28a0af4b00ba94988bc57d9d3ded6507a1d0bbad"
+          "sha256": "8c660d1cdaf567d6c2c4d19d9e003a56f772415fd7058871a5bc9ff3a2fd7d3d"
         },
         "epsilon_powers_rewritten": [
           -1,
@@ -3449,7 +3449,7 @@
         "publication": "takeover-basis-v4-rewrite-v1",
         "receipt": {
           "path": "provenance/takeover-basis-v4-rewrite-v1/receipt.json",
-          "sha256": "139b49a5d224c30f16a0a5cd28a0af4b00ba94988bc57d9d3ded6507a1d0bbad"
+          "sha256": "8c660d1cdaf567d6c2c4d19d9e003a56f772415fd7058871a5bc9ff3a2fd7d3d"
         },
         "epsilon_powers_rewritten": [
           -1,
@@ -3580,7 +3580,7 @@
         "publication": "takeover-basis-v4-rewrite-v1",
         "receipt": {
           "path": "provenance/takeover-basis-v4-rewrite-v1/receipt.json",
-          "sha256": "139b49a5d224c30f16a0a5cd28a0af4b00ba94988bc57d9d3ded6507a1d0bbad"
+          "sha256": "8c660d1cdaf567d6c2c4d19d9e003a56f772415fd7058871a5bc9ff3a2fd7d3d"
         },
         "epsilon_powers_rewritten": [
           0,
@@ -3717,7 +3717,7 @@
         "publication": "takeover-basis-v4-rewrite-v1",
         "receipt": {
           "path": "provenance/takeover-basis-v4-rewrite-v1/receipt.json",
-          "sha256": "139b49a5d224c30f16a0a5cd28a0af4b00ba94988bc57d9d3ded6507a1d0bbad"
+          "sha256": "8c660d1cdaf567d6c2c4d19d9e003a56f772415fd7058871a5bc9ff3a2fd7d3d"
         },
         "epsilon_powers_rewritten": [
           -1,
@@ -3848,7 +3848,7 @@
         "publication": "takeover-basis-v4-rewrite-v1",
         "receipt": {
           "path": "provenance/takeover-basis-v4-rewrite-v1/receipt.json",
-          "sha256": "139b49a5d224c30f16a0a5cd28a0af4b00ba94988bc57d9d3ded6507a1d0bbad"
+          "sha256": "8c660d1cdaf567d6c2c4d19d9e003a56f772415fd7058871a5bc9ff3a2fd7d3d"
         },
         "epsilon_powers_rewritten": [
           0,
@@ -3914,7 +3914,7 @@
         },
         "symbolic.json": {
           "path": "masters/P28/symbolic.json",
-          "sha256": "8255b8f2cb9a05e3ec356b2170dfe468abc4216eaef7c8fd6fd8bce5581c960c"
+          "sha256": "c2fc472169767b9cc4cb56004e4e7cb15d77349773eb65eb121f4a60d6ac3d6f"
         },
         "graph.dot": {
           "path": "masters/P28/graph.dot",
@@ -3991,7 +3991,7 @@
         "publication": "takeover-basis-v4-rewrite-v1",
         "receipt": {
           "path": "provenance/takeover-basis-v4-rewrite-v1/receipt.json",
-          "sha256": "139b49a5d224c30f16a0a5cd28a0af4b00ba94988bc57d9d3ded6507a1d0bbad"
+          "sha256": "8c660d1cdaf567d6c2c4d19d9e003a56f772415fd7058871a5bc9ff3a2fd7d3d"
         },
         "epsilon_powers_rewritten": [
           -1,
@@ -4130,7 +4130,7 @@
         "publication": "takeover-basis-v4-rewrite-v1",
         "receipt": {
           "path": "provenance/takeover-basis-v4-rewrite-v1/receipt.json",
-          "sha256": "139b49a5d224c30f16a0a5cd28a0af4b00ba94988bc57d9d3ded6507a1d0bbad"
+          "sha256": "8c660d1cdaf567d6c2c4d19d9e003a56f772415fd7058871a5bc9ff3a2fd7d3d"
         },
         "epsilon_powers_rewritten": [
           -1,
@@ -4268,7 +4268,7 @@
         "publication": "takeover-basis-v4-rewrite-v1",
         "receipt": {
           "path": "provenance/takeover-basis-v4-rewrite-v1/receipt.json",
-          "sha256": "139b49a5d224c30f16a0a5cd28a0af4b00ba94988bc57d9d3ded6507a1d0bbad"
+          "sha256": "8c660d1cdaf567d6c2c4d19d9e003a56f772415fd7058871a5bc9ff3a2fd7d3d"
         },
         "epsilon_powers_rewritten": [
           -1,
@@ -4399,7 +4399,7 @@
         "publication": "takeover-basis-v4-rewrite-v1",
         "receipt": {
           "path": "provenance/takeover-basis-v4-rewrite-v1/receipt.json",
-          "sha256": "139b49a5d224c30f16a0a5cd28a0af4b00ba94988bc57d9d3ded6507a1d0bbad"
+          "sha256": "8c660d1cdaf567d6c2c4d19d9e003a56f772415fd7058871a5bc9ff3a2fd7d3d"
         },
         "epsilon_powers_rewritten": [
           0,
@@ -4536,7 +4536,7 @@
         "publication": "takeover-basis-v4-rewrite-v1",
         "receipt": {
           "path": "provenance/takeover-basis-v4-rewrite-v1/receipt.json",
-          "sha256": "139b49a5d224c30f16a0a5cd28a0af4b00ba94988bc57d9d3ded6507a1d0bbad"
+          "sha256": "8c660d1cdaf567d6c2c4d19d9e003a56f772415fd7058871a5bc9ff3a2fd7d3d"
         },
         "epsilon_powers_rewritten": [
           -1,
@@ -4674,7 +4674,7 @@
         "publication": "takeover-basis-v4-rewrite-v1",
         "receipt": {
           "path": "provenance/takeover-basis-v4-rewrite-v1/receipt.json",
-          "sha256": "139b49a5d224c30f16a0a5cd28a0af4b00ba94988bc57d9d3ded6507a1d0bbad"
+          "sha256": "8c660d1cdaf567d6c2c4d19d9e003a56f772415fd7058871a5bc9ff3a2fd7d3d"
         },
         "epsilon_powers_rewritten": [
           -1,
@@ -4812,7 +4812,7 @@
         "publication": "takeover-basis-v4-rewrite-v1",
         "receipt": {
           "path": "provenance/takeover-basis-v4-rewrite-v1/receipt.json",
-          "sha256": "139b49a5d224c30f16a0a5cd28a0af4b00ba94988bc57d9d3ded6507a1d0bbad"
+          "sha256": "8c660d1cdaf567d6c2c4d19d9e003a56f772415fd7058871a5bc9ff3a2fd7d3d"
         },
         "epsilon_powers_rewritten": [
           -1,
@@ -4950,7 +4950,7 @@
         "publication": "takeover-basis-v4-rewrite-v1",
         "receipt": {
           "path": "provenance/takeover-basis-v4-rewrite-v1/receipt.json",
-          "sha256": "139b49a5d224c30f16a0a5cd28a0af4b00ba94988bc57d9d3ded6507a1d0bbad"
+          "sha256": "8c660d1cdaf567d6c2c4d19d9e003a56f772415fd7058871a5bc9ff3a2fd7d3d"
         },
         "epsilon_powers_rewritten": [
           -1,
@@ -5088,7 +5088,7 @@
         "publication": "takeover-basis-v4-rewrite-v1",
         "receipt": {
           "path": "provenance/takeover-basis-v4-rewrite-v1/receipt.json",
-          "sha256": "139b49a5d224c30f16a0a5cd28a0af4b00ba94988bc57d9d3ded6507a1d0bbad"
+          "sha256": "8c660d1cdaf567d6c2c4d19d9e003a56f772415fd7058871a5bc9ff3a2fd7d3d"
         },
         "epsilon_powers_rewritten": [
           -1,
@@ -5226,7 +5226,7 @@
         "publication": "takeover-basis-v4-rewrite-v1",
         "receipt": {
           "path": "provenance/takeover-basis-v4-rewrite-v1/receipt.json",
-          "sha256": "139b49a5d224c30f16a0a5cd28a0af4b00ba94988bc57d9d3ded6507a1d0bbad"
+          "sha256": "8c660d1cdaf567d6c2c4d19d9e003a56f772415fd7058871a5bc9ff3a2fd7d3d"
         },
         "epsilon_powers_rewritten": [
           -1,
@@ -5362,7 +5362,7 @@
         "publication": "takeover-basis-v4-rewrite-v1",
         "receipt": {
           "path": "provenance/takeover-basis-v4-rewrite-v1/receipt.json",
-          "sha256": "139b49a5d224c30f16a0a5cd28a0af4b00ba94988bc57d9d3ded6507a1d0bbad"
+          "sha256": "8c660d1cdaf567d6c2c4d19d9e003a56f772415fd7058871a5bc9ff3a2fd7d3d"
         },
         "epsilon_powers_rewritten": [
           0,

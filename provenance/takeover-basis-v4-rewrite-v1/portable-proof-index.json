@@ -187,17 +187,17 @@
       }
     },
     {
-      "logical_name": "push2/s6-3L-override.json",
+      "logical_name": "push2/s6-builtin-override.json",
       "original_source": {
-        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/external-data/push2/stage/s6-3L-override.json",
-        "sha256": "5ade643f4fdccb9af2dc84070ef9507889dbbb53aa3567b8f8de9e1b6c5e3c4c"
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/external-data/push2-s6/stage/s6-builtin-override.json",
+        "sha256": "2913d27863d52967e3c751744b2e4f1dc28d511084e026e5892a441c30ad8cc7"
       },
       "portable_archive": {
-        "path": "validation/takeover-basis-v4-rewrite-v1-5ade643f4fdccb9af2dc84070ef9507889dbbb53aa3567b8f8de9e1b6c5e3c4c.json.gz",
-        "sha256": "3909de67358c5ed4a8aec2b3531abd8f3b03a12be59e3290e438ebcb73549fc4",
-        "bytes": 797,
-        "uncompressed_sha256": "5ade643f4fdccb9af2dc84070ef9507889dbbb53aa3567b8f8de9e1b6c5e3c4c",
-        "uncompressed_bytes": 5088
+        "path": "validation/takeover-basis-v4-rewrite-v1-2913d27863d52967e3c751744b2e4f1dc28d511084e026e5892a441c30ad8cc7.json.gz",
+        "sha256": "0838879b5e22e583bcc0c36c069fefe1c6c8b9fb6a0b60555b1ffebc5feb3537",
+        "bytes": 9786,
+        "uncompressed_sha256": "2913d27863d52967e3c751744b2e4f1dc28d511084e026e5892a441c30ad8cc7",
+        "uncompressed_bytes": 126967
       }
     },
     {
@@ -215,20 +215,6 @@
       }
     },
     {
-      "logical_name": "push2/native-staged-L3-probe-s6weak-unbound.json",
-      "original_source": {
-        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/external-data/push2/out/native-staged-L3-probe.json",
-        "sha256": "4350b5cba8ecd0b32db467c6dcf953d67538a4b93284c446608f9b224e0f89f3"
-      },
-      "portable_archive": {
-        "path": "validation/takeover-basis-v4-rewrite-v1-4350b5cba8ecd0b32db467c6dcf953d67538a4b93284c446608f9b224e0f89f3.json.gz",
-        "sha256": "f2536b49d3b8b7fe9b23bb1810e360be648b02e010954610c6e0166c7bf76cd5",
-        "bytes": 805,
-        "uncompressed_sha256": "4350b5cba8ecd0b32db467c6dcf953d67538a4b93284c446608f9b224e0f89f3",
-        "uncompressed_bytes": 2255
-      }
-    },
-    {
       "logical_name": "push2/s6check-pari.out",
       "original_source": {
         "path": "/shared/vhirschi/vacuum_masters_takeover/prep/external-data/push2/stage/s6check.out",
@@ -243,17 +229,31 @@
       }
     },
     {
-      "logical_name": "source-bundle.json",
+      "logical_name": "vakint/followup-s6-build.json",
       "original_source": {
-        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/basis-v4/src (+ independence/src, gls/src, prep/external-data/push2/src)",
-        "sha256": "a94b3ef1c0fa9575f1634efd321a20fb60846dd5e3fb4c06e74a4f7cc70b0c38"
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/vakint-api/followup-s6-build.json",
+        "sha256": "93687884938d4975201430fc2557e81b77dc9b8b246695a0db6678706453a6f9"
       },
       "portable_archive": {
-        "path": "validation/takeover-basis-v4-rewrite-v1-a94b3ef1c0fa9575f1634efd321a20fb60846dd5e3fb4c06e74a4f7cc70b0c38.json.gz",
-        "sha256": "16dbef79d252a972f3e0200f70a6836c59cdce5e540211ef83516d2c3283ca8f",
-        "bytes": 60720,
-        "uncompressed_sha256": "a94b3ef1c0fa9575f1634efd321a20fb60846dd5e3fb4c06e74a4f7cc70b0c38",
-        "uncompressed_bytes": 223625
+        "path": "validation/takeover-basis-v4-rewrite-v1-93687884938d4975201430fc2557e81b77dc9b8b246695a0db6678706453a6f9.json.gz",
+        "sha256": "2c4c7d2976c4f37d3a3cf2156a0476a8a1f562330f4e826b014f1d7798415ba9",
+        "bytes": 2986,
+        "uncompressed_sha256": "93687884938d4975201430fc2557e81b77dc9b8b246695a0db6678706453a6f9",
+        "uncompressed_bytes": 7081
+      }
+    },
+    {
+      "logical_name": "source-bundle.json",
+      "original_source": {
+        "path": "/shared/vhirschi/vacuum_masters_takeover/prep/basis-v4/src (+ independence/src, gls/src, prep/external-data/push2/src, prep/external-data/push2-s6/src)",
+        "sha256": "5c93e8f0f3eb9c98e1c273a5d849868758a50460f32c755f57fd319f2c097fa8"
+      },
+      "portable_archive": {
+        "path": "validation/takeover-basis-v4-rewrite-v1-5c93e8f0f3eb9c98e1c273a5d849868758a50460f32c755f57fd319f2c097fa8.json.gz",
+        "sha256": "038b8d7ecb7bdd8f0e44764d5e7c999b687f5bacc1060746974c562c91fe53ef",
+        "bytes": 104709,
+        "uncompressed_sha256": "5c93e8f0f3eb9c98e1c273a5d849868758a50460f32c755f57fd319f2c097fa8",
+        "uncompressed_bytes": 369120
       }
     }
   ],

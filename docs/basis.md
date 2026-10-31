@@ -1,6 +1,6 @@
 # The constant basis of the 1L–4L exact coefficients (basis v4)
 
-Publication [`provenance/takeover-basis-v4-rewrite-v1`](../provenance/takeover-basis-v4-rewrite-v1) (31 October 2026) restates every exact 1L–4L master coefficient (739 rows of 115 masters; 713 distinct coefficients) as a polynomial with rational coefficients in the 68 generators below, times `3^(1/2)` for odd parity. No other constant occurs. The values are unchanged: every `numerical.json`, every numerical precision record and every constant value is byte-identical. The machine-readable list with every explicit definition is [`basis-v4.json`](../provenance/takeover-basis-v4-rewrite-v1/basis-v4.json); Vakint's `get_constant(symbol).definition()` (gammaloop PR #243) is the authoritative definition of each symbol.
+Publication [`provenance/takeover-basis-v4-rewrite-v1`](../provenance/takeover-basis-v4-rewrite-v1) (31 October 2026) restates every exact 1L–4L master coefficient (739 rows of 115 masters; 713 distinct coefficients) as a polynomial with rational coefficients in the 68 generators below, times `3^(1/2)` for odd parity. No other constant occurs; s6 is the Vakint built-in `vakint::s6` at every loop count. The values are unchanged: every `numerical.json`, every numerical precision record and every constant value is byte-identical. The machine-readable list with every explicit definition is [`basis-v4.json`](../provenance/takeover-basis-v4-rewrite-v1/basis-v4.json); Vakint's `get_constant(symbol).definition()` (gammaloop PR #243) is the authoritative definition of each symbol.
 
 Labels: EXACT (proved), COMPUTED+VALIDATED (two independent profiles agreeing beyond the validated digits plus an independent-method control; empirical, not an interval proof), numerical identity (integer relation found on part of the digits and confirmed on the rest; not a proof).
 
@@ -10,7 +10,7 @@ Labels: EXACT (proved), COMPUTED+VALIDATED (two independent profiles agreeing be
 - `3^(1/2)` is an explicit algebraic factor, not a generator. It multiplies exactly the monomials with an odd number of Im-type factors (π, Cl2, Cl4, Im Li3(i/√3), Im Li4(i/√3), the three Im G, T111bar4).
 - ω = e^(iπ/3). GPL letters −ω = e^(4iπ/3) and ω̄ = e^(−iπ/3); G(a1,…,an; 1) = ∫_(1>t1>…>tn>0) ∏ dt_i/(t_i − a_i).
 - D=2 periods `vakint::<X>D2Eps<k>` (and `vakint::PR7D2` for k = 0): the ordinary Taylor coefficient [δ^k] of X̂(δ) = e^(4γδ) ∫ ∏_(l=1..4) d^(2−2δ)k_l/π^(1−δ) ∏_e (q_e² + 1)^(−a_e), positive Euclidean, unit mass, no coupling or symmetry factor; raw Minkowski jets are (−1)^(Σa) times these.
-- MATAD bars follow Vakint `matad.rs`: T111bar(k) and BNbar(k) are [ε^k] of the master times Γ(1+ε)^(−L) and the MATAD prefactor, with **no** factor e^(Lγε); D5bar(k) and D6bar(k) are [ε^k] of (1−ε)(1−2ε) e^(3γε) times the master (d = 4 − 2ε, d^dk/π^(d/2) per loop).
+- MATAD bars follow Vakint `matad.rs`; "integral" means the bare `vakint::LoopIntegral` (d = 4 − 2ε, d^dk/π^(d/2) per loop, unit masses, no other factor). T111bar(k) and BNbar(k) are [ε^k] of the integral times Γ(1+ε)^(−L) and the MATAD prefactor, with **no** factor e^(Lγε); D5bar(k) and D6bar(k) are [ε^k] of (1−ε)(1−2ε) e^(3γε) times the integral, i.e. of (1−ε)(1−2ε) times the MATAD master miD5/miD6, which already contains e^(3γε) (the factor occurs once). The generator rows below give the exact atoms.
 
 ## The 68 generators
 
@@ -31,7 +31,7 @@ Labels: EXACT (proved), COMPUTED+VALIDATED (two independent profiles agreeing be
 | 6 | Li4(1/2) | `symbolica::polylog(4,1/2)` | 4 | `1/6*Integral(-log(t)^3/(2-t),Interval(t,0,1))` | plain real number (alternating/level-2 sum); no loop measure involved | any (built-in) |
 | 7 | Li5(1/2) | `symbolica::polylog(5,1/2)` | 5 | `1/24*Integral(log(t)^4/(2-t),Interval(t,0,1))` | plain real number (alternating/level-2 sum); no loop measure involved | any (built-in) |
 | 8 | Li6(1/2) | `symbolica::polylog(6,1/2)` | 6 | `1/120*Integral(-log(t)^5/(2-t),Interval(t,0,1))` | plain real number (alternating/level-2 sum); no loop measure involved | any (built-in) |
-| 9 | s6 | `vakint::s6weak` | 6 | `Integral(1/24*(1/(1+x(1))+x(2)/(1-x(1)*x(2)))*log(x(1))^4/(1+x(2)),Interval(x(1),0,1),Interval(x(2),0,1))` | plain real number (alternating/level-2 sum); no loop measure involved | 20000 (estimated) |
+| 9 | s6 | `vakint::s6` | 6 | `Integral(1/24*(1/(1+x(1))+x(2)/(1-x(1)*x(2)))*log(x(1))^4/(1+x(2)),Interval(x(1),0,1),Interval(x(2),0,1))` | Alternating Euler sum s6 = Σ_(m≥k≥1) (-1)^(m+k)/(m^5 k) = ζ(-5,-1) + ζ(6), the diagonal m = k included; a plain real number given by the convergent double integral shown over [0,1]², first interval outermost; no loop measure and no further factor | any (built-in) |
 
 ### Level 6 (sixth roots of unity) and the MATAD weight-5/6 constants (14)
 
@@ -116,9 +116,9 @@ Each is [δ^k] of X̂(δ) as defined above for the integral X; the full `LoopInt
 
 `vakint::PR12D2Eps3` is COMPUTED+VALIDATED: two-profile validation at 520 digits plus the closure-implied independent-method control of at least 421 digits, accepted by the user (decision D13, 30 October 2026).
 
-### s6 without the four-loop pack
+### s6 is a Vakint built-in
 
-`vakint::s6weak` (s6 = Σ_(m≥k≥1) (−1)^(m+k)/(m⁵k)) is a `4L/constants.json` record, and Vakint loads constants only from the loaded loop packs. The three-loop rows P13, P21 and P28 at ε⁴ therefore write s6 through its definition in the Vakint built-in GPL family, s6 = π⁶/945 + `vakint::GPLReal(0,0,0,0,-1,1,1)` (ζ(6) + Li_{5,1}(−1,−1), Li_{5,1}(−1,−1) = G(0,0,0,0,−1,1; 1)), so that a `max_loop_count = 3` load evaluates them. The generator is still s6; the identity is exact and agrees with the published s6weak value to 1048 digits (PARI) and 299 digits (native Vakint).
+s6 = Σ_(m≥k≥1) (−1)^(m+k)/(m⁵k) = ζ(−5,−1) + ζ(6) (diagonal included) is the Vakint built-in `vakint::s6`. Every published row that contains s6 (26 rows, among them the three-loop P13, P21 and P28 at ε⁴) writes `vakint::s6`, so a `max_loop_count = 3` load evaluates them as well. Its definition is the double integral in the table above, and Vakint evaluates it as π⁶/945 + G(0,0,0,0,−1,1; 1) at any precision. The `4L/constants.json` record `vakint::s6weak` stays installed with unchanged values. It holds the same number (identical defining integral; checked to 520 digits by a Vakint unit test, 1048 digits with PARI) and no formula uses it.
 
 ## Constants that are not generators
 
@@ -135,8 +135,9 @@ Each is [δ^k] of X̂(δ) as defined above for the integral X; the full `LoopInt
 | `vakint::PR11dD2Eps2` | R1 (48 terms, height 10^6.28): PR11dD2Eps2 = 2/3 PR11D2Eps2 + 1/2 PR11dD2Eps1 - 4/9 PR10D2Eps1 - 2/9 PR10D2Eps2 + ... (receipt relation R1_PR11dD2Eps2) | COMPUTED+VALIDATED numerical relation (547 digits; adopted by user decision, 30 Oct 2026); GLS (c30): identical where comparable |
 | `vakint::GPLImag(0,1,(-1-3^(1/2)*𝑖)/2,1)` | X3_TI3 swap to Im Li3(i/sqrt3) | COMPUTED+VALIDATED (4100 digits) |
 | `vakint::GPLImag(0,1,1,(-1-3^(1/2)*𝑖)/2,1)` | X4_TI4 swap to Im Li4(i/sqrt3) | COMPUTED+VALIDATED (4100 digits) |
+| `vakint::s6weak` | same number as the built-in vakint::s6 (identical defining integral); the 4L/constants.json record is kept with its values unchanged | EXACT (same definition) |
 
-`4L/constants.json` keeps the records of `vakint::PR10D2`, `vakint::PR15D2`, `vakint::PR5D2Eps3` and `vakint::PR11dD2Eps2` unchanged; no published row uses them. The PR11dD2Eps2 record carries `provenance.validation.basis_v4`: it is not a basis generator because R1 expresses it.
+`4L/constants.json` keeps the records of `vakint::PR10D2`, `vakint::PR15D2`, `vakint::PR5D2Eps3`, `vakint::PR11dD2Eps2` and `vakint::s6weak` unchanged; no published row uses them. The PR11dD2Eps2 record carries `provenance.validation.basis_v4`: it is not a basis generator because R1 expresses it. The s6weak record carries `provenance.validation.basis_v4`: same number as the built-in `vakint::s6`; no formula uses it.
 
 ### R1 and GLS 1609.05071 (c30)
 
