@@ -199,27 +199,65 @@ def checked_runtime_cache_assets(root, manifest, directory):
 
 
 def validate_release_cache_budget(root, manifest):
-    """Limit official 5L LIGHT cache downloads, not Native codecs or local tools."""
+    """Limit the official 5L light cache download, not Native codecs or local tools.
+
+    Counts the 5L pack's shipped Ordered caches (`ordered_cache.light_bytes`: complete
+    caches in full, a trimmed cache beyond its declared complete zero-momentum base),
+    a legacy depth-first LIGHT cache file if a pack still declares one, and selected
+    runtime cache snapshot parts, against one decimal budget.
+    """
+    from ordered_cache import light_bytes
+
     pack = next(pack for pack in manifest["loop_packs"] if pack["loop_count"] == 5)
     loop_path = checked_path(root, pack["manifest"])
     if digest(loop_path) != pack["manifest_sha256"]:
         raise ValueError("five-loop release cache manifest checksum mismatch")
     loop = read_json(loop_path)
     compressed_bytes = 0
-    if loop["cache"]["available"]:
-        path = checked_path(loop_path.parent, loop["cache"]["path"])
+    cache = loop.get("cache", {"available": False})
+    if cache["available"]:
+        path = checked_path(loop_path.parent, cache["path"])
         if not path.is_file():
             raise ValueError("five-loop release cache must be a regular file")
         compressed_bytes = path.stat().st_size
+    compressed_bytes += light_bytes(loop_path.parent, loop)
     compressed_bytes += sum(
         asset["archive_bytes"] for asset in runtime_cache_assets(root, manifest)
     )
     if compressed_bytes > FIVE_LOOP_LIGHT_CACHE_BYTES_LIMIT:
         raise ValueError(
-            f"official five-loop LIGHT cache has {compressed_bytes} compressed bytes; "
+            f"official five-loop LIGHT cache has {compressed_bytes} bytes; "
             f"release budget is {FIVE_LOOP_LIGHT_CACHE_BYTES_LIMIT} bytes"
         )
     return compressed_bytes
+
+
+ROUTE_PREPARATION_FORMAT = "rustred.saved-application.route-preparation.v1"
+ROUTE_PREPARATION_MAGIC = b"RR-SAVED-ROUTES1"
+
+
+def validate_route_preparation(directory, loop):
+    """The optional 5L saved route-preparation add-on (a derived file, never a table)."""
+    entry = loop.get("route_preparation")
+    if entry is None:
+        return None
+    if (
+        loop["loop_count"] != 5
+        or not isinstance(entry, dict)
+        or set(entry) != {"path", "format"}
+        or entry["format"] != ROUTE_PREPARATION_FORMAT
+        or not isinstance(entry["path"], str)
+        or entry["path"] not in loop["files"]
+        or entry["path"].startswith(("ibps/", "ordered-cache/"))
+    ):
+        raise ValueError(f"invalid route_preparation entry: {entry!r}")
+    path = checked_path(Path(directory), entry["path"])
+    with path.open("rb") as stream:
+        if stream.read(len(ROUTE_PREPARATION_MAGIC)) != ROUTE_PREPARATION_MAGIC:
+            raise ValueError("route preparation add-on is not a RustRed route-preparation file")
+    if path.stat().st_size > FIVE_LOOP_LIGHT_CACHE_BYTES_LIMIT:
+        raise ValueError("route preparation add-on exceeds the per-file limit")
+    return entry["path"]
 
 
 def migrate(source, vakint_source):
@@ -1072,12 +1110,15 @@ def validate(root=None, *, light_cache_admission=None):
                     dict(numerical),
                     root,
                 )
-        if loop["cache"]["available"] and loop["loop_count"] == 5:
+        # Depth-first caches are retired (provenance/retired-dfs-caches-v1); a pack
+        # may still declare one (historical releases) or omit the section.
+        dfs_cache = loop.get("cache", {"available": False})
+        if dfs_cache["available"] and loop["loop_count"] == 5:
             from saved_cache import validate as validate_saved_cache
 
             light_admission = validate_saved_cache(path.parent, loop)
-        elif loop["cache"]["available"]:
-            metadata = read_json(path.parent / loop["cache"]["metadata"])
+        elif dfs_cache["available"]:
+            metadata = read_json(path.parent / dfs_cache["metadata"])
             report = metadata["preparation_report"]
             if (
                 report["status"] != "complete"
@@ -1090,7 +1131,7 @@ def validate(root=None, *, light_cache_admission=None):
                 if digest(checked_path(path.parent / "cache", name)) != checksum:
                     raise ValueError("native cache differs from producer receipt")
             bundle = (path.parent / "cache/bundle.rrindex").read_bytes()
-            for binding in loop["cache"]["binding_ids"]:
+            for binding in dfs_cache["binding_ids"]:
                 if bytes.fromhex(binding) not in bundle:
                     raise ValueError("cache binding absent from native bundle index")
             if (
@@ -1099,20 +1140,33 @@ def validate(root=None, *, light_cache_admission=None):
                 not in bundle
             ):
                 raise ValueError("sealed program digest absent from cache binding")
+        from ordered_cache import validate_loop as validate_ordered_cache
+
+        ordered_cache_programs = validate_ordered_cache(path.parent, loop)
+        route_preparation = validate_route_preparation(path.parent, loop)
         counts.append(
             {
                 "loop_count": loop["loop_count"],
                 "files": len(loop["files"]),
                 "masters": len(loop["masters"]),
-                "cache": loop["cache"]["available"],
+                "cache": dfs_cache["available"],
+                "ordered_cache_programs": ordered_cache_programs,
+                **({"route_preparation": route_preparation} if route_preparation else {}),
             }
         )
     migration = root / "provenance/migration.json"
     if migration.exists():
+        from ordered_cache import retired_dfs_files
+
+        retired = retired_dfs_files(root)
         for item in read_json(migration)["files"]:
-            if file_record(checked_path(root, item["path"])) != {
-                k: item[k] for k in ("sha256", "bytes")
-            }:
+            record = {k: item[k] for k in ("sha256", "bytes")}
+            if item["path"] in retired:
+                # Retired depth-first caches: Git history keeps the bytes.
+                if retired[item["path"]] != record or checked_path(root, item["path"]).exists():
+                    raise ValueError(f"retired migrated payload differs from its receipt: {item['path']}")
+                continue
+            if file_record(checked_path(root, item["path"])) != record:
                 raise ValueError(f"original migrated payload changed: {item['path']}")
     evidence = root / "validation/manifest.json"
     if evidence.exists():
