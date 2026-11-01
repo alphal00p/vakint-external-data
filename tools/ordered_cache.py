@@ -22,19 +22,22 @@ the start of the program's rule-table identity, recomputed here from the pack ex
 as Vakint does (`program_rule_tables`). This module checks everything that needs no
 BLAKE3: names, rule tables, inventory, sizes, RustRed manifest structure and version
 lines, shard headers, tail-table headers, metadata, and the per-file limit. Stamps and
-payload digests are BLAKE3 and are checked by RustRed when Vakint opens a cache.
+payload digests are BLAKE3 and are checked by RustRed when Vakint opens a cache; only
+Vakint's `ordered_cache_maintenance check --artifacts CHECKOUT`, run with the build that
+will use this data, confirms that build accepts the staged caches.
 
 Commands:
-  stage --cache-dir DIR [--metadata JSON] [--loops L ...] [--link]
+  stage --cache-dir DIR --metadata JSON [--loops L ...] [--link]
                           stage program directories of a Vakint cache directory
-                          (as `ordered_cache_maintenance prepare` writes them)
+                          (as `ordered_cache_maintenance prepare` writes them);
+                          JSON names at least producer.rustred's version lines
   stage --export DIR [--loops L ...] [--link]
                           stage an export shaped like the packs
                           (DIR/<L>L/ordered-cache.json + DIR/<L>L/ordered-cache/<dir>/)
   remove --loops L ...    remove the shipped Ordered caches of these loop counts
   receipt --program DIR --artifacts ROOT --output FILE [--metadata JSON]
                           receipt of a cache kept outside the repository (full 5L quadratic)
-  light-bytes             bytes of the 5L release budget (see `light_bytes`)
+  light-bytes             bytes of the 5L release budget; exit status 1 above it
   remove-dfs              retire the depth-first (DFS) prepared caches of every pack
   validate                validate every pack's Ordered caches
 Staging replaces the Ordered caches of the staged loop counts, never touches another
@@ -55,7 +58,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from data import (  # noqa: E402 - the tools directory is not a package
+import data as data_tool  # noqa: E402 - the tools directory is not a package
+from data import (  # noqa: E402
     ROOT,
     checked_path,
     digest,
@@ -73,8 +77,9 @@ SHARD_HEADER = 16 + 32 + 1 + 2 + 8 + 8 + 32
 TAIL_FILE = "ordered-tail.rrtail"
 TAIL_MAGIC = b"RR-ORDERED-TAIL2"
 TAIL_SCHEMA = "rustred.ordered-tail.v3"
-# Every shipped cache file, and the 5L release budget (`light_bytes`): GitHub refuses
-# files above 100 MiB; the decimal boundary is the one of the former 5L LIGHT cache.
+# Every cache file shipped in a pack: GitHub refuses files above 100 MiB; the decimal
+# boundary is the one of the 5L LIGHT cache. The 5L release budget over all shipped
+# 5L cache bytes is `data.FIVE_LOOP_LIGHT_CACHE_BYTES_LIMIT` (`light_bytes`).
 FILE_BYTES_LIMIT = 95_000_000
 DESCRIPTION_KEYS = ("schema", "semantics", "adapter", "family", "variables", "unresolved")
 STAGES = {"integral": 0, "route": 1, "apply": 2}
@@ -93,8 +98,9 @@ PROGRAM_KEYS = {
 }
 RECEIPT_SCHEMA = "vakint.external-data.ordered-cache-receipt.v1"
 TRIM_KEYS = {"from_records", "from_shards", "from_bytes", "from_tail_bytes", "method", "full_cache"}
-# Optional: the complete zero-momentum cache a trimmed 5L cache extends (release budget).
-TRIM_BASE_KEYS = ("base_bytes", "base_tail_bytes")
+# RustRed version lines the producer of staged caches must declare (`agree`).
+STEP_VERSION_KEYS = ("ordered_step_cache_schema", "ordered_step_semantics")
+TAIL_VERSION_KEYS = ("ordered_tail_schema", "ordered_tail_semantics")
 # Vakint's closed programs (`artifact.rs` shipped_family_for_loop_count) and four-loop
 # candidate programs (`four_loop.rs`); the five-loop label follows the saved application.
 CLOSED_LABELS = {1: "1L-unit-mass-vacuum-k1", 2: "2L-unit-mass-vacuum-k3", 3: "3L-unit-mass-vacuum-k6"}
@@ -351,16 +357,14 @@ def check_trim(program):
     trim = program["trim"]
     if not isinstance(trim, dict) or not TRIM_KEYS <= set(trim):
         raise ValueError(f"{label}: a trimmed ordered cache needs trim {sorted(TRIM_KEYS)}")
-    for key in ("from_records", "from_shards", "from_bytes", "from_tail_bytes", *TRIM_BASE_KEYS):
-        if key in trim and (type(trim[key]) is not int or trim[key] < 0):
+    for key in ("from_records", "from_shards", "from_bytes", "from_tail_bytes"):
+        if type(trim[key]) is not int or trim[key] < 0:
             raise ValueError(f"{label}: invalid trim {key}")
     if not isinstance(trim["method"], str) or not trim["method"] or not isinstance(trim["full_cache"], str):
         raise ValueError(f"{label}: trim method and full_cache must be text")
     if (trim["from_records"] < program["records"] or trim["from_bytes"] < program["bytes"]
             or trim["from_tail_bytes"] < program["tail_bytes"]):
         raise ValueError(f"{label}: a trimmed cache cannot exceed the cache it was trimmed from")
-    if trim.get("base_bytes", 0) > program["bytes"] or trim.get("base_tail_bytes", 0) > program["tail_bytes"]:
-        raise ValueError(f"{label}: the declared base exceeds the trimmed cache")
 
 
 def check_program_entry(program, loop_count, prefix=SECTION["path"] + "/"):
@@ -405,12 +409,13 @@ def check_metadata(metadata, loop_count):
         raise ValueError(f"{loop_count}L ordered cache programs must be unique and sorted by label")
 
 
-def agree(program, facts, tables, producer=None):
+def agree(program, facts, tables, producer):
     """Agreement of one `programs[]` entry, its checked files and the pack's rule tables.
 
-    When the producer names RustRed's version constants
-    (`producer.rustred.{ordered_step_cache_schema, ordered_step_semantics,
-    ordered_tail_schema, ordered_tail_semantics}`), the files must carry them.
+    The producer must name the RustRed version constants of the build that prepared
+    the caches (`producer.rustred.{ordered_step_cache_schema, ordered_step_semantics}`,
+    and `ordered_tail_schema`, `ordered_tail_semantics` for a tail table), as
+    `ordered_cache_maintenance prepare` writes them, and the files must carry them.
     """
     label = program["label"]
     if label not in tables:
@@ -422,20 +427,18 @@ def agree(program, facts, tables, producer=None):
     for key in ("stamp", "adapter", "records", "shards", "bytes", "tail_bytes"):
         if program[key] != facts[key]:
             raise ValueError(f"{label}: ordered cache metadata {key} differs from its files")
-    rustred = (producer or {}).get("rustred")
-    if isinstance(rustred, dict):
-        tail = facts["tail"] or {}
-        for key, value in (
-            ("ordered_step_cache_schema", facts["description"]["schema"]),
-            ("ordered_step_semantics", facts["description"]["semantics"]),
-            ("ordered_tail_schema", tail.get("schema")),
-            ("ordered_tail_semantics", tail.get("semantics")),
-        ):
-            if key in rustred and value is not None and rustred[key] != value:
-                raise ValueError(f"{label}: files carry {value!r}, the producer declares {key} {rustred[key]!r}")
+    rustred = producer.get("rustred") if isinstance(producer, dict) else None
+    rustred = rustred if isinstance(rustred, dict) else {}
+    versions = list(zip(STEP_VERSION_KEYS, (facts["description"]["schema"], facts["description"]["semantics"])))
+    if facts["tail"]:
+        versions += zip(TAIL_VERSION_KEYS, (facts["tail"]["schema"], facts["tail"]["semantics"]))
+    for key, value in versions:
+        if rustred.get(key) != value:
+            raise ValueError(f"{label}: files carry {value!r}, the producer declares producer.rustred.{key} "
+                             f"{rustred.get(key)!r}")
 
 
-def check_program(directory, program, tables, producer=None):
+def check_program(directory, program, tables, producer):
     """Check one staged program; returns its pack-relative file paths."""
     base = checked_path(Path(directory), SECTION["path"])
     facts = inspect_program(base, program["directory"].split("/", 1)[1])
@@ -473,21 +476,33 @@ def validate_loop(directory, loop):
 def light_bytes(directory, loop):
     """Bytes a five-loop pack's shipped Ordered caches count against the release budget.
 
-    Every program counts with its shard and tail bytes; a trimmed program
-    (`complete: false`) counts only beyond the complete zero-momentum cache it
-    extends when its `trim` declares that base (`base_bytes`, `base_tail_bytes`),
-    i.e. its quadratic increment (shipped-cache-format.md section 5).
+    Every byte the pack ships for them: each file under `ordered-cache/` (manifests,
+    shards, tail tables) and `ordered-cache.json`. A trimmed program counts in full like
+    a complete one; `trim` is provenance only and never lowers the count.
     """
     if loop.get("ordered_cache") is None:
         return 0
-    metadata = read_json(checked_path(Path(directory), loop["ordered_cache"]["metadata"]))
-    total = 0
-    for program in metadata["programs"]:
-        size = program["bytes"] + program["tail_bytes"]
-        if not program["complete"]:
-            size -= sum(program["trim"].get(key, 0) for key in TRIM_BASE_KEYS)
-        total += size
-    return total
+    directory = Path(directory)
+    base = checked_path(directory, SECTION["path"])
+    files = [path for path in base.rglob("*") if path.is_file()] if base.is_dir() else []
+    files.append(checked_path(directory, SECTION["metadata"]))
+    return sum(path.stat().st_size for path in files)
+
+
+def release_budget(root=ROOT):
+    """The 5L release budget of a checkout; ValueError above it.
+
+    `5L`: every byte counted against `data.FIVE_LOOP_LIGHT_CACHE_BYTES_LIMIT` (the
+    shipped 5L caches and selected runtime snapshot parts,
+    `data.validate_release_cache_budget`), `ordered_cache`: the Ordered caches' part.
+    """
+    root = Path(root)
+    manifest = read_json(root / "manifest.json")
+    total = data_tool.validate_release_cache_budget(root, manifest)
+    pack = next(pack for pack in manifest["loop_packs"] if pack["loop_count"] == 5)
+    loop_path = checked_path(root, pack["manifest"])
+    return {"5L": total, "ordered_cache": light_bytes(loop_path.parent, read_json(loop_path)),
+            "limit": data_tool.FIVE_LOOP_LIGHT_CACHE_BYTES_LIMIT}
 
 
 # ---------------------------------------------------------------------------
@@ -541,6 +556,21 @@ def remove_loop(root, loop_count):
     return loop
 
 
+def check_stage_budget(root, loop_count, metadata, files):
+    """Refuse five-loop caches above the release budget before the pack is touched.
+
+    `files`: the source path of every file to stage; the metadata counts as
+    `write_json` will write it, and a legacy LIGHT file of the pack counts too.
+    """
+    if loop_count != 5:
+        return
+    directory = Path(root) / "5L"
+    legacy = data_tool.shipped_light_cache_bytes(
+        directory, {"cache": read_json(directory / "manifest.json").get("cache", {"available": False})})
+    text = json.dumps(metadata, indent=2, ensure_ascii=False) + "\n"
+    data_tool.check_light_cache_budget(legacy + len(text.encode()) + sum(path.stat().st_size for path in files))
+
+
 def install(root, loop_count, metadata, sources, *, link=False):
     """Install checked program directories `sources` {directory name: path} with `metadata`."""
     root = Path(root)
@@ -554,6 +584,8 @@ def install(root, loop_count, metadata, sources, *, link=False):
         facts = inspect_program(sources[name].parent, name)
         agree(program, facts, tables, metadata["producer"])
         staged.append((program, sources[name], facts))
+    check_stage_budget(root, loop_count, metadata,
+                       [source / name for _, source, facts in staged for name in facts["files"]])
     loop = remove_loop(root, loop_count)
     for program, source, facts in staged:
         for name in facts["files"]:
@@ -603,9 +635,10 @@ def program_entry(facts, rule_tables, overrides=None):
 def stage_cache_dir(cache_dir, root=ROOT, *, metadata=None, loops=None, link=False):
     """Stage program directories `<label>.<tables16>.<stamp16>` of a Vakint cache directory.
 
-    `metadata` (optional): {"producer": {...}, "workload": [{..., "loop_count": L}, ...],
-    "programs": {label: {"complete": false, "trim": {...}, ...}}}; workload rows go to
-    the pack of their `loop_count` (rows without it to every staged pack).
+    `metadata`: {"producer": {"rustred": {<version lines, see `agree`>, ...}, ...},
+    "workload": [{..., "loop_count": L}, ...], "programs": {label: {"complete": false,
+    "trim": {...}, ...}}}; workload rows go to the pack of their `loop_count` (rows
+    without it to every staged pack).
     """
     cache_dir, root = Path(cache_dir).resolve(), Path(root)
     if cache_dir.is_relative_to(root.resolve()):
@@ -628,7 +661,7 @@ def stage_cache_dir(cache_dir, root=ROOT, *, metadata=None, loops=None, link=Fal
     unknown = set(overrides) - {DIRECTORY.fullmatch(p.name)["label"] for ps in by_loop.values() for p in ps}
     if unknown:
         raise ValueError(f"metadata names programs that are not staged: {sorted(unknown)}")
-    documents = {}
+    documents, checked = {}, {}
     for loop_count, paths in sorted(by_loop.items()):
         loop = read_json(root / f"{loop_count}L/manifest.json")
         tables = program_rule_tables(root / f"{loop_count}L", loop)
@@ -645,6 +678,7 @@ def stage_cache_dir(cache_dir, root=ROOT, *, metadata=None, loops=None, link=Fal
                 raise ValueError(f"{loop_count}L: several caches of program {label}")
             programs.append(program_entry(facts, tables[label], overrides.get(label)))
             sources[path.name] = path
+            checked[path.name] = facts
         programs.sort(key=lambda program: program["label"])
         document = {
             "schema": SCHEMA,
@@ -654,6 +688,11 @@ def stage_cache_dir(cache_dir, root=ROOT, *, metadata=None, loops=None, link=Fal
                          if row.get("loop_count", loop_count) == loop_count],
             "programs": programs,
         }
+        check_metadata(document, loop_count)
+        for program in programs:
+            agree(program, checked[program["directory"].split("/", 1)[1]], tables, document["producer"])
+        check_stage_budget(root, loop_count, document,
+                           [sources[name] / file for name in sources for file in checked[name]["files"]])
         documents[loop_count] = (document, sources)
     # Every pack's caches are checked above before any pack is changed.
     return {f"{loop_count}L": install(root, loop_count, document, sources, link=link)
@@ -810,7 +849,8 @@ def main():
     source = staging.add_mutually_exclusive_group(required=True)
     source.add_argument("--cache-dir", type=Path, help="Vakint cache directory (<label>.<tables16>.<stamp16>/)")
     source.add_argument("--export", type=Path, help="pack-shaped export (<L>L/ordered-cache{,.json})")
-    staging.add_argument("--metadata", type=Path, help="producer/workload/programs JSON (--cache-dir only)")
+    staging.add_argument("--metadata", type=Path,
+                         help="producer (with producer.rustred versions)/workload/programs JSON (--cache-dir only)")
     staging.add_argument("--loops", type=int, nargs="+", choices=range(1, 6))
     staging.add_argument("--link", action="store_true", help="hardlink instead of copying when possible")
     removal = commands.add_parser("remove")
@@ -833,8 +873,9 @@ def main():
                 parser.error("--metadata is read from the export itself")
             result = stage_export(args.export, loops=loops, link=args.link)
         else:
-            metadata = read_json(args.metadata) if args.metadata else None
-            result = stage_cache_dir(args.cache_dir, metadata=metadata, loops=loops, link=args.link)
+            if args.metadata is None:
+                parser.error("--cache-dir needs --metadata naming producer.rustred's version lines")
+            result = stage_cache_dir(args.cache_dir, metadata=read_json(args.metadata), loops=loops, link=args.link)
     elif args.command == "remove":
         for loop_count in sorted(loops):
             remove_loop(ROOT, loop_count)
@@ -847,8 +888,10 @@ def main():
         write_json(args.output, result)
         result = {"receipt": str(args.output), "directory": result["directory"], "files": len(result["files"])}
     elif args.command == "light-bytes":
-        loop = read_json(ROOT / "5L/manifest.json")
-        result = {"5L": light_bytes(ROOT / "5L", loop), "limit": FILE_BYTES_LIMIT}
+        try:
+            result = release_budget(ROOT)
+        except ValueError as error:
+            sys.exit(f"light-bytes: {error}")
     elif args.command == "remove-dfs":
         result = remove_dfs(source_commit=args.source_commit)
     else:

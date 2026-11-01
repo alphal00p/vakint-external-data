@@ -1,5 +1,7 @@
+import contextlib
 import copy
 import hashlib
+import io
 import json
 import shutil
 import sys
@@ -17,6 +19,12 @@ STAMP = "ab" * 32
 OTHER_STAMP = "ac" * 32
 FAMILY = "rustred-integral-family-v2;N3:test;L3"
 ADAPTER_OF = {3: "closed-artifact", 4: "candidate-program", 5: "saved-application"}
+# The RustRed version lines of the fixture files, as `ordered_cache_maintenance prepare`
+# declares them in `producer.rustred`.
+VERSIONS = {"ordered_step_cache_schema": ordered_cache.RUSTRED_CACHE_SCHEMA,
+            "ordered_step_semantics": "rustred-ordered-steps-2026-10-31",
+            "ordered_tail_schema": ordered_cache.TAIL_SCHEMA,
+            "ordered_tail_semantics": "rustred-ordered-tail-2026-10-31"}
 
 
 def description(adapter, schema=ordered_cache.RUSTRED_CACHE_SCHEMA):
@@ -146,6 +154,13 @@ class OrderedCacheTests(unittest.TestCase):
         loops = int(label[0])
         return write_program(self.cache, label, self.tables(loops)[label], **options)
 
+    def stage(self, metadata=None, **options):
+        """Stage `self.cache` with a producer that declares the fixture's RustRed versions."""
+        metadata = copy.deepcopy(metadata or {})
+        producer = metadata.setdefault("producer", {})
+        producer["rustred"] = {**VERSIONS, **producer.get("rustred", {})}
+        return ordered_cache.stage_cache_dir(self.cache, self.root, metadata=metadata, **options)
+
     def assert_rejected(self, count):
         with self.assertRaises(ValueError):
             ordered_cache.validate_loop(self.root / f"{count}L", self.loop(count))
@@ -200,7 +215,7 @@ class OrderedCacheTests(unittest.TestCase):
         self.program("4L-four-loop-h")
         self.program("4L-four-loop-x", with_tail=True)
         before = self.loop(1)
-        staged = ordered_cache.stage_cache_dir(self.cache, self.root, metadata={
+        staged = self.stage({
             "producer": {"rustred": {"revision": "0" * 40}},
             "workload": [{"name": "3L-zero", "loop_count": 3}, {"name": "4L-zero", "loop_count": 4}],
         })
@@ -230,7 +245,7 @@ class OrderedCacheTests(unittest.TestCase):
         shutil.rmtree(self.cache)
         self.cache.mkdir()
         self.program("4L-four-loop-h", stamp=OTHER_STAMP)
-        ordered_cache.stage_cache_dir(self.cache, self.root)
+        self.stage()
         self.assertEqual(ordered_cache.validate(self.root)["4L"], 1)
         self.assertEqual(ordered_cache.validate(self.root)["3L"], 1)
         self.assertEqual(len(list((self.root / "4L/ordered-cache").iterdir())), 1)
@@ -239,7 +254,7 @@ class OrderedCacheTests(unittest.TestCase):
         loop_bytes = (self.root / "5L/manifest.json").read_bytes()
         root_bytes = (self.root / "manifest.json").read_bytes()
         self.program("5L-tide-five-loop-test", with_tail=True)
-        ordered_cache.stage_cache_dir(self.cache, self.root, link=True)
+        self.stage(link=True)
         self.assertEqual(ordered_cache.validate(self.root)["5L"], 1)
         ordered_cache.remove_loop(self.root, 5)
         self.assertEqual((self.root / "5L/manifest.json").read_bytes(), loop_bytes)
@@ -248,7 +263,7 @@ class OrderedCacheTests(unittest.TestCase):
 
     def test_exports_shaped_like_the_packs_stage_identically(self):
         self.program("4L-four-loop-h", with_tail=True)
-        ordered_cache.stage_cache_dir(self.cache, self.root, metadata={"producer": {"p": 1}, "workload": []})
+        self.stage({"producer": {"p": 1}, "workload": []})
         export = self.base / "export"
         (export / "4L").mkdir(parents=True)
         shutil.copytree(self.root / "4L/ordered-cache", export / "4L/ordered-cache")
@@ -264,21 +279,21 @@ class OrderedCacheTests(unittest.TestCase):
     def test_directories_must_carry_the_pack_rule_tables_the_stamp_and_a_known_label(self):
         write_program(self.cache, "3L-unit-mass-vacuum-k6", "0" * 64)
         with self.assertRaisesRegex(ValueError, "rule tables"):
-            ordered_cache.stage_cache_dir(self.cache, self.root)
+            self.stage()
         shutil.rmtree(self.cache)
         self.cache.mkdir()
         self.program("3L-unit-mass-vacuum-k6", name_stamp=OTHER_STAMP)
         with self.assertRaisesRegex(ValueError, "stamp"):
-            ordered_cache.stage_cache_dir(self.cache, self.root)
+            self.stage()
         shutil.rmtree(self.cache)
         self.cache.mkdir()
         write_program(self.cache, "4L-four-loop-fg", "1" * 64)
         with self.assertRaisesRegex(ValueError, "loads no program"):
-            ordered_cache.stage_cache_dir(self.cache, self.root)
+            self.stage()
 
     def test_staged_metadata_must_agree_with_the_pack_and_the_files(self):
         self.program("3L-unit-mass-vacuum-k6")
-        ordered_cache.stage_cache_dir(self.cache, self.root)
+        self.stage()
         directory = self.root / "3L"
         original = data.read_json(directory / "ordered-cache.json")
         for key, value in (("records", 9), ("tail_bytes", 1), ("rule_tables", "1" * 64), ("complete", "yes")):
@@ -292,7 +307,7 @@ class OrderedCacheTests(unittest.TestCase):
 
     def test_shard_headers_inventory_and_rustred_schema_are_checked(self):
         self.program("3L-unit-mass-vacuum-k6")
-        ordered_cache.stage_cache_dir(self.cache, self.root)
+        self.stage()
         program = next((self.root / "3L/ordered-cache").iterdir())
         path = next((program / "shards").iterdir())
         content = path.read_bytes()
@@ -315,7 +330,7 @@ class OrderedCacheTests(unittest.TestCase):
         self.cache.mkdir()
         self.program("3L-unit-mass-vacuum-k6", schema="rustred.ordered-step-cache.v2")
         with self.assertRaisesRegex(ValueError, "schema"):
-            ordered_cache.stage_cache_dir(self.cache, self.root)
+            self.stage()
 
     def test_tail_tables_need_this_schema_a_consistent_length_and_adapter(self):
         directory = self.program("5L-tide-five-loop-test", with_tail=True)
@@ -324,73 +339,133 @@ class OrderedCacheTests(unittest.TestCase):
                     tail("closed-artifact")):
             (directory / ordered_cache.TAIL_FILE).write_bytes(bad)
             with self.subTest(bad=bad[-20:]), self.assertRaises(ValueError):
-                ordered_cache.stage_cache_dir(self.cache, self.root)
+                self.stage()
         (directory / ordered_cache.TAIL_FILE).write_bytes(good)
-        ordered_cache.stage_cache_dir(self.cache, self.root)
+        self.stage()
         self.assertEqual(data.read_json(self.root / "5L/ordered-cache.json")["programs"][0]["tail_bytes"],
                          len(good))
 
-    def test_declared_rustred_versions_must_match_the_files(self):
+    def test_rustred_versions_must_be_declared_and_match_the_files(self):
+        self.program("3L-unit-mass-vacuum-k6")
         self.program("4L-four-loop-h", with_tail=True)
-        versions = {"ordered_step_cache_schema": ordered_cache.RUSTRED_CACHE_SCHEMA,
-                    "ordered_step_semantics": "rustred-ordered-steps-2026-10-31",
-                    "ordered_tail_schema": ordered_cache.TAIL_SCHEMA,
-                    "ordered_tail_semantics": "rustred-ordered-tail-2026-10-31"}
-        for key in versions:
-            wrong = dict(versions, **{key: "other"})
-            with self.subTest(key=key), self.assertRaisesRegex(ValueError, key):
-                ordered_cache.stage_cache_dir(self.cache, self.root, metadata={"producer": {"rustred": wrong}})
-            # Refused before the pack is touched.
+        step = {key: VERSIONS[key] for key in ordered_cache.STEP_VERSION_KEYS}
+        # No producer, no RustRed versions, step versions only (4L ships a tail table), wrong versions.
+        refused = [{}, {"producer": {"p": 1}}, {"producer": {"rustred": step}}]
+        refused += [{"producer": {"rustred": dict(VERSIONS, **{key: "other"})}} for key in VERSIONS]
+        for metadata in refused:
+            with self.subTest(metadata=metadata), self.assertRaisesRegex(ValueError, "producer.rustred"):
+                ordered_cache.stage_cache_dir(self.cache, self.root, metadata=metadata)
+            # Refused before any pack is touched, also the 3L pack whose cache agrees on its own.
+            self.assertFalse((self.root / "3L/ordered-cache").exists())
             self.assertFalse((self.root / "4L/ordered-cache").exists())
-        ordered_cache.stage_cache_dir(self.cache, self.root, metadata={"producer": {"rustred": versions}})
-        self.assertEqual(ordered_cache.validate(self.root)["4L"], 1)
+        # Without a tail table the tail versions need not be declared.
+        ordered_cache.stage_cache_dir(self.cache, self.root, metadata={"producer": {"rustred": step}}, loops={3})
+        ordered_cache.stage_cache_dir(self.cache, self.root, metadata={"producer": {"rustred": VERSIONS}}, loops={4})
+        self.assertEqual(ordered_cache.validate(self.root), {"1L": 0, "2L": 0, "3L": 1, "4L": 1, "5L": 0})
+        # Validation holds staged metadata to the same rule.
+        directory = self.root / "3L"
+        metadata = data.read_json(directory / "ordered-cache.json")
+        metadata["producer"] = {}
+        data.write_json(directory / "ordered-cache.json", metadata)
+        loop = self.loop(3)
+        loop["files"]["ordered-cache.json"] = data.file_record(directory / "ordered-cache.json")
+        with self.assertRaisesRegex(ValueError, "producer.rustred"):
+            ordered_cache.validate_loop(directory, loop)
 
     def test_files_above_the_git_file_limit_are_refused(self):
         directory = self.program("3L-unit-mass-vacuum-k6", with_tail=True)
         with patch.object(ordered_cache, "FILE_BYTES_LIMIT", 100):
             with self.assertRaisesRegex(ValueError, "exceeds"):
-                ordered_cache.stage_cache_dir(self.cache, self.root)
+                self.stage()
             # Caches kept outside the repository (receipts) have no per-file limit.
             self.assertEqual(ordered_cache.receipt(directory, self.root)["directory"], directory.name)
 
-    def trimmed(self, base_bytes=None):
+    def trimmed(self):
         directory = self.program("5L-tide-five-loop-test", with_tail=True)
         size, tail_size = shards_bytes(directory), (directory / ordered_cache.TAIL_FILE).stat().st_size
+        # The trimmed cache declares the whole directory as the zero-momentum cache it
+        # extends: provenance only, it never lowers the release budget count.
         trim = {"from_records": 100, "from_shards": 10, "from_bytes": 10 * size, "from_tail_bytes": tail_size,
-                "method": "zero workload + first layered quadratic records", "full_cache": "download x"}
-        if base_bytes is not None:
-            trim.update(base_bytes=base_bytes, base_tail_bytes=tail_size)
-        return {"programs": {"5L-tide-five-loop-test": {"complete": False, "trim": trim}}}, size, tail_size
+                "method": "zero workload + first layered quadratic records", "full_cache": "download x",
+                "base_bytes": size, "base_tail_bytes": tail_size}
+        return {"programs": {"5L-tide-five-loop-test": {"complete": False, "trim": trim}}}, directory
 
-    def test_trimmed_caches_declare_their_origin_and_count_their_increment_in_the_release_budget(self):
-        metadata, size, tail_size = self.trimmed()
+    def shipped_bytes(self, count):
+        """Every byte of a pack's Ordered caches: the files under ordered-cache/ and the metadata."""
+        directory = self.root / f"{count}L"
+        files = [path for path in (directory / "ordered-cache").rglob("*") if path.is_file()]
+        return sum(path.stat().st_size for path in files) + (directory / "ordered-cache.json").stat().st_size
+
+    def test_trimmed_caches_declare_their_origin_and_count_in_full_in_the_release_budget(self):
+        metadata, source = self.trimmed()
         broken = copy.deepcopy(metadata)
         del broken["programs"]["5L-tide-five-loop-test"]["trim"]["full_cache"]
         with self.assertRaisesRegex(ValueError, "trim"):
-            ordered_cache.stage_cache_dir(self.cache, self.root, metadata=broken)
+            self.stage(broken)
         broken = copy.deepcopy(metadata)
         broken["programs"]["5L-tide-five-loop-test"]["trim"] = None
         with self.assertRaisesRegex(ValueError, "trim"):
-            ordered_cache.stage_cache_dir(self.cache, self.root, metadata=broken)
-        ordered_cache.stage_cache_dir(self.cache, self.root, metadata=metadata)
+            self.stage(broken)
+        self.stage(metadata)
+        total = self.shipped_bytes(5)
+        # Shards, tail table, RustRed manifest and metadata, whatever base `trim` declares.
+        source_bytes = sum(path.stat().st_size for path in source.rglob("*") if path.is_file())
+        self.assertEqual(total, source_bytes + (self.root / "5L/ordered-cache.json").stat().st_size)
+        self.assertEqual(ordered_cache.light_bytes(self.root / "5L", self.loop(5)), total)
         manifest = data.read_json(self.root / "manifest.json")
-        # Without a declared base the whole trimmed cache counts.
-        self.assertEqual(ordered_cache.light_bytes(self.root / "5L", self.loop(5)), size + tail_size)
-        self.assertEqual(data.validate_release_cache_budget(self.root, manifest), size + tail_size)
-        shutil.rmtree(self.cache)
-        self.cache.mkdir()
-        metadata, size, tail_size = self.trimmed(base_bytes=40)
-        ordered_cache.stage_cache_dir(self.cache, self.root, metadata=metadata)
-        manifest = data.read_json(self.root / "manifest.json")
-        increment = size - 40
-        self.assertEqual(ordered_cache.light_bytes(self.root / "5L", self.loop(5)), increment)
-        with patch.object(data, "FIVE_LOOP_LIGHT_CACHE_BYTES_LIMIT", increment):
-            self.assertEqual(data.validate_release_cache_budget(self.root, manifest), increment)
+        with patch.object(data, "FIVE_LOOP_LIGHT_CACHE_BYTES_LIMIT", total):
+            self.assertEqual(data.validate_release_cache_budget(self.root, manifest), total)
         with (
-            patch.object(data, "FIVE_LOOP_LIGHT_CACHE_BYTES_LIMIT", increment - 1),
-            self.assertRaisesRegex(ValueError, f"{increment} bytes.*{increment - 1}"),
+            patch.object(data, "FIVE_LOOP_LIGHT_CACHE_BYTES_LIMIT", total - 1),
+            self.assertRaisesRegex(ValueError, f"{total} bytes.*{total - 1}"),
         ):
             data.validate_release_cache_budget(self.root, manifest)
+
+    def test_validate_and_light_bytes_refuse_five_loop_caches_above_the_release_budget(self):
+        # `data.py validate` (CI) of this synthetic pack needs no master files.
+        loop = self.loop(5)
+        loop["masters"] = []
+        data.write_json(self.root / "5L/manifest.json", loop)
+        manifest = data.read_json(self.root / "manifest.json")
+        manifest["loop_packs"][4]["manifest_sha256"] = data.digest(self.root / "5L/manifest.json")
+        data.write_json(self.root / "manifest.json", manifest)
+        self.program("5L-tide-five-loop-test", with_tail=True)
+        self.stage()
+        total = self.shipped_bytes(5)
+
+        def light_bytes_command():
+            output = io.StringIO()
+            with (
+                patch.object(ordered_cache, "ROOT", self.root),
+                patch.object(sys, "argv", ["ordered_cache.py", "light-bytes"]),
+                contextlib.redirect_stdout(output),
+            ):
+                ordered_cache.main()
+            return json.loads(output.getvalue())
+
+        with patch.object(data, "FIVE_LOOP_LIGHT_CACHE_BYTES_LIMIT", total):
+            with contextlib.redirect_stdout(io.StringIO()) as output:
+                data.validate(self.root)
+            self.assertEqual(json.loads(output.getvalue())["validated"][4]["light_cache_bytes"], total)
+            self.assertEqual(light_bytes_command(), {"5L": total, "ordered_cache": total, "limit": total})
+        with patch.object(data, "FIVE_LOOP_LIGHT_CACHE_BYTES_LIMIT", total - 1):
+            with (
+                contextlib.redirect_stdout(io.StringIO()),
+                self.assertRaisesRegex(ValueError, f"{total} bytes.*{total - 1}"),
+            ):
+                data.validate(self.root)
+            with self.assertRaises(SystemExit) as refused:
+                light_bytes_command()
+            self.assertRegex(str(refused.exception.code), f"^light-bytes: .*{total} bytes.*{total - 1}")
+            # Staging refuses such a cache before the pack is touched.
+            before = (self.root / "5L/manifest.json").read_bytes()
+            with self.assertRaisesRegex(ValueError, f"{total} bytes.*{total - 1}"):
+                self.stage()
+            self.assertEqual((self.root / "5L/manifest.json").read_bytes(), before)
+        # What staging counts is exactly what the pack then ships.
+        with patch.object(data, "FIVE_LOOP_LIGHT_CACHE_BYTES_LIMIT", total):
+            self.stage()
+        self.assertEqual(self.shipped_bytes(5), total)
 
     def test_receipts_describe_caches_kept_outside_the_repository(self):
         directory = self.program("5L-tide-five-loop-test", with_tail=True)

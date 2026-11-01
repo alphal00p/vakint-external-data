@@ -198,38 +198,51 @@ def checked_runtime_cache_assets(root, manifest, directory):
     return [checked_path(directory, asset["archive"]) for asset in assets]
 
 
-def validate_release_cache_budget(root, manifest):
-    """Limit the official 5L light cache download, not Native codecs or local tools.
+def shipped_light_cache_bytes(directory, loop):
+    """Bytes of the caches a five-loop pack ships inside the repository.
 
-    Counts the 5L pack's shipped Ordered caches (`ordered_cache.light_bytes`: complete
-    caches in full, a trimmed cache beyond its declared complete zero-momentum base),
-    a legacy depth-first LIGHT cache file if a pack still declares one, and selected
-    runtime cache snapshot parts, against one decimal budget.
+    Every file of its Ordered caches (`ordered_cache.light_bytes`: the whole
+    `ordered-cache/` directory and its metadata, trimmed or not) and a legacy
+    depth-first LIGHT cache file if the pack still declares one.
     """
     from ordered_cache import light_bytes
 
-    pack = next(pack for pack in manifest["loop_packs"] if pack["loop_count"] == 5)
-    loop_path = checked_path(root, pack["manifest"])
-    if digest(loop_path) != pack["manifest_sha256"]:
-        raise ValueError("five-loop release cache manifest checksum mismatch")
-    loop = read_json(loop_path)
     compressed_bytes = 0
     cache = loop.get("cache", {"available": False})
     if cache["available"]:
-        path = checked_path(loop_path.parent, cache["path"])
+        path = checked_path(directory, cache["path"])
         if not path.is_file():
             raise ValueError("five-loop release cache must be a regular file")
         compressed_bytes = path.stat().st_size
-    compressed_bytes += light_bytes(loop_path.parent, loop)
-    compressed_bytes += sum(
-        asset["archive_bytes"] for asset in runtime_cache_assets(root, manifest)
-    )
+    return compressed_bytes + light_bytes(directory, loop)
+
+
+def check_light_cache_budget(compressed_bytes):
+    """The one decimal budget of the official five-loop LIGHT cache bytes."""
     if compressed_bytes > FIVE_LOOP_LIGHT_CACHE_BYTES_LIMIT:
         raise ValueError(
             f"official five-loop LIGHT cache has {compressed_bytes} bytes; "
             f"release budget is {FIVE_LOOP_LIGHT_CACHE_BYTES_LIMIT} bytes"
         )
     return compressed_bytes
+
+
+def validate_release_cache_budget(root, manifest):
+    """Limit the official 5L light cache download, not Native codecs or local tools.
+
+    Counts the caches the 5L pack ships in the repository (`shipped_light_cache_bytes`;
+    `validate` already enforces the budget on them alone) and the selected runtime
+    cache snapshot parts, against one decimal budget.
+    """
+    pack = next(pack for pack in manifest["loop_packs"] if pack["loop_count"] == 5)
+    loop_path = checked_path(root, pack["manifest"])
+    if digest(loop_path) != pack["manifest_sha256"]:
+        raise ValueError("five-loop release cache manifest checksum mismatch")
+    compressed_bytes = shipped_light_cache_bytes(loop_path.parent, read_json(loop_path))
+    compressed_bytes += sum(
+        asset["archive_bytes"] for asset in runtime_cache_assets(root, manifest)
+    )
+    return check_light_cache_budget(compressed_bytes)
 
 
 ROUTE_PREPARATION_FORMAT = "rustred.saved-application.route-preparation.v1"
@@ -1144,6 +1157,14 @@ def validate(root=None, *, light_cache_admission=None):
 
         ordered_cache_programs = validate_ordered_cache(path.parent, loop)
         route_preparation = validate_route_preparation(path.parent, loop)
+        # The caches a 5L pack with Ordered caches ships in the repository must fit
+        # the release budget on their own (a legacy LIGHT file alone is budgeted by
+        # `saved_cache.validate`; full `pack` and `publish` add runtime snapshot parts).
+        light_cache_bytes = (
+            check_light_cache_budget(shipped_light_cache_bytes(path.parent, loop))
+            if loop["loop_count"] == 5 and loop.get("ordered_cache") is not None
+            else None
+        )
         counts.append(
             {
                 "loop_count": loop["loop_count"],
@@ -1152,6 +1173,7 @@ def validate(root=None, *, light_cache_admission=None):
                 "cache": dfs_cache["available"],
                 "ordered_cache_programs": ordered_cache_programs,
                 **({"route_preparation": route_preparation} if route_preparation else {}),
+                **({"light_cache_bytes": light_cache_bytes} if light_cache_bytes is not None else {}),
             }
         )
     migration = root / "provenance/migration.json"

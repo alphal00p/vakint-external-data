@@ -367,18 +367,24 @@ and the workload (free-form provenance) and, per program sorted by label, `label
 `directory`, the full `rule_tables` and `stamp`, `adapter`, `records`, `shards`,
 `bytes` (shard bytes), `tail_bytes` and `complete`. A trimmed cache has
 `complete: false` and `trim` with `from_records`, `from_shards`, `from_bytes`,
-`from_tail_bytes`, `method` and `full_cache` (where the complete cache lives), and
-may declare the complete zero-momentum cache it extends as `base_bytes` and
-`base_tail_bytes`.
+`from_tail_bytes`, `method` and `full_cache` (where the complete cache lives).
+`trim` is provenance only: it never lowers what a cache counts against the release
+budget. `producer.rustred` must name the RustRed version lines the files carry
+(`ordered_step_cache_schema`, `ordered_step_semantics`, and `ordered_tail_schema`,
+`ordered_tail_semantics` with a tail table), as `ordered_cache_maintenance prepare`
+writes them.
 
 Prepare caches only with Vakint's `ordered_cache_maintenance prepare` (cold, from
-the deterministic workload, against this checkout) and stage its cache directory:
+the deterministic workload, against this checkout), stage its cache directory or
+export, and check the result with the Vakint build that will use this data
+revision before pushing:
 
 ```sh
 python3 tools/ordered_cache.py stage --cache-dir CACHE_DIR --metadata META.json [--loops 5] [--link]
 python3 tools/ordered_cache.py stage --export EXPORT          # EXPORT/<L>L/ordered-cache{,.json}
-python3 tools/ordered_cache.py light-bytes
-python3 tools/data.py validate
+python3 tools/ordered_cache.py light-bytes                    # 5L release budget; exit status 1 above it
+python3 tools/data.py validate                                # enforces the same budget
+ordered_cache_maintenance check --artifacts .                 # must exit 0
 ```
 
 `META.json` holds `producer`, `workload` rows (each with its `loop_count`) and
@@ -389,8 +395,15 @@ pack and checks the directory names, the inventory and sizes, the RustRed manife
 (schema and version lines, stamp, shard rows), every shard header, the tail-table
 header (schema `rustred.ordered-tail.v3`, adapter, payload length) and the
 metadata. Stamps and payload BLAKE3 digests are checked by RustRed when Vakint
-opens a cache. Every cache file must stay at most 95,000,000 bytes (GitHub refuses
-files above 100 MiB).
+opens a cache, so only Vakint can confirm that a build accepts the staged caches:
+run `cargo run --release --features feynkit-ingress --example
+ordered_cache_maintenance -- check --artifacts CHECKOUT` from the Vakint (gammaloop)
+revision that will pin this data revision. It reports every loaded program's
+directory name, rule tables and stamp under that build and whether the cache the
+checkout ships for it is accepted; it exits with status 1 if any is rejected, and
+then the caches must be prepared again with that build. Every cache file must stay
+at most 95,000,000 bytes (GitHub refuses files above 100 MiB), and all 5L cache
+files together must fit the 95,000,000-byte release budget below.
 
 A cache too large for a pack (the complete 5L quadratic cache) stays outside the
 repository as a plain Vakint cache-directory entry with a receipt:
@@ -693,15 +706,18 @@ selection; size never authorizes deleting or truncating captured records.
 
 Official five-loop releases publish at most *95,000,000 compressed cache bytes*
 (decimal bytes, not 95 MiB). The aggregate is the five-loop Ordered caches
-(`tools/ordered_cache.py light-bytes`: complete caches with their shard and tail
-bytes, a trimmed cache only beyond its declared complete zero-momentum base), a
+(every file of `5L/ordered-cache/`, i.e. RustRed manifests, shards and tail tables,
+plus `5L/ordered-cache.json`; a trimmed cache counts in full like a complete one), a
 legacy `cache/prepared.rrcache.gz` file if a pack still declared one, plus every
 compressed release part of a selected five-loop `runtime_cache_snapshots`
 descriptor. Descriptor and inventory metadata,
 other loop data and lower-loop caches are outside this cache-payload budget.
 There is no second cap on decoded Native files, indexes or directory size.
 Full `tools/data.py pack` and `tools/publish.py` both enforce this policy before
-creating release archives or uploading assets. Do not select a HEAVY descriptor
+creating release archives or uploading assets; `tools/data.py validate` (and so CI)
+enforces it on the caches a five-loop pack with Ordered caches ships in the
+repository, and `tools/ordered_cache.py light-bytes` prints the aggregate and exits
+with status 1 above the budget. Do not select a HEAVY descriptor
 in an official release.
 
 This is a publication policy, not a Native codec limit. General
