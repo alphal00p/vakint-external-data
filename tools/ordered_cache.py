@@ -235,18 +235,19 @@ def parse_rustred_manifest(text):
     return description, stamp_line[6:], shards
 
 
-def check_file_limit(path):
+def check_file_limit(path, limit=True):
+    """Size of a cache file; with `limit`, at most FILE_BYTES_LIMIT (files in a pack)."""
     size = path.stat().st_size
-    if size > FILE_BYTES_LIMIT:
+    if limit and size > FILE_BYTES_LIMIT:
         raise ValueError(f"ordered cache file exceeds {FILE_BYTES_LIMIT} bytes: {path} ({size})")
     return size
 
 
-def check_shard(path, stamp, row):
+def check_shard(path, stamp, row, limit=True):
     """Header checks of one shard file (the payload BLAKE3 is RustRed's)."""
     if path.is_symlink() or not path.is_file():
         raise ValueError(f"missing ordered cache shard {path}")
-    size = check_file_limit(path)
+    size = check_file_limit(path, limit)
     if size != row["bytes"] or size < SHARD_HEADER:
         raise ValueError(f"ordered cache shard size differs from its manifest: {path}")
     with path.open("rb") as stream:
@@ -263,11 +264,11 @@ def check_shard(path, stamp, row):
         raise ValueError(f"ordered cache shard header differs from its manifest: {path}")
 
 
-def tail_header(path):
+def tail_header(path, limit=True):
     """{schema, semantics, adapter, bytes} of an `ordered-tail.rrtail` (payload BLAKE3 is RustRed's)."""
     if path.is_symlink() or not path.is_file():
         raise ValueError(f"missing ordered tail table {path}")
-    size = check_file_limit(path)
+    size = check_file_limit(path, limit)
     with path.open("rb") as stream:
         start = stream.read(24)
         if len(start) != 24 or start[:16] != TAIL_MAGIC:
@@ -290,8 +291,11 @@ def tail_header(path):
             "bytes": size}
 
 
-def inspect_program(base, name):
-    """Check one program directory `base/name`; returns its RustRed facts and file list."""
+def inspect_program(base, name, limit=True):
+    """Check one program directory `base/name`; returns its RustRed facts and file list.
+
+    `limit`: every file at most FILE_BYTES_LIMIT (caches shipped in a pack).
+    """
     match = DIRECTORY.fullmatch(name)
     if not match:
         raise ValueError(f"ordered cache directory {name!r} is not <label>.<tables16>.<stamp16>")
@@ -301,16 +305,16 @@ def inspect_program(base, name):
     manifest = directory / RUSTRED_MANIFEST
     if manifest.is_symlink() or not manifest.is_file():
         raise ValueError(f"{name}: no {RUSTRED_MANIFEST}")
-    check_file_limit(manifest)
+    check_file_limit(manifest, limit)
     description, stamp, shards = parse_rustred_manifest(manifest.read_text())
     if stamp[:16] != match["stamp"]:
         raise ValueError(f"{name}: directory stamp differs from its RustRed manifest ({stamp[:16]})")
     for row in shards:
-        check_shard(checked_path(directory, row["file"]), stamp, row)
+        check_shard(checked_path(directory, row["file"]), stamp, row, limit)
     files = [RUSTRED_MANIFEST] + [row["file"] for row in shards]
     tail = None
     if (directory / TAIL_FILE).exists() or (directory / TAIL_FILE).is_symlink():
-        tail = tail_header(directory / TAIL_FILE)
+        tail = tail_header(directory / TAIL_FILE, limit)
         if tail["adapter"] != ADAPTERS[description["adapter"]]:
             raise ValueError(f"{name}: tail table adapter {tail['adapter']} differs from the step cache's")
         files.append(TAIL_FILE)
@@ -688,7 +692,7 @@ def receipt(program, artifacts, *, metadata=None):
     tables are recomputed from the pack of `artifacts` the cache was prepared for.
     """
     program, artifacts = Path(program), Path(artifacts)
-    facts = inspect_program(program.parent, program.name)
+    facts = inspect_program(program.parent, program.name, limit=False)
     loop_count = int(facts["label"][0])
     tables = program_rule_tables(artifacts / f"{loop_count}L", read_json(artifacts / f"{loop_count}L/manifest.json"))
     if tables.get(facts["label"], "")[:16] != facts["tables16"]:

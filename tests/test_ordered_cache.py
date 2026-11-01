@@ -346,9 +346,12 @@ class OrderedCacheTests(unittest.TestCase):
         self.assertEqual(ordered_cache.validate(self.root)["4L"], 1)
 
     def test_files_above_the_git_file_limit_are_refused(self):
-        self.program("3L-unit-mass-vacuum-k6")
-        with patch.object(ordered_cache, "FILE_BYTES_LIMIT", 100), self.assertRaisesRegex(ValueError, "exceeds"):
-            ordered_cache.stage_cache_dir(self.cache, self.root)
+        directory = self.program("3L-unit-mass-vacuum-k6", with_tail=True)
+        with patch.object(ordered_cache, "FILE_BYTES_LIMIT", 100):
+            with self.assertRaisesRegex(ValueError, "exceeds"):
+                ordered_cache.stage_cache_dir(self.cache, self.root)
+            # Caches kept outside the repository (receipts) have no per-file limit.
+            self.assertEqual(ordered_cache.receipt(directory, self.root)["directory"], directory.name)
 
     def trimmed(self, base_bytes=None):
         directory = self.program("5L-tide-five-loop-test", with_tail=True)
