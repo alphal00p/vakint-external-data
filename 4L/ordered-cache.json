@@ -1,0 +1,156 @@
+{
+  "schema": "vakint.external-data.ordered-cache.v2",
+  "loop_count": 4,
+  "producer": {
+    "command": "ordered_cache_maintenance prepare --loops 1,2,3,4 --five-loop zero (VAKINT_ORDERED_WEIGHT_ARITHMETIC=modular_polynomial, VAKINT_ORDERED_CACHE_MAX_RESIDENT_BYTES=default)",
+    "rustred": {
+      "ordered_step_cache_schema": "rustred.ordered-step-cache.v3",
+      "ordered_step_semantics": "rustred-ordered-steps-2026-10-31",
+      "ordered_tail_schema": "rustred.ordered-tail.v3",
+      "ordered_tail_semantics": "rustred-ordered-tail-2026-10-31",
+      "revision": "92f9393c"
+    },
+    "vakint": {
+      "revision": "37d496a83+wt",
+      "version": "0.1.2"
+    }
+  },
+  "workload": [
+    {
+      "input_sha256": "1b2d0500b557a43def79b51b1a583a0126dfad3308bdb5c56908bc2419639d4e",
+      "kind": "qcd-ladder-rung",
+      "loop_count": 4,
+      "name": "4L-zero-momentum",
+      "projection": "zero-momentum",
+      "retained_sha256": "b93080b3991149f79b41ffd37361e54dfa48daba068e8b640f9c44ef29ce3012",
+      "source": "crates/vakint/tests/fixtures/qcd_ladder (tests/ordered_reduction_rungs.rs)"
+    },
+    {
+      "input_sha256": "050c3d0fbd9b87046986de5f458b6626bdd5652aea464cd932fbe6c43f2abaa8",
+      "kind": "qcd-ladder-rung",
+      "loop_count": 4,
+      "name": "4L-quadratic",
+      "projection": "quadratic",
+      "retained_sha256": "6986f629362956bf28bfbb3bf5a941e5d1f4df667a626d93395dbde8059a8f77",
+      "source": "crates/vakint/tests/fixtures/qcd_ladder (tests/ordered_reduction_rungs.rs)"
+    },
+    {
+      "input_sha256": "84057e206c5b3fa57a709d24f20031d6b3787aa5e3e546cb08f81f23d63e9f0d",
+      "kind": "integral",
+      "loop_count": 4,
+      "name": "4L-integral-H-p2",
+      "retained_sha256": "90f730d85e5a402c26d9a23b7b0ec19377a9ac6b122f2d0aa1b12f7ca892f2f8",
+      "source": "crates/vakint/tests/fixtures/benchmark_reduction.json case \"0:2\""
+    },
+    {
+      "input_sha256": "1ddc8ddabdd655226cf9426a2901f6751fb6fe7294063916ea0372e658fff3f2",
+      "kind": "integral",
+      "loop_count": 4,
+      "name": "4L-integral-FG-p2",
+      "retained_sha256": "08ab4508bdb816716117181f35ea8b698388057c588100ab5b72181cf6b296a7",
+      "source": "crates/vakint/tests/fixtures/benchmark_reduction.json case \"1:2\""
+    },
+    {
+      "input_sha256": "f8770d2d3db320a48200a05a46d6883a75463268a991d8dce45f71b587bda31a",
+      "kind": "integral",
+      "loop_count": 4,
+      "name": "4L-integral-BMW-p2",
+      "retained_sha256": "cd17eddb3ae2c54653e44e5d2206f69c99ed4b798b201acf2bc5bdd2afeeb595",
+      "source": "crates/vakint/tests/fixtures/benchmark_reduction.json case \"2:2\""
+    },
+    {
+      "input_sha256": "96134e34f1b6addf6e3586c5992bb098ee9a41265b80484b3628ccd4c260b6bb",
+      "kind": "integral",
+      "loop_count": 4,
+      "name": "4L-integral-X-p2",
+      "retained_sha256": "844b5f4330745f76501028f94ddee7614967c02f3680fb0076ca7c5580c663ba",
+      "source": "crates/vakint/tests/fixtures/benchmark_reduction.json case \"3:2\""
+    },
+    {
+      "input_sha256": "76e01043ea67abdcb9d972989fdcc591dc5229e340a12cb51b7a1b88072e9494",
+      "kind": "integral",
+      "loop_count": 4,
+      "name": "4L-integral-H-p4",
+      "retained_sha256": "87f4052f8cfe357c03ab427f5d46419642b584f11b7b2dfb24b5a296d5b1027b",
+      "source": "crates/vakint/tests/fixtures/benchmark_reduction.json case \"0:4\""
+    },
+    {
+      "input_sha256": "fc11de689216ab5b200fd840da0109c4e522ff15b2767671f435688e80c06db8",
+      "kind": "integral",
+      "loop_count": 4,
+      "name": "4L-integral-FG-p4",
+      "retained_sha256": "469dfc711842a03f06f742a7ae896d0a68e173d4f17ddc36e7f5dd09ea24f804",
+      "source": "crates/vakint/tests/fixtures/benchmark_reduction.json case \"1:4\""
+    },
+    {
+      "input_sha256": "c9bb03a693350b29876acd311191b765914a41ff7dfabe50c7d4b82356c749ab",
+      "kind": "integral",
+      "loop_count": 4,
+      "name": "4L-integral-BMW-p4",
+      "retained_sha256": "0860fc8ebd10b391465aa6480f62f4bd399dae63aade8b4251f21cff915c6d2d",
+      "source": "crates/vakint/tests/fixtures/benchmark_reduction.json case \"2:4\""
+    },
+    {
+      "input_sha256": "8eb60ff006f3a0c91ea5fa8e8121856923999dccaa2e1ffc467831254be7e93c",
+      "kind": "integral",
+      "loop_count": 4,
+      "name": "4L-integral-X-p4",
+      "retained_sha256": "4b2c03129e171e0089136a91f50f3ca1c6dca3c0fa7edf54731e856385a2a817",
+      "source": "crates/vakint/tests/fixtures/benchmark_reduction.json case \"3:4\""
+    }
+  ],
+  "programs": [
+    {
+      "label": "4L-four-loop-bmw",
+      "directory": "ordered-cache/4L-four-loop-bmw.911209920104145b.95e30f6d6d92703d",
+      "rule_tables": "911209920104145b2a7bb0b84166b38aed1cb088443cc35f321de8d0ae0df20f",
+      "stamp": "95e30f6d6d92703de99936878830d2c2c594f3d2ceb7b762fd45a55495a90063",
+      "adapter": "candidate-program",
+      "records": 12259,
+      "shards": 5,
+      "bytes": 1096621,
+      "tail_bytes": 181899,
+      "complete": true,
+      "trim": null
+    },
+    {
+      "label": "4L-four-loop-fg",
+      "directory": "ordered-cache/4L-four-loop-fg.0b67c3c5a0b19a29.328623fba3bd5aca",
+      "rule_tables": "0b67c3c5a0b19a2928fb70ae8baeca00ae11f7a316842f7af983c82e80a294ef",
+      "stamp": "328623fba3bd5aca1548565a5ce2d89b110eecc9b2c3777b3f4f9bf096ca5043",
+      "adapter": "candidate-program",
+      "records": 28611,
+      "shards": 6,
+      "bytes": 2018175,
+      "tail_bytes": 276344,
+      "complete": true,
+      "trim": null
+    },
+    {
+      "label": "4L-four-loop-h",
+      "directory": "ordered-cache/4L-four-loop-h.b5cbd317fb5155c5.99573e3abb4048c7",
+      "rule_tables": "b5cbd317fb5155c572fed49f152b80206ebee8969d4d8cf18a71a764585451f4",
+      "stamp": "99573e3abb4048c72384904b266a0aab8a35ea53cb4b5660a738209539e24dde",
+      "adapter": "candidate-program",
+      "records": 22865,
+      "shards": 6,
+      "bytes": 1878360,
+      "tail_bytes": 326706,
+      "complete": true,
+      "trim": null
+    },
+    {
+      "label": "4L-four-loop-x",
+      "directory": "ordered-cache/4L-four-loop-x.2f60f1ca938f469b.bb6dfb1637e06254",
+      "rule_tables": "2f60f1ca938f469b2729335f5d2d6ed7fd79606e5d4a1e20d09c2383256786bd",
+      "stamp": "bb6dfb1637e06254ba53a5117e2504b273db57592751024fdc55abc6b708add6",
+      "adapter": "candidate-program",
+      "records": 62879,
+      "shards": 6,
+      "bytes": 6271943,
+      "tail_bytes": 626469,
+      "complete": true,
+      "trim": null
+    }
+  ]
+}

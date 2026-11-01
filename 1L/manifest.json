@@ -194,6 +194,10 @@
   "cache": {
     "available": false
   },
+  "ordered_cache": {
+    "path": "ordered-cache",
+    "metadata": "ordered-cache.json"
+  },
   "coverage": "coverage.json",
   "provenance": {
     "master_producer_rustred_revision": "1fca5bd0ae11b8d25c89658a9c78a476a2b76048",
@@ -231,6 +235,18 @@
     "model.json": {
       "sha256": "d7e113a7e3fb019045e4c1436e03eeb3b49da85de1234f7ed1e110416079215e",
       "bytes": 3477
+    },
+    "ordered-cache.json": {
+      "sha256": "52f44e4fab2c22d749bdae6cc20e05591d20bbd55ebabe1d2a93ff19c12c7194",
+      "bytes": 2021
+    },
+    "ordered-cache/1L-unit-mass-vacuum-k1.f8a740e9707e4560.ed8479c09d9e8777/ordered-step-cache.txt": {
+      "sha256": "201b61dbd4969424981b3aa13086ee77b62f4041cc103b97b4bb2db2875a2485",
+      "bytes": 580
+    },
+    "ordered-cache/1L-unit-mass-vacuum-k1.f8a740e9707e4560.ed8479c09d9e8777/shards/integral-s01-0000000000000000.267d2e0077b8a294.rrstep": {
+      "sha256": "0d0e753d12d677cf397339a40603bb9c846cb707e893a0a76063da17c0877f08",
+      "bytes": 226
     },
     "producer-update.json": {
       "sha256": "c2a7a05a917ac68ad65d214907ac7cd6930e7b5b7112e0f1fbd663f85c578a2f",

@@ -1,0 +1,53 @@
+{
+  "schema": "vakint.external-data.ordered-cache.v2",
+  "loop_count": 1,
+  "producer": {
+    "command": "ordered_cache_maintenance prepare --loops 1,2,3,4 --five-loop zero (VAKINT_ORDERED_WEIGHT_ARITHMETIC=modular_polynomial, VAKINT_ORDERED_CACHE_MAX_RESIDENT_BYTES=default)",
+    "rustred": {
+      "ordered_step_cache_schema": "rustred.ordered-step-cache.v3",
+      "ordered_step_semantics": "rustred-ordered-steps-2026-10-31",
+      "ordered_tail_schema": "rustred.ordered-tail.v3",
+      "ordered_tail_semantics": "rustred-ordered-tail-2026-10-31",
+      "revision": "92f9393c"
+    },
+    "vakint": {
+      "revision": "37d496a83+wt",
+      "version": "0.1.2"
+    }
+  },
+  "workload": [
+    {
+      "input_sha256": "12a19f0fe74a5a82f013dcb78f43cf590ad805a4a2d5a6fc44c64a6e26f3f626",
+      "kind": "qcd-ladder-rung",
+      "loop_count": 1,
+      "name": "1L-zero-momentum",
+      "projection": "zero-momentum",
+      "retained_sha256": "a8b3c3e944009c6ea0f2e97b1bd670bba45c6a67bc6a302dd2598f5af8357b6f",
+      "source": "crates/vakint/tests/fixtures/qcd_ladder (tests/ordered_reduction_rungs.rs)"
+    },
+    {
+      "input_sha256": "dcbe3c6d0193bf535f19da3d476d1e1da13989e643563bdb7c0be29e63108409",
+      "kind": "qcd-ladder-rung",
+      "loop_count": 1,
+      "name": "1L-quadratic",
+      "projection": "quadratic",
+      "retained_sha256": "20f08c848e9dfacb02c92f4389a1b5e3e5e4d6f041d832ce9c3008508ec3c460",
+      "source": "crates/vakint/tests/fixtures/qcd_ladder (tests/ordered_reduction_rungs.rs)"
+    }
+  ],
+  "programs": [
+    {
+      "label": "1L-unit-mass-vacuum-k1",
+      "directory": "ordered-cache/1L-unit-mass-vacuum-k1.f8a740e9707e4560.ed8479c09d9e8777",
+      "rule_tables": "f8a740e9707e4560b9c0ffdf7f2adba5220d3e21054c11ac0f0a4aab3031dc88",
+      "stamp": "ed8479c09d9e87772da3bd6a0928fe40ff55a15a77ba0ef3f8f28393d64b19b5",
+      "adapter": "closed-artifact",
+      "records": 4,
+      "shards": 1,
+      "bytes": 226,
+      "tail_bytes": 0,
+      "complete": true,
+      "trim": null
+    }
+  ]
+}

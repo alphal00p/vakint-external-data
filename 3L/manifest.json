@@ -9045,6 +9045,10 @@
   "cache": {
     "available": false
   },
+  "ordered_cache": {
+    "path": "ordered-cache",
+    "metadata": "ordered-cache.json"
+  },
   "coverage": "coverage.json",
   "provenance": {
     "master_producer_rustred_revision": "1fca5bd0ae11b8d25c89658a9c78a476a2b76048",
@@ -9534,6 +9538,26 @@
     "numerical-precision-supplement.json": {
       "sha256": "20137dc13c9d45e3d56c25f52a9b43fdbb67437b4755f04a9c9a34ef7c406887",
       "bytes": 1245099
+    },
+    "ordered-cache.json": {
+      "sha256": "f3a42c9717a0175700ac6db8f016f6bbc80ffc3c7299685abda77f93d82fe2d0",
+      "bytes": 2025
+    },
+    "ordered-cache/3L-unit-mass-vacuum-k6.383b2ebbc1124bef.7047469c35b26887/ordered-step-cache.txt": {
+      "sha256": "9fbe8cf7cbfcf6e962ee280c3cf8c568bda85d8f33b1706d07756d381a0a9897",
+      "bytes": 1860
+    },
+    "ordered-cache/3L-unit-mass-vacuum-k6.383b2ebbc1124bef.7047469c35b26887/shards/integral-s03-0000000000000000.6652cd98349e459e.rrstep": {
+      "sha256": "7bc994e734caee30560507d54639c2d9623acd588afe907b280b40ecb28b43ab",
+      "bytes": 5741
+    },
+    "ordered-cache/3L-unit-mass-vacuum-k6.383b2ebbc1124bef.7047469c35b26887/shards/integral-s04-0000000000000000.52069a8faed0b9b3.rrstep": {
+      "sha256": "fc4384e3c57b2fcd2b33a3bd6633e1e6b179f5cede9f5bec890af3224d99c33d",
+      "bytes": 18405
+    },
+    "ordered-cache/3L-unit-mass-vacuum-k6.383b2ebbc1124bef.7047469c35b26887/shards/integral-s05-0000000000000000.8e392f737fa9f858.rrstep": {
+      "sha256": "81e16daffeabf41a42523934f2c435a86044339552e4868115ead3eabbd1a50a",
+      "bytes": 12995
     },
     "producer-update.json": {
       "sha256": "57115589cc5c12dbc3500660c94bb4675736cec6244f932f5efc9c39b98669b3",

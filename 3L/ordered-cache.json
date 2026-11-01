@@ -1,0 +1,53 @@
+{
+  "schema": "vakint.external-data.ordered-cache.v2",
+  "loop_count": 3,
+  "producer": {
+    "command": "ordered_cache_maintenance prepare --loops 1,2,3,4 --five-loop zero (VAKINT_ORDERED_WEIGHT_ARITHMETIC=modular_polynomial, VAKINT_ORDERED_CACHE_MAX_RESIDENT_BYTES=default)",
+    "rustred": {
+      "ordered_step_cache_schema": "rustred.ordered-step-cache.v3",
+      "ordered_step_semantics": "rustred-ordered-steps-2026-10-31",
+      "ordered_tail_schema": "rustred.ordered-tail.v3",
+      "ordered_tail_semantics": "rustred-ordered-tail-2026-10-31",
+      "revision": "92f9393c"
+    },
+    "vakint": {
+      "revision": "37d496a83+wt",
+      "version": "0.1.2"
+    }
+  },
+  "workload": [
+    {
+      "input_sha256": "9d92612c562e56bdea26e888a797d21321705c48e7fbe7a02014f6c675ca0da0",
+      "kind": "qcd-ladder-rung",
+      "loop_count": 3,
+      "name": "3L-zero-momentum",
+      "projection": "zero-momentum",
+      "retained_sha256": "2f48233ca24979143ca839289877d18bdf4f0fde70bd68399d770227d73c6b2a",
+      "source": "crates/vakint/tests/fixtures/qcd_ladder (tests/ordered_reduction_rungs.rs)"
+    },
+    {
+      "input_sha256": "ae62eeb11d6ef31928c480b8fd03daee9c2d5649d47b22c0ac7abe558d68fc05",
+      "kind": "qcd-ladder-rung",
+      "loop_count": 3,
+      "name": "3L-quadratic",
+      "projection": "quadratic",
+      "retained_sha256": "5acbeebe2429d711d5cd9c1264efc469886c5c5e5961f6470be8f7970c400821",
+      "source": "crates/vakint/tests/fixtures/qcd_ladder (tests/ordered_reduction_rungs.rs)"
+    }
+  ],
+  "programs": [
+    {
+      "label": "3L-unit-mass-vacuum-k6",
+      "directory": "ordered-cache/3L-unit-mass-vacuum-k6.383b2ebbc1124bef.7047469c35b26887",
+      "rule_tables": "383b2ebbc1124bef251f88df9c1c0d80cb180a14fe12cb5d5928933d926b8006",
+      "stamp": "7047469c35b26887fbcb7b5b95a5b64a18e68ecdcc5baf949d2b554d1f1665fd",
+      "adapter": "closed-artifact",
+      "records": 758,
+      "shards": 3,
+      "bytes": 37141,
+      "tail_bytes": 0,
+      "complete": true,
+      "trim": null
+    }
+  ]
+}

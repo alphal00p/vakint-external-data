@@ -1,0 +1,10 @@
+schema rustred.ordered-step-cache.v3
+semantics rustred-ordered-steps-2026-10-31
+adapter closed-artifact
+family rustred-integral-family-v2;N36:rustred-two-loop-unit-mass-sunset-v1;L2;2:k1;2:k2;E0;P1;1:d;Q2,0,3;M;RY1,1;I+1;X1;Y1,1;I+1;X0;D3;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;RY1,1;I+2;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;G0;U3;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;RY1,0;Y1,1;I+1;X0;
+variables 1 d
+unresolved none
+stamp 0078dbebdaf82c0d7c77ab3ac7708192060d1e6957e3354d1ff1f8f8a02f81cf
+shard integral 2 0000000000000000 shards/integral-s02-0000000000000000.168b4442b074817c.rrstep 12 309 168b4442b074817c45d545b1acb13196010bfae8412d612e5be9cad548e7bcc1
+shard integral 3 0000000000000000 shards/integral-s03-0000000000000000.04ff1a30e4dd1e8f.rrstep 8 504 04ff1a30e4dd1e8f6fd4830a1683ec4575133a7a5cdd45fde1577040b66e8ff2
+end

@@ -1,0 +1,9 @@
+schema rustred.ordered-step-cache.v3
+semantics rustred-ordered-steps-2026-10-31
+adapter closed-artifact
+family rustred-integral-family-v2;N37:rustred-one-loop-unit-mass-tadpole-v1;L1;1:k;E0;P1;1:d;Q1,0,1;M;RY1,1;I+1;X1;Y1,1;I+1;X0;D1;RY1,1;I-1;X0;Y1,1;I+1;X0;RY1,1;I+1;X0;Y1,1;I+1;X0;G0;U1;RY1,0;Y1,1;I+1;X0;
+variables 1 d
+unresolved none
+stamp ed8479c09d9e87772da3bd6a0928fe40ff55a15a77ba0ef3f8f28393d64b19b5
+shard integral 1 0000000000000000 shards/integral-s01-0000000000000000.267d2e0077b8a294.rrstep 4 226 267d2e0077b8a2942cf61d645f472079c0327ac0f1772fbda9c32eb7036133fa
+end
