@@ -327,7 +327,88 @@ are not replacements for the recorded query predicates. Five-loop declared
 terminals remain uncomputed, without a claim that the declared set is a complete
 known master basis.
 
-== Cache checks
+== Ordered step caches
+
+Vakint reduces only with RustRed's ordered scheduler. A pack may ship one RustRed
+Ordered step-cache directory per reduction program, named exactly as in a Vakint
+cache directory:
+
+```
+<L>L/ordered-cache.json
+<L>L/ordered-cache/<label>.<tables16>.<stamp16>/ordered-step-cache.txt
+<L>L/ordered-cache/<label>.<tables16>.<stamp16>/shards/*.rrstep
+<L>L/ordered-cache/<label>.<tables16>.<stamp16>/ordered-tail.rrtail   (optional)
+```
+
+The loop manifest names them with
+`"ordered_cache": {"path": "ordered-cache", "metadata": "ordered-cache.json"}` and
+lists every file in `files` (sha256, bytes). A record is one checked Ordered step
+(children, step coefficients, emitted terminals, nonzero conditions in order);
+records never hold weights, zero decisions or results, so replaying them reproduces
+every phase of an uncached run exactly. The optional tail table holds complete
+reductions of tail identities onto their single terminal.
+
+Binding is by versioning only. The stamp (`stamp16` is its start) is RustRed's
+BLAKE3 of the step-cache schema (`rustred.ordered-step-cache.v3`), the hand-bumped
+step semantics version and cheap identity fields of the program (adapter, family
+fingerprint, coefficient variables, unresolved policy); no source or build digest.
+`tables16` starts the program's rule-table identity as Vakint computes it: the
+sha256 of `ibps/rules.rrbin` for the 1L–3L closed programs, a digest of the
+declared sha256 of the four `ibps/<x>.*` inputs of each 4L candidate program, and
+the saved-application identity (`ibps/application.json` with the pack's families
+and masters) at five loops. Vakint uses a shipped cache iff the label, tables and
+stamp equal the loaded program's and every file of the directory matches the loop
+manifest; otherwise it prints one line and runs that program cold. Changing a
+reduction table therefore retires its caches automatically; a RustRed release that
+bumps the step semantics or a schema needs newly prepared caches.
+
+`ordered-cache.json` (`vakint.external-data.ordered-cache.v2`) records the producer
+and the workload (free-form provenance) and, per program sorted by label, `label`,
+`directory`, the full `rule_tables` and `stamp`, `adapter`, `records`, `shards`,
+`bytes` (shard bytes), `tail_bytes` and `complete`. A trimmed cache has
+`complete: false` and `trim` with `from_records`, `from_shards`, `from_bytes`,
+`from_tail_bytes`, `method` and `full_cache` (where the complete cache lives), and
+may declare the complete zero-momentum cache it extends as `base_bytes` and
+`base_tail_bytes`.
+
+Prepare caches only with Vakint's `ordered_cache_maintenance prepare` (cold, from
+the deterministic workload, against this checkout) and stage its cache directory:
+
+```sh
+python3 tools/ordered_cache.py stage --cache-dir CACHE_DIR --metadata META.json [--loops 5] [--link]
+python3 tools/ordered_cache.py stage --export EXPORT          # EXPORT/<L>L/ordered-cache{,.json}
+python3 tools/ordered_cache.py light-bytes
+python3 tools/data.py validate
+```
+
+`META.json` holds `producer`, `workload` rows (each with its `loop_count`) and
+per-label `programs` overrides (`complete`, `trim`). Staging replaces the Ordered
+caches of the staged loop counts and nothing else; `remove --loops L` takes them
+out again. `tools/ordered_cache.py` recomputes every program's rule tables from the
+pack and checks the directory names, the inventory and sizes, the RustRed manifest
+(schema and version lines, stamp, shard rows), every shard header, the tail-table
+header (schema `rustred.ordered-tail.v3`, adapter, payload length) and the
+metadata. Stamps and payload BLAKE3 digests are checked by RustRed when Vakint
+opens a cache. Every cache file must stay at most 95,000,000 bytes (GitHub refuses
+files above 100 MiB).
+
+A cache too large for a pack (the complete 5L quadratic cache) stays outside the
+repository as a plain Vakint cache-directory entry with a receipt:
+`python3 tools/ordered_cache.py receipt --program DIR --artifacts CHECKOUT --output
+ordered-cache-5L-quadratic-full.json` writes the `programs[]` fields of the
+directory (`complete: true`) plus the sha256 and size of each of its files.
+
+== Retired depth-first caches
+
+The depth-first prepared caches (1L–4L `cache/` bundles and `cache.json`, the 5L
+LIGHT `cache/prepared.rrcache.gz`) were retired with depth-first reduction.
+`tools/ordered_cache.py remove-dfs` recorded every removed file and manifest section
+in `provenance/retired-dfs-caches-v1/receipt.json`; the bytes remain in Git
+history at `76b0ee34`. `data.py validate` checks the retired rows of the original
+migration receipt against it. The sections below describe how those caches were
+checked and are kept as provenance for the historical releases.
+
+== Cache checks (historical depth-first caches)
 
 The existing workload consists of physical parent pinches, at most two extra
 positive powers and numerator rank at most one. Complete selected-root counts
@@ -597,14 +678,17 @@ budget. Preserve every useful heavy cache independently of the official LIGHT
 selection; size never authorizes deleting or truncating captured records.
 
 Official five-loop releases publish at most *95,000,000 compressed cache bytes*
-(decimal bytes, not 95 MiB). The aggregate is the existing
-`cache/prepared.rrcache.gz` file plus every compressed release part of a selected
-five-loop `runtime_cache_snapshots` descriptor. Descriptor and inventory metadata,
+(decimal bytes, not 95 MiB). The aggregate is the five-loop Ordered caches
+(`tools/ordered_cache.py light-bytes`: complete caches with their shard and tail
+bytes, a trimmed cache only beyond its declared complete zero-momentum base), a
+legacy `cache/prepared.rrcache.gz` file if a pack still declared one, plus every
+compressed release part of a selected five-loop `runtime_cache_snapshots`
+descriptor. Descriptor and inventory metadata,
 other loop data and lower-loop caches are outside this cache-payload budget.
 There is no second cap on decoded Native files, indexes or directory size.
 Full `tools/data.py pack` and `tools/publish.py` both enforce this policy before
-creating release archives or uploading assets. The current LIGHT path remains
-the single prepared gzip; do not select a HEAVY descriptor in an official release.
+creating release archives or uploading assets. Do not select a HEAVY descriptor
+in an official release.
 
 This is a publication policy, not a Native codec limit. General
 `pack-nativepack`, local source validation and nonpublishable `--runtime-only`
