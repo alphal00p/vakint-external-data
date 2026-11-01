@@ -18,7 +18,10 @@ RustRed step-cache schema, the step semantics version and cheap identity fields 
 the program, and its directory name carries the program's rule-table identity.
 Vakint uses a shipped cache only if both match the running build and the loaded
 tables and every file matches the loop manifest; otherwise it prints one line and
-runs that program without it. See [AUTHORING.typ](AUTHORING.typ) ("Ordered step caches"). Reduction
+runs that program without it. The 5L pack also ships `route-preparation.rrbin`, the
+saved route verification of the 5L application, which RustRed restores instead of
+re-verifying every transport route at load (rejected loudly and recomputed on any
+mismatch). See [AUTHORING.typ](AUTHORING.typ) ("Ordered step caches"). Reduction
 tables, masters, constants, graphs, numerical data and the 5L benchmarks are
 unchanged.
 

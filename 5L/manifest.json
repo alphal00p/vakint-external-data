@@ -86915,6 +86915,10 @@
   "cache": {
     "available": false
   },
+  "route_preparation": {
+    "path": "route-preparation.rrbin",
+    "format": "rustred.saved-application.route-preparation.v1"
+  },
   "coverage": "coverage.json",
   "provenance": {
     "current_publication": "provenance/current-publication.json",
@@ -90053,6 +90057,10 @@
     "terminal-definitions.json": {
       "sha256": "3510ceb7c1990a8e3197fc8f3e9df7869d91c78eb3fed76fcd671ca051c7c6d0",
       "bytes": 3473292
+    },
+    "route-preparation.rrbin": {
+      "sha256": "4f4e546c6a4d741088fe328b92c01c60e1c77843a6e8d53d10689b609bdeec85",
+      "bytes": 5168920
     }
   }
 }

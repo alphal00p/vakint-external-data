@@ -398,6 +398,20 @@ repository as a plain Vakint cache-directory entry with a receipt:
 ordered-cache-5L-quadratic-full.json` writes the `programs[]` fields of the
 directory (`complete: true`) plus the sha256 and size of each of its files.
 
+== Saved route preparation add-on
+
+`5L/route-preparation.rrbin`, declared as
+`"route_preparation": {"path": "route-preparation.rrbin", "format":
+"rustred.saved-application.route-preparation.v1"}` and listed in `files`, holds the
+complete output of RustRed's verification of every transport route of the 5L
+saved application (`ibps/`), bound by its schema, the verified-map semantics
+version and the application's selection identity, with a BLAKE3 checksum. RustRed
+restores the routes from it instead of re-verifying them at load; on any mismatch
+or corruption it prints one line and verifies as before. It is a derived file: it
+changes neither `ibps/` nor the cache identity of the 5L program. Regenerate it
+with RustRed's `saved_application route-addon-write` and check it with
+`route-addon-check` whenever `ibps/` or the semantics version changes.
+
 == Retired depth-first caches
 
 The depth-first prepared caches (1L–4L `cache/` bundles and `cache.json`, the 5L
