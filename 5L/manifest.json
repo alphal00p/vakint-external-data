@@ -1,6 +1,6 @@
 {
   "schema": "vakint.external-data.loop.v1",
-  "version": "v0.1.2",
+  "version": "v0.2.0",
   "loop_count": 5,
   "dimension": "4-2*epsilon",
   "normalization": "FMFTandMATAD",
@@ -86931,8 +86931,8 @@
   },
   "files": {
     "README.md": {
-      "sha256": "51cb00c4d64ab165406473fda95fb5d391796c583e4ffa5a6fd499b1b2410a9a",
-      "bytes": 950
+      "sha256": "b54aec839a995def686b8a3422fa8fafacac489393742cd14a6c33998229e59f",
+      "bytes": 2061
     },
     "benchmarks/provenance.json": {
       "sha256": "2cab157d31d5c9fd51fb1844ae2e144c13ae43be17f198abad1ced07656ee063",

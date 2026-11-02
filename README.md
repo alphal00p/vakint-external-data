@@ -1,5 +1,30 @@
 # Vakint external data
 
+## v0.2.0
+
+Release v0.2.0 (2 November 2026) publishes the source updates of 28 October to
+1 November 2026 described below; v0.1.2 stays available unchanged. Since v0.1.2:
+
+- Exact 1L–4L coefficients: the last 43 four-loop numerical fallbacks have exact
+  formulas, and every exact row is rewritten in the 68-constant basis v4
+  ([`docs/basis.md`](docs/basis.md)). The rewrite leaves every numerical value
+  unchanged. Rows with s6 write the Vakint built-in `vakint::s6`.
+- Numerical 1L–4L values: 26 four-loop masters gained 500-digit windows, and 644
+  rows of 112 three- and four-loop masters now hold the values of their exact
+  formulas with more validated digits; `4L/constants.json` lifts five D=2 periods to
+  520 digits and adds 41 constants.
+- Caches: the depth-first prepared caches (1L–4L `cache/`, the 5L LIGHT cache) are
+  retired. Each pack ships a RustRed Ordered step cache under `<L>L/ordered-cache/`
+  (1L–4L complete, 5L trimmed to the release budget).
+- 5L: the saved route-preparation add-on `5L/route-preparation.rrbin`.
+
+Reduction tables, master sets, graphs and the five-loop catalogue are unchanged.
+Managed installs of `v0.2.0` or `data-latest` now receive the Ordered step caches
+and the 5L route-preparation add-on. v0.2.0 declares no `provenance_assets`; the
+v0.1.2 cache-build evidence stays on the v0.1.2 release.
+
+## Source updates
+
 The 1 November 2026 source update retires the depth-first prepared caches and
 prepares the packs for **Ordered step caches**. Vakint reduces only with RustRed's
 ordered scheduler and never reads the depth-first caches any more; they are removed
@@ -108,7 +133,7 @@ retain their stronger 20,000-digit values and bounded evidence.
 
 Versioned native RustRed reductions, master-integral Laurent coefficients and
 graphs, and Ordered step caches for
-[Vakint](https://github.com/alphal00p/gammaloop/tree/6cdaa993ee9b413189ae077a8f783de6223cc42e/crates/vakint).
+[Vakint](https://github.com/alphal00p/gammaloop/tree/vakint_rustred/crates/vakint).
 The data originates in Vakint's former `artifacts` directory. Original lower-loop
 payloads and migration checksums are retained; previous five-loop publications
 remain available through Git history.
@@ -151,7 +176,7 @@ build a full release in a new directory with every declared source asset.
 
 ```python
 engine.load_official_external_data(4)
-engine.load_official_external_data(4, version="v0.1.1", local_artifacts_path="/path/to/data")
+engine.load_official_external_data(4, version="v0.2.0", local_artifacts_path="/path/to/data")
 ```
 
 A checkout of this repository can be passed directly as `local_artifacts_path`
@@ -178,24 +203,23 @@ assert coverage of every index tuple below the maxima. Historical records under
 `provenance/original-root` are immutable migration evidence and do not define the
 current five-loop basis.
 
-Load the new five-loop source checkout explicitly, without downloading an older
-release:
+Release v0.2.0 ships this five-loop source in its 5L pack. A checkout can also be
+loaded directly:
 
 ```python
 engine.load_external_data("/path/to/vakint-external-data", max_loop_count=5)
 ```
 
 Five-loop evaluation is symbolic until numerical coefficients are supplied.
-The selected file has actual Native `c2ca815` export/reimport validation for all
-2,102 records, exact coefficients and ordered guards, with no missing or partial
-records. Its authenticated usage comes from the frozen tuning and physical
-inputs; no final held-out outcomes selected its records. Original measurement
-and exporter cohorts remain separate. The previous two-root fallback, its
-producer/consumer evidence and original manifests are preserved under
+Release v0.1.2 also shipped a selected 5L LIGHT depth-first cache of
+2,102 records with Native `c2ca815` export/reimport validation, selected from
+frozen tuning and physical inputs; it was retired with the other depth-first
+caches (see the 1 November 2026 update above). Its selection evidence remains
+under [`provenance/light-selection`](provenance/light-selection). The two-root
+fallback it replaced, with its producer/consumer evidence and original manifests,
+is preserved under
 [`provenance/replaced-fallback-20261028`](provenance/replaced-fallback-20261028).
-All five-loop noncache files, including their historical README, remain the
-unchanged input-data authority. The LIGHT depth-first cache described here was
-retired (see the 1 November 2026 update above).
+All five-loop non-cache files remain the unchanged input-data authority.
 
 For a subsequent five-loop refresh, use `tools/replace_five_loop.py stage` with
 the exported native application and its native terminal definitions, validate
