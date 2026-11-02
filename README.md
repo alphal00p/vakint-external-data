@@ -23,9 +23,11 @@ Release v0.2.0 (2 November 2026) publishes the source updates of 28 October to
 - 5L: the saved route-preparation add-on `5L/route-preparation.rrbin`.
 
 Reduction tables, master sets, graphs and the five-loop catalogue are unchanged.
-Managed installs of `v0.2.0` or `data-latest` now receive the Ordered step caches
-and the 5L route-preparation add-on. v0.2.0 declares no `provenance_assets`; the
-v0.1.2 cache-build evidence stays on the v0.1.2 release.
+A new managed install of `v0.2.0` or `data-latest` receives the Ordered step caches
+and the 5L route-preparation add-on, as does an existing one loaded with
+`version="v0.2.0"` or `refresh=True`; an existing `data-latest` install keeps its
+cached release (for example v0.1.2) until it is refreshed. v0.2.0 declares no
+`provenance_assets`; the v0.1.2 cache-build evidence stays on the v0.1.2 release.
 
 ## Source updates
 
