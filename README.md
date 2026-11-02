@@ -25,6 +25,31 @@ mismatch). See [AUTHORING.typ](AUTHORING.typ) ("Ordered step caches"). Reduction
 tables, masters, constants, graphs, numerical data and the 5L benchmarks are
 unchanged.
 
+The shipped Ordered step caches were written with the final RustRed main candidate
+(step-cache schema `rustred.ordered-step-cache.v3`, step semantics
+`rustred-ordered-steps-2026-10-31`, tail tables `rustred.ordered-tail.v3`; fewest-terms
+Route layering and the adjoint tail, both RustRed defaults) by Vakint's
+`ordered_cache_maintenance prepare`. Their workload is the 1L–4L zero-momentum and
+quadratic ladder rungs, the four-loop benchmark integrals and the two 5L benchmarks:
+
+| Pack | Programs | Records | Shard bytes | Tail bytes | Complete |
+|---|---|---:|---:|---:|---|
+| 1L | `1L-unit-mass-vacuum-k1` | 4 | 226 | 0 | yes |
+| 2L | `2L-unit-mass-vacuum-k3` | 20 | 813 | 0 | yes |
+| 3L | `3L-unit-mass-vacuum-k6` | 758 | 37,141 | 0 | yes |
+| 4L | `4L-four-loop-{bmw,fg,h,x}` | 126,614 | 11,265,099 | 1,411,418 | yes |
+| 5L | `5L-tide-five-loop-common-basis` | 1,082,534 | 94,257,265 | 0 | no (trimmed) |
+
+The whole `5L/ordered-cache` directory with its metadata stays within the 95,000,000-byte
+budget. It holds the 5L zero-momentum benchmark's step records (except one support-5
+route shard that saved no time), and nine of its 31 shards also hold the 5L quadratic
+benchmark's records. Every shard was chosen by the measured warm time it saves per byte
+(`trim` in `5L/ordered-cache.json`). It ships no tail table: the zero-momentum tail table
+speeds up that benchmark but slowed the quadratic one. The complete 5L cache (both
+benchmarks: 2,142,618 records, 213.7 MB of shards and a 251.4 MB tail table) is
+distributed separately; to use it, place its directory unchanged in a Vakint Ordered
+cache directory.
+
 The 31 October 2026 source update rewrites every exact 1L–4L coefficient row (739 rows
 of 115 masters, 713 distinct coefficients) in one basis of 68 constants, with common
 factors pulled out and terms collected; see [`docs/basis.md`](docs/basis.md). The
