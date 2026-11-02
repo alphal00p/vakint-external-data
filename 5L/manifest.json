@@ -86915,6 +86915,10 @@
   "cache": {
     "available": false
   },
+  "ordered_cache": {
+    "path": "ordered-cache",
+    "metadata": "ordered-cache.json"
+  },
   "route_preparation": {
     "path": "route-preparation.rrbin",
     "format": "rustred.saved-application.route-preparation.v1"
@@ -89886,6 +89890,138 @@
       "sha256": "d2628bb5672b18807039be6f9218c07701cfcb80320458277cda2b9f0ef47bd1",
       "bytes": 6697
     },
+    "ordered-cache.json": {
+      "sha256": "4cf2a629496b0998edef2100bc2a00daaf1dfb96bdcf488d22a5d2057ada2c85",
+      "bytes": 5614
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis.a244b9b4ce8f7228.b5648b4aed2d6a76/ordered-step-cache.txt": {
+      "sha256": "278f5de0b37c6f091a53c9739fbbbd84430e53b14b3f5f1ab295c500c5b81ec2",
+      "bytes": 10500
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis.a244b9b4ce8f7228.b5648b4aed2d6a76/shards/apply-s05-0000000000004990.dbde3b5b38893e18.rrstep": {
+      "sha256": "16b637fc2901aac8194929e09fce8d9b24b3cda24de84aae1c6f30f035e5dafe",
+      "bytes": 4875549
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis.a244b9b4ce8f7228.b5648b4aed2d6a76/shards/apply-s06-000000000000074a.30ffce4fb097612d.rrstep": {
+      "sha256": "5c6db3c1ae2b54df34785825d2ee38e3f0a0b980751a68acb7c966f62e451232",
+      "bytes": 7646031
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis.a244b9b4ce8f7228.b5648b4aed2d6a76/shards/apply-s06-000000000000074c.3a6998d2890c8f50.rrstep": {
+      "sha256": "03bd0b328d24d757afb05b3b217b0316743679c8f2808b4ebcec190ae50bd957",
+      "bytes": 17361473
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis.a244b9b4ce8f7228.b5648b4aed2d6a76/shards/apply-s06-0000000000004615.388bd362647c8d8f.rrstep": {
+      "sha256": "76aa5cb1b894c651e493124b32d688c66355c86a5debbea095b5911c3b4506ea",
+      "bytes": 8275675
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis.a244b9b4ce8f7228.b5648b4aed2d6a76/shards/apply-s06-0000000000006930.7cef979bc9aa4bb0.rrstep": {
+      "sha256": "3dafc40a1b76d31606d93afa9899566219f64f20bbfdfa21d286809dde08509c",
+      "bytes": 7431222
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis.a244b9b4ce8f7228.b5648b4aed2d6a76/shards/apply-s07-0000000000000a6d.697ab7f5ec36445c.rrstep": {
+      "sha256": "14e41683707584f0a34f4697027a58e4b0dd3376c8b76fd3e59161fbd9067679",
+      "bytes": 8217979
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis.a244b9b4ce8f7228.b5648b4aed2d6a76/shards/apply-s07-0000000000004a87.ba287d3322f9ca8e.rrstep": {
+      "sha256": "27a74421fde3a637c2881c4207ae5d1b951e97db4cd46885f37a118875e07551",
+      "bytes": 13986822
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis.a244b9b4ce8f7228.b5648b4aed2d6a76/shards/apply-s07-0000000000004ba4.a0ff1b23ce10e756.rrstep": {
+      "sha256": "1df0895e83f9861af638d69626b824bb42f813aef2f20f9fda198707860aa745",
+      "bytes": 4221433
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis.a244b9b4ce8f7228.b5648b4aed2d6a76/shards/apply-s07-0000000000007826.a0cbbfe6a5c47d29.rrstep": {
+      "sha256": "f6fa86680f20dba7a78ee8946da8a5e35118a2681388037fa29b1b98a85d7785",
+      "bytes": 1037308
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis.a244b9b4ce8f7228.b5648b4aed2d6a76/shards/apply-s07-0000000000007a24.654250b15579a354.rrstep": {
+      "sha256": "18139a9eb8bdcc33261d2fab7f45453661d5419ac2d42e18d6347b8e88e31b43",
+      "bytes": 266722
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis.a244b9b4ce8f7228.b5648b4aed2d6a76/shards/apply-s07-0000000000007a44.f07fac263ede6a78.rrstep": {
+      "sha256": "8ab6afb272ab75960157ec7c6b4474a795fd12cd6a3864ca467b45d706ac3e3d",
+      "bytes": 836495
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis.a244b9b4ce8f7228.b5648b4aed2d6a76/shards/apply-s08-00000000000049ae.65ffe2c050ad753c.rrstep": {
+      "sha256": "74fec1b9a624ace713688857a43c9073f58101dd544b29d694364bc3637cfa12",
+      "bytes": 133544
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis.a244b9b4ce8f7228.b5648b4aed2d6a76/shards/apply-s08-0000000000006b46.6518d6fb0d11fbd9.rrstep": {
+      "sha256": "958aad3f908ce4ff4f188eeb59469e3ea789e43ff5ddc0f380d99a8e409636ea",
+      "bytes": 419662
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis.a244b9b4ce8f7228.b5648b4aed2d6a76/shards/apply-s08-0000000000007827.d8a52ee24bbfb4e8.rrstep": {
+      "sha256": "eb2704225df3005c4eccd41f1d8e3d84389c59fcc06d34342002e2ae06d4ce81",
+      "bytes": 1559753
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis.a244b9b4ce8f7228.b5648b4aed2d6a76/shards/apply-s08-0000000000007a64.abc19a81cb10dc0e.rrstep": {
+      "sha256": "f3e12551fc98c562efeaeb2928e676658b84a42d6ba9551061106ea49f0c97e2",
+      "bytes": 675381
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis.a244b9b4ce8f7228.b5648b4aed2d6a76/shards/apply-s09-0000000000004b76.01609ac2ca9072fe.rrstep": {
+      "sha256": "4548587a24ea102b9c0e769a5ab416d5ea4f67a9e45be0ecf0ae3ba2d1343e0a",
+      "bytes": 261641
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis.a244b9b4ce8f7228.b5648b4aed2d6a76/shards/route-s06-000000000000074a.689709ef6cbd334b.rrstep": {
+      "sha256": "a56d55337cb277597c43914857b74e4678f8be8e03a05d79c5317391a4495704",
+      "bytes": 11562423
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis.a244b9b4ce8f7228.b5648b4aed2d6a76/shards/route-s06-000000000000074c.b4c67d69d00590c0.rrstep": {
+      "sha256": "9d728b133d578f34d4ad4f61f8b01f45e750e39cd306755a5ade9a983bc2e27a",
+      "bytes": 1836049
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis.a244b9b4ce8f7228.b5648b4aed2d6a76/shards/route-s06-0000000000004615.3d30675ccdf4029c.rrstep": {
+      "sha256": "1d0af6564d13ae8d9cadc031e6df1bcab005e3c9789c0d091c97cbbbcef16625",
+      "bytes": 452224
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis.a244b9b4ce8f7228.b5648b4aed2d6a76/shards/route-s06-0000000000006930.2b906d3570720d9c.rrstep": {
+      "sha256": "b93b0b8f49bfe890d402cf67ec8d32b594be680f6f88c80b367bf4280e2c4d79",
+      "bytes": 675920
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis.a244b9b4ce8f7228.b5648b4aed2d6a76/shards/route-s07-0000000000000a6d.6f3cbd19ec631f97.rrstep": {
+      "sha256": "b77b844968272e1657bcbb4d202115dbda32e4eea394a393e8ada8816c0a3824",
+      "bytes": 496598
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis.a244b9b4ce8f7228.b5648b4aed2d6a76/shards/route-s07-0000000000004a87.beea279b18ac8666.rrstep": {
+      "sha256": "0e3b5cfa44ab0c9862c678a27915e0a017366366b41b08f02d792cedb5b1d0e9",
+      "bytes": 283664
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis.a244b9b4ce8f7228.b5648b4aed2d6a76/shards/route-s07-0000000000004ba4.82ee0d8256e5d054.rrstep": {
+      "sha256": "57a4290bfb80cd9c15b726731c90b73c757a35cd715c9117718af92ef4181f96",
+      "bytes": 164312
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis.a244b9b4ce8f7228.b5648b4aed2d6a76/shards/route-s07-0000000000007826.da0c9e7666d5d2af.rrstep": {
+      "sha256": "4c47c48660b48ed7b35f188c82964ed238663b8999a0f80c9551540291fa703a",
+      "bytes": 493051
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis.a244b9b4ce8f7228.b5648b4aed2d6a76/shards/route-s07-0000000000007a24.2c8efa196f51098a.rrstep": {
+      "sha256": "43a9d3016d5a53eb08573bbc77cc5fe79b7499e5f9a1049f634571adc89fd219",
+      "bytes": 121647
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis.a244b9b4ce8f7228.b5648b4aed2d6a76/shards/route-s07-0000000000007a44.dcd78f3759c09d38.rrstep": {
+      "sha256": "d1b574bda1ac7aeaa3227b19b64bdb79dcac5dfd6275440cdcfac141388c79a6",
+      "bytes": 180254
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis.a244b9b4ce8f7228.b5648b4aed2d6a76/shards/route-s08-00000000000049ae.c1d18a43a447eb35.rrstep": {
+      "sha256": "c6f5c95678ceb16e37d8bca41e0b30f2e99f19585762cd10c46a904122990c3a",
+      "bytes": 42812
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis.a244b9b4ce8f7228.b5648b4aed2d6a76/shards/route-s08-0000000000006b46.f658c47e5cd81592.rrstep": {
+      "sha256": "5baea25f3656b32fd19abfda5856d71bad6ffc9281be0622a423ec4481decdec",
+      "bytes": 163014
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis.a244b9b4ce8f7228.b5648b4aed2d6a76/shards/route-s08-0000000000007827.72a87dae274f897d.rrstep": {
+      "sha256": "497faec32a6bb7ce0c5efd7ab3b926bf3249351056cba3009385c8bfb84484d6",
+      "bytes": 24315
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis.a244b9b4ce8f7228.b5648b4aed2d6a76/shards/route-s08-0000000000007a64.39ee73a780e463f5.rrstep": {
+      "sha256": "767a145c70d50e64def9e49cac3c390730ab63a8f704b5d2be8cd9e9c9bead81",
+      "bytes": 153763
+    },
+    "ordered-cache/5L-tide-five-loop-common-basis.a244b9b4ce8f7228.b5648b4aed2d6a76/shards/route-s09-0000000000004b76.4177baa8eade2d71.rrstep": {
+      "sha256": "e0ef64b94516b6ffd84bce286485ed51fb2507df7751bebaf413e040fb6de935",
+      "bytes": 400529
+    },
     "package.json": {
       "sha256": "b2645e705574d0534d510090e8707d443b6f8f7d7514bcb1ddcab63c50afbb73",
       "bytes": 15222
@@ -90054,13 +90190,13 @@
       "sha256": "1a6adc3554c6b4ae1fe788b90de6d758a2f66fa4cee4edd4fa349f4f76d4222f",
       "bytes": 24554
     },
-    "terminal-definitions.json": {
-      "sha256": "3510ceb7c1990a8e3197fc8f3e9df7869d91c78eb3fed76fcd671ca051c7c6d0",
-      "bytes": 3473292
-    },
     "route-preparation.rrbin": {
       "sha256": "4f4e546c6a4d741088fe328b92c01c60e1c77843a6e8d53d10689b609bdeec85",
       "bytes": 5168920
+    },
+    "terminal-definitions.json": {
+      "sha256": "3510ceb7c1990a8e3197fc8f3e9df7869d91c78eb3fed76fcd671ca051c7c6d0",
+      "bytes": 3473292
     }
   }
 }

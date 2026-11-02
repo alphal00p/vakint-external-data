@@ -1,0 +1,104 @@
+{
+  "schema": "vakint.external-data.ordered-cache.v2",
+  "loop_count": 5,
+  "producer": {
+    "command": "ordered_cache_maintenance prepare --loops 5 --five-loop zero,quadratic (VAKINT_ORDERED_WEIGHT_ARITHMETIC=modular_polynomial, VAKINT_ORDERED_CACHE_MAX_RESIDENT_BYTES=default) (union) + ordered_cache_maintenance prepare --loops 5 --five-loop zero (VAKINT_ORDERED_WEIGHT_ARITHMETIC=modular_polynomial, VAKINT_ORDERED_CACHE_MAX_RESIDENT_BYTES=default) (zero base); trimmed by SCRATCHPAD/caches-data/{select,build_export5}.py",
+    "rustred": {
+      "ordered_step_cache_schema": "rustred.ordered-step-cache.v3",
+      "ordered_step_semantics": "rustred-ordered-steps-2026-10-31",
+      "ordered_tail_schema": "rustred.ordered-tail.v3",
+      "ordered_tail_semantics": "rustred-ordered-tail-2026-10-31",
+      "revision": "92f9393c"
+    },
+    "vakint": {
+      "revision": "e9086e5e6",
+      "version": "0.1.2"
+    },
+    "route_layering": "fewest-terms",
+    "adjoint_tail": true
+  },
+  "workload": [
+    {
+      "input_sha256": "9814c3b49a1b486b9790bbe5458d8bc582c3fb3c299ba6a1a0362db8ba71cb16",
+      "kind": "five-loop-benchmark",
+      "loop_count": 5,
+      "name": "5L-zero-momentum",
+      "nonzero_conditions_sha256": "80641fc2a77301a4f89e062e4a774e86f4f4aeec38d8107b5f3c218354b55427",
+      "prepared_input": "5L/benchmarks/zero-momentum/prepared-input.json",
+      "prepared_input_sha256": "e8bd141e653944390fd48ba234f477173caa2f84089c7ca56ea9b39938f7b1f4",
+      "projection": "zero-momentum",
+      "retained_sha256": "cf415ec776cfe091c69d7bc1ccd4bf1f8c5acb4b8a71c0636290ba7866a01975"
+    },
+    {
+      "input_sha256": "276d17a136aa5292b82effe05354d0b7cb639966a5f3797f960bbdf9f301a1fa",
+      "kind": "five-loop-benchmark",
+      "loop_count": 5,
+      "name": "5L-quadratic",
+      "nonzero_conditions_sha256": "5a56684173706ff69d9991147666a47fe04fff88beb888d67f006e45041a7be3",
+      "prepared_input": "5L/benchmarks/quadratic/prepared-input.json",
+      "prepared_input_sha256": "1c425e6da17492e3f116ac3357d68dc92759dacdc7a6943514c635ce7dcf110b",
+      "projection": "quadratic",
+      "retained_sha256": "093086472ecdc75fd7180f5ce08a758f822a3048a3661eb8cc60c06e07ce34a4"
+    }
+  ],
+  "programs": [
+    {
+      "label": "5L-tide-five-loop-common-basis",
+      "directory": "ordered-cache/5L-tide-five-loop-common-basis.a244b9b4ce8f7228.b5648b4aed2d6a76",
+      "rule_tables": "a244b9b4ce8f7228c70c85840887d0a8c93e4ec71daf66046875536861fbd273",
+      "stamp": "b5648b4aed2d6a76eee19ef6b901a1bc2d63317dc90b07d63bd5f2b8aef2b934",
+      "adapter": "saved-application",
+      "records": 1082534,
+      "shards": 31,
+      "bytes": 94257265,
+      "tail_bytes": 0,
+      "complete": false,
+      "trim": {
+        "from_records": 2142618,
+        "from_shards": 32,
+        "from_bytes": 213697154,
+        "from_tail_bytes": 251419100,
+        "method": "the complete 5L zero-momentum cache (prepare --five-loop zero: step records; its tail table not shipped), without its shard(s) route-s05-0000000000004990, with 9 of its 32 shards replaced by the zero+quadratic shards of prepare --five-loop zero,quadratic (one cache root); every choice by measured warm seconds saved per byte",
+        "full_cache": "5L-tide-five-loop-common-basis.a244b9b4ce8f7228.b5648b4aed2d6a76 (complete zero+quadratic cache: 2,142,618 records, 213,697,154 B shards + 251,419,100 B tail) (outside the repository, user-organized download; receipt ordered-cache-5L-quadratic-full.receipt.json sha256 224b3402875790a66d923595324a0ec3ba3bed801042e96ca14bf06fd7d95d8e)",
+        "base_bytes": 35050285,
+        "base_tail_bytes": 0,
+        "union_shards": [
+          "route-s06-000000000000074a",
+          "route-s09-0000000000004b76",
+          "apply-s06-000000000000074a",
+          "apply-s06-000000000000074c",
+          "apply-s06-0000000000004615",
+          "apply-s07-0000000000000a6d",
+          "apply-s07-0000000000004a87",
+          "apply-s07-0000000000004ba4",
+          "apply-s08-0000000000007827"
+        ],
+        "zero_only_shards": [
+          "route-s06-000000000000074c",
+          "route-s06-0000000000004615",
+          "route-s06-0000000000006930",
+          "route-s07-0000000000000a6d",
+          "route-s07-0000000000004a87",
+          "route-s07-0000000000004ba4",
+          "route-s07-0000000000007826",
+          "route-s07-0000000000007a24",
+          "route-s07-0000000000007a44",
+          "route-s08-00000000000049ae",
+          "route-s08-0000000000006b46",
+          "route-s08-0000000000007827",
+          "route-s08-0000000000007a64",
+          "apply-s05-0000000000004990",
+          "apply-s06-0000000000006930",
+          "apply-s07-0000000000007826",
+          "apply-s07-0000000000007a24",
+          "apply-s07-0000000000007a44",
+          "apply-s08-00000000000049ae",
+          "apply-s08-0000000000006b46",
+          "apply-s08-0000000000007a64",
+          "apply-s09-0000000000004b76"
+        ],
+        "selection": "Measured warm seconds saved per byte (2026-11-01/02). No tail table: the complete zero tail table (40.6 MB) saves the 5L zero run ~35 s end to end, but a controlled A/B (two native 5L quadratic runs at the same time on the same CPUs, with and without it) showed it slows the quadratic run by more than 780 s (its modular replay), so no tail table is shipped. The support-5 route shard measured no saving and is not shipped. Quadratic shards: per-phase saving of each shard (cold vs warm, quadratic, 8 threads, quiet CPUs) x its quadratic-only share of records, per added byte (at most 0.21 s/MB); best taken greedily within the budget."
+      }
+    }
+  ]
+}
