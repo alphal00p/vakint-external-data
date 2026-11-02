@@ -1,5 +1,9 @@
 # Vakint external data
 
+The `main` branch declares v0.2.1: the unreleased line that follows the v0.2.0
+release. There is no v0.2.1 release. For published, checksummed data, use the
+v0.2.0 release or `data-latest`.
+
 ## v0.2.0
 
 Release v0.2.0 (2 November 2026) publishes the source updates of 28 October to
