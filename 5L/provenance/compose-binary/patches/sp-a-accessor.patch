@@ -1,0 +1,27 @@
+--- /shared/vhirschi/t3code/vakint/scratchpad/5l-pilot/rustred-dev/wt-layer/crates/rustred-app/src/application/saved_application/mod.rs	2026-10-25 08:11:59.523645389 +0000
++++ rr-src/crates/rustred-app/src/application/saved_application/mod.rs	2026-11-03 11:13:03.930064000 +0000
+@@ -432,6 +432,24 @@
+     pub fn remaining_terminals(&self) -> &BTreeSet<SavedApplicationIntegral> {
+         &self.terminals.remaining
+     }
++    /// SP-A scratch copy only (never upstream): every raw terminal row with its exact
++    /// coefficients and shared nonzero conditions, and whether the package is layered.
++    pub fn sp_terminal_rows(
++        &self,
++    ) -> Vec<(
++        &SavedApplicationIntegral,
++        Vec<(&SavedApplicationIntegral, &Coefficient)>,
++        &[Coefficient],
++    )> {
++        self.terminals
++            .rows
++            .iter()
++            .map(|(k, row)| (k, row.terms.iter().collect(), row.conditions.as_slice()))
++            .collect()
++    }
++    pub fn sp_is_layered(&self) -> bool {
++        self.terminals.layer.is_some()
++    }
+     pub fn validate_entry(&self, key: &IntegralKey) -> Result<(), AppError> {
+         self.entry_domain.validate(key)
+     }

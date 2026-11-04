@@ -1,0 +1,18 @@
+--- /shared/vhirschi/t3code/vakint/scratchpad/5l-pilot/tmp/sp-a/rr-src/examples/rust/sp_dump.rs	2026-11-03 12:30:26.652559992 +0000
++++ /shared/vhirschi/t3code/vakint/scratchpad/5l-pilot/basis-b/b2/pack/rr-src/examples/rust/sp_dump.rs	2026-11-03 19:11:41.736164749 +0000
+@@ -194,7 +194,14 @@
+     let offset: usize = args.get(4).map(|s| s.parse()).transpose()?.unwrap_or(0);
+     let count: usize = args.get(5).map(|s| s.parse()).transpose()?.unwrap_or(usize::MAX);
+     let started = Instant::now();
+-    let mut prepared = load_saved_application::<N>(app, SavedApplicationOptions::default())?;
++    // B1-R variant: SP_ADVISORY=1 -> entry coverage Advisory (attempt inputs outside the recorded union; with the
++    // default UnresolvedPolicy::Reject only exact fully reduced results are returned), as the dev branch does.
++    let mut options = SavedApplicationOptions::default();
++    if std::env::var("SP_ADVISORY").is_ok() {
++        options.entry_coverage_policy = rustred_app::SavedApplicationEntryCoveragePolicy::Advisory;
++        eprintln!("entry coverage policy: Advisory");
++    }
++    let mut prepared = load_saved_application::<N>(app, options)?;
+     eprintln!("loaded in {:.1} s", started.elapsed().as_secs_f64());
+     let mut file = std::io::BufWriter::new(
+         std::fs::OpenOptions::new()

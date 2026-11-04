@@ -40,7 +40,7 @@
     },
     {
       "source": "1L/masters/P1/numerical.json",
-      "path": "1L/masters/P1/numerical.json",
+      "path": "provenance/original-coefficients/1L/masters/P1/numerical.json",
       "sha256": "b54e96eaf3deed297169b16f34bcc28d9d32f6ea2344fd84457f27e21a32ea3d",
       "bytes": 120166
     },

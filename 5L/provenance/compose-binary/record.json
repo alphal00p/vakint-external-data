@@ -1,0 +1,49 @@
+{
+  "schema": "b2p.compose-binary-record.v1",
+  "written_utc": "2026-11-04T12:13:39Z",
+  "writer": "track C1-PACK (basis-b/c1/PROGRESS-C1.md)",
+  "binary": {
+    "name": "rustred-b2p-25f067fe674f",
+    "path": "/shared/vhirschi/t3code/vakint/scratchpad/5l-pilot/basis-b/b2/pack/bin/rustred-b2p-25f067fe674f",
+    "sha256": "25f067fe674fb7543d9795440fca5a9655a0e9581e3bec6e7ca213e7c1064f04",
+    "built": "2026-11-03 19:21-19:31Z (unit b2p-build-compose2, cargo release, pack/rr-target), frozen by scripts/freeze_bin.sh",
+    "recorded_revision_label": "b82aa2cf+b2p-8ddbd2f960fe",
+    "label_meaning": "'<base commit short>+b2p-<sha256[:12] of patches/b2p-layer-basis-change.patch>'; the label names only the compose-relevant patch, the binary was built with all patches listed below applied"
+  },
+  "base": {
+    "repository": "alphal00p/rustRed (campaign worktree rustred-dev/wt-layer)",
+    "commit": "b82aa2cff5ba384757b52a8df8ca807b565ff766",
+    "commit_subject": "RR-11 S1 test: run the xspace-banana assertion before the two-stage block",
+    "commit_date": "2026-11-03 01:21:06 +0000",
+    "branch": "feature/saved-application-relations-layer",
+    "on_any_remote_branch": false,
+    "on_rustRed_main": false,
+    "note": "local campaign commit (RR-11 refinement-layer work), not pushed; NOT alphal00p/rustRed main"
+  },
+  "patches": [
+    {
+      "file": "b2p-layer-basis-change.patch",
+      "sha256": "8ddbd2f960feea4eb2b6803bf869425e91201bf3e07b91ea73341b694a235a68",
+      "touches": "crates/rustred-app/src/application/saved_application/layer.rs: row provenance tag basis-change (BasisChange) and the scoped product-route rule for factorized sources (compose behaviour)"
+    },
+    {
+      "file": "sp-a-accessor.patch",
+      "sha256": "97fa844270fc6ac5d35683a2542f6e28aacb1c3afecef16d5e9d488ede3a0026",
+      "touches": "crates/rustred-app/src/application/saved_application/mod.rs: adds two read-only library methods (sp_terminal_rows, sp_is_layered); compiled into the binary, called only by the sp_dump example; no compose behaviour change"
+    },
+    {
+      "file": "examples-cargo.patch",
+      "sha256": "d14b50a140741ea095c1debe70b6bd28e00dcbf834783a126ac658e02010864d",
+      "touches": "crates/rustred-app/Cargo.toml: two example targets (b2_basis, sp_dump); no change to the rustred CLI code"
+    },
+    {
+      "file": "sp_dump-advisory.patch",
+      "sha256": "a6d1d50fd75a30ec70da6f4c851c8c439af6994495bc43bf777219a10e204be4",
+      "touches": "examples/rust/sp_dump.rs: env-gated advisory entry coverage (B1-R switch); example only, not in the rustred CLI"
+    }
+  ],
+  "upstream": {
+    "status": "NOT MERGED. The same change, ported onto alphal00p/rustRed main 3e83ae912367b19944a167cc076ea3efb6658932, is branch layer-provenance-basis-change @ 4615d58314387e4eb5d17388ad812456ece584e1 (basis-b/b3/rustred-up; not pushed, its DRAFT PR not opened yet as of 2026-11-04 12:15Z; compile/test chains queued, basis-b/b3/PROGRESS-UP.md). RustRed main is not owned by the campaign; the DRAFT PR is for the user.",
+    "consequence": "until that PR is merged this pack is composed by the patched binary above; after the merge the pack is recomposed with the merged binary (same basis, new run tag) and this record is replaced by the merged commit."
+  }
+}

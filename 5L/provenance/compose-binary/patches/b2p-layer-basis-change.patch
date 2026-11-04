@@ -1,0 +1,100 @@
+--- /shared/vhirschi/t3code/vakint/scratchpad/5l-pilot/rustred-dev/wt-layer/crates/rustred-app/src/application/saved_application/layer.rs	2026-11-03 00:39:09.100196408 +0000
++++ rr-src/crates/rustred-app/src/application/saved_application/layer.rs	2026-11-03 19:12:58.234408609 +0000
+@@ -76,16 +76,26 @@
+     /// without whole-row check (ii), still to be reproduced by RustRed, so
+     /// flagged.
+     TwoStage,
++    /// An exact basis-change row (rational in the parameters): a former
++    /// master expressed in a new basis by exact linear algebra over Q(d) on
++    /// rows of the same package (campaign option B, pole-free 5L basis, user
++    /// ruling 2026-11-03; track B2-P). It derives no new relation and is not
++    /// an independent derivation, so it is flagged. Under RR-11 P1 a
++    /// factorized source may carry such a row onto any declared master (the
++    /// ruling replaces product masters by dotted products and by one
++    /// non-product master).
++    BasisChange,
+ }
+ 
+ impl SavedApplicationRuleProvenance {
+-    pub const ALL: [Self; 6] = [
++    pub const ALL: [Self; 7] = [
+         Self::Rustred,
+         Self::KiraStopgap,
+         Self::Identity,
+         Self::SyntheticTest,
+         Self::XspaceBanana,
+         Self::TwoStage,
++        Self::BasisChange,
+     ];
+     pub fn as_str(self) -> &'static str {
+         match self {
+@@ -95,6 +105,7 @@
+             Self::SyntheticTest => "synthetic-test",
+             Self::XspaceBanana => "xspace-banana",
+             Self::TwoStage => "two-stage",
++            Self::BasisChange => "basis-change",
+         }
+     }
+     /// The four provenances of the original v2 wire contract are always
+@@ -102,7 +113,7 @@
+     /// later are listed only when a row carries them, so the metadata of
+     /// layers without them stays byte-identical.
+     fn always_counted(self) -> bool {
+-        !matches!(self, Self::XspaceBanana | Self::TwoStage)
++        !matches!(self, Self::XspaceBanana | Self::TwoStage | Self::BasisChange)
+     }
+     fn parse(text: &str) -> Option<Self> {
+         Self::ALL.into_iter().find(|p| p.as_str() == text)
+@@ -122,7 +133,7 @@
+             .ok_or_else(|| {
+                 AppError::input(format!(
+                     "layer provenance.kind {kind:?} is not one of rustred, kira-stopgap, \
+-                     identity, synthetic-test, xspace-banana, two-stage, mixed"
++                     identity, synthetic-test, xspace-banana, two-stage, basis-change, mixed"
+                 ))
+             }),
+         Some(other) => Err(AppError::input(format!(
+@@ -884,8 +895,22 @@
+                     row.source.powers()
+                 )));
+             }
++            // B2-P (option B pole-free basis, user ruling 2026-11-03): in a
++            // layer that declares a basis change (`provenance.basis_change`)
++            // the "onto factorized masters only" restriction is lifted for
++            // rows of factorized sources (the ruling replaces the product
++            // master P359 by a non-product master, so every product relation
++            // through P359 leaves the product route); a basis-change row may
++            // always use any declared master. The verification level stays
++            // required and every master is still checked below like in every
++            // row; such sources are listed in the report (factorized_sources).
++            let basis_change_layer = layer.provenance.get("basis_change").is_some();
+             for (master, _) in &row.terms {
+-                if !factorized.contains(&qualify(master)?) {
++                let key = qualify(master)?;
++                let allowed = factorized.contains(&key)
++                    || row.provenance == SavedApplicationRuleProvenance::BasisChange
++                    || basis_change_layer;
++                if !allowed {
+                     return Err(AppError::input(format!(
+                         "factorized layer source {:?} uses master {:?}, which is not a \
+                          factorized base terminal: RR-11 P1 rows must stay on the product route",
+@@ -1683,6 +1708,7 @@
+                     | SavedApplicationRuleProvenance::SyntheticTest
+                     | SavedApplicationRuleProvenance::XspaceBanana
+                     | SavedApplicationRuleProvenance::TwoStage
++                    | SavedApplicationRuleProvenance::BasisChange
+             ) {
+                 flagged
+                     .entry(row.provenance.as_str())
+@@ -1731,6 +1757,11 @@
+                      an independent table in d, not strict; neither RustRed relations nor a Kira \
+                      stopgap; to be reproduced by RustRed)"
+                 ),
++                SavedApplicationRuleProvenance::BasisChange => format!(
++                    "{count} basis-change rows (former masters expressed exactly in the \
++                     pole-free basis by linear algebra over Q(d) on rows of this package; option \
++                     B, user ruling of 2026-11-03; no new relation, not an independent derivation)"
++                ),
+             });
+         }
+         format!(

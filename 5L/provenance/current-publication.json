@@ -5,15 +5,85 @@
   "source_manifest_blake3": "dc5ef670d7ce9f060700ffcc37f421cc9da4bb5f1be44f5c5ab9f273368057c1",
   "source_scope_binding": "de1391c89ff7e81253a6dfadd9e10599fb6f27e69b64023a2a19b0fa1d4adb00",
   "source_generation": 119,
-  "terminal_count": 640,
+  "terminal_count": 131,
   "naming": "P1..Pn in lexicographic full-family-fingerprint/signed-index order; native identities remain family-qualified",
-  "rustred_revision": "a39dfbc6fb01a9bf5e912c37b866941531e6361b",
-  "vakint_revision": "6cdaa993ee9b413189ae077a8f783de6223cc42e",
-  "consumer_rustred_revision": "52c7463686b4b716fa1e9051d5093b7586c5da27",
-  "application_sha256": "976d574c4ad8b4021ac7a1914c624095a77f5975b98e243c7a20a9396a86ff03",
-  "terminal_definitions_sha256": "3510ceb7c1990a8e3197fc8f3e9df7869d91c78eb3fed76fcd671ca051c7c6d0",
-  "graph_model_fingerprint": "67fadf2679bc2baf07722d9e7690708b7e565ca8d3dcc30b295b0d16bd302ca2",
+  "rustred_revision": "b82aa2cf+b2p-8ddbd2f960fe",
+  "vakint_revision": "64090b527e07bb947c38c925458a0b7b214de9c3",
+  "consumer_rustred_revision": "3e83ae912367b19944a167cc076ea3efb6658932",
+  "application_sha256": "4d98f012ec560945f8dc021e0330d6bd09eafe06327666b5ad9447bfbc19323b",
+  "terminal_definitions_sha256": "2f17f375e28dbd33d0cdeab05d2dec1789831c4f8701f6d7209ce89f6a484402",
+  "graph_model_fingerprint": "33e1a05ba506e56b808f4a3318338cf0a02c4761d3d6523c07989f955faeebeb",
   "numerical_work_performed": false,
+  "graph_momentum_head": "gammalooprs::K",
   "cache_available": false,
-  "minimality_claim": false
+  "minimality_claim": false,
+  "refinement_layer": {
+    "path": "provenance/refinement-layer.json",
+    "sha256": "1472f524b9541a1b457cae5020647fad219b200e2ae337141d3e90955a3de68a",
+    "layer_blake3": "ce159fc0cd8a06679cf11d440f7bf15c950776d911f70327c4f39b26caa670e0",
+    "row_provenance_counts": {
+      "basis-change": 20,
+      "kira-stopgap": 47,
+      "rustred": 437,
+      "two-stage": 2,
+      "xspace-banana": 10
+    },
+    "verification_counts": {
+      "basis-change:BASIS-v2;exact Q(d) inverse;recomposed mod 2 primes + exact Q;G-POLE": 20,
+      "counted-by-ruling:kira-3d;v-direct-54d;box-4pt;not-ii;not-table-in-d;ruling-2026-11-03": 1,
+      "counted-by-ruling:kira-6d;not-ii;not-table-in-d;ruling-2026-11-03": 1,
+      "factorized:selfcheck+kira-ii": 7,
+      "factorized:selfcheck+kira-ii+fsd": 3,
+      "ii (i not-testable)": 16,
+      "ii (i undecided)": 5,
+      "ii+i": 26,
+      "ii-whole-row": 310,
+      "independent-full": 115,
+      "two-stage:i-restricted;v-direct-55d;kira-18d;not-ii;not-table-in-d;ruling-2026-11-03": 1,
+      "two-stage:i-restricted;v-direct-55d;kira-1d;not-ii;not-table-in-d;ruling-2026-11-03": 1,
+      "xspace-banana:a;b1d;ii;b-independent": 2,
+      "xspace-banana:a;b1d;ii;kira-identical;b-independent": 3,
+      "xspace-banana:a;b2d;b-independent": 4,
+      "xspace-banana:a;b2d;ii;b-independent": 1
+    },
+    "kira_stopgap_rows": 47,
+    "factorized_sources_rr11_p1": 13,
+    "basis_producer": "RustRed saved application + RR-11 layer with 20 basis-change, 47 kira-stopgap, 437 rustred, 2 two-stage, 10 xspace-banana rows",
+    "manifest_sha256": "fcfd7445cc988421df7c547cc2d0a85c0cbc7cb3af274421d61d057756c649a3",
+    "row_tag_counts_binary": {
+      "basis-change": 20,
+      "kira-stopgap": 47,
+      "rustred": 437,
+      "two-stage": 2,
+      "xspace-banana": 10
+    },
+    "row_provenance_counts_note": "row_provenance_counts: row tags written by the compose binary, xspace-banana rows under their own tag (= row_tag_counts_binary)",
+    "row_origin_counts": {
+      "basis-change": 20,
+      "kira-stopgap": 47,
+      "rustred": 437,
+      "two-stage": 2,
+      "xspace-banana": 10
+    },
+    "xspace_banana_rows": 10,
+    "flagged_sources_to_reproduce": {
+      "basis-change": 20,
+      "kira-stopgap": 47,
+      "two-stage": 2,
+      "xspace-banana": 10
+    },
+    "two_stage_rows": 2,
+    "two_stage_ruling": "user ruling of 2026-11-03",
+    "basis_change": {
+      "tag": "BASIS-v2",
+      "basis_sha256": "5da52b655abdc9980cf1db99668ca94edd648aff440f5dd71db8e39d28f53b9c",
+      "rows": 20
+    },
+    "compose_binary": {
+      "path": "provenance/compose-binary/record.json",
+      "sha256": "a6a4bc57e5b179b9dc5bd2fa0690b3791423e903e5e9f6a11078fb3d80cbcd69",
+      "binary_sha256": "25f067fe674fb7543d9795440fca5a9655a0e9581e3bec6e7ca213e7c1064f04",
+      "merged_upstream": false
+    }
+  }
 }

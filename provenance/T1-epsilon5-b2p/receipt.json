@@ -1,0 +1,59 @@
+{
+  "schema": "b2p.t1-epsilon-extension.v1",
+  "ruling": "user 2026-11-03: T1 (1L tadpole) gets exact coefficients to eps^5 (or as deep as needed), added to the 1L data in the format of the held orders; no vakint code change",
+  "master_id": "L1_e74e81b24d3540d6e9ab4e5f073993c715c27e2287a726a892d34a5577bab7a4_p1",
+  "orders_added": [
+    5
+  ],
+  "exact_form": "-Gam(1,1)/(ep*(ep-1))",
+  "derivation": "T1 = e^(gamma_E eps) Gamma(1+eps)/(eps(1-eps)); e^(gamma_E eps)Gamma(1+eps) = exp(sum_{k>=2} (-1)^k zeta(k) eps^k/k) = sum G_i eps^i; coefficient of eps^j = sum_{i<=j+1} G_i; zeta(2k) = (-1)^(k+1) B_2k (2 pi)^2k / (2 (2k)!). Constants: pi Machin, zeta(3) Amdeberhan-Zeilberger (cross-checked by Borwein), zeta(2m+1) Borwein; working precision 20060 digits, printed to 20000 significant digits, round half even (the held rule: C2 byte identity on every held order).",
+  "checks_against_held_orders": {
+    "C1_symbolic_equal_and_same_text": {
+      "-1": true,
+      "0": true,
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true
+    },
+    "zeta3_two_algorithms_agree_digits": 20050,
+    "C2_numerical_byte_identical": {
+      "-1": true,
+      "0": true,
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true
+    },
+    "C3_zeta3_from_held_agree_digits": 19998,
+    "C3_pi2_from_held_agree_digits": 19998
+  },
+  "new": {
+    "5": {
+      "symbolic": "-1/3*symbolica::zeta(3)+-1/36*symbolica::zeta(3)*𝜋^2+-1/5*symbolica::zeta(5)+1+1/12*𝜋^2+1/160*𝜋^4+1/18*symbolica::zeta(3)^2+61/120960*𝜋^6",
+      "numerical_sha256": "7aa4f6cdbb06e48610cf1f0183284b1a1b799b6dc0ed4e723591a8c0410944ab",
+      "G_term_added": "1/18*symbolica::zeta(3)^2+61/120960*𝜋^6"
+    }
+  },
+  "before": {
+    "symbolic.json": {
+      "sha256": "7ebbabf5c0e7a2bda90246a7e00ec2fe722a00ccbc572d7c0e0de41fd3161517"
+    },
+    "numerical.json": {
+      "sha256": "b54e96eaf3deed297169b16f34bcc28d9d32f6ea2344fd84457f27e21a32ea3d"
+    },
+    "producer_update_sha256": "c2a7a05a917ac68ad65d214907ac7cd6930e7b5b7112e0f1fbd663f85c578a2f",
+    "manifest_sha256": "506285ffd4452439333657ed3caf6589a76ba5e999d721c824480d9474107547"
+  },
+  "preserved_originals": [
+    "provenance/original-coefficients/1L/masters/P1/numerical.json"
+  ],
+  "after": {
+    "symbolic_sha256": "b17919a22fc55d18d220b782ee9c40ab2132924e418742512be89909c095ad13",
+    "numerical_sha256": "af7d5cc571d45cea400fdc55e4bed28fd731d1e8493ddac9aa339a4a440c3756",
+    "producer_update_sha256": "bf6e626204446c7a7144188c816495bce575e00422c87e06e953d25bd80e2e12",
+    "manifest_sha256": "b06e29e0f0d843419eb0d27d05bc958cfba6c6c510f0ae3088dea9bc4be2eb6f"
+  },
+  "tool": "basis-b/b2/pack/tools/t1_series.py + basis-b/rt/tools/stage_main.py (track RT; = stage_b2.py of B2-P on main)",
+  "symbolic_print_style": "main basis-v4 print style; the same Symbolica atom as the B2-P string -1/3*symbolica::zeta(3)+-1/36*symbolica::zeta(3)*𝜋^2+-1/5*symbolica::zeta(5)+1+1/12*𝜋^2+1/160*𝜋^4+1/18*symbolica::zeta(3)^2+61/120960*𝜋^6"
+}

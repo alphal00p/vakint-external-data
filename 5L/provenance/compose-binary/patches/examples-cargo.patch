@@ -1,0 +1,17 @@
+--- /shared/vhirschi/t3code/vakint/scratchpad/5l-pilot/rustred-dev/wt-layer/crates/rustred-app/Cargo.toml	2026-10-25 01:45:54.573466187 +0000
++++ rr-src/crates/rustred-app/Cargo.toml	2026-11-03 18:32:52.222668688 +0000
+@@ -52,6 +52,14 @@
+ path = "../../examples/rust/saved_application.rs"
+ 
+ [[example]]
++name = "b2_basis"
++path = "../../examples/rust/b2_basis.rs"
++
++[[example]]
++name = "sp_dump"
++path = "../../examples/rust/sp_dump.rs"
++
++[[example]]
+ name = "probe_owner_case"
+ path = "examples/probe_owner_case.rs"
+ 
