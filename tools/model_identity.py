@@ -19,6 +19,9 @@ import data
 BASE = Path("provenance/native-graph-identity-v2")
 RECEIPT = BASE / "migration.json"
 SCHEMA = "vakint.external-data.native-graph-identity.v1"
+# Data-only record of a later five-loop publication that replaced the sealed 5L graphs.
+FIVE_LOOP_MIGRATION = Path("provenance/five-loop-graph-migration/migration.json")
+FIVE_LOOP_SCHEMA = "vakint.external-data.five-loop-graph-migration.v1"
 PROOF_SHA256 = "ad731ba1ea49f90aaae06510a8b0c642510b68353fcbee99f3575ad777128176"
 ALIAS_SHA256 = "dbdce1a6abbef4ba43610d4eba40f543db02c66c6e12953d661eb48c199683c6"
 RENAMING = {
@@ -201,6 +204,103 @@ def accepts_graph(root, path, previous_sha256, current_sha256, ctx=None):
     )
 
 
+def graph_header(text, name):
+    match = re.search(rf'\b{name}="([^"\\]*)"', text.split("\n", 2)[1])
+    return match and match[1]
+
+
+def superseded_five_loop(root, ctx):
+    """Sealed 5L rows replaced by the current five-loop publication, if recorded.
+
+    The sealed receipt and its proof are unchanged. Every superseded row must still
+    replay from its preserved original to its sealed native projection. The live 5L
+    master graphs are authenticated by replace_five_loop.validate_graph_bindings
+    (routing witness); each live family graph must be identical to its stage-rule
+    representative master graph, so it inherits that check.
+    """
+    root = Path(root)
+    path = root / FIVE_LOOP_MIGRATION
+    if not path.exists():
+        return set()
+    record = data.read_json(path)
+    if record.get("schema") != FIVE_LOOP_SCHEMA:
+        raise ValueError("unsupported five-loop graph migration record")
+    if (record["identity_receipt"] != reference(root, RECEIPT)
+            or record["identity_proof_sha256"] != PROOF_SHA256):
+        raise ValueError("five-loop graph migration refers to another identity receipt")
+    sealed = {p: r for p, r in ctx["receipt"]["graphs"].items() if p.startswith("5L/")}
+    superseded = record["superseded"]
+    if set(superseded) != set(sealed):
+        raise ValueError("five-loop graph migration does not cover exactly the sealed 5L graphs")
+    previous = {}
+    for name, row in superseded.items():
+        seal, native = sealed[name], ctx["native_graphs"][name]
+        model = ctx["models"][seal["model_source_sha256"]]
+        original = checked(root, seal["original"]).read_text()
+        if (row["original"] != seal["original"] or row["current_sha256"] != seal["current_sha256"]
+                or seal["original"]["sha256"] != native["source_sha256"]
+                or seal["current_sha256"] != native["migrated_sha256"]
+                or text_hash(transform_dot(original, model["old_blake3"], model["new_blake3"],
+                                           ctx["expressions"])) != seal["current_sha256"]):
+            raise ValueError(f"sealed five-loop graph no longer replays: {name}")
+        if row["kind"] == "master":
+            if (graph_header(original, "master_id"), graph_header(original, "label")) != (
+                    row["master_id"], row["name"]) or row["master_id"] in previous:
+                raise ValueError(f"superseded five-loop master identity differs: {name}")
+            previous[row["master_id"]] = name
+        elif row["kind"] != "family" or name != f"5L/graphs/{row['family_sha256']}.dot":
+            raise ValueError(f"superseded five-loop graph kind differs: {name}")
+    release = data.read_json(root / "manifest.json")
+    pack = next(p for p in release["loop_packs"] if p["loop_count"] == 5)
+    manifest_path = data.checked_path(root, pack["manifest"])
+    directory, manifest = manifest_path.parent, data.read_json(manifest_path)
+    prefix = directory.relative_to(root).as_posix() + "/"
+    publication = data.read_json(directory / "provenance/current-publication.json")
+    successor = record["successor"]
+    if successor["publication"] != {key: publication[key] for key in (
+            "terminal_definitions_sha256", "terminal_count", "graph_model_fingerprint")}:
+        raise ValueError("five-loop graph migration names another current publication")
+    live = [{"master_id": m["master_id"], "name": m["name"], "powers": m["powers"],
+             "path": prefix + m["files"]["graph.dot"]["path"],
+             "sha256": m["files"]["graph.dot"]["sha256"]} for m in manifest["masters"]]
+    families = [{"family_sha256": f["sha256"], "path": prefix + f["graph"],
+                 "sha256": data.digest(data.checked_path(directory, f["graph"]))}
+                for f in manifest["families"]]
+    keys = ("master_id", "name", "powers", "path", "sha256")
+    if [{k: m[k] for k in keys} for m in successor["masters"]] != live or [
+            {k: f[k] for k in ("family_sha256", "path", "sha256")}
+            for f in successor["families"]] != families:
+        raise ValueError("five-loop graph migration differs from the current publication")
+    for family in manifest["families"]:
+        # replace_five_loop.stage copies the graph of the family's master with the most
+        # positive powers (then the largest powers); validate_graph_bindings never reads it.
+        members = [m for m in manifest["masters"]
+                   if m["master_id"].startswith(f"L5_{family['sha256']}_")]
+        representative = max(members, default=None,
+                             key=lambda m: (sum(p > 0 for p in m["powers"]), m["powers"]))
+        graph = data.checked_path(directory, family["graph"]).read_bytes()
+        if representative is None or graph != data.checked_path(
+                directory, representative["files"]["graph.dot"]["path"]).read_bytes():
+            raise ValueError("five-loop family graph differs from its representative master "
+                             f"graph: {family['graph']}")
+    for master in successor["masters"]:
+        before = previous.get(master["master_id"])
+        change = "new" if before is None else (
+            "retained" if superseded[before]["name"] == master["name"] else "renumbered")
+        if (master["previous"], master["previous_name"], master["change"]) != (
+                before, before and superseded[before]["name"], change):
+            raise ValueError(f"five-loop master migration differs: {master['name']}")
+    for family in successor["families"]:
+        before = f"5L/graphs/{family['family_sha256']}.dot"
+        if family["previous"] != (before if before in superseded else None):
+            raise ValueError("five-loop family graph migration differs")
+    kept = {m["master_id"] for m in successor["masters"]}
+    if record["removed"] != sorted((p for i, p in previous.items() if i not in kept),
+                                   key=lambda p: int(superseded[p]["name"][1:])):
+        raise ValueError("five-loop graph migration hides a removed master")
+    return set(superseded)
+
+
 def validate(root):
     ctx = context(root)
     if ctx is None:
@@ -209,7 +309,10 @@ def validate(root):
         ctx["receipt"]["unchanged_models"]
     ) != {f"{loops}L/model.json" for loops in range(1, 6)}:
         raise ValueError("native graph identity migration inventory is incomplete")
+    superseded = superseded_five_loop(root, ctx)
     for path, row in ctx["receipt"]["graphs"].items():
+        if path in superseded:
+            continue
         if not accepts_graph(
             root, path, row["original"]["sha256"], row["current_sha256"], ctx
         ):
