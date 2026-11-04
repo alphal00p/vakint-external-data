@@ -18614,8 +18614,8 @@
   },
   "files": {
     "README.md": {
-      "sha256": "3819de32ebbfaa8e5b8da74e39b2f1741348383f69328b6e20f4714b5745a101",
-      "bytes": 1180
+      "sha256": "879357d5e95b9011e543b8623297f5cf0600bcf583554f944e1364924a1a4e56",
+      "bytes": 1409
     },
     "benchmarks/provenance.json": {
       "sha256": "2cab157d31d5c9fd51fb1844ae2e144c13ae43be17f198abad1ced07656ee063",
@@ -18644,10 +18644,6 @@
     "benchmarks/zero-momentum/vakint-input.symbolica": {
       "sha256": "9814c3b49a1b486b9790bbe5458d8bc582c3fb3c299ba6a1a0362db8ba71cb16",
       "bytes": 380697
-    },
-    "cache/README.md": {
-      "sha256": "871ee61a62a62fbc83aedef98097da6a8cf171709c59f9d1222107c405ad2fbf",
-      "bytes": 168
     },
     "coverage.json": {
       "sha256": "8d1fa9b9dda777dcbb9fd237e71f305b2b7069505e38dd3e3921eedc1b73894b",
