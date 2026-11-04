@@ -1,0 +1,47 @@
+{
+  "schema": "vakint.qcd-ladder.prepared-input.v1",
+  "definition": "massless-qcd-four-rung-native-uv-v1",
+  "projection": "zero-momentum-metric",
+  "scientific_sources_sha256": {
+    "ladder.dot": "990490ae32441fcbc279390b97aedf433d226a7b4986faea1eaf87e15ca79ece",
+    "phi3.json": "5e7b76223b63752eac1200744ee945be2bc9b125890b1430271faea9917b1dd3",
+    "physical.rs": "754b9a5b2b0b9701fc666c29ce6728229d78ace9cb10948033c17d9e42275436",
+    "projector.rs": "bbd9a9a8ce08e0c29a632c74586f7b51dc04cc2d1ed8802a6ef6a43bdbf5a53d",
+    "qcd.json": "229179d56fec310801f9db3d5697d6f3947b6a3c112d9b856ba0fe6fc1fe6a3b",
+    "vacuum.rs": "05cdaa106c6f27fa16ea7c473f4a83ac0c4e7100eba9cc58ee4358e95aedb905"
+  },
+  "scientific_assembly_sha256": "16be3edc83d1cfad237e7762269bc02d2335e21173b01ee881b5c5834b4aa7e9",
+  "producer": {
+    "fixture_sources_sha256": {
+      "ladder.dot": "990490ae32441fcbc279390b97aedf433d226a7b4986faea1eaf87e15ca79ece",
+      "mod.rs": "f272cac241d343d81d510ee8e50e2ec3ae1f4fc9db1c67fac93b928662b95a59",
+      "phi3.json": "5e7b76223b63752eac1200744ee945be2bc9b125890b1430271faea9917b1dd3",
+      "physical.rs": "754b9a5b2b0b9701fc666c29ce6728229d78ace9cb10948033c17d9e42275436",
+      "projector.rs": "bbd9a9a8ce08e0c29a632c74586f7b51dc04cc2d1ed8802a6ef6a43bdbf5a53d",
+      "qcd.json": "229179d56fec310801f9db3d5697d6f3947b6a3c112d9b856ba0fe6fc1fe6a3b",
+      "vacuum.rs": "05cdaa106c6f27fa16ea7c473f4a83ac0c4e7100eba9cc58ee4358e95aedb905"
+    },
+    "source_commit": "8282f0224b767857ab5044a128839a8bb7f8b0c4",
+    "executable_sha256": "7232faab6ba584f0b241a81a9292cc414b77a270675c67b19036df39472b91f3"
+  },
+  "input": {
+    "bytes": 380697,
+    "sha256": "9814c3b49a1b486b9790bbe5458d8bc582c3fb3c299ba6a1a0362db8ba71cb16"
+  },
+  "nonzero_conditions_file": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "nonzero_conditions": [],
+  "contributions": 1,
+  "scalar_terms": 1,
+  "preparation_seconds": 0.49339697,
+  "timings": {
+    "angular_seconds": 0.0,
+    "graph_generation_seconds": 0.193814645,
+    "ingress_seconds": 0.154826506,
+    "scalar_contraction_seconds": 0.10019787,
+    "taylor_seconds": 0.0,
+    "total_seconds": 0.493252849
+  }
+}

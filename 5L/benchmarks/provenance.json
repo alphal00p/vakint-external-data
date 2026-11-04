@@ -1,0 +1,170 @@
+{
+  "schema": "vakint.qcd-ladder.prepared-input-provenance.v1",
+  "consumer_repository": "https://github.com/alphal00p/gammaloop",
+  "consumer_source_commit": "0d4fa7b5398561a45b3e65d01e31d12742806fe2",
+  "scientific_assembly_sha256": "16be3edc83d1cfad237e7762269bc02d2335e21173b01ee881b5c5834b4aa7e9",
+  "bundles": [
+    {
+      "directory": "benchmarks/quadratic",
+      "manifest": {
+        "sha256": "1c425e6da17492e3f116ac3357d68dc92759dacdc7a6943514c635ce7dcf110b",
+        "bytes": 2400
+      },
+      "producer": {
+        "fixture_sources_sha256": {
+          "ladder.dot": "990490ae32441fcbc279390b97aedf433d226a7b4986faea1eaf87e15ca79ece",
+          "mod.rs": "f272cac241d343d81d510ee8e50e2ec3ae1f4fc9db1c67fac93b928662b95a59",
+          "phi3.json": "5e7b76223b63752eac1200744ee945be2bc9b125890b1430271faea9917b1dd3",
+          "physical.rs": "754b9a5b2b0b9701fc666c29ce6728229d78ace9cb10948033c17d9e42275436",
+          "projector.rs": "bbd9a9a8ce08e0c29a632c74586f7b51dc04cc2d1ed8802a6ef6a43bdbf5a53d",
+          "qcd.json": "229179d56fec310801f9db3d5697d6f3947b6a3c112d9b856ba0fe6fc1fe6a3b",
+          "vacuum.rs": "05cdaa106c6f27fa16ea7c473f4a83ac0c4e7100eba9cc58ee4358e95aedb905"
+        },
+        "source_commit": "4bd744829d9b663187fb5b498c8f72347b513fc6",
+        "executable_sha256": "afe4c8b4aaaa49aef33464c3710f4a3562b9a0e01d8b94444ab3e504f870af22"
+      },
+      "projection": "quadratic-transverse",
+      "contributions": 21,
+      "input": {
+        "bytes": 34795612,
+        "sha256": "276d17a136aa5292b82effe05354d0b7cb639966a5f3797f960bbdf9f301a1fa"
+      },
+      "nonzero_conditions_file": {
+        "bytes": 103,
+        "sha256": "bc23ecdd82b5c54269b27c5b39b3769f3500cbe62c5f93c2e391267cd1035af9"
+      }
+    },
+    {
+      "directory": "benchmarks/zero-momentum",
+      "manifest": {
+        "sha256": "e8bd141e653944390fd48ba234f477173caa2f84089c7ca56ea9b39938f7b1f4",
+        "bytes": 2224
+      },
+      "producer": {
+        "fixture_sources_sha256": {
+          "ladder.dot": "990490ae32441fcbc279390b97aedf433d226a7b4986faea1eaf87e15ca79ece",
+          "mod.rs": "f272cac241d343d81d510ee8e50e2ec3ae1f4fc9db1c67fac93b928662b95a59",
+          "phi3.json": "5e7b76223b63752eac1200744ee945be2bc9b125890b1430271faea9917b1dd3",
+          "physical.rs": "754b9a5b2b0b9701fc666c29ce6728229d78ace9cb10948033c17d9e42275436",
+          "projector.rs": "bbd9a9a8ce08e0c29a632c74586f7b51dc04cc2d1ed8802a6ef6a43bdbf5a53d",
+          "qcd.json": "229179d56fec310801f9db3d5697d6f3947b6a3c112d9b856ba0fe6fc1fe6a3b",
+          "vacuum.rs": "05cdaa106c6f27fa16ea7c473f4a83ac0c4e7100eba9cc58ee4358e95aedb905"
+        },
+        "source_commit": "8282f0224b767857ab5044a128839a8bb7f8b0c4",
+        "executable_sha256": "7232faab6ba584f0b241a81a9292cc414b77a270675c67b19036df39472b91f3"
+      },
+      "projection": "zero-momentum-metric",
+      "contributions": 1,
+      "input": {
+        "bytes": 380697,
+        "sha256": "9814c3b49a1b486b9790bbe5458d8bc582c3fb3c299ba6a1a0362db8ba71cb16"
+      },
+      "nonzero_conditions_file": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ],
+  "evidence": {
+    "quadratic-scientific-parity.json": {
+      "path": "provenance/prepared-benchmark-inputs/quadratic-scientific-parity.json",
+      "sha256": "444b3a6f4e59a83f261e03d4953a2902f11837d50545d3b46555ddfe95f94e69",
+      "bytes": 19303
+    },
+    "zero-momentum-scientific-parity.json": {
+      "path": "provenance/prepared-benchmark-inputs/zero-momentum-scientific-parity.json",
+      "sha256": "e4a962f1c478320d12495c4e5c328eb1d3979d898c37629137d983685554c1c3",
+      "bytes": 5527
+    },
+    "zero-momentum-native-graph-parity.json": {
+      "path": "provenance/prepared-benchmark-inputs/zero-momentum-native-graph-parity.json",
+      "sha256": "63cd0da617c309b83dca27c113be937a4462ad3fa51d3294c63fc98353340dac",
+      "bytes": 17064
+    },
+    "zero-momentum-provenance-addendum.json": {
+      "path": "provenance/prepared-benchmark-inputs/zero-momentum-provenance-addendum.json",
+      "sha256": "2ca7d29a77e45caf7d4c22273f21e43434dcd30d93079ec0ec0bcba16c954968",
+      "bytes": 7866
+    },
+    "prepared-input-runtime-validation.json": {
+      "path": "provenance/prepared-benchmark-inputs/prepared-input-runtime-validation.json",
+      "sha256": "ca46a140532d7a356bf1054204e84275130a0a60c6aff1a343b009a734fcf22e",
+      "bytes": 27709
+    },
+    "prepared-input-independent-review.json": {
+      "path": "provenance/prepared-benchmark-inputs/prepared-input-independent-review.json",
+      "sha256": "752dc5794bbf74ccc2e499ab6c098a0e0542f99a98c3fae0e5f4e2379fb38e0c",
+      "bytes": 5085
+    },
+    "normal-release-prepared-input-handoff.json": {
+      "path": "provenance/prepared-benchmark-inputs/normal-release-prepared-input-handoff.json",
+      "sha256": "e12600790f92da8010b985c4f005fd306b48443bafb51ace415c7f0c45504791",
+      "bytes": 3790
+    },
+    "normal-release-prepared-input-smokes.json": {
+      "path": "provenance/prepared-benchmark-inputs/normal-release-prepared-input-smokes.json",
+      "sha256": "3a8d89ff5c33bb6f449cd28b9c9d390666bbd52cd415e9e295656c937b5ba232",
+      "bytes": 4124
+    },
+    "normal-release-quadratic-prepared-input-report.json": {
+      "path": "provenance/prepared-benchmark-inputs/normal-release-quadratic-prepared-input-report.json",
+      "sha256": "6b7cc6231e118825c5fdaafed4fa9cc862abbe380e3cee23ca8e7ee36925d45b",
+      "bytes": 5437
+    },
+    "normal-release-zero-momentum-prepared-input-report.json": {
+      "path": "provenance/prepared-benchmark-inputs/normal-release-zero-momentum-prepared-input-report.json",
+      "sha256": "46c061a1f32c3644644faea11f20ae685b0e18078fb0cf31d2ad6416059972a2",
+      "bytes": 5086
+    }
+  },
+  "producer_dependency_identity": {
+    "quadratic_feynkit_revision": "58abf0645679f3cc84f87968258905129d67daef",
+    "zero_momentum_actual_feynkit_owner_revision": "b00e0bc936813d71ea9e5084c5015d60fb15c0ec",
+    "zero_momentum_feynkit_base_revision": "58abf0645679f3cc84f87968258905129d67daef",
+    "rustred_revision": "42bae6e0a4031203db71a052975ebab0bd66eeb1",
+    "symbolica_revision": "9cd57678d8817ec33c05cacba4925162f1c86b0b"
+  },
+  "scope": [
+    "Complete scalar inputs only: no master coefficients, campaign rules or prepared reduction caches are added.",
+    "Original producer identities and preparation timings remain historical provenance; reuse measures input loading separately.",
+    "Quadratic payload passed actual Rust load, canonical roundtrip and complete projector-guard preservation.",
+    "Both scalar inputs passed the actual normal-release Rust prepared-input CLI in prepare-only mode at the recorded consumer revision. These are functional loading checks, with no fresh preparation, external-data loading, reduction, cache qualification or performance claim."
+  ],
+  "evidence_path_convention": "All index paths are relative to the 5L directory. Immutable copied original receipts retain their recorded development paths as provenance only; consumers never follow those paths.",
+  "initial_consumer_source_commit": "5e685b4391e7bbf14d53959797d9916da2ffd68a",
+  "runtime_load_validation": {
+    "source_commit": "0d4fa7b5398561a45b3e65d01e31d12742806fe2",
+    "executable_sha256": "0d7c62eeefb5b7e76fecd8ebbd69323c6e592955f9ef3bb80b7d876a1497f5d7",
+    "artifact_manifest_sha256": "9c7293066a9350c60142e809846bdc00996561bbd80a790c7e79e5be493f17d1",
+    "handoff": {
+      "path": "provenance/prepared-benchmark-inputs/normal-release-prepared-input-handoff.json",
+      "sha256": "e12600790f92da8010b985c4f005fd306b48443bafb51ace415c7f0c45504791",
+      "bytes": 3790
+    },
+    "summary": {
+      "path": "provenance/prepared-benchmark-inputs/normal-release-prepared-input-smokes.json",
+      "sha256": "3a8d89ff5c33bb6f449cd28b9c9d390666bbd52cd415e9e295656c937b5ba232",
+      "bytes": 4124
+    },
+    "reports": {
+      "quadratic": {
+        "path": "provenance/prepared-benchmark-inputs/normal-release-quadratic-prepared-input-report.json",
+        "sha256": "6b7cc6231e118825c5fdaafed4fa9cc862abbe380e3cee23ca8e7ee36925d45b",
+        "bytes": 5437
+      },
+      "zero-momentum": {
+        "path": "provenance/prepared-benchmark-inputs/normal-release-zero-momentum-prepared-input-report.json",
+        "sha256": "46c061a1f32c3644644faea11f20ae685b0e18078fb0cf31d2ad6416059972a2",
+        "bytes": 5086
+      }
+    },
+    "actual_prepared_only_cli_invocations": 2,
+    "both_projections_passed": true,
+    "performance_eligible": false,
+    "no_fresh_preparation_or_data_loader_or_IBP": true,
+    "observed_input_loading_seconds": {
+      "quadratic": 2.270015893,
+      "zero-momentum": 0.024079001
+    }
+  }
+}

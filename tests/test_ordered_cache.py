@@ -202,7 +202,7 @@ class OrderedCacheTests(unittest.TestCase):
             "4L-four-loop-fg": "0b67c3c5a0b19a29",
             "4L-four-loop-bmw": "911209920104145b",
             "4L-four-loop-x": "2f60f1ca938f469b",
-            "5L-tide-five-loop-common-basis": "a244b9b4ce8f7228",
+            "5L-tide-five-loop-common-basis": "ef671fbc9e869a1d",
         }
         found = {}
         for pack in data.read_json(data.ROOT / "manifest.json")["loop_packs"]:

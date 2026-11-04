@@ -1,0 +1,280 @@
+{
+  "schema": "vakint.current-q0-preparation.graph-parity.v1",
+  "reference_sha256": "0cc658e2239ef8ae6d7b255e966eab543c962440a67fb3f705f29598d1f193fe",
+  "fresh_sha256": "6eb66c830a48708be367375caf26af3c2f33f9868a4a283f1302b9331c5c1e65",
+  "all_existing_graph_vertex_edge_attributes_equal": true,
+  "statement_keys_and_endpoints_equal": true,
+  "statement_count": 29,
+  "added_typed_port_interface_metadata_only": [
+    {
+      "statement": "graph",
+      "field": "projector_interface",
+      "ports": [
+        "spenso::{spenso::representation,spenso::self_dual}::mink(4,gammalooprs::{spenso::index}::hedge(0,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::mink(4,gammalooprs::{spenso::index}::hedge(1,1))"
+      ]
+    },
+    {
+      "statement": "v0",
+      "field": "num_interface",
+      "ports": [
+        "spenso::{spenso::representation,spenso::self_dual}::bis(4,gammalooprs::{spenso::index}::hedge(4,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::bis(4,gammalooprs::{spenso::index}::hedge(3,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::mink(4,gammalooprs::{spenso::index}::hedge(1,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::coad(8,gammalooprs::{spenso::index}::hedge(1,1))",
+        "spenso::{spenso::representation,spenso::dualizable}::cof(3,gammalooprs::{spenso::index}::hedge(3,1))",
+        "spenso::{spenso::lower}::dind(spenso::{spenso::representation,spenso::dualizable}::cof(3,gammalooprs::{spenso::index}::hedge(4,1)))"
+      ]
+    },
+    {
+      "statement": "v1",
+      "field": "num_interface",
+      "ports": [
+        "spenso::{spenso::representation,spenso::self_dual}::bis(4,gammalooprs::{spenso::index}::hedge(8,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::bis(4,gammalooprs::{spenso::index}::hedge(7,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::mink(4,gammalooprs::{spenso::index}::hedge(0,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::coad(8,gammalooprs::{spenso::index}::hedge(0,1))",
+        "spenso::{spenso::representation,spenso::dualizable}::cof(3,gammalooprs::{spenso::index}::hedge(7,1))",
+        "spenso::{spenso::lower}::dind(spenso::{spenso::representation,spenso::dualizable}::cof(3,gammalooprs::{spenso::index}::hedge(8,1)))"
+      ]
+    },
+    {
+      "statement": "v2",
+      "field": "num_interface",
+      "ports": [
+        "spenso::{spenso::representation,spenso::self_dual}::bis(4,gammalooprs::{spenso::index}::hedge(12,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::bis(4,gammalooprs::{spenso::index}::hedge(15,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::mink(4,gammalooprs::{spenso::index}::hedge(10,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::coad(8,gammalooprs::{spenso::index}::hedge(10,1))",
+        "spenso::{spenso::representation,spenso::dualizable}::cof(3,gammalooprs::{spenso::index}::hedge(15,1))",
+        "spenso::{spenso::lower}::dind(spenso::{spenso::representation,spenso::dualizable}::cof(3,gammalooprs::{spenso::index}::hedge(12,1)))"
+      ]
+    },
+    {
+      "statement": "v3",
+      "field": "num_interface",
+      "ports": [
+        "spenso::{spenso::representation,spenso::self_dual}::bis(4,gammalooprs::{spenso::index}::hedge(18,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::bis(4,gammalooprs::{spenso::index}::hedge(17,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::mink(4,gammalooprs::{spenso::index}::hedge(11,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::coad(8,gammalooprs::{spenso::index}::hedge(11,1))",
+        "spenso::{spenso::representation,spenso::dualizable}::cof(3,gammalooprs::{spenso::index}::hedge(17,1))",
+        "spenso::{spenso::lower}::dind(spenso::{spenso::representation,spenso::dualizable}::cof(3,gammalooprs::{spenso::index}::hedge(18,1)))"
+      ]
+    },
+    {
+      "statement": "v4",
+      "field": "num_interface",
+      "ports": [
+        "spenso::{spenso::representation,spenso::self_dual}::bis(4,gammalooprs::{spenso::index}::hedge(16,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::bis(4,gammalooprs::{spenso::index}::hedge(23,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::mink(4,gammalooprs::{spenso::index}::hedge(20,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::coad(8,gammalooprs::{spenso::index}::hedge(20,1))",
+        "spenso::{spenso::representation,spenso::dualizable}::cof(3,gammalooprs::{spenso::index}::hedge(23,1))",
+        "spenso::{spenso::lower}::dind(spenso::{spenso::representation,spenso::dualizable}::cof(3,gammalooprs::{spenso::index}::hedge(16,1)))"
+      ]
+    },
+    {
+      "statement": "v5",
+      "field": "num_interface",
+      "ports": [
+        "spenso::{spenso::representation,spenso::self_dual}::bis(4,gammalooprs::{spenso::index}::hedge(24,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::bis(4,gammalooprs::{spenso::index}::hedge(13,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::mink(4,gammalooprs::{spenso::index}::hedge(21,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::coad(8,gammalooprs::{spenso::index}::hedge(21,1))",
+        "spenso::{spenso::representation,spenso::dualizable}::cof(3,gammalooprs::{spenso::index}::hedge(13,1))",
+        "spenso::{spenso::lower}::dind(spenso::{spenso::representation,spenso::dualizable}::cof(3,gammalooprs::{spenso::index}::hedge(24,1)))"
+      ]
+    },
+    {
+      "statement": "v6",
+      "field": "num_interface",
+      "ports": [
+        "spenso::{spenso::representation,spenso::self_dual}::bis(4,gammalooprs::{spenso::index}::hedge(6,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::bis(4,gammalooprs::{spenso::index}::hedge(25,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::mink(4,gammalooprs::{spenso::index}::hedge(26,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::coad(8,gammalooprs::{spenso::index}::hedge(26,1))",
+        "spenso::{spenso::representation,spenso::dualizable}::cof(3,gammalooprs::{spenso::index}::hedge(25,1))",
+        "spenso::{spenso::lower}::dind(spenso::{spenso::representation,spenso::dualizable}::cof(3,gammalooprs::{spenso::index}::hedge(6,1)))"
+      ]
+    },
+    {
+      "statement": "v7",
+      "field": "num_interface",
+      "ports": [
+        "spenso::{spenso::representation,spenso::self_dual}::bis(4,gammalooprs::{spenso::index}::hedge(22,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::bis(4,gammalooprs::{spenso::index}::hedge(9,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::mink(4,gammalooprs::{spenso::index}::hedge(27,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::coad(8,gammalooprs::{spenso::index}::hedge(27,1))",
+        "spenso::{spenso::representation,spenso::dualizable}::cof(3,gammalooprs::{spenso::index}::hedge(9,1))",
+        "spenso::{spenso::lower}::dind(spenso::{spenso::representation,spenso::dualizable}::cof(3,gammalooprs::{spenso::index}::hedge(22,1)))"
+      ]
+    },
+    {
+      "statement": "v8",
+      "field": "num_interface",
+      "ports": [
+        "spenso::{spenso::representation,spenso::self_dual}::bis(4,gammalooprs::{spenso::index}::hedge(2,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::bis(4,gammalooprs::{spenso::index}::hedge(19,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::mink(4,gammalooprs::{spenso::index}::hedge(28,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::coad(8,gammalooprs::{spenso::index}::hedge(28,1))",
+        "spenso::{spenso::representation,spenso::dualizable}::cof(3,gammalooprs::{spenso::index}::hedge(19,1))",
+        "spenso::{spenso::lower}::dind(spenso::{spenso::representation,spenso::dualizable}::cof(3,gammalooprs::{spenso::index}::hedge(2,1)))"
+      ]
+    },
+    {
+      "statement": "v9",
+      "field": "num_interface",
+      "ports": [
+        "spenso::{spenso::representation,spenso::self_dual}::bis(4,gammalooprs::{spenso::index}::hedge(14,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::bis(4,gammalooprs::{spenso::index}::hedge(5,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::mink(4,gammalooprs::{spenso::index}::hedge(29,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::coad(8,gammalooprs::{spenso::index}::hedge(29,1))",
+        "spenso::{spenso::representation,spenso::dualizable}::cof(3,gammalooprs::{spenso::index}::hedge(5,1))",
+        "spenso::{spenso::lower}::dind(spenso::{spenso::representation,spenso::dualizable}::cof(3,gammalooprs::{spenso::index}::hedge(14,1)))"
+      ]
+    },
+    {
+      "statement": "v8 -> v0",
+      "field": "num_interface",
+      "ports": [
+        "spenso::{spenso::representation,spenso::self_dual}::bis(4,gammalooprs::{spenso::index}::hedge(3,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::bis(4,gammalooprs::{spenso::index}::hedge(2,1))",
+        "spenso::{spenso::representation,spenso::dualizable}::cof(3,gammalooprs::{spenso::index}::hedge(2,1))",
+        "spenso::{spenso::lower}::dind(spenso::{spenso::representation,spenso::dualizable}::cof(3,gammalooprs::{spenso::index}::hedge(3,1)))"
+      ]
+    },
+    {
+      "statement": "v0 -> v9",
+      "field": "num_interface",
+      "ports": [
+        "spenso::{spenso::representation,spenso::self_dual}::bis(4,gammalooprs::{spenso::index}::hedge(5,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::bis(4,gammalooprs::{spenso::index}::hedge(4,1))",
+        "spenso::{spenso::representation,spenso::dualizable}::cof(3,gammalooprs::{spenso::index}::hedge(4,1))",
+        "spenso::{spenso::lower}::dind(spenso::{spenso::representation,spenso::dualizable}::cof(3,gammalooprs::{spenso::index}::hedge(5,1)))"
+      ]
+    },
+    {
+      "statement": "v6 -> v1",
+      "field": "num_interface",
+      "ports": [
+        "spenso::{spenso::representation,spenso::self_dual}::bis(4,gammalooprs::{spenso::index}::hedge(7,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::bis(4,gammalooprs::{spenso::index}::hedge(6,1))",
+        "spenso::{spenso::representation,spenso::dualizable}::cof(3,gammalooprs::{spenso::index}::hedge(6,1))",
+        "spenso::{spenso::lower}::dind(spenso::{spenso::representation,spenso::dualizable}::cof(3,gammalooprs::{spenso::index}::hedge(7,1)))"
+      ]
+    },
+    {
+      "statement": "v1 -> v7",
+      "field": "num_interface",
+      "ports": [
+        "spenso::{spenso::representation,spenso::self_dual}::bis(4,gammalooprs::{spenso::index}::hedge(9,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::bis(4,gammalooprs::{spenso::index}::hedge(8,1))",
+        "spenso::{spenso::representation,spenso::dualizable}::cof(3,gammalooprs::{spenso::index}::hedge(8,1))",
+        "spenso::{spenso::lower}::dind(spenso::{spenso::representation,spenso::dualizable}::cof(3,gammalooprs::{spenso::index}::hedge(9,1)))"
+      ]
+    },
+    {
+      "statement": "v2 -> v3",
+      "field": "num_interface",
+      "ports": [
+        "spenso::{spenso::representation,spenso::self_dual}::mink(4,gammalooprs::{spenso::index}::hedge(10,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::mink(4,gammalooprs::{spenso::index}::hedge(11,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::coad(8,gammalooprs::{spenso::index}::hedge(10,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::coad(8,gammalooprs::{spenso::index}::hedge(11,1))"
+      ]
+    },
+    {
+      "statement": "v2 -> v5",
+      "field": "num_interface",
+      "ports": [
+        "spenso::{spenso::representation,spenso::self_dual}::bis(4,gammalooprs::{spenso::index}::hedge(13,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::bis(4,gammalooprs::{spenso::index}::hedge(12,1))",
+        "spenso::{spenso::representation,spenso::dualizable}::cof(3,gammalooprs::{spenso::index}::hedge(12,1))",
+        "spenso::{spenso::lower}::dind(spenso::{spenso::representation,spenso::dualizable}::cof(3,gammalooprs::{spenso::index}::hedge(13,1)))"
+      ]
+    },
+    {
+      "statement": "v9 -> v2",
+      "field": "num_interface",
+      "ports": [
+        "spenso::{spenso::representation,spenso::self_dual}::bis(4,gammalooprs::{spenso::index}::hedge(15,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::bis(4,gammalooprs::{spenso::index}::hedge(14,1))",
+        "spenso::{spenso::representation,spenso::dualizable}::cof(3,gammalooprs::{spenso::index}::hedge(14,1))",
+        "spenso::{spenso::lower}::dind(spenso::{spenso::representation,spenso::dualizable}::cof(3,gammalooprs::{spenso::index}::hedge(15,1)))"
+      ]
+    },
+    {
+      "statement": "v4 -> v3",
+      "field": "num_interface",
+      "ports": [
+        "spenso::{spenso::representation,spenso::self_dual}::bis(4,gammalooprs::{spenso::index}::hedge(17,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::bis(4,gammalooprs::{spenso::index}::hedge(16,1))",
+        "spenso::{spenso::representation,spenso::dualizable}::cof(3,gammalooprs::{spenso::index}::hedge(16,1))",
+        "spenso::{spenso::lower}::dind(spenso::{spenso::representation,spenso::dualizable}::cof(3,gammalooprs::{spenso::index}::hedge(17,1)))"
+      ]
+    },
+    {
+      "statement": "v3 -> v8",
+      "field": "num_interface",
+      "ports": [
+        "spenso::{spenso::representation,spenso::self_dual}::bis(4,gammalooprs::{spenso::index}::hedge(19,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::bis(4,gammalooprs::{spenso::index}::hedge(18,1))",
+        "spenso::{spenso::representation,spenso::dualizable}::cof(3,gammalooprs::{spenso::index}::hedge(18,1))",
+        "spenso::{spenso::lower}::dind(spenso::{spenso::representation,spenso::dualizable}::cof(3,gammalooprs::{spenso::index}::hedge(19,1)))"
+      ]
+    },
+    {
+      "statement": "v4 -> v5",
+      "field": "num_interface",
+      "ports": [
+        "spenso::{spenso::representation,spenso::self_dual}::mink(4,gammalooprs::{spenso::index}::hedge(20,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::mink(4,gammalooprs::{spenso::index}::hedge(21,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::coad(8,gammalooprs::{spenso::index}::hedge(20,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::coad(8,gammalooprs::{spenso::index}::hedge(21,1))"
+      ]
+    },
+    {
+      "statement": "v7 -> v4",
+      "field": "num_interface",
+      "ports": [
+        "spenso::{spenso::representation,spenso::self_dual}::bis(4,gammalooprs::{spenso::index}::hedge(23,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::bis(4,gammalooprs::{spenso::index}::hedge(22,1))",
+        "spenso::{spenso::representation,spenso::dualizable}::cof(3,gammalooprs::{spenso::index}::hedge(22,1))",
+        "spenso::{spenso::lower}::dind(spenso::{spenso::representation,spenso::dualizable}::cof(3,gammalooprs::{spenso::index}::hedge(23,1)))"
+      ]
+    },
+    {
+      "statement": "v5 -> v6",
+      "field": "num_interface",
+      "ports": [
+        "spenso::{spenso::representation,spenso::self_dual}::bis(4,gammalooprs::{spenso::index}::hedge(25,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::bis(4,gammalooprs::{spenso::index}::hedge(24,1))",
+        "spenso::{spenso::representation,spenso::dualizable}::cof(3,gammalooprs::{spenso::index}::hedge(24,1))",
+        "spenso::{spenso::lower}::dind(spenso::{spenso::representation,spenso::dualizable}::cof(3,gammalooprs::{spenso::index}::hedge(25,1)))"
+      ]
+    },
+    {
+      "statement": "v6 -> v7",
+      "field": "num_interface",
+      "ports": [
+        "spenso::{spenso::representation,spenso::self_dual}::mink(4,gammalooprs::{spenso::index}::hedge(26,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::mink(4,gammalooprs::{spenso::index}::hedge(27,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::coad(8,gammalooprs::{spenso::index}::hedge(26,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::coad(8,gammalooprs::{spenso::index}::hedge(27,1))"
+      ]
+    },
+    {
+      "statement": "v8 -> v9",
+      "field": "num_interface",
+      "ports": [
+        "spenso::{spenso::representation,spenso::self_dual}::mink(4,gammalooprs::{spenso::index}::hedge(28,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::mink(4,gammalooprs::{spenso::index}::hedge(29,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::coad(8,gammalooprs::{spenso::index}::hedge(28,1))",
+        "spenso::{spenso::representation,spenso::self_dual}::coad(8,gammalooprs::{spenso::index}::hedge(29,1))"
+      ]
+    }
+  ],
+  "shared_attributes_canonical_json_sha256": "8cd732598f39ce2cf66f1f8885d7358b44163c792c7b5002e065bb8cbae14496",
+  "scope": "All old graph numerator, factors, model, incidence, particles, slots, powers, loop routing/signatures and old interfaces are unchanged; only25 additional typed interface attributes are serialized"
+}

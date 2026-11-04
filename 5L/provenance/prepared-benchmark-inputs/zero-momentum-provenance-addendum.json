@@ -1,0 +1,150 @@
+{
+  "schema": "vakint.current-q0-preparation.provenance-addendum.v1",
+  "utc": "2026-10-24T18:37:50.066570+00:00",
+  "status": "CORRECTS_FEYNKIT_OWNER_REVISION_ONLY_RAW_PARITY_UNCHANGED",
+  "original_scientific_parity": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/physics/current-release-q0-preparation-20261024/scientific-parity-acceptance.json",
+    "sha256": "e4a962f1c478320d12495c4e5c328eb1d3979d898c37629137d983685554c1c3"
+  },
+  "original_completion": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/physics/current-release-q0-preparation-20261024/completion.json",
+    "sha256": "cd6147b68c88321ef7d6ada377cb390f1c343d3d70348b42a01b8610aef482d8"
+  },
+  "original_handoff": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/physics/current-release-q0-preparation-20261024/handoff.json",
+    "sha256": "92723a87da00719bc0bdecdf62eb5bd6b254409b35c659c2af9d1502b7927f4e"
+  },
+  "original_receipts_preserved_unchanged": true,
+  "incorrectly_labeled_field": {
+    "name": "feynkit_revision",
+    "value_in_original": "58abf0645679f3cc84f87968258905129d67daef",
+    "meaning": "retained scientific base, not the actual current owner-interface provenance"
+  },
+  "actual_feynkit_owner_revision": "b00e0bc936813d71ea9e5084c5015d60fb15c0ec",
+  "feynkit_revision": "b00e0bc936813d71ea9e5084c5015d60fb15c0ec",
+  "retained_scientific_base_revision": "58abf0645679f3cc84f87968258905129d67daef",
+  "actual_compiled_workspace_revision": "8282f0224b767857ab5044a128839a8bb7f8b0c4",
+  "immutable_elf": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/release-collector-refresh-8282f022/immutable-bin/five_loop_qcd_ladder-sha256-7232faab6ba584f0b241a81a9292cc414b77a270675c67b19036df39472b91f3",
+    "sha256": "7232faab6ba584f0b241a81a9292cc414b77a270675c67b19036df39472b91f3"
+  },
+  "five_driver_manifest": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/release-collector-refresh-8282f022/five-driver-artifacts.json",
+    "sha256": "aae276b567b6177fcc55e42c1101429550c952503efcc2e8c42ca03cbad7c4bf"
+  },
+  "compiled_source_inventory": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/release-collector-refresh-8282f022/build-config.json",
+    "sha256": "f4175b98c2b18f0cc3f4c54e0c1399db15b621bac57d47e2808cbb0752528b82"
+  },
+  "cargo_metadata": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/release-collector-refresh-8282f022/cargo-metadata.json",
+    "sha256": "f71a0df637b377df9d873a646c05f2fd67c1eb8be3f12f53f463097d5e7aef3e"
+  },
+  "feynkit_public_source_verification": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/release-collector-refresh-8282f022/feynkit-public-source-verification.json",
+    "sha256": "b27490a77634fe6e6577517c67f025ecd01b61457fc94adbbe3006efb36e4cd9"
+  },
+  "actual_compiled_feynkit_spenso_packages": [
+    {
+      "name": "feynkit",
+      "manifest_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-release-collector-refresh/crates/feynkit/Cargo.toml",
+      "cargo_source": null,
+      "compiled_source_paths_verified": 3
+    },
+    {
+      "name": "feynkit-amplitude",
+      "manifest_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-release-collector-refresh/crates/feynkit-amplitude/Cargo.toml",
+      "cargo_source": null,
+      "compiled_source_paths_verified": 4
+    },
+    {
+      "name": "feynkit-cff",
+      "manifest_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-release-collector-refresh/crates/feynkit-cff/Cargo.toml",
+      "cargo_source": null,
+      "compiled_source_paths_verified": 12
+    },
+    {
+      "name": "feynkit-generator",
+      "manifest_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-release-collector-refresh/crates/feynkit-generator/Cargo.toml",
+      "cargo_source": null,
+      "compiled_source_paths_verified": 15
+    },
+    {
+      "name": "feynkit-graph",
+      "manifest_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-release-collector-refresh/crates/feynkit-graph/Cargo.toml",
+      "cargo_source": null,
+      "compiled_source_paths_verified": 20
+    },
+    {
+      "name": "feynkit-kinematics",
+      "manifest_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-release-collector-refresh/crates/feynkit-kinematics/Cargo.toml",
+      "cargo_source": null,
+      "compiled_source_paths_verified": 12
+    },
+    {
+      "name": "feynkit-model",
+      "manifest_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-release-collector-refresh/crates/feynkit-model/Cargo.toml",
+      "cargo_source": null,
+      "compiled_source_paths_verified": 17
+    },
+    {
+      "name": "feynkit-py",
+      "manifest_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-release-collector-refresh/crates/feynkit-py/Cargo.toml",
+      "cargo_source": null,
+      "compiled_source_paths_verified": 143
+    },
+    {
+      "name": "feynkit-tensor",
+      "manifest_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-release-collector-refresh/crates/feynkit-tensor/Cargo.toml",
+      "cargo_source": null,
+      "compiled_source_paths_verified": 9
+    },
+    {
+      "name": "feynkit-ufo",
+      "manifest_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-release-collector-refresh/crates/feynkit-ufo/Cargo.toml",
+      "cargo_source": null,
+      "compiled_source_paths_verified": 3
+    },
+    {
+      "name": "spenso",
+      "manifest_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-release-collector-refresh/crates/spenso/Cargo.toml",
+      "cargo_source": null,
+      "compiled_source_paths_verified": 137
+    },
+    {
+      "name": "spenso-hep-lib",
+      "manifest_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-release-collector-refresh/crates/spenso-hep-lib/Cargo.toml",
+      "cargo_source": null,
+      "compiled_source_paths_verified": 14
+    },
+    {
+      "name": "spenso-macros",
+      "manifest_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/vakint-release-collector-refresh/crates/spenso-macros/Cargo.toml",
+      "cargo_source": null,
+      "compiled_source_paths_verified": 5
+    }
+  ],
+  "public_owner_source_comparison": {
+    "revision": "b00e0bc936813d71ea9e5084c5015d60fb15c0ec",
+    "actual_cargo_root": "/shared/codex-1/vakint_rustred/workspace/cargo/git/checkouts/gammaloop-277a30c7f1437c23/b00e0bc",
+    "enumeration_reference": {
+      "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/feynkit-resource-final-9cd/canonical-publication-source-closure.json",
+      "sha256": "0a2673ec4c248f286c0a93d6c536ea953196dc7eb41932d80533a4021f290d6c"
+    },
+    "maintained_files_compared": 673,
+    "byte_identical": 672,
+    "explicit_source_differences": [
+      {
+        "path": "crates/linnet-py/src/graph.rs",
+        "kind": "import ordering only",
+        "public_sha256": "92242198107f984d77770a2f2e98ed0bd78531a5eb981b12c0c5475c0e0801ff",
+        "local_sha256": "35458840cb0d74567a63a2e4387e71dfe977bb6385b7e57eb6e3a5bb3915063b"
+      }
+    ]
+  },
+  "qualification": "Cargo compiles local workspace FeynKit/Spenso packages at Main8282; exact compiled inventory is authoritative. The sealed producer source verification binds the maintained owner sources to public b00 (672/673 exact; remaining linnet-py import ordering only). 58 is a scientific base reference, not an actual current dependency label.",
+  "scientific_definition_and_raw_input_changes": false,
+  "input_sha256": "9814c3b49a1b486b9790bbe5458d8bc582c3fb3c299ba6a1a0362db8ba71cb16",
+  "new_generation_or_reduction_performed": false,
+  "timing_qualification": "Original current8282 preparation .493396970s remains a functional observation. Historical .676537316s and oldb72 reduction remain separately attributed; neither is relabeled current."
+}

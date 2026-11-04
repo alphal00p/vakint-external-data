@@ -1,0 +1,87 @@
+{
+  "schema": "vakint.prepared-primary-release-and-two-load-handoff.v1",
+  "utc": "2026-10-24T19:14:35.462982+00:00",
+  "status": "NORMAL_PRIMARY_RELEASE_SEAL_AND_EXACT_TWO_PREPARED_ONLY_LOADS_PASS",
+  "source_revision": "0d4fa7b5398561a45b3e65d01e31d12742806fe2",
+  "primary_only": true,
+  "manifest": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/release-prepared-primary-0d4fa7b53/primary-artifacts.json",
+    "sha256": "9c7293066a9350c60142e809846bdc00996561bbd80a790c7e79e5be493f17d1"
+  },
+  "immutable_binary": {
+    "immutable_path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/release-prepared-primary-0d4fa7b53/immutable-bin/five_loop_qcd_ladder-sha256-0d7c62eeefb5b7e76fecd8ebbd69323c6e592955f9ef3bb80b7d876a1497f5d7",
+    "sha256": "0d7c62eeefb5b7e76fecd8ebbd69323c6e592955f9ef3bb80b7d876a1497f5d7",
+    "bytes": 146443144,
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "elf_needed": [
+      "libssl.so.3",
+      "libcrypto.so.3",
+      "libpython3.14.so.1.0",
+      "libgcc_s.so.1",
+      "libm.so.6",
+      "libc.so.6",
+      "ld-linux-x86-64.so.2"
+    ]
+  },
+  "normal_build_elapsed_seconds": 1470.2342235810356,
+  "build_profile": "actualopt3/fatLTO/testfalse/privatePython3.14",
+  "source_paths_unchanged": 10904,
+  "compiler_messages": [],
+  "functional_smokes": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/validation/release-prepared-primary-0d4fa7b53/prepare-only-smokes/summary.json",
+    "sha256": "3a8d89ff5c33bb6f449cd28b9c9d390666bbd52cd415e9e295656c937b5ba232",
+    "invocations": 2,
+    "all_passed": true,
+    "performance_eligible": false,
+    "observed_input_loading_seconds": {
+      "quadratic": 2.270015893,
+      "zero-momentum": 0.024079001
+    },
+    "historical_preparation_seconds": {
+      "quadratic": 4652.569581612,
+      "zero-momentum": 0.49339697
+    },
+    "extra_checks": [
+      {
+        "projection": "quadratic",
+        "guard_file_hash_and_bytes_match_manifest": true,
+        "consumer_fixture_sources_match_actual0d4": true,
+        "historical_producer_separate_from_consumer": true,
+        "workdir_files": [
+          "benchmark.json"
+        ]
+      },
+      {
+        "projection": "zero-momentum",
+        "guard_file_hash_and_bytes_match_manifest": true,
+        "consumer_fixture_sources_match_actual0d4": true,
+        "historical_producer_separate_from_consumer": true,
+        "workdir_files": [
+          "benchmark.json"
+        ]
+      }
+    ]
+  },
+  "no_freshprep_data_loader_or_IBP": "Exact0d4 source prepare_only returns before settings/Vakint::new/data loading/evaluation; actualcommands contain onlyprepared-input+prepare-only, actualreports lack loader/reduction stages, currentpreparationnull andonlybenchmark.json written.",
+  "initial_receipt_harness_preflight": "One PythonSyntaxError before any executable invocation; corrected workspace harness syntax was checked. Exactly2realCLIinvocations total, no product-source/binary change or runtime retry. See smoke-harness-preflight.json.",
+  "old_controls": {
+    "all6281c6dependency_source_files_unchanged": true,
+    "old5c6target_and_immutable_ELFs_unchanged": true,
+    "c6_manifest_sha256": "473fe5162924e0c12844775028b1636b796bcc6e6b50db83f2f4bf597ed5d736",
+    "0d4_c6_8282_8ef_4bd_D40_heads_clean": true
+  },
+  "other4collectors": "Remain honestc6source/artifact identities; not rebuilt or relabelled as0d4.",
+  "native_qualification_cache_reduction_or_performance": false,
+  "sessions_drained": [
+    86016,
+    9049,
+    88508
+  ],
+  "next": "RootGO required for any otherexecution; future report-onlysource mustremain separately named, not alter this compiled snapshot."
+}

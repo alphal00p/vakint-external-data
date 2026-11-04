@@ -1,0 +1,53 @@
+{
+  "schema": "vakint.qcd-ladder.prepared-input.v1",
+  "definition": "massless-qcd-four-rung-native-uv-v1",
+  "projection": "quadratic-transverse",
+  "scientific_sources_sha256": {
+    "ladder.dot": "990490ae32441fcbc279390b97aedf433d226a7b4986faea1eaf87e15ca79ece",
+    "phi3.json": "5e7b76223b63752eac1200744ee945be2bc9b125890b1430271faea9917b1dd3",
+    "physical.rs": "754b9a5b2b0b9701fc666c29ce6728229d78ace9cb10948033c17d9e42275436",
+    "projector.rs": "bbd9a9a8ce08e0c29a632c74586f7b51dc04cc2d1ed8802a6ef6a43bdbf5a53d",
+    "qcd.json": "229179d56fec310801f9db3d5697d6f3947b6a3c112d9b856ba0fe6fc1fe6a3b",
+    "vacuum.rs": "05cdaa106c6f27fa16ea7c473f4a83ac0c4e7100eba9cc58ee4358e95aedb905"
+  },
+  "scientific_assembly_sha256": "16be3edc83d1cfad237e7762269bc02d2335e21173b01ee881b5c5834b4aa7e9",
+  "producer": {
+    "fixture_sources_sha256": {
+      "ladder.dot": "990490ae32441fcbc279390b97aedf433d226a7b4986faea1eaf87e15ca79ece",
+      "mod.rs": "f272cac241d343d81d510ee8e50e2ec3ae1f4fc9db1c67fac93b928662b95a59",
+      "phi3.json": "5e7b76223b63752eac1200744ee945be2bc9b125890b1430271faea9917b1dd3",
+      "physical.rs": "754b9a5b2b0b9701fc666c29ce6728229d78ace9cb10948033c17d9e42275436",
+      "projector.rs": "bbd9a9a8ce08e0c29a632c74586f7b51dc04cc2d1ed8802a6ef6a43bdbf5a53d",
+      "qcd.json": "229179d56fec310801f9db3d5697d6f3947b6a3c112d9b856ba0fe6fc1fe6a3b",
+      "vacuum.rs": "05cdaa106c6f27fa16ea7c473f4a83ac0c4e7100eba9cc58ee4358e95aedb905"
+    },
+    "source_commit": "4bd744829d9b663187fb5b498c8f72347b513fc6",
+    "executable_sha256": "afe4c8b4aaaa49aef33464c3710f4a3562b9a0e01d8b94444ab3e504f870af22"
+  },
+  "input": {
+    "bytes": 34795612,
+    "sha256": "276d17a136aa5292b82effe05354d0b7cb639966a5f3797f960bbdf9f301a1fa"
+  },
+  "nonzero_conditions_file": {
+    "bytes": 103,
+    "sha256": "bc23ecdd82b5c54269b27c5b39b3769f3500cbe62c5f93c2e391267cd1035af9"
+  },
+  "nonzero_conditions": [
+    "1",
+    "rustred::{}::d",
+    "-1+rustred::{}::d",
+    "2+rustred::{}::d",
+    "-2*rustred::{}::d+rustred::{}::d^2+rustred::{}::d^3"
+  ],
+  "contributions": 21,
+  "scalar_terms": 21,
+  "preparation_seconds": 4652.569581612,
+  "timings": {
+    "angular_seconds": 4369.754927317,
+    "graph_generation_seconds": 0.18763666,
+    "ingress_seconds": 16.218353243,
+    "scalar_contraction_seconds": 262.741746499,
+    "taylor_seconds": 3.645977464,
+    "total_seconds": 4652.565433196
+  }
+}

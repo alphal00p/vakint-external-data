@@ -1,0 +1,129 @@
+{
+  "schema": "vakint.current-q0-preparation.scientific-parity.v1",
+  "utc": "2026-10-24T18:35:26.534079+00:00",
+  "status": "PASS_Q0_FRESH_CURRENT_DEPENDENCY_RAW_INPUT_PARITY",
+  "collector_exit_code": 0,
+  "single_attempt": true,
+  "retries": 0,
+  "source_commit": "8282f0224b767857ab5044a128839a8bb7f8b0c4",
+  "immutable_elf_sha256": "7232faab6ba584f0b241a81a9292cc414b77a270675c67b19036df39472b91f3",
+  "native_revision": "42bae6e0a4031203db71a052975ebab0bd66eeb1",
+  "official_symbolica_revision": "9cd57678d8817ec33c05cacba4925162f1c86b0b",
+  "feynkit_revision": "58abf0645679f3cc84f87968258905129d67daef",
+  "source_paths_checked_before_and_after": 10898,
+  "source_drift": [],
+  "data_drift": [],
+  "Main8ef2750_drift": [],
+  "input": {
+    "sha256": "9814c3b49a1b486b9790bbe5458d8bc582c3fb3c299ba6a1a0362db8ba71cb16",
+    "bytes": 380697,
+    "exact_canonical_bytes_equal_accepted_input": true
+  },
+  "projection": "zero-momentum-metric",
+  "contributions": 1,
+  "physical_power_classes": {
+    "A14_r5_D9": 1
+  },
+  "full12edge_power_vector_joins": [
+    {
+      "fresh_index": 0,
+      "reference_index": 0,
+      "A": 14,
+      "r_mom": 5,
+      "D_source": 9,
+      "explicit_powers": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "exact_numerator_bytes_equal": true,
+      "exact_projected_vacuum_bytes_equal": true
+    }
+  ],
+  "native_graph_parity": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/physics/current-release-q0-preparation-20261024/native-graph-parity.json",
+    "sha256": "63cd0da617c309b83dca27c113be937a4462ad3fa51d3294c63fc98353340dac",
+    "existing_attributes_equal": true,
+    "whole_dot_byte_equal": false,
+    "additional_typed_interfaces": 25
+  },
+  "byte_equal_outputs": {
+    "vakint-input.symbolica": {
+      "sha256": "9814c3b49a1b486b9790bbe5458d8bc582c3fb3c299ba6a1a0362db8ba71cb16",
+      "bytes": 380697,
+      "exact_reference_bytes_equal": true
+    },
+    "projected-numerator-000.symbolica": {
+      "sha256": "9df136021ab1f9ef94588f5a5ea18c08d2821bdf71f5184acd12838ee28631e1",
+      "bytes": 1110638,
+      "exact_reference_bytes_equal": true
+    },
+    "projected-vacuum-000.dot": {
+      "sha256": "a18139308c720554edc2a14d9f75f9f627e1d895c654a6a76db1068de12c8aa9",
+      "bytes": 2362500,
+      "exact_reference_bytes_equal": true
+    },
+    "native-vacuum-counts.txt": {
+      "sha256": "1f1d14937558bed27f828b940fdcf9916f130b3aa9bf5c0b0252933b57f4ea4a",
+      "bytes": 331,
+      "exact_reference_bytes_equal": true
+    },
+    "projector-conditions.symbolica": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "exact_reference_bytes_equal": true
+    }
+  },
+  "projector_guards": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "bytes_equal_accepted": true,
+    "values": []
+  },
+  "compiled_fixture_source_hashes": {
+    "ladder.dot": "990490ae32441fcbc279390b97aedf433d226a7b4986faea1eaf87e15ca79ece",
+    "mod.rs": "f272cac241d343d81d510ee8e50e2ec3ae1f4fc9db1c67fac93b928662b95a59",
+    "phi3.json": "5e7b76223b63752eac1200744ee945be2bc9b125890b1430271faea9917b1dd3",
+    "physical.rs": "754b9a5b2b0b9701fc666c29ce6728229d78ace9cb10948033c17d9e42275436",
+    "projector.rs": "bbd9a9a8ce08e0c29a632c74586f7b51dc04cc2d1ed8802a6ef6a43bdbf5a53d",
+    "qcd.json": "229179d56fec310801f9db3d5697d6f3947b6a3c112d9b856ba0fe6fc1fe6a3b",
+    "vacuum.rs": "05cdaa106c6f27fa16ea7c473f4a83ac0c4e7100eba9cc58ee4358e95aedb905"
+  },
+  "preparation_policy": {
+    "fixture_work_count_overrides": false,
+    "native_denominator_basis_lowering": "required by saved-index application",
+    "optional_numerator_denominator_cancellation": false,
+    "optional_scalar_expansion": false,
+    "scalar_term_count": "stored representation"
+  },
+  "preparation_seconds_functional_observation": 0.49339697,
+  "preparation_stages_seconds": {
+    "angular_seconds": 0.0,
+    "graph_generation_seconds": 0.193814645,
+    "ingress_seconds": 0.154826506,
+    "scalar_contraction_seconds": 0.10019787,
+    "taylor_seconds": 0.0,
+    "total_seconds": 0.493252849
+  },
+  "historical_preparation_seconds_separate_observation": 0.676537316,
+  "stored_representation_scalar_terms": 1,
+  "historical_reported_scalar_terms": 136,
+  "term_count_qualification": "Current counter is1 retained contribution, old counter136 expanded stored terms; identical canonical input bytes are the algebraic identity check",
+  "normalization": "unaveraged g_munu*delta_ab atq=0, both current vertices retained; no transverse division8(d-1), Taylor or angular integration; denominator-only UV mass, original massless slashes",
+  "sidecar_changes": "power table header and convention text explicitly distinguish physical r_mom/D_source; all numeric power data and native-vacuum-count metadata agree",
+  "scope": "Fresh current-dependency generation, native graph ingress and raw-input parity only. No subsequent scalar-key census, IBP, cache, catalogue closure or isolated performance claim. q0 is not the complete recursive counterterm or full soft mass term.",
+  "completion": {
+    "path": "/shared/codex-1/vakint_rustred/workspace/5l-push/physics/current-release-q0-preparation-20261024/completion.json",
+    "sha256": "cd6147b68c88321ef7d6ada377cb390f1c343d3d70348b42a01b8610aef482d8"
+  },
+  "comparison_helper_sha256": "0de9f9d9cdf6bffd5de1f5125eacda999ae862c94c185bacb92f70d733505380"
+}
