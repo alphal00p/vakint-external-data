@@ -1,8 +1,51 @@
 # Vakint external data
 
-The `main` branch declares v0.2.1: the unreleased line that follows the v0.2.0
-release. There is no v0.2.1 release. For published, checksummed data, use the
-v0.2.0 release or `data-latest`.
+Release v0.2.1 (6 November 2026) is the current release and `data-latest` points to it.
+Earlier releases stay available unchanged.
+
+## v0.2.1
+
+Release v0.2.1 (6 November 2026) replaces the five-loop pack and adds one one-loop order. Since v0.2.0:
+
+- 5L: a composed pack with 131 masters (111 previous campaign masters and 20 new
+  integrals; what remains of the 640 terminals of v0.2.0 after a refinement layer of
+  516 exact rows, `5L/provenance/refinement-layer.json`), chosen so that reduction
+  coefficients have no spurious poles at d = 4
+  (proven on the generators of the basis choice, rechecked on later reductions; the
+  11-12-line top sectors are not validated). Every master ships its Laurent
+  coefficients eps^-5..eps^0; `5L/producer-update.json` records how each order was
+  obtained (exact product, structural zero, PSLQ form that passed the publication bar,
+  or numerical value with its verified digits).
+- 5L exact orders found by integer-relation search ship as exact only above the bar
+  (excess >= 40 digits, blind re-discovery, no conflicting relation); 9 candidate forms
+  below it ship as numbers.
+- 5L: the trimmed Ordered step cache of v0.2.0 is removed (it belongs to the previous
+  rule tables); `route-preparation.rrbin` is unchanged; the five-loop graph migration
+  is recorded in `provenance/five-loop-graph-migration`.
+- 1L: the tadpole gains its exact order eps^5.
+- 5L, provisional: 6 eps^0 coefficients are still being computed and ship
+  numerically with their validated digits, 3.3-3.6 (eps^0 of
+  5L/P130, 5L/P125, 5L/P89, 5L/P68, 5L/P85, 5L/P88);
+  v0.2.2 (data only) will replace them (at least 16 digits, target 50).
+- 4L: 45 constants of `4L/constants.json` (the 41 non-built-in generators of the
+  constant basis v4 and four dependent records) carry 2,348 to 19,997 significant
+  digits instead of 520-650 (`provenance/precision-lift-4l-runtime-v4`). Seven of them
+  (PR12D2Eps2/3, PR15D2Eps1-3, PR0D2Eps1/2; 2,348-2,805 digits) rest on two
+  profiles of one code; four more (PR14ep2/3, PR5D2Eps4, D5bar3; 9,923-9,925
+  digits) are confirmed by an independent implementation only to 5,060 digits;
+  most of the others rest on rigorous balls of one code. Each record states how its
+  digits were validated. Definitions are unchanged.
+
+1L-4L reduction tables, masters, graphs, numerical values (apart from the tadpole's
+eps^5 and the 4L constants above) and Ordered caches are unchanged. The pack was
+composed with a patched RustRed binary (`5L/provenance/compose-binary`); it will be
+recomposed once the upstream change is merged.
+
+A new managed install of `v0.2.1` or `data-latest` receives this release, as does an
+existing one loaded with `version="v0.2.1"` or `refresh=True`. An existing `data-latest`
+install moves to it with Vakint from gammaloop `vakint_rustred` 364ba0525 on, which
+re-checks `data-latest` for `version="latest"`; older builds keep its cached release
+(for example v0.2.0) until it is refreshed.
 
 ## v0.2.0
 
@@ -182,7 +225,7 @@ build a full release in a new directory with every declared source asset.
 
 ```python
 engine.load_official_external_data(4)
-engine.load_official_external_data(4, version="v0.2.0", local_artifacts_path="/path/to/data")
+engine.load_official_external_data(4, version="v0.2.1", local_artifacts_path="/path/to/data")
 ```
 
 A checkout of this repository can be passed directly as `local_artifacts_path`
@@ -190,11 +233,12 @@ and is validated without network access. Source manifests leave archive hashes
 unset; release manifests contain them. All loop-manifest paths are relative to
 their loop directory.
 
-1L–4L contain 115 computed masters in total. The 640 declared 5L campaign
-terminals have graphs and exact identities, but **no computed coefficients**.
+1L–4L contain 115 computed masters in total. The 131 5L masters
+(what remains of the 640 terminals of v0.2.0 after the refinement layer) have graphs,
+exact identities and Laurent coefficients eps^-5..eps^0.
 The five-loop graph files retain the complete numerator, propagator powers,
-mass terms and explicit loop-momentum basis. Their names `P1` through `P640`
-are assigned anew for this publication; match integrals by their family-qualified
+mass terms and explicit loop-momentum basis. Their names `P1` through `P131`
+are assigned anew for each publication; match integrals by their family-qualified
 signed index tuples, not by names from older releases. Ordered step caches
 (`<L>L/ordered-cache/`, described by `<L>L/ordered-cache.json`) record the checked
 steps of RustRed's ordered scheduler for a deterministic workload. They supply no
@@ -209,14 +253,14 @@ assert coverage of every index tuple below the maxima. Historical records under
 `provenance/original-root` are immutable migration evidence and do not define the
 current five-loop basis.
 
-Release v0.2.0 ships this five-loop source in its 5L pack. A checkout can also be
+Release v0.2.1 ships this five-loop source in its 5L pack. A checkout can also be
 loaded directly:
 
 ```python
 engine.load_external_data("/path/to/vakint-external-data", max_loop_count=5)
 ```
 
-Five-loop evaluation is symbolic until numerical coefficients are supplied.
+From v0.2.1 on the five-loop masters carry Laurent coefficients (eps^-5..eps^0).
 Release v0.1.2 also shipped a selected 5L LIGHT depth-first cache of
 2,102 records with Native `c2ca815` export/reimport validation, selected from
 frozen tuning and physical inputs; it was retired with the other depth-first
