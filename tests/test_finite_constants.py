@@ -14,6 +14,20 @@ import finite_constants
 from d2_constants import archive
 
 BEFORE_V3 = "provenance/takeover-4l-closures-runtime-v3/before/4L/constants.json"
+# The takeover records were superseded for 45 symbols by precision-lift-4l-v4; the
+# takeover projection replays unchanged against that adapter's before-image.
+BEFORE_V4 = "provenance/precision-lift-4l-runtime-v4/before/4L/constants.json"
+LIFT_V4_REGISTRY = "provenance/precision-lift-4l-runtime-v4/registry.json"
+LIFT_V4_INDEX = "provenance/precision-lift-4l-runtime-v4/portable-proof-index.json"
+TWO_PROFILE = {
+    "vakint::PR12D2Eps2",
+    "vakint::PR12D2Eps3",
+    "vakint::PR15D2Eps1",
+    "vakint::PR15D2Eps2",
+    "vakint::PR15D2Eps3",
+    "vakint::PR0D2Eps1",
+    "vakint::PR0D2Eps2",
+}
 
 
 class FiniteConstantTests(unittest.TestCase):
@@ -184,7 +198,7 @@ class FiniteConstantTests(unittest.TestCase):
         reference = receipt["additional_sources"][finite_constants.TAKEOVER_V3]
         actual = {
             record["symbol"]: record
-            for record in data.read_json(data.ROOT / "4L/constants.json")
+            for record in data.read_json(data.ROOT / BEFORE_V4)
         }
         owned, previous, superseded = finite_constants._validate_takeover_v3_source(
             data.ROOT, reference, actual
@@ -246,7 +260,7 @@ class FiniteConstantTests(unittest.TestCase):
         reference = receipt["additional_sources"][finite_constants.TAKEOVER_V3]
         actual = {
             record["symbol"]: record
-            for record in data.read_json(data.ROOT / "4L/constants.json")
+            for record in data.read_json(data.ROOT / BEFORE_V4)
         }
         original = data.digest
 
@@ -298,9 +312,7 @@ class FiniteConstantTests(unittest.TestCase):
         index = data.read_json(
             data.ROOT / "provenance/takeover-4l-closures-runtime-v3/portable-proof-index.json"
         )
-        records = {
-            r["symbol"]: r for r in data.read_json(data.ROOT / "4L/constants.json")
-        }
+        records = {r["symbol"]: r for r in data.read_json(data.ROOT / BEFORE_V4)}
         sys.set_int_max_str_digits(0)
         for period in registry["periods"]:
             cell = period["value_cell"]
@@ -326,7 +338,7 @@ class FiniteConstantTests(unittest.TestCase):
         registry_path = d2_constants.TAKEOVER_V3_REGISTRY
         index_path = d2_constants.TAKEOVER_V3_INDEX
         index = data.read_json(data.ROOT / index_path)
-        live = {r["symbol"]: r for r in data.read_json(data.ROOT / "4L/constants.json")}
+        live = {r["symbol"]: r for r in data.read_json(data.ROOT / BEFORE_V4)}
         registry = data.read_json(data.ROOT / registry_path)
         owned = {period["public_symbol"] for period in registry["periods"]}
         for symbol in owned:
@@ -373,6 +385,239 @@ class FiniteConstantTests(unittest.TestCase):
             self.assertRaisesRegex(ValueError, "below the storage rounding"),
         ):
             derive_with(lambda registry: None)
+
+    def test_precision_lift_v4_supersedes_45_records_inside_their_previous_errors(self):
+        receipt = data.read_json(data.ROOT / finite_constants.RECEIPT)
+        reference = receipt["additional_sources"][finite_constants.PRECISION_LIFT_V4]
+        actual = {
+            record["symbol"]: record
+            for record in data.read_json(data.ROOT / "4L/constants.json")
+        }
+        owned, previous, superseded = finite_constants._validate_precision_lift_v4_source(
+            data.ROOT, reference, actual
+        )
+        self.assertEqual(len(owned), 45)
+        self.assertEqual(superseded, set(owned))
+        self.assertEqual(set(previous), set(actual))
+        self.assertEqual(set(actual) - superseded, {
+            "vakint::K5Moment(1)",
+            "vakint::K5Moment(3)",
+            "vakint::K5LogMoment(1)",
+            "vakint::K5LogMoment(3)",
+            "vakint::s6weak",
+        })
+        with localcontext() as context:
+            context.prec = 25000
+            for symbol in superseded:
+                new, old = owned[symbol], previous[symbol]
+                with self.subTest(symbol=symbol):
+                    self.assertGreater(new["significant_digits"], old["significant_digits"])
+                    self.assertGreaterEqual(new["significant_digits"], 2348)
+                    self.assertLessEqual(
+                        abs(Decimal(new["value"]) - Decimal(old["value"])),
+                        Decimal(old["absolute_error"]),
+                    )
+                    for field in ["definition", "symbolic_definition", "error_quality"]:
+                        self.assertEqual(new[field], old[field])
+                    self.assertEqual(
+                        new["provenance"]["definition_metadata"],
+                        old["provenance"]["definition_metadata"],
+                    )
+        for symbol, field, value in [
+            ("vakint::PR7D2", "value", "1"),
+            ("vakint::PR0D2Eps1", "significant_digits", 2396),
+            ("vakint::BNbar5", "absolute_error", "0"),
+            ("vakint::T111bar5", "error_quality", "bounded"),
+            ("vakint::PR12D2Eps3", "symbolic_definition", "vakint::Integral(1,vakint::Interval(vakint::t,0,1))"),
+            ("vakint::K5Moment(1)", "value", "1"),
+            ("vakint::s6weak", "significant_digits", 20001),
+        ]:
+            altered = copy.deepcopy(actual)
+            altered[symbol][field] = value
+            with (
+                self.subTest(symbol=symbol, field=field),
+                self.assertRaises(ValueError),
+            ):
+                finite_constants._validate_precision_lift_v4_source(
+                    data.ROOT, reference, altered
+                )
+        altered = copy.deepcopy(actual)
+        del altered["vakint::PR9D2Eps1"]
+        with self.assertRaises(ValueError):
+            finite_constants._validate_precision_lift_v4_source(data.ROOT, reference, altered)
+
+    def test_precision_lift_v4_rejects_changed_before_image_and_orphan_adapter(self):
+        receipt = data.read_json(data.ROOT / finite_constants.RECEIPT)
+        reference = receipt["additional_sources"][finite_constants.PRECISION_LIFT_V4]
+        actual = {
+            record["symbol"]: record
+            for record in data.read_json(data.ROOT / "4L/constants.json")
+        }
+        original = data.digest
+
+        def changed_before(path):
+            if str(path).endswith(BEFORE_V4):
+                return "0" * 64
+            return original(path)
+
+        with (
+            mock.patch.object(finite_constants.data, "digest", changed_before),
+            self.assertRaisesRegex(ValueError, "before-image changed"),
+        ):
+            finite_constants._validate_precision_lift_v4_source(data.ROOT, reference, actual)
+        reader = data.read_json
+
+        def without_takeover(path):
+            value = reader(path)
+            if str(path).endswith(finite_constants.RECEIPT):
+                value = copy.deepcopy(value)
+                del value["additional_sources"][finite_constants.TAKEOVER_V3]
+            return value
+
+        with (
+            mock.patch.object(finite_constants.data, "read_json", without_takeover),
+            self.assertRaisesRegex(ValueError, "needs the takeover adapter"),
+        ):
+            finite_constants.validate_source(data.ROOT)
+
+        def changed_supersession(path):
+            value = reader(path)
+            if str(path).endswith("precision-lift-4l-runtime-v4/projection.json"):
+                value = copy.deepcopy(value)
+                value["superseded_symbols"] = value["superseded_symbols"][1:]
+            return value
+
+        with (
+            mock.patch.object(finite_constants.data, "read_json", changed_supersession),
+            self.assertRaises(ValueError),
+        ):
+            finite_constants._validate_precision_lift_v4_source(data.ROOT, reference, actual)
+
+    def test_precision_lift_v4_centres_are_the_validated_digits_and_recompute_exactly(self):
+        from d2_constants import archive_bytes
+
+        registry = data.read_json(data.ROOT / LIFT_V4_REGISTRY)
+        index = data.read_json(data.ROOT / LIFT_V4_INDEX)
+        records = {r["symbol"]: r for r in data.read_json(data.ROOT / "4L/constants.json")}
+        sys.set_int_max_str_digits(0)
+        self.assertEqual(len(registry["periods"]), 45)
+        for period in registry["periods"]:
+            cell, symbol = period["value_cell"], period["public_symbol"]
+            raw, _ = archive_bytes(data.ROOT, index, cell["source_uncompressed_sha256"])
+            source = json.loads(raw, parse_float=str)
+
+            def walk(pointer):
+                node = source
+                for part in pointer.split("/")[1:]:
+                    node = node[int(part)] if isinstance(node, list) else node[part]
+                return node
+
+            record = records[symbol]
+            with self.subTest(symbol=symbol):
+                self.assertEqual(walk(cell["source_symbol_json_pointer"]), symbol)
+                self.assertEqual(record["value"], walk(cell["center_json_pointer"]))
+                stored = len(Decimal(record["value"]).as_tuple().digits)
+                self.assertEqual(stored, walk(cell["validated_digits_json_pointer"]))
+                self.assertLess(record["significant_digits"], stored)
+                center = Fraction(record["value"])
+                unit = Fraction(10) ** Decimal(record["value"]).as_tuple().exponent
+                exact = unit
+                for term in cell["error_terms"]:
+                    if term["kind"] == "abs":
+                        exact += Fraction(walk(term["pointer"]))
+                    elif term["kind"] == "rel_floor":
+                        floor = int(Fraction(walk(term["pointer"])))
+                        exact += abs(center) * Fraction(10) ** -(floor + term["offset"])
+                error = Fraction(record["absolute_error"])
+                self.assertGreaterEqual(error, exact)
+                self.assertLess(error, exact * Fraction(1000001, 1000000) + unit)
+                self.assertLess(error, abs(center) * Fraction(10) ** -record["significant_digits"])
+                self.assertEqual(record["error_quality"], "estimated")
+                validation = record["provenance"]["validation"]
+                self.assertEqual(validation["prec_validated_digits"], stored)
+                self.assertTrue(validation["digits_label"])
+                if symbol in TWO_PROFILE:
+                    self.assertTrue(validation["digits_label"].startswith("two profiles of one code"))
+                    self.assertIs(validation["independent"], False)
+
+    def test_precision_lift_v4_derivation_rejects_tampered_cells(self):
+        import d2_constants
+
+        registry = data.read_json(data.ROOT / LIFT_V4_REGISTRY)
+        index = data.read_json(data.ROOT / LIFT_V4_INDEX)
+
+        def derive_with(mutate):
+            with tempfile.TemporaryDirectory() as temporary:
+                root = Path(temporary)
+                for archive_entry in index["archives"]:
+                    relative = archive_entry["portable_archive"]["path"]
+                    (root / relative).parent.mkdir(parents=True, exist_ok=True)
+                    (root / relative).write_bytes((data.ROOT / relative).read_bytes())
+                (root / LIFT_V4_INDEX).write_bytes((data.ROOT / LIFT_V4_INDEX).read_bytes())
+                changed = copy.deepcopy(registry)
+                mutate(changed)
+                data.write_json(root / LIFT_V4_REGISTRY, changed)
+                return d2_constants.derive_precision_lift_v4(root)
+
+        records, _ = derive_with(lambda registry: None)
+        self.assertEqual(
+            [r["symbol"] for r in records], [p["public_symbol"] for p in registry["periods"]]
+        )
+
+        def cell(changed, symbol):
+            return next(
+                p["value_cell"] for p in changed["periods"] if p["public_symbol"] == symbol
+            )
+
+        def shorter_center(changed):
+            cell(changed, "vakint::PR7D2")["center"] = cell(changed, "vakint::PR7D2")["center"][:-1]
+
+        def drop_unit(changed):
+            terms = cell(changed, "vakint::PR0D2Eps1")["error_terms"]
+            terms[:] = [t for t in terms if t["kind"] != "last_digit_unit"]
+
+        def claim_all_stored(changed):
+            entry = cell(changed, "vakint::BNbar5")
+            entry["validated_significant_digits"] = len(Decimal(entry["center"]).as_tuple().digits)
+
+        def other_symbol(changed):
+            entry = cell(changed, "vakint::T111bar5")
+            entry["source_symbol_json_pointer"] = cell(changed, "vakint::BNbar5")["source_symbol_json_pointer"]
+
+        def stale_registry_flag(changed):
+            changed["stored_digits_are_the_validated_digits"] = False
+
+        for mutate, message in [
+            (shorter_center, "center differs"),
+            (drop_unit, "storage rounding"),
+            (claim_all_stored, "finite cap differs"),
+            (other_symbol, "names another constant"),
+            (stale_registry_flag, "registry authentication"),
+        ]:
+            with self.subTest(mutation=mutate.__name__), self.assertRaisesRegex(
+                ValueError, message
+            ):
+                derive_with(mutate)
+
+    def test_precision_lift_keeps_formula_evaluations_bound_to_superseded_records(self):
+        import precision_supplement
+
+        before = precision_supplement._precision_lift_before_image(data.ROOT)
+        self.assertEqual(len(before), 45)
+        self.assertTrue(all(r["significant_digits"] <= 650 for r in before))
+        precision_supplement.load_source(data.ROOT)
+        original = data.digest
+
+        def changed_before(path):
+            if str(path).endswith(BEFORE_V4):
+                return "0" * 64
+            return original(path)
+
+        with (
+            mock.patch.object(precision_supplement.data, "digest", changed_before),
+            self.assertRaisesRegex(ValueError, "precision-lift before-image changed"),
+        ):
+            precision_supplement._precision_lift_before_image(data.ROOT)
 
     def test_symbolic_definition_lint_rejects_floats_unbound_and_unknown_heads(self):
         good = "vakint::Integral(vakint::t^3*(symbolica::bessel_k(0,vakint::t))^5,vakint::Interval(vakint::t,0,∞))"

@@ -576,24 +576,59 @@ def _load_formula_source(root, reference):
     return result
 
 
+PRECISION_LIFT_ADAPTER = "precision-lift-4l-v4"
+
+
+def _precision_lift_before_image(root):
+    """Records a finite-constant precision lift superseded (authenticated before-image).
+
+    The lift keeps definitions and moves each value inside the superseded record's
+    stated error (tools/finite_constants.py); a formula evaluated with the
+    superseded record therefore stays valid and stays bound to that record.
+    """
+    path = Path(root) / "provenance/finite-constant-bindings.json"
+    if not path.exists():
+        return []
+    reference = data.read_json(path).get("additional_sources", {}).get(PRECISION_LIFT_ADAPTER)
+    if reference is None:
+        return []
+    projection_path = data.checked_path(Path(root), reference["path"])
+    if data.digest(projection_path) != reference["sha256"]:
+        raise ValueError("finite constant precision-lift receipt changed")
+    projection = data.read_json(projection_path)
+    before = projection["previous_runtime_payload"]
+    before_path = data.checked_path(Path(root), before["path"])
+    if data.digest(before_path) != before["sha256"]:
+        raise ValueError("finite constant precision-lift before-image changed")
+    superseded = set(projection["superseded_symbols"])
+    return [r for r in data.read_json(before_path) if r["symbol"] in superseded]
+
+
 def _finite_constant_values(root, authoritative):
-    """Published finite constants that an evaluated formula may contain."""
+    """Published finite constants that an evaluated formula may contain.
+
+    Each symbol maps to the accepted (significant_digits, value digest) pairs:
+    the current record and, for a record lifted by a later precision lift, the
+    superseded record the evaluation may have used.
+    """
     constants = {}
     path = Path(root) / "4L/constants.json"
     if path.exists():
         for record in data.read_json(path):
-            constants[record["symbol"]] = (
-                record["significant_digits"],
-                text_digest(record["value"]),
+            constants[record["symbol"]] = {
+                (record["significant_digits"], text_digest(record["value"]))
+            }
+        for record in _precision_lift_before_image(root):
+            constants.setdefault(record["symbol"], set()).add(
+                (record["significant_digits"], text_digest(record["value"]))
             )
     for (source_id, symbol), row in authoritative.items():
         if source_id == FORMULA_SOURCE_ID or "numerical_value" not in row:
             continue
         name = symbol if symbol.startswith("vakint::") else f"vakint::{symbol}"
-        constants[name] = (
-            row["significant_digits"],
-            text_digest(row["numerical_value"]),
-        )
+        constants[name] = {
+            (row["significant_digits"], text_digest(row["numerical_value"]))
+        }
     return constants
 
 
@@ -613,11 +648,16 @@ def _check_formula_evaluation(root, identity, entry, row, original, constants):
         raise ValueError("formula evaluation differs from the published exact row")
     for symbol, used in evaluation["finite_constants"].items():
         current = constants.get(symbol)
+        key = (
+            (used.get("significant_digits"), used.get("value_sha256"))
+            if isinstance(used, dict)
+            else None
+        )
         if (
-            not isinstance(used, dict)
+            key is None
             or current is None
-            or (used.get("significant_digits"), used.get("value_sha256")) != current
-            or row["significant_digits"] > current[0]
+            or key not in current
+            or row["significant_digits"] > key[0]
         ):
             raise ValueError("formula evaluation exceeds or differs from its constants")
     before = evaluation["previous"]

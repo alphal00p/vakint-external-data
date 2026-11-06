@@ -1,0 +1,50 @@
+{
+  "schema": "vakint.external-data.precision-lift-4l-portable-proof-index.v4",
+  "base_commit": "8abb6d63c4e1c1182e169aeab1062e0d9b619e78",
+  "source_path_names_are_historical_only": true,
+  "archives": [
+    {
+      "original_source": {
+        "path": "/shared/vhirschi/t3code/vakint/scratchpad/5l-pilot/lowerloop/periods/constants-hp.json",
+        "sha256": "5bb14b1ab2b1367814c1221fc8ff2395edea3aec6c4a80df5dba646aace2b01d"
+      },
+      "role": "PREC/PREC2 constants registry (values at exactly the validated digits, errors, methods, agreements, labels)",
+      "portable_archive": {
+        "path": "provenance/precision-lift-4l-runtime-v4/objects/5bb14b1ab2b1367814c1221fc8ff2395edea3aec6c4a80df5dba646aace2b01d.json.gz",
+        "sha256": "30d4c199c8d91515aed361ce6d9e21296b86baa32865ac8c1d51dfd986f8bd12",
+        "bytes": 194518,
+        "uncompressed_sha256": "5bb14b1ab2b1367814c1221fc8ff2395edea3aec6c4a80df5dba646aace2b01d",
+        "uncompressed_bytes": 538292
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/vhirschi/t3code/vakint/scratchpad/5l-pilot/lowerloop/periods/PREC.md",
+        "sha256": "af1bec3a415ec8d6513ff33bb247a789c1642d82550b5c77162eed0417f5c115"
+      },
+      "role": "PREC report (methods, validation rule, PREC2 section 7)",
+      "portable_archive": {
+        "path": "provenance/precision-lift-4l-runtime-v4/objects/af1bec3a415ec8d6513ff33bb247a789c1642d82550b5c77162eed0417f5c115.md.gz",
+        "sha256": "06e37d354310b29fefb718f2711bf402ce6ca51f0624457cd2fc9274767f5264",
+        "bytes": 14945,
+        "uncompressed_sha256": "af1bec3a415ec8d6513ff33bb247a789c1642d82550b5c77162eed0417f5c115",
+        "uncompressed_bytes": 40143
+      }
+    },
+    {
+      "original_source": {
+        "path": "/shared/vhirschi/t3code/vakint/scratchpad/5l-pilot/lowerloop/periods/INDEPENDENCE.md",
+        "sha256": "28b8da11efd9239ae1c0729ca3e8de0205ab1a1cf5f517b10afdd7f343d472f7"
+      },
+      "role": "INDEP report (independence, identity audit, prediction tests)",
+      "portable_archive": {
+        "path": "provenance/precision-lift-4l-runtime-v4/objects/28b8da11efd9239ae1c0729ca3e8de0205ab1a1cf5f517b10afdd7f343d472f7.md.gz",
+        "sha256": "aa1ae70132a7c7410e7878959437b86c8649294f2a5de4f0808a7e9672b0ffd0",
+        "bytes": 13870,
+        "uncompressed_sha256": "28b8da11efd9239ae1c0729ca3e8de0205ab1a1cf5f517b10afdd7f343d472f7",
+        "uncompressed_bytes": 34884
+      }
+    }
+  ],
+  "resolution": "a value cell names its source by the uncompressed SHA-256; the archive is gzip (mtime 0) of the exact source bytes"
+}

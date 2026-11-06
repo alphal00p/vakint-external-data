@@ -7,7 +7,8 @@ import data
 
 RECEIPT = "provenance/finite-constant-bindings.json"
 TAKEOVER_V3 = "takeover-4l-closures-v3"
-ADAPTERS = {"independent-d2-v1", "independent-d2-taylor01-v2", TAKEOVER_V3}
+PRECISION_LIFT_V4 = "precision-lift-4l-v4"
+ADAPTERS = {"independent-d2-v1", "independent-d2-taylor01-v2", TAKEOVER_V3, PRECISION_LIFT_V4}
 RECORD_FIELDS = {
     "symbol",
     "value",
@@ -106,10 +107,17 @@ def validate_source(root):
     # A later adapter may supersede earlier records. Superseded adapters are then
     # replayed unchanged against the authenticated runtime before-image of the
     # superseding adapter, never against the new runtime records.
-    baseline, superseded = actual, set()
+    current, lifted = actual, {}
+    if PRECISION_LIFT_V4 in additional:
+        if TAKEOVER_V3 not in additional:
+            raise ValueError("precision-lift adapter needs the takeover adapter it supersedes")
+        lifted, current, _ = _validate_precision_lift_v4_source(
+            root, additional[PRECISION_LIFT_V4], actual
+        )
+    baseline, superseded = current, set()
     if TAKEOVER_V3 in additional:
         extra, baseline, superseded = _validate_takeover_v3_source(
-            root, additional[TAKEOVER_V3], actual
+            root, additional[TAKEOVER_V3], current
         )
     older = {}
     previous = baseline
@@ -130,11 +138,16 @@ def validate_source(root):
     if (
         len(actual) != len(records["runtime_payload"])
         or set(source) & set(extra)
+        or set(source) & set(lifted)
+        or not set(lifted) <= set(extra)
         or set(source) | set(extra) != set(actual)
+        or set(current) != set(actual)
     ):
         raise ValueError("finite constant schema projection changes identities")
     for symbol, original in source.items():
-        record = actual[symbol]
+        record = current[symbol]
+        if actual[symbol] != record:
+            raise ValueError("finite constant schema projection changes accepted values")
         if (
             any(
                 record[field] != original[field]
@@ -290,6 +303,89 @@ def _validate_takeover_v3_source(root, reference, actual):
             raise ValueError("takeover addition changed retained finite constant records")
     if set(actual) != set(previous) | set(owned):
         raise ValueError("takeover addition changes finite constant identities")
+    return owned, previous, superseded
+
+
+def _validate_precision_lift_v4_source(root, reference, actual):
+    """Replay the precision lift of takeover-owned records and bind its before-image.
+
+    Only value, digits, error and value provenance may change; definitions stay
+    those of the superseded record, every new value lies inside the previous
+    record's stated error, and every other record is the before-image record.
+    """
+    from d2_constants import derive_precision_lift_v4
+
+    path = data.checked_path(root, reference["path"])
+    if data.digest(path) != reference["sha256"]:
+        raise ValueError("precision-lift constant projection receipt changed")
+    receipt = data.read_json(path)
+    if (
+        receipt.get("schema")
+        != "vakint.external-data.precision-lift-4l-runtime-projection.v4"
+        or receipt.get("accepted") is not True
+        or receipt.get("no_new_numerical_calculation") is not True
+        or receipt.get("no_master_coefficient_inversion") is not True
+        or receipt.get("all_errors_estimated_not_bounded") is not True
+        or receipt.get("superseded_adapters") != [TAKEOVER_V3]
+    ):
+        raise ValueError("precision-lift constant projection acceptance is incomplete")
+    payload = data.checked_path(root, receipt["source_payload"]["path"])
+    if data.digest(payload) != receipt["source_payload"]["sha256"]:
+        raise ValueError("precision-lift constant source projection changed")
+    review_ref = receipt["independent_review"]
+    review_path = data.checked_path(root, review_ref["path"])
+    review = data.read_json(review_path)
+    if (
+        data.digest(review_path) != review_ref["sha256"]
+        or review.get("source_projection_sha256") != receipt["source_payload"]["sha256"]
+        or review.get("accepted") is not True
+    ):
+        raise ValueError("precision-lift constant exact-arithmetic review changed")
+    expected, readset = derive_precision_lift_v4(root)
+    if readset != receipt["readset"] or data.read_json(payload) != expected:
+        raise ValueError("precision-lift constant values differ from accepted source projection")
+    owned = {record["symbol"]: record for record in expected}
+    if set(owned) != set(receipt["symbols"]) or len(owned) != len(receipt["symbols"]):
+        raise ValueError("precision-lift constant projection changes accepted identities")
+    if any(actual.get(symbol) != record for symbol, record in owned.items()):
+        raise ValueError("precision-lift constant runtime schema projection differs")
+    before = receipt["previous_runtime_payload"]
+    previous_path = data.checked_path(root, before["path"])
+    if data.digest(previous_path) != before["sha256"]:
+        raise ValueError("previous finite constants before-image changed")
+    old_receipt = receipt["previous_binding_receipt"]
+    old_path = data.checked_path(root, old_receipt["path"])
+    if (
+        data.digest(old_path) != old_receipt["sha256"]
+        or data.read_json(old_path)["runtime_payload"]["sha256"] != before["sha256"]
+    ):
+        raise ValueError("previous finite constant receipt before-image changed")
+    previous = {record["symbol"]: record for record in data.read_json(previous_path)}
+    superseded = set(receipt["superseded_symbols"])
+    if superseded != set(owned) or not superseded <= set(previous):
+        raise ValueError("precision-lift constant supersession scope differs")
+    for symbol in set(previous) - superseded:
+        if actual.get(symbol) != previous[symbol]:
+            raise ValueError("precision lift changed retained finite constant records")
+    if set(actual) != set(previous):
+        raise ValueError("precision lift changes finite constant identities")
+    with localcontext() as context:
+        context.prec = 25000
+        for symbol in superseded:
+            new, old = owned[symbol], previous[symbol]
+            if (
+                new.get("definition") != old.get("definition")
+                or new.get("symbolic_definition") != old.get("symbolic_definition")
+                or new["provenance"].get("definition_metadata")
+                != old["provenance"].get("definition_metadata")
+                or new["error_quality"] != old["error_quality"]
+                or new["significant_digits"] <= old["significant_digits"]
+                or abs(Decimal(new["value"]) - Decimal(old["value"]))
+                > Decimal(old["absolute_error"])
+            ):
+                raise ValueError(
+                    "precision lift changes a definition or leaves the previous accepted cell"
+                )
     return owned, previous, superseded
 
 

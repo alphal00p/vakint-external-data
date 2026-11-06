@@ -20475,8 +20475,8 @@
       "bytes": 64066
     },
     "constants.json": {
-      "sha256": "482e7049fdf896f1a7ec24c1f7c72b150c349bc19bf406b8321069a393df3747",
-      "bytes": 582411
+      "sha256": "1338cfe501ffb5167c9aad7b0a751de6e2fe1bcaa7aed6acb0019775d055c95a",
+      "bytes": 1118912
     },
     "coverage.json": {
       "sha256": "0ec430d4fcf1cb566c3b40651ca09e4e6c87f355c9d015e5e6c13a39f2042b3e",
@@ -21635,6 +21635,6 @@
   "numerical_precision_supplement": "numerical-precision-supplement.json",
   "constant_bindings": {
     "path": "constants.json",
-    "sha256": "482e7049fdf896f1a7ec24c1f7c72b150c349bc19bf406b8321069a393df3747"
+    "sha256": "1338cfe501ffb5167c9aad7b0a751de6e2fe1bcaa7aed6acb0019775d055c95a"
   }
 }

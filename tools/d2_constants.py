@@ -681,12 +681,123 @@ def _derive_takeover_v3(root):
     )
 
 
+PRECISION_LIFT_V4_REGISTRY = "provenance/precision-lift-4l-runtime-v4/registry.json"
+PRECISION_LIFT_V4_INDEX = "provenance/precision-lift-4l-runtime-v4/portable-proof-index.json"
+PRECISION_LIFT_V4_SCHEMA = "vakint.external-data.precision-lift-4l-registry.v4"
+PRECISION_LIFT_V4_ERROR_RULE = (
+    "sum of the listed archived error terms (abs: the archived absolute error bound of the validated-digit "
+    "centre, rounding included; rel_floor: |center|*10^-(floor(digits)+offset) on the archived two-profile "
+    "agreement; last_digit_unit: one unit of the last stored digit of the published centre, present exactly "
+    "once), rounded up to six significant digits"
+)
+
+
+def derive_precision_lift_v4(root):
+    """Project the precision-lifted 4L constants from their archived validated registry."""
+    with localcontext() as context:
+        # Centres carry at most 19998 significant digits (T111bar5).
+        context.prec = 25000
+        return _derive_precision_lift_v4(root)
+
+
+def _derive_precision_lift_v4(root):
+    registry = json.loads(data.checked_path(root, PRECISION_LIFT_V4_REGISTRY).read_bytes())
+    index = json.loads(data.checked_path(root, PRECISION_LIFT_V4_INDEX).read_bytes())
+    if (
+        registry.get("schema") != PRECISION_LIFT_V4_SCHEMA
+        or registry.get("portable_validation_proof_index")
+        != reference(root, PRECISION_LIFT_V4_INDEX)
+        or registry.get("no_new_numerical_calculation_in_projection") is not True
+        or registry.get("stored_digits_are_the_validated_digits") is not True
+    ):
+        raise ValueError("precision-lift registry authentication differs")
+    records = []
+    symbols = set()
+    for period in registry["periods"]:
+        cell = period["value_cell"]
+        symbol = period["public_symbol"]
+        decoded, source_ref = archive_bytes(root, index, cell["source_uncompressed_sha256"])
+        source = json.loads(decoded, parse_float=Decimal)
+        center = _pointer(source, cell["center_json_pointer"])
+        if not isinstance(center, str) or center != cell["center"]:
+            raise ValueError("precision-lift center differs from its archived source")
+        if _pointer(source, cell["source_symbol_json_pointer"]) != symbol:
+            raise ValueError("precision-lift archived source names another constant")
+        value = Decimal(center)
+        stored = len(value.as_tuple().digits)
+        # Nothing beyond the validated digits is stored: the centre is the archived
+        # value at exactly its validated number of significant digits.
+        validated = _pointer(source, cell["validated_digits_json_pointer"])
+        if type(validated) is not int or stored != validated:
+            raise ValueError("precision-lift centre stores digits beyond its validated digits")
+        if (
+            sum(1 for term in cell["error_terms"] if term.get("kind") == "last_digit_unit")
+            != 1
+        ):
+            raise ValueError(
+                "precision-lift error must include the storage rounding of the published centre once"
+            )
+        error = takeover_v3_error(value, source, cell["error_terms"])
+        if error < Decimal(1).scaleb(value.as_tuple().exponent):
+            raise ValueError(
+                "precision-lift error is below the storage rounding of the published centre"
+            )
+        digits = cell["validated_significant_digits"]
+        if (
+            symbol in symbols
+            or str(error) != cell["absolute_error"]
+            or type(digits) is not int
+            or not value.is_finite()
+            or value == 0
+            or stored <= digits
+            or not error < abs(value) * Decimal(10) ** -digits
+        ):
+            raise ValueError("precision-lift finite cap differs")
+        symbols.add(symbol)
+        provenance = {
+            "source_kind": period["source_kind"],
+            "error_authority": period["error_authority"],
+            "status": period["status"],
+            "validation": period["validation"],
+            "definition_metadata": period["definition_metadata"],
+            "definition": period["definition_reference"],
+            "value_registry": reference(root, PRECISION_LIFT_V4_REGISTRY),
+            "portable_proof_index": reference(root, PRECISION_LIFT_V4_INDEX),
+            "source": source_ref,
+            "center_json_pointer": cell["center_json_pointer"],
+            "center_negated_raw_to_hat": False,
+            "error_terms": cell["error_terms"],
+            "error_rule": PRECISION_LIFT_V4_ERROR_RULE,
+            "accepted_significant_digits": digits,
+            "stored_digits_do_not_extend_source_cap": True,
+            "supersedes": period["supersedes"],
+        }
+        records.append(
+            {
+                "symbol": symbol,
+                "value": center,
+                "significant_digits": digits,
+                "absolute_error": str(error),
+                "error_quality": "estimated",
+                "definition": period["mathematical_definition"],
+                "symbolic_definition": period["symbolic_definition"],
+                "provenance": provenance,
+            }
+        )
+    return records, [
+        reference(root, path)
+        for path in [PRECISION_LIFT_V4_REGISTRY, PRECISION_LIFT_V4_INDEX]
+    ]
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("root", type=Path)
     parser.add_argument("output", type=Path)
     parser.add_argument(
-        "--adapter", choices=["d2-v1", "taylor01-v2", "takeover-v3"], default="d2-v1"
+        "--adapter",
+        choices=["d2-v1", "taylor01-v2", "takeover-v3", "precision-lift-v4"],
+        default="d2-v1",
     )
     args = parser.parse_args()
     with localcontext() as context:
@@ -695,17 +806,21 @@ def main():
             records, readset = derive(args.root)
         elif args.adapter == "taylor01-v2":
             records, readset = derive_taylor01(args.root)
-        else:
+        elif args.adapter == "takeover-v3":
             records, readset, _ = derive_takeover_v3(args.root)
+        else:
+            records, readset = derive_precision_lift_v4(args.root)
     filename = {
         "d2-v1": "constants-d2.json",
         "taylor01-v2": "constants-d2-taylor01.json",
         "takeover-v3": "constants-takeover-v3.json",
+        "precision-lift-v4": "constants-precision-lift-v4.json",
     }[args.adapter]
     schema = {
         "d2-v1": "vakint.external-data.independent-d2-runtime-projection.v1",
         "taylor01-v2": "vakint.external-data.independent-d2-taylor01-runtime-projection.v2",
         "takeover-v3": "vakint.external-data.takeover-4l-closures-runtime-projection.v3",
+        "precision-lift-v4": "vakint.external-data.precision-lift-4l-runtime-projection.v4",
     }[args.adapter]
     args.output.mkdir(parents=True, exist_ok=True)
     (args.output / filename).write_text(json.dumps(records, indent=2) + "\n")

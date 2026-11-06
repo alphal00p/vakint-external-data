@@ -1,0 +1,38 @@
+{
+ "schema": "g4l.identity-checks-shipped.v1",
+ "constants_payload_sha256": "1338cfe501ffb5167c9aad7b0a751de6e2fe1bcaa7aed6acb0019775d055c95a",
+ "predictions_registered_sha256": "21b0c7fe546d813f9cfaf2a6a244d96a88c71dff6900b21ea320d52660b65e4f",
+ "predictions_registered": "lowerloop/periods/indep/out/predictions-registered-1104.json (INDEP, registered 2026-11-04 20:17Z, before any of these digits existed)",
+ "rule": "usage: check_identities.py CONSTANTS.json PREDICTIONS_REGISTERED.json OUT.json",
+ "checks": {
+  "R1_PR11dD2Eps2": {
+   "combination": "(-4/9)*PR10D2Eps1 + (-2/9)*PR10D2Eps2 + (2/3)*PR11D2Eps2 + (1/2)*PR11dD2Eps1 + (-1)*PR11dD2Eps2",
+   "inputs_shipped_significant_digits": {
+    "PR10D2Eps1": 5406,
+    "PR10D2Eps2": 5406,
+    "PR11D2Eps2": 5361,
+    "PR11dD2Eps1": 5363,
+    "PR11dD2Eps2": 5360
+   },
+   "predicted_digits": 5527,
+   "agreement_digits": 5361.38,
+   "error_budget_digits": 5360.67,
+   "inside_error_budget": true,
+   "agreement_at_least_min_shipped_digits_minus_1": true,
+   "verdict": "PASS"
+  },
+  "ALIAS_PR11dep0": {
+   "combination": "(1/4)*PR10D2Eps1 + (9/4)*PR11dD2Eps1",
+   "inputs_shipped_significant_digits": {
+    "PR10D2Eps1": 5406,
+    "PR11dD2Eps1": 5363
+   },
+   "predicted_digits": 5531,
+   "agreement_digits": 5364.06,
+   "error_budget_digits": 5363.4,
+   "inside_error_budget": true,
+   "agreement_at_least_min_shipped_digits_minus_1": true,
+   "verdict": "PASS"
+  }
+ }
+}
