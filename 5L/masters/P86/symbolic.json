@@ -1,0 +1,26 @@
+[
+  [
+    -5,
+    "0"
+  ],
+  [
+    -4,
+    "0"
+  ],
+  [
+    -3,
+    "0"
+  ],
+  [
+    -2,
+    "0"
+  ],
+  [
+    -1,
+    "-2343/32*vakint::PR7D2-207/32*vakint::PR7D2Eps1+9/8*vakint::PR10D2Eps1+81/8*vakint::PR9D2Eps1+405/16*vakint::PR11dD2Eps1-27/8*vakint::PR0D2Eps1+350/3*log(2)*symbolica::zeta(3)-2041/4*symbolica::zeta(3)+23229/40*vakint::K5Moment(1)-315/16*vakint::K5Moment(3)+261/8*vakint::K5LogMoment(1)-1125/32*vakint::K5LogMoment(3)-446/3*symbolica::polylog(4,1/2)+150*vakint::GPLReal(0,0,1/2*(1-𝑖*3^(1/2)),-1,1)-21/4*3^(1/2)*vakint::cl2+15/2*3^(1/2)*vakint::cl4-45/2*3^(1/2)*vakint::PolylogImag(3,𝑖/3*3^(1/2))+85/96*3^(1/2)*𝜋^3+15/32*3^(1/2)*𝜋*log(3)^2-53/2*vakint::cl2^2-223/36*log(2)^4+223/36*𝜋^2*log(2)^2+1817/4320*𝜋^4"
+  ],
+  [
+    0,
+    "144/5*vakint::cl2*vakint::PolylogImag(3,𝑖/3*3^(1/2))+19*vakint::D5bar1-4457/32*vakint::PR7D2+75/32*vakint::PR7D2Eps1-159/8*vakint::PR10D2Eps1+75/8*vakint::PR7D2Eps2+321/8*vakint::PR9D2Eps1-15/2*vakint::PR9D2Eps2+3/4*vakint::PR9pD2Eps2-9/2*vakint::PR10D2Eps2+135/8*vakint::PR11D2Eps2-837/16*vakint::PR11dD2Eps1+9/8*vakint::PR0D2Eps1-27/8*vakint::PR0D2Eps2-3766/9*log(2)*symbolica::zeta(3)+32021/12*symbolica::zeta(3)-973*symbolica::zeta(5)+16563/40*vakint::K5Moment(1)+13335/16*vakint::K5Moment(3)+427/40*vakint::K5LogMoment(1)-6075/32*vakint::K5LogMoment(3)-469/10*vakint::K5MomentTaylor(1,2)+465/8*vakint::K5MomentTaylor(3,2)-23618/9*symbolica::polylog(4,1/2)-768*symbolica::polylog(5,1/2)-538*vakint::GPLReal(0,0,1/2*(1-𝑖*3^(1/2)),-1,1)+889/4*3^(1/2)*vakint::cl2+2941/10*3^(1/2)*vakint::cl4-243/2*3^(1/2)*vakint::PolylogImag(3,𝑖/3*3^(1/2))+372/5*3^(1/2)*vakint::PolylogImag(4,𝑖/3*3^(1/2))+31/6*3^(1/2)*𝜋^2*vakint::cl2+153/32*3^(1/2)*𝜋^3+527/360*3^(1/2)*𝜋^3*log(3)+81/32*3^(1/2)*𝜋*log(3)^2+31/120*3^(1/2)*𝜋*log(3)^3+895/6*vakint::cl2^2-11809/108*log(2)^4+32/5*log(2)^5+43/9*𝜋^2*symbolica::zeta(3)+469/120*𝜋^2*vakint::K5Moment(1)-155/32*𝜋^2*vakint::K5Moment(3)+11809/108*𝜋^2*log(2)^2-32/3*𝜋^2*log(2)^3-17/15*𝜋^3*vakint::cl2+417713/12960*𝜋^4-136/15*𝜋^4*log(2)-3/5*𝜋*vakint::cl2*log(3)^2"
+  ]
+]

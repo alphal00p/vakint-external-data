@@ -1,0 +1,22 @@
+[
+  [
+    -5,
+    "0"
+  ],
+  [
+    -4,
+    "0"
+  ],
+  [
+    -3,
+    "0"
+  ],
+  [
+    -2,
+    "0"
+  ],
+  [
+    -1,
+    "9/8*vakint::PR10D2Eps1+405/16*vakint::PR11dD2Eps1-2343/32*vakint::PR7D2-207/32*vakint::PR7D2Eps1+81/8*vakint::PR9D2Eps1-27/8*vakint::PR0D2Eps1+350/3*log(2)*symbolica::zeta(3)-2041/4*symbolica::zeta(3)+261/8*vakint::K5LogMoment(1)-1125/32*vakint::K5LogMoment(3)+23229/40*vakint::K5Moment(1)-315/16*vakint::K5Moment(3)-446/3*symbolica::polylog(4,1/2)+150*vakint::GPLReal(0,0,1/2*(1-𝑖*3^(1/2)),-1,1)-21/4*3^(1/2)*vakint::cl2+15/2*3^(1/2)*vakint::cl4-45/2*3^(1/2)*vakint::PolylogImag(3,𝑖/3*3^(1/2))+85/96*3^(1/2)*𝜋^3+15/32*3^(1/2)*𝜋*log(3)^2-53/2*vakint::cl2^2-223/36*log(2)^4+223/36*𝜋^2*log(2)^2+1817/4320*𝜋^4"
+  ]
+]

@@ -1,0 +1,26 @@
+[
+  [
+    -5,
+    "1/2"
+  ],
+  [
+    -4,
+    "59/12"
+  ],
+  [
+    -3,
+    "365/12-4*3^(1/2)*vakint::cl2+5/24*𝜋^2"
+  ],
+  [
+    -2,
+    "307/2-77/6*symbolica::zeta(3)-34*3^(1/2)*vakint::cl2-48/5*3^(1/2)*vakint::PolylogImag(3,𝑖/3*3^(1/2))+17/45*3^(1/2)*𝜋^3+1/5*3^(1/2)*𝜋*log(3)^2+295/144*𝜋^2"
+  ],
+  [
+    -1,
+    "696-3*vakint::PR7D2-224/3*log(2)*symbolica::zeta(3)-5095/36*symbolica::zeta(3)+106/15*vakint::K5Moment(1)+15*vakint::K5Moment(3)-256/3*symbolica::polylog(4,1/2)-96*vakint::GPLReal(0,0,1/2*(1-𝑖*3^(1/2)),-1,1)-178*3^(1/2)*vakint::cl2-4/5*3^(1/2)*vakint::cl4-408/5*3^(1/2)*vakint::PolylogImag(3,𝑖/3*3^(1/2))-96/5*3^(1/2)*vakint::PolylogImag(4,𝑖/3*3^(1/2))-5/3*3^(1/2)*𝜋^2*vakint::cl2+289/90*3^(1/2)*𝜋^3-17/45*3^(1/2)*𝜋^3*log(3)+17/10*3^(1/2)*𝜋*log(3)^2-1/15*3^(1/2)*𝜋*log(3)^3+22*vakint::cl2^2-32/9*log(2)^4+1825/144*𝜋^2+32/9*𝜋^2*log(2)^2+14963/8640*𝜋^4"
+  ],
+  [
+    0,
+    "11891/4+144/5*vakint::cl2*vakint::PolylogImag(3,𝑖/3*3^(1/2))-6*vakint::D5bar1-16*vakint::PR7D2+15/4*vakint::PR7D2Eps1-27/8*vakint::PR10D2Eps1-1792/3*log(2)*symbolica::zeta(3)-33457/36*symbolica::zeta(3)-1/2*symbolica::zeta(5)-36*vakint::K5Moment(1)+225*vakint::K5Moment(3)-164/15*vakint::K5LogMoment(1)+15*vakint::K5LogMoment(3)-2816/3*symbolica::polylog(4,1/2)-768*vakint::GPLReal(0,0,1/2*(1-𝑖*3^(1/2)),-1,1)-744*3^(1/2)*vakint::cl2+44/3*3^(1/2)*vakint::cl2*symbolica::zeta(3)-4/5*3^(1/2)*vakint::cl4-22/15*3^(1/2)*vakint::cl4*log(3)+24/5*3^(1/2)*log(3)*vakint::PolylogImag(4,𝑖/3*3^(1/2))-2136/5*3^(1/2)*vakint::PolylogImag(3,𝑖/3*3^(1/2))-816/5*3^(1/2)*vakint::PolylogImag(4,𝑖/3*3^(1/2))+12*3^(1/2)*vakint::GPLImag(0,1,1,1,1/2*(-1-𝑖*3^(1/2)),1)-85/6*3^(1/2)*𝜋^2*vakint::cl2-28/5*3^(1/2)*𝜋^2*vakint::PolylogImag(3,𝑖/3*3^(1/2))+1513/90*3^(1/2)*𝜋^3-289/90*3^(1/2)*𝜋^3*log(3)-4/81*3^(1/2)*𝜋^3*log(2)^2+31/135*3^(1/2)*𝜋^3*log(3)^2+479/2430*3^(1/2)*𝜋^5+28/27*3^(1/2)*𝜋*log(2)*symbolica::zeta(3)+32/27*3^(1/2)*𝜋*symbolica::polylog(4,1/2)+4/3*3^(1/2)*𝜋*vakint::GPLReal(0,0,1/2*(1-𝑖*3^(1/2)),-1,1)+4/81*3^(1/2)*𝜋*log(2)^4+89/10*3^(1/2)*𝜋*log(3)^2-17/30*3^(1/2)*𝜋*log(3)^3+1/60*3^(1/2)*𝜋*log(3)^4+176*vakint::cl2^2-352/9*log(2)^4+1535/24*𝜋^2-169/72*𝜋^2*symbolica::zeta(3)+352/9*𝜋^2*log(2)^2-17/15*𝜋^3*vakint::cl2+293227/17280*𝜋^4-3/5*𝜋*vakint::cl2*log(3)^2"
+  ]
+]

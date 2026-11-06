@@ -1,9 +1,15 @@
 # Five-loop symbolic reduction
 
-This pack contains 131 unevaluated terminal integrals and the native
+This pack contains 131 master integrals with their Laurent coefficients and the native
 RustRed application for the recorded campaign scope. Each `masters/P*/graph.dot`
 contains its complete numerator, masses, powers and explicit loop basis.
-The scalar model is `model.json`. No numerical coefficients are supplied.
+The scalar model is `model.json`.
+The available Laurent coefficients (ε^-5..ε^0) of each master are in
+`masters/P*/numerical.json` and, for exact orders, `symbolic.json`;
+`producer-update.json` records how each
+order was obtained and lists orders not yet available (Vakint reports a needed
+missing order instead of treating it as zero). `provenance/basis-v4-translation.json`
+records how the exact forms are written in the constant basis v4 (docs/basis.md).
 
 The exact signed-index identity is recorded in `manifest.json`; P-numbers are
 display names for this publication only. See `coverage.json` for admitted scope.

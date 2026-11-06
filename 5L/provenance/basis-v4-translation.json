@@ -1,0 +1,4127 @@
+{
+  "schema": "vakint.external-data.five-loop-basis-v4-translation.v1",
+  "meaning": "How the exact 5L Laurent coefficients of this release are written in the constant basis v4 of docs/basis.md. PSLQ forms were found over the 5L campaign period set periods.json (17 monomials of the generators below) and rewritten with identity_map; product masters are Symbolica products of the 1L-4L rows of this repository. Every shipped symbolic row was evaluated numerically and agrees with its numerical row (verified digits per order). Strings using a generator of numerical_identities_of_main are exact only modulo that identity of this repository.",
+  "data_line": {
+    "repository": "vakint-external-data",
+    "base_commit": "c596a3f29714fd0976aacc20628eb24a0e4ecb88",
+    "basis": "constant basis v4 (docs/basis.md)"
+  },
+  "working_digits": 260,
+  "identity_map": {
+    "C2": {
+      "basis_v4": "3^(1/2)*vakint::cl2",
+      "status": "definition: C2 = sqrt3 Cl2(pi/3), vakint::cl2 = Cl2(pi/3) (basis v4 #11)",
+      "verified_digits_vs_independent_value": 259.6,
+      "independent_value": "sqrt3 * mpmath clsin(2, pi/3)"
+    },
+    "C4": {
+      "basis_v4": "3^(1/2)*vakint::cl4",
+      "status": "definition: C4 = sqrt3 Cl4(pi/3), vakint::cl4 = Cl4(pi/3) (basis v4 #13); used by no form",
+      "verified_digits_vs_independent_value": 260.5,
+      "independent_value": "sqrt3 * mpmath clsin(4, pi/3)"
+    },
+    "K5M1": {
+      "basis_v4": "vakint::K5Moment(1)",
+      "status": "same constant (basis v4 #24, 20000 d bounded)",
+      "verified_digits_vs_independent_value": 259.9,
+      "independent_value": "v0.1.2 4L/constants.json"
+    },
+    "K5M3": {
+      "basis_v4": "vakint::K5Moment(3)",
+      "status": "same constant (basis v4 #25, 20000 d bounded)",
+      "verified_digits_vs_independent_value": 260.2,
+      "independent_value": "v0.1.2 4L/constants.json"
+    },
+    "L3": {
+      "basis_v4": "2/3*3^(1/2)*vakint::cl2*log(3)+8/5*3^(1/2)*vakint::PolylogImag(3,𝑖/3*3^(1/2))-16/135*3^(1/2)*𝜋^3-1/30*3^(1/2)*𝜋*log(3)^2",
+      "status": "exact modulo main's numerical identity LI3_I_SQRT3_V1 (X3: Im G(0,1,-w;1) -> Im Li3(i/sqrt3), residual 10^-4102.8 at 4100 digits, main docs/basis.md; main labels the Li3(+-i/sqrt3) step COMPUTED, every other HPL/GPL step EXACT): the periods.json relation [2L/P2]_1 = 45/2 + 3/4 pi2 - 6 C2 - 1/6 pi2 pis3 - z3 + 2 C2 ln3 - 3 L3 solved with main's basis-v4 row 2L/P2 eps^1. The resulting relation 270 L3 = sqrt3 (180 Cl2(pi/3) log3 + 432 Im Li3(i/sqrt3) - 32 pi^3 - 9 pi log^2 3) is re-found blind here (rt/tools/l3_lll.py -> rt/out/l3-lll.json: own integral LLL, 12-element superset with 7 decoys, every value by mpmath, same relation at 120 / 200 / 300 digits, decoys 0, E = 287.3 at 300 d; independent of the reviewer's mpmath PSLQ run, which found it too)",
+      "verified_digits_vs_independent_value": 260.4,
+      "independent_value": "sqrt3 * Ls3(2pi/3) by tanh-sinh quadrature"
+    },
+    "PR11dep0": {
+      "basis_v4": "19/24*vakint::PR7D2Eps1-3*vakint::PR9D2Eps1+1/4*vakint::PR10D2Eps1+9/4*vakint::PR11dD2Eps1+37/8*vakint::PR7D2-392/27*log(2)*symbolica::zeta(3)+214/9*symbolica::zeta(3)-5*symbolica::zeta(5)-43/2*vakint::K5Moment(1)+5/4*vakint::K5Moment(3)-49/30*vakint::K5LogMoment(1)-25/8*vakint::K5LogMoment(3)+560/27*symbolica::polylog(4,1/2)-56/3*vakint::GPLReal(0,0,1/2*(1-𝑖*3^(1/2)),-1,1)+1/3*3^(1/2)*vakint::cl2-14/3*3^(1/2)*vakint::cl4-2*3^(1/2)*vakint::PolylogImag(3,𝑖/3*3^(1/2))+17/216*3^(1/2)*𝜋^3+1/24*3^(1/2)*𝜋*log(3)^2-2/9*vakint::cl2^2+70/81*log(2)^4-70/81*𝜋^2*log(2)^2-205/1944*𝜋^4",
+      "status": "main's numerical identity: basis-v4 row 4L/P17 eps^0 = closed formula of PR11d[0] (main docs/basis.md: COMPUTED+VALIDATED closure, 544 digits vs the 20000-digit value); not re-found blind here, verified here against the 20006-digit v0.1.2 payload to the working precision; S*: contains D=2 periods (520 d) and K5 moments (20000 d)",
+      "verified_digits_vs_independent_value": 261.1,
+      "independent_value": "v0.1.2 4L/P17 numerical.json eps^0 (20006 d)"
+    },
+    "SUN2": {
+      "basis_v4": "93/2-3*symbolica::zeta(3)-14*3^(1/2)*vakint::cl2+28/5*3^(1/2)*vakint::cl4-72/5*3^(1/2)*vakint::PolylogImag(3,𝑖/3*3^(1/2))-48/5*3^(1/2)*vakint::PolylogImag(4,𝑖/3*3^(1/2))-1/3*3^(1/2)*𝜋^2*vakint::cl2+17/30*3^(1/2)*𝜋^3-17/90*3^(1/2)*𝜋^3*log(3)+3/10*3^(1/2)*𝜋*log(3)^2-1/30*3^(1/2)*𝜋*log(3)^3+7/4*𝜋^2+7/240*𝜋^4",
+      "status": "definition: SUN2 = [2L/P2]_2 (periods.json), main's exact basis-v4 row 2L/P2 eps^2",
+      "verified_digits_vs_independent_value": 260.2,
+      "independent_value": "v0.1.2 2L/P2 numerical.json eps^2 (20000 d)"
+    },
+    "ln3": {
+      "basis_v4": "log(3)",
+      "status": "definition",
+      "verified_digits_vs_independent_value": 259.4,
+      "independent_value": "mpmath"
+    },
+    "pi2": {
+      "basis_v4": "𝜋^2",
+      "status": "definition",
+      "verified_digits_vs_independent_value": 260.8,
+      "independent_value": "mpmath"
+    },
+    "pis3": {
+      "basis_v4": "3^(1/2)*𝜋",
+      "status": "definition",
+      "verified_digits_vs_independent_value": 261.9,
+      "independent_value": "mpmath"
+    },
+    "z3": {
+      "basis_v4": "symbolica::zeta(3)",
+      "status": "definition",
+      "verified_digits_vs_independent_value": 260.1,
+      "independent_value": "mpmath"
+    },
+    "z5": {
+      "basis_v4": "symbolica::zeta(5)",
+      "status": "definition",
+      "verified_digits_vs_independent_value": 259.5,
+      "independent_value": "mpmath"
+    },
+    "z7": {
+      "basis_v4": "symbolica::zeta(7)",
+      "status": "definition",
+      "verified_digits_vs_independent_value": 259.4,
+      "independent_value": "mpmath"
+    }
+  },
+  "numerical_identities_of_main": {
+    "LI3_I_SQRT3_V1/X3": "Im G(0,1,-w;1) -> Im Li3(i/sqrt3) = vakint::PolylogImag(3,3^(1/2)*i/3); residual 10^-4102.8 at 4100 digits (main: COMPUTED)",
+    "X4": "Im G(0,1,1,-w;1) -> Im Li4(i/sqrt3) = vakint::PolylogImag(4,3^(1/2)*i/3); residual 10^-4100.4 at 4100 digits (main: COMPUTED)",
+    "PR11d[0] closure": "closed formula of PR11d[0] = 4L/P17 eps^0 (D2 jets, K5 moments, classical): COMPUTED+VALIDATED, 544 digits vs 20000",
+    "R1": "48-term relation among D=2 jets (PR11dD2Eps2 expressed), 547 digits; enters only through main rows containing PR11dD2Eps2 terms"
+  },
+  "l3_blind_refinding": {
+    "method": "integral LLL (own implementation) on a 12-element superset (5 target monomials + 7 decoys), every value by mpmath",
+    "relation": {
+      "L3": 270,
+      "s3*Cl2*ln3": -180,
+      "s3*ImLi3(i/s3)": -432,
+      "s3*pi^3": 32,
+      "s3*pi*ln3^2": 9
+    },
+    "digits": [
+      120,
+      200,
+      300
+    ],
+    "decoys_zero_at_every_D": true,
+    "same_relation_at_every_D": true,
+    "excess_E_at_max_D": 287.3
+  },
+  "evaluation_only_values": {
+    "what": "decimals used only to evaluate strings containing D5bar1/2, D6bar1/2, T111bar4 and GPLs #18-#20 (vakint evaluates them itself): solved from the 1L-4L rows of this repository and their numerical payloads; every other row reproduced",
+    "min_held_out_agree_digits": 315.4,
+    "cross_checks": {
+      "GPLReal(0,0,wbar,-1,1) vs independent tanh-sinh (rt/out/gpl15-290.txt)": 290.2
+    }
+  },
+  "summary": {
+    "forms": 187,
+    "product_orders": 126,
+    "not_evaluated": [],
+    "classes": {
+      "pslq-form": {
+        "n": 187,
+        "S": 183,
+        "S*": 4
+      },
+      "product": {
+        "n": 126,
+        "S": 106,
+        "S*": 20
+      }
+    }
+  },
+  "forms": {
+    "P100|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.1
+    },
+    "P101|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P101|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P102|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 259.7
+    },
+    "P106|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3"
+      ],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 261.0
+    },
+    "P106|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.4
+    },
+    "P106|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.4
+    },
+    "P106|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.4
+    },
+    "P108|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.1
+    },
+    "P109|-1": {
+      "order": -1,
+      "class": "S*",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3",
+        "PR11d[0] closure"
+      ],
+      "finite_constants": [
+        [
+          "vakint::K5LogMoment(1)",
+          20000
+        ],
+        [
+          "vakint::K5LogMoment(3)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(1)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(3)",
+          20000
+        ],
+        [
+          "vakint::PR10D2Eps1",
+          5406
+        ],
+        [
+          "vakint::PR11dD2Eps1",
+          5363
+        ],
+        [
+          "vakint::PR7D2",
+          5542
+        ],
+        [
+          "vakint::PR7D2Eps1",
+          5540
+        ],
+        [
+          "vakint::PR9D2Eps1",
+          5531
+        ]
+      ],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 261.1
+    },
+    "P10|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.3
+    },
+    "P10|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 259.7
+    },
+    "P10|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P110|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3"
+      ],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.4
+    },
+    "P110|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.4
+    },
+    "P110|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.4
+    },
+    "P110|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.4
+    },
+    "P113|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.8
+    },
+    "P113|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.3
+    },
+    "P113|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.0
+    },
+    "P116|-1": {
+      "order": -1,
+      "class": "S*",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3",
+        "PR11d[0] closure"
+      ],
+      "finite_constants": [
+        [
+          "vakint::K5LogMoment(1)",
+          20000
+        ],
+        [
+          "vakint::K5LogMoment(3)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(1)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(3)",
+          20000
+        ],
+        [
+          "vakint::PR10D2Eps1",
+          5406
+        ],
+        [
+          "vakint::PR11dD2Eps1",
+          5363
+        ],
+        [
+          "vakint::PR7D2",
+          5542
+        ],
+        [
+          "vakint::PR7D2Eps1",
+          5540
+        ],
+        [
+          "vakint::PR9D2Eps1",
+          5531
+        ]
+      ],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 261.1
+    },
+    "P121|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3"
+      ],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 259.5
+    },
+    "P121|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.1
+    },
+    "P121|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.5
+    },
+    "P121|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P122|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3"
+      ],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 259.4
+    },
+    "P122|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.3
+    },
+    "P122|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P122|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 259.7
+    },
+    "P124|-1": {
+      "order": -1,
+      "class": "S*",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3",
+        "PR11d[0] closure"
+      ],
+      "finite_constants": [
+        [
+          "vakint::K5LogMoment(1)",
+          20000
+        ],
+        [
+          "vakint::K5LogMoment(3)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(1)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(3)",
+          20000
+        ],
+        [
+          "vakint::PR10D2Eps1",
+          5406
+        ],
+        [
+          "vakint::PR11dD2Eps1",
+          5363
+        ],
+        [
+          "vakint::PR7D2",
+          5542
+        ],
+        [
+          "vakint::PR7D2Eps1",
+          5540
+        ],
+        [
+          "vakint::PR9D2Eps1",
+          5531
+        ]
+      ],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 259.8
+    },
+    "P127|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3"
+      ],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 259.8
+    },
+    "P127|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.3
+    },
+    "P127|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P127|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 259.7
+    },
+    "P128|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 259.8
+    },
+    "P128|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.2
+    },
+    "P128|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 259.9
+    },
+    "P128|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 259.9
+    },
+    "P14|-1": {
+      "order": -1,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.5
+    },
+    "P17|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.6
+    },
+    "P17|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 259.7
+    },
+    "P17|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P18|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.2
+    },
+    "P18|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.0
+    },
+    "P18|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.2
+    },
+    "P19|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3"
+      ],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.9
+    },
+    "P19|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.4
+    },
+    "P19|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P19|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P1|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.4
+    },
+    "P1|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 259.5
+    },
+    "P1|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P20|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3"
+      ],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 259.6
+    },
+    "P20|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.9
+    },
+    "P20|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P20|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.0
+    },
+    "P22|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 261.0
+    },
+    "P22|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.4
+    },
+    "P22|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P23|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3"
+      ],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.0
+    },
+    "P23|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.6
+    },
+    "P23|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P23|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P24|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.1
+    },
+    "P26|-1": {
+      "order": -1,
+      "class": "S*",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3",
+        "PR11d[0] closure"
+      ],
+      "finite_constants": [
+        [
+          "vakint::K5LogMoment(1)",
+          20000
+        ],
+        [
+          "vakint::K5LogMoment(3)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(1)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(3)",
+          20000
+        ],
+        [
+          "vakint::PR10D2Eps1",
+          5406
+        ],
+        [
+          "vakint::PR11dD2Eps1",
+          5363
+        ],
+        [
+          "vakint::PR7D2",
+          5542
+        ],
+        [
+          "vakint::PR7D2Eps1",
+          5540
+        ],
+        [
+          "vakint::PR9D2Eps1",
+          5531
+        ]
+      ],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 261.1
+    },
+    "P29|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 259.6
+    },
+    "P29|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.2
+    },
+    "P2|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.3
+    },
+    "P2|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.2
+    },
+    "P2|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P30|-1": {
+      "order": -1,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.5
+    },
+    "P33|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3"
+      ],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.3
+    },
+    "P33|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.9
+    },
+    "P33|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P33|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P34|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3"
+      ],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 259.8
+    },
+    "P34|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.1
+    },
+    "P34|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P34|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P36|-1": {
+      "order": -1,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 259.9
+    },
+    "P38|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.9
+    },
+    "P38|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P38|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.1
+    },
+    "P3|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 259.8
+    },
+    "P3|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P3|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P40|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 259.5
+    },
+    "P40|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.1
+    },
+    "P43|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 261.4
+    },
+    "P43|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.3
+    },
+    "P43|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P44|-1": {
+      "order": -1,
+      "class": "S",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3"
+      ],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 259.9
+    },
+    "P44|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.2
+    },
+    "P44|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 259.5
+    },
+    "P44|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P46|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.1
+    },
+    "P4|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.1
+    },
+    "P4|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 259.5
+    },
+    "P4|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P50|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 259.7
+    },
+    "P52|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 261.0
+    },
+    "P52|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P52|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P53|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3"
+      ],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.4
+    },
+    "P53|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.2
+    },
+    "P53|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 259.5
+    },
+    "P53|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P54|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3"
+      ],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.6
+    },
+    "P54|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.3
+    },
+    "P54|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P54|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P56|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 259.7
+    },
+    "P56|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.1
+    },
+    "P57|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3"
+      ],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.0
+    },
+    "P57|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.3
+    },
+    "P57|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P57|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P58|-1": {
+      "order": -1,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.2
+    },
+    "P58|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 259.5
+    },
+    "P5|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.0
+    },
+    "P5|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.1
+    },
+    "P60|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.4
+    },
+    "P60|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P60|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P63|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.2
+    },
+    "P63|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.4
+    },
+    "P63|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.4
+    },
+    "P66|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 259.8
+    },
+    "P66|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P66|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P67|-1": {
+      "order": -1,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 259.7
+    },
+    "P69|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3"
+      ],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 259.8
+    },
+    "P69|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.1
+    },
+    "P69|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.3
+    },
+    "P69|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P6|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.4
+    },
+    "P6|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P70|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.9
+    },
+    "P70|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 259.8
+    },
+    "P70|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P70|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P71|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 259.7
+    },
+    "P71|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 261.3
+    },
+    "P71|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P71|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 259.7
+    },
+    "P72|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 259.9
+    },
+    "P72|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P73|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.3
+    },
+    "P73|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.3
+    },
+    "P73|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P74|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3"
+      ],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.7
+    },
+    "P74|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.4
+    },
+    "P74|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P74|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P75|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3"
+      ],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 259.5
+    },
+    "P75|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 259.7
+    },
+    "P75|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P75|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P76|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3"
+      ],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.1
+    },
+    "P76|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 261.1
+    },
+    "P76|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P76|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P78|-1": {
+      "order": -1,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.3
+    },
+    "P78|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 259.5
+    },
+    "P81|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.4
+    },
+    "P81|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.2
+    },
+    "P82|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.3
+    },
+    "P82|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P82|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P83|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.1
+    },
+    "P84|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.2
+    },
+    "P8|-1": {
+      "order": -1,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.5
+    },
+    "P8|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 259.8
+    },
+    "P8|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 261.5
+    },
+    "P8|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P8|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P92|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.1
+    },
+    "P94|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.2
+    },
+    "P95|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3"
+      ],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.2
+    },
+    "P95|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 259.4
+    },
+    "P95|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P95|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P97|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 259.7
+    },
+    "P9|-1": {
+      "order": -1,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.4
+    },
+    "P9|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 260.0
+    },
+    "P9|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    },
+    "P9|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "kind": "pslq-form",
+      "verified_digits_vs_periods_side": 999.0
+    }
+  },
+  "products": {
+    "P119|-1": {
+      "order": -1,
+      "class": "S*",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3",
+        "X4"
+      ],
+      "finite_constants": [
+        [
+          "vakint::K5LogMoment(1)",
+          20000
+        ],
+        [
+          "vakint::K5LogMoment(3)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(1)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(3)",
+          20000
+        ],
+        [
+          "vakint::K5MomentTaylor(1,2)",
+          19701
+        ],
+        [
+          "vakint::K5MomentTaylor(3,2)",
+          19690
+        ],
+        [
+          "vakint::PR7D2",
+          5542
+        ],
+        [
+          "vakint::PR7D2Eps1",
+          5540
+        ],
+        [
+          "vakint::PR7D2Eps2",
+          5538
+        ],
+        [
+          "vakint::PR9D2Eps1",
+          5531
+        ],
+        [
+          "vakint::PR9D2Eps2",
+          5529
+        ],
+        [
+          "vakint::PR9pD2Eps2",
+          5527
+        ]
+      ],
+      "verified_digits_vs_main_payload_product": 214.8
+    },
+    "P119|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 214.8
+    },
+    "P119|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 216.1
+    },
+    "P119|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P119|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P119|0": {
+      "order": 0,
+      "class": "S*",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3",
+        "X4"
+      ],
+      "finite_constants": [
+        [
+          "vakint::K5LogMoment(1)",
+          20000
+        ],
+        [
+          "vakint::K5LogMoment(3)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(1)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(3)",
+          20000
+        ],
+        [
+          "vakint::K5MomentTaylor(1,2)",
+          19701
+        ],
+        [
+          "vakint::K5MomentTaylor(1,3)",
+          19701
+        ],
+        [
+          "vakint::K5MomentTaylor(3,2)",
+          19690
+        ],
+        [
+          "vakint::K5MomentTaylor(3,3)",
+          19690
+        ],
+        [
+          "vakint::PR7D2",
+          5542
+        ],
+        [
+          "vakint::PR7D2Eps1",
+          5540
+        ],
+        [
+          "vakint::PR7D2Eps2",
+          5538
+        ],
+        [
+          "vakint::PR7D2Eps3",
+          5538
+        ],
+        [
+          "vakint::PR9D2Eps1",
+          5531
+        ],
+        [
+          "vakint::PR9D2Eps2",
+          5529
+        ],
+        [
+          "vakint::PR9D2Eps3",
+          5527
+        ],
+        [
+          "vakint::PR9pD2Eps2",
+          5527
+        ],
+        [
+          "vakint::PR9pD2Eps3",
+          5525
+        ]
+      ],
+      "verified_digits_vs_main_payload_product": 215.4
+    },
+    "P11|-1": {
+      "order": -1,
+      "class": "S",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3",
+        "X4"
+      ],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 216.0
+    },
+    "P11|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3"
+      ],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 215.1
+    },
+    "P11|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 215.3
+    },
+    "P11|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P11|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P11|0": {
+      "order": 0,
+      "class": "S",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3",
+        "X4"
+      ],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 215.2
+    },
+    "P120|-1": {
+      "order": -1,
+      "class": "S*",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3"
+      ],
+      "finite_constants": [
+        [
+          "vakint::K5LogMoment(1)",
+          20000
+        ],
+        [
+          "vakint::K5LogMoment(3)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(1)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(3)",
+          20000
+        ],
+        [
+          "vakint::PR10D2Eps1",
+          5406
+        ],
+        [
+          "vakint::PR11dD2Eps1",
+          5363
+        ],
+        [
+          "vakint::PR7D2",
+          5542
+        ],
+        [
+          "vakint::PR7D2Eps1",
+          5540
+        ],
+        [
+          "vakint::PR9D2Eps1",
+          5531
+        ]
+      ],
+      "verified_digits_vs_main_payload_product": 215.5
+    },
+    "P120|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P120|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P120|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P120|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P120|0": {
+      "order": 0,
+      "class": "S*",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3",
+        "X4"
+      ],
+      "finite_constants": [
+        [
+          "vakint::K5LogMoment(1)",
+          20000
+        ],
+        [
+          "vakint::K5LogMoment(3)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(1)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(3)",
+          20000
+        ],
+        [
+          "vakint::K5MomentTaylor(1,2)",
+          19701
+        ],
+        [
+          "vakint::K5MomentTaylor(3,2)",
+          19690
+        ],
+        [
+          "vakint::PR10D2Eps1",
+          5406
+        ],
+        [
+          "vakint::PR10D2Eps2",
+          5406
+        ],
+        [
+          "vakint::PR11D2Eps2",
+          5361
+        ],
+        [
+          "vakint::PR11dD2Eps1",
+          5363
+        ],
+        [
+          "vakint::PR7D2",
+          5542
+        ],
+        [
+          "vakint::PR7D2Eps1",
+          5540
+        ],
+        [
+          "vakint::PR9D2Eps1",
+          5531
+        ],
+        [
+          "vakint::PR9D2Eps2",
+          5529
+        ],
+        [
+          "vakint::PR9pD2Eps2",
+          5527
+        ]
+      ],
+      "verified_digits_vs_main_payload_product": 215.6
+    },
+    "P12|-1": {
+      "order": -1,
+      "class": "S",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3",
+        "X4"
+      ],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 215.4
+    },
+    "P12|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3"
+      ],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 214.7
+    },
+    "P12|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 215.1
+    },
+    "P12|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P12|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P12|0": {
+      "order": 0,
+      "class": "S",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3",
+        "X4"
+      ],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 217.5
+    },
+    "P13|-1": {
+      "order": -1,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 215.0
+    },
+    "P13|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 215.7
+    },
+    "P13|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 214.9
+    },
+    "P13|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 215.3
+    },
+    "P13|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 215.0
+    },
+    "P13|0": {
+      "order": 0,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 215.3
+    },
+    "P16|-1": {
+      "order": -1,
+      "class": "S",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3",
+        "X4"
+      ],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 214.8
+    },
+    "P16|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3"
+      ],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 215.3
+    },
+    "P16|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 215.2
+    },
+    "P16|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P16|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P16|0": {
+      "order": 0,
+      "class": "S",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3",
+        "X4"
+      ],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 215.2
+    },
+    "P21|-1": {
+      "order": -1,
+      "class": "S*",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3",
+        "X4"
+      ],
+      "finite_constants": [
+        [
+          "vakint::K5Moment(1)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(3)",
+          20000
+        ],
+        [
+          "vakint::PR7D2",
+          5542
+        ]
+      ],
+      "verified_digits_vs_main_payload_product": 216.2
+    },
+    "P21|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3"
+      ],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 214.9
+    },
+    "P21|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 214.9
+    },
+    "P21|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 215.2
+    },
+    "P21|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P21|0": {
+      "order": 0,
+      "class": "S*",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3",
+        "X4"
+      ],
+      "finite_constants": [
+        [
+          "vakint::K5LogMoment(1)",
+          20000
+        ],
+        [
+          "vakint::K5LogMoment(3)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(1)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(3)",
+          20000
+        ],
+        [
+          "vakint::PR10D2Eps1",
+          5406
+        ],
+        [
+          "vakint::PR7D2",
+          5542
+        ],
+        [
+          "vakint::PR7D2Eps1",
+          5540
+        ]
+      ],
+      "verified_digits_vs_main_payload_product": 214.8
+    },
+    "P27|-1": {
+      "order": -1,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 214.8
+    },
+    "P27|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 215.1
+    },
+    "P27|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 215.1
+    },
+    "P27|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P27|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P27|0": {
+      "order": 0,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 215.4
+    },
+    "P28|-1": {
+      "order": -1,
+      "class": "S",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3",
+        "X4"
+      ],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 215.3
+    },
+    "P28|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3"
+      ],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 214.9
+    },
+    "P28|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 215.7
+    },
+    "P28|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P28|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P28|0": {
+      "order": 0,
+      "class": "S",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3",
+        "X4"
+      ],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 214.8
+    },
+    "P35|-1": {
+      "order": -1,
+      "class": "S*",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3",
+        "X4"
+      ],
+      "finite_constants": [
+        [
+          "vakint::K5LogMoment(1)",
+          20000
+        ],
+        [
+          "vakint::K5LogMoment(3)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(1)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(3)",
+          20000
+        ],
+        [
+          "vakint::K5MomentTaylor(1,2)",
+          19701
+        ],
+        [
+          "vakint::K5MomentTaylor(3,2)",
+          19690
+        ],
+        [
+          "vakint::PR10D2Eps1",
+          5406
+        ],
+        [
+          "vakint::PR15D2Eps1",
+          2805
+        ],
+        [
+          "vakint::PR7D2",
+          5542
+        ],
+        [
+          "vakint::PR7D2Eps1",
+          5540
+        ],
+        [
+          "vakint::PR7D2Eps2",
+          5538
+        ],
+        [
+          "vakint::PR9D2Eps1",
+          5531
+        ],
+        [
+          "vakint::PR9D2Eps2",
+          5529
+        ],
+        [
+          "vakint::PR9pD2Eps2",
+          5527
+        ]
+      ],
+      "verified_digits_vs_main_payload_product": 215.1,
+      "rank_one_pair_check": "both representatives agree"
+    },
+    "P35|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 215.4
+    },
+    "P35|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 214.7
+    },
+    "P35|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P35|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P35|0": {
+      "order": 0,
+      "class": "S*",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3",
+        "X4"
+      ],
+      "finite_constants": [
+        [
+          "vakint::K5LogMoment(1)",
+          20000
+        ],
+        [
+          "vakint::K5LogMoment(3)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(1)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(3)",
+          20000
+        ],
+        [
+          "vakint::K5MomentTaylor(1,2)",
+          19701
+        ],
+        [
+          "vakint::K5MomentTaylor(1,3)",
+          19701
+        ],
+        [
+          "vakint::K5MomentTaylor(3,2)",
+          19690
+        ],
+        [
+          "vakint::K5MomentTaylor(3,3)",
+          19690
+        ],
+        [
+          "vakint::PR10D2Eps1",
+          5406
+        ],
+        [
+          "vakint::PR10D2Eps2",
+          5406
+        ],
+        [
+          "vakint::PR14ep2",
+          9925
+        ],
+        [
+          "vakint::PR15D2Eps1",
+          2805
+        ],
+        [
+          "vakint::PR15D2Eps2",
+          2601
+        ],
+        [
+          "vakint::PR7D2",
+          5542
+        ],
+        [
+          "vakint::PR7D2Eps1",
+          5540
+        ],
+        [
+          "vakint::PR7D2Eps2",
+          5538
+        ],
+        [
+          "vakint::PR7D2Eps3",
+          5538
+        ],
+        [
+          "vakint::PR9D2Eps1",
+          5531
+        ],
+        [
+          "vakint::PR9D2Eps2",
+          5529
+        ],
+        [
+          "vakint::PR9D2Eps3",
+          5527
+        ],
+        [
+          "vakint::PR9pD2Eps2",
+          5527
+        ],
+        [
+          "vakint::PR9pD2Eps3",
+          5525
+        ]
+      ],
+      "verified_digits_vs_main_payload_product": 214.8,
+      "rank_one_pair_check": "both representatives agree"
+    },
+    "P47|-1": {
+      "order": -1,
+      "class": "S*",
+      "numerical_identities_of_main": [],
+      "finite_constants": [
+        [
+          "vakint::K5Moment(1)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(3)",
+          20000
+        ]
+      ],
+      "verified_digits_vs_main_payload_product": 215.4
+    },
+    "P47|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 214.6
+    },
+    "P47|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 216.1
+    },
+    "P47|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 214.6
+    },
+    "P47|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P47|0": {
+      "order": 0,
+      "class": "S*",
+      "numerical_identities_of_main": [],
+      "finite_constants": [
+        [
+          "vakint::K5LogMoment(1)",
+          20000
+        ],
+        [
+          "vakint::K5LogMoment(3)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(1)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(3)",
+          20000
+        ]
+      ],
+      "verified_digits_vs_main_payload_product": 215.0
+    },
+    "P48|-1": {
+      "order": -1,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 215.0
+    },
+    "P48|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 215.1
+    },
+    "P48|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 215.2
+    },
+    "P48|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P48|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P48|0": {
+      "order": 0,
+      "class": "S",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3"
+      ],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 215.4
+    },
+    "P49|-1": {
+      "order": -1,
+      "class": "S",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3",
+        "X4"
+      ],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 215.7
+    },
+    "P49|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3"
+      ],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 215.5
+    },
+    "P49|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 215.2
+    },
+    "P49|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 215.4
+    },
+    "P49|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P49|0": {
+      "order": 0,
+      "class": "S",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3",
+        "X4"
+      ],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 215.3
+    },
+    "P51|-1": {
+      "order": -1,
+      "class": "S*",
+      "numerical_identities_of_main": [],
+      "finite_constants": [
+        [
+          "vakint::K5Moment(1)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(3)",
+          20000
+        ]
+      ],
+      "verified_digits_vs_main_payload_product": 215.0
+    },
+    "P51|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 215.0
+    },
+    "P51|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 215.2
+    },
+    "P51|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 214.5
+    },
+    "P51|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P51|0": {
+      "order": 0,
+      "class": "S*",
+      "numerical_identities_of_main": [],
+      "finite_constants": [
+        [
+          "vakint::K5LogMoment(1)",
+          20000
+        ],
+        [
+          "vakint::K5LogMoment(3)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(1)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(3)",
+          20000
+        ]
+      ],
+      "verified_digits_vs_main_payload_product": 215.2
+    },
+    "P55|-1": {
+      "order": -1,
+      "class": "S*",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3",
+        "X4"
+      ],
+      "finite_constants": [
+        [
+          "vakint::K5LogMoment(1)",
+          20000
+        ],
+        [
+          "vakint::K5LogMoment(3)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(1)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(3)",
+          20000
+        ],
+        [
+          "vakint::K5MomentTaylor(1,2)",
+          19701
+        ],
+        [
+          "vakint::K5MomentTaylor(3,2)",
+          19690
+        ],
+        [
+          "vakint::PR7D2",
+          5542
+        ],
+        [
+          "vakint::PR7D2Eps1",
+          5540
+        ],
+        [
+          "vakint::PR7D2Eps2",
+          5538
+        ],
+        [
+          "vakint::PR9D2Eps1",
+          5531
+        ],
+        [
+          "vakint::PR9D2Eps2",
+          5529
+        ],
+        [
+          "vakint::PR9pD2Eps2",
+          5527
+        ]
+      ],
+      "verified_digits_vs_main_payload_product": 214.7
+    },
+    "P55|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3"
+      ],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 216.0
+    },
+    "P55|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 215.0
+    },
+    "P55|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 214.9
+    },
+    "P55|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P55|0": {
+      "order": 0,
+      "class": "S*",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3",
+        "X4"
+      ],
+      "finite_constants": [
+        [
+          "vakint::K5LogMoment(1)",
+          20000
+        ],
+        [
+          "vakint::K5LogMoment(3)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(1)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(3)",
+          20000
+        ],
+        [
+          "vakint::K5MomentTaylor(1,2)",
+          19701
+        ],
+        [
+          "vakint::K5MomentTaylor(1,3)",
+          19701
+        ],
+        [
+          "vakint::K5MomentTaylor(3,2)",
+          19690
+        ],
+        [
+          "vakint::K5MomentTaylor(3,3)",
+          19690
+        ],
+        [
+          "vakint::PR7D2",
+          5542
+        ],
+        [
+          "vakint::PR7D2Eps1",
+          5540
+        ],
+        [
+          "vakint::PR7D2Eps2",
+          5538
+        ],
+        [
+          "vakint::PR7D2Eps3",
+          5538
+        ],
+        [
+          "vakint::PR9D2Eps1",
+          5531
+        ],
+        [
+          "vakint::PR9D2Eps2",
+          5529
+        ],
+        [
+          "vakint::PR9D2Eps3",
+          5527
+        ],
+        [
+          "vakint::PR9pD2Eps2",
+          5527
+        ],
+        [
+          "vakint::PR9pD2Eps3",
+          5525
+        ]
+      ],
+      "verified_digits_vs_main_payload_product": 214.9
+    },
+    "P59|-1": {
+      "order": -1,
+      "class": "S*",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3",
+        "X4"
+      ],
+      "finite_constants": [
+        [
+          "vakint::K5LogMoment(1)",
+          20000
+        ],
+        [
+          "vakint::K5LogMoment(3)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(1)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(3)",
+          20000
+        ],
+        [
+          "vakint::K5MomentTaylor(1,2)",
+          19701
+        ],
+        [
+          "vakint::K5MomentTaylor(1,3)",
+          19701
+        ],
+        [
+          "vakint::K5MomentTaylor(3,2)",
+          19690
+        ],
+        [
+          "vakint::K5MomentTaylor(3,3)",
+          19690
+        ],
+        [
+          "vakint::PR10D2Eps1",
+          5406
+        ],
+        [
+          "vakint::PR10D2Eps2",
+          5406
+        ],
+        [
+          "vakint::PR10D2Eps3",
+          5404
+        ],
+        [
+          "vakint::PR11D2Eps2",
+          5361
+        ],
+        [
+          "vakint::PR11D2Eps3",
+          5359
+        ],
+        [
+          "vakint::PR11dD2Eps1",
+          5363
+        ],
+        [
+          "vakint::PR11dD2Eps3",
+          5358
+        ],
+        [
+          "vakint::PR7D2",
+          5542
+        ],
+        [
+          "vakint::PR7D2Eps1",
+          5540
+        ],
+        [
+          "vakint::PR7D2Eps2",
+          5538
+        ],
+        [
+          "vakint::PR7D2Eps3",
+          5538
+        ],
+        [
+          "vakint::PR9D2Eps1",
+          5531
+        ],
+        [
+          "vakint::PR9D2Eps2",
+          5529
+        ],
+        [
+          "vakint::PR9D2Eps3",
+          5527
+        ],
+        [
+          "vakint::PR9pD2Eps2",
+          5527
+        ],
+        [
+          "vakint::PR9pD2Eps3",
+          5525
+        ]
+      ],
+      "verified_digits_vs_main_payload_product": 215.6
+    },
+    "P59|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 215.5
+    },
+    "P59|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P59|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P59|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P59|0": {
+      "order": 0,
+      "class": "S*",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3",
+        "X4"
+      ],
+      "finite_constants": [
+        [
+          "vakint::BNbar5",
+          19705
+        ],
+        [
+          "vakint::D5bar3",
+          9924
+        ],
+        [
+          "vakint::K5LogMoment(1)",
+          20000
+        ],
+        [
+          "vakint::K5LogMoment(3)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(1)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(3)",
+          20000
+        ],
+        [
+          "vakint::K5MomentTaylor(1,2)",
+          19701
+        ],
+        [
+          "vakint::K5MomentTaylor(1,3)",
+          19701
+        ],
+        [
+          "vakint::K5MomentTaylor(1,4)",
+          19701
+        ],
+        [
+          "vakint::K5MomentTaylor(3,2)",
+          19690
+        ],
+        [
+          "vakint::K5MomentTaylor(3,3)",
+          19690
+        ],
+        [
+          "vakint::K5MomentTaylor(3,4)",
+          19690
+        ],
+        [
+          "vakint::PR10D2Eps1",
+          5406
+        ],
+        [
+          "vakint::PR10D2Eps2",
+          5406
+        ],
+        [
+          "vakint::PR10D2Eps3",
+          5404
+        ],
+        [
+          "vakint::PR10D2Eps4",
+          5402
+        ],
+        [
+          "vakint::PR11D2Eps2",
+          5361
+        ],
+        [
+          "vakint::PR11D2Eps3",
+          5359
+        ],
+        [
+          "vakint::PR11D2Eps4",
+          5359
+        ],
+        [
+          "vakint::PR11dD2Eps1",
+          5363
+        ],
+        [
+          "vakint::PR11dD2Eps3",
+          5358
+        ],
+        [
+          "vakint::PR11dD2Eps4",
+          5357
+        ],
+        [
+          "vakint::PR5D2Eps4",
+          9923
+        ],
+        [
+          "vakint::PR7D2",
+          5542
+        ],
+        [
+          "vakint::PR7D2Eps1",
+          5540
+        ],
+        [
+          "vakint::PR7D2Eps2",
+          5538
+        ],
+        [
+          "vakint::PR7D2Eps3",
+          5538
+        ],
+        [
+          "vakint::PR7D2Eps4",
+          5535
+        ],
+        [
+          "vakint::PR9D2Eps1",
+          5531
+        ],
+        [
+          "vakint::PR9D2Eps2",
+          5529
+        ],
+        [
+          "vakint::PR9D2Eps3",
+          5527
+        ],
+        [
+          "vakint::PR9D2Eps4",
+          5525
+        ],
+        [
+          "vakint::PR9pD2Eps2",
+          5527
+        ],
+        [
+          "vakint::PR9pD2Eps3",
+          5525
+        ],
+        [
+          "vakint::PR9pD2Eps4",
+          5524
+        ]
+      ],
+      "verified_digits_vs_main_payload_product": 215.0
+    },
+    "P7|-1": {
+      "order": -1,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 214.7
+    },
+    "P7|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 215.2
+    },
+    "P7|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 215.0
+    },
+    "P7|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P7|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P7|0": {
+      "order": 0,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 214.9
+    },
+    "P86|-1": {
+      "order": -1,
+      "class": "S*",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3"
+      ],
+      "finite_constants": [
+        [
+          "vakint::K5LogMoment(1)",
+          20000
+        ],
+        [
+          "vakint::K5LogMoment(3)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(1)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(3)",
+          20000
+        ],
+        [
+          "vakint::PR0D2Eps1",
+          2395
+        ],
+        [
+          "vakint::PR10D2Eps1",
+          5406
+        ],
+        [
+          "vakint::PR11dD2Eps1",
+          5363
+        ],
+        [
+          "vakint::PR7D2",
+          5542
+        ],
+        [
+          "vakint::PR7D2Eps1",
+          5540
+        ],
+        [
+          "vakint::PR9D2Eps1",
+          5531
+        ]
+      ],
+      "verified_digits_vs_main_payload_product": 215.4
+    },
+    "P86|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P86|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P86|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P86|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P86|0": {
+      "order": 0,
+      "class": "S*",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3",
+        "X4"
+      ],
+      "finite_constants": [
+        [
+          "vakint::K5LogMoment(1)",
+          20000
+        ],
+        [
+          "vakint::K5LogMoment(3)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(1)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(3)",
+          20000
+        ],
+        [
+          "vakint::K5MomentTaylor(1,2)",
+          19701
+        ],
+        [
+          "vakint::K5MomentTaylor(3,2)",
+          19690
+        ],
+        [
+          "vakint::PR0D2Eps1",
+          2395
+        ],
+        [
+          "vakint::PR0D2Eps2",
+          2396
+        ],
+        [
+          "vakint::PR10D2Eps1",
+          5406
+        ],
+        [
+          "vakint::PR10D2Eps2",
+          5406
+        ],
+        [
+          "vakint::PR11D2Eps2",
+          5361
+        ],
+        [
+          "vakint::PR11dD2Eps1",
+          5363
+        ],
+        [
+          "vakint::PR7D2",
+          5542
+        ],
+        [
+          "vakint::PR7D2Eps1",
+          5540
+        ],
+        [
+          "vakint::PR7D2Eps2",
+          5538
+        ],
+        [
+          "vakint::PR9D2Eps1",
+          5531
+        ],
+        [
+          "vakint::PR9D2Eps2",
+          5529
+        ],
+        [
+          "vakint::PR9pD2Eps2",
+          5527
+        ]
+      ],
+      "verified_digits_vs_main_payload_product": 215.0
+    },
+    "P91|-1": {
+      "order": -1,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 215.2
+    },
+    "P91|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 215.1
+    },
+    "P91|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 215.2
+    },
+    "P91|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P91|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P91|0": {
+      "order": 0,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 215.3
+    },
+    "P93|-1": {
+      "order": -1,
+      "class": "S",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3",
+        "X4"
+      ],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 215.1
+    },
+    "P93|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3"
+      ],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 214.6
+    },
+    "P93|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 216.2
+    },
+    "P93|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P93|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P93|0": {
+      "order": 0,
+      "class": "S",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3",
+        "X4"
+      ],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 214.7,
+      "rank_one_pair_check": "both representatives agree"
+    },
+    "P96|-1": {
+      "order": -1,
+      "class": "S*",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3",
+        "X4"
+      ],
+      "finite_constants": [
+        [
+          "vakint::K5LogMoment(1)",
+          20000
+        ],
+        [
+          "vakint::K5LogMoment(3)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(1)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(3)",
+          20000
+        ],
+        [
+          "vakint::K5MomentTaylor(1,2)",
+          19701
+        ],
+        [
+          "vakint::K5MomentTaylor(3,2)",
+          19690
+        ],
+        [
+          "vakint::PR10D2Eps1",
+          5406
+        ],
+        [
+          "vakint::PR10D2Eps2",
+          5406
+        ],
+        [
+          "vakint::PR11D2Eps2",
+          5361
+        ],
+        [
+          "vakint::PR11dD2Eps1",
+          5363
+        ],
+        [
+          "vakint::PR12D2Eps2",
+          2600
+        ],
+        [
+          "vakint::PR14ep2",
+          9925
+        ],
+        [
+          "vakint::PR15D2Eps2",
+          2601
+        ],
+        [
+          "vakint::PR7D2",
+          5542
+        ],
+        [
+          "vakint::PR7D2Eps1",
+          5540
+        ],
+        [
+          "vakint::PR7D2Eps2",
+          5538
+        ],
+        [
+          "vakint::PR9D2Eps1",
+          5531
+        ],
+        [
+          "vakint::PR9D2Eps2",
+          5529
+        ],
+        [
+          "vakint::PR9pD2Eps2",
+          5527
+        ]
+      ],
+      "verified_digits_vs_main_payload_product": 214.6,
+      "rank_one_pair_check": "both representatives agree"
+    },
+    "P96|-2": {
+      "order": -2,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P96|-3": {
+      "order": -3,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P96|-4": {
+      "order": -4,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P96|-5": {
+      "order": -5,
+      "class": "S",
+      "numerical_identities_of_main": [],
+      "finite_constants": [],
+      "verified_digits_vs_main_payload_product": 999.0
+    },
+    "P96|0": {
+      "order": 0,
+      "class": "S*",
+      "numerical_identities_of_main": [
+        "LI3_I_SQRT3_V1/X3",
+        "X4"
+      ],
+      "finite_constants": [
+        [
+          "vakint::BNbar5",
+          19705
+        ],
+        [
+          "vakint::D5bar3",
+          9924
+        ],
+        [
+          "vakint::K5LogMoment(1)",
+          20000
+        ],
+        [
+          "vakint::K5LogMoment(3)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(1)",
+          20000
+        ],
+        [
+          "vakint::K5Moment(3)",
+          20000
+        ],
+        [
+          "vakint::K5MomentTaylor(1,2)",
+          19701
+        ],
+        [
+          "vakint::K5MomentTaylor(1,3)",
+          19701
+        ],
+        [
+          "vakint::K5MomentTaylor(3,2)",
+          19690
+        ],
+        [
+          "vakint::K5MomentTaylor(3,3)",
+          19690
+        ],
+        [
+          "vakint::PR10D2Eps1",
+          5406
+        ],
+        [
+          "vakint::PR10D2Eps2",
+          5406
+        ],
+        [
+          "vakint::PR10D2Eps3",
+          5404
+        ],
+        [
+          "vakint::PR11D2Eps2",
+          5361
+        ],
+        [
+          "vakint::PR11D2Eps3",
+          5359
+        ],
+        [
+          "vakint::PR11dD2Eps1",
+          5363
+        ],
+        [
+          "vakint::PR11dD2Eps3",
+          5358
+        ],
+        [
+          "vakint::PR12D2Eps2",
+          2600
+        ],
+        [
+          "vakint::PR12D2Eps3",
+          2348
+        ],
+        [
+          "vakint::PR14ep2",
+          9925
+        ],
+        [
+          "vakint::PR14ep3",
+          9924
+        ],
+        [
+          "vakint::PR15D2Eps2",
+          2601
+        ],
+        [
+          "vakint::PR15D2Eps3",
+          2351
+        ],
+        [
+          "vakint::PR5D2Eps4",
+          9923
+        ],
+        [
+          "vakint::PR7D2",
+          5542
+        ],
+        [
+          "vakint::PR7D2Eps1",
+          5540
+        ],
+        [
+          "vakint::PR7D2Eps2",
+          5538
+        ],
+        [
+          "vakint::PR7D2Eps3",
+          5538
+        ],
+        [
+          "vakint::PR9D2Eps1",
+          5531
+        ],
+        [
+          "vakint::PR9D2Eps2",
+          5529
+        ],
+        [
+          "vakint::PR9D2Eps3",
+          5527
+        ],
+        [
+          "vakint::PR9pD2Eps2",
+          5527
+        ],
+        [
+          "vakint::PR9pD2Eps3",
+          5525
+        ],
+        [
+          "vakint::T111bar5",
+          19997
+        ]
+      ],
+      "verified_digits_vs_main_payload_product": 215.3,
+      "rank_one_pair_check": "both representatives agree"
+    }
+  },
+  "symp_v4_forms": {
+    "meaning": "Orders identified by PSLQ directly over basis-v4 elements (no periods.json translation; string in Symbolica normal form): exact only modulo the listed numerical identities of this repository and, for S*, the listed 4L constants.",
+    "forms": {
+      "L5_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b_p1_p2_p1_p0_p0_p1_p0_p0_p0_p0_p0_p1_p1_p2_p1|-4": {
+        "order": -4,
+        "class": "S",
+        "finite_constants": [],
+        "numerical_identities_of_main": [],
+        "verified_digits_vs_shipped_numerical_value": 81.7,
+        "two_evaluations_agree_digits": 259.7
+      },
+      "L5_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b_p1_p1_p1_p0_p0_p1_p0_m1_p0_p0_p0_p1_p1_p2_p2|-4": {
+        "order": -4,
+        "class": "S",
+        "finite_constants": [],
+        "numerical_identities_of_main": [],
+        "verified_digits_vs_shipped_numerical_value": 82.6,
+        "two_evaluations_agree_digits": 259.6
+      },
+      "L5_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b_p1_p1_p1_p0_p0_p2_p0_p0_p0_p0_p0_p1_p1_p2_p1|-4": {
+        "order": -4,
+        "class": "S",
+        "finite_constants": [],
+        "numerical_identities_of_main": [],
+        "verified_digits_vs_shipped_numerical_value": 83.8,
+        "two_evaluations_agree_digits": 259.8
+      },
+      "L5_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b_p1_p1_p1_p1_p0_p0_p1_p1_p1_p1_p0_p1_p0_p0_p1|-2": {
+        "order": -2,
+        "class": "S",
+        "finite_constants": [],
+        "numerical_identities_of_main": [],
+        "verified_digits_vs_shipped_numerical_value": 71.0,
+        "two_evaluations_agree_digits": 260.3
+      },
+      "L5_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b_p0_p2_p1_p0_p1_p1_p0_p0_p0_p1_p1_p1_p1_p1_p1|-1": {
+        "order": -1,
+        "class": "S*",
+        "finite_constants": [
+          "vakint::K5LogMoment(1)",
+          "vakint::K5LogMoment(3)",
+          "vakint::K5Moment(1)",
+          "vakint::K5Moment(3)",
+          "vakint::PR10D2Eps1",
+          "vakint::PR11dD2Eps1",
+          "vakint::PR7D2",
+          "vakint::PR7D2Eps1",
+          "vakint::PR9D2Eps1"
+        ],
+        "numerical_identities_of_main": [
+          "LI3_I_SQRT3_V1/X3",
+          "PR11d[0] closure"
+        ],
+        "verified_digits_vs_shipped_numerical_value": 61.7,
+        "two_evaluations_agree_digits": 259.8
+      },
+      "L5_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b_p1_p1_p1_p0_p0_p1_p1_p1_p1_p1_p0_p1_p0_p1_p1|-1": {
+        "order": -1,
+        "class": "S*",
+        "finite_constants": [
+          "vakint::K5LogMoment(1)",
+          "vakint::K5LogMoment(3)",
+          "vakint::K5Moment(1)",
+          "vakint::K5Moment(3)",
+          "vakint::PR0D2Eps1",
+          "vakint::PR10D2Eps1",
+          "vakint::PR11dD2Eps1",
+          "vakint::PR7D2",
+          "vakint::PR7D2Eps1",
+          "vakint::PR9D2Eps1"
+        ],
+        "numerical_identities_of_main": [
+          "LI3_I_SQRT3_V1/X3"
+        ],
+        "verified_digits_vs_shipped_numerical_value": 48.2,
+        "two_evaluations_agree_digits": 260.4
+      },
+      "L5_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b_p1_p1_p1_p1_p0_p1_p1_p1_p1_p1_p0_p1_p0_p0_p1|-1": {
+        "order": -1,
+        "class": "S*",
+        "finite_constants": [
+          "vakint::K5LogMoment(1)",
+          "vakint::K5LogMoment(3)",
+          "vakint::K5Moment(1)",
+          "vakint::K5Moment(3)",
+          "vakint::K5MomentTaylor(1,2)",
+          "vakint::K5MomentTaylor(3,2)",
+          "vakint::PR10D2Eps1",
+          "vakint::PR10D2Eps2",
+          "vakint::PR11D2Eps2",
+          "vakint::PR11dD2Eps1",
+          "vakint::PR12D2Eps2",
+          "vakint::PR14ep2",
+          "vakint::PR15D2Eps2",
+          "vakint::PR7D2",
+          "vakint::PR7D2Eps1",
+          "vakint::PR7D2Eps2",
+          "vakint::PR9D2Eps1",
+          "vakint::PR9D2Eps2",
+          "vakint::PR9pD2Eps2"
+        ],
+        "numerical_identities_of_main": [
+          "LI3_I_SQRT3_V1/X3",
+          "R1",
+          "X4"
+        ],
+        "verified_digits_vs_shipped_numerical_value": 47.9,
+        "two_evaluations_agree_digits": 259.5
+      },
+      "L5_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b_p1_p1_p1_p1_p1_p1_p1_p0_p1_p1_p0_p1_p0_p0_p1|-1": {
+        "order": -1,
+        "class": "S*",
+        "finite_constants": [
+          "vakint::K5LogMoment(1)",
+          "vakint::K5LogMoment(3)",
+          "vakint::K5Moment(1)",
+          "vakint::K5Moment(3)",
+          "vakint::K5MomentTaylor(1,2)",
+          "vakint::K5MomentTaylor(3,2)",
+          "vakint::PR10D2Eps1",
+          "vakint::PR10D2Eps2",
+          "vakint::PR11D2Eps2",
+          "vakint::PR11dD2Eps1",
+          "vakint::PR12D2Eps2",
+          "vakint::PR14ep2",
+          "vakint::PR15D2Eps2",
+          "vakint::PR7D2",
+          "vakint::PR7D2Eps1",
+          "vakint::PR7D2Eps2",
+          "vakint::PR9D2Eps1",
+          "vakint::PR9D2Eps2",
+          "vakint::PR9pD2Eps2"
+        ],
+        "numerical_identities_of_main": [
+          "LI3_I_SQRT3_V1/X3",
+          "R1",
+          "X4"
+        ],
+        "verified_digits_vs_shipped_numerical_value": 47.9,
+        "two_evaluations_agree_digits": 259.5
+      },
+      "L5_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b_p1_p2_p1_p0_p1_p0_p1_p1_p1_p1_p0_p0_p0_p1_p1|-1": {
+        "order": -1,
+        "class": "S*",
+        "finite_constants": [
+          "vakint::K5LogMoment(1)",
+          "vakint::K5LogMoment(3)",
+          "vakint::K5Moment(1)",
+          "vakint::K5Moment(3)",
+          "vakint::PR10D2Eps1",
+          "vakint::PR11dD2Eps1",
+          "vakint::PR7D2",
+          "vakint::PR7D2Eps1",
+          "vakint::PR9D2Eps1"
+        ],
+        "numerical_identities_of_main": [
+          "LI3_I_SQRT3_V1/X3",
+          "PR11d[0] closure"
+        ],
+        "verified_digits_vs_shipped_numerical_value": 61.8,
+        "two_evaluations_agree_digits": 261.1
+      }
+    }
+  }
+}
