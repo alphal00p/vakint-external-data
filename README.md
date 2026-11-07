@@ -1,7 +1,8 @@
 # Vakint external data
 
-Release v0.2.1 (6 November 2026) is the current release and `data-latest` points to it.
-Earlier releases stay available unchanged.
+The `main` branch declares v0.2.2: the unreleased line that follows the v0.2.1
+release. There is no v0.2.2 release. For published, checksummed data, use the
+v0.2.1 release or `data-latest`.
 
 ## v0.2.1
 
