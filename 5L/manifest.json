@@ -17836,7 +17836,7 @@
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 3
+          "significant_digits": 44
         }
       ],
       "parent_graph": "graphs/parent-30699.dot",
@@ -17851,7 +17851,7 @@
         },
         "numerical.json": {
           "path": "masters/P88/numerical.json",
-          "sha256": "f01bdeae8719234290bc7d9d86f49f6a810a7fdb939c19ffcf6f65bd70e65cf9"
+          "sha256": "b0458dc2058d57d3c856a7a2dc2132059bea3a34163cdae3e2796d687b4d069a"
         }
       },
       "model": "model.json",
@@ -17974,7 +17974,7 @@
           ]
         ]
       },
-      "significant_digits": 3,
+      "significant_digits": 44,
       "epsilon_range": [
         -5,
         0
@@ -28758,8 +28758,8 @@
       "bytes": 5732
     },
     "masters/P88/numerical.json": {
-      "sha256": "f01bdeae8719234290bc7d9d86f49f6a810a7fdb939c19ffcf6f65bd70e65cf9",
-      "bytes": 158
+      "sha256": "b0458dc2058d57d3c856a7a2dc2132059bea3a34163cdae3e2796d687b4d069a",
+      "bytes": 199
     },
     "masters/P88/symbolic.json": {
       "sha256": "cf30d3513874b8a6c2c258bf9f1624d87ade437f6d59e573293902399b9750d3",
@@ -28918,8 +28918,8 @@
       "bytes": 18421
     },
     "producer-update.json": {
-      "sha256": "4554cdab8d4758fd76d325be59121304031c5af33359f2f163ea96de31a88754",
-      "bytes": 797664
+      "sha256": "781d858170cd9127ab79cf7dfc502298d33c83647c64f68f36ade1321f60b425",
+      "bytes": 797680
     },
     "provenance/basis-v4-translation.json": {
       "sha256": "8f19b6f20fb98eb2bcef5997eb93efe16780cfc889aa66910fbe6c0342d4ebe7",
