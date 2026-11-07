@@ -1,8 +1,27 @@
 # Vakint external data
 
-The `main` branch declares v0.2.2: the unreleased line that follows the v0.2.1
-release. There is no v0.2.2 release. For published, checksummed data, use the
-v0.2.1 release or `data-latest`.
+Release v0.2.2 (7 November 2026) is the current release and `data-latest` points to it.
+Earlier releases stay available unchanged.
+
+## v0.2.2
+
+Release v0.2.2 (7 November 2026) is a data-only release: it updates one five-loop
+coefficient of v0.2.1. Since v0.2.1:
+
+- 5L/P88 (v0.2.0 P444) eps^0: 44.6 digits instead of 3.6 (provisional in v0.2.1), from
+  the class-16119 high-precision grid.
+- 5L, still provisional: 5 eps^0 coefficients ship numerically with their validated
+  digits, 3.3-3.6 (eps^0 of 5L/P130, 5L/P125, 5L/P89, 5L/P68, 5L/P85); v0.2.3 (data
+  only) will replace them (at least 16 digits, target 50).
+
+Everything else is unchanged: all reduction tables, masters, graphs, constants, exact
+coefficients and Ordered caches, and every other numerical value of v0.2.1.
+
+A new managed install of `v0.2.2` or `data-latest` receives this release, as does an
+existing one loaded with `version="v0.2.2"` or `refresh=True`. An existing `data-latest`
+install moves to it with Vakint from gammaloop `vakint_rustred` 364ba0525 on, which
+re-checks `data-latest` for `version="latest"`; older builds keep its cached release
+(for example v0.2.1) until it is refreshed.
 
 ## v0.2.1
 
