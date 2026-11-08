@@ -42,5 +42,9 @@
       "archive_sha256": null,
       "archive_bytes": null
     }
-  ]
+  ],
+  "p_integral": {
+    "manifest": "p_integral/manifest.json",
+    "manifest_sha256": "56ffe959748e87657213e7c8853541ac15f2f2a4c5793f0a36eb3228b8058b24"
+  }
 }
