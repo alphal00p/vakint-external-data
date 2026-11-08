@@ -67,6 +67,8 @@ class PIntegralAreaTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "--replace"):
             p_integral_area.stage(self.base / "export", self.root)
         self.assertEqual(p_integral_area.stage(self.base / "export", self.root, replace=True), total)
+        self.assertEqual(p_integral_area.light_bytes(self.root), total)
+        self.assertEqual(p_integral_area.light_bytes(self.base), 0)
 
     def test_tampered_areas_are_refused(self):
         p_integral_area.stage(self.base / "export", self.root)

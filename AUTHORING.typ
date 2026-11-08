@@ -423,7 +423,8 @@ key `p_integral` (`tools/p_integral_area.py`, module documentation). To regenera
   fixed workload cold under exact, modular_polynomial and modular_sampled in turn
   (one read-write cache: their union), exported to `WORK/export`.
 + `python3 tools/p_integral_area.py stage --export WORK/export --replace`; it prints the
-  area bytes (at most 16,000,000), then `python3 tools/data.py validate` and
+  area bytes. Then `python3 tools/p_integral_area.py light-bytes` (exit status 1 above
+  16,000,000 bytes), `python3 tools/data.py validate` and
   `python3 -m unittest discover -s tests`.
 + `p_cache_maintenance check --artifacts CHECKOUT` must exit 0, and
   `p_cache_maintenance replay --artifacts CHECKOUT --arithmetic

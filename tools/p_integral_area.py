@@ -27,6 +27,8 @@ Commands:
   validate                         check the area (inventory, sha256/bytes, schema strings, RustRed
                                    manifests and file headers, metadata sums, at most
                                    16,000,000 bytes) and print its bytes; no area and no key is valid
+  light-bytes                      print the bytes of the area's files (0 without an area); exit
+                                   status 1 above 16,000,000
 """
 
 from __future__ import annotations
@@ -237,6 +239,14 @@ def validate(root=ROOT):
     return total
 
 
+def light_bytes(root=ROOT):
+    """The bytes of the files below `root/p_integral/` (0 without an area); no other check."""
+    area = Path(root) / AREA
+    if not area.is_dir():
+        return 0
+    return sum(path.stat().st_size for path in area.rglob("*") if path.is_file() and not path.is_symlink())
+
+
 def stage(export, root=ROOT, *, replace=False):
     """Stage an export (`EXPORT/p_integral/...`) into `root`; returns the area bytes."""
     root, source = Path(root), Path(export) / AREA
@@ -274,7 +284,12 @@ def main():
     staging.add_argument("--export", required=True, type=Path)
     staging.add_argument("--replace", action="store_true")
     commands.add_parser("validate")
+    commands.add_parser("light-bytes")
     arguments = parser.parse_args()
+    if arguments.command == "light-bytes":
+        total = light_bytes()
+        print(f"{AREA}/: {total} bytes (limit {BYTES_LIMIT})")
+        sys.exit(1 if total > BYTES_LIMIT else 0)
     if arguments.command == "stage":
         total = stage(arguments.export, replace=arguments.replace)
     else:
