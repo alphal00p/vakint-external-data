@@ -411,6 +411,30 @@ repository as a plain Vakint cache-directory entry with a receipt:
 ordered-cache-5L-quadratic-full.json` writes the `programs[]` fields of the
 directory (`complete: true`) plus the sha256 and size of each of its files.
 
+== p-integral area
+
+The top-level `p_integral/` area (branch `p_integral`, not released) holds a light
+RustRed Ordered step cache of Vakint's built-in 1L-3L p library, declared by the root
+key `p_integral` (`tools/p_integral_area.py`, module documentation). To regenerate it:
+
++ In gammaloop `p_integral`, at the Vakint revision that will use these data, build
+  `cargo build --release -p vakint --example p_cache_maintenance` and run
+  `p_cache_maintenance prepare --output WORK --n-cores 4` (WORK must not exist): the
+  fixed workload cold under exact arithmetic, exported to `WORK/export`.
++ `python3 tools/p_integral_area.py stage --export WORK/export --replace`; it prints the
+  area bytes (at most 16,000,000), then `python3 tools/data.py validate` and
+  `python3 -m unittest discover -s tests`.
++ `p_cache_maintenance check --artifacts CHECKOUT` must exit 0, and
+  `p_cache_maintenance replay --artifacts CHECKOUT --arithmetic
+  exact,modular_polynomial,modular_sampled` must pass (no miss, every value equal to
+  the cache-off one).
+
+The cache is valid by versions only: regenerate it whenever a RustRed `P_*`,
+`ORDERED_STEP_*` or `ORDERED_TAIL_*` constant changes or the check fails (Vakint then
+names another directory or refuses the stamp and runs without the cache). `tools/data.py
+generate` rebuilds the root manifest without the key `p_integral`; stage again after it.
+Commit one regeneration at a time. Never tag, release or publish this branch.
+
 == Saved route preparation add-on
 
 `5L/route-preparation.rrbin`, declared as

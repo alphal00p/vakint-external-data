@@ -23,6 +23,26 @@ install moves to it with Vakint from gammaloop `vakint_rustred` 364ba0525 on, wh
 re-checks `data-latest` for `version="latest"`; older builds keep its cached release
 (for example v0.2.1) until it is refreshed.
 
+## p_integral area (branch `p_integral`, not released)
+
+The branch `p_integral` adds a top-level `p_integral/` area for massless propagator
+integrals (p-integrals) on top of v0.2.2. Every loop pack, table, master, constant and
+Ordered cache is that of v0.2.2, unchanged; `manifest.json` gains only the key
+`p_integral`. The area holds a light RustRed Ordered step cache of Vakint's built-in
+1L-3L p library (`p_integral/ordered-cache/`, its metadata `p_integral/ordered-cache.json`
+and the file checksums in `p_integral/manifest.json`). It is the complete cache of one
+fixed workload, tuned to Vakint's p benchmark and test batteries rather than to physics
+workloads: the 1L-3L benchmark grid, the 2L/3L physics cells, the Forcer batteries and
+the anchors. Other inputs reuse only the sub-integrals they share with it. It was
+recorded under exact arithmetic and serves exact, modular_polynomial and
+modular_sampled alike. Vakint (gammaloop branch `p_integral`) uses it when these data
+are loaded from a directory (`load_external_data`), and only if its directory name,
+library identity, RustRed stamp and tail versions match the running build; otherwise
+Vakint prints one line and reduces without it. Older Vakint builds and this
+repository's other tools ignore the area. It is not part of any release: `tools/data.py
+pack`, `tools/publish.py` and managed installs leave it out. `tools/p_integral_area.py`
+stages and validates it (see AUTHORING.typ, "p-integral area").
+
 ## v0.2.1
 
 Release v0.2.1 (6 November 2026) replaces the five-loop pack and adds one one-loop order. Since v0.2.0:
