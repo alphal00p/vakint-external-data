@@ -34,8 +34,8 @@ and the file checksums in `p_integral/manifest.json`). It is the complete cache 
 fixed workload, tuned to Vakint's p benchmark and test batteries rather than to physics
 workloads: the 1L-3L benchmark grid, the 2L/3L physics cells, the Forcer batteries and
 the anchors. Other inputs reuse only the sub-integrals they share with it. It was
-recorded under exact arithmetic and serves exact, modular_polynomial and
-modular_sampled alike. Vakint (gammaloop branch `p_integral`) uses it when these data
+recorded under exact, modular_polynomial and modular_sampled in turn (a modular
+arithmetic visits a few steps exact does not) and serves all three without a miss. Vakint (gammaloop branch `p_integral`) uses it when these data
 are loaded from a directory (`load_external_data`), and only if its directory name,
 library identity, RustRed stamp and tail versions match the running build; otherwise
 Vakint prints one line and reduces without it. Older Vakint builds and this

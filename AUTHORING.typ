@@ -420,7 +420,8 @@ key `p_integral` (`tools/p_integral_area.py`, module documentation). To regenera
 + In gammaloop `p_integral`, at the Vakint revision that will use these data, build
   `cargo build --release -p vakint --example p_cache_maintenance` and run
   `p_cache_maintenance prepare --output WORK --n-cores 4` (WORK must not exist): the
-  fixed workload cold under exact arithmetic, exported to `WORK/export`.
+  fixed workload cold under exact, modular_polynomial and modular_sampled in turn
+  (one read-write cache: their union), exported to `WORK/export`.
 + `python3 tools/p_integral_area.py stage --export WORK/export --replace`; it prints the
   area bytes (at most 16,000,000), then `python3 tools/data.py validate` and
   `python3 -m unittest discover -s tests`.
