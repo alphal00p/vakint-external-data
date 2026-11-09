@@ -1,13 +1,11 @@
 {
   "schema": "vakint.external-data.p-ordered-cache.v1",
   "producer": {
-    "command": "p_cache_maintenance prepare --n-cores 4 (exact, modular_polynomial, modular_sampled; built-in library)",
+    "command": "p_cache_maintenance prepare --n-cores 4 (exact; p-library-1-4 of the p_integral area)",
     "p": {
       "adjoint_tail": "default",
       "arithmetics": [
-        "exact",
-        "modular_polynomial",
-        "modular_sampled"
+        "exact"
       ],
       "n_cores": 4,
       "persistence": "rustred ordered step cache: ordered-step-cache.txt + RR-ORDERED-STEP1 shards (+ ordered-tail.rrtail)"
@@ -17,10 +15,10 @@
       "ordered_step_semantics": "rustred-ordered-steps-2026-10-31",
       "ordered_tail_schema": "rustred.ordered-tail.v3",
       "ordered_tail_semantics": "rustred-ordered-tail-2026-10-31",
-      "revision": "7c14cea095e098609f982e85613a352cfb792ea4"
+      "revision": "b7fd9f2bec5a9ed417240ea997112e5e31400023"
     },
     "vakint": {
-      "revision": "f3c3f4a42c008305a4caa8def3fc25e6d481bed9",
+      "revision": "b453c592cc84ec9bcd0f8757f64d529f8db4d3cf",
       "version": "0.2.0"
     }
   },
@@ -31,16 +29,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "308402bad819116249e2e3a7cbc975fe280ff5dfb5084629f90792d83d19a1c3",
       "inserts": {
-        "exact": 2,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 2
       },
       "loop_count": 1,
       "name": "benchmark_p_integrals/L1_d0_r0",
       "seconds": {
-        "exact": 0.968570353,
-        "modular_polynomial": 0.008191183,
-        "modular_sampled": 0.006188935
+        "exact": 0.010181343
       }
     },
     {
@@ -49,16 +43,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "7ef0d2a93385997ca9d1552f871b642b25edcc99517adcd729a153f5933c054a",
       "inserts": {
-        "exact": 5,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 5
       },
       "loop_count": 1,
       "name": "benchmark_p_integrals/L1_d0_r2",
       "seconds": {
-        "exact": 0.008164162,
-        "modular_polynomial": 0.005947993,
-        "modular_sampled": 0.006316455
+        "exact": 0.009973341
       }
     },
     {
@@ -67,16 +57,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "2159422a25aff76cfa9891fd9059c1be9feecc655fd4ab36371ff915ccf51d0d",
       "inserts": {
-        "exact": 9,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 9
       },
       "loop_count": 1,
       "name": "benchmark_p_integrals/L1_d0_r4",
       "seconds": {
-        "exact": 0.008555825,
-        "modular_polynomial": 0.005937164,
-        "modular_sampled": 0.006310925
+        "exact": 0.00726125
       }
     },
     {
@@ -85,16 +71,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "0f9f4a2f87612541b1222dd5ba995769d204a543991bad1c8d6d2b50a00e78e1",
       "inserts": {
-        "exact": 13,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 13
       },
       "loop_count": 1,
       "name": "benchmark_p_integrals/L1_d0_r6",
       "seconds": {
-        "exact": 0.007934972,
-        "modular_polynomial": 0.006280725,
-        "modular_sampled": 0.006476365
+        "exact": 0.0097177
       }
     },
     {
@@ -103,16 +85,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "c6b7a1427724c215674f66cce00e612dae33d9d49a91ed20ac47c2213bb72e3a",
       "inserts": {
-        "exact": 17,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 17
       },
       "loop_count": 1,
       "name": "benchmark_p_integrals/L1_d0_r8",
       "seconds": {
-        "exact": 0.008234743,
-        "modular_polynomial": 0.006304625,
-        "modular_sampled": 0.006861758
+        "exact": 0.012651613
       }
     },
     {
@@ -121,16 +99,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "279b2a4d147e11cc7560ddba44ae6709ef5e77fdc243d7890791db406597bfd8",
       "inserts": {
-        "exact": 2,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 2
       },
       "loop_count": 1,
       "name": "benchmark_p_integrals/L1_d1_r0",
       "seconds": {
-        "exact": 0.013541014,
-        "modular_polynomial": 0.005784503,
-        "modular_sampled": 0.006451756
+        "exact": 0.010503674
       }
     },
     {
@@ -139,16 +113,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "00e41c77896f8806eb443240ab4d60350c1cd7dd315b47bfc9ef7362a30ec920",
       "inserts": {
-        "exact": 2,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 2
       },
       "loop_count": 1,
       "name": "benchmark_p_integrals/L1_d1_r2",
       "seconds": {
-        "exact": 0.018214243,
-        "modular_polynomial": 0.008033682,
-        "modular_sampled": 0.008270503
+        "exact": 0.012753123
       }
     },
     {
@@ -157,16 +127,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "1498d3bba182512de422231d4ba88b09d83730ba7b42da0f6b6cc3d8fd00e466",
       "inserts": {
-        "exact": 2,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 2
       },
       "loop_count": 1,
       "name": "benchmark_p_integrals/L1_d1_r4",
       "seconds": {
-        "exact": 0.008960036,
-        "modular_polynomial": 0.009371927,
-        "modular_sampled": 0.010678803
+        "exact": 0.008938797
       }
     },
     {
@@ -175,16 +141,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "d6185e710b1bd60fc09637ce77090f4d1cf475d6d889e49989226f106ffdf64f",
       "inserts": {
-        "exact": 2,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 2
       },
       "loop_count": 1,
       "name": "benchmark_p_integrals/L1_d1_r6",
       "seconds": {
-        "exact": 0.011368216,
-        "modular_polynomial": 0.011653446,
-        "modular_sampled": 0.013134593
+        "exact": 0.010123773
       }
     },
     {
@@ -193,16 +155,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "939e5e9b51764dccbe34f4855a053cb6d23802011bf49128445723fc61d63438",
       "inserts": {
-        "exact": 2,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 2
       },
       "loop_count": 1,
       "name": "benchmark_p_integrals/L1_d1_r8",
       "seconds": {
-        "exact": 0.010769703,
-        "modular_polynomial": 0.014592739,
-        "modular_sampled": 0.022282719
+        "exact": 0.014910733
       }
     },
     {
@@ -211,16 +169,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "2266fa09c0345a37eabd738ae80527310a49995a4c20d911fc5c2eb21ded2ba4",
       "inserts": {
-        "exact": 2,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 2
       },
       "loop_count": 1,
       "name": "benchmark_p_integrals/L1_d2_r0",
       "seconds": {
-        "exact": 0.00775775,
-        "modular_polynomial": 0.005757112,
-        "modular_sampled": 0.006897727
+        "exact": 0.008425055
       }
     },
     {
@@ -229,16 +183,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "1a6fc58a7a1d00d1c0267c75816ebc651f47f8e29f57c95f37009e11e893d1ee",
       "inserts": {
-        "exact": 3,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 3
       },
       "loop_count": 1,
       "name": "benchmark_p_integrals/L1_d2_r2",
       "seconds": {
-        "exact": 0.007944811,
-        "modular_polynomial": 0.005818493,
-        "modular_sampled": 0.006974118
+        "exact": 0.00734263
       }
     },
     {
@@ -247,16 +197,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "4921caaee8ac36d60fc0c87a7a904b4416a7b5fd9b2c43ec7c6defe0773ead4d",
       "inserts": {
-        "exact": 2,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 2
       },
       "loop_count": 1,
       "name": "benchmark_p_integrals/L1_d2_r4",
       "seconds": {
-        "exact": 0.007142808,
-        "modular_polynomial": 0.005922603,
-        "modular_sampled": 0.007233109
+        "exact": 0.006295387
       }
     },
     {
@@ -265,16 +211,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "1e1a200d636e2892e0640a568fb1b917aea05a66c1aef8f996a7d6d721cd17e3",
       "inserts": {
-        "exact": 2,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 2
       },
       "loop_count": 1,
       "name": "benchmark_p_integrals/L1_d2_r6",
       "seconds": {
-        "exact": 0.006944507,
-        "modular_polynomial": 0.007123379,
-        "modular_sampled": 0.007967521
+        "exact": 0.006219616
       }
     },
     {
@@ -283,16 +225,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "53bc79834c0851ae3f1ec8eaa9d03ca3ac299b1f5b819ffe98b75c1ad001770d",
       "inserts": {
-        "exact": 2,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 2
       },
       "loop_count": 1,
       "name": "benchmark_p_integrals/L1_d2_r8",
       "seconds": {
-        "exact": 0.006590397,
-        "modular_polynomial": 0.005983494,
-        "modular_sampled": 0.007538601
+        "exact": 0.006340566
       }
     },
     {
@@ -301,16 +239,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "c7c272dcf75c8e5811e54e0f7048981a82833964ab010e238f82db8cee353526",
       "inserts": {
-        "exact": 13,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 13
       },
       "loop_count": 2,
       "name": "benchmark_p_integrals/L2_d0_r0",
       "seconds": {
-        "exact": 0.01255719,
-        "modular_polynomial": 0.006021234,
-        "modular_sampled": 0.007786082
+        "exact": 0.013498626
       }
     },
     {
@@ -319,16 +253,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "09bba13492dcbe8f1330a16dc36e141c48eb48b8807425935a504c91c72a2198",
       "inserts": {
-        "exact": 21,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 23
       },
       "loop_count": 2,
       "name": "benchmark_p_integrals/L2_d0_r2",
       "seconds": {
-        "exact": 0.012773771,
-        "modular_polynomial": 0.007339069,
-        "modular_sampled": 0.008816635
+        "exact": 0.017151112
       }
     },
     {
@@ -337,16 +267,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "55e3640a4fd61430c5894539b1d486a037d1ee232fae2b3a136dfd3394739948",
       "inserts": {
-        "exact": 39,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 39
       },
       "loop_count": 2,
       "name": "benchmark_p_integrals/L2_d0_r4",
       "seconds": {
-        "exact": 0.011276235,
-        "modular_polynomial": 0.007228519,
-        "modular_sampled": 0.008039641
+        "exact": 0.013805698
       }
     },
     {
@@ -355,16 +281,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "0ab3c410c1e036af38bb828af92fb3ec93783601f21e8ca39d79e2fb8082b0ad",
       "inserts": {
-        "exact": 187,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 185
       },
       "loop_count": 2,
       "name": "benchmark_p_integrals/L2_d0_r6",
       "seconds": {
-        "exact": 0.016152535,
-        "modular_polynomial": 0.010832843,
-        "modular_sampled": 0.01007526
+        "exact": 0.020729077
       }
     },
     {
@@ -373,16 +295,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "1ddd3b269d3b17e9ef1793f8fb7c8d01b66d945882fcc604e614ca844b49da49",
       "inserts": {
-        "exact": 229,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 229
       },
       "loop_count": 2,
       "name": "benchmark_p_integrals/L2_d0_r8",
       "seconds": {
-        "exact": 0.018962246,
-        "modular_polynomial": 0.012833331,
-        "modular_sampled": 0.010192511
+        "exact": 0.023725889
       }
     },
     {
@@ -391,16 +309,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "4b22c402bf3b5c23aea2c1e86af15b3361497ea002f16f2e4df00506bab68078",
       "inserts": {
-        "exact": 14,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 14
       },
       "loop_count": 2,
       "name": "benchmark_p_integrals/L2_d1_r0",
       "seconds": {
-        "exact": 0.009316437,
-        "modular_polynomial": 0.006301805,
-        "modular_sampled": 0.007913651
+        "exact": 0.009890571
       }
     },
     {
@@ -409,16 +323,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "1836fde62e32fbf0742163644431be1035ee07f91c6354a8543bec9dc9718f95",
       "inserts": {
-        "exact": 13,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 13
       },
       "loop_count": 2,
       "name": "benchmark_p_integrals/L2_d1_r2",
       "seconds": {
-        "exact": 0.009989129,
-        "modular_polynomial": 0.006836227,
-        "modular_sampled": 0.008908926
+        "exact": 0.010701304
       }
     },
     {
@@ -427,16 +337,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "65d00b3106aa6518cc20bc700b64def6960125649195885d72c871e961539c5c",
       "inserts": {
-        "exact": 19,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 19
       },
       "loop_count": 2,
       "name": "benchmark_p_integrals/L2_d1_r4",
       "seconds": {
-        "exact": 0.011785127,
-        "modular_polynomial": 0.006973348,
-        "modular_sampled": 0.008527394
+        "exact": 0.012644752
       }
     },
     {
@@ -445,16 +351,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "8b3ea7f4c43e38b43647ef63a407230d78b297c6e5ef51e2443aef4fe017cb2f",
       "inserts": {
-        "exact": 64,
-        "modular_polynomial": 3,
-        "modular_sampled": 0
+        "exact": 70
       },
       "loop_count": 2,
       "name": "benchmark_p_integrals/L2_d1_r6",
       "seconds": {
-        "exact": 0.013830905,
-        "modular_polynomial": 0.013378613,
-        "modular_sampled": 0.008726724
+        "exact": 0.016057126
       }
     },
     {
@@ -463,16 +365,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "c58edc4a12be1f4dd998c1cc44807d1e44f8af4fe17b06c1015b8729fe40dc93",
       "inserts": {
-        "exact": 65,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 63
       },
       "loop_count": 2,
       "name": "benchmark_p_integrals/L2_d1_r8",
       "seconds": {
-        "exact": 0.016924357,
-        "modular_polynomial": 0.010690982,
-        "modular_sampled": 0.011476235
+        "exact": 0.019767193
       }
     },
     {
@@ -481,16 +379,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "26e75e65646100679679dfd574fc91ec39ee697d71f63c8dc431c47cacafc334",
       "inserts": {
-        "exact": 20,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 20
       },
       "loop_count": 2,
       "name": "benchmark_p_integrals/L2_d2_r0",
       "seconds": {
-        "exact": 0.01020478,
-        "modular_polynomial": 0.006478706,
-        "modular_sampled": 0.007702891
+        "exact": 0.013938368
       }
     },
     {
@@ -499,16 +393,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "1e4781629186837c12cd0133ea3adc812eb76fe540ba5d3b78d0e57bbba6912a",
       "inserts": {
-        "exact": 26,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 26
       },
       "loop_count": 2,
       "name": "benchmark_p_integrals/L2_d2_r2",
       "seconds": {
-        "exact": 0.010988834,
-        "modular_polynomial": 0.006883938,
-        "modular_sampled": 0.008545374
+        "exact": 0.01438226
       }
     },
     {
@@ -517,16 +407,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "84ef06b6f106af9d72557f54402234a189e156f5193ab878a011e36cde98f28a",
       "inserts": {
-        "exact": 30,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 30
       },
       "loop_count": 2,
       "name": "benchmark_p_integrals/L2_d2_r4",
       "seconds": {
-        "exact": 0.010846453,
-        "modular_polynomial": 0.0073863,
-        "modular_sampled": 0.009154616
+        "exact": 0.015884266
       }
     },
     {
@@ -535,16 +421,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "d5971f1ce59372d771b8cc285c9ebe6e70f5e7047c6bfcbe07886a2dfa50ab04",
       "inserts": {
-        "exact": 120,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 120
       },
       "loop_count": 2,
       "name": "benchmark_p_integrals/L2_d2_r6",
       "seconds": {
-        "exact": 0.014951239,
-        "modular_polynomial": 0.00991196,
-        "modular_sampled": 0.010594182
+        "exact": 0.017829343
       }
     },
     {
@@ -553,16 +435,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "e4cadf01f93a2e9dfabcb4473c36b78230e7ca0b4c74fc9ebff00ddae2b17d82",
       "inserts": {
-        "exact": 178,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 178
       },
       "loop_count": 2,
       "name": "benchmark_p_integrals/L2_d2_r8",
       "seconds": {
-        "exact": 0.02010729,
-        "modular_polynomial": 0.013129762,
-        "modular_sampled": 0.013172393
+        "exact": 0.026669841
       }
     },
     {
@@ -571,16 +449,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "7a66941292786eb404b01feba014e279d0c396c67f50d85d99a2fa2734a33de4",
       "inserts": {
-        "exact": 115,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 115
       },
       "loop_count": 3,
       "name": "benchmark_p_integrals/L3_d0_r0",
       "seconds": {
-        "exact": 0.058559574,
-        "modular_polynomial": 0.011755807,
-        "modular_sampled": 0.011683946
+        "exact": 0.078784028
       }
     },
     {
@@ -589,16 +463,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "826933e0093e857d92a026d19147a0bafaaaa2bd80847ec29f6fc5d455ff28ec",
       "inserts": {
-        "exact": 1077,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 1077
       },
       "loop_count": 3,
       "name": "benchmark_p_integrals/L3_d0_r2",
       "seconds": {
-        "exact": 0.111429495,
-        "modular_polynomial": 0.018296563,
-        "modular_sampled": 0.018223173
+        "exact": 0.127990752
       }
     },
     {
@@ -607,16 +477,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "435e21b11a669cf282fd7327268db29189555a0e2e245179782839a4231dd344",
       "inserts": {
-        "exact": 461,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 461
       },
       "loop_count": 3,
       "name": "benchmark_p_integrals/L3_d0_r4",
       "seconds": {
-        "exact": 0.1053422,
-        "modular_polynomial": 0.015382901,
-        "modular_sampled": 0.015481702
+        "exact": 0.120945494
       }
     },
     {
@@ -625,16 +491,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "67cfb635a443405f843424e5cf34c19fc573c922f3d71a792b0432a7b1a88c48",
       "inserts": {
-        "exact": 5225,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 5225
       },
       "loop_count": 3,
       "name": "benchmark_p_integrals/L3_d0_r6",
       "seconds": {
-        "exact": 0.297471736,
-        "modular_polynomial": 0.075753312,
-        "modular_sampled": 0.085563792
+        "exact": 0.358942163
       }
     },
     {
@@ -643,16 +505,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "e8dd963861f89a0c936dae621f6caa6fc86abb22456bf7425fed77c0a079a50d",
       "inserts": {
-        "exact": 9373,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 9373
       },
       "loop_count": 3,
       "name": "benchmark_p_integrals/L3_d0_r8",
       "seconds": {
-        "exact": 0.615134454,
-        "modular_polynomial": 0.231183572,
-        "modular_sampled": 0.279940396
+        "exact": 0.780249545
       }
     },
     {
@@ -661,16 +519,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "3ea05e1b242c463b1ebd337de004eb0a6fb151b65b0f52ea78d37cfec01c16e9",
       "inserts": {
-        "exact": 102,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 102
       },
       "loop_count": 3,
       "name": "benchmark_p_integrals/L3_d1_r0",
       "seconds": {
-        "exact": 0.031569126,
-        "modular_polynomial": 0.012951071,
-        "modular_sampled": 0.013713165
+        "exact": 0.036624023
       }
     },
     {
@@ -679,16 +533,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "bbe7668909ea746761a09b88bdb658d1be4cceb9412376258705252e6ba056a5",
       "inserts": {
-        "exact": 144,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 144
       },
       "loop_count": 3,
       "name": "benchmark_p_integrals/L3_d1_r2",
       "seconds": {
-        "exact": 0.066056934,
-        "modular_polynomial": 0.019131856,
-        "modular_sampled": 0.021045914
+        "exact": 0.092922686
       }
     },
     {
@@ -697,16 +547,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "5a0573079bec5cc9a7999e2599d10d91b8b70ae1cda5e2f8c826a894c7c592a5",
       "inserts": {
-        "exact": 213,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 213
       },
       "loop_count": 3,
       "name": "benchmark_p_integrals/L3_d1_r4",
       "seconds": {
-        "exact": 0.083087341,
-        "modular_polynomial": 0.020905403,
-        "modular_sampled": 0.022135648
+        "exact": 0.101323431
       }
     },
     {
@@ -715,16 +561,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "13662ad81eb4d24611628ac84f8d2e22e0c41c3e0b94f6019d0d384ce54eee97",
       "inserts": {
-        "exact": 8879,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 8879
       },
       "loop_count": 3,
       "name": "benchmark_p_integrals/L3_d1_r6",
       "seconds": {
-        "exact": 0.479127551,
-        "modular_polynomial": 0.141072702,
-        "modular_sampled": 0.153926214
+        "exact": 0.583742047
       }
     },
     {
@@ -733,16 +575,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "ad565ced21f64c621d68845279d09528a772106f542caa6d9ce90ecd954de17f",
       "inserts": {
-        "exact": 14962,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 14962
       },
       "loop_count": 3,
       "name": "benchmark_p_integrals/L3_d1_r8",
       "seconds": {
-        "exact": 1.14307617,
-        "modular_polynomial": 0.482118353,
-        "modular_sampled": 0.575208365
+        "exact": 1.648877836
       }
     },
     {
@@ -751,16 +589,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "d5b228790a9b65a6de0e4966af89e4d181359e7bf59b22ffc064a618ea8dc302",
       "inserts": {
-        "exact": 334,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 334
       },
       "loop_count": 3,
       "name": "benchmark_p_integrals/L3_d2_r0",
       "seconds": {
-        "exact": 0.059891719,
-        "modular_polynomial": 0.016288695,
-        "modular_sampled": 0.017341959
+        "exact": 0.068607865
       }
     },
     {
@@ -769,16 +603,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "a0701efdff2f8f6ca1980634ae8c8ccebf642108174a342e28ae671568712dd9",
       "inserts": {
-        "exact": 319,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 319
       },
       "loop_count": 3,
       "name": "benchmark_p_integrals/L3_d2_r2",
       "seconds": {
-        "exact": 0.1152887,
-        "modular_polynomial": 0.025282411,
-        "modular_sampled": 0.027150618
+        "exact": 0.125344751
       }
     },
     {
@@ -787,16 +617,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "6bd06487905f49e4d75d7e04c962ba708b19d943bcc2de6b347dffc651dac6d8",
       "inserts": {
-        "exact": 323,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 323
       },
       "loop_count": 3,
       "name": "benchmark_p_integrals/L3_d2_r4",
       "seconds": {
-        "exact": 0.126978287,
-        "modular_polynomial": 0.024648909,
-        "modular_sampled": 0.026802727
+        "exact": 0.17780475
       }
     },
     {
@@ -805,16 +631,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "bc823811d6eef20a3394d656eb9e0d8609c78dc102ea02ad610d9bf4d8319d01",
       "inserts": {
-        "exact": 2253,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 2253
       },
       "loop_count": 3,
       "name": "benchmark_p_integrals/L3_d2_r6",
       "seconds": {
-        "exact": 0.344678665,
-        "modular_polynomial": 0.13558444,
-        "modular_sampled": 0.14040995
+        "exact": 0.408289768
       }
     },
     {
@@ -823,16 +645,12 @@
       "fixture": "tests/fixtures/benchmark_p_integrals.json",
       "input_sha256": "96ce09cba540756b61a6be47228f44535cf5e46e50e56a1e4a17f10d9ea2ce8c",
       "inserts": {
-        "exact": 7070,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 7070
       },
       "loop_count": 3,
       "name": "benchmark_p_integrals/L3_d2_r8",
       "seconds": {
-        "exact": 0.891899748,
-        "modular_polynomial": 0.414056072,
-        "modular_sampled": 0.495764918
+        "exact": 1.223677889
       }
     },
     {
@@ -841,16 +659,12 @@
       "fixture": "tests/fixtures/benchmark_p_physics.json",
       "input_sha256": "26f819b131c78988425496efc55babf5f96c3b15845da7ef5d87a4f63accd29a",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 2,
       "name": "benchmark_p_physics/physics_L2",
       "seconds": {
-        "exact": 0.01993509,
-        "modular_polynomial": 0.023125522,
-        "modular_sampled": 0.024769178
+        "exact": 0.021285748
       }
     },
     {
@@ -859,16 +673,12 @@
       "fixture": "tests/fixtures/benchmark_p_physics.json",
       "input_sha256": "8e7c080b89a3a552e5a250b53f727488a61110dcfcbb43f77a4002ed55860099",
       "inserts": {
-        "exact": 298,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 298
       },
       "loop_count": 3,
       "name": "benchmark_p_physics/physics_L3",
       "seconds": {
-        "exact": 0.354631765,
-        "modular_polynomial": 0.299900266,
-        "modular_sampled": 0.289474394
+        "exact": 0.464628813
       }
     },
     {
@@ -877,16 +687,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "e49b6a61fc126b0a8de2e9d8fbd825032f6acb0f0a52b924beb051fcb984c32a",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p1l_battery/bubble_11_n0",
       "seconds": {
-        "exact": 0.005625552,
-        "modular_polynomial": 0.005697073,
-        "modular_sampled": 0.006258845
+        "exact": 0.006141406
       }
     },
     {
@@ -895,16 +701,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "4c1bbba98bcff8a7b16ec547a26d30e93a1e4adfd53c7b09f2c22a7375423e64",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p1l_battery/bubble_11_n1",
       "seconds": {
-        "exact": 0.005397182,
-        "modular_polynomial": 0.005521822,
-        "modular_sampled": 0.006156055
+        "exact": 0.004895741
       }
     },
     {
@@ -913,16 +715,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "e3b8db7559f8db6e9516183c14f1e6d34645f6c8aaaa3d3d542e092e6679e4c8",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p1l_battery/bubble_11_n2",
       "seconds": {
-        "exact": 0.005367651,
-        "modular_polynomial": 0.005630583,
-        "modular_sampled": 0.006270465
+        "exact": 0.00486373
       }
     },
     {
@@ -931,16 +729,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "31e00d89121d7a394c33001f0a0d5773ec3c44b4a50d70d619a6e43637543dc5",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p1l_battery/bubble_11_n3",
       "seconds": {
-        "exact": 0.005593182,
-        "modular_polynomial": 0.005910594,
-        "modular_sampled": 0.006195024
+        "exact": 0.004700599
       }
     },
     {
@@ -949,16 +743,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "963a4d98bc0bd7ae4ac4d75bafa7eae9497ff32b5e87d6a1cccccd70216a12c5",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p1l_battery/bubble_11_n4",
       "seconds": {
-        "exact": 0.005430461,
-        "modular_polynomial": 0.005697173,
-        "modular_sampled": 0.006569756
+        "exact": 0.004621179
       }
     },
     {
@@ -967,16 +757,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "e2e4d9399b59fc144c9d9ab161c088b9b0b140f97a882da562a4a96e9445c3da",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p1l_battery/bubble_21_n0",
       "seconds": {
-        "exact": 0.005187951,
-        "modular_polynomial": 0.005453422,
-        "modular_sampled": 0.006295445
+        "exact": 0.004464599
       }
     },
     {
@@ -985,16 +771,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "c196e56d756ce417b2df8541d8eaa5389aca361bff7f4dbe3b54a92907feb1cf",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p1l_battery/bubble_21_n1",
       "seconds": {
-        "exact": 0.005798403,
-        "modular_polynomial": 0.006269825,
-        "modular_sampled": 0.007045718
+        "exact": 0.00477829
       }
     },
     {
@@ -1003,16 +785,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "7759c2c952293bd330820268d1eb33c9cf9585913f4f8516f1290ddad3ee2625",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p1l_battery/bubble_21_n2",
       "seconds": {
-        "exact": 0.006413045,
-        "modular_polynomial": 0.007253749,
-        "modular_sampled": 0.008088272
+        "exact": 0.005254232
       }
     },
     {
@@ -1021,16 +799,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "fe38f415abc0d0953b2cb1d5a687bd95aef14fac5d478dec847e3ded2126e3d3",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p1l_battery/bubble_21_n3",
       "seconds": {
-        "exact": 0.006934638,
-        "modular_polynomial": 0.008395574,
-        "modular_sampled": 0.009492558
+        "exact": 0.006282836
       }
     },
     {
@@ -1039,16 +813,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "16d238f5f631bc344b04f2f1e184d6f142ca6fb4f15e5458aa79051bb3baa1bb",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p1l_battery/bubble_21_n4",
       "seconds": {
-        "exact": 0.00756481,
-        "modular_polynomial": 0.009473397,
-        "modular_sampled": 0.010465882
+        "exact": 0.006898119
       }
     },
     {
@@ -1057,16 +827,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "24bcbc03badd641b7306c49d5c249e0ed0077f7d70c80e626634a264d01923c9",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p1l_battery/bubble_12_n0",
       "seconds": {
-        "exact": 0.005240651,
-        "modular_polynomial": 0.005527312,
-        "modular_sampled": 0.006336096
+        "exact": 0.00468348
       }
     },
     {
@@ -1075,16 +841,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "67e682945cb9dc598de670a41e7d7561df834004c37b02b4f0db47b9b172f761",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p1l_battery/bubble_12_n1",
       "seconds": {
-        "exact": 0.005334502,
-        "modular_polynomial": 0.005682373,
-        "modular_sampled": 0.006258296
+        "exact": 0.004479899
       }
     },
     {
@@ -1093,16 +855,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "665c5cb0a146f26111f63c1bcf491c701965cd2e6f28d9e25d9d826d65aceb5d",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p1l_battery/bubble_12_n2",
       "seconds": {
-        "exact": 0.005475361,
-        "modular_polynomial": 0.005734032,
-        "modular_sampled": 0.006423676
+        "exact": 0.004560209
       }
     },
     {
@@ -1111,16 +869,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "8d78bf83bef4108b946ad2603b406430521cf06fea75e309287de98cbc3d07ea",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p1l_battery/bubble_12_n3",
       "seconds": {
-        "exact": 0.005323991,
-        "modular_polynomial": 0.005954004,
-        "modular_sampled": 0.006589986
+        "exact": 0.005132482
       }
     },
     {
@@ -1129,16 +883,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "bb4dd00b0b40d7d3fc4e62874e83c4e2202a45c62ec347e340d2d8e2ab9a4b1b",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p1l_battery/bubble_12_n4",
       "seconds": {
-        "exact": 0.005353582,
-        "modular_polynomial": 0.005963073,
-        "modular_sampled": 0.006667567
+        "exact": 0.005237052
       }
     },
     {
@@ -1147,16 +897,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "6ee1b9e8d9da87604fb7205ee1c403e3906514d1e4e0e610c57f2e3f5a4f5e64",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p1l_battery/bubble_22_n0",
       "seconds": {
-        "exact": 0.00506514,
-        "modular_polynomial": 0.005630143,
-        "modular_sampled": 0.006380235
+        "exact": 0.004537029
       }
     },
     {
@@ -1165,16 +911,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "8816441244a946e7f57ddf6b1e1ef58d304b1020c6f3b45a0e314cdcb5572388",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p1l_battery/bubble_22_n1",
       "seconds": {
-        "exact": 0.005241521,
-        "modular_polynomial": 0.005553783,
-        "modular_sampled": 0.006412425
+        "exact": 0.004555819
       }
     },
     {
@@ -1183,16 +925,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "41f26b5d317485e1da3af6d5819793a8dc0b1eac26ec992dd08b4bfda0613197",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p1l_battery/bubble_22_n2",
       "seconds": {
-        "exact": 0.005324511,
-        "modular_polynomial": 0.005767493,
-        "modular_sampled": 0.006520517
+        "exact": 0.00466846
       }
     },
     {
@@ -1201,16 +939,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "4cea3ddd76b39426498ad8f99d526751148f319e39905d7e3f69e13f92712b33",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p1l_battery/bubble_22_n3",
       "seconds": {
-        "exact": 0.005618402,
-        "modular_polynomial": 0.006129224,
-        "modular_sampled": 0.006381956
+        "exact": 0.006222226
       }
     },
     {
@@ -1219,16 +953,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "3d215fb4527b3650f3ae9736799b1c5bb34c71bc1a8906a6f0b776a689281573",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p1l_battery/bubble_22_n4",
       "seconds": {
-        "exact": 0.005568892,
-        "modular_polynomial": 0.006112565,
-        "modular_sampled": 0.006849278
+        "exact": 0.008800037
       }
     },
     {
@@ -1237,16 +967,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "af760c6972c9c956efd528c7530f10b075bd95f6d50d6e5c1711527bc4ece456",
       "inserts": {
-        "exact": 2,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 2
       },
       "loop_count": 1,
       "name": "p1l_battery/bubble_31_n0",
       "seconds": {
-        "exact": 0.007151989,
-        "modular_polynomial": 0.005822093,
-        "modular_sampled": 0.006126104
+        "exact": 0.007805043
       }
     },
     {
@@ -1255,16 +981,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "45746ed65cde1ecd3136f0120676b17fa17f755d05b45c52983eeb9a26250652",
       "inserts": {
-        "exact": 1,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 1
       },
       "loop_count": 1,
       "name": "p1l_battery/bubble_31_n1",
       "seconds": {
-        "exact": 0.007436709,
-        "modular_polynomial": 0.006794787,
-        "modular_sampled": 0.00759249
+        "exact": 0.007695872
       }
     },
     {
@@ -1273,16 +995,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "1f43a4a6db2374c7cfbd83587ac592f4b26c90e385940de7bd901f50ea69ab84",
       "inserts": {
-        "exact": 1,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 1
       },
       "loop_count": 1,
       "name": "p1l_battery/bubble_31_n2",
       "seconds": {
-        "exact": 0.007885581,
-        "modular_polynomial": 0.007845022,
-        "modular_sampled": 0.008178683
+        "exact": 0.008220124
       }
     },
     {
@@ -1291,16 +1009,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "fdaf431d3a9ec1e69572dafec37080fc44461422854abf0e434020031b490ddd",
       "inserts": {
-        "exact": 1,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 1
       },
       "loop_count": 1,
       "name": "p1l_battery/bubble_31_n3",
       "seconds": {
-        "exact": 0.008437474,
-        "modular_polynomial": 0.009030317,
-        "modular_sampled": 0.009201767
+        "exact": 0.008743836
       }
     },
     {
@@ -1309,16 +1023,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "cf17219ea8b3cdd68f7c671d3561c9202889f4c65b5e8d2603a0ea6079e23460",
       "inserts": {
-        "exact": 1,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 1
       },
       "loop_count": 1,
       "name": "p1l_battery/bubble_31_n4",
       "seconds": {
-        "exact": 0.009286317,
-        "modular_polynomial": 0.01013306,
-        "modular_sampled": 0.010556892
+        "exact": 0.008471035
       }
     },
     {
@@ -1327,16 +1037,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "d6d98c13e6f7569a3b5215f4895a6831a85459c5837467f0fe7be4a81a988fff",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p1l_battery/bubble_13_n0",
       "seconds": {
-        "exact": 0.005247701,
-        "modular_polynomial": 0.005887163,
-        "modular_sampled": 0.006130255
+        "exact": 0.004558509
       }
     },
     {
@@ -1345,16 +1051,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "dc18f75d9197d7b988d307ec32c8fcfd8b7bc7376a5f6ce0036e106dae8c9314",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p1l_battery/bubble_13_n1",
       "seconds": {
-        "exact": 0.005211541,
-        "modular_polynomial": 0.005963684,
-        "modular_sampled": 0.006294235
+        "exact": 0.004547949
       }
     },
     {
@@ -1363,16 +1065,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "ab657a1c19ca204118d3f659282adb14fccb50c1ff21b4d8d850ab85e3b394b3",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p1l_battery/bubble_13_n2",
       "seconds": {
-        "exact": 0.005340801,
-        "modular_polynomial": 0.005887024,
-        "modular_sampled": 0.006355695
+        "exact": 0.004593949
       }
     },
     {
@@ -1381,16 +1079,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "21c5f032e67759a4f6e9d9e45d4f6a4087cbeb17b013ba858e0a4949c6c2528e",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p1l_battery/bubble_13_n3",
       "seconds": {
-        "exact": 0.005440642,
-        "modular_polynomial": 0.005988464,
-        "modular_sampled": 0.006688807
+        "exact": 0.004636749
       }
     },
     {
@@ -1399,16 +1093,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "b9751779c346d3b203d2c806e843ea8754309dcc621b7dd807c625e36ba0d3b3",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p1l_battery/bubble_13_n4",
       "seconds": {
-        "exact": 0.006179855,
-        "modular_polynomial": 0.006118145,
-        "modular_sampled": 0.006585017
+        "exact": 0.005254392
       }
     },
     {
@@ -1417,16 +1107,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "1c5d6f769b277fbe3d022b27c3b561690d17a363e0032cb9c1fa3920c71b957f",
       "inserts": {
-        "exact": 2,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 2
       },
       "loop_count": 1,
       "name": "p1l_battery/bubble_32_n0",
       "seconds": {
-        "exact": 0.007199458,
-        "modular_polynomial": 0.006111635,
-        "modular_sampled": 0.006393335
+        "exact": 0.007663672
       }
     },
     {
@@ -1435,16 +1121,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "c57950e79029cd7c42c2a087a99acf766d71d915124f23aa6bcb33953a962629",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p1l_battery/bubble_32_n1",
       "seconds": {
-        "exact": 0.005733373,
-        "modular_polynomial": 0.006705826,
-        "modular_sampled": 0.007295219
+        "exact": 0.005038431
       }
     },
     {
@@ -1453,16 +1135,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "50d245d4ebafe81e1d8b6baa01e90b0274c6738e0447c3bceb54148f975da7a7",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p1l_battery/bubble_32_n2",
       "seconds": {
-        "exact": 0.006450846,
-        "modular_polynomial": 0.007768231,
-        "modular_sampled": 0.008318954
+        "exact": 0.006127985
       }
     },
     {
@@ -1471,16 +1149,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "9515384bbb481a2d64e975437c2d65e70ed2d0e82c81eae2cac0519363a8117f",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p1l_battery/bubble_32_n3",
       "seconds": {
-        "exact": 0.006976897,
-        "modular_polynomial": 0.008813215,
-        "modular_sampled": 0.009473889
+        "exact": 0.007074219
       }
     },
     {
@@ -1489,16 +1163,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "181159c9ecab883867b6b31e3d6825c37664886f5b8a82f58768de2b64e02e12",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p1l_battery/bubble_32_n4",
       "seconds": {
-        "exact": 0.007748911,
-        "modular_polynomial": 0.01000198,
-        "modular_sampled": 0.010373511
+        "exact": 0.010477874
       }
     },
     {
@@ -1507,16 +1177,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "16c459b644a62112c4340bf3b03c9a271251ca88097a466d9053523e164fbe25",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p1l_battery/scaleless_0_1_n0",
       "seconds": {
-        "exact": 0.003697105,
-        "modular_polynomial": 0.004121696,
-        "modular_sampled": 0.004565468
+        "exact": 0.003018753
       }
     },
     {
@@ -1525,16 +1191,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "0d670b82183bc98b72d5e9349547c59ffed41be3041a95c965dc931629b06fec",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p1l_battery/scaleless_0_1_n2",
       "seconds": {
-        "exact": 0.003505725,
-        "modular_polynomial": 0.003882105,
-        "modular_sampled": 0.004172686
+        "exact": 0.002691872
       }
     },
     {
@@ -1543,16 +1205,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "81699d78fe8426dfc2d616411720a822faca04fa0df51916ecff061f6b078359",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p1l_battery/scaleless_1_0_n0",
       "seconds": {
-        "exact": 0.003513524,
-        "modular_polynomial": 0.003710735,
-        "modular_sampled": 0.004346957
+        "exact": 0.002589271
       }
     },
     {
@@ -1561,16 +1219,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "e2dfa927d45d53d6f9419645434773edb03044e57c07343ff7bc17ea70650142",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p1l_battery/scaleless_1_0_n2",
       "seconds": {
-        "exact": 0.003436373,
-        "modular_polynomial": 0.003718145,
-        "modular_sampled": 0.004110766
+        "exact": 0.002580791
       }
     },
     {
@@ -1579,16 +1233,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "2661da40134f3ec15f1eca7670bbb69679812e9a395ef29267aaa83e7d4b3114",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p1l_battery/scaleless_m1_2_n0",
       "seconds": {
-        "exact": 0.003477194,
-        "modular_polynomial": 0.003927826,
-        "modular_sampled": 0.004116987
+        "exact": 0.003119703
       }
     },
     {
@@ -1597,16 +1247,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "00cd92a1fcc6724683935c84a0032edb4e12ba8502326eea1600ad9e9e9dd3c9",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p1l_battery/scaleless_m1_2_n2",
       "seconds": {
-        "exact": 0.003466933,
-        "modular_polynomial": 0.003741165,
-        "modular_sampled": 0.004096216
+        "exact": 0.00253563
       }
     },
     {
@@ -1615,16 +1261,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "1060430e6fb29dbcb02c40f6b39171e8a4baa68336529e4924cdb03b51767cee",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p1l_battery/scaleless_2_m2_n0",
       "seconds": {
-        "exact": 0.003598605,
-        "modular_polynomial": 0.003973966,
-        "modular_sampled": 0.004205707
+        "exact": 0.00261258
       }
     },
     {
@@ -1633,16 +1275,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "9e1c0fc4d9981116b390278297174bf4fb4927703725c09ed18d6e6832c111c3",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p1l_battery/scaleless_2_m2_n2",
       "seconds": {
-        "exact": 0.003481504,
-        "modular_polynomial": 0.003801405,
-        "modular_sampled": 0.004126936
+        "exact": 0.00259334
       }
     },
     {
@@ -1651,16 +1289,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "20f7993d8c4821f824e0e5c6940b5f7de9ae8fc8432944029a40c38db7bdc713",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p1l_battery/scaleless_m2_m1_n0",
       "seconds": {
-        "exact": 0.003494104,
-        "modular_polynomial": 0.003776135,
-        "modular_sampled": 0.004096006
+        "exact": 0.002590061
       }
     },
     {
@@ -1669,16 +1303,12 @@
       "fixture": "tests/fixtures/forcer/p1l_battery.json",
       "input_sha256": "cf47c2f05c8b1a5b99d5efc7055ee2e13071218e8f871dd21bb47dd34feb841f",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p1l_battery/scaleless_m2_m1_n2",
       "seconds": {
-        "exact": 0.003514105,
-        "modular_polynomial": 0.003792305,
-        "modular_sampled": 0.004155537
+        "exact": 0.002614511
       }
     },
     {
@@ -1687,16 +1317,12 @@
       "fixture": "tests/fixtures/forcer/p2l_battery.json",
       "input_sha256": "4709f8b87414596460a6196b608d378fd67ee37686668a9cf753dc1ad64a85e7",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 2,
       "name": "p2l_battery/kite",
       "seconds": {
-        "exact": 0.005597332,
-        "modular_polynomial": 0.006331785,
-        "modular_sampled": 0.006878348
+        "exact": 0.005873565
       }
     },
     {
@@ -1705,16 +1331,12 @@
       "fixture": "tests/fixtures/forcer/p2l_battery.json",
       "input_sha256": "9ac6ebb5de504fcfeecf273a09ff03a40e581b13d8c6c00c7496a70d5ec3b1f7",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 2,
       "name": "p2l_battery/kite_dot1",
       "seconds": {
-        "exact": 0.006313565,
-        "modular_polynomial": 0.006748557,
-        "modular_sampled": 0.006983728
+        "exact": 0.006971429
       }
     },
     {
@@ -1723,16 +1345,12 @@
       "fixture": "tests/fixtures/forcer/p2l_battery.json",
       "input_sha256": "5aa13d5ae2dec1239429afcd9a071441bd7cb0b83b73552727eacaf8edd5e3dd",
       "inserts": {
-        "exact": 5,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 5
       },
       "loop_count": 2,
       "name": "p2l_battery/kite_dot2",
       "seconds": {
-        "exact": 0.009689688,
-        "modular_polynomial": 0.006855877,
-        "modular_sampled": 0.007194429
+        "exact": 0.013878677
       }
     },
     {
@@ -1741,16 +1359,12 @@
       "fixture": "tests/fixtures/forcer/p2l_battery.json",
       "input_sha256": "c9780935c8f718ee0a5e908881892f0857839ec457bbde50f7b7b1d5c7e1b9d8",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 2,
       "name": "p2l_battery/kite_dot3",
       "seconds": {
-        "exact": 0.006157214,
-        "modular_polynomial": 0.006706087,
-        "modular_sampled": 0.007148019
+        "exact": 0.008569836
       }
     },
     {
@@ -1759,16 +1373,12 @@
       "fixture": "tests/fixtures/forcer/p2l_battery.json",
       "input_sha256": "b87bda6e2a80ab40d9c176e6f2768778bec1ce53831be140b12b83fefb9533e5",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 2,
       "name": "p2l_battery/kite_dot4",
       "seconds": {
-        "exact": 0.005892454,
-        "modular_polynomial": 0.006776567,
-        "modular_sampled": 0.007064988
+        "exact": 0.007784553
       }
     },
     {
@@ -1777,16 +1387,12 @@
       "fixture": "tests/fixtures/forcer/p2l_battery.json",
       "input_sha256": "f5899497cad95bfb141faae24ccfd86de32b27cb902df031031d87ed605c0284",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 2,
       "name": "p2l_battery/kite_dot5",
       "seconds": {
-        "exact": 0.005883323,
-        "modular_polynomial": 0.006847237,
-        "modular_sampled": 0.007059878
+        "exact": 0.007850013
       }
     },
     {
@@ -1795,16 +1401,12 @@
       "fixture": "tests/fixtures/forcer/p2l_battery.json",
       "input_sha256": "caaf225ca23d87e9ad6780e790e86ccd06a06e77ddfc75d7b4206962107b68d8",
       "inserts": {
-        "exact": 17,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 17
       },
       "loop_count": 2,
       "name": "p2l_battery/kite_dots_25",
       "seconds": {
-        "exact": 0.010874223,
-        "modular_polynomial": 0.007219809,
-        "modular_sampled": 0.00757392
+        "exact": 0.012829184
       }
     },
     {
@@ -1813,16 +1415,12 @@
       "fixture": "tests/fixtures/forcer/p2l_battery.json",
       "input_sha256": "a810496eaef1268c7464512f4d2dfc9634b761a79840fdf45a2a01d0335542d2",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 2,
       "name": "p2l_battery/kite_dots_23",
       "seconds": {
-        "exact": 0.006399516,
-        "modular_polynomial": 0.007274769,
-        "modular_sampled": 0.007431969
+        "exact": 0.007386141
       }
     },
     {
@@ -1831,16 +1429,12 @@
       "fixture": "tests/fixtures/forcer/p2l_battery.json",
       "input_sha256": "20ab2d3cc585c02a0663dc3acc28e2f4cd5a600be6a532c74421eea0b281c782",
       "inserts": {
-        "exact": 1,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 1
       },
       "loop_count": 2,
       "name": "p2l_battery/kite_dot1_cubed",
       "seconds": {
-        "exact": 0.00734503,
-        "modular_polynomial": 0.007046909,
-        "modular_sampled": 0.007227819
+        "exact": 0.007482651
       }
     },
     {
@@ -1849,16 +1443,12 @@
       "fixture": "tests/fixtures/forcer/p2l_battery.json",
       "input_sha256": "68d2ff3fb2a3223cd077a49ed81e9194fd851be24dd8fb9b671e68588d1eefd6",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 2,
       "name": "p2l_battery/kite_kq_rank1",
       "seconds": {
-        "exact": 0.005717243,
-        "modular_polynomial": 0.006952738,
-        "modular_sampled": 0.006982877
+        "exact": 0.005751344
       }
     },
     {
@@ -1867,16 +1457,12 @@
       "fixture": "tests/fixtures/forcer/p2l_battery.json",
       "input_sha256": "bc3053f723a466e283a8500c0938137678696ba3887a5a840b749b975c422302",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 2,
       "name": "p2l_battery/kite_kq_rank1_reversed",
       "seconds": {
-        "exact": 0.005695153,
-        "modular_polynomial": 0.006704797,
-        "modular_sampled": 0.007142009
+        "exact": 0.006055176
       }
     },
     {
@@ -1885,16 +1471,12 @@
       "fixture": "tests/fixtures/forcer/p2l_battery.json",
       "input_sha256": "b8248bacc277dd3cdfa59fc9dc0747d0e4345cc81cd5d1bff2f19c6eb8629dea",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 2,
       "name": "p2l_battery/kite_kk_rank1",
       "seconds": {
-        "exact": 0.005449531,
-        "modular_polynomial": 0.006320526,
-        "modular_sampled": 0.006632456
+        "exact": 0.004959091
       }
     },
     {
@@ -1903,16 +1485,12 @@
       "fixture": "tests/fixtures/forcer/p2l_battery.json",
       "input_sha256": "07bbf10d39788eecf4bbf28fa1a3de128ecb96daf4fce249cad4b2413e2774ed",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 2,
       "name": "p2l_battery/kite_rank2",
       "seconds": {
-        "exact": 0.005946724,
-        "modular_polynomial": 0.006740276,
-        "modular_sampled": 0.007056138
+        "exact": 0.005371342
       }
     },
     {
@@ -1921,16 +1499,12 @@
       "fixture": "tests/fixtures/forcer/p2l_battery.json",
       "input_sha256": "a8716f94c12baa7453aa4a9c806afee2b72450e5392e581555509dbd6963b079",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 2,
       "name": "p2l_battery/kite_rank2_mixed",
       "seconds": {
-        "exact": 0.005836533,
-        "modular_polynomial": 0.006809897,
-        "modular_sampled": 0.006963308
+        "exact": 0.005399942
       }
     },
     {
@@ -1939,16 +1513,12 @@
       "fixture": "tests/fixtures/forcer/p2l_battery.json",
       "input_sha256": "e90d8c6c2b7bb9c32eeac24793d8ac103cc6698c3f97771c9566fb9c1f9b3c0a",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 2,
       "name": "p2l_battery/kite_rank3",
       "seconds": {
-        "exact": 0.005478522,
-        "modular_polynomial": 0.006578866,
-        "modular_sampled": 0.006780807
+        "exact": 0.00494214
       }
     },
     {
@@ -1957,16 +1527,12 @@
       "fixture": "tests/fixtures/forcer/p2l_battery.json",
       "input_sha256": "3ca84fd39f0d4fb42799b5d45498f6a10119a6cca944e64b6253f8fb939c086f",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 2,
       "name": "p2l_battery/kite_rank4",
       "seconds": {
-        "exact": 0.007008568,
-        "modular_polynomial": 0.007789471,
-        "modular_sampled": 0.007651881
+        "exact": 0.00699721
       }
     },
     {
@@ -1975,16 +1541,12 @@
       "fixture": "tests/fixtures/forcer/p2l_battery.json",
       "input_sha256": "e9d74b17a55b02203a6be8e0fb870fd8fb2bbb7e699423b3526a977616a0432d",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 2,
       "name": "p2l_battery/kite_rank4_kk",
       "seconds": {
-        "exact": 0.005932844,
-        "modular_polynomial": 0.007247719,
-        "modular_sampled": 0.007302389
+        "exact": 0.00964414
       }
     },
     {
@@ -1993,16 +1555,12 @@
       "fixture": "tests/fixtures/forcer/p2l_battery.json",
       "input_sha256": "ef0e517f6515b6bde3288f1596736aa187f09622718e4f918640af4b31db945a",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 2,
       "name": "p2l_battery/kite_coefficients",
       "seconds": {
-        "exact": 0.007001468,
-        "modular_polynomial": 0.009232447,
-        "modular_sampled": 0.009196126
+        "exact": 0.00977256
       }
     },
     {
@@ -2011,16 +1569,12 @@
       "fixture": "tests/fixtures/forcer/p2l_battery.json",
       "input_sha256": "163cb72777ecf79eceea23998a5bacd685f787003b9262f3da9a98c9fedc7a2b",
       "inserts": {
-        "exact": 3,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 2
       },
       "loop_count": 2,
       "name": "p2l_battery/kite_dot_rank2",
       "seconds": {
-        "exact": 0.009251087,
-        "modular_polynomial": 0.007197639,
-        "modular_sampled": 0.007217999
+        "exact": 0.011247177
       }
     },
     {
@@ -2029,16 +1583,12 @@
       "fixture": "tests/fixtures/forcer/p2l_battery.json",
       "input_sha256": "cab97b37c1a4df66ae0ad0bbee7a164f240825f0db8edb9df88e1f7a6127d81e",
       "inserts": {
-        "exact": 35,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 35
       },
       "loop_count": 2,
       "name": "p2l_battery/kite_dots_rank4",
       "seconds": {
-        "exact": 0.014105276,
-        "modular_polynomial": 0.010396941,
-        "modular_sampled": 0.0099802
+        "exact": 0.023754458
       }
     },
     {
@@ -2047,16 +1597,12 @@
       "fixture": "tests/fixtures/forcer/p2l_battery.json",
       "input_sha256": "1bc9b20414cd31634ccdd50b4818d0c391c749627d097acb879b35d12609c097",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 2,
       "name": "p2l_battery/sunset",
       "seconds": {
-        "exact": 0.005651062,
-        "modular_polynomial": 0.006901198,
-        "modular_sampled": 0.006907058
+        "exact": 0.008116384
       }
     },
     {
@@ -2065,16 +1611,12 @@
       "fixture": "tests/fixtures/forcer/p2l_battery.json",
       "input_sha256": "68f5d3dad7ba596efbfb458798fc4dfd65ab145102018ca5725174536046c15b",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 2,
       "name": "p2l_battery/pinched_k1_rank2",
       "seconds": {
-        "exact": 0.005848533,
-        "modular_polynomial": 0.006910887,
-        "modular_sampled": 0.006928417
+        "exact": 0.007615572
       }
     },
     {
@@ -2083,16 +1625,12 @@
       "fixture": "tests/fixtures/forcer/p2l_battery.json",
       "input_sha256": "9236afcdd3ebb6eda03481a6ef8d2476e1f9e1d8433b1d7185751877112f1ae2",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 2,
       "name": "p2l_battery/negative_power",
       "seconds": {
-        "exact": 0.005793423,
-        "modular_polynomial": 0.006863737,
-        "modular_sampled": 0.006943518
+        "exact": 0.007621231
       }
     },
     {
@@ -2101,16 +1639,12 @@
       "fixture": "tests/fixtures/forcer/p3l_battery.json",
       "input_sha256": "31b413ae89160314c490ba16fd1d6a3ee75202285df66f8102742e81491086f6",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 3,
       "name": "p3l_battery/la_top",
       "seconds": {
-        "exact": 0.0074744,
-        "modular_polynomial": 0.008734495,
-        "modular_sampled": 0.008752494
+        "exact": 0.01209536
       }
     },
     {
@@ -2119,16 +1653,12 @@
       "fixture": "tests/fixtures/forcer/p3l_battery.json",
       "input_sha256": "ec308c269d02f3d48f9a3aadda186dfd267070cbd681a5eb4dddc25827482cb6",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 3,
       "name": "p3l_battery/la_isp",
       "seconds": {
-        "exact": 0.008440854,
-        "modular_polynomial": 0.009246697,
-        "modular_sampled": 0.009323558
+        "exact": 0.013561706
       }
     },
     {
@@ -2137,16 +1667,12 @@
       "fixture": "tests/fixtures/forcer/p3l_battery.json",
       "input_sha256": "be5a4f4fb20a6ce63dbaf197d5e43d2c358b226253952d07e828ff1962c63190",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 3,
       "name": "p3l_battery/la_rank2",
       "seconds": {
-        "exact": 0.008217203,
-        "modular_polynomial": 0.009287577,
-        "modular_sampled": 0.009269147
+        "exact": 0.011954509
       }
     },
     {
@@ -2155,16 +1681,12 @@
       "fixture": "tests/fixtures/forcer/p3l_battery.json",
       "input_sha256": "137bfb6bdf23699c0dc941586d29c924865e3eba69a48d4b3ff91c349d9b7717",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 3,
       "name": "p3l_battery/la_dot",
       "seconds": {
-        "exact": 0.008673944,
-        "modular_polynomial": 0.010182351,
-        "modular_sampled": 0.009754599
+        "exact": 0.013554506
       }
     },
     {
@@ -2173,16 +1695,12 @@
       "fixture": "tests/fixtures/forcer/p3l_battery.json",
       "input_sha256": "4ab67699f710bef15a24132c4e1c97e742024a21c2b985dd42811014173a75df",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 3,
       "name": "p3l_battery/be_top",
       "seconds": {
-        "exact": 0.00762476,
-        "modular_polynomial": 0.008997196,
-        "modular_sampled": 0.008612524
+        "exact": 0.011562028
       }
     },
     {
@@ -2191,16 +1709,12 @@
       "fixture": "tests/fixtures/forcer/p3l_battery.json",
       "input_sha256": "26b14c7524a352dd9d77acf1d2813d22a5b9990d807ba83c558ce7f73ff17320",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 3,
       "name": "p3l_battery/be_isp",
       "seconds": {
-        "exact": 0.011001244,
-        "modular_polynomial": 0.012343149,
-        "modular_sampled": 0.01248906
+        "exact": 0.018563778
       }
     },
     {
@@ -2209,16 +1723,12 @@
       "fixture": "tests/fixtures/forcer/p3l_battery.json",
       "input_sha256": "a629d1e87fba05df6c5fc27a2a65ba56e67c39064eb605473cc8c0472ce1b74c",
       "inserts": {
-        "exact": 3,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 3
       },
       "loop_count": 3,
       "name": "p3l_battery/be_rank2",
       "seconds": {
-        "exact": 0.011578216,
-        "modular_polynomial": 0.010990524,
-        "modular_sampled": 0.010756573
+        "exact": 0.020324484
       }
     },
     {
@@ -2227,16 +1737,12 @@
       "fixture": "tests/fixtures/forcer/p3l_battery.json",
       "input_sha256": "df0a680096a0e170f0c0ee7b396a431fdbc08eab97c65d7a1c8085042074b52c",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 3,
       "name": "p3l_battery/be_dot",
       "seconds": {
-        "exact": 0.009580968,
-        "modular_polynomial": 0.010978584,
-        "modular_sampled": 0.010319262
+        "exact": 0.016026407
       }
     },
     {
@@ -2245,16 +1751,12 @@
       "fixture": "tests/fixtures/forcer/p3l_battery.json",
       "input_sha256": "c81394a5b350f41c9d4a1383d4e59e12e24b2d9b2d875d9da2255cd18784d58a",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 3,
       "name": "p3l_battery/no_top",
       "seconds": {
-        "exact": 0.005721042,
-        "modular_polynomial": 0.007115579,
-        "modular_sampled": 0.007033168
+        "exact": 0.008519556
       }
     },
     {
@@ -2263,16 +1765,12 @@
       "fixture": "tests/fixtures/forcer/p3l_battery.json",
       "input_sha256": "269c7b45f3f08c9ef97cd2b0f08987f36f1a6aca9ae847d71fec93f525cd5500",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 3,
       "name": "p3l_battery/no_isp",
       "seconds": {
-        "exact": 0.016040384,
-        "modular_polynomial": 0.015333021,
-        "modular_sampled": 0.015829954
+        "exact": 0.031891183
       }
     },
     {
@@ -2281,16 +1779,12 @@
       "fixture": "tests/fixtures/forcer/p3l_battery.json",
       "input_sha256": "3d5a2aa81c244caced8d476f3d46f4cd61152cbb1e3a430e9e3cdef4b0d6e514",
       "inserts": {
-        "exact": 4,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 4
       },
       "loop_count": 3,
       "name": "p3l_battery/no_rank2",
       "seconds": {
-        "exact": 0.021572116,
-        "modular_polynomial": 0.015731532,
-        "modular_sampled": 0.016953768
+        "exact": 0.043525121
       }
     },
     {
@@ -2299,16 +1793,12 @@
       "fixture": "tests/fixtures/forcer/p3l_battery.json",
       "input_sha256": "73c0d19a48f540d4e1675757032485c0d594845188fa52ab83ecfccb08647c83",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 3,
       "name": "p3l_battery/no_dot",
       "seconds": {
-        "exact": 0.008488594,
-        "modular_polynomial": 0.009480238,
-        "modular_sampled": 0.009553458
+        "exact": 0.013465745
       }
     },
     {
@@ -2317,16 +1807,12 @@
       "fixture": "tests/fixtures/forcer/p3l_battery.json",
       "input_sha256": "f11609945283ad5d3e6f06b3a8a8c87c32b8b12f30cdb431890e90a136c0f3ff",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 3,
       "name": "p3l_battery/la_rank4",
       "seconds": {
-        "exact": 0.010337761,
-        "modular_polynomial": 0.011462895,
-        "modular_sampled": 0.011390835
+        "exact": 0.013425676
       }
     },
     {
@@ -2335,16 +1821,12 @@
       "fixture": "tests/fixtures/forcer/p3l_battery.json",
       "input_sha256": "37b2b28afe36f37a63cd9b223dc0f522915b245c13af4d5e85e6535d2532c8c9",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 3,
       "name": "p3l_battery/no_dot_rank2",
       "seconds": {
-        "exact": 0.023672375,
-        "modular_polynomial": 0.023237743,
-        "modular_sampled": 0.023525074
+        "exact": 0.033159708
       }
     },
     {
@@ -2353,16 +1835,12 @@
       "fixture": "tests/fixtures/forcer/p3l_battery.json",
       "input_sha256": "16854c7e4e4649b510df6fdd934627b1d35aeb383f4431948f6427b0d68d5c9a",
       "inserts": {
-        "exact": 4,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 4
       },
       "loop_count": 3,
       "name": "p3l_battery/be_pinched",
       "seconds": {
-        "exact": 0.009375297,
-        "modular_polynomial": 0.008061422,
-        "modular_sampled": 0.007952251
+        "exact": 0.010608764
       }
     },
     {
@@ -2371,16 +1849,12 @@
       "fixture": "tests/fixtures/forcer/p3l_battery.json",
       "input_sha256": "ab98e6b3cb8238d041a68cd2804a48c577ee374ec74b0e7300981d7c3a993470",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 3,
       "name": "p3l_battery/contracted_la_five_momenta",
       "seconds": {
-        "exact": 0.006677406,
-        "modular_polynomial": 0.007171878,
-        "modular_sampled": 0.007229449
+        "exact": 0.017555983
       }
     },
     {
@@ -2389,16 +1863,12 @@
       "fixture": "tests/fixtures/forcer/p3l_battery.json",
       "input_sha256": "b51cfc4e45b60a8d7d6ef16e37220f43e0daca0ed0a073a54f07fd3ba40f55fa",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 3,
       "name": "p3l_battery/contracted_no_five_momenta_dot",
       "seconds": {
-        "exact": 0.005949934,
-        "modular_polynomial": 0.007707841,
-        "modular_sampled": 0.0074618
+        "exact": 0.021163479
       }
     },
     {
@@ -2407,16 +1877,12 @@
       "fixture": "tests/fixtures/forcer/p3l_battery.json",
       "input_sha256": "82e9d4216e6510394b7b7b1fd8ba9ca4948ac507ab8bfb73b3ec07bf04b1a7b7",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 3,
       "name": "p3l_battery/contracted_be_two_five_momenta",
       "seconds": {
-        "exact": 0.006158434,
-        "modular_polynomial": 0.007818442,
-        "modular_sampled": 0.00729267
+        "exact": 0.006639548
       }
     },
     {
@@ -2425,16 +1891,12 @@
       "fixture": "tests/fixtures/forcer/p3l_battery.json",
       "input_sha256": "ec678b56b25707a85b6d60d62aed78dc1443bb0337eaf5650219acb0eae6868a",
       "inserts": {
-        "exact": 6,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 6
       },
       "loop_count": 3,
       "name": "p3l_battery/contracted_be_five_momenta_numerator",
       "seconds": {
-        "exact": 0.010331491,
-        "modular_polynomial": 0.011580576,
-        "modular_sampled": 0.008801795
+        "exact": 0.041395282
       }
     },
     {
@@ -2443,16 +1905,12 @@
       "fixture": "tests/fixtures/forcer/p_anchors.json",
       "input_sha256": "e49b6a61fc126b0a8de2e9d8fbd825032f6acb0f0a52b924beb051fcb984c32a",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p_anchors/p1l_11",
       "seconds": {
-        "exact": 0.00501932,
-        "modular_polynomial": 0.006209994,
-        "modular_sampled": 0.006006634
+        "exact": 0.027666185
       }
     },
     {
@@ -2461,16 +1919,12 @@
       "fixture": "tests/fixtures/forcer/p_anchors.json",
       "input_sha256": "7218a53e566518e31f5795cffd3fd50bf0350fc42222b924de076b8ec40350d0",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p_anchors/p1l_kq_plus",
       "seconds": {
-        "exact": 0.004849689,
-        "modular_polynomial": 0.006235895,
-        "modular_sampled": 0.006244745
+        "exact": 0.007070749
       }
     },
     {
@@ -2479,16 +1933,12 @@
       "fixture": "tests/fixtures/forcer/p_anchors.json",
       "input_sha256": "a5ef38abb065e43bf92766229ea65984a4208616c1d3d383420f9f69d70b4cf3",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 1,
       "name": "p_anchors/p1l_kq_minus",
       "seconds": {
-        "exact": 0.00495446,
-        "modular_polynomial": 0.006169445,
-        "modular_sampled": 0.006274335
+        "exact": 0.006799678
       }
     },
     {
@@ -2497,16 +1947,12 @@
       "fixture": "tests/fixtures/forcer/p_anchors.json",
       "input_sha256": "4709f8b87414596460a6196b608d378fd67ee37686668a9cf753dc1ad64a85e7",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 2,
       "name": "p_anchors/kite",
       "seconds": {
-        "exact": 0.005522352,
-        "modular_polynomial": 0.007129939,
-        "modular_sampled": 0.007112288
+        "exact": 0.008327814
       }
     },
     {
@@ -2515,16 +1961,12 @@
       "fixture": "tests/fixtures/forcer/p_anchors.json",
       "input_sha256": "66b6ece995f77196d7b3eb90cb44e3d3b729c7bd11a1a1853c724e411943bbd5",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 2,
       "name": "p_anchors/kite_rank3_kp",
       "seconds": {
-        "exact": 0.006261925,
-        "modular_polynomial": 0.007367289,
-        "modular_sampled": 0.00742749
+        "exact": 0.006933059
       }
     },
     {
@@ -2533,16 +1975,12 @@
       "fixture": "tests/fixtures/forcer/p_anchors.json",
       "input_sha256": "e3c4271397c4b1db495f314fd772263a7887edee2e28e1fb0ab8f7158957217e",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 2,
       "name": "p_anchors/kite_rank3_mixed",
       "seconds": {
-        "exact": 0.005977424,
-        "modular_polynomial": 0.007307979,
-        "modular_sampled": 0.007305949
+        "exact": 0.006355436
       }
     },
     {
@@ -2551,16 +1989,12 @@
       "fixture": "tests/fixtures/forcer/p_anchors.json",
       "input_sha256": "c81394a5b350f41c9d4a1383d4e59e12e24b2d9b2d875d9da2255cd18784d58a",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 3,
       "name": "p_anchors/no",
       "seconds": {
-        "exact": 0.005624772,
-        "modular_polynomial": 0.006929927,
-        "modular_sampled": 0.006789648
+        "exact": 0.005642253
       }
     },
     {
@@ -2569,16 +2003,12 @@
       "fixture": "tests/fixtures/forcer/p_anchors.json",
       "input_sha256": "be4b7f7275c735b651e202dff7f0c79f132dc0d53891f536ec09052d1f4a1185",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 3,
       "name": "p_anchors/t105_parent_la",
       "seconds": {
-        "exact": 0.006131555,
-        "modular_polynomial": 0.0076668,
-        "modular_sampled": 0.008218583
+        "exact": 0.006492307
       }
     },
     {
@@ -2587,16 +2017,12 @@
       "fixture": "tests/fixtures/forcer/p_anchors.json",
       "input_sha256": "4e5071bfa7cd13b1ef994cd3c68850734dc6cac7778d1d8f8a5e3edb77a76a82",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 3,
       "name": "p_anchors/t105_parent_no",
       "seconds": {
-        "exact": 0.006513026,
-        "modular_polynomial": 0.007715741,
-        "modular_sampled": 0.007729141
+        "exact": 0.00721451
       }
     },
     {
@@ -2605,16 +2031,12 @@
       "fixture": "tests/fixtures/forcer/p_anchors.json",
       "input_sha256": "31a294281cfff44ca4d939c585ef67b898823524ce7e991d3df99762b51e5851",
       "inserts": {
-        "exact": 1,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 1
       },
       "loop_count": 3,
       "name": "p_anchors/t105_parent_la_dotted",
       "seconds": {
-        "exact": 0.011966118,
-        "modular_polynomial": 0.007162369,
-        "modular_sampled": 0.007141829
+        "exact": 0.015399395
       }
     },
     {
@@ -2623,28 +2045,262 @@
       "fixture": "tests/fixtures/forcer/p_anchors.json",
       "input_sha256": "863cd506ed599d415acba980a1f9e14d5693f33b648b0cd9b0d60c78879f6357",
       "inserts": {
-        "exact": 0,
-        "modular_polynomial": 0,
-        "modular_sampled": 0
+        "exact": 0
       },
       "loop_count": 3,
       "name": "p_anchors/t105_parent_la_rank2",
       "seconds": {
-        "exact": 0.007127608,
-        "modular_polynomial": 0.008007981,
-        "modular_sampled": 0.00771265
+        "exact": 0.008841967
+      }
+    },
+    {
+      "case": "bebe",
+      "class": "training",
+      "fixture": "tests/fixtures/forcer/p4l_anchors.json",
+      "input_sha256": "9a3d24aa65c68ecc58b650c16e31f80fd59ccbb3f351bd47bc2bfe2feff46d65",
+      "inserts": {
+        "exact": 2
+      },
+      "loop_count": 4,
+      "name": "p4l_anchors/bebe",
+      "seconds": {
+        "exact": 0.249496147
+      }
+    },
+    {
+      "case": "cross",
+      "class": "training",
+      "fixture": "tests/fixtures/forcer/p4l_anchors.json",
+      "input_sha256": "97c69001d1149372c8082076601c01d542014d24eab1c0a4e683a9a140ba0a60",
+      "inserts": {
+        "exact": 2
+      },
+      "loop_count": 4,
+      "name": "p4l_anchors/cross",
+      "seconds": {
+        "exact": 0.202625823
+      }
+    },
+    {
+      "case": "haha",
+      "class": "training",
+      "fixture": "tests/fixtures/forcer/p4l_anchors.json",
+      "input_sha256": "fa0cfc00f95d40220b7a1892a47010e3c7c34eabc60ff5be60142734c25af89c",
+      "inserts": {
+        "exact": 2
+      },
+      "loop_count": 4,
+      "name": "p4l_anchors/haha",
+      "seconds": {
+        "exact": 0.360174458
+      }
+    },
+    {
+      "case": "lala",
+      "class": "training",
+      "fixture": "tests/fixtures/forcer/p4l_anchors.json",
+      "input_sha256": "2b89310cc99a5fcc0d6f105ceb4b490a6f8a59dcee4eaf443d3cdbb5b4a72f4d",
+      "inserts": {
+        "exact": 2
+      },
+      "loop_count": 4,
+      "name": "p4l_anchors/lala",
+      "seconds": {
+        "exact": 0.208369437
+      }
+    },
+    {
+      "case": "no1",
+      "class": "training",
+      "fixture": "tests/fixtures/forcer/p4l_anchors.json",
+      "input_sha256": "4d72b94da9d5a0271d752967b2f3a2c18c47ad3cf15125a615397febd42cecaf",
+      "inserts": {
+        "exact": 2
+      },
+      "loop_count": 4,
+      "name": "p4l_anchors/no1",
+      "seconds": {
+        "exact": 0.286541381
+      }
+    },
+    {
+      "case": "no2",
+      "class": "training",
+      "fixture": "tests/fixtures/forcer/p4l_anchors.json",
+      "input_sha256": "ec8d3b2daf808c9e64dae3d8c88002d34d33dfc493e873379c9b39af22246d0a",
+      "inserts": {
+        "exact": 2
+      },
+      "loop_count": 4,
+      "name": "p4l_anchors/no2",
+      "seconds": {
+        "exact": 0.262926994
+      }
+    },
+    {
+      "case": "no6",
+      "class": "training",
+      "fixture": "tests/fixtures/forcer/p4l_anchors.json",
+      "input_sha256": "3122794c831b728df5302ca7b79ec8fe83b6c131957969ac82b0313e90dbf5cd",
+      "inserts": {
+        "exact": 2
+      },
+      "loop_count": 4,
+      "name": "p4l_anchors/no6",
+      "seconds": {
+        "exact": 0.163614521
+      }
+    },
+    {
+      "case": "nono",
+      "class": "training",
+      "fixture": "tests/fixtures/forcer/p4l_anchors.json",
+      "input_sha256": "a29d78f92de4d89b02bf914f6693f2c9a2ec6881ff81aadc9ea40800a1f306e5",
+      "inserts": {
+        "exact": 2
+      },
+      "loop_count": 4,
+      "name": "p4l_anchors/nono",
+      "seconds": {
+        "exact": 0.149808993
+      }
+    },
+    {
+      "case": "fastar2",
+      "class": "training",
+      "fixture": "tests/fixtures/forcer/p4l_anchors.json",
+      "input_sha256": "32abf5ec8b312c7c42a09968e9c8a30c60248ecbaca6dc43b58dac0d373c180c",
+      "inserts": {
+        "exact": 4
+      },
+      "loop_count": 4,
+      "name": "p4l_anchors/fastar2",
+      "seconds": {
+        "exact": 0.032424865
+      }
+    },
+    {
+      "case": "nostar5",
+      "class": "training",
+      "fixture": "tests/fixtures/forcer/p4l_anchors.json",
+      "input_sha256": "d0f0effb96e22d70bb36b6726eb3dd4c7de9b06de04722030e5a71a179d50a26",
+      "inserts": {
+        "exact": 4
+      },
+      "loop_count": 4,
+      "name": "p4l_anchors/nostar5",
+      "seconds": {
+        "exact": 0.032074013
+      }
+    },
+    {
+      "case": "nostar6",
+      "class": "training",
+      "fixture": "tests/fixtures/forcer/p4l_anchors.json",
+      "input_sha256": "c1ee6a2a805fc93d4a9fa8e148cdc1618cf6c3f54ccf25fa023cf3d2f3ee2480",
+      "inserts": {
+        "exact": 4
+      },
+      "loop_count": 4,
+      "name": "p4l_anchors/nostar6",
+      "seconds": {
+        "exact": 0.039263624
+      }
+    },
+    {
+      "case": "t124",
+      "class": "training",
+      "fixture": "tests/fixtures/forcer/p4l_anchors.json",
+      "input_sha256": "d9f9b6cc5e5ba404b98e6bc7500acb8b1e3084ff252473fea1aeafec5c30bf86",
+      "inserts": {
+        "exact": 6
+      },
+      "loop_count": 4,
+      "name": "p4l_anchors/t124",
+      "seconds": {
+        "exact": 0.038820691
+      }
+    },
+    {
+      "case": "t145",
+      "class": "training",
+      "fixture": "tests/fixtures/forcer/p4l_anchors.json",
+      "input_sha256": "c0af66e5fa9faa1256596d76561a484195c8777bc6976914a6ea041f7f73bf3e",
+      "inserts": {
+        "exact": 6
+      },
+      "loop_count": 4,
+      "name": "p4l_anchors/t145",
+      "seconds": {
+        "exact": 0.039448355
+      }
+    },
+    {
+      "case": "t155",
+      "class": "training",
+      "fixture": "tests/fixtures/forcer/p4l_anchors.json",
+      "input_sha256": "0e534a579b8a7bc63f75b436d75d245f2e2a18e80525b73a0e5e621794002ff4",
+      "inserts": {
+        "exact": 6
+      },
+      "loop_count": 4,
+      "name": "p4l_anchors/t155",
+      "seconds": {
+        "exact": 0.034422603
+      }
+    },
+    {
+      "case": "la4_top",
+      "class": "training",
+      "fixture": "tests/fixtures/forcer/p4l_anchors.json",
+      "input_sha256": "faf4ba2c5fb6a6f708d532de853dd8979b74e892ae9f8db9eddff578e70297b1",
+      "inserts": {
+        "exact": 1204
+      },
+      "loop_count": 4,
+      "name": "p4l_anchors/la4_top",
+      "seconds": {
+        "exact": 0.558876724
+      }
+    },
+    {
+      "case": "no3_top",
+      "class": "training",
+      "fixture": "tests/fixtures/forcer/p4l_anchors.json",
+      "input_sha256": "15d172690063657776139530c119fde8340a744610d59dbbb21ff1b96cc864d2",
+      "inserts": {
+        "exact": 25038
+      },
+      "loop_count": 4,
+      "name": "p4l_anchors/no3_top",
+      "seconds": {
+        "exact": 2.8826061579999998
+      }
+    },
+    {
+      "case": "bubu_top",
+      "class": "training",
+      "fixture": "tests/fixtures/forcer/p4l_anchors.json",
+      "input_sha256": "9fbcf097bcc208c914df5ad62c90e2d24d23b1cef4180c0b98fc1ff6e24c7adb",
+      "inserts": {
+        "exact": 1
+      },
+      "loop_count": 4,
+      "name": "p4l_anchors/bubu_top",
+      "seconds": {
+        "exact": 0.072743372
       }
     }
   ],
   "programs": [
     {
-      "label": "p-library-1-3",
+      "label": "p-library-1-4",
       "scope": [
         1,
-        3
+        4
       ],
-      "directory": "ordered-cache/p-library-1-3_p-owner-library-2026-11-05_1_1_1_1_1_8_16_1_1_1_1_p-owner-library.v1_p-families.v1_p-basis-layer.v1_1_ordered-step-cache.v3_ordered-steps-2026-10-31",
-      "identity": "p-library:scope=1-3:P_OWNER_LIBRARY_SEMANTICS=rustred-p-owner-library-2026-11-05,P_CLASS_KEY_VERSION=1,P_CENSUS_VERSION=1,P_PRESENTATION_VERSION=1,P_FAMILIES_VERSION=1,P_GAMMA_TAG_VERSION=1,P_GAMMA_TAG_MAX_M=8,P_GAMMA_TAG_WIDTH=16,P_INSERTION_KERNEL_VERSION=1,P_CARPET_KERNEL_VERSION=1,P_TRIANGLE_TEMPLATE_VERSION=1,P_CUSTOM_OWNER_VERSION=1,P_LIBRARY_SCHEMA=rustred.p-owner-library.v1,P_FAMILIES_SCHEMA=rustred.p-families.v1,P_BASIS_LAYER_SCHEMA=rustred.p-basis-layer.v1,P_TOPOLOGY_VERSION=1",
+      "directory": "ordered-cache/p-library-1-4_p-owner-library-2026-11-05_1_1_1_1_1_8_16_1_1_1_1_p-owner-library.v1_p-families.v1_p-basis-layer.v1_1_ordered-step-cache.v3_ordered-steps-2026-10-31",
+      "identity": "p-library:scope=1-4:P_OWNER_LIBRARY_SEMANTICS=rustred-p-owner-library-2026-11-05,P_CLASS_KEY_VERSION=1,P_CENSUS_VERSION=1,P_PRESENTATION_VERSION=1,P_FAMILIES_VERSION=1,P_GAMMA_TAG_VERSION=1,P_GAMMA_TAG_MAX_M=8,P_GAMMA_TAG_WIDTH=16,P_INSERTION_KERNEL_VERSION=1,P_CARPET_KERNEL_VERSION=1,P_TRIANGLE_TEMPLATE_VERSION=1,P_CUSTOM_OWNER_VERSION=1,P_LIBRARY_SCHEMA=rustred.p-owner-library.v1,P_FAMILIES_SCHEMA=rustred.p-families.v1,P_BASIS_LAYER_SCHEMA=rustred.p-basis-layer.v1,P_TOPOLOGY_VERSION=1",
       "p_versions": {
         "P_BASIS_LAYER_SCHEMA": "rustred.p-basis-layer.v1",
         "P_CARPET_KERNEL_VERSION": "1",
@@ -2663,12 +2319,12 @@
         "P_TOPOLOGY_VERSION": "1",
         "P_TRIANGLE_TEMPLATE_VERSION": "1"
       },
-      "stamp": "0775637cffb16259494b438800f205dddf9ce506d16bb25bcf328833773b9445",
+      "stamp": "fb4be2c7878c5487dd5bd88690181f7185641dd50973fe8a7cda70ae1a1b4fe1",
       "adapter": "propagator-library",
-      "records": 52343,
-      "shards": 183,
-      "bytes": 6036650,
-      "tail_bytes": 34100,
+      "records": 78632,
+      "shards": 477,
+      "bytes": 9463018,
+      "tail_bytes": 57860,
       "complete": true,
       "trim": null
     }

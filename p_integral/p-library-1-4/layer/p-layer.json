@@ -1,0 +1,696 @@
+{
+  "schema": "rustred.p-basis-layer.v1",
+  "base": {
+    "P_OWNER_LIBRARY_SEMANTICS": "rustred-p-owner-library-2026-11-05",
+    "P_CENSUS_VERSION": "1",
+    "P_CLASS_KEY_VERSION": "1",
+    "terminals": 17
+  },
+  "parameters": [
+    "d"
+  ],
+  "masters": [
+    "bebe",
+    "cross",
+    "fastar2",
+    "haha",
+    "lala",
+    "no",
+    "no1",
+    "no2",
+    "no6",
+    "nono",
+    "nostar5",
+    "nostar6",
+    "t105",
+    "t124",
+    "t145",
+    "t155"
+  ],
+  "rows": [
+    {
+      "terminal": {
+        "id": 0,
+        "class": null,
+        "node": 437,
+        "key": []
+      },
+      "terms": [
+        {
+          "master": "1",
+          "tag": [],
+          "coefficient": "1"
+        }
+      ],
+      "provenance": "identity"
+    },
+    {
+      "terminal": {
+        "id": 1,
+        "class": "L4T09-1c8abad2243e10bc",
+        "node": 96,
+        "key": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "terms": [
+        {
+          "master": "lala",
+          "tag": [
+            [
+              -2,
+              -4
+            ],
+            [
+              -1,
+              8
+            ],
+            [
+              1,
+              4
+            ]
+          ],
+          "coefficient": "-1/(81-108*d+54*d^2-12*d^3+d^4)"
+        }
+      ],
+      "provenance": "rustred"
+    },
+    {
+      "terminal": {
+        "id": 2,
+        "class": "L4T11-23719591fd40fdf4",
+        "node": 6,
+        "key": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "terms": [
+        {
+          "master": "no1",
+          "tag": [
+            [
+              -2,
+              -4
+            ],
+            [
+              -1,
+              8
+            ],
+            [
+              1,
+              4
+            ]
+          ],
+          "coefficient": "-1/(81-108*d+54*d^2-12*d^3+d^4)"
+        }
+      ],
+      "provenance": "rustred"
+    },
+    {
+      "terminal": {
+        "id": 3,
+        "class": "L3T08-2e0e8204acdb3064",
+        "node": 242,
+        "key": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      "terms": [
+        {
+          "master": "nostar6",
+          "tag": [
+            [
+              -2,
+              -3
+            ],
+            [
+              -1,
+              6
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "coefficient": "1/(-27+27*d-9*d^2+d^3)"
+        }
+      ],
+      "provenance": "rustred"
+    },
+    {
+      "terminal": {
+        "id": 4,
+        "class": "L3T08-3e20768c104b7e3c",
+        "node": 236,
+        "key": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      "terms": [
+        {
+          "master": "nostar5",
+          "tag": [
+            [
+              -2,
+              -3
+            ],
+            [
+              -1,
+              6
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "coefficient": "1/(-27+27*d-9*d^2+d^3)"
+        }
+      ],
+      "provenance": "rustred"
+    },
+    {
+      "terminal": {
+        "id": 5,
+        "class": "L3T07-42d23ff2fca262c6",
+        "node": 285,
+        "key": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "terms": [
+        {
+          "master": "fastar2",
+          "tag": [
+            [
+              -2,
+              -3
+            ],
+            [
+              -1,
+              6
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "coefficient": "-1/(-27+27*d-9*d^2+d^3)"
+        }
+      ],
+      "provenance": "rustred"
+    },
+    {
+      "terminal": {
+        "id": 6,
+        "class": "L4T11-44b602110b8577dd",
+        "node": 3,
+        "key": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "terms": [
+        {
+          "master": "haha",
+          "tag": [
+            [
+              -2,
+              -4
+            ],
+            [
+              -1,
+              8
+            ],
+            [
+              1,
+              4
+            ]
+          ],
+          "coefficient": "-1/(81-108*d+54*d^2-12*d^3+d^4)"
+        }
+      ],
+      "provenance": "rustred"
+    },
+    {
+      "terminal": {
+        "id": 7,
+        "class": "L3T08-61cd69124cf81eb3",
+        "node": 241,
+        "key": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      "terms": [
+        {
+          "master": "no",
+          "tag": [
+            [
+              -2,
+              -3
+            ],
+            [
+              -1,
+              6
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "coefficient": "1/(-27+27*d-9*d^2+d^3)"
+        }
+      ],
+      "provenance": "rustred"
+    },
+    {
+      "terminal": {
+        "id": 8,
+        "class": "L2T05-810c5f0ff11c4c40",
+        "node": 406,
+        "key": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "terms": [
+        {
+          "master": "t105",
+          "tag": [
+            [
+              -2,
+              -2
+            ],
+            [
+              -1,
+              4
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "coefficient": "-1/(9-6*d+d^2)"
+        }
+      ],
+      "provenance": "rustred"
+    },
+    {
+      "terminal": {
+        "id": 9,
+        "class": "L4T10-9f80d1b9bedb371e",
+        "node": 33,
+        "key": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "terms": [
+        {
+          "master": "no6",
+          "tag": [
+            [
+              -2,
+              -4
+            ],
+            [
+              -1,
+              8
+            ],
+            [
+              1,
+              4
+            ]
+          ],
+          "coefficient": "1/(81-108*d+54*d^2-12*d^3+d^4)"
+        }
+      ],
+      "provenance": "rustred"
+    },
+    {
+      "terminal": {
+        "id": 10,
+        "class": "L2T05-ae7e6d53b1956fd5",
+        "node": 405,
+        "key": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "terms": [
+        {
+          "master": "t124",
+          "tag": [
+            [
+              -2,
+              -2
+            ],
+            [
+              -1,
+              4
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "coefficient": "-1/(9-6*d+d^2)"
+        }
+      ],
+      "provenance": "rustred"
+    },
+    {
+      "terminal": {
+        "id": 11,
+        "class": "L4T09-bb81f2828d54b056",
+        "node": 104,
+        "key": [
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "terms": [
+        {
+          "master": "nono",
+          "tag": [
+            [
+              -2,
+              -4
+            ],
+            [
+              -1,
+              8
+            ],
+            [
+              1,
+              4
+            ]
+          ],
+          "coefficient": "-1/(81-108*d+54*d^2-12*d^3+d^4)"
+        }
+      ],
+      "provenance": "rustred"
+    },
+    {
+      "terminal": {
+        "id": 12,
+        "class": "L2T05-bf1266160e2a5d31",
+        "node": 407,
+        "key": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "terms": [
+        {
+          "master": "t145",
+          "tag": [
+            [
+              -2,
+              -2
+            ],
+            [
+              -1,
+              4
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "coefficient": "-1/(9-6*d+d^2)"
+        }
+      ],
+      "provenance": "rustred"
+    },
+    {
+      "terminal": {
+        "id": 13,
+        "class": "L4T08-cd9ded89aad8feea",
+        "node": 198,
+        "key": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "terms": [
+        {
+          "master": "cross",
+          "tag": [
+            [
+              -2,
+              -4
+            ],
+            [
+              -1,
+              8
+            ],
+            [
+              1,
+              4
+            ]
+          ],
+          "coefficient": "1/(81-108*d+54*d^2-12*d^3+d^4)"
+        }
+      ],
+      "provenance": "rustred"
+    },
+    {
+      "terminal": {
+        "id": 14,
+        "class": "L4T08-d261f9c2d25e2dac",
+        "node": 151,
+        "key": [
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "terms": [
+        {
+          "master": "bebe",
+          "tag": [
+            [
+              -2,
+              -4
+            ],
+            [
+              -1,
+              8
+            ],
+            [
+              1,
+              4
+            ]
+          ],
+          "coefficient": "1/(81-108*d+54*d^2-12*d^3+d^4)"
+        }
+      ],
+      "provenance": "rustred"
+    },
+    {
+      "terminal": {
+        "id": 15,
+        "class": "L4T11-f1d077dbbd38929d",
+        "node": 2,
+        "key": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "terms": [
+        {
+          "master": "no2",
+          "tag": [
+            [
+              -2,
+              -4
+            ],
+            [
+              -1,
+              8
+            ],
+            [
+              1,
+              4
+            ]
+          ],
+          "coefficient": "-1/(81-108*d+54*d^2-12*d^3+d^4)"
+        }
+      ],
+      "provenance": "rustred"
+    },
+    {
+      "terminal": {
+        "id": 16,
+        "class": "L2T05-f4b9292827603c5c",
+        "node": 408,
+        "key": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "terms": [
+        {
+          "master": "t155",
+          "tag": [
+            [
+              -2,
+              -2
+            ],
+            [
+              -1,
+              4
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "coefficient": "-1/(9-6*d+d^2)"
+        }
+      ],
+      "provenance": "rustred"
+    }
+  ]
+}
