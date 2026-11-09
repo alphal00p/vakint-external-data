@@ -43,6 +43,16 @@ repository's other tools ignore the area. It is not part of any release: `tools/
 pack`, `tools/publish.py` and managed installs leave it out. `tools/p_integral_area.py`
 stages and validates it (see AUTHORING.typ, "p-integral area").
 
+The area may also hold RustRed p libraries (`p_integral/p-library-<a>-<b>/`, the output of
+`rustred p-package`), each listed in `p_integral/manifest.json` `libraries` with its
+directory, `P_LIBRARY_SCHEMA` (`schema`), scope, identity and the sha256 and size of each
+of its files; Vakint builds that read the area adopt only a listed library of a schema
+they support. Size rules (2026-11-08): every file of the area stays below 100,000,000
+bytes (GitHub's limit), and a file above 50,000,000 bytes is compressed (`.gz`, `.zst`) or
+split into `<name>.part-000`, `<name>.part-001`, ...; the light budget of 16,000,000 bytes
+applies to the cache files (`p_integral/ordered-cache/`) only, and libraries have no
+budget beyond the per-file rule.
+
 ## v0.2.1
 
 Release v0.2.1 (6 November 2026) replaces the five-loop pack and adds one one-loop order. Since v0.2.0:

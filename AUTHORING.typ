@@ -422,9 +422,10 @@ key `p_integral` (`tools/p_integral_area.py`, module documentation). To regenera
   `p_cache_maintenance prepare --output WORK --n-cores 4` (WORK must not exist): the
   fixed workload cold under exact, modular_polynomial and modular_sampled in turn
   (one read-write cache: their union), exported to `WORK/export`.
-+ `python3 tools/p_integral_area.py stage --export WORK/export --replace`; it prints the
-  area bytes. Then `python3 tools/p_integral_area.py light-bytes` (exit status 1 above
-  16,000,000 bytes), `python3 tools/data.py validate` and
++ `python3 tools/p_integral_area.py stage --export WORK/export --replace` (listed
+  libraries are kept); it prints the area and cache bytes. Then `python3
+  tools/p_integral_area.py light-bytes` (exit status 1 above 16,000,000 bytes of cache
+  files), `python3 tools/data.py validate` and
   `python3 -m unittest discover -s tests`.
 + `p_cache_maintenance check --artifacts CHECKOUT` must exit 0, and
   `p_cache_maintenance replay --artifacts CHECKOUT --arithmetic
@@ -436,6 +437,20 @@ The cache is valid by versions only: regenerate it whenever a RustRed `P_*`,
 names another directory or refuses the stamp and runs without the cache). `tools/data.py
 generate` rebuilds the root manifest without the key `p_integral`; stage again after it.
 Commit one regeneration at a time. Never tag, release or publish this branch.
+
+A RustRed p library is staged with `python3 tools/p_integral_area.py stage-library
+--package DIR [--replace]`, where DIR is a `rustred p-package` output directory: its
+`library.json` gives the schema (`P_LIBRARY_SCHEMA`), identity and scope, the tool copies
+DIR to `p_integral/p-library-<a>-<b>/` and lists it in `p_integral/manifest.json`
+`libraries` as `{"directory", "schema", "scope", "identity", "files": {path: {"sha256",
+"bytes"}}}` (paths below the library directory; the area's `files` lists everything
+else). `validate` checks each listed library (inventory, sha256 and size, and for a schema
+it knows, `library.json` against the entry) and reports a library of an unknown schema
+without failing. The size rules hold for every file of the area: below 100,000,000 bytes
+(GitHub's limit); above 50,000,000 bytes only compressed (`.gz`, `.zst`) or split into
+`<name>.part-000`, `<name>.part-001`, ... (contiguous parts of at most 50,000,000 bytes,
+concatenated in order); there is no area-wide limit. The light budget of 16,000,000
+bytes counts the files below `p_integral/ordered-cache/` only.
 
 == Saved route preparation add-on
 

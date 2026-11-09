@@ -3,6 +3,7 @@ import shutil
 import sys
 import tempfile
 import unittest
+from unittest import mock
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "tools"))
@@ -47,6 +48,16 @@ def export(directory):
     })
 
 
+def library(directory, schema="rustred.p-owner-library.v1", scope=(1, 1)):
+    """A small p library directory as `rustred p-package` writes it (library.json + one payload)."""
+    a, b = scope
+    data.write_json(directory / "library.json", {"schema": schema, "scope": [a, b],
+                                                 "identity": f"p-library:scope={a}-{b}:P_TEST=1"})
+    (directory / "families").mkdir()
+    (directory / "families/P1L.rrbin").write_bytes(b"family" * 1000)
+    return directory
+
+
 class PIntegralAreaTests(unittest.TestCase):
     def setUp(self):
         temporary = tempfile.TemporaryDirectory(prefix="vakint-p-integral-area-tests-")
@@ -60,14 +71,15 @@ class PIntegralAreaTests(unittest.TestCase):
 
     def test_a_staged_area_validates_and_adds_only_the_root_key(self):
         before = data.read_json(self.root / "manifest.json")
-        total = p_integral_area.stage(self.base / "export", self.root)
-        self.assertGreater(total, 0)
+        report = p_integral_area.stage(self.base / "export", self.root)
+        self.assertGreater(report.cache_bytes, 0)
+        self.assertGreater(report.bytes, report.cache_bytes)
         after = data.read_json(self.root / "manifest.json")
         self.assertEqual({key: value for key, value in after.items() if key != "p_integral"}, before)
         with self.assertRaisesRegex(ValueError, "--replace"):
             p_integral_area.stage(self.base / "export", self.root)
-        self.assertEqual(p_integral_area.stage(self.base / "export", self.root, replace=True), total)
-        self.assertEqual(p_integral_area.light_bytes(self.root), total)
+        self.assertEqual(p_integral_area.stage(self.base / "export", self.root, replace=True), report)
+        self.assertEqual(p_integral_area.light_bytes(self.root), report.cache_bytes)
         self.assertEqual(p_integral_area.light_bytes(self.base), 0)
 
     def test_tampered_areas_are_refused(self):
@@ -82,11 +94,72 @@ class PIntegralAreaTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "missing"):
             p_integral_area.validate(self.root)
 
+    def test_the_per_file_rule(self):
+        mb = 1_000_000
+        cases = [  # ({path: bytes}, the refusal or None)
+            ({"a.rrbin": 50 * mb}, None),
+            ({"a.rrbin": 50 * mb + 1}, "compress it"),
+            ({"a.rrbin.gz": 100 * mb - 1, "b.rrbin.zst": 99 * mb}, None),
+            ({"a.rrbin.zst": 100 * mb}, "below 100000000"),
+            ({"a.rrbin.part-000": 50 * mb, "a.rrbin.part-001": 50 * mb, "a.rrbin.part-002": 1}, None),
+            ({"a.rrbin.part-000": 60 * mb}, "compress it"),
+            ({"a.rrbin.part-000": 1, "a.rrbin.part-002": 1}, "without gaps"),
+            ({"a.rrbin.part-000": 1, "a.rrbin": 1}, "whole file"),
+        ]
+        for sizes, refusal in cases:
+            with self.subTest(sizes=sizes):
+                if refusal is None:
+                    p_integral_area.check_file_rule(sizes)
+                else:
+                    with self.assertRaisesRegex(ValueError, refusal):
+                        p_integral_area.check_file_rule(sizes)
+        # validate applies it to every file of the area, libraries included
+        p_integral_area.stage_library(library(self.base / "package"), self.root)
+        with mock.patch.object(p_integral_area, "LARGE_FILE_BYTES", 5000):
+            with self.assertRaisesRegex(ValueError, "p-library-1-1/families/P1L.rrbin: 6000 bytes"):
+                p_integral_area.validate(self.root)
+
+    def test_the_light_budget_covers_the_cache_files_only(self):
+        p_integral_area.stage(self.base / "export", self.root)
+        report = p_integral_area.stage_library(library(self.base / "package"), self.root)
+        budget = report.cache_bytes
+        self.assertGreater(report.bytes - report.cache_bytes, budget)  # the rest exceeds the budget
+        with mock.patch.object(p_integral_area, "LIGHT_CACHE_BYTES_LIMIT", budget):
+            p_integral_area.validate(self.root)
+        with mock.patch.object(p_integral_area, "LIGHT_CACHE_BYTES_LIMIT", budget - 1):
+            with self.assertRaisesRegex(ValueError, "light-cache budget"):
+                p_integral_area.validate(self.root)
+
+    def test_a_listed_library_is_validated_and_kept_by_cache_staging(self):
+        package = library(self.base / "package", scope=(1, 3))
+        report = p_integral_area.stage_library(package, self.root)
+        package_bytes = sum(path.stat().st_size for path in package.rglob("*") if path.is_file())
+        self.assertEqual(report.libraries, [{"directory": "p-library-1-3", "schema": "rustred.p-owner-library.v1",
+                                             "scope": [1, 3], "bytes": package_bytes, "supported": True}])
+        self.assertEqual(report.notes, [])
+        p_integral_area.stage(self.base / "export", self.root)
+        self.assertEqual(len(p_integral_area.validate(self.root).libraries), 1)
+        payload = self.root / "p_integral/p-library-1-3/families/P1L.rrbin"
+        payload.write_bytes(b"tampered")
+        with self.assertRaisesRegex(ValueError, "p-library-1-3/families/P1L.rrbin: sha256 or size"):
+            p_integral_area.validate(self.root)
+        payload.unlink()
+        with self.assertRaisesRegex(ValueError, "p-library-1-3/ file inventory differs"):
+            p_integral_area.validate(self.root)
+
+    def test_an_unknown_library_schema_is_reported_not_fatal(self):
+        package = library(self.base / "package", schema="rustred.p-owner-library.v9")
+        report = p_integral_area.stage_library(package, self.root)
+        self.assertEqual([library["supported"] for library in report.libraries], [False])
+        self.assertRegex(report.notes[0], "p-library-1-1: schema 'rustred.p-owner-library.v9' is not one")
+
     def test_the_real_area_validates_when_present(self):
         manifest = json.loads((data.ROOT / "manifest.json").read_text())
         if "p_integral" not in manifest and not (data.ROOT / "p_integral").exists():
             self.skipTest("this checkout carries no p_integral area")
-        self.assertLessEqual(p_integral_area.validate(data.ROOT), p_integral_area.BYTES_LIMIT)
+        report = p_integral_area.validate(data.ROOT)
+        self.assertLessEqual(report.cache_bytes, p_integral_area.LIGHT_CACHE_BYTES_LIMIT)
+        self.assertEqual(report.notes, [])
 
 
 if __name__ == "__main__":
