@@ -1,6 +1,6 @@
 {
   "schema": "rustred.p-owner-library.v1",
-  "identity": "p-library:scope=1-4:P_OWNER_LIBRARY_SEMANTICS=rustred-p-owner-library-2026-11-05,P_CLASS_KEY_VERSION=1,P_CENSUS_VERSION=1,P_PRESENTATION_VERSION=1,P_FAMILIES_VERSION=1,P_GAMMA_TAG_VERSION=1,P_GAMMA_TAG_MAX_M=8,P_GAMMA_TAG_WIDTH=16,P_INSERTION_KERNEL_VERSION=1,P_CARPET_KERNEL_VERSION=1,P_TRIANGLE_TEMPLATE_VERSION=1,P_CUSTOM_OWNER_VERSION=1,P_LIBRARY_SCHEMA=rustred.p-owner-library.v1,P_FAMILIES_SCHEMA=rustred.p-families.v1,P_BASIS_LAYER_SCHEMA=rustred.p-basis-layer.v1,P_TOPOLOGY_VERSION=1",
+  "identity": "p-library:scope=1-4:P_OWNER_LIBRARY_SEMANTICS=rustred-p-owner-library-2026-11-05,P_CLASS_KEY_VERSION=1,P_CENSUS_VERSION=1,P_PRESENTATION_VERSION=1,P_FAMILIES_VERSION=1,P_GAMMA_TAG_VERSION=1,P_GAMMA_TAG_MAX_M=8,P_GAMMA_TAG_WIDTH=16,P_INSERTION_KERNEL_VERSION=1,P_CARPET_KERNEL_VERSION=1,P_TRIANGLE_TEMPLATE_VERSION=1,P_DIAMOND_TEMPLATE_VERSION=1,P_CUSTOM_OWNER_VERSION=1,P_LIBRARY_SCHEMA=rustred.p-owner-library.v1,P_FAMILIES_SCHEMA=rustred.p-families.v1,P_BASIS_LAYER_SCHEMA=rustred.p-basis-layer.v1,P_TOPOLOGY_VERSION=1",
   "scope": [
     1,
     4
@@ -11,6 +11,7 @@
     "P_CENSUS_VERSION": "1",
     "P_CLASS_KEY_VERSION": "1",
     "P_CUSTOM_OWNER_VERSION": "1",
+    "P_DIAMOND_TEMPLATE_VERSION": "1",
     "P_FAMILIES_SCHEMA": "rustred.p-families.v1",
     "P_FAMILIES_VERSION": "1",
     "P_GAMMA_TAG_MAX_M": "8",
@@ -1923,6 +1924,11 @@
         "bytes": 2156
       },
       {
+        "name": "p_node_0106000000000101000301000004010000050100010301000104010001050100020301000204010002050100",
+        "file": "families/p_node_0106000000000101000301000004010000050100010301000104010001050100020301000204010002050100.rrbin",
+        "bytes": 2168
+      },
+      {
         "name": "p_node_0106000000000101000301000004010000050100010301000104010001050100020301000205020000",
         "file": "families/p_node_0106000000000101000301000004010000050100010301000104010001050100020301000205020000.rrbin",
         "bytes": 2162
@@ -2108,6 +2114,11 @@
         "bytes": 2178
       },
       {
+        "name": "p_node_01070000000000010100030100000401000006010001030100010401000106010002030100020401000205010004050100",
+        "file": "families/p_node_01070000000000010100030100000401000006010001030100010401000106010002030100020401000205010004050100.rrbin",
+        "bytes": 2178
+      },
+      {
         "name": "p_node_01070000000000010100030100000401000006010001030100010401000106010002030100020401000205010005060100",
         "file": "families/p_node_01070000000000010100030100000401000006010001030100010401000106010002030100020401000205010005060100.rrbin",
         "bytes": 2178
@@ -2173,6 +2184,11 @@
         "bytes": 2178
       },
       {
+        "name": "p_node_01070000000000010100040100000501000006010001030100010401000106010002030100020401000206010003050100",
+        "file": "families/p_node_01070000000000010100040100000501000006010001030100010401000106010002030100020401000206010003050100.rrbin",
+        "bytes": 2178
+      },
+      {
         "name": "p_node_01070000000000010100040100000501000006010001030100010501000106010002030100020401000206010003040100",
         "file": "families/p_node_01070000000000010100040100000501000006010001030100010501000106010002030100020401000206010003040100.rrbin",
         "bytes": 2178
@@ -2220,6 +2236,11 @@
       {
         "name": "p_node_010800000000000001010005010000060100000701000102010001040100010701000203010002060100030401000305010004050100",
         "file": "families/p_node_010800000000000001010005010000060100000701000102010001040100010701000203010002060100030401000305010004050100.rrbin",
+        "bytes": 2188
+      },
+      {
+        "name": "p_node_010800000000000001010005010000060100000701000103010001040100010701000203010002040100020601000305010004050100",
+        "file": "families/p_node_010800000000000001010005010000060100000701000103010001040100010701000203010002040100020601000305010004050100.rrbin",
         "bytes": 2188
       },
       {
@@ -6667,14 +6688,9 @@
     },
     {
       "index": 25,
-      "kind": {
-        "induced": {
-          "top": 15,
-          "mask": 2047
-        }
-      },
+      "kind": "diamond_adapted",
       "loops": 4,
-      "family": "families/P4L_NO3.rrbin",
+      "family": "families/p_node_010800000000000001010005010000060100000701000103010001040100010701000203010002040100020601000305010004050100.rrbin",
       "node": {
         "index": 9,
         "key": "010800000000000001010005010000060100000701000103010001040100010701000203010002040100020601000305010004050100"
@@ -6683,90 +6699,6 @@
         {
           "line": {
             "momentum": [
-              1,
-              0,
-              0,
-              0,
-              0
-            ],
-            "eps_units": 0
-          }
-        },
-        {
-          "line": {
-            "momentum": [
-              0,
-              1,
-              0,
-              0,
-              0
-            ],
-            "eps_units": 0
-          }
-        },
-        {
-          "line": {
-            "momentum": [
-              0,
-              0,
-              1,
-              0,
-              0
-            ],
-            "eps_units": 0
-          }
-        },
-        {
-          "line": {
-            "momentum": [
-              0,
-              0,
-              0,
-              1,
-              0
-            ],
-            "eps_units": 0
-          }
-        },
-        {
-          "line": {
-            "momentum": [
-              1,
-              1,
-              0,
-              0,
-              0
-            ],
-            "eps_units": 0
-          }
-        },
-        {
-          "line": {
-            "momentum": [
-              1,
-              0,
-              1,
-              0,
-              0
-            ],
-            "eps_units": 0
-          }
-        },
-        {
-          "line": {
-            "momentum": [
-              0,
-              1,
-              0,
-              1,
-              0
-            ],
-            "eps_units": 0
-          }
-        },
-        {
-          "line": {
-            "momentum": [
               0,
               0,
               1,
@@ -6779,9 +6711,21 @@
         {
           "line": {
             "momentum": [
-              1,
-              1,
               0,
+              0,
+              0,
+              -1,
+              -1
+            ],
+            "eps_units": 0
+          }
+        },
+        {
+          "line": {
+            "momentum": [
+              0,
+              0,
+              -1,
               0,
               1
             ],
@@ -6792,8 +6736,68 @@
           "line": {
             "momentum": [
               1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "eps_units": 0
+          }
+        },
+        {
+          "line": {
+            "momentum": [
+              -1,
+              0,
+              -1,
+              0,
+              0
+            ],
+            "eps_units": 0
+          }
+        },
+        {
+          "line": {
+            "momentum": [
+              0,
+              0,
               1,
+              0,
+              0
+            ],
+            "eps_units": 0
+          }
+        },
+        {
+          "line": {
+            "momentum": [
+              0,
               1,
+              0,
+              0,
+              0
+            ],
+            "eps_units": 0
+          }
+        },
+        {
+          "line": {
+            "momentum": [
+              0,
+              -1,
+              0,
+              -1,
+              0
+            ],
+            "eps_units": 0
+          }
+        },
+        {
+          "line": {
+            "momentum": [
+              0,
+              0,
+              0,
               1,
               0
             ],
@@ -6805,9 +6809,21 @@
             "momentum": [
               1,
               1,
-              1,
-              1,
-              1
+              0,
+              0,
+              0
+            ],
+            "eps_units": 0
+          }
+        },
+        {
+          "line": {
+            "momentum": [
+              -1,
+              -1,
+              -1,
+              -1,
+              0
             ],
             "eps_units": 0
           }
@@ -6815,17 +6831,17 @@
         {
           "isp": {
             "left": [
-              0,
               1,
-              -1,
+              0,
+              0,
               0,
               0
             ],
             "right": [
               0,
-              1,
-              -1,
               0,
+              0,
+              1,
               0
             ]
           }
@@ -6837,14 +6853,14 @@
               0,
               0,
               0,
-              -1
+              0
             ],
             "right": [
-              1,
               0,
               0,
               0,
-              -1
+              0,
+              1
             ]
           }
         },
@@ -6852,17 +6868,17 @@
           "isp": {
             "left": [
               0,
-              0,
               1,
               0,
-              -1
+              0,
+              0
             ],
             "right": [
               0,
               0,
-              1,
               0,
-              -1
+              0,
+              1
             ]
           }
         }
@@ -11759,14 +11775,9 @@
     },
     {
       "index": 50,
-      "kind": {
-        "induced": {
-          "top": 11,
-          "mask": 1535
-        }
-      },
+      "kind": "diamond_adapted",
       "loops": 4,
-      "family": "families/P4L_J11.rrbin",
+      "family": "families/p_node_01070000000000010100030100000401000006010001030100010401000106010002030100020401000205010004050100.rrbin",
       "node": {
         "index": 34,
         "key": "01070000000000010100030100000401000006010001030100010401000106010002030100020401000205010004050100"
@@ -11787,11 +11798,11 @@
         {
           "line": {
             "momentum": [
+              -1,
               0,
               1,
               0,
-              0,
-              0
+              -1
             ],
             "eps_units": 0
           }
@@ -11800,45 +11811,33 @@
           "line": {
             "momentum": [
               0,
-              0,
-              1,
-              0,
-              0
-            ],
-            "eps_units": 0
-          }
-        },
-        {
-          "line": {
-            "momentum": [
-              0,
-              0,
-              0,
-              1,
-              0
-            ],
-            "eps_units": 0
-          }
-        },
-        {
-          "line": {
-            "momentum": [
-              0,
-              1,
-              0,
-              0,
-              1
-            ],
-            "eps_units": 0
-          }
-        },
-        {
-          "line": {
-            "momentum": [
-              0,
-              1,
               0,
               -1,
+              0,
+              1
+            ],
+            "eps_units": 0
+          }
+        },
+        {
+          "line": {
+            "momentum": [
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "eps_units": 0
+          }
+        },
+        {
+          "line": {
+            "momentum": [
+              0,
+              -1,
+              -1,
+              0,
               0
             ],
             "eps_units": 0
@@ -11850,7 +11849,19 @@
               0,
               0,
               1,
-              1,
+              0,
+              0
+            ],
+            "eps_units": 0
+          }
+        },
+        {
+          "line": {
+            "momentum": [
+              -1,
+              -1,
+              0,
+              0,
               0
             ],
             "eps_units": 0
@@ -11860,46 +11871,34 @@
           "line": {
             "momentum": [
               1,
+              1,
               0,
               1,
+              1
+            ],
+            "eps_units": 0
+          }
+        },
+        {
+          "line": {
+            "momentum": [
+              0,
+              0,
+              0,
+              -1,
+              -1
+            ],
+            "eps_units": 0
+          }
+        },
+        {
+          "line": {
+            "momentum": [
+              0,
+              0,
+              0,
               1,
               0
-            ],
-            "eps_units": 0
-          }
-        },
-        {
-          "line": {
-            "momentum": [
-              0,
-              1,
-              1,
-              0,
-              1
-            ],
-            "eps_units": 0
-          }
-        },
-        {
-          "line": {
-            "momentum": [
-              0,
-              0,
-              1,
-              1,
-              1
-            ],
-            "eps_units": 0
-          }
-        },
-        {
-          "line": {
-            "momentum": [
-              1,
-              0,
-              1,
-              1,
-              1
             ],
             "eps_units": 0
           }
@@ -11908,15 +11907,15 @@
           "isp": {
             "left": [
               1,
-              -1,
+              0,
               0,
               0,
               0
             ],
             "right": [
-              1,
-              -1,
               0,
+              0,
+              1,
               0,
               0
             ]
@@ -11927,15 +11926,15 @@
             "left": [
               1,
               0,
-              -1,
+              0,
               0,
               0
             ],
             "right": [
+              0,
+              0,
+              0,
               1,
-              0,
-              -1,
-              0,
               0
             ]
           }
@@ -11945,15 +11944,33 @@
             "left": [
               0,
               1,
-              -1,
+              0,
               0,
               0
             ],
             "right": [
               0,
-              1,
-              -1,
               0,
+              0,
+              1,
+              0
+            ]
+          }
+        },
+        {
+          "isp": {
+            "left": [
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "right": [
+              0,
+              0,
+              0,
+              1,
               0
             ]
           }
@@ -14614,14 +14631,9 @@
     },
     {
       "index": 64,
-      "kind": {
-        "induced": {
-          "top": 14,
-          "mask": 1023
-        }
-      },
+      "kind": "diamond_adapted",
       "loops": 4,
-      "family": "families/P4L_NO2.rrbin",
+      "family": "families/p_node_01070000000000010100040100000501000006010001030100010401000106010002030100020401000206010003050100.rrbin",
       "node": {
         "index": 48,
         "key": "01070000000000010100040100000501000006010001030100010401000106010002030100020401000206010003050100"
@@ -14643,10 +14655,10 @@
           "line": {
             "momentum": [
               0,
-              1,
               0,
               0,
-              0
+              -1,
+              -1
             ],
             "eps_units": 0
           }
@@ -14654,34 +14666,10 @@
         {
           "line": {
             "momentum": [
+              -1,
               0,
               0,
               1,
-              0,
-              0
-            ],
-            "eps_units": 0
-          }
-        },
-        {
-          "line": {
-            "momentum": [
-              0,
-              0,
-              0,
-              1,
-              0
-            ],
-            "eps_units": 0
-          }
-        },
-        {
-          "line": {
-            "momentum": [
-              1,
-              0,
-              0,
-              0,
               1
             ],
             "eps_units": 0
@@ -14690,8 +14678,68 @@
         {
           "line": {
             "momentum": [
+              0,
+              0,
+              -1,
+              1,
+              0
+            ],
+            "eps_units": 0
+          }
+        },
+        {
+          "line": {
+            "momentum": [
+              0,
               1,
               0,
+              0,
+              0
+            ],
+            "eps_units": 0
+          }
+        },
+        {
+          "line": {
+            "momentum": [
+              0,
+              -1,
+              1,
+              -1,
+              0
+            ],
+            "eps_units": 0
+          }
+        },
+        {
+          "line": {
+            "momentum": [
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "eps_units": 0
+          }
+        },
+        {
+          "line": {
+            "momentum": [
+              -1,
+              -1,
+              0,
+              0,
+              0
+            ],
+            "eps_units": 0
+          }
+        },
+        {
+          "line": {
+            "momentum": [
+              1,
+              1,
               -1,
               0,
               0
@@ -14703,58 +14751,10 @@
           "line": {
             "momentum": [
               0,
-              1,
+              0,
               0,
               1,
               0
-            ],
-            "eps_units": 0
-          }
-        },
-        {
-          "line": {
-            "momentum": [
-              0,
-              0,
-              1,
-              -1,
-              0
-            ],
-            "eps_units": 0
-          }
-        },
-        {
-          "line": {
-            "momentum": [
-              1,
-              1,
-              0,
-              0,
-              1
-            ],
-            "eps_units": 0
-          }
-        },
-        {
-          "line": {
-            "momentum": [
-              1,
-              1,
-              -1,
-              1,
-              0
-            ],
-            "eps_units": 0
-          }
-        },
-        {
-          "line": {
-            "momentum": [
-              1,
-              1,
-              -1,
-              1,
-              1
             ],
             "eps_units": 0
           }
@@ -14763,16 +14763,34 @@
           "isp": {
             "left": [
               1,
-              -1,
+              0,
               0,
               0,
               0
             ],
             "right": [
+              0,
+              0,
               1,
-              -1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "isp": {
+            "left": [
+              1,
               0,
               0,
+              0,
+              0
+            ],
+            "right": [
+              0,
+              0,
+              0,
+              1,
               0
             ]
           }
@@ -14782,16 +14800,16 @@
             "left": [
               0,
               1,
-              -1,
+              0,
               0,
               0
             ],
             "right": [
               0,
-              1,
-              -1,
               0,
-              0
+              0,
+              0,
+              1
             ]
           }
         },
@@ -14802,14 +14820,14 @@
               0,
               1,
               0,
-              -1
+              0
             ],
             "right": [
               0,
               0,
-              1,
               0,
-              -1
+              0,
+              1
             ]
           }
         }
@@ -32202,14 +32220,9 @@
     },
     {
       "index": 148,
-      "kind": {
-        "induced": {
-          "top": 14,
-          "mask": 1022
-        }
-      },
+      "kind": "diamond_adapted",
       "loops": 4,
-      "family": "families/P4L_NO2.rrbin",
+      "family": "families/p_node_0106000000000101000301000004010000050100010301000104010001050100020301000204010002050100.rrbin",
       "node": {
         "index": 132,
         "key": "0106000000000101000301000004010000050100010301000104010001050100020301000204010002050100"
@@ -32230,11 +32243,11 @@
         {
           "line": {
             "momentum": [
+              -1,
               0,
               1,
-              0,
-              0,
-              0
+              1,
+              -1
             ],
             "eps_units": 0
           }
@@ -32244,32 +32257,8 @@
             "momentum": [
               0,
               0,
-              1,
-              0,
-              0
-            ],
-            "eps_units": 0
-          }
-        },
-        {
-          "line": {
-            "momentum": [
-              0,
-              0,
-              0,
-              1,
-              0
-            ],
-            "eps_units": 0
-          }
-        },
-        {
-          "line": {
-            "momentum": [
-              1,
-              0,
-              0,
-              0,
+              -1,
+              -1,
               1
             ],
             "eps_units": 0
@@ -32278,8 +32267,20 @@
         {
           "line": {
             "momentum": [
+              0,
               1,
               0,
+              0,
+              0
+            ],
+            "eps_units": 0
+          }
+        },
+        {
+          "line": {
+            "momentum": [
+              0,
+              -1,
               -1,
               0,
               0
@@ -32291,9 +32292,9 @@
           "line": {
             "momentum": [
               0,
-              1,
               0,
               1,
+              0,
               0
             ],
             "eps_units": 0
@@ -32302,34 +32303,10 @@
         {
           "line": {
             "momentum": [
-              0,
-              0,
-              1,
               -1,
-              0
-            ],
-            "eps_units": 0
-          }
-        },
-        {
-          "line": {
-            "momentum": [
-              1,
-              1,
-              0,
-              0,
-              1
-            ],
-            "eps_units": 0
-          }
-        },
-        {
-          "line": {
-            "momentum": [
-              1,
-              1,
               -1,
-              1,
+              0,
+              0,
               0
             ],
             "eps_units": 0
@@ -32340,9 +32317,21 @@
             "momentum": [
               1,
               1,
+              0,
               -1,
+              0
+            ],
+            "eps_units": 0
+          }
+        },
+        {
+          "line": {
+            "momentum": [
+              0,
+              0,
+              0,
               1,
-              1
+              0
             ],
             "eps_units": 0
           }
@@ -32351,15 +32340,15 @@
           "isp": {
             "left": [
               1,
-              -1,
+              0,
               0,
               0,
               0
             ],
             "right": [
-              1,
-              -1,
               0,
+              0,
+              1,
               0,
               0
             ]
@@ -32368,17 +32357,17 @@
         {
           "isp": {
             "left": [
-              0,
               1,
-              -1,
+              0,
+              0,
               0,
               0
             ],
             "right": [
               0,
-              1,
-              -1,
               0,
+              0,
+              1,
               0
             ]
           }
@@ -32390,14 +32379,50 @@
               0,
               1,
               0,
-              -1
+              0
             ],
             "right": [
               0,
               0,
+              0,
+              1,
+              0
+            ]
+          }
+        },
+        {
+          "isp": {
+            "left": [
+              0,
               1,
               0,
-              -1
+              0,
+              0
+            ],
+            "right": [
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "isp": {
+            "left": [
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "right": [
+              0,
+              0,
+              0,
+              0,
+              1
             ]
           }
         }
@@ -81653,7 +81678,7 @@
     },
     {
       "index": 9,
-      "lane": "custom",
+      "lane": "diamond",
       "trivial": false,
       "presentation": 25,
       "fallback": null
@@ -81828,7 +81853,7 @@
     },
     {
       "index": 34,
-      "lane": "custom",
+      "lane": "diamond",
       "trivial": false,
       "presentation": 50,
       "fallback": null
@@ -81926,7 +81951,7 @@
     },
     {
       "index": 48,
-      "lane": "custom",
+      "lane": "diamond",
       "trivial": false,
       "presentation": 64,
       "fallback": null
@@ -82514,7 +82539,7 @@
     },
     {
       "index": 132,
-      "lane": "custom",
+      "lane": "diamond",
       "trivial": false,
       "presentation": 148,
       "fallback": null
@@ -98397,24 +98422,33 @@
     },
     {
       "class": "L4T11-b08ea0232a8b1503",
-      "lane": "custom",
+      "lane": "diamond",
       "presentation": 25,
       "node": 9,
-      "roles": "none",
+      "roles": {
+        "diamond": {
+          "a": [
+            4,
+            7,
+            10
+          ],
+          "b": [
+            3,
+            6,
+            9
+          ],
+          "c": [
+            5,
+            8,
+            0
+          ],
+          "spectator": null
+        }
+      },
       "edge_maps": [],
       "terminals": [],
-      "payload": {
-        "file": "owners/L4T11-b08ea0232a8b1503.rrbin",
-        "bytes": 395623
-      },
-      "custom": {
-        "lp_count": 0,
-        "residuals": 0,
-        "two_sided_axes": 0,
-        "charts": [
-          2047
-        ]
-      }
+      "payload": null,
+      "custom": null
     },
     {
       "class": "L4T09-b1221815a05a8d74",
@@ -99177,45 +99211,63 @@
     },
     {
       "class": "L4T10-d07d0fffbe48f1f2",
-      "lane": "custom",
+      "lane": "diamond",
       "presentation": 50,
       "node": 34,
-      "roles": "none",
+      "roles": {
+        "diamond": {
+          "a": [
+            1,
+            4,
+            7
+          ],
+          "b": [
+            0,
+            3,
+            6
+          ],
+          "c": [
+            2,
+            5,
+            8
+          ],
+          "spectator": null
+        }
+      },
       "edge_maps": [],
       "terminals": [],
-      "payload": {
-        "file": "owners/L4T10-d07d0fffbe48f1f2.rrbin",
-        "bytes": 1039672
-      },
-      "custom": {
-        "lp_count": 0,
-        "residuals": 0,
-        "two_sided_axes": 0,
-        "charts": [
-          1535
-        ]
-      }
+      "payload": null,
+      "custom": null
     },
     {
       "class": "L4T10-d1f7ffcd2b2f3614",
-      "lane": "custom",
+      "lane": "diamond",
       "presentation": 64,
       "node": 48,
-      "roles": "none",
+      "roles": {
+        "diamond": {
+          "a": [
+            2,
+            5,
+            8
+          ],
+          "b": [
+            0,
+            4,
+            7
+          ],
+          "c": [
+            1,
+            3,
+            6
+          ],
+          "spectator": null
+        }
+      },
       "edge_maps": [],
       "terminals": [],
-      "payload": {
-        "file": "owners/L4T10-d1f7ffcd2b2f3614.rrbin",
-        "bytes": 1307400
-      },
-      "custom": {
-        "lp_count": 0,
-        "residuals": 0,
-        "two_sided_axes": 0,
-        "charts": [
-          1023
-        ]
-      }
+      "payload": null,
+      "custom": null
     },
     {
       "class": "L4T07-d21d4e5938413d43",
@@ -100317,24 +100369,33 @@
     },
     {
       "class": "L4T09-fcbb654a0b4296f8",
-      "lane": "custom",
+      "lane": "diamond",
       "presentation": 148,
       "node": 132,
-      "roles": "none",
+      "roles": {
+        "diamond": {
+          "a": [
+            1,
+            4,
+            7
+          ],
+          "b": [
+            0,
+            3,
+            6
+          ],
+          "c": [
+            2,
+            5,
+            8
+          ],
+          "spectator": null
+        }
+      },
       "edge_maps": [],
       "terminals": [],
-      "payload": {
-        "file": "owners/L4T09-fcbb654a0b4296f8.rrbin",
-        "bytes": 797084
-      },
-      "custom": {
-        "lp_count": 0,
-        "residuals": 0,
-        "two_sided_axes": 0,
-        "charts": [
-          1022
-        ]
-      }
+      "payload": null,
+      "custom": null
     },
     {
       "class": "L4T09-fd2129a6a12f4282",
@@ -100470,8 +100531,8 @@
     "dag_nodes": 438,
     "dag_edges": 2300,
     "classes": 310,
-    "sectors": 185138,
-    "zero_sectors": 163059,
+    "sectors": 181554,
+    "zero_sectors": 160489,
     "edge_maps": 227,
     "terminals": 17,
     "owners": {
@@ -100479,7 +100540,8 @@
       "insertion": 113,
       "carpet": 21,
       "triangle": 52,
-      "custom": 25
+      "diamond": 4,
+      "custom": 21
     }
   }
 }
