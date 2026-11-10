@@ -13824,7 +13824,7 @@
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 3
+          "significant_digits": 33
         }
       ],
       "parent_graph": "graphs/parent-30527.dot",
@@ -13839,7 +13839,7 @@
         },
         "numerical.json": {
           "path": "masters/P68/numerical.json",
-          "sha256": "223501a6c93dbdaf853b72a587b65e3d51b7031a231dc53efdfd9079ad5e0bd1"
+          "sha256": "1f8fb9df5933f51e091e90f531384d7e394ed7b43a553d5561adac33a3e9f5dd"
         }
       },
       "model": "model.json",
@@ -13962,7 +13962,7 @@
           ]
         ]
       },
-      "significant_digits": 3,
+      "significant_digits": 33,
       "epsilon_range": [
         -5,
         0
@@ -17196,7 +17196,7 @@
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 3
+          "significant_digits": 39
         }
       ],
       "parent_graph": "graphs/parent-30527.dot",
@@ -17211,7 +17211,7 @@
         },
         "numerical.json": {
           "path": "masters/P85/numerical.json",
-          "sha256": "4f52dac6c7e91985d37780c6a0293edd00a2efb00a3a6ce9ecc0757d03ab57a0"
+          "sha256": "c3c6989bd6a94e351b66e7e4982c757c63261998c12ab069de0d66b6db2386b5"
         }
       },
       "model": "model.json",
@@ -17334,7 +17334,7 @@
           ]
         ]
       },
-      "significant_digits": 3,
+      "significant_digits": 39,
       "epsilon_range": [
         -5,
         0
@@ -18057,7 +18057,7 @@
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 3
+          "significant_digits": 32
         }
       ],
       "parent_graph": "graphs/parent-30527.dot",
@@ -18072,7 +18072,7 @@
         },
         "numerical.json": {
           "path": "masters/P89/numerical.json",
-          "sha256": "bfc827d11d797d554d3c1a307576a886b35b8e39b3f4c17fbddf644d3fe17ebc"
+          "sha256": "b42653101b9776a8d2abba0758f476356499171bafbd5174660f122240acb03b"
         }
       },
       "model": "model.json",
@@ -18195,7 +18195,7 @@
           ]
         ]
       },
-      "significant_digits": 3,
+      "significant_digits": 32,
       "epsilon_range": [
         -5,
         0
@@ -25366,7 +25366,7 @@
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 3
+          "significant_digits": 40
         }
       ],
       "parent_graph": "graphs/parent-30527.dot",
@@ -25381,7 +25381,7 @@
         },
         "numerical.json": {
           "path": "masters/P125/numerical.json",
-          "sha256": "dbcc6208c3d71a61b86bb31c785e7fc5deb173e1cacff995aa685df1994f518f"
+          "sha256": "d251e3c3ee6baaedd84143b0032db686c58768e5ea50d1167d7d966144659106"
         }
       },
       "model": "model.json",
@@ -25504,7 +25504,7 @@
           ]
         ]
       },
-      "significant_digits": 3,
+      "significant_digits": 40,
       "epsilon_range": [
         -5,
         0
@@ -26389,7 +26389,7 @@
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 3
+          "significant_digits": 40
         }
       ],
       "parent_graph": "graphs/parent-30527.dot",
@@ -26404,7 +26404,7 @@
         },
         "numerical.json": {
           "path": "masters/P130/numerical.json",
-          "sha256": "a0d7a6f1c5d6cdc6b5b5e89b8677b4dd216cec4894ddb4003b476e6457b0ebe1"
+          "sha256": "4f8b9fc7710432dcfaab9d831f4afc7000a05a77ad44f1b3cb18814afa62be74"
         }
       },
       "model": "model.json",
@@ -26527,7 +26527,7 @@
           ]
         ]
       },
-      "significant_digits": 3,
+      "significant_digits": 40,
       "epsilon_range": [
         -5,
         0
@@ -27690,8 +27690,8 @@
       "bytes": 5734
     },
     "masters/P125/numerical.json": {
-      "sha256": "dbcc6208c3d71a61b86bb31c785e7fc5deb173e1cacff995aa685df1994f518f",
-      "bytes": 159
+      "sha256": "d251e3c3ee6baaedd84143b0032db686c58768e5ea50d1167d7d966144659106",
+      "bytes": 196
     },
     "masters/P125/symbolic.json": {
       "sha256": "cf30d3513874b8a6c2c258bf9f1624d87ade437f6d59e573293902399b9750d3",
@@ -27762,8 +27762,8 @@
       "bytes": 5734
     },
     "masters/P130/numerical.json": {
-      "sha256": "a0d7a6f1c5d6cdc6b5b5e89b8677b4dd216cec4894ddb4003b476e6457b0ebe1",
-      "bytes": 158
+      "sha256": "4f8b9fc7710432dcfaab9d831f4afc7000a05a77ad44f1b3cb18814afa62be74",
+      "bytes": 195
     },
     "masters/P130/symbolic.json": {
       "sha256": "cf30d3513874b8a6c2c258bf9f1624d87ade437f6d59e573293902399b9750d3",
@@ -28494,8 +28494,8 @@
       "bytes": 8075
     },
     "masters/P68/numerical.json": {
-      "sha256": "223501a6c93dbdaf853b72a587b65e3d51b7031a231dc53efdfd9079ad5e0bd1",
-      "bytes": 159
+      "sha256": "1f8fb9df5933f51e091e90f531384d7e394ed7b43a553d5561adac33a3e9f5dd",
+      "bytes": 189
     },
     "masters/P68/symbolic.json": {
       "sha256": "cf30d3513874b8a6c2c258bf9f1624d87ade437f6d59e573293902399b9750d3",
@@ -28722,8 +28722,8 @@
       "bytes": 5732
     },
     "masters/P85/numerical.json": {
-      "sha256": "4f52dac6c7e91985d37780c6a0293edd00a2efb00a3a6ce9ecc0757d03ab57a0",
-      "bytes": 158
+      "sha256": "c3c6989bd6a94e351b66e7e4982c757c63261998c12ab069de0d66b6db2386b5",
+      "bytes": 194
     },
     "masters/P85/symbolic.json": {
       "sha256": "cf30d3513874b8a6c2c258bf9f1624d87ade437f6d59e573293902399b9750d3",
@@ -28770,8 +28770,8 @@
       "bytes": 7151
     },
     "masters/P89/numerical.json": {
-      "sha256": "bfc827d11d797d554d3c1a307576a886b35b8e39b3f4c17fbddf644d3fe17ebc",
-      "bytes": 158
+      "sha256": "b42653101b9776a8d2abba0758f476356499171bafbd5174660f122240acb03b",
+      "bytes": 187
     },
     "masters/P89/symbolic.json": {
       "sha256": "cf30d3513874b8a6c2c258bf9f1624d87ade437f6d59e573293902399b9750d3",
@@ -28918,8 +28918,8 @@
       "bytes": 18421
     },
     "producer-update.json": {
-      "sha256": "781d858170cd9127ab79cf7dfc502298d33c83647c64f68f36ade1321f60b425",
-      "bytes": 797680
+      "sha256": "7123159fa77a963d5c9e9a65b7eab41b91d90b4aa483c50796d7b144ab366388",
+      "bytes": 797729
     },
     "provenance/basis-v4-translation.json": {
       "sha256": "8f19b6f20fb98eb2bcef5997eb93efe16780cfc889aa66910fbe6c0342d4ebe7",

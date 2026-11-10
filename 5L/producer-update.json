@@ -1,7 +1,7 @@
 {
   "schema": "vakint.external-data.producer-update.v1",
   "provenance": {
-    "producer": "track C2-VAL (basis-b/c2/tools/build_release.py), 5L campaign, 2026-11-07T02:24:15Z; rewritten for vakint-external-data main c596a3f2 (v0.2.1 line, constant basis v4) by track RT (basis-b/rt/tools/release_main.py), 2026-11-07T02:24:21Z; SYMP basis-v4 PSLQ forms merged by basis-b/c3/tools/merge_symp.py, 2026-11-07T02:24:21Z",
+    "producer": "track C2-VAL (basis-b/c2/tools/build_release.py), 5L campaign, 2026-11-10T07:24:14Z; rewritten for vakint-external-data main c596a3f2 (v0.2.1 line, constant basis v4) by track RT (basis-b/rt/tools/release_main.py), 2026-11-10T07:24:19Z; SYMP basis-v4 PSLQ forms merged by basis-b/c3/tools/merge_symp.py, 2026-11-10T07:24:20Z",
     "basis": "BASIS-v2 (pole-free, 131 masters: 111 kept + 20 new; basis-b/b3/BASIS-v2.json)",
     "normalization": "FMFTandMATAD, unit mass, d = 4 - 2 epsilon (as the 1L-4L packs)",
     "sources": {
@@ -11,11 +11,11 @@
       },
       "table": {
         "path": "/shared/vhirschi/t3code/vakint/scratchpad/5l-pilot/values/basis-values.json",
-        "sha256": "256c81ebf90f89705e608b78eeed25e3496337d1612605111dcc223237690cac"
+        "sha256": "0d7c5582f808d7fe90fc6539ae9c3f61e4c8a9e5b75318365f9ca62a87dcfba9"
       },
       "pslq_live": {
         "path": "/shared/vhirschi/t3code/vakint/scratchpad/5l-pilot/values/data/pslq-accepted.json",
-        "sha256": "1c7b43f564271ca1bb386c2961c58ebeb97c3a7607be3535892f819aeeea00cb"
+        "sha256": "5e43428a0ef32749bb563d0ea7f8be1170c525543d1c9e6fbb1ba0a3fef33268"
       },
       "pslq_ext": {
         "path": "/shared/vhirschi/t3code/vakint/scratchpad/5l-pilot/values/data/pslq-accepted-ext.json",
@@ -61,8 +61,8 @@
         "note": "main (v0.2.1 line); 1L-4L rows in constant basis v4; T1 eps^5 appended (RT stage)"
       },
       "translated_forms": {
-        "path": "/shared/vhirschi/t3code/vakint/scratchpad/5l-pilot/basis-b/c3/rel/v0.2.2/translated-forms.json",
-        "sha256": "99649588198124c63217f340801ee509073aeae493b0a59a2e50fd14ce82ccff"
+        "path": "/shared/vhirschi/t3code/vakint/scratchpad/5l-pilot/basis-b/c3/rel/v0.2.3/translated-forms.json",
+        "sha256": "20dafb4e1cee98bfa980b11031e1e1fec67c6392be0e71261acf651ca6158bfb"
       },
       "solved_constants": {
         "path": "/shared/vhirschi/t3code/vakint/scratchpad/5l-pilot/basis-b/rt/out/solved-constants.json",
@@ -108,7 +108,7 @@
     ],
     "problems": [],
     "symp_v4_merge": {
-      "utc": "2026-11-07T02:24:21Z",
+      "utc": "2026-11-10T07:24:20Z",
       "tool": "basis-b/c3/tools/merge_symp.py",
       "file": "values/data/pslq-accepted-v4.json",
       "sha256": "cdcc69d58ca1d44c3dd78644bdca427eec4dcef540000ca252eba03bb82cdad1",
@@ -12097,7 +12097,7 @@
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 3
+          "significant_digits": 33
         }
       ],
       "value_provenance": {
@@ -12132,16 +12132,16 @@
           "source": "V2a: UV forest bound with numerators b = 0 -> eps^k = 0 for k < -0 (data/structural-zeros.json; gate ok: numerators raise the bound (B2 numerator-free 0 <= V1 0))"
         },
         "0": {
-          "tier": "F",
-          "digits": 3.6,
-          "source": "in-house N1 d=4 numerics (inhouse-n1-finite.json): d = 4 numerics (rq 32 shifts + rq2 64 shifts x 1e7 (RQMC), MC 16 x 1e7), 3.6 d (3 x 1.5 x SE), RQMC/MC agree to +0.4 sigma"
+          "tier": "B",
+          "digits": 33.0,
+          "source": "in-house V9a D-5L R1 (class 16359, e = slot 0), UV-finite fit (inhouse-v9a-d5l-16359.json): single in-house method; replaces the 3.64 d F value, kept as a cross-check (|z| = 1.13)"
         }
       },
       "sstar_orders": [],
       "missing_epsilon_powers": {},
       "complete_eps_m5_to_0": true,
-      "min_digits": 3.6,
-      "below_16_digits_or_incomplete": true
+      "min_digits": 33.0,
+      "below_16_digits_or_incomplete": false
     },
     "L5_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b_p1_p1_p1_p0_p0_p0_p1_p0_p0_p0_p1_p1_p1_p0_p1": {
       "name_640": "P413",
@@ -15194,7 +15194,7 @@
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 3
+          "significant_digits": 39
         }
       ],
       "value_provenance": {
@@ -15229,16 +15229,16 @@
           "source": "V2a: UV forest bound with numerators b = 0 -> eps^k = 0 for k < -0 (data/structural-zeros.json; gate ok: equals B2 pole_bound.py)"
         },
         "0": {
-          "tier": "F",
-          "digits": 3.6,
-          "source": "in-house N1 d=4 numerics (inhouse-n1-finite.json): d = 4 numerics (rq 32 shifts + rq2 64 shifts x 1e7 (RQMC), MC 16 x 1e7), 3.7 d (3 x 1.5 x SE), RQMC/MC agree to -0.3 sigma"
+          "tier": "B",
+          "digits": 39.8,
+          "source": "in-house V9a D-5L R1 (class 16359, e = slot 0), UV-finite fit (inhouse-v9a-d5l-16359.json): single in-house method; replaces the 3.67 d F value, kept as a cross-check (|z| = 0.94)"
         }
       },
       "sstar_orders": [],
       "missing_epsilon_powers": {},
       "complete_eps_m5_to_0": true,
-      "min_digits": 3.6,
-      "below_16_digits_or_incomplete": true
+      "min_digits": 39.8,
+      "below_16_digits_or_incomplete": false
     },
     "L5_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b_p1_p1_p1_p0_p1_p1_p1_p0_p1_p1_p0_p0_p0_p1_p1": {
       "name_640": "P442",
@@ -15706,7 +15706,7 @@
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 3
+          "significant_digits": 32
         }
       ],
       "value_provenance": {
@@ -15741,16 +15741,16 @@
           "source": "V2a: UV forest bound with numerators b = 0 -> eps^k = 0 for k < -0 (data/structural-zeros.json; gate ok: numerators raise the bound (B2 numerator-free 0 <= V1 0))"
         },
         "0": {
-          "tier": "F",
-          "digits": 3.5,
-          "source": "in-house N1 d=4 numerics (inhouse-n1-finite.json): d = 4 numerics (rq 32 shifts + rq2 64 shifts x 1e7 (RQMC), MC 16 x 1e7), 3.6 d (3 x 1.5 x SE), RQMC/MC agree to -0.3 sigma"
+          "tier": "B",
+          "digits": 32.5,
+          "source": "in-house V9a D-5L R1 (class 16359, e = slot 0), UV-finite fit (inhouse-v9a-d5l-16359.json): single in-house method; replaces the 3.59 d F value, kept as a cross-check (|z| = 0.21)"
         }
       },
       "sstar_orders": [],
       "missing_epsilon_powers": {},
       "complete_eps_m5_to_0": true,
-      "min_digits": 3.5,
-      "below_16_digits_or_incomplete": true
+      "min_digits": 32.5,
+      "below_16_digits_or_incomplete": false
     },
     "L5_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b_p1_p1_p1_p1_p0_p0_p0_p0_p0_p0_p1_p1_p1_p0_p0": {
       "name_640": "P447",
@@ -20762,7 +20762,7 @@
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 3
+          "significant_digits": 40
         }
       ],
       "value_provenance": {
@@ -20797,16 +20797,16 @@
           "source": "V2a: UV forest bound with numerators b = 0 -> eps^k = 0 for k < -0 (data/structural-zeros.json; gate ok: equals B2 pole_bound.py)"
         },
         "0": {
-          "tier": "F",
-          "digits": 3.4,
-          "source": "in-house N1 d=4 numerics (inhouse-n1-finite.json): d = 4 numerics (rq 32 shifts + rq2 64 shifts x 1e7 (RQMC), MC 16 x 1e7), 3.5 d (3 x 1.5 x SE), RQMC/MC agree to +0.2 sigma"
+          "tier": "B",
+          "digits": 40.8,
+          "source": "in-house V9a D-5L R1 (class 16359, e = slot 0), UV-finite fit (inhouse-v9a-d5l-16359.json): single in-house method; replaces the 3.49 d F value, kept as a cross-check (|z| = 0.71)"
         }
       },
       "sstar_orders": [],
       "missing_epsilon_powers": {},
       "complete_eps_m5_to_0": true,
-      "min_digits": 3.4,
-      "below_16_digits_or_incomplete": true
+      "min_digits": 40.8,
+      "below_16_digits_or_incomplete": false
     },
     "L5_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b_p2_p1_p1_p0_p1_p1_p1_p1_p1_p1_p0_p1_p0_p1_p0": {
       "name_640": "P553",
@@ -21323,7 +21323,7 @@
           "epsilon_power": 0,
           "symbolic": false,
           "numerical": true,
-          "significant_digits": 3
+          "significant_digits": 40
         }
       ],
       "value_provenance": {
@@ -21358,16 +21358,16 @@
           "source": "V2a: UV forest bound with numerators b = 0 -> eps^k = 0 for k < -0 (data/structural-zeros.json; gate ok: equals B2 pole_bound.py)"
         },
         "0": {
-          "tier": "F",
-          "digits": 3.3,
-          "source": "in-house N1 d=4 numerics (inhouse-n1-finite.json): d = 4 numerics (rq 32 shifts + rq2 64 shifts x 1e7 (RQMC), MC 16 x 1e7), 3.3 d (3 x 1.5 x SE), RQMC/MC agree to -0.8 sigma"
+          "tier": "B",
+          "digits": 40.7,
+          "source": "in-house V9a D-5L R1 (class 16359, e = slot 0), UV-finite fit (inhouse-v9a-d5l-16359.json): single in-house method; replaces the 3.3 d F value, kept as a cross-check (|z| = 0.19)"
         }
       },
       "sstar_orders": [],
       "missing_epsilon_powers": {},
       "complete_eps_m5_to_0": true,
-      "min_digits": 3.3,
-      "below_16_digits_or_incomplete": true
+      "min_digits": 40.7,
+      "below_16_digits_or_incomplete": false
     },
     "L5_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b_p3_p1_p1_p1_p0_p1_p1_p1_p1_p1_p1_p1_p1_p0_p0": {
       "name_640": "P634",
