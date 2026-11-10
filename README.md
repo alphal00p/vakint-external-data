@@ -3,9 +3,9 @@
 Release v0.2.3 (10 November 2026) is the current release and `data-latest` points to it.
 Earlier releases stay available unchanged.
 
-## v0.2.3
+## v0.2.3: five-loop values
 
-Release v0.2.3 (10 November 2026) is a data-only release: it updates 5 five-loop
+For the five-loop data, release v0.2.3 (10 November 2026) updates 5 five-loop
 coefficients of v0.2.2. Since v0.2.2:
 
 - 5L/P68 (v0.2.0 P400) eps^0: 33 digits instead of 3.6 (provisional in v0.2.2), from the
@@ -19,8 +19,9 @@ coefficients of v0.2.2. Since v0.2.2:
 - 5L/P130 (v0.2.0 P632) eps^0: 40.7 digits instead of 3.3 (provisional in v0.2.2), from
   the class-16359 high-precision grid.
 
-Everything else is unchanged: all reduction tables, masters, graphs, constants, exact
-coefficients and Ordered caches, and every other numerical value of v0.2.2.
+Everything else in the five-loop data is unchanged: reduction tables, masters, graphs,
+constants, exact coefficients, Ordered caches and every other five-loop numerical value
+of v0.2.2.
 
 A new managed install of `v0.2.3` or `data-latest` receives this release, as does an
 existing one loaded with `version="v0.2.3"` or `refresh=True`. An existing `data-latest`
