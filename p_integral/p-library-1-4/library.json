@@ -6,18 +6,18 @@
     "edge_maps": 227,
     "owners": {
       "carpet": 21,
-      "custom": 17,
+      "custom": 16,
       "diamond": 4,
       "insertion": 113,
-      "scheme": 4,
+      "scheme": 5,
       "series_parallel": 99,
       "triangle": 52
     },
     "presentations": 453,
-    "sectors": 180018,
+    "sectors": 178994,
     "terminals": 17,
     "tops": 16,
-    "zero_sectors": 159318
+    "zero_sectors": 158622
   },
   "edge_maps": [
     {
@@ -10962,6 +10962,11 @@
       },
       {
         "bytes": 2178,
+        "file": "families/p_node_01070000000000010100030100000401000006010001030100010401000105010002030100020401000205010002060100.rrbin",
+        "name": "p_node_01070000000000010100030100000401000006010001030100010401000105010002030100020401000205010002060100"
+      },
+      {
+        "bytes": 2178,
         "file": "families/p_node_01070000000000010100030100000401000006010001030100010401000106010002030100020401000205010004050100.rrbin",
         "name": "p_node_01070000000000010100030100000401000006010001030100010401000106010002030100020401000205010004050100"
       },
@@ -11117,7 +11122,7 @@
     "routes": "routes.rrbin",
     "topology": "topology/p-topologies.json"
   },
-  "identity": "p-library:scope=1-4:P_OWNER_LIBRARY_SEMANTICS=rustred-p-owner-library-2026-11-05,P_CLASS_KEY_VERSION=1,P_CENSUS_VERSION=2,P_PRESENTATION_VERSION=2,P_FAMILIES_VERSION=1,P_GAMMA_TAG_VERSION=1,P_GAMMA_TAG_MAX_M=8,P_GAMMA_TAG_WIDTH=16,P_INSERTION_KERNEL_VERSION=1,P_CARPET_KERNEL_VERSION=1,P_TRIANGLE_TEMPLATE_VERSION=1,P_DIAMOND_TEMPLATE_VERSION=1,P_SCHEME_TEMPLATE_VERSION=3,P_CUSTOM_OWNER_VERSION=2,P_LIBRARY_SCHEMA=rustred.p-owner-library.v1,P_FAMILIES_SCHEMA=rustred.p-families.v1,P_BASIS_LAYER_SCHEMA=rustred.p-basis-layer.v1,P_TOPOLOGY_VERSION=1,P_ORDERING_VERSION=1:generation",
+  "identity": "p-library:scope=1-4:P_OWNER_LIBRARY_SEMANTICS=rustred-p-owner-library-2026-11-05,P_CLASS_KEY_VERSION=1,P_CENSUS_VERSION=2,P_PRESENTATION_VERSION=2,P_FAMILIES_VERSION=1,P_GAMMA_TAG_VERSION=1,P_GAMMA_TAG_MAX_M=8,P_GAMMA_TAG_WIDTH=16,P_INSERTION_KERNEL_VERSION=1,P_CARPET_KERNEL_VERSION=1,P_TRIANGLE_TEMPLATE_VERSION=1,P_DIAMOND_TEMPLATE_VERSION=1,P_SCHEME_TEMPLATE_VERSION=4,P_CUSTOM_OWNER_VERSION=2,P_LIBRARY_SCHEMA=rustred.p-owner-library.v1,P_FAMILIES_SCHEMA=rustred.p-families.v1,P_BASIS_LAYER_SCHEMA=rustred.p-basis-layer.v1,P_TOPOLOGY_VERSION=1,P_ORDERING_VERSION=1:generation",
   "nodes": [
     {
       "fallback": null,
@@ -11353,7 +11358,7 @@
     {
       "fallback": null,
       "index": 33,
-      "lane": "custom",
+      "lane": "scheme",
       "presentation": 49,
       "trivial": false
     },
@@ -18345,14 +18350,18 @@
         "two_sided_axes": 0
       },
       "edge_maps": [],
-      "lane": "custom",
+      "lane": "scheme",
       "node": 33,
       "payload": {
         "bytes": 2325424,
         "file": "owners/L4T10-9f80d1b9bedb371e.rrbin"
       },
       "presentation": 49,
-      "roles": "none",
+      "roles": {
+        "scheme": {
+          "scheme": 4
+        }
+      },
       "terminals": [
         9
       ]
@@ -30175,14 +30184,9 @@
       ]
     },
     {
-      "family": "families/P4L_NO1.rrbin",
+      "family": "families/p_node_01070000000000010100030100000401000006010001030100010401000105010002030100020401000205010002060100.rrbin",
       "index": 49,
-      "kind": {
-        "induced": {
-          "mask": 1791,
-          "top": 13
-        }
-      },
+      "kind": "scheme_adapted",
       "loops": 4,
       "node": {
         "index": 33,
@@ -30193,69 +30197,9 @@
           "line": {
             "eps_units": 0,
             "momentum": [
-              1,
-              0,
-              0,
-              0,
-              0
-            ]
-          }
-        },
-        {
-          "line": {
-            "eps_units": 0,
-            "momentum": [
-              0,
-              1,
-              0,
-              0,
-              0
-            ]
-          }
-        },
-        {
-          "line": {
-            "eps_units": 0,
-            "momentum": [
               0,
               0,
               1,
-              0,
-              0
-            ]
-          }
-        },
-        {
-          "line": {
-            "eps_units": 0,
-            "momentum": [
-              0,
-              0,
-              0,
-              1,
-              0
-            ]
-          }
-        },
-        {
-          "line": {
-            "eps_units": 0,
-            "momentum": [
-              1,
-              0,
-              0,
-              0,
-              1
-            ]
-          }
-        },
-        {
-          "line": {
-            "eps_units": 0,
-            "momentum": [
-              1,
-              0,
-              0,
               -1,
               0
             ]
@@ -30267,20 +30211,8 @@
             "momentum": [
               0,
               0,
-              1,
-              1,
-              0
-            ]
-          }
-        },
-        {
-          "line": {
-            "eps_units": 0,
-            "momentum": [
-              1,
-              1,
-              0,
               -1,
+              0,
               0
             ]
           }
@@ -30289,9 +30221,21 @@
           "line": {
             "eps_units": 0,
             "momentum": [
-              1,
+              0,
+              0,
               0,
               1,
+              0
+            ]
+          }
+        },
+        {
+          "line": {
+            "eps_units": 0,
+            "momentum": [
+              -1,
+              1,
+              -1,
               0,
               1
             ]
@@ -30302,10 +30246,34 @@
             "eps_units": 0,
             "momentum": [
               0,
+              -1,
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "line": {
+            "eps_units": 0,
+            "momentum": [
+              1,
+              0,
+              0,
+              0,
+              -1
+            ]
+          }
+        },
+        {
+          "line": {
+            "eps_units": 0,
+            "momentum": [
               1,
               -1,
-              -1,
-              0
+              0,
+              1,
+              -1
             ]
           }
         },
@@ -30315,24 +30283,6 @@
             "momentum": [
               0,
               1,
-              -1,
-              -1,
-              -1
-            ]
-          }
-        },
-        {
-          "isp": {
-            "left": [
-              1,
-              -1,
-              0,
-              0,
-              0
-            ],
-            "right": [
-              1,
-              -1,
               0,
               0,
               0
@@ -30340,18 +30290,42 @@
           }
         },
         {
-          "isp": {
-            "left": [
-              1,
+          "line": {
+            "eps_units": 0,
+            "momentum": [
+              -1,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "line": {
+            "eps_units": 0,
+            "momentum": [
+              0,
+              0,
               0,
               -1,
+              1
+            ]
+          }
+        },
+        {
+          "isp": {
+            "left": [
+              2,
+              0,
+              0,
               0,
               0
             ],
             "right": [
+              0,
               1,
               0,
-              -1,
               0,
               0
             ]
@@ -30361,17 +30335,53 @@
           "isp": {
             "left": [
               0,
+              2,
+              0,
+              0,
+              0
+            ],
+            "right": [
+              0,
+              0,
+              0,
               1,
+              0
+            ]
+          }
+        },
+        {
+          "isp": {
+            "left": [
               0,
               0,
-              -1
+              0,
+              0,
+              2
             ],
             "right": [
               0,
               1,
               0,
               0,
-              -1
+              0
+            ]
+          }
+        },
+        {
+          "isp": {
+            "left": [
+              0,
+              0,
+              0,
+              0,
+              2
+            ],
+            "right": [
+              0,
+              0,
+              1,
+              0,
+              0
             ]
           }
         }
@@ -100386,9 +100396,9 @@
           1,
           1,
           1,
+          1,
+          1,
           0,
-          1,
-          1,
           0,
           0,
           0
@@ -100533,7 +100543,7 @@
     "P_LIBRARY_SCHEMA": "rustred.p-owner-library.v1",
     "P_OWNER_LIBRARY_SEMANTICS": "rustred-p-owner-library-2026-11-05",
     "P_PRESENTATION_VERSION": "2",
-    "P_SCHEME_TEMPLATE_VERSION": "3",
+    "P_SCHEME_TEMPLATE_VERSION": "4",
     "P_TOPOLOGY_VERSION": "1",
     "P_TRIANGLE_TEMPLATE_VERSION": "1"
   }
