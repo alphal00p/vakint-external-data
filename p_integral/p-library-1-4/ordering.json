@@ -32785,56 +32785,7 @@
             128,
             129,
             130,
-            131,
-            132,
-            133,
-            134,
-            135,
-            136,
-            137,
-            138,
-            139,
-            140,
-            141,
-            142,
-            143,
-            144,
-            145,
-            146,
-            147,
-            148,
-            149,
-            150,
-            151,
-            152,
-            153,
-            154,
-            155,
-            156,
-            157,
-            158,
-            159,
-            160,
-            161,
-            162,
-            163,
-            164,
-            165,
-            166,
-            167,
-            168,
-            169,
-            170,
-            171,
-            172,
-            173,
-            174,
-            175,
-            176,
-            177,
-            178,
-            179,
-            180
+            131
           ]
         }
       ],
@@ -32844,15 +32795,15 @@
           "index": 0,
           "affine": false,
           "fixed": [],
-          "rhs_terms": 13,
+          "rhs_terms": 19,
           "max_rank_change": -1,
           "rank_raising_terms": 0,
-          "raised_lines": 96,
-          "lowered_lines": 683,
+          "raised_lines": 516,
+          "lowered_lines": 1647,
           "raising_terms": 4,
           "exceptions": 2,
-          "coefficient_bytes_max": 32,
-          "coefficient_bytes_total": 132,
+          "coefficient_bytes_max": 34,
+          "coefficient_bytes_total": 242,
           "d_in_denominator": false,
           "dispatched_after_baseline": false,
           "sources": 1,
@@ -32864,19 +32815,19 @@
           "affine": false,
           "fixed": [
             [
-              3,
+              10,
               1
             ]
           ],
-          "rhs_terms": 16,
-          "max_rank_change": 0,
+          "rhs_terms": 33,
+          "max_rank_change": -1,
           "rank_raising_terms": 0,
-          "raised_lines": 9,
-          "lowered_lines": 759,
+          "raised_lines": 6,
+          "lowered_lines": 1775,
           "raising_terms": 4,
           "exceptions": 2,
           "coefficient_bytes_max": 32,
-          "coefficient_bytes_total": 195,
+          "coefficient_bytes_total": 362,
           "d_in_denominator": false,
           "dispatched_after_baseline": false,
           "sources": 1,
@@ -32888,19 +32839,19 @@
           "affine": false,
           "fixed": [
             [
-              11,
+              13,
               0
             ]
           ],
-          "rhs_terms": 8,
+          "rhs_terms": 27,
           "max_rank_change": 0,
           "rank_raising_terms": 0,
-          "raised_lines": 9,
-          "lowered_lines": 85,
-          "raising_terms": 4,
+          "raised_lines": 578,
+          "lowered_lines": 1727,
+          "raising_terms": 11,
           "exceptions": 2,
-          "coefficient_bytes_max": 34,
-          "coefficient_bytes_total": 104,
+          "coefficient_bytes_max": 51,
+          "coefficient_bytes_total": 297,
           "d_in_denominator": false,
           "dispatched_after_baseline": false,
           "sources": 1,
@@ -32912,11 +32863,11 @@
           "affine": false,
           "fixed": [
             [
-              3,
+              7,
               1
             ],
             [
-              4,
+              10,
               1
             ]
           ],
@@ -32927,8 +32878,8 @@
           "lowered_lines": 1651,
           "raising_terms": 6,
           "exceptions": 2,
-          "coefficient_bytes_max": 62,
-          "coefficient_bytes_total": 230,
+          "coefficient_bytes_max": 56,
+          "coefficient_bytes_total": 226,
           "d_in_denominator": false,
           "dispatched_after_baseline": false,
           "sources": 1,
@@ -32940,23 +32891,23 @@
           "affine": false,
           "fixed": [
             [
-              3,
+              10,
               1
             ],
             [
-              8,
+              12,
               0
             ]
           ],
           "rhs_terms": 18,
-          "max_rank_change": 0,
+          "max_rank_change": -1,
           "rank_raising_terms": 0,
-          "raised_lines": 524,
-          "lowered_lines": 1651,
-          "raising_terms": 6,
+          "raised_lines": 36,
+          "lowered_lines": 1791,
+          "raising_terms": 4,
           "exceptions": 2,
-          "coefficient_bytes_max": 57,
-          "coefficient_bytes_total": 225,
+          "coefficient_bytes_max": 30,
+          "coefficient_bytes_total": 182,
           "d_in_denominator": false,
           "dispatched_after_baseline": false,
           "sources": 1,
@@ -32968,23 +32919,23 @@
           "affine": false,
           "fixed": [
             [
-              4,
+              10,
               1
             ],
             [
-              11,
+              13,
               0
             ]
           ],
-          "rhs_terms": 16,
-          "max_rank_change": 0,
+          "rhs_terms": 31,
+          "max_rank_change": -1,
           "rank_raising_terms": 0,
-          "raised_lines": 524,
-          "lowered_lines": 1651,
-          "raising_terms": 6,
+          "raised_lines": 6,
+          "lowered_lines": 1775,
+          "raising_terms": 4,
           "exceptions": 2,
-          "coefficient_bytes_max": 64,
-          "coefficient_bytes_total": 211,
+          "coefficient_bytes_max": 28,
+          "coefficient_bytes_total": 335,
           "d_in_denominator": false,
           "dispatched_after_baseline": false,
           "sources": 1,
@@ -32995,1118 +32946,6 @@
           "index": 6,
           "affine": false,
           "fixed": [
-            [
-              8,
-              0
-            ],
-            [
-              11,
-              0
-            ]
-          ],
-          "rhs_terms": 16,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 524,
-          "lowered_lines": 1651,
-          "raising_terms": 6,
-          "exceptions": 2,
-          "coefficient_bytes_max": 59,
-          "coefficient_bytes_total": 206,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 7,
-          "affine": false,
-          "fixed": [
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              6,
-              1
-            ]
-          ],
-          "rhs_terms": 18,
-          "max_rank_change": -1,
-          "rank_raising_terms": 0,
-          "raised_lines": 10,
-          "lowered_lines": 1647,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 24,
-          "coefficient_bytes_total": 185,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 8,
-          "affine": false,
-          "fixed": [
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 16,
-          "max_rank_change": -1,
-          "rank_raising_terms": 0,
-          "raised_lines": 10,
-          "lowered_lines": 623,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 23,
-          "coefficient_bytes_total": 161,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 9,
-          "affine": false,
-          "fixed": [
-            [
-              3,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              8,
-              0
-            ]
-          ],
-          "rhs_terms": 18,
-          "max_rank_change": -1,
-          "rank_raising_terms": 0,
-          "raised_lines": 10,
-          "lowered_lines": 1647,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 24,
-          "coefficient_bytes_total": 185,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 10,
-          "affine": false,
-          "fixed": [
-            [
-              3,
-              1
-            ],
-            [
-              8,
-              0
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 16,
-          "max_rank_change": -1,
-          "rank_raising_terms": 0,
-          "raised_lines": 10,
-          "lowered_lines": 623,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 23,
-          "coefficient_bytes_total": 161,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 11,
-          "affine": false,
-          "fixed": [
-            [
-              4,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              11,
-              0
-            ]
-          ],
-          "rhs_terms": 10,
-          "max_rank_change": -1,
-          "rank_raising_terms": 0,
-          "raised_lines": 10,
-          "lowered_lines": 1637,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 27,
-          "coefficient_bytes_total": 96,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 12,
-          "affine": false,
-          "fixed": [
-            [
-              4,
-              1
-            ],
-            [
-              11,
-              0
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 8,
-          "max_rank_change": -1,
-          "rank_raising_terms": 0,
-          "raised_lines": 10,
-          "lowered_lines": 613,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 27,
-          "coefficient_bytes_total": 73,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 13,
-          "affine": false,
-          "fixed": [
-            [
-              6,
-              1
-            ],
-            [
-              8,
-              0
-            ],
-            [
-              11,
-              0
-            ]
-          ],
-          "rhs_terms": 10,
-          "max_rank_change": -1,
-          "rank_raising_terms": 0,
-          "raised_lines": 10,
-          "lowered_lines": 1637,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 27,
-          "coefficient_bytes_total": 96,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 14,
-          "affine": false,
-          "fixed": [
-            [
-              8,
-              0
-            ],
-            [
-              11,
-              0
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 8,
-          "max_rank_change": -1,
-          "rank_raising_terms": 0,
-          "raised_lines": 10,
-          "lowered_lines": 613,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 27,
-          "coefficient_bytes_total": 73,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 15,
-          "affine": false,
-          "fixed": [
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              6,
-              1
-            ]
-          ],
-          "rhs_terms": 19,
-          "max_rank_change": -1,
-          "rank_raising_terms": 0,
-          "raised_lines": 516,
-          "lowered_lines": 1647,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 28,
-          "coefficient_bytes_total": 236,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 16,
-          "affine": false,
-          "fixed": [
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 19,
-          "max_rank_change": -1,
-          "rank_raising_terms": 0,
-          "raised_lines": 136,
-          "lowered_lines": 1647,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 27,
-          "coefficient_bytes_total": 210,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 17,
-          "affine": false,
-          "fixed": [
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              12,
-              0
-            ]
-          ],
-          "rhs_terms": 15,
-          "max_rank_change": -1,
-          "rank_raising_terms": 0,
-          "raised_lines": 516,
-          "lowered_lines": 1647,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 24,
-          "coefficient_bytes_total": 178,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 18,
-          "affine": false,
-          "fixed": [
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              12,
-              0
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 18,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 514,
-          "lowered_lines": 1790,
-          "raising_terms": 6,
-          "exceptions": 2,
-          "coefficient_bytes_max": 30,
-          "coefficient_bytes_total": 208,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 19,
-          "affine": false,
-          "fixed": [
-            [
-              3,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              8,
-              0
-            ]
-          ],
-          "rhs_terms": 10,
-          "max_rank_change": -1,
-          "rank_raising_terms": 0,
-          "raised_lines": 516,
-          "lowered_lines": 1131,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 28,
-          "coefficient_bytes_total": 129,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 20,
-          "affine": false,
-          "fixed": [
-            [
-              3,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              8,
-              0
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 12,
-          "max_rank_change": -1,
-          "rank_raising_terms": 0,
-          "raised_lines": 136,
-          "lowered_lines": 111,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 24,
-          "coefficient_bytes_total": 134,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 21,
-          "affine": false,
-          "fixed": [
-            [
-              3,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              8,
-              0
-            ],
-            [
-              12,
-              0
-            ]
-          ],
-          "rhs_terms": 6,
-          "max_rank_change": -1,
-          "rank_raising_terms": 0,
-          "raised_lines": 516,
-          "lowered_lines": 1098,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 24,
-          "coefficient_bytes_total": 71,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 22,
-          "affine": false,
-          "fixed": [
-            [
-              3,
-              1
-            ],
-            [
-              8,
-              0
-            ],
-            [
-              12,
-              0
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 8,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 132,
-          "lowered_lines": 123,
-          "raising_terms": 4,
-          "exceptions": 1,
-          "coefficient_bytes_max": 39,
-          "coefficient_bytes_total": 106,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 23,
-          "affine": false,
-          "fixed": [
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              11,
-              0
-            ]
-          ],
-          "rhs_terms": 19,
-          "max_rank_change": -1,
-          "rank_raising_terms": 0,
-          "raised_lines": 516,
-          "lowered_lines": 1647,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 28,
-          "coefficient_bytes_total": 236,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 24,
-          "affine": false,
-          "fixed": [
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              11,
-              0
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 19,
-          "max_rank_change": -1,
-          "rank_raising_terms": 0,
-          "raised_lines": 136,
-          "lowered_lines": 1647,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 32,
-          "coefficient_bytes_total": 217,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 25,
-          "affine": false,
-          "fixed": [
-            [
-              4,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              11,
-              0
-            ],
-            [
-              12,
-              0
-            ]
-          ],
-          "rhs_terms": 15,
-          "max_rank_change": -1,
-          "rank_raising_terms": 0,
-          "raised_lines": 516,
-          "lowered_lines": 1647,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 24,
-          "coefficient_bytes_total": 178,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 26,
-          "affine": false,
-          "fixed": [
-            [
-              4,
-              1
-            ],
-            [
-              11,
-              0
-            ],
-            [
-              12,
-              0
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 8,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 514,
-          "lowered_lines": 1728,
-          "raising_terms": 6,
-          "exceptions": 2,
-          "coefficient_bytes_max": 26,
-          "coefficient_bytes_total": 88,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 27,
-          "affine": false,
-          "fixed": [
-            [
-              5,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              8,
-              0
-            ],
-            [
-              11,
-              0
-            ]
-          ],
-          "rhs_terms": 10,
-          "max_rank_change": -1,
-          "rank_raising_terms": 0,
-          "raised_lines": 516,
-          "lowered_lines": 1131,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 28,
-          "coefficient_bytes_total": 129,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 28,
-          "affine": false,
-          "fixed": [
-            [
-              5,
-              1
-            ],
-            [
-              8,
-              0
-            ],
-            [
-              11,
-              0
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 12,
-          "max_rank_change": -1,
-          "rank_raising_terms": 0,
-          "raised_lines": 136,
-          "lowered_lines": 111,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 29,
-          "coefficient_bytes_total": 141,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 29,
-          "affine": false,
-          "fixed": [
-            [
-              6,
-              1
-            ],
-            [
-              8,
-              0
-            ],
-            [
-              11,
-              0
-            ],
-            [
-              12,
-              0
-            ]
-          ],
-          "rhs_terms": 6,
-          "max_rank_change": -1,
-          "rank_raising_terms": 0,
-          "raised_lines": 516,
-          "lowered_lines": 1098,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 24,
-          "coefficient_bytes_total": 71,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 30,
-          "affine": false,
-          "fixed": [
-            [
-              8,
-              0
-            ],
-            [
-              11,
-              0
-            ],
-            [
-              12,
-              0
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 6,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 132,
-          "lowered_lines": 123,
-          "raising_terms": 4,
-          "exceptions": 1,
-          "coefficient_bytes_max": 39,
-          "coefficient_bytes_total": 83,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 31,
-          "affine": false,
-          "fixed": [
-            [
-              2,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 18,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 514,
-          "lowered_lines": 1790,
-          "raising_terms": 6,
-          "exceptions": 2,
-          "coefficient_bytes_max": 30,
-          "coefficient_bytes_total": 208,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 32,
-          "affine": false,
-          "fixed": [
-            [
-              2,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              8,
-              0
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 12,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 132,
-          "lowered_lines": 123,
-          "raising_terms": 4,
-          "exceptions": 1,
-          "coefficient_bytes_max": 35,
-          "coefficient_bytes_total": 150,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 33,
-          "affine": false,
-          "fixed": [
-            [
-              2,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              11,
-              0
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 8,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 514,
-          "lowered_lines": 1728,
-          "raising_terms": 6,
-          "exceptions": 2,
-          "coefficient_bytes_max": 26,
-          "coefficient_bytes_total": 88,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 34,
-          "affine": false,
-          "fixed": [
-            [
-              2,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              8,
-              0
-            ],
-            [
-              11,
-              0
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 10,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 132,
-          "lowered_lines": 123,
-          "raising_terms": 4,
-          "exceptions": 1,
-          "coefficient_bytes_max": 36,
-          "coefficient_bytes_total": 128,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 35,
-          "affine": false,
-          "fixed": [
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              10,
-              1
-            ]
-          ],
-          "rhs_terms": 19,
-          "max_rank_change": -1,
-          "rank_raising_terms": 0,
-          "raised_lines": 136,
-          "lowered_lines": 1647,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 27,
-          "coefficient_bytes_total": 210,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 36,
-          "affine": false,
-          "fixed": [
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              12,
-              0
-            ]
-          ],
-          "rhs_terms": 20,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 514,
-          "lowered_lines": 1790,
-          "raising_terms": 6,
-          "exceptions": 2,
-          "coefficient_bytes_max": 27,
-          "coefficient_bytes_total": 228,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 37,
-          "affine": false,
-          "fixed": [
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              7,
-              1
-            ],
             [
               12,
               0
@@ -34123,8 +32962,8 @@
           "lowered_lines": 1197,
           "raising_terms": 6,
           "exceptions": 2,
-          "coefficient_bytes_max": 28,
-          "coefficient_bytes_total": 156,
+          "coefficient_bytes_max": 34,
+          "coefficient_bytes_total": 162,
           "d_in_denominator": false,
           "dispatched_after_baseline": false,
           "sources": 1,
@@ -34132,17 +32971,105 @@
         },
         {
           "chart": 1791,
-          "index": 38,
+          "index": 7,
           "affine": false,
           "fixed": [
             [
-              3,
+              6,
               1
             ],
             [
-              4,
+              7,
               1
             ],
+            [
+              10,
+              1
+            ]
+          ],
+          "rhs_terms": 33,
+          "max_rank_change": 0,
+          "rank_raising_terms": 0,
+          "raised_lines": 523,
+          "lowered_lines": 1662,
+          "raising_terms": 10,
+          "exceptions": 2,
+          "coefficient_bytes_max": 57,
+          "coefficient_bytes_total": 380,
+          "d_in_denominator": false,
+          "dispatched_after_baseline": false,
+          "sources": 1,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 8,
+          "affine": false,
+          "fixed": [
+            [
+              7,
+              1
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              12,
+              0
+            ]
+          ],
+          "rhs_terms": 14,
+          "max_rank_change": 0,
+          "rank_raising_terms": 0,
+          "raised_lines": 524,
+          "lowered_lines": 1651,
+          "raising_terms": 6,
+          "exceptions": 2,
+          "coefficient_bytes_max": 52,
+          "coefficient_bytes_total": 171,
+          "d_in_denominator": false,
+          "dispatched_after_baseline": false,
+          "sources": 1,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 9,
+          "affine": false,
+          "fixed": [
+            [
+              7,
+              1
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              13,
+              0
+            ]
+          ],
+          "rhs_terms": 13,
+          "max_rank_change": -1,
+          "rank_raising_terms": 0,
+          "raised_lines": 10,
+          "lowered_lines": 239,
+          "raising_terms": 4,
+          "exceptions": 2,
+          "coefficient_bytes_max": 27,
+          "coefficient_bytes_total": 133,
+          "d_in_denominator": false,
+          "dispatched_after_baseline": false,
+          "sources": 1,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 10,
+          "affine": false,
+          "fixed": [
             [
               8,
               0
@@ -34156,135 +33083,15 @@
               0
             ]
           ],
-          "rhs_terms": 12,
-          "max_rank_change": -1,
-          "rank_raising_terms": 0,
-          "raised_lines": 96,
-          "lowered_lines": 175,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 29,
-          "coefficient_bytes_total": 141,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 39,
-          "affine": false,
-          "fixed": [
-            [
-              3,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              8,
-              0
-            ],
-            [
-              10,
-              1
-            ]
-          ],
-          "rhs_terms": 12,
-          "max_rank_change": -1,
-          "rank_raising_terms": 0,
-          "raised_lines": 136,
-          "lowered_lines": 111,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 24,
-          "coefficient_bytes_total": 134,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 40,
-          "affine": false,
-          "fixed": [
-            [
-              3,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              8,
-              0
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              12,
-              0
-            ]
-          ],
           "rhs_terms": 8,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 132,
-          "lowered_lines": 123,
-          "raising_terms": 4,
-          "exceptions": 1,
-          "coefficient_bytes_max": 39,
-          "coefficient_bytes_total": 106,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 41,
-          "affine": false,
-          "fixed": [
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              11,
-              0
-            ]
-          ],
-          "rhs_terms": 19,
           "max_rank_change": -1,
           "rank_raising_terms": 0,
-          "raised_lines": 136,
-          "lowered_lines": 1647,
+          "raised_lines": 36,
+          "lowered_lines": 203,
           "raising_terms": 4,
           "exceptions": 2,
-          "coefficient_bytes_max": 32,
-          "coefficient_bytes_total": 217,
+          "coefficient_bytes_max": 27,
+          "coefficient_bytes_total": 73,
           "d_in_denominator": false,
           "dispatched_after_baseline": false,
           "sources": 1,
@@ -34292,17 +33099,9 @@
         },
         {
           "chart": 1791,
-          "index": 42,
+          "index": 11,
           "affine": false,
           "fixed": [
-            [
-              4,
-              1
-            ],
-            [
-              6,
-              1
-            ],
             [
               10,
               1
@@ -34332,11 +33131,47 @@
         },
         {
           "chart": 1791,
-          "index": 43,
+          "index": 12,
           "affine": false,
           "fixed": [
             [
-              4,
+              10,
+              1
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ]
+          ],
+          "rhs_terms": 18,
+          "max_rank_change": -1,
+          "rank_raising_terms": 0,
+          "raised_lines": 36,
+          "lowered_lines": 1791,
+          "raising_terms": 4,
+          "exceptions": 2,
+          "coefficient_bytes_max": 30,
+          "coefficient_bytes_total": 182,
+          "d_in_denominator": false,
+          "dispatched_after_baseline": false,
+          "sources": 1,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 13,
+          "affine": false,
+          "fixed": [
+            [
+              5,
+              1
+            ],
+            [
+              6,
               1
             ],
             [
@@ -34344,7 +33179,107 @@
               1
             ],
             [
-              11,
+              10,
+              1
+            ]
+          ],
+          "rhs_terms": 21,
+          "max_rank_change": 0,
+          "rank_raising_terms": 0,
+          "raised_lines": 37,
+          "lowered_lines": 1755,
+          "raising_terms": 6,
+          "exceptions": 2,
+          "coefficient_bytes_max": 38,
+          "coefficient_bytes_total": 241,
+          "d_in_denominator": false,
+          "dispatched_after_baseline": false,
+          "sources": 1,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 14,
+          "affine": false,
+          "fixed": [
+            [
+              6,
+              1
+            ],
+            [
+              7,
+              1
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              12,
+              0
+            ]
+          ],
+          "rhs_terms": 29,
+          "max_rank_change": 0,
+          "rank_raising_terms": 0,
+          "raised_lines": 523,
+          "lowered_lines": 1662,
+          "raising_terms": 10,
+          "exceptions": 2,
+          "coefficient_bytes_max": 53,
+          "coefficient_bytes_total": 325,
+          "d_in_denominator": false,
+          "dispatched_after_baseline": false,
+          "sources": 1,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 15,
+          "affine": false,
+          "fixed": [
+            [
+              6,
+              1
+            ],
+            [
+              7,
+              1
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              13,
+              0
+            ]
+          ],
+          "rhs_terms": 16,
+          "max_rank_change": -1,
+          "rank_raising_terms": 0,
+          "raised_lines": 10,
+          "lowered_lines": 623,
+          "raising_terms": 4,
+          "exceptions": 2,
+          "coefficient_bytes_max": 23,
+          "coefficient_bytes_total": 163,
+          "d_in_denominator": false,
+          "dispatched_after_baseline": false,
+          "sources": 1,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 16,
+          "affine": false,
+          "fixed": [
+            [
+              7,
+              1
+            ],
+            [
+              8,
               0
             ],
             [
@@ -34356,15 +33291,15 @@
               0
             ]
           ],
-          "rhs_terms": 8,
-          "max_rank_change": 0,
+          "rhs_terms": 11,
+          "max_rank_change": -1,
           "rank_raising_terms": 0,
-          "raised_lines": 514,
-          "lowered_lines": 1189,
-          "raising_terms": 6,
+          "raised_lines": 96,
+          "lowered_lines": 683,
+          "raising_terms": 4,
           "exceptions": 2,
-          "coefficient_bytes_max": 24,
-          "coefficient_bytes_total": 98,
+          "coefficient_bytes_max": 28,
+          "coefficient_bytes_total": 106,
           "d_in_denominator": false,
           "dispatched_after_baseline": false,
           "sources": 1,
@@ -34372,13 +33307,117 @@
         },
         {
           "chart": 1791,
-          "index": 44,
+          "index": 17,
           "affine": false,
           "fixed": [
             [
-              4,
+              7,
               1
             ],
+            [
+              10,
+              1
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ]
+          ],
+          "rhs_terms": 12,
+          "max_rank_change": 0,
+          "rank_raising_terms": 0,
+          "raised_lines": 524,
+          "lowered_lines": 1651,
+          "raising_terms": 6,
+          "exceptions": 2,
+          "coefficient_bytes_max": 48,
+          "coefficient_bytes_total": 144,
+          "d_in_denominator": false,
+          "dispatched_after_baseline": false,
+          "sources": 1,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 18,
+          "affine": false,
+          "fixed": [
+            [
+              7,
+              1
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ]
+          ],
+          "rhs_terms": 14,
+          "max_rank_change": 0,
+          "rank_raising_terms": 0,
+          "raised_lines": 9,
+          "lowered_lines": 759,
+          "raising_terms": 4,
+          "exceptions": 2,
+          "coefficient_bytes_max": 32,
+          "coefficient_bytes_total": 170,
+          "d_in_denominator": false,
+          "dispatched_after_baseline": false,
+          "sources": 1,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 19,
+          "affine": false,
+          "fixed": [
+            [
+              8,
+              0
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ]
+          ],
+          "rhs_terms": 12,
+          "max_rank_change": 0,
+          "rank_raising_terms": 0,
+          "raised_lines": 524,
+          "lowered_lines": 1651,
+          "raising_terms": 6,
+          "exceptions": 2,
+          "coefficient_bytes_max": 48,
+          "coefficient_bytes_total": 144,
+          "d_in_denominator": false,
+          "dispatched_after_baseline": false,
+          "sources": 1,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 20,
+          "affine": false,
+          "fixed": [
             [
               8,
               0
@@ -34412,7 +33451,163 @@
         },
         {
           "chart": 1791,
-          "index": 45,
+          "index": 21,
+          "affine": false,
+          "fixed": [
+            [
+              10,
+              1
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ]
+          ],
+          "rhs_terms": 8,
+          "max_rank_change": 0,
+          "rank_raising_terms": 0,
+          "raised_lines": 514,
+          "lowered_lines": 1728,
+          "raising_terms": 6,
+          "exceptions": 2,
+          "coefficient_bytes_max": 19,
+          "coefficient_bytes_total": 81,
+          "d_in_denominator": false,
+          "dispatched_after_baseline": false,
+          "sources": 1,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 22,
+          "affine": false,
+          "fixed": [
+            [
+              3,
+              1
+            ],
+            [
+              7,
+              1
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ]
+          ],
+          "rhs_terms": 13,
+          "max_rank_change": -1,
+          "rank_raising_terms": 0,
+          "raised_lines": 192,
+          "lowered_lines": 743,
+          "raising_terms": 4,
+          "exceptions": 2,
+          "coefficient_bytes_max": 26,
+          "coefficient_bytes_total": 105,
+          "d_in_denominator": false,
+          "dispatched_after_baseline": false,
+          "sources": 1,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 23,
+          "affine": false,
+          "fixed": [
+            [
+              4,
+              1
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              7,
+              1
+            ],
+            [
+              10,
+              1
+            ]
+          ],
+          "rhs_terms": 23,
+          "max_rank_change": 0,
+          "rank_raising_terms": 0,
+          "raised_lines": 5,
+          "lowered_lines": 1599,
+          "raising_terms": 4,
+          "exceptions": 2,
+          "coefficient_bytes_max": 26,
+          "coefficient_bytes_total": 195,
+          "d_in_denominator": false,
+          "dispatched_after_baseline": false,
+          "sources": 1,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 24,
+          "affine": false,
+          "fixed": [
+            [
+              4,
+              1
+            ],
+            [
+              7,
+              1
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ]
+          ],
+          "rhs_terms": 11,
+          "max_rank_change": -1,
+          "rank_raising_terms": 0,
+          "raised_lines": 96,
+          "lowered_lines": 683,
+          "raising_terms": 4,
+          "exceptions": 2,
+          "coefficient_bytes_max": 28,
+          "coefficient_bytes_total": 106,
+          "d_in_denominator": false,
+          "dispatched_after_baseline": false,
+          "sources": 1,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 25,
           "affine": false,
           "fixed": [
             [
@@ -34424,8 +33619,84 @@
               1
             ],
             [
-              8,
+              7,
+              1
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              12,
               0
+            ]
+          ],
+          "rhs_terms": 14,
+          "max_rank_change": 0,
+          "rank_raising_terms": 0,
+          "raised_lines": 37,
+          "lowered_lines": 1243,
+          "raising_terms": 6,
+          "exceptions": 2,
+          "coefficient_bytes_max": 34,
+          "coefficient_bytes_total": 147,
+          "d_in_denominator": false,
+          "dispatched_after_baseline": false,
+          "sources": 1,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 26,
+          "affine": false,
+          "fixed": [
+            [
+              5,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              7,
+              1
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              13,
+              0
+            ]
+          ],
+          "rhs_terms": 33,
+          "max_rank_change": 0,
+          "rank_raising_terms": 0,
+          "raised_lines": 41,
+          "lowered_lines": 1790,
+          "raising_terms": 10,
+          "exceptions": 2,
+          "coefficient_bytes_max": 39,
+          "coefficient_bytes_total": 354,
+          "d_in_denominator": false,
+          "dispatched_after_baseline": false,
+          "sources": 1,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 27,
+          "affine": false,
+          "fixed": [
+            [
+              6,
+              1
+            ],
+            [
+              7,
+              1
             ],
             [
               10,
@@ -34434,17 +33705,21 @@
             [
               11,
               0
+            ],
+            [
+              12,
+              0
             ]
           ],
-          "rhs_terms": 12,
-          "max_rank_change": -1,
+          "rhs_terms": 19,
+          "max_rank_change": 0,
           "rank_raising_terms": 0,
-          "raised_lines": 136,
-          "lowered_lines": 111,
-          "raising_terms": 4,
+          "raised_lines": 523,
+          "lowered_lines": 1654,
+          "raising_terms": 10,
           "exceptions": 2,
-          "coefficient_bytes_max": 29,
-          "coefficient_bytes_total": 141,
+          "coefficient_bytes_max": 47,
+          "coefficient_bytes_total": 195,
           "d_in_denominator": false,
           "dispatched_after_baseline": false,
           "sources": 1,
@@ -34452,7 +33727,7 @@
         },
         {
           "chart": 1791,
-          "index": 46,
+          "index": 28,
           "affine": false,
           "fixed": [
             [
@@ -34473,6 +33748,126 @@
             ],
             [
               12,
+              0
+            ]
+          ],
+          "rhs_terms": 19,
+          "max_rank_change": 0,
+          "rank_raising_terms": 0,
+          "raised_lines": 523,
+          "lowered_lines": 1654,
+          "raising_terms": 10,
+          "exceptions": 2,
+          "coefficient_bytes_max": 47,
+          "coefficient_bytes_total": 195,
+          "d_in_denominator": false,
+          "dispatched_after_baseline": false,
+          "sources": 1,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 29,
+          "affine": false,
+          "fixed": [
+            [
+              7,
+              1
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ]
+          ],
+          "rhs_terms": 11,
+          "max_rank_change": -1,
+          "rank_raising_terms": 0,
+          "raised_lines": 96,
+          "lowered_lines": 683,
+          "raising_terms": 4,
+          "exceptions": 2,
+          "coefficient_bytes_max": 28,
+          "coefficient_bytes_total": 106,
+          "d_in_denominator": false,
+          "dispatched_after_baseline": false,
+          "sources": 1,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 30,
+          "affine": false,
+          "fixed": [
+            [
+              7,
+              1
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ]
+          ],
+          "rhs_terms": 6,
+          "max_rank_change": 0,
+          "rank_raising_terms": 0,
+          "raised_lines": 9,
+          "lowered_lines": 84,
+          "raising_terms": 4,
+          "exceptions": 2,
+          "coefficient_bytes_max": 28,
+          "coefficient_bytes_total": 71,
+          "d_in_denominator": false,
+          "dispatched_after_baseline": false,
+          "sources": 1,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 31,
+          "affine": false,
+          "fixed": [
+            [
+              8,
+              0
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
               0
             ]
           ],
@@ -34492,51 +33887,7 @@
         },
         {
           "chart": 1791,
-          "index": 47,
-          "affine": false,
-          "fixed": [
-            [
-              1,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              8,
-              0
-            ],
-            [
-              12,
-              0
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 8,
-          "max_rank_change": -1,
-          "rank_raising_terms": 0,
-          "raised_lines": 36,
-          "lowered_lines": 203,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 23,
-          "coefficient_bytes_total": 69,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 48,
+          "index": 32,
           "affine": false,
           "fixed": [
             [
@@ -34545,58 +33896,6 @@
             ],
             [
               3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              10,
-              1
-            ]
-          ],
-          "rhs_terms": 20,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 514,
-          "lowered_lines": 1790,
-          "raising_terms": 6,
-          "exceptions": 2,
-          "coefficient_bytes_max": 27,
-          "coefficient_bytes_total": 228,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 49,
-          "affine": false,
-          "fixed": [
-            [
-              2,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
               1
             ],
             [
@@ -34604,396 +33903,8 @@
               1
             ],
             [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 12,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 514,
-          "lowered_lines": 1197,
-          "raising_terms": 6,
-          "exceptions": 2,
-          "coefficient_bytes_max": 28,
-          "coefficient_bytes_total": 156,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 50,
-          "affine": false,
-          "fixed": [
-            [
-              2,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
               8,
               0
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 13,
-          "max_rank_change": -1,
-          "rank_raising_terms": 0,
-          "raised_lines": 10,
-          "lowered_lines": 239,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 20,
-          "coefficient_bytes_total": 124,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 51,
-          "affine": false,
-          "fixed": [
-            [
-              2,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              8,
-              0
-            ],
-            [
-              10,
-              1
-            ]
-          ],
-          "rhs_terms": 12,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 132,
-          "lowered_lines": 123,
-          "raising_terms": 4,
-          "exceptions": 1,
-          "coefficient_bytes_max": 35,
-          "coefficient_bytes_total": 150,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 52,
-          "affine": false,
-          "fixed": [
-            [
-              2,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              11,
-              0
-            ]
-          ],
-          "rhs_terms": 10,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 514,
-          "lowered_lines": 1728,
-          "raising_terms": 6,
-          "exceptions": 2,
-          "coefficient_bytes_max": 23,
-          "coefficient_bytes_total": 108,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 53,
-          "affine": false,
-          "fixed": [
-            [
-              2,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              7,
-              1
-            ],
-            [
-              11,
-              0
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 8,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 514,
-          "lowered_lines": 1189,
-          "raising_terms": 6,
-          "exceptions": 2,
-          "coefficient_bytes_max": 24,
-          "coefficient_bytes_total": 98,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 54,
-          "affine": false,
-          "fixed": [
-            [
-              2,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              8,
-              0
-            ],
-            [
-              11,
-              0
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 8,
-          "max_rank_change": -1,
-          "rank_raising_terms": 0,
-          "raised_lines": 10,
-          "lowered_lines": 229,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 23,
-          "coefficient_bytes_total": 69,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 55,
-          "affine": false,
-          "fixed": [
-            [
-              2,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              8,
-              0
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              11,
-              0
-            ]
-          ],
-          "rhs_terms": 10,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 132,
-          "lowered_lines": 123,
-          "raising_terms": 4,
-          "exceptions": 1,
-          "coefficient_bytes_max": 36,
-          "coefficient_bytes_total": 128,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 56,
-          "affine": false,
-          "fixed": [
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              7,
-              1
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              12,
-              0
-            ]
-          ],
-          "rhs_terms": 22,
-          "max_rank_change": -1,
-          "rank_raising_terms": 0,
-          "raised_lines": 96,
-          "lowered_lines": 1727,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 27,
-          "coefficient_bytes_total": 254,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 57,
-          "affine": false,
-          "fixed": [
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              8,
-              0
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              12,
-              0
-            ]
-          ],
-          "rhs_terms": 22,
-          "max_rank_change": -1,
-          "rank_raising_terms": 0,
-          "raised_lines": 96,
-          "lowered_lines": 1727,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 27,
-          "coefficient_bytes_total": 254,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 58,
-          "affine": false,
-          "fixed": [
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              7,
-              1
-            ],
-            [
-              10,
-              1
             ],
             [
               12,
@@ -35020,11 +33931,191 @@
         },
         {
           "chart": 1791,
-          "index": 59,
+          "index": 33,
+          "affine": false,
+          "fixed": [
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              7,
+              1
+            ],
+            [
+              10,
+              1
+            ]
+          ],
+          "rhs_terms": 19,
+          "max_rank_change": -1,
+          "rank_raising_terms": 0,
+          "raised_lines": 136,
+          "lowered_lines": 1647,
+          "raising_terms": 4,
+          "exceptions": 2,
+          "coefficient_bytes_max": 25,
+          "coefficient_bytes_total": 206,
+          "d_in_denominator": false,
+          "dispatched_after_baseline": false,
+          "sources": 1,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 34,
+          "affine": false,
+          "fixed": [
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              7,
+              1
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ]
+          ],
+          "rhs_terms": 20,
+          "max_rank_change": -1,
+          "rank_raising_terms": 0,
+          "raised_lines": 192,
+          "lowered_lines": 743,
+          "raising_terms": 4,
+          "exceptions": 2,
+          "coefficient_bytes_max": 26,
+          "coefficient_bytes_total": 178,
+          "d_in_denominator": false,
+          "dispatched_after_baseline": false,
+          "sources": 1,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 35,
+          "affine": false,
+          "fixed": [
+            [
+              3,
+              1
+            ],
+            [
+              7,
+              1
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ]
+          ],
+          "rhs_terms": 13,
+          "max_rank_change": -1,
+          "rank_raising_terms": 0,
+          "raised_lines": 192,
+          "lowered_lines": 743,
+          "raising_terms": 4,
+          "exceptions": 2,
+          "coefficient_bytes_max": 26,
+          "coefficient_bytes_total": 105,
+          "d_in_denominator": false,
+          "dispatched_after_baseline": false,
+          "sources": 1,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 36,
+          "affine": false,
+          "fixed": [
+            [
+              3,
+              1
+            ],
+            [
+              7,
+              1
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ]
+          ],
+          "rhs_terms": 6,
+          "max_rank_change": 0,
+          "rank_raising_terms": 0,
+          "raised_lines": 132,
+          "lowered_lines": 1642,
+          "raising_terms": 4,
+          "exceptions": 1,
+          "coefficient_bytes_max": 37,
+          "coefficient_bytes_total": 83,
+          "d_in_denominator": false,
+          "dispatched_after_baseline": false,
+          "sources": 1,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 37,
           "affine": false,
           "fixed": [
             [
               4,
+              1
+            ],
+            [
+              5,
               1
             ],
             [
@@ -35040,23 +34131,19 @@
               1
             ],
             [
-              11,
-              0
-            ],
-            [
               12,
               0
             ]
           ],
-          "rhs_terms": 14,
+          "rhs_terms": 18,
           "max_rank_change": 0,
           "rank_raising_terms": 0,
           "raised_lines": 5,
           "lowered_lines": 1599,
           "raising_terms": 4,
           "exceptions": 2,
-          "coefficient_bytes_max": 22,
-          "coefficient_bytes_total": 76,
+          "coefficient_bytes_max": 26,
+          "coefficient_bytes_total": 129,
           "d_in_denominator": false,
           "dispatched_after_baseline": false,
           "sources": 1,
@@ -35064,7 +34151,7 @@
         },
         {
           "chart": 1791,
-          "index": 60,
+          "index": 38,
           "affine": false,
           "fixed": [
             [
@@ -35072,35 +34159,35 @@
               1
             ],
             [
+              5,
+              1
+            ],
+            [
               6,
               1
             ],
             [
-              8,
-              0
+              7,
+              1
             ],
             [
               10,
               1
             ],
             [
-              11,
-              0
-            ],
-            [
-              12,
+              13,
               0
             ]
           ],
-          "rhs_terms": 14,
-          "max_rank_change": 0,
+          "rhs_terms": 11,
+          "max_rank_change": -1,
           "rank_raising_terms": 0,
-          "raised_lines": 5,
-          "lowered_lines": 1599,
+          "raised_lines": 96,
+          "lowered_lines": 683,
           "raising_terms": 4,
           "exceptions": 2,
           "coefficient_bytes_max": 22,
-          "coefficient_bytes_total": 76,
+          "coefficient_bytes_total": 96,
           "d_in_denominator": false,
           "dispatched_after_baseline": false,
           "sources": 1,
@@ -35108,7 +34195,7 @@
         },
         {
           "chart": 1791,
-          "index": 61,
+          "index": 39,
           "affine": false,
           "fixed": [
             [
@@ -35152,7 +34239,7 @@
         },
         {
           "chart": 1791,
-          "index": 62,
+          "index": 40,
           "affine": false,
           "fixed": [
             [
@@ -35196,19 +34283,11 @@
         },
         {
           "chart": 1791,
-          "index": 63,
+          "index": 41,
           "affine": false,
           "fixed": [
             [
-              1,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
+              5,
               1
             ],
             [
@@ -35222,190 +34301,6 @@
             [
               10,
               1
-            ],
-            [
-              12,
-              0
-            ]
-          ],
-          "rhs_terms": 22,
-          "max_rank_change": -1,
-          "rank_raising_terms": 0,
-          "raised_lines": 192,
-          "lowered_lines": 743,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 22,
-          "coefficient_bytes_total": 196,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 64,
-          "affine": false,
-          "fixed": [
-            [
-              1,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              8,
-              0
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              12,
-              0
-            ]
-          ],
-          "rhs_terms": 8,
-          "max_rank_change": -1,
-          "rank_raising_terms": 0,
-          "raised_lines": 36,
-          "lowered_lines": 203,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 23,
-          "coefficient_bytes_total": 69,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 65,
-          "affine": false,
-          "fixed": [
-            [
-              1,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              7,
-              1
-            ],
-            [
-              8,
-              0
-            ],
-            [
-              12,
-              0
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 8,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 132,
-          "lowered_lines": 1643,
-          "raising_terms": 4,
-          "exceptions": 1,
-          "coefficient_bytes_max": 38,
-          "coefficient_bytes_total": 109,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 66,
-          "affine": false,
-          "fixed": [
-            [
-              1,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              7,
-              1
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              12,
-              0
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 20,
-          "max_rank_change": -1,
-          "rank_raising_terms": 0,
-          "raised_lines": 192,
-          "lowered_lines": 743,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 21,
-          "coefficient_bytes_total": 173,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 67,
-          "affine": false,
-          "fixed": [
-            [
-              1,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              8,
-              0
             ],
             [
               11,
@@ -35413,166 +34308,18 @@
             ],
             [
               12,
-              0
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 6,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 132,
-          "lowered_lines": 1642,
-          "raising_terms": 4,
-          "exceptions": 1,
-          "coefficient_bytes_max": 37,
-          "coefficient_bytes_total": 85,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 68,
-          "affine": false,
-          "fixed": [
-            [
-              2,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              7,
-              1
-            ],
-            [
-              10,
-              1
-            ]
-          ],
-          "rhs_terms": 22,
-          "max_rank_change": -1,
-          "rank_raising_terms": 0,
-          "raised_lines": 96,
-          "lowered_lines": 1727,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 26,
-          "coefficient_bytes_total": 251,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 69,
-          "affine": false,
-          "fixed": [
-            [
-              2,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              8,
-              0
-            ],
-            [
-              10,
-              1
-            ]
-          ],
-          "rhs_terms": 22,
-          "max_rank_change": -1,
-          "rank_raising_terms": 0,
-          "raised_lines": 96,
-          "lowered_lines": 1727,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 26,
-          "coefficient_bytes_total": 251,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 70,
-          "affine": false,
-          "fixed": [
-            [
-              2,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              8,
-              0
-            ],
-            [
-              13,
               0
             ]
           ],
           "rhs_terms": 12,
-          "max_rank_change": -1,
+          "max_rank_change": 0,
           "rank_raising_terms": 0,
-          "raised_lines": 96,
-          "lowered_lines": 175,
-          "raising_terms": 4,
+          "raised_lines": 37,
+          "lowered_lines": 1243,
+          "raising_terms": 6,
           "exceptions": 2,
-          "coefficient_bytes_max": 22,
-          "coefficient_bytes_total": 130,
+          "coefficient_bytes_max": 34,
+          "coefficient_bytes_total": 120,
           "d_in_denominator": false,
           "dispatched_after_baseline": false,
           "sources": 1,
@@ -35580,23 +34327,15 @@
         },
         {
           "chart": 1791,
-          "index": 71,
+          "index": 42,
           "affine": false,
           "fixed": [
             [
-              2,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
               5,
+              1
+            ],
+            [
+              6,
               1
             ],
             [
@@ -35606,50 +34345,6 @@
             [
               10,
               1
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 13,
-          "max_rank_change": -1,
-          "rank_raising_terms": 0,
-          "raised_lines": 10,
-          "lowered_lines": 239,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 20,
-          "coefficient_bytes_total": 124,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 72,
-          "affine": false,
-          "fixed": [
-            [
-              2,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              8,
-              0
             ],
             [
               12,
@@ -35660,63 +34355,15 @@
               0
             ]
           ],
-          "rhs_terms": 12,
-          "max_rank_change": -1,
-          "rank_raising_terms": 0,
-          "raised_lines": 96,
-          "lowered_lines": 175,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 24,
-          "coefficient_bytes_total": 134,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 73,
-          "affine": false,
-          "fixed": [
-            [
-              2,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              7,
-              1
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              11,
-              0
-            ]
-          ],
-          "rhs_terms": 19,
+          "rhs_terms": 14,
           "max_rank_change": 0,
           "rank_raising_terms": 0,
-          "raised_lines": 5,
-          "lowered_lines": 1599,
+          "raised_lines": 9,
+          "lowered_lines": 759,
           "raising_terms": 4,
           "exceptions": 2,
-          "coefficient_bytes_max": 19,
-          "coefficient_bytes_total": 137,
+          "coefficient_bytes_max": 32,
+          "coefficient_bytes_total": 170,
           "d_in_denominator": false,
           "dispatched_after_baseline": false,
           "sources": 1,
@@ -35724,17 +34371,9 @@
         },
         {
           "chart": 1791,
-          "index": 74,
+          "index": 43,
           "affine": false,
           "fixed": [
-            [
-              2,
-              1
-            ],
-            [
-              4,
-              1
-            ],
             [
               5,
               1
@@ -35754,65 +34393,21 @@
             [
               11,
               0
-            ]
-          ],
-          "rhs_terms": 19,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 5,
-          "lowered_lines": 1599,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 19,
-          "coefficient_bytes_total": 137,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 75,
-          "affine": false,
-          "fixed": [
-            [
-              2,
-              1
             ],
             [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              8,
-              0
-            ],
-            [
-              11,
-              0
-            ],
-            [
-              13,
+              12,
               0
             ]
           ],
           "rhs_terms": 10,
           "max_rank_change": 0,
           "rank_raising_terms": 0,
-          "raised_lines": 132,
-          "lowered_lines": 1643,
-          "raising_terms": 4,
-          "exceptions": 1,
-          "coefficient_bytes_max": 38,
-          "coefficient_bytes_total": 138,
+          "raised_lines": 37,
+          "lowered_lines": 219,
+          "raising_terms": 6,
+          "exceptions": 2,
+          "coefficient_bytes_max": 34,
+          "coefficient_bytes_total": 99,
           "d_in_denominator": false,
           "dispatched_after_baseline": false,
           "sources": 1,
@@ -35820,11 +34415,63 @@
         },
         {
           "chart": 1791,
-          "index": 76,
+          "index": 44,
+          "affine": false,
+          "fixed": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              7,
+              1
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ]
+          ],
+          "rhs_terms": 8,
+          "max_rank_change": 0,
+          "rank_raising_terms": 0,
+          "raised_lines": 132,
+          "lowered_lines": 1643,
+          "raising_terms": 4,
+          "exceptions": 1,
+          "coefficient_bytes_max": 35,
+          "coefficient_bytes_total": 104,
+          "d_in_denominator": false,
+          "dispatched_after_baseline": false,
+          "sources": 1,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 45,
           "affine": false,
           "fixed": [
             [
               2,
+              1
+            ],
+            [
+              3,
               1
             ],
             [
@@ -35833,6 +34480,142 @@
             ],
             [
               5,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              7,
+              1
+            ],
+            [
+              10,
+              1
+            ]
+          ],
+          "rhs_terms": 22,
+          "max_rank_change": -1,
+          "rank_raising_terms": 0,
+          "raised_lines": 96,
+          "lowered_lines": 1727,
+          "raising_terms": 4,
+          "exceptions": 2,
+          "coefficient_bytes_max": 26,
+          "coefficient_bytes_total": 251,
+          "d_in_denominator": false,
+          "dispatched_after_baseline": false,
+          "sources": 1,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 46,
+          "affine": false,
+          "fixed": [
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              7,
+              1
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ]
+          ],
+          "rhs_terms": 12,
+          "max_rank_change": -1,
+          "rank_raising_terms": 0,
+          "raised_lines": 96,
+          "lowered_lines": 175,
+          "raising_terms": 4,
+          "exceptions": 2,
+          "coefficient_bytes_max": 29,
+          "coefficient_bytes_total": 141,
+          "d_in_denominator": false,
+          "dispatched_after_baseline": false,
+          "sources": 1,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 47,
+          "affine": false,
+          "fixed": [
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              7,
+              1
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ]
+          ],
+          "rhs_terms": 12,
+          "max_rank_change": -1,
+          "rank_raising_terms": 0,
+          "raised_lines": 96,
+          "lowered_lines": 175,
+          "raising_terms": 4,
+          "exceptions": 2,
+          "coefficient_bytes_max": 29,
+          "coefficient_bytes_total": 141,
+          "d_in_denominator": false,
+          "dispatched_after_baseline": false,
+          "sources": 1,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 48,
+          "affine": false,
+          "fixed": [
+            [
+              2,
+              1
+            ],
+            [
+              4,
               1
             ],
             [
@@ -35848,27 +34631,31 @@
               0
             ],
             [
+              12,
+              0
+            ],
+            [
               13,
               0
             ]
           ],
-          "rhs_terms": 8,
-          "max_rank_change": -1,
+          "rhs_terms": 7,
+          "max_rank_change": 0,
           "rank_raising_terms": 0,
-          "raised_lines": 10,
-          "lowered_lines": 229,
-          "raising_terms": 4,
+          "raised_lines": 67,
+          "lowered_lines": 684,
+          "raising_terms": 7,
           "exceptions": 2,
-          "coefficient_bytes_max": 23,
-          "coefficient_bytes_total": 69,
+          "coefficient_bytes_max": 45,
+          "coefficient_bytes_total": 163,
           "d_in_denominator": false,
           "dispatched_after_baseline": false,
-          "sources": 1,
+          "sources": 2,
           "score": []
         },
         {
           "chart": 1791,
-          "index": 77,
+          "index": 49,
           "affine": false,
           "fixed": [
             [
@@ -35880,12 +34667,156 @@
               1
             ],
             [
+              8,
+              0
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ]
+          ],
+          "rhs_terms": 7,
+          "max_rank_change": 0,
+          "rank_raising_terms": 0,
+          "raised_lines": 67,
+          "lowered_lines": 684,
+          "raising_terms": 7,
+          "exceptions": 2,
+          "coefficient_bytes_max": 45,
+          "coefficient_bytes_total": 163,
+          "d_in_denominator": false,
+          "dispatched_after_baseline": false,
+          "sources": 2,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 50,
+          "affine": false,
+          "fixed": [
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
               5,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              7,
+              1
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              12,
+              0
+            ]
+          ],
+          "rhs_terms": 22,
+          "max_rank_change": -1,
+          "rank_raising_terms": 0,
+          "raised_lines": 192,
+          "lowered_lines": 743,
+          "raising_terms": 4,
+          "exceptions": 2,
+          "coefficient_bytes_max": 27,
+          "coefficient_bytes_total": 201,
+          "d_in_denominator": false,
+          "dispatched_after_baseline": false,
+          "sources": 1,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 51,
+          "affine": false,
+          "fixed": [
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              7,
+              1
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              13,
+              0
+            ]
+          ],
+          "rhs_terms": 19,
+          "max_rank_change": -1,
+          "rank_raising_terms": 0,
+          "raised_lines": 136,
+          "lowered_lines": 1647,
+          "raising_terms": 4,
+          "exceptions": 2,
+          "coefficient_bytes_max": 25,
+          "coefficient_bytes_total": 206,
+          "d_in_denominator": false,
+          "dispatched_after_baseline": false,
+          "sources": 1,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 52,
+          "affine": false,
+          "fixed": [
+            [
+              3,
+              1
+            ],
+            [
+              7,
               1
             ],
             [
               8,
               0
+            ],
+            [
+              10,
+              1
             ],
             [
               11,
@@ -35904,11 +34835,11 @@
           "max_rank_change": 0,
           "rank_raising_terms": 0,
           "raised_lines": 132,
-          "lowered_lines": 1642,
+          "lowered_lines": 123,
           "raising_terms": 4,
           "exceptions": 1,
-          "coefficient_bytes_max": 37,
-          "coefficient_bytes_total": 83,
+          "coefficient_bytes_max": 32,
+          "coefficient_bytes_total": 74,
           "d_in_denominator": false,
           "dispatched_after_baseline": false,
           "sources": 1,
@@ -35916,111 +34847,15 @@
         },
         {
           "chart": 1791,
-          "index": 78,
+          "index": 53,
           "affine": false,
           "fixed": [
-            [
-              2,
-              1
-            ],
             [
               4,
               1
             ],
             [
-              7,
-              1
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              11,
-              0
-            ],
-            [
-              12,
-              0
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 7,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 67,
-          "lowered_lines": 684,
-          "raising_terms": 7,
-          "exceptions": 2,
-          "coefficient_bytes_max": 45,
-          "coefficient_bytes_total": 163,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 2,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 79,
-          "affine": false,
-          "fixed": [
-            [
-              2,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              8,
-              0
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              11,
-              0
-            ],
-            [
-              12,
-              0
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 7,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 67,
-          "lowered_lines": 684,
-          "raising_terms": 7,
-          "exceptions": 2,
-          "coefficient_bytes_max": 45,
-          "coefficient_bytes_total": 163,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 2,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 80,
-          "affine": false,
-          "fixed": [
-            [
-              3,
-              1
-            ],
-            [
-              4,
+              5,
               1
             ],
             [
@@ -36044,15 +34879,15 @@
               0
             ]
           ],
-          "rhs_terms": 19,
+          "rhs_terms": 14,
           "max_rank_change": 0,
           "rank_raising_terms": 0,
-          "raised_lines": 523,
-          "lowered_lines": 1654,
-          "raising_terms": 10,
+          "raised_lines": 5,
+          "lowered_lines": 1599,
+          "raising_terms": 4,
           "exceptions": 2,
-          "coefficient_bytes_max": 39,
-          "coefficient_bytes_total": 185,
+          "coefficient_bytes_max": 22,
+          "coefficient_bytes_total": 76,
           "d_in_denominator": false,
           "dispatched_after_baseline": false,
           "sources": 1,
@@ -36060,15 +34895,111 @@
         },
         {
           "chart": 1791,
-          "index": 81,
+          "index": 54,
           "affine": false,
           "fixed": [
             [
-              3,
+              4,
               1
             ],
             [
+              5,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              7,
+              1
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              13,
+              0
+            ]
+          ],
+          "rhs_terms": 19,
+          "max_rank_change": -1,
+          "rank_raising_terms": 0,
+          "raised_lines": 136,
+          "lowered_lines": 1647,
+          "raising_terms": 4,
+          "exceptions": 2,
+          "coefficient_bytes_max": 27,
+          "coefficient_bytes_total": 210,
+          "d_in_denominator": false,
+          "dispatched_after_baseline": false,
+          "sources": 1,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 55,
+          "affine": false,
+          "fixed": [
+            [
               4,
+              1
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              7,
+              1
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ]
+          ],
+          "rhs_terms": 11,
+          "max_rank_change": -1,
+          "rank_raising_terms": 0,
+          "raised_lines": 96,
+          "lowered_lines": 683,
+          "raising_terms": 4,
+          "exceptions": 2,
+          "coefficient_bytes_max": 22,
+          "coefficient_bytes_total": 96,
+          "d_in_denominator": false,
+          "dispatched_after_baseline": false,
+          "sources": 1,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 56,
+          "affine": false,
+          "fixed": [
+            [
+              4,
+              1
+            ],
+            [
+              5,
               1
             ],
             [
@@ -36092,15 +35023,15 @@
               0
             ]
           ],
-          "rhs_terms": 19,
+          "rhs_terms": 14,
           "max_rank_change": 0,
           "rank_raising_terms": 0,
-          "raised_lines": 523,
-          "lowered_lines": 1654,
-          "raising_terms": 10,
+          "raised_lines": 5,
+          "lowered_lines": 1599,
+          "raising_terms": 4,
           "exceptions": 2,
-          "coefficient_bytes_max": 39,
-          "coefficient_bytes_total": 185,
+          "coefficient_bytes_max": 22,
+          "coefficient_bytes_total": 76,
           "d_in_denominator": false,
           "dispatched_after_baseline": false,
           "sources": 1,
@@ -36108,7 +35039,7 @@
         },
         {
           "chart": 1791,
-          "index": 82,
+          "index": 57,
           "affine": false,
           "fixed": [
             [
@@ -36156,7 +35087,7 @@
         },
         {
           "chart": 1791,
-          "index": 83,
+          "index": 58,
           "affine": false,
           "fixed": [
             [
@@ -36204,7 +35135,103 @@
         },
         {
           "chart": 1791,
-          "index": 84,
+          "index": 59,
+          "affine": false,
+          "fixed": [
+            [
+              5,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              7,
+              1
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ]
+          ],
+          "rhs_terms": 11,
+          "max_rank_change": -1,
+          "rank_raising_terms": 0,
+          "raised_lines": 96,
+          "lowered_lines": 683,
+          "raising_terms": 4,
+          "exceptions": 2,
+          "coefficient_bytes_max": 22,
+          "coefficient_bytes_total": 96,
+          "d_in_denominator": false,
+          "dispatched_after_baseline": false,
+          "sources": 1,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 60,
+          "affine": false,
+          "fixed": [
+            [
+              5,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ]
+          ],
+          "rhs_terms": 6,
+          "max_rank_change": 0,
+          "rank_raising_terms": 0,
+          "raised_lines": 132,
+          "lowered_lines": 123,
+          "raising_terms": 4,
+          "exceptions": 1,
+          "coefficient_bytes_max": 35,
+          "coefficient_bytes_total": 79,
+          "d_in_denominator": false,
+          "dispatched_after_baseline": false,
+          "sources": 1,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 61,
           "affine": false,
           "fixed": [
             [
@@ -36240,15 +35267,15 @@
               1
             ]
           ],
-          "rhs_terms": 33,
+          "rhs_terms": 41,
           "max_rank_change": 0,
           "rank_raising_terms": 0,
-          "raised_lines": 156,
+          "raised_lines": 1158,
           "lowered_lines": 1775,
           "raising_terms": 8,
           "exceptions": 2,
-          "coefficient_bytes_max": 32,
-          "coefficient_bytes_total": 444,
+          "coefficient_bytes_max": 33,
+          "coefficient_bytes_total": 517,
           "d_in_denominator": false,
           "dispatched_after_baseline": false,
           "sources": 2,
@@ -36256,215 +35283,7 @@
         },
         {
           "chart": 1791,
-          "index": 85,
-          "affine": false,
-          "fixed": [
-            [
-              1,
-              1
-            ],
-            [
-              2,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              8,
-              0
-            ],
-            [
-              10,
-              1
-            ]
-          ],
-          "rhs_terms": 13,
-          "max_rank_change": -1,
-          "rank_raising_terms": 0,
-          "raised_lines": 36,
-          "lowered_lines": 239,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 17,
-          "coefficient_bytes_total": 119,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 86,
-          "affine": false,
-          "fixed": [
-            [
-              1,
-              1
-            ],
-            [
-              2,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              8,
-              0
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 13,
-          "max_rank_change": -1,
-          "rank_raising_terms": 0,
-          "raised_lines": 36,
-          "lowered_lines": 239,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 17,
-          "coefficient_bytes_total": 119,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 87,
-          "affine": false,
-          "fixed": [
-            [
-              1,
-              1
-            ],
-            [
-              2,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              8,
-              0
-            ],
-            [
-              12,
-              0
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 8,
-          "max_rank_change": -1,
-          "rank_raising_terms": 0,
-          "raised_lines": 36,
-          "lowered_lines": 203,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 17,
-          "coefficient_bytes_total": 59,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 88,
-          "affine": false,
-          "fixed": [
-            [
-              1,
-              1
-            ],
-            [
-              2,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              7,
-              1
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              12,
-              0
-            ]
-          ],
-          "rhs_terms": 29,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 523,
-          "lowered_lines": 1662,
-          "raising_terms": 10,
-          "exceptions": 2,
-          "coefficient_bytes_max": 40,
-          "coefficient_bytes_total": 306,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 89,
+          "index": 62,
           "affine": false,
           "fixed": [
             [
@@ -36516,7 +35335,7 @@
         },
         {
           "chart": 1791,
-          "index": 90,
+          "index": 63,
           "affine": false,
           "fixed": [
             [
@@ -36524,15 +35343,11 @@
               1
             ],
             [
+              2,
+              1
+            ],
+            [
               3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              6,
               1
             ],
             [
@@ -36550,17 +35365,21 @@
             [
               12,
               0
+            ],
+            [
+              13,
+              0
             ]
           ],
-          "rhs_terms": 15,
-          "max_rank_change": -1,
+          "rhs_terms": 8,
+          "max_rank_change": 0,
           "rank_raising_terms": 0,
-          "raised_lines": 192,
-          "lowered_lines": 743,
+          "raised_lines": 132,
+          "lowered_lines": 123,
           "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 22,
-          "coefficient_bytes_total": 123,
+          "exceptions": 1,
+          "coefficient_bytes_max": 33,
+          "coefficient_bytes_total": 96,
           "d_in_denominator": false,
           "dispatched_after_baseline": false,
           "sources": 1,
@@ -36568,111 +35387,7 @@
         },
         {
           "chart": 1791,
-          "index": 91,
-          "affine": false,
-          "fixed": [
-            [
-              1,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              7,
-              1
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              11,
-              0
-            ],
-            [
-              12,
-              0
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 17,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 195,
-          "lowered_lines": 748,
-          "raising_terms": 17,
-          "exceptions": 2,
-          "coefficient_bytes_max": 28,
-          "coefficient_bytes_total": 285,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 2,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 92,
-          "affine": false,
-          "fixed": [
-            [
-              1,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              8,
-              0
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              11,
-              0
-            ],
-            [
-              12,
-              0
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 10,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 195,
-          "lowered_lines": 620,
-          "raising_terms": 10,
-          "exceptions": 2,
-          "coefficient_bytes_max": 28,
-          "coefficient_bytes_total": 160,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 2,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 93,
+          "index": 64,
           "affine": false,
           "fixed": [
             [
@@ -36708,15 +35423,15 @@
               0
             ]
           ],
-          "rhs_terms": 23,
+          "rhs_terms": 35,
           "max_rank_change": 0,
           "rank_raising_terms": 0,
-          "raised_lines": 156,
-          "lowered_lines": 1647,
+          "raised_lines": 1158,
+          "lowered_lines": 1775,
           "raising_terms": 8,
           "exceptions": 2,
-          "coefficient_bytes_max": 28,
-          "coefficient_bytes_total": 320,
+          "coefficient_bytes_max": 34,
+          "coefficient_bytes_total": 446,
           "d_in_denominator": false,
           "dispatched_after_baseline": false,
           "sources": 2,
@@ -36724,7 +35439,59 @@
         },
         {
           "chart": 1791,
-          "index": 94,
+          "index": 65,
+          "affine": false,
+          "fixed": [
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              7,
+              1
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              12,
+              0
+            ]
+          ],
+          "rhs_terms": 22,
+          "max_rank_change": -1,
+          "rank_raising_terms": 0,
+          "raised_lines": 96,
+          "lowered_lines": 1727,
+          "raising_terms": 4,
+          "exceptions": 2,
+          "coefficient_bytes_max": 26,
+          "coefficient_bytes_total": 251,
+          "d_in_denominator": false,
+          "dispatched_after_baseline": false,
+          "sources": 1,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 66,
           "affine": false,
           "fixed": [
             [
@@ -36776,111 +35543,7 @@
         },
         {
           "chart": 1791,
-          "index": 95,
-          "affine": false,
-          "fixed": [
-            [
-              2,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              8,
-              0
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              11,
-              0
-            ]
-          ],
-          "rhs_terms": 16,
-          "max_rank_change": -1,
-          "rank_raising_terms": 0,
-          "raised_lines": 6,
-          "lowered_lines": 1775,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 24,
-          "coefficient_bytes_total": 160,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 96,
-          "affine": false,
-          "fixed": [
-            [
-              2,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              7,
-              1
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              12,
-              0
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 12,
-          "max_rank_change": -1,
-          "rank_raising_terms": 0,
-          "raised_lines": 96,
-          "lowered_lines": 175,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 24,
-          "coefficient_bytes_total": 134,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 97,
+          "index": 67,
           "affine": false,
           "fixed": [
             [
@@ -36932,7 +35595,7 @@
         },
         {
           "chart": 1791,
-          "index": 98,
+          "index": 68,
           "affine": false,
           "fixed": [
             [
@@ -36984,7 +35647,7 @@
         },
         {
           "chart": 1791,
-          "index": 99,
+          "index": 69,
           "affine": false,
           "fixed": [
             [
@@ -37020,15 +35683,15 @@
               0
             ]
           ],
-          "rhs_terms": 23,
+          "rhs_terms": 26,
           "max_rank_change": 0,
           "rank_raising_terms": 0,
-          "raised_lines": 156,
-          "lowered_lines": 1647,
+          "raised_lines": 1158,
+          "lowered_lines": 1775,
           "raising_terms": 8,
           "exceptions": 2,
-          "coefficient_bytes_max": 33,
-          "coefficient_bytes_total": 330,
+          "coefficient_bytes_max": 30,
+          "coefficient_bytes_total": 333,
           "d_in_denominator": false,
           "dispatched_after_baseline": false,
           "sources": 2,
@@ -37036,59 +35699,7 @@
         },
         {
           "chart": 1791,
-          "index": 100,
-          "affine": false,
-          "fixed": [
-            [
-              2,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              8,
-              0
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              11,
-              0
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 14,
-          "max_rank_change": -1,
-          "rank_raising_terms": 0,
-          "raised_lines": 6,
-          "lowered_lines": 751,
-          "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 20,
-          "coefficient_bytes_total": 133,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 101,
+          "index": 70,
           "affine": false,
           "fixed": [
             [
@@ -37124,23 +35735,75 @@
               0
             ]
           ],
-          "rhs_terms": 115,
+          "rhs_terms": 71,
           "max_rank_change": 0,
           "rank_raising_terms": 0,
-          "raised_lines": 765,
+          "raised_lines": 1742,
           "lowered_lines": 1791,
-          "raising_terms": 78,
+          "raising_terms": 37,
           "exceptions": 1,
           "coefficient_bytes_max": 52,
-          "coefficient_bytes_total": 2697,
+          "coefficient_bytes_total": 1867,
           "d_in_denominator": true,
           "dispatched_after_baseline": false,
-          "sources": 35,
+          "sources": 11,
           "score": []
         },
         {
           "chart": 1791,
-          "index": 102,
+          "index": 71,
+          "affine": false,
+          "fixed": [
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              7,
+              1
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ]
+          ],
+          "rhs_terms": 20,
+          "max_rank_change": -1,
+          "rank_raising_terms": 0,
+          "raised_lines": 192,
+          "lowered_lines": 743,
+          "raising_terms": 4,
+          "exceptions": 2,
+          "coefficient_bytes_max": 23,
+          "coefficient_bytes_total": 173,
+          "d_in_denominator": false,
+          "dispatched_after_baseline": false,
+          "sources": 1,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 72,
           "affine": false,
           "fixed": [
             [
@@ -37192,7 +35855,7 @@
         },
         {
           "chart": 1791,
-          "index": 103,
+          "index": 73,
           "affine": false,
           "fixed": [
             [
@@ -37228,23 +35891,23 @@
               0
             ]
           ],
-          "rhs_terms": 33,
+          "rhs_terms": 40,
           "max_rank_change": 0,
           "rank_raising_terms": 0,
-          "raised_lines": 686,
-          "lowered_lines": 1791,
-          "raising_terms": 32,
+          "raised_lines": 703,
+          "lowered_lines": 1790,
+          "raising_terms": 39,
           "exceptions": 2,
-          "coefficient_bytes_max": 107,
-          "coefficient_bytes_total": 1461,
+          "coefficient_bytes_max": 109,
+          "coefficient_bytes_total": 1808,
           "d_in_denominator": true,
           "dispatched_after_baseline": false,
-          "sources": 15,
+          "sources": 26,
           "score": []
         },
         {
           "chart": 1791,
-          "index": 104,
+          "index": 74,
           "affine": false,
           "fixed": [
             [
@@ -37296,7 +35959,7 @@
         },
         {
           "chart": 1791,
-          "index": 105,
+          "index": 75,
           "affine": false,
           "fixed": [
             [
@@ -37305,62 +35968,10 @@
             ],
             [
               4,
-              1
-            ],
-            [
-              6,
               1
             ],
             [
               7,
-              1
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              11,
-              0
-            ],
-            [
-              12,
-              0
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 17,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 195,
-          "lowered_lines": 748,
-          "raising_terms": 17,
-          "exceptions": 2,
-          "coefficient_bytes_max": 34,
-          "coefficient_bytes_total": 316,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 2,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 106,
-          "affine": false,
-          "fixed": [
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              6,
               1
             ],
             [
@@ -37392,7 +36003,7 @@
           "raising_terms": 10,
           "exceptions": 2,
           "coefficient_bytes_max": 40,
-          "coefficient_bytes_total": 177,
+          "coefficient_bytes_total": 185,
           "d_in_denominator": false,
           "dispatched_after_baseline": false,
           "sources": 2,
@@ -37400,7 +36011,111 @@
         },
         {
           "chart": 1791,
-          "index": 107,
+          "index": 76,
+          "affine": false,
+          "fixed": [
+            [
+              3,
+              1
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              7,
+              1
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ]
+          ],
+          "rhs_terms": 13,
+          "max_rank_change": -1,
+          "rank_raising_terms": 0,
+          "raised_lines": 192,
+          "lowered_lines": 743,
+          "raising_terms": 4,
+          "exceptions": 2,
+          "coefficient_bytes_max": 23,
+          "coefficient_bytes_total": 100,
+          "d_in_denominator": false,
+          "dispatched_after_baseline": false,
+          "sources": 1,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 77,
+          "affine": false,
+          "fixed": [
+            [
+              4,
+              1
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ]
+          ],
+          "rhs_terms": 12,
+          "max_rank_change": 0,
+          "rank_raising_terms": 0,
+          "raised_lines": 102,
+          "lowered_lines": 744,
+          "raising_terms": 12,
+          "exceptions": 2,
+          "coefficient_bytes_max": 36,
+          "coefficient_bytes_total": 184,
+          "d_in_denominator": false,
+          "dispatched_after_baseline": false,
+          "sources": 3,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 78,
           "affine": false,
           "fixed": [
             [
@@ -37452,175 +36167,7 @@
         },
         {
           "chart": 1791,
-          "index": 108,
-          "affine": false,
-          "fixed": [
-            [
-              0,
-              1
-            ],
-            [
-              1,
-              1
-            ],
-            [
-              2,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              7,
-              1
-            ],
-            [
-              10,
-              1
-            ]
-          ],
-          "rhs_terms": 41,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 1158,
-          "lowered_lines": 1775,
-          "raising_terms": 8,
-          "exceptions": 2,
-          "coefficient_bytes_max": 33,
-          "coefficient_bytes_total": 517,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 2,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 109,
-          "affine": false,
-          "fixed": [
-            [
-              0,
-              1
-            ],
-            [
-              2,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              7,
-              1
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              11,
-              0
-            ]
-          ],
-          "rhs_terms": 35,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 1158,
-          "lowered_lines": 1775,
-          "raising_terms": 8,
-          "exceptions": 2,
-          "coefficient_bytes_max": 34,
-          "coefficient_bytes_total": 446,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 2,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 110,
-          "affine": false,
-          "fixed": [
-            [
-              0,
-              1
-            ],
-            [
-              2,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              7,
-              1
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              11,
-              0
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 22,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 98,
-          "lowered_lines": 749,
-          "raising_terms": 17,
-          "exceptions": 2,
-          "coefficient_bytes_max": 45,
-          "coefficient_bytes_total": 631,
-          "d_in_denominator": true,
-          "dispatched_after_baseline": false,
-          "sources": 29,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 111,
+          "index": 79,
           "affine": false,
           "fixed": [
             [
@@ -37652,180 +36199,12 @@
               1
             ],
             [
-              8,
-              0
-            ],
-            [
-              10,
-              1
-            ]
-          ],
-          "rhs_terms": 33,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 156,
-          "lowered_lines": 1775,
-          "raising_terms": 8,
-          "exceptions": 2,
-          "coefficient_bytes_max": 29,
-          "coefficient_bytes_total": 408,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 2,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 112,
-          "affine": false,
-          "fixed": [
-            [
-              1,
-              1
-            ],
-            [
-              2,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              7,
-              1
-            ],
-            [
-              8,
-              0
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 12,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 132,
-          "lowered_lines": 1643,
-          "raising_terms": 4,
-          "exceptions": 1,
-          "coefficient_bytes_max": 34,
-          "coefficient_bytes_total": 157,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 113,
-          "affine": false,
-          "fixed": [
-            [
-              1,
-              1
-            ],
-            [
-              2,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              7,
+              9,
               1
             ],
             [
               10,
               1
-            ],
-            [
-              12,
-              0
-            ]
-          ],
-          "rhs_terms": 51,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 1220,
-          "lowered_lines": 1791,
-          "raising_terms": 22,
-          "exceptions": 3,
-          "coefficient_bytes_max": 107,
-          "coefficient_bytes_total": 954,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 10,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 114,
-          "affine": false,
-          "fixed": [
-            [
-              1,
-              1
-            ],
-            [
-              2,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              7,
-              1
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              13,
-              0
             ]
           ],
           "rhs_terms": 33,
@@ -37844,7 +36223,7 @@
         },
         {
           "chart": 1791,
-          "index": 115,
+          "index": 80,
           "affine": false,
           "fixed": [
             [
@@ -37872,35 +36251,35 @@
               1
             ],
             [
-              8,
-              0
+              7,
+              1
             ],
             [
-              11,
-              0
+              10,
+              1
             ],
             [
-              13,
+              12,
               0
             ]
           ],
-          "rhs_terms": 10,
+          "rhs_terms": 108,
           "max_rank_change": 0,
           "rank_raising_terms": 0,
-          "raised_lines": 132,
-          "lowered_lines": 1643,
-          "raising_terms": 4,
-          "exceptions": 1,
-          "coefficient_bytes_max": 33,
-          "coefficient_bytes_total": 133,
+          "raised_lines": 1207,
+          "lowered_lines": 1791,
+          "raising_terms": 76,
+          "exceptions": 3,
+          "coefficient_bytes_max": 134,
+          "coefficient_bytes_total": 2352,
           "d_in_denominator": false,
           "dispatched_after_baseline": false,
-          "sources": 1,
+          "sources": 29,
           "score": []
         },
         {
           "chart": 1791,
-          "index": 116,
+          "index": 81,
           "affine": false,
           "fixed": [
             [
@@ -37924,39 +36303,39 @@
               1
             ],
             [
+              6,
+              1
+            ],
+            [
               7,
               1
             ],
             [
-              8,
-              0
-            ],
-            [
-              12,
-              0
+              10,
+              1
             ],
             [
               13,
               0
             ]
           ],
-          "rhs_terms": 8,
+          "rhs_terms": 32,
           "max_rank_change": 0,
           "rank_raising_terms": 0,
-          "raised_lines": 132,
-          "lowered_lines": 1643,
-          "raising_terms": 4,
-          "exceptions": 1,
-          "coefficient_bytes_max": 35,
-          "coefficient_bytes_total": 104,
+          "raised_lines": 1158,
+          "lowered_lines": 1775,
+          "raising_terms": 8,
+          "exceptions": 2,
+          "coefficient_bytes_max": 29,
+          "coefficient_bytes_total": 404,
           "d_in_denominator": false,
           "dispatched_after_baseline": false,
-          "sources": 1,
+          "sources": 2,
           "score": []
         },
         {
           "chart": 1791,
-          "index": 117,
+          "index": 82,
           "affine": false,
           "fixed": [
             [
@@ -38012,119 +36391,7 @@
         },
         {
           "chart": 1791,
-          "index": 118,
-          "affine": false,
-          "fixed": [
-            [
-              1,
-              1
-            ],
-            [
-              2,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              8,
-              0
-            ],
-            [
-              11,
-              0
-            ],
-            [
-              12,
-              0
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 6,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 132,
-          "lowered_lines": 1642,
-          "raising_terms": 4,
-          "exceptions": 1,
-          "coefficient_bytes_max": 34,
-          "coefficient_bytes_total": 80,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 119,
-          "affine": false,
-          "fixed": [
-            [
-              1,
-              1
-            ],
-            [
-              2,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              7,
-              1
-            ],
-            [
-              8,
-              0
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              12,
-              0
-            ]
-          ],
-          "rhs_terms": 29,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 523,
-          "lowered_lines": 1662,
-          "raising_terms": 10,
-          "exceptions": 2,
-          "coefficient_bytes_max": 35,
-          "coefficient_bytes_total": 301,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 120,
+          "index": 83,
           "affine": false,
           "fixed": [
             [
@@ -38164,23 +36431,23 @@
               0
             ]
           ],
-          "rhs_terms": 52,
+          "rhs_terms": 73,
           "max_rank_change": 0,
           "rank_raising_terms": 0,
-          "raised_lines": 718,
+          "raised_lines": 735,
           "lowered_lines": 1791,
-          "raising_terms": 42,
+          "raising_terms": 63,
           "exceptions": 1,
-          "coefficient_bytes_max": 229,
-          "coefficient_bytes_total": 4468,
+          "coefficient_bytes_max": 311,
+          "coefficient_bytes_total": 8387,
           "d_in_denominator": true,
           "dispatched_after_baseline": false,
-          "sources": 18,
+          "sources": 31,
           "score": []
         },
         {
           "chart": 1791,
-          "index": 121,
+          "index": 84,
           "affine": false,
           "fixed": [
             [
@@ -38236,63 +36503,7 @@
         },
         {
           "chart": 1791,
-          "index": 122,
-          "affine": false,
-          "fixed": [
-            [
-              1,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              7,
-              1
-            ],
-            [
-              8,
-              0
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              11,
-              0
-            ],
-            [
-              12,
-              0
-            ]
-          ],
-          "rhs_terms": 19,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 523,
-          "lowered_lines": 1654,
-          "raising_terms": 10,
-          "exceptions": 2,
-          "coefficient_bytes_max": 34,
-          "coefficient_bytes_total": 176,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 1,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 123,
+          "index": 85,
           "affine": false,
           "fixed": [
             [
@@ -38320,8 +36531,8 @@
               1
             ],
             [
-              8,
-              0
+              9,
+              1
             ],
             [
               10,
@@ -38339,8 +36550,8 @@
           "lowered_lines": 1647,
           "raising_terms": 8,
           "exceptions": 2,
-          "coefficient_bytes_max": 25,
-          "coefficient_bytes_total": 284,
+          "coefficient_bytes_max": 28,
+          "coefficient_bytes_total": 320,
           "d_in_denominator": false,
           "dispatched_after_baseline": false,
           "sources": 2,
@@ -38348,7 +36559,63 @@
         },
         {
           "chart": 1791,
-          "index": 124,
+          "index": 86,
+          "affine": false,
+          "fixed": [
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              7,
+              1
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ]
+          ],
+          "rhs_terms": 12,
+          "max_rank_change": -1,
+          "rank_raising_terms": 0,
+          "raised_lines": 96,
+          "lowered_lines": 175,
+          "raising_terms": 4,
+          "exceptions": 2,
+          "coefficient_bytes_max": 22,
+          "coefficient_bytes_total": 130,
+          "d_in_denominator": false,
+          "dispatched_after_baseline": false,
+          "sources": 1,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 87,
           "affine": false,
           "fixed": [
             [
@@ -38404,7 +36671,7 @@
         },
         {
           "chart": 1791,
-          "index": 125,
+          "index": 88,
           "affine": false,
           "fixed": [
             [
@@ -38460,7 +36727,7 @@
         },
         {
           "chart": 1791,
-          "index": 126,
+          "index": 89,
           "affine": false,
           "fixed": [
             [
@@ -38500,79 +36767,23 @@
               0
             ]
           ],
-          "rhs_terms": 31,
+          "rhs_terms": 46,
           "max_rank_change": 0,
           "rank_raising_terms": 0,
-          "raised_lines": 718,
-          "lowered_lines": 1772,
-          "raising_terms": 28,
+          "raised_lines": 735,
+          "lowered_lines": 1791,
+          "raising_terms": 45,
           "exceptions": 2,
-          "coefficient_bytes_max": 102,
-          "coefficient_bytes_total": 1519,
+          "coefficient_bytes_max": 121,
+          "coefficient_bytes_total": 1993,
           "d_in_denominator": true,
           "dispatched_after_baseline": false,
-          "sources": 10,
+          "sources": 34,
           "score": []
         },
         {
           "chart": 1791,
-          "index": 127,
-          "affine": false,
-          "fixed": [
-            [
-              2,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              8,
-              0
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              11,
-              0
-            ],
-            [
-              12,
-              0
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 9,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 78,
-          "lowered_lines": 236,
-          "raising_terms": 9,
-          "exceptions": 2,
-          "coefficient_bytes_max": 36,
-          "coefficient_bytes_total": 179,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 6,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 128,
+          "index": 90,
           "affine": false,
           "fixed": [
             [
@@ -38628,7 +36839,7 @@
         },
         {
           "chart": 1791,
-          "index": 129,
+          "index": 91,
           "affine": false,
           "fixed": [
             [
@@ -38636,7 +36847,7 @@
               1
             ],
             [
-              4,
+              3,
               1
             ],
             [
@@ -38660,6 +36871,62 @@
               1
             ],
             [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ]
+          ],
+          "rhs_terms": 12,
+          "max_rank_change": -1,
+          "rank_raising_terms": 0,
+          "raised_lines": 96,
+          "lowered_lines": 175,
+          "raising_terms": 4,
+          "exceptions": 2,
+          "coefficient_bytes_max": 22,
+          "coefficient_bytes_total": 130,
+          "d_in_denominator": false,
+          "dispatched_after_baseline": false,
+          "sources": 1,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 92,
+          "affine": false,
+          "fixed": [
+            [
+              2,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              7,
+              1
+            ],
+            [
+              9,
+              1
+            ],
+            [
+              10,
+              1
+            ],
+            [
               11,
               0
             ],
@@ -38675,8 +36942,8 @@
           "lowered_lines": 1647,
           "raising_terms": 8,
           "exceptions": 2,
-          "coefficient_bytes_max": 30,
-          "coefficient_bytes_total": 294,
+          "coefficient_bytes_max": 33,
+          "coefficient_bytes_total": 330,
           "d_in_denominator": false,
           "dispatched_after_baseline": false,
           "sources": 2,
@@ -38684,7 +36951,7 @@
         },
         {
           "chart": 1791,
-          "index": 130,
+          "index": 93,
           "affine": false,
           "fixed": [
             [
@@ -38740,63 +37007,7 @@
         },
         {
           "chart": 1791,
-          "index": 131,
-          "affine": false,
-          "fixed": [
-            [
-              2,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              8,
-              0
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              11,
-              0
-            ],
-            [
-              12,
-              0
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 12,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 102,
-          "lowered_lines": 744,
-          "raising_terms": 12,
-          "exceptions": 2,
-          "coefficient_bytes_max": 27,
-          "coefficient_bytes_total": 168,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 2,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 132,
+          "index": 94,
           "affine": false,
           "fixed": [
             [
@@ -38836,23 +37047,23 @@
               0
             ]
           ],
-          "rhs_terms": 101,
+          "rhs_terms": 71,
           "max_rank_change": 0,
           "rank_raising_terms": 0,
-          "raised_lines": 765,
+          "raised_lines": 1742,
           "lowered_lines": 1791,
-          "raising_terms": 78,
+          "raising_terms": 37,
           "exceptions": 1,
           "coefficient_bytes_max": 42,
-          "coefficient_bytes_total": 1808,
+          "coefficient_bytes_total": 1463,
           "d_in_denominator": true,
           "dispatched_after_baseline": false,
-          "sources": 24,
+          "sources": 11,
           "score": []
         },
         {
           "chart": 1791,
-          "index": 133,
+          "index": 95,
           "affine": false,
           "fixed": [
             [
@@ -38892,23 +37103,23 @@
               0
             ]
           ],
-          "rhs_terms": 131,
-          "max_rank_change": 1,
-          "rank_raising_terms": 30,
-          "raised_lines": 255,
+          "rhs_terms": 84,
+          "max_rank_change": 0,
+          "rank_raising_terms": 0,
+          "raised_lines": 1791,
           "lowered_lines": 1791,
-          "raising_terms": 101,
+          "raising_terms": 68,
           "exceptions": 2,
-          "coefficient_bytes_max": 187,
-          "coefficient_bytes_total": 5455,
+          "coefficient_bytes_max": 149,
+          "coefficient_bytes_total": 3684,
           "d_in_denominator": true,
           "dispatched_after_baseline": false,
-          "sources": 56,
+          "sources": 27,
           "score": []
         },
         {
           "chart": 1791,
-          "index": 134,
+          "index": 96,
           "affine": false,
           "fixed": [
             [
@@ -38964,7 +37175,7 @@
         },
         {
           "chart": 1791,
-          "index": 135,
+          "index": 97,
           "affine": false,
           "fixed": [
             [
@@ -39015,32 +37226,16 @@
           "coefficient_bytes_total": 4552,
           "d_in_denominator": true,
           "dispatched_after_baseline": false,
-          "sources": 50,
+          "sources": 58,
           "score": []
         },
         {
           "chart": 1791,
-          "index": 136,
+          "index": 98,
           "affine": false,
           "fixed": [
             [
-              0,
-              1
-            ],
-            [
-              1,
-              1
-            ],
-            [
-              2,
-              1
-            ],
-            [
               3,
-              1
-            ],
-            [
-              4,
               1
             ],
             [
@@ -39062,25 +37257,37 @@
             [
               10,
               1
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
             ]
           ],
-          "rhs_terms": 41,
+          "rhs_terms": 6,
           "max_rank_change": 0,
           "rank_raising_terms": 0,
-          "raised_lines": 1158,
-          "lowered_lines": 1775,
-          "raising_terms": 8,
-          "exceptions": 2,
-          "coefficient_bytes_max": 33,
-          "coefficient_bytes_total": 468,
+          "raised_lines": 132,
+          "lowered_lines": 123,
+          "raising_terms": 4,
+          "exceptions": 1,
+          "coefficient_bytes_max": 27,
+          "coefficient_bytes_total": 69,
           "d_in_denominator": false,
           "dispatched_after_baseline": false,
-          "sources": 2,
+          "sources": 1,
           "score": []
         },
         {
           "chart": 1791,
-          "index": 137,
+          "index": 99,
           "affine": false,
           "fixed": [
             [
@@ -39140,127 +37347,7 @@
         },
         {
           "chart": 1791,
-          "index": 138,
-          "affine": false,
-          "fixed": [
-            [
-              0,
-              1
-            ],
-            [
-              1,
-              1
-            ],
-            [
-              2,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              7,
-              1
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 32,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 1158,
-          "lowered_lines": 1775,
-          "raising_terms": 8,
-          "exceptions": 2,
-          "coefficient_bytes_max": 29,
-          "coefficient_bytes_total": 404,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 2,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 139,
-          "affine": false,
-          "fixed": [
-            [
-              0,
-              1
-            ],
-            [
-              2,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              7,
-              1
-            ],
-            [
-              8,
-              0
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              11,
-              0
-            ]
-          ],
-          "rhs_terms": 35,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 1158,
-          "lowered_lines": 1775,
-          "raising_terms": 8,
-          "exceptions": 2,
-          "coefficient_bytes_max": 34,
-          "coefficient_bytes_total": 397,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 2,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 140,
+          "index": 100,
           "affine": false,
           "fixed": [
             [
@@ -39304,143 +37391,23 @@
               0
             ]
           ],
-          "rhs_terms": 33,
-          "max_rank_change": -1,
+          "rhs_terms": 71,
+          "max_rank_change": 0,
           "rank_raising_terms": 0,
-          "raised_lines": 644,
-          "lowered_lines": 1647,
-          "raising_terms": 10,
+          "raised_lines": 166,
+          "lowered_lines": 1663,
+          "raising_terms": 23,
           "exceptions": 3,
-          "coefficient_bytes_max": 24,
-          "coefficient_bytes_total": 398,
+          "coefficient_bytes_max": 36,
+          "coefficient_bytes_total": 651,
           "d_in_denominator": false,
           "dispatched_after_baseline": false,
-          "sources": 2,
+          "sources": 4,
           "score": []
         },
         {
           "chart": 1791,
-          "index": 141,
-          "affine": false,
-          "fixed": [
-            [
-              0,
-              1
-            ],
-            [
-              2,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              7,
-              1
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              11,
-              0
-            ],
-            [
-              12,
-              0
-            ]
-          ],
-          "rhs_terms": 102,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 1279,
-          "lowered_lines": 1791,
-          "raising_terms": 75,
-          "exceptions": 1,
-          "coefficient_bytes_max": 184,
-          "coefficient_bytes_total": 7799,
-          "d_in_denominator": true,
-          "dispatched_after_baseline": false,
-          "sources": 22,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 142,
-          "affine": false,
-          "fixed": [
-            [
-              0,
-              1
-            ],
-            [
-              2,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              7,
-              1
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              11,
-              0
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 26,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 1158,
-          "lowered_lines": 1775,
-          "raising_terms": 8,
-          "exceptions": 2,
-          "coefficient_bytes_max": 30,
-          "coefficient_bytes_total": 333,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 2,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 143,
+          "index": 101,
           "affine": false,
           "fixed": [
             [
@@ -39468,8 +37435,8 @@
               1
             ],
             [
-              8,
-              0
+              9,
+              1
             ],
             [
               10,
@@ -39500,67 +37467,7 @@
         },
         {
           "chart": 1791,
-          "index": 144,
-          "affine": false,
-          "fixed": [
-            [
-              1,
-              1
-            ],
-            [
-              2,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              7,
-              1
-            ],
-            [
-              8,
-              0
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              12,
-              0
-            ]
-          ],
-          "rhs_terms": 21,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 1220,
-          "lowered_lines": 619,
-          "raising_terms": 12,
-          "exceptions": 1,
-          "coefficient_bytes_max": 110,
-          "coefficient_bytes_total": 1153,
-          "d_in_denominator": true,
-          "dispatched_after_baseline": false,
-          "sources": 10,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 145,
+          "index": 102,
           "affine": false,
           "fixed": [
             [
@@ -39604,23 +37511,83 @@
               0
             ]
           ],
-          "rhs_terms": 62,
+          "rhs_terms": 87,
           "max_rank_change": 0,
           "rank_raising_terms": 0,
-          "raised_lines": 188,
-          "lowered_lines": 1775,
-          "raising_terms": 29,
-          "exceptions": 4,
-          "coefficient_bytes_max": 233,
-          "coefficient_bytes_total": 2052,
-          "d_in_denominator": false,
+          "raised_lines": 190,
+          "lowered_lines": 1791,
+          "raising_terms": 49,
+          "exceptions": 3,
+          "coefficient_bytes_max": 163,
+          "coefficient_bytes_total": 5183,
+          "d_in_denominator": true,
           "dispatched_after_baseline": false,
-          "sources": 46,
+          "sources": 82,
           "score": []
         },
         {
           "chart": 1791,
-          "index": 146,
+          "index": 103,
+          "affine": false,
+          "fixed": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              7,
+              1
+            ],
+            [
+              9,
+              1
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              13,
+              0
+            ]
+          ],
+          "rhs_terms": 33,
+          "max_rank_change": 0,
+          "rank_raising_terms": 0,
+          "raised_lines": 156,
+          "lowered_lines": 1775,
+          "raising_terms": 8,
+          "exceptions": 2,
+          "coefficient_bytes_max": 32,
+          "coefficient_bytes_total": 444,
+          "d_in_denominator": false,
+          "dispatched_after_baseline": false,
+          "sources": 2,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 104,
           "affine": false,
           "fixed": [
             [
@@ -39664,23 +37631,23 @@
               0
             ]
           ],
-          "rhs_terms": 90,
+          "rhs_terms": 79,
           "max_rank_change": 0,
           "rank_raising_terms": 0,
-          "raised_lines": 1263,
+          "raised_lines": 1215,
           "lowered_lines": 1791,
-          "raising_terms": 61,
+          "raising_terms": 50,
           "exceptions": 1,
           "coefficient_bytes_max": 167,
-          "coefficient_bytes_total": 4868,
+          "coefficient_bytes_total": 4355,
           "d_in_denominator": true,
           "dispatched_after_baseline": false,
-          "sources": 24,
+          "sources": 31,
           "score": []
         },
         {
           "chart": 1791,
-          "index": 147,
+          "index": 105,
           "affine": false,
           "fixed": [
             [
@@ -39700,11 +37667,11 @@
               1
             ],
             [
-              5,
+              6,
               1
             ],
             [
-              6,
+              7,
               1
             ],
             [
@@ -39716,7 +37683,7 @@
               1
             ],
             [
-              11,
+              12,
               0
             ],
             [
@@ -39724,15 +37691,75 @@
               0
             ]
           ],
-          "rhs_terms": 14,
-          "max_rank_change": -1,
+          "rhs_terms": 37,
+          "max_rank_change": 0,
           "rank_raising_terms": 0,
-          "raised_lines": 6,
+          "raised_lines": 223,
           "lowered_lines": 751,
+          "raising_terms": 32,
+          "exceptions": 1,
+          "coefficient_bytes_max": 166,
+          "coefficient_bytes_total": 3899,
+          "d_in_denominator": true,
+          "dispatched_after_baseline": false,
+          "sources": 23,
+          "score": []
+        },
+        {
+          "chart": 1791,
+          "index": 106,
+          "affine": false,
+          "fixed": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              7,
+              1
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ]
+          ],
+          "rhs_terms": 8,
+          "max_rank_change": 0,
+          "rank_raising_terms": 0,
+          "raised_lines": 132,
+          "lowered_lines": 123,
           "raising_terms": 4,
-          "exceptions": 2,
-          "coefficient_bytes_max": 18,
-          "coefficient_bytes_total": 128,
+          "exceptions": 1,
+          "coefficient_bytes_max": 28,
+          "coefficient_bytes_total": 91,
           "d_in_denominator": false,
           "dispatched_after_baseline": false,
           "sources": 1,
@@ -39740,127 +37767,7 @@
         },
         {
           "chart": 1791,
-          "index": 148,
-          "affine": false,
-          "fixed": [
-            [
-              1,
-              1
-            ],
-            [
-              2,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              7,
-              1
-            ],
-            [
-              8,
-              0
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              12,
-              0
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 27,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 206,
-          "lowered_lines": 751,
-          "raising_terms": 22,
-          "exceptions": 2,
-          "coefficient_bytes_max": 33,
-          "coefficient_bytes_total": 672,
-          "d_in_denominator": true,
-          "dispatched_after_baseline": false,
-          "sources": 12,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 149,
-          "affine": false,
-          "fixed": [
-            [
-              1,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              7,
-              1
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              11,
-              0
-            ],
-            [
-              12,
-              0
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 137,
-          "max_rank_change": 1,
-          "rank_raising_terms": 40,
-          "raised_lines": 255,
-          "lowered_lines": 1791,
-          "raising_terms": 106,
-          "exceptions": 1,
-          "coefficient_bytes_max": 146,
-          "coefficient_bytes_total": 4526,
-          "d_in_denominator": true,
-          "dispatched_after_baseline": false,
-          "sources": 45,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 150,
+          "index": 107,
           "affine": false,
           "fixed": [
             [
@@ -39920,11 +37827,11 @@
         },
         {
           "chart": 1791,
-          "index": 151,
+          "index": 108,
           "affine": false,
           "fixed": [
             [
-              1,
+              2,
               1
             ],
             [
@@ -39936,6 +37843,10 @@
               1
             ],
             [
+              5,
+              1
+            ],
+            [
               6,
               1
             ],
@@ -39944,8 +37855,8 @@
               1
             ],
             [
-              8,
-              0
+              9,
+              1
             ],
             [
               10,
@@ -39958,29 +37869,25 @@
             [
               12,
               0
-            ],
-            [
-              13,
-              0
             ]
           ],
-          "rhs_terms": 10,
+          "rhs_terms": 62,
           "max_rank_change": 0,
           "rank_raising_terms": 0,
-          "raised_lines": 195,
-          "lowered_lines": 620,
-          "raising_terms": 10,
-          "exceptions": 2,
-          "coefficient_bytes_max": 22,
-          "coefficient_bytes_total": 141,
-          "d_in_denominator": false,
+          "raised_lines": 1742,
+          "lowered_lines": 1791,
+          "raising_terms": 35,
+          "exceptions": 1,
+          "coefficient_bytes_max": 47,
+          "coefficient_bytes_total": 1561,
+          "d_in_denominator": true,
           "dispatched_after_baseline": false,
-          "sources": 2,
+          "sources": 9,
           "score": []
         },
         {
           "chart": 1791,
-          "index": 152,
+          "index": 109,
           "affine": false,
           "fixed": [
             [
@@ -40040,7 +37947,7 @@
         },
         {
           "chart": 1791,
-          "index": 153,
+          "index": 110,
           "affine": false,
           "fixed": [
             [
@@ -40100,7 +38007,7 @@
         },
         {
           "chart": 1791,
-          "index": 154,
+          "index": 111,
           "affine": false,
           "fixed": [
             [
@@ -40160,7 +38067,7 @@
         },
         {
           "chart": 1791,
-          "index": 155,
+          "index": 112,
           "affine": false,
           "fixed": [
             [
@@ -40204,27 +38111,27 @@
               0
             ]
           ],
-          "rhs_terms": 18,
+          "rhs_terms": 23,
           "max_rank_change": 0,
           "rank_raising_terms": 0,
-          "raised_lines": 206,
-          "lowered_lines": 748,
-          "raising_terms": 18,
+          "raised_lines": 223,
+          "lowered_lines": 750,
+          "raising_terms": 23,
           "exceptions": 1,
-          "coefficient_bytes_max": 159,
-          "coefficient_bytes_total": 1604,
+          "coefficient_bytes_max": 200,
+          "coefficient_bytes_total": 2153,
           "d_in_denominator": true,
           "dispatched_after_baseline": false,
-          "sources": 14,
+          "sources": 25,
           "score": []
         },
         {
           "chart": 1791,
-          "index": 156,
+          "index": 113,
           "affine": false,
           "fixed": [
             [
-              2,
+              3,
               1
             ],
             [
@@ -40264,87 +38171,23 @@
               0
             ]
           ],
-          "rhs_terms": 13,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 149,
-          "lowered_lines": 107,
-          "raising_terms": 12,
-          "exceptions": 1,
-          "coefficient_bytes_max": 57,
-          "coefficient_bytes_total": 334,
-          "d_in_denominator": true,
-          "dispatched_after_baseline": false,
-          "sources": 8,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 157,
-          "affine": false,
-          "fixed": [
-            [
-              0,
-              1
-            ],
-            [
-              1,
-              1
-            ],
-            [
-              2,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              7,
-              1
-            ],
-            [
-              9,
-              1
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              11,
-              0
-            ]
-          ],
-          "rhs_terms": 65,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 1685,
-          "lowered_lines": 1647,
-          "raising_terms": 36,
+          "rhs_terms": 111,
+          "max_rank_change": 1,
+          "rank_raising_terms": 33,
+          "raised_lines": 255,
+          "lowered_lines": 1791,
+          "raising_terms": 101,
           "exceptions": 2,
-          "coefficient_bytes_max": 99,
-          "coefficient_bytes_total": 2450,
+          "coefficient_bytes_max": 141,
+          "coefficient_bytes_total": 4202,
           "d_in_denominator": true,
           "dispatched_after_baseline": false,
-          "sources": 8,
+          "sources": 52,
           "score": []
         },
         {
           "chart": 1791,
-          "index": 158,
+          "index": 114,
           "affine": false,
           "fixed": [
             [
@@ -40408,7 +38251,7 @@
         },
         {
           "chart": 1791,
-          "index": 159,
+          "index": 115,
           "affine": false,
           "fixed": [
             [
@@ -40456,151 +38299,23 @@
               0
             ]
           ],
-          "rhs_terms": 183,
+          "rhs_terms": 186,
           "max_rank_change": 0,
           "rank_raising_terms": 0,
           "raised_lines": 1791,
           "lowered_lines": 1791,
-          "raising_terms": 153,
+          "raising_terms": 154,
           "exceptions": 3,
-          "coefficient_bytes_max": 11633,
-          "coefficient_bytes_total": 526286,
+          "coefficient_bytes_max": 10869,
+          "coefficient_bytes_total": 621066,
           "d_in_denominator": true,
           "dispatched_after_baseline": false,
-          "sources": 89,
+          "sources": 91,
           "score": []
         },
         {
           "chart": 1791,
-          "index": 160,
-          "affine": false,
-          "fixed": [
-            [
-              0,
-              1
-            ],
-            [
-              2,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              7,
-              1
-            ],
-            [
-              8,
-              0
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              11,
-              0
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 75,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 253,
-          "lowered_lines": 1775,
-          "raising_terms": 61,
-          "exceptions": 2,
-          "coefficient_bytes_max": 261,
-          "coefficient_bytes_total": 7644,
-          "d_in_denominator": true,
-          "dispatched_after_baseline": false,
-          "sources": 36,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 161,
-          "affine": false,
-          "fixed": [
-            [
-              0,
-              1
-            ],
-            [
-              2,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              7,
-              1
-            ],
-            [
-              9,
-              1
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              11,
-              0
-            ],
-            [
-              12,
-              0
-            ]
-          ],
-          "rhs_terms": 69,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 701,
-          "lowered_lines": 1647,
-          "raising_terms": 56,
-          "exceptions": 2,
-          "coefficient_bytes_max": 458,
-          "coefficient_bytes_total": 12524,
-          "d_in_denominator": true,
-          "dispatched_after_baseline": false,
-          "sources": 46,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 162,
+          "index": 116,
           "affine": false,
           "fixed": [
             [
@@ -40648,35 +38363,31 @@
               0
             ]
           ],
-          "rhs_terms": 60,
+          "rhs_terms": 101,
           "max_rank_change": 0,
           "rank_raising_terms": 0,
-          "raised_lines": 236,
+          "raised_lines": 765,
           "lowered_lines": 1791,
-          "raising_terms": 41,
+          "raising_terms": 72,
           "exceptions": 4,
-          "coefficient_bytes_max": 83,
-          "coefficient_bytes_total": 1182,
+          "coefficient_bytes_max": 925,
+          "coefficient_bytes_total": 34836,
           "d_in_denominator": true,
           "dispatched_after_baseline": false,
-          "sources": 39,
+          "sources": 37,
           "score": []
         },
         {
           "chart": 1791,
-          "index": 163,
+          "index": 117,
           "affine": false,
           "fixed": [
             [
-              1,
+              0,
               1
             ],
             [
               2,
-              1
-            ],
-            [
-              3,
               1
             ],
             [
@@ -40696,8 +38407,8 @@
               1
             ],
             [
-              8,
-              0
+              9,
+              1
             ],
             [
               10,
@@ -40708,27 +38419,31 @@
               0
             ],
             [
+              12,
+              0
+            ],
+            [
               13,
               0
             ]
           ],
-          "rhs_terms": 23,
+          "rhs_terms": 27,
           "max_rank_change": 0,
           "rank_raising_terms": 0,
-          "raised_lines": 156,
-          "lowered_lines": 1647,
-          "raising_terms": 8,
-          "exceptions": 2,
-          "coefficient_bytes_max": 25,
-          "coefficient_bytes_total": 284,
-          "d_in_denominator": false,
+          "raised_lines": 149,
+          "lowered_lines": 1643,
+          "raising_terms": 19,
+          "exceptions": 1,
+          "coefficient_bytes_max": 55,
+          "coefficient_bytes_total": 672,
+          "d_in_denominator": true,
           "dispatched_after_baseline": false,
-          "sources": 2,
+          "sources": 8,
           "score": []
         },
         {
           "chart": 1791,
-          "index": 164,
+          "index": 118,
           "affine": false,
           "fixed": [
             [
@@ -40776,87 +38491,23 @@
               0
             ]
           ],
-          "rhs_terms": 17,
+          "rhs_terms": 33,
           "max_rank_change": 0,
           "rank_raising_terms": 0,
-          "raised_lines": 1220,
+          "raised_lines": 1207,
           "lowered_lines": 619,
-          "raising_terms": 12,
+          "raising_terms": 27,
           "exceptions": 1,
           "coefficient_bytes_max": 83,
-          "coefficient_bytes_total": 732,
+          "coefficient_bytes_total": 1554,
           "d_in_denominator": true,
           "dispatched_after_baseline": false,
-          "sources": 10,
+          "sources": 29,
           "score": []
         },
         {
           "chart": 1791,
-          "index": 165,
-          "affine": false,
-          "fixed": [
-            [
-              1,
-              1
-            ],
-            [
-              2,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              7,
-              1
-            ],
-            [
-              9,
-              1
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              11,
-              0
-            ],
-            [
-              12,
-              0
-            ]
-          ],
-          "rhs_terms": 52,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 190,
-          "lowered_lines": 1663,
-          "raising_terms": 32,
-          "exceptions": 3,
-          "coefficient_bytes_max": 133,
-          "coefficient_bytes_total": 2758,
-          "d_in_denominator": true,
-          "dispatched_after_baseline": false,
-          "sources": 43,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 166,
+          "index": 119,
           "affine": false,
           "fixed": [
             [
@@ -40920,7 +38571,7 @@
         },
         {
           "chart": 1791,
-          "index": 167,
+          "index": 120,
           "affine": false,
           "fixed": [
             [
@@ -40968,23 +38619,23 @@
               0
             ]
           ],
-          "rhs_terms": 65,
+          "rhs_terms": 43,
           "max_rank_change": 0,
           "rank_raising_terms": 0,
-          "raised_lines": 1263,
+          "raised_lines": 1199,
           "lowered_lines": 1791,
-          "raising_terms": 54,
+          "raising_terms": 32,
           "exceptions": 1,
           "coefficient_bytes_max": 102,
-          "coefficient_bytes_total": 2507,
+          "coefficient_bytes_total": 1765,
           "d_in_denominator": true,
           "dispatched_after_baseline": false,
-          "sources": 18,
+          "sources": 13,
           "score": []
         },
         {
           "chart": 1791,
-          "index": 168,
+          "index": 121,
           "affine": false,
           "fixed": [
             [
@@ -41048,7 +38699,7 @@
         },
         {
           "chart": 1791,
-          "index": 169,
+          "index": 122,
           "affine": false,
           "fixed": [
             [
@@ -41107,148 +38758,12 @@
           "coefficient_bytes_total": 5446,
           "d_in_denominator": true,
           "dispatched_after_baseline": false,
-          "sources": 45,
+          "sources": 52,
           "score": []
         },
         {
           "chart": 1791,
-          "index": 170,
-          "affine": false,
-          "fixed": [
-            [
-              0,
-              1
-            ],
-            [
-              1,
-              1
-            ],
-            [
-              2,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              7,
-              1
-            ],
-            [
-              8,
-              0
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              11,
-              0
-            ],
-            [
-              13,
-              0
-            ]
-          ],
-          "rhs_terms": 26,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 1158,
-          "lowered_lines": 1775,
-          "raising_terms": 8,
-          "exceptions": 2,
-          "coefficient_bytes_max": 25,
-          "coefficient_bytes_total": 274,
-          "d_in_denominator": false,
-          "dispatched_after_baseline": false,
-          "sources": 2,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 171,
-          "affine": false,
-          "fixed": [
-            [
-              0,
-              1
-            ],
-            [
-              1,
-              1
-            ],
-            [
-              2,
-              1
-            ],
-            [
-              3,
-              1
-            ],
-            [
-              4,
-              1
-            ],
-            [
-              5,
-              1
-            ],
-            [
-              6,
-              1
-            ],
-            [
-              7,
-              1
-            ],
-            [
-              9,
-              1
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              11,
-              0
-            ],
-            [
-              12,
-              0
-            ]
-          ],
-          "rhs_terms": 49,
-          "max_rank_change": 0,
-          "rank_raising_terms": 0,
-          "raised_lines": 1685,
-          "lowered_lines": 1647,
-          "raising_terms": 28,
-          "exceptions": 2,
-          "coefficient_bytes_max": 72,
-          "coefficient_bytes_total": 1364,
-          "d_in_denominator": true,
-          "dispatched_after_baseline": false,
-          "sources": 8,
-          "score": []
-        },
-        {
-          "chart": 1791,
-          "index": 172,
+          "index": 123,
           "affine": false,
           "fixed": [
             [
@@ -41300,23 +38815,23 @@
               0
             ]
           ],
-          "rhs_terms": 127,
+          "rhs_terms": 113,
           "max_rank_change": 0,
           "rank_raising_terms": 0,
           "raised_lines": 1791,
           "lowered_lines": 1791,
-          "raising_terms": 118,
+          "raising_terms": 104,
           "exceptions": 2,
-          "coefficient_bytes_max": 1545,
-          "coefficient_bytes_total": 67903,
+          "coefficient_bytes_max": 1556,
+          "coefficient_bytes_total": 57108,
           "d_in_denominator": true,
           "dispatched_after_baseline": false,
-          "sources": 78,
+          "sources": 63,
           "score": []
         },
         {
           "chart": 1791,
-          "index": 173,
+          "index": 124,
           "affine": false,
           "fixed": [
             [
@@ -41384,7 +38899,7 @@
         },
         {
           "chart": 1791,
-          "index": 174,
+          "index": 125,
           "affine": false,
           "fixed": [
             [
@@ -41436,23 +38951,23 @@
               0
             ]
           ],
-          "rhs_terms": 82,
+          "rhs_terms": 72,
           "max_rank_change": 0,
           "rank_raising_terms": 0,
           "raised_lines": 765,
           "lowered_lines": 1775,
-          "raising_terms": 72,
-          "exceptions": 1,
-          "coefficient_bytes_max": 1024,
-          "coefficient_bytes_total": 48848,
+          "raising_terms": 62,
+          "exceptions": 2,
+          "coefficient_bytes_max": 952,
+          "coefficient_bytes_total": 39376,
           "d_in_denominator": true,
           "dispatched_after_baseline": false,
-          "sources": 42,
+          "sources": 44,
           "score": []
         },
         {
           "chart": 1791,
-          "index": 175,
+          "index": 126,
           "affine": false,
           "fixed": [
             [
@@ -41504,23 +39019,23 @@
               0
             ]
           ],
-          "rhs_terms": 99,
+          "rhs_terms": 101,
           "max_rank_change": 0,
           "rank_raising_terms": 0,
           "raised_lines": 765,
           "lowered_lines": 1775,
-          "raising_terms": 76,
+          "raising_terms": 80,
           "exceptions": 2,
-          "coefficient_bytes_max": 435,
-          "coefficient_bytes_total": 15175,
+          "coefficient_bytes_max": 425,
+          "coefficient_bytes_total": 15603,
           "d_in_denominator": true,
           "dispatched_after_baseline": false,
-          "sources": 40,
+          "sources": 42,
           "score": []
         },
         {
           "chart": 1791,
-          "index": 176,
+          "index": 127,
           "affine": false,
           "fixed": [
             [
@@ -41588,7 +39103,7 @@
         },
         {
           "chart": 1791,
-          "index": 177,
+          "index": 128,
           "affine": false,
           "fixed": [
             [
@@ -41656,7 +39171,7 @@
         },
         {
           "chart": 1791,
-          "index": 178,
+          "index": 129,
           "affine": false,
           "fixed": [
             [
@@ -41724,7 +39239,7 @@
         },
         {
           "chart": 1791,
-          "index": 179,
+          "index": 130,
           "affine": false,
           "fixed": [
             [
@@ -41791,12 +39306,12 @@
           "coefficient_bytes_total": 27005,
           "d_in_denominator": true,
           "dispatched_after_baseline": false,
-          "sources": 53,
+          "sources": 59,
           "score": []
         },
         {
           "chart": 1791,
-          "index": 180,
+          "index": 131,
           "affine": false,
           "fixed": [
             [
