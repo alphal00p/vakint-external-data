@@ -1,7 +1,33 @@
 # Vakint external data
 
-Release v0.2.2 (7 November 2026) is the current release and `data-latest` points to it.
+Release v0.2.3 (10 November 2026) is the current release and `data-latest` points to it.
 Earlier releases stay available unchanged.
+
+## v0.2.3: five-loop values
+
+For the five-loop data, release v0.2.3 (10 November 2026) updates 5 five-loop
+coefficients of v0.2.2. Since v0.2.2:
+
+- 5L/P68 (v0.2.0 P400) eps^0: 33 digits instead of 3.6 (provisional in v0.2.2), from the
+  class-16359 high-precision grid.
+- 5L/P85 (v0.2.0 P441) eps^0: 39.8 digits instead of 3.6 (provisional in v0.2.2), from
+  the class-16359 high-precision grid.
+- 5L/P89 (v0.2.0 P445) eps^0: 32.5 digits instead of 3.5 (provisional in v0.2.2), from
+  the class-16359 high-precision grid.
+- 5L/P125 (v0.2.0 P551) eps^0: 40.8 digits instead of 3.4 (provisional in v0.2.2), from
+  the class-16359 high-precision grid.
+- 5L/P130 (v0.2.0 P632) eps^0: 40.7 digits instead of 3.3 (provisional in v0.2.2), from
+  the class-16359 high-precision grid.
+
+Everything else in the five-loop data is unchanged: reduction tables, masters, graphs,
+constants, exact coefficients, Ordered caches and every other five-loop numerical value
+of v0.2.2.
+
+A new managed install of `v0.2.3` or `data-latest` receives this release, as does an
+existing one loaded with `version="v0.2.3"` or `refresh=True`. An existing `data-latest`
+install moves to it with Vakint from gammaloop `vakint_rustred` 364ba0525 on, which
+re-checks `data-latest` for `version="latest"`; older builds keep its cached release
+(for example v0.2.2) until it is refreshed.
 
 ## v0.2.2
 
