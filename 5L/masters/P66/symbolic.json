@@ -10,5 +10,13 @@
   [
     -3,
     "21-8/3*3^(1/2)*vakint::cl2+1/12*𝜋^2"
+  ],
+  [
+    -2,
+    "273/2-182/15*symbolica::zeta(3)+symbolica::zeta(5)-88/3*3^(1/2)*vakint::cl2-32/5*3^(1/2)*vakint::PolylogImag(3,𝑖/3*3^(1/2))+34/135*3^(1/2)*𝜋^3+2/15*3^(1/2)*𝜋*log(3)^2+13/12*𝜋^2"
+  ],
+  [
+    -1,
+    "3933/5-6*vakint::PR7D2-224/3*log(2)*symbolica::zeta(3)-446/3*symbolica::zeta(3)-18*symbolica::zeta(5)+119/10*symbolica::zeta(7)+212/15*vakint::K5Moment(1)+30*vakint::K5Moment(3)-256/3*symbolica::polylog(4,1/2)-96*vakint::GPLReal(0,0,1/2*(1-𝑖*3^(1/2)),-1,1)-592/3*3^(1/2)*vakint::cl2-248/15*3^(1/2)*vakint::cl4-352/5*3^(1/2)*vakint::PolylogImag(3,𝑖/3*3^(1/2))-64/5*3^(1/2)*vakint::PolylogImag(4,𝑖/3*3^(1/2))-10/9*3^(1/2)*𝜋^2*vakint::cl2+374/135*3^(1/2)*𝜋^3-34/135*3^(1/2)*𝜋^3*log(3)+22/15*3^(1/2)*𝜋*log(3)^2-2/45*3^(1/2)*𝜋*log(3)^3+28*vakint::cl2^2-32/9*log(2)^4+29/5*symbolica::zeta(3)^2+35/4*𝜋^2+32/9*𝜋^2*log(2)^2+36827/21600*𝜋^4+1/378*𝜋^6"
   ]
 ]

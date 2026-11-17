@@ -14,5 +14,9 @@
   [
     -2,
     "-1/4*symbolica::zeta(3)"
+  ],
+  [
+    -1,
+    "-7/4*symbolica::zeta(3)+8/9*3^(1/2)*vakint::cl2*symbolica::zeta(3)-1/240*𝜋^4"
   ]
 ]

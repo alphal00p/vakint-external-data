@@ -14,5 +14,9 @@
   [
     -2,
     "36/5*symbolica::zeta(3)+3*symbolica::zeta(5)+1/100*𝜋^4"
+  ],
+  [
+    -1,
+    "57*symbolica::zeta(3)+51/5*symbolica::zeta(5)-8*3^(1/2)*vakint::cl2*symbolica::zeta(3)-21/5*symbolica::zeta(3)^2+1/4*𝜋^2*symbolica::zeta(3)+3/25*𝜋^4+1/126*𝜋^6"
   ]
 ]

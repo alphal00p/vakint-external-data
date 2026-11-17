@@ -14,5 +14,9 @@
   [
     -2,
     "49/30-43/18*symbolica::zeta(3)+5/72*𝜋^2"
+  ],
+  [
+    -1,
+    "43/10+vakint::PR7D2-215/18*symbolica::zeta(3)-8*vakint::K5Moment(1)-16*symbolica::polylog(4,1/2)-2/3*log(2)^4+17/72*𝜋^2+2/3*𝜋^2*log(2)^2+1661/8640*𝜋^4"
   ]
 ]
