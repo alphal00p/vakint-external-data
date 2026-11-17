@@ -29,5 +29,54 @@
   "note": "the reference of the COMPAT lanes and of the DROPPED probe; an ancestor of the consumer (157 commits)"
  },
  "compat_note": "Consumers containing vakint PR #257 (60e8b8c7671ff4ea02eaabfe7ec170e6cd5aa53e, Numerical-mode exact zeros) return values for the dropped former masters P31, P125 and P131 where the reference loader fails closed; the values agree with v0.2.3 (>= 28 digits) and every other output is byte-identical. This is consumer behaviour, not a data change.",
- "five_loop_recorded_revisions": "5L/package.json and 5L/provenance/current-publication.json keep vakint 64090b527e07bb947c38c925458a0b7b214de9c3 and rustred 3e83ae912367b19944a167cc076ea3efb6658932: the revisions that produced and authenticated the five-loop IBP application, unchanged in v0.3.0. They are left as they are because both files are inside the gated five-loop archive."
+ "five_loop_recorded_revisions": "5L/package.json and 5L/provenance/current-publication.json keep vakint 64090b527e07bb947c38c925458a0b7b214de9c3 and rustred 3e83ae912367b19944a167cc076ea3efb6658932: the revisions that produced and authenticated the five-loop IBP application, unchanged in v0.3.0. They are left as they are because both files are inside the gated five-loop archive.",
+ "compat_census": {
+  "frozen_utc": "2026-11-17T23:54:27Z",
+  "heads": [
+   {
+    "label": "dev-1102",
+    "sha": "dd7de300b"
+   },
+   {
+    "label": "pushed-1103",
+    "sha": "64090b527"
+   },
+   {
+    "label": "pushed-1106",
+    "sha": "fc40b8714"
+   },
+   {
+    "label": "pushed-1107a-pin022",
+    "sha": "cc0ad0f92"
+   },
+   {
+    "label": "pushed-1107b-bench",
+    "sha": "b925f4855"
+   },
+   {
+    "label": "pushed-1107c",
+    "sha": "d396352a9"
+   },
+   {
+    "label": "pushed-1108",
+    "sha": "79de51bc7"
+   },
+   {
+    "label": "pushed-1110-vakint_rustred-tip",
+    "sha": "fd8b446410a047035aac5136b0e4475ca26a8973"
+   },
+   {
+    "label": "p_integral-tip-1117",
+    "sha": "738d60e873e7a09112c0ae5dda205ae7df8013e5"
+   },
+   {
+    "label": "p_integral-tip-1117",
+    "sha": "12558c5e69004175908b7ebe7727abde084d9751"
+   }
+  ],
+  "rule": "The compatibility census is frozen at these ten gammaloop heads (the head list at the start of the lane of 12558c5e6). A gammaloop tip that appears later is not gated by this release; its lane follows as a record.",
+  "p_integral_ruling": "no extra lane needed for the release; a COMPAT run on the tip as a record is welcome",
+  "reference_loader": "fd8b446410a047035aac5136b0e4475ca26a8973",
+  "allow_rule": "conf compat.pr257_allow (P31 / P125 / P131 only; >= 28 digits vs v0.2.3; every other output byte-identical)"
+ }
 }
