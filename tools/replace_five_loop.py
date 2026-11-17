@@ -20,6 +20,14 @@ import five_loop_graphs
 
 CURRENT = "provenance/current-publication.json"
 SCHEMA = "vakint.external-data.current-five-loop.v1"
+# Stable display names (from v0.3.0): a name keeps its integral across releases; the
+# names of former masters are retired and never reused. Without this record the
+# names are P1..Pn in sorted native-key order, assigned anew for each publication.
+NAMES = "provenance/display-names.json"
+NAMES_SCHEMA = "vakint.external-data.five-loop-names.v1"
+SORTED_NAMING = "P1..Pn in lexicographic full-family-fingerprint/signed-index order; native identities remain family-qualified"
+STABLE_NAMING = ("stable display names from provenance/display-names.json: a name keeps its integral across releases, "
+                 "names of former masters are retired and never reused; native identities remain family-qualified")
 
 
 def inventory(directory):
@@ -44,8 +52,49 @@ def lower_snapshot(root):
     }
 
 
-def terminal_records(definitions, expected=None):
-    """Use native identities, with reproducible display names independent of history."""
+def check_display_names(names, master_ids):
+    """A stable display-name record: one P-name per current master_id, unique, never a retired name."""
+    if (not isinstance(names, dict) or names.get("schema") != NAMES_SCHEMA or names.get("scheme") != "stable"
+            or not isinstance(names.get("names"), dict) or not isinstance(names.get("retired", []), list)):
+        raise ValueError("unsupported five-loop display-name record")
+    current = names["names"]
+    if set(current) != set(master_ids):
+        raise ValueError("display-name record does not name exactly the current five-loop masters")
+    values = list(current.values())
+    if any(not isinstance(v, str) or not re.fullmatch(r"P[1-9][0-9]*", v) for v in values) or len(set(values)) != len(values):
+        raise ValueError("display names must be unique P-numbers")
+    retired = names.get("retired", [])
+    if any(not isinstance(r, dict) or not isinstance(r.get("name"), str) or not isinstance(r.get("master_id"), str)
+           for r in retired):
+        raise ValueError("retired display names need a name and the master_id it denoted")
+    retired_names = [r["name"] for r in retired]
+    if len(set(retired_names)) != len(retired_names):
+        raise ValueError("duplicate retired display name")
+    if set(retired_names) & set(values):
+        raise ValueError("a retired display name is reused")
+    if {r["master_id"] for r in retired} & set(current):
+        raise ValueError("a retired display name belongs to a current master")
+    return current
+
+
+def load_display_names(directory, receipt):
+    """The stable display-name record a receipt authenticates, or None (sorted naming)."""
+    relative = receipt.get("display_names")
+    if relative is None:
+        if receipt.get("naming", SORTED_NAMING) != SORTED_NAMING or "display_names_sha256" in receipt:
+            raise ValueError("five-loop receipt declares stable names without a display-name record")
+        return None
+    if relative != NAMES or receipt.get("naming") != STABLE_NAMING:
+        raise ValueError("unsupported five-loop display-name binding")
+    path = data.checked_path(directory, relative)
+    if data.digest(path) != receipt.get("display_names_sha256"):
+        raise ValueError("display-name record differs from its receipt")
+    return data.read_json(path)
+
+
+def terminal_records(definitions, expected=None, names=None):
+    """Use native identities; display names are P1..Pn in sorted key order (reproducible and
+    independent of history), or the stable names of a display-name record."""
     families = {}
     for family in definitions["families"]:
         fingerprint = family["fingerprint"]
@@ -70,15 +119,20 @@ def terminal_records(definitions, expected=None):
         raise ValueError("duplicate native terminal key")
     if not keys or (expected is not None and len(keys) != expected):
         raise ValueError("native terminal count differs from the requested publication")
+    def master_id(fingerprint, powers):
+        suffix = "_".join(f"{'m' if n < 0 else 'p'}{abs(n)}" for n in powers)
+        return f"L5_{families[fingerprint]['sha256']}_{suffix}"
+    stable = None if names is None else check_display_names(names, [master_id(*key) for key in keys])
     records = []
     for index, (fingerprint, powers) in enumerate(sorted(keys), 1):
         family = families[fingerprint]
-        suffix = "_".join(f"{'m' if n < 0 else 'p'}{abs(n)}" for n in powers)
+        identity = master_id(fingerprint, powers)
+        name = f"P{index}" if stable is None else stable[identity]
         records.append({
-            "master_id": f"L5_{family['sha256']}_{suffix}",
+            "master_id": identity,
             "family_sha256": family["sha256"], "loop_count": 5,
-            "powers": list(powers), "name": f"P{index}",
-            "directory": f"masters/P{index}", "status": "not_computed",
+            "powers": list(powers), "name": name,
+            "directory": f"masters/{name}", "status": "not_computed",
             "kind": "uncomputed-terminal", "exact_basis_expression": None,
             "available_epsilon_powers": [], "symbolic_powers": [],
             "coefficients": [],
@@ -149,7 +203,8 @@ def validate_graph_bindings(directory, manifest, root):
     if (data.digest(definitions_path) != receipt["terminal_definitions_sha256"]
             or data.digest(application_path) != receipt["application_sha256"]):
         raise ValueError("graph bindings differ from the authenticated publication inputs")
-    _, declared = terminal_records(data.read_json(definitions_path), receipt["terminal_count"])
+    _, declared = terminal_records(data.read_json(definitions_path), receipt["terminal_count"],
+                                   load_display_names(directory, receipt))
     if [(r["master_id"], r["name"], r["powers"]) for r in manifest["masters"]] != [
             (r["master_id"], r["name"], r["powers"]) for r in declared]:
         raise ValueError("graph bindings differ from the native terminal catalogue")
@@ -217,7 +272,7 @@ def bind_graph_metadata(root):
 
 
 def stage(root, application, definitions_path, output, expected=None,
-          rustred_revision=None, vakint_revision=None, consumer_rustred_revision=None):
+          rustred_revision=None, vakint_revision=None, consumer_rustred_revision=None, display_names=None):
     root, application, output = map(lambda p: Path(p).resolve(), (root, application, output))
     if output.exists():
         raise ValueError("staging destination already exists; choose a new destination")
@@ -225,7 +280,8 @@ def stage(root, application, definitions_path, output, expected=None,
         raise ValueError("staging must not modify the active five-loop pack")
     before = lower_snapshot(root)
     definitions = data.read_json(definitions_path)
-    families, records = terminal_records(definitions, expected)
+    names = None if display_names is None else data.read_json(display_names)
+    families, records = terminal_records(definitions, expected, names)
     native = data.read_json(application / "application.json")
     metadata = native["metadata"]
     if native["schema"] != "rustred.saved-application.v1":
@@ -299,7 +355,7 @@ def stage(root, application, definitions_path, output, expected=None,
         "source_scope_binding": metadata["source_scope_binding"],
         "source_generation": metadata["source_generation"],
         "terminal_count": len(records),
-        "naming": "P1..Pn in lexicographic full-family-fingerprint/signed-index order; native identities remain family-qualified",
+        "naming": SORTED_NAMING if names is None else STABLE_NAMING,
         "rustred_revision": rustred_revision, "vakint_revision": vakint_revision,
         "consumer_rustred_revision": consumer_rustred_revision,
         "application_sha256": data.digest(application / "application.json"),
@@ -308,6 +364,10 @@ def stage(root, application, definitions_path, output, expected=None,
         "graph_momentum_head": momentum_head,
         "cache_available": False, "minimality_claim": False,
     }
+    if names is not None:
+        data.write_json(output / NAMES, names)
+        receipt["display_names"] = NAMES
+        receipt["display_names_sha256"] = data.digest(output / NAMES)
     data.write_json(output / CURRENT, receipt)
     data.write_json(output / "package.json", {
         **receipt, "bytes": sum(item["bytes"] for item in source_files.values()),
@@ -318,7 +378,10 @@ def stage(root, application, definitions_path, output, expected=None,
     (output / "cache/README.md").write_text(
         "# Five-loop cache\n\nNo prepared cache is included. Generate a cache only against this immutable\napplication identity; caches for previous publications are incompatible.\n")
     (output / "README.md").write_text(
-        f"# Five-loop symbolic reduction\n\nThis pack contains {len(records)} unevaluated terminal integrals and the native\nRustRed application for the recorded campaign scope. Each `masters/P*/graph.dot`\ncontains its complete numerator, masses, powers and explicit loop basis.\nThe scalar model is `model.json`. No numerical coefficients or cache are included.\n\nThe exact signed-index identity is recorded in `manifest.json`; P-numbers are\ndisplay names for this publication only. See `coverage.json` for admitted scope.\n")
+        f"# Five-loop symbolic reduction\n\nThis pack contains {len(records)} unevaluated terminal integrals and the native\nRustRed application for the recorded campaign scope. Each `masters/P*/graph.dot`\ncontains its complete numerator, masses, powers and explicit loop basis.\nThe scalar model is `model.json`. No numerical coefficients or cache are included.\n\nThe exact signed-index identity is recorded in `manifest.json`; " + (
+            "P-numbers are\ndisplay names for this publication only." if names is None else
+            "P-numbers are\nstable display names: a name keeps its integral across releases, and names of\nformer masters are retired, never reused (`provenance/display-names.json`).") +
+        " See `coverage.json` for admitted scope.\n")
     manifest = {
         "schema": data.LOOP_SCHEMA, "version": data.read_json(root / "manifest.json")["version"],
         "loop_count": 5, "dimension": "4-2*epsilon", "normalization": "FMFTandMATAD",
@@ -355,7 +418,8 @@ def validate_stage(directory, root=data.ROOT):
             or data.digest(directory / receipt["application"])
             != receipt["application_sha256"]):
         raise ValueError("publication receipt differs from its native inputs")
-    _, expected = terminal_records(definitions, receipt["terminal_count"])
+    _, expected = terminal_records(definitions, receipt["terminal_count"],
+                                   load_display_names(directory, receipt))
     if [(r["master_id"], r["name"], r["powers"]) for r in manifest["masters"]] != [
             (r["master_id"], r["name"], r["powers"]) for r in expected]:
         raise ValueError("staged terminal keys or names differ from native definitions")
@@ -430,6 +494,8 @@ def main():
     staging.add_argument("--rustred-revision")
     staging.add_argument("--vakint-revision")
     staging.add_argument("--consumer-rustred-revision")
+    staging.add_argument("--display-names", type=Path,
+                         help="stable display-name record (schema vakint.external-data.five-loop-names.v1)")
     installation = commands.add_parser("install")
     installation.add_argument("--staged", type=Path, required=True)
     installation.add_argument("--backup", type=Path, required=True)
@@ -440,7 +506,7 @@ def main():
     if args.command == "stage":
         result = stage(args.root, args.application, args.terminal_definitions, args.output,
                        args.expected_terminals, args.rustred_revision, args.vakint_revision,
-                       args.consumer_rustred_revision)
+                       args.consumer_rustred_revision, args.display_names)
     elif args.command == "install":
         result = install(args.root, args.staged, args.backup)
     elif args.command == "bind-graphs":

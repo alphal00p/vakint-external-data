@@ -143,6 +143,67 @@ class FiveLoopReplacementTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "duplicate native terminal"):
             refresh.terminal_records(values)
 
+    def names_record(self, names, retired=()):
+        return {"schema": refresh.NAMES_SCHEMA, "scheme": "stable", "names": names,
+                "retired": [{"name": n, "master_id": m} for n, m in retired]}
+
+    def test_stable_display_names_are_kept_and_retired_names_never_reused(self):
+        values = copy.deepcopy(self.definitions)
+        second = copy.deepcopy(values["masters"][0])
+        second["powers"][3] = 0
+        values["masters"].append(second)
+        _, sorted_records = refresh.terminal_records(values)
+        first_id, second_id = (r["master_id"] for r in sorted_records)
+        names = self.names_record({first_id: "P7", second_id: "P3"}, [("P1", "L5_former_master")])
+        _, records = refresh.terminal_records(values, names=names)
+        self.assertEqual([(r["master_id"], r["name"], r["directory"]) for r in records],
+                         [(first_id, "P7", "masters/P7"), (second_id, "P3", "masters/P3")])
+        values["masters"].reverse()
+        self.assertEqual(records, refresh.terminal_records(values, names=names)[1])
+        cases = [
+            (self.names_record({first_id: "P1", second_id: "P3"}, [("P1", "L5_former_master")]), "retired display name is reused"),
+            (self.names_record({first_id: "P7"}), "exactly the current"),
+            (self.names_record({first_id: "P7", second_id: "P7"}), "unique P-numbers"),
+            (self.names_record({first_id: "Q7", second_id: "P3"}), "unique P-numbers"),
+            (self.names_record({first_id: "P07", second_id: "P3"}), "unique P-numbers"),
+            (self.names_record({first_id: "P7", second_id: "P3"}, [("P1", first_id)]), "belongs to a current master"),
+            (self.names_record({first_id: "P7", second_id: "P3"}, [("P1", "a"), ("P1", "b")]), "duplicate retired"),
+            (dict(names, scheme="sorted"), "unsupported five-loop display-name record"),
+        ]
+        for record, message in cases:
+            with self.subTest(message=message), self.assertRaisesRegex(ValueError, message):
+                refresh.terminal_records(values, names=record)
+
+    def test_staged_stable_names_are_authenticated_by_the_receipt(self):
+        _, (record,) = refresh.terminal_records(self.definitions)
+        names_path = self.base / "names.json"
+        data.write_json(names_path, self.names_record({record["master_id"]: "P9"}, [("P1", "L5_former_master")]))
+        output = self.base / "stable"
+        refresh.stage(self.root, self.application, self.definitions_path, output, expected=1, display_names=names_path)
+        receipt = data.read_json(output / refresh.CURRENT)
+        self.assertEqual(receipt["naming"], refresh.STABLE_NAMING)
+        self.assertEqual(receipt["display_names"], refresh.NAMES)
+        self.assertEqual(receipt["display_names_sha256"], data.digest(output / refresh.NAMES))
+        graph = (output / "masters/P9/graph.dot").read_text()
+        self.assertIn('feynkit_name="P9"', graph)
+        self.assertIn("stable display names", (output / "README.md").read_text())
+        self.assertEqual(refresh.validate_stage(output, self.root)["masters"][0]["name"], "P9")
+        # sorted staging still writes no record and the historical naming text
+        sorted_stage = self.stage("sorted")
+        self.assertFalse((sorted_stage / refresh.NAMES).exists())
+        self.assertEqual(data.read_json(sorted_stage / refresh.CURRENT)["naming"], refresh.SORTED_NAMING)
+        # a record edited after staging no longer matches its receipt
+        tampered = data.read_json(output / refresh.NAMES)
+        tampered["names"][record["master_id"]] = "P10"
+        data.write_json(output / refresh.NAMES, tampered)
+        with self.assertRaisesRegex(ValueError, "differs from its receipt|inventory differs"):
+            refresh.validate_stage(output, self.root)
+        self.assertEqual(refresh.load_display_names(output, {"naming": refresh.SORTED_NAMING}), None)
+        with self.assertRaisesRegex(ValueError, "without a display-name record"):
+            refresh.load_display_names(output, {"naming": refresh.STABLE_NAMING})
+        with self.assertRaisesRegex(ValueError, "differs from its receipt"):
+            refresh.load_display_names(output, receipt)
+
     def test_binding_and_mass_mismatch_fail_before_staging(self):
         self.definitions["source_manifest_blake3"] = "another"
         data.write_json(self.definitions_path, self.definitions)
