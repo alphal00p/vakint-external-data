@@ -1,6 +1,6 @@
 {
   "schema": "vakint.external-data.five-loop-graph-migration.v1",
-  "meaning": "The five-loop pack covered by the sealed native graph identity v2 receipt (640 masters, publication 3510ceb7c199) was replaced by the current five-loop publication (2f17f375e28d, 131 masters) with tools/replace_five_loop.py stage + install. The sealed receipt, its proof and the preserved originals are unchanged; each superseded row still replays from its preserved original to its sealed native projection. The live 5L master graphs are authenticated by replace_five_loop.validate_graph_bindings (routing witness + model binding); each live family graph by being byte-identical to its stage-rule representative master graph (the family's master with the largest (number of positive powers, powers), as replace_five_loop.stage copies it), which the patched model_identity check requires; neither is authenticated by this record. Data only: no graph, model, rule or coefficient is changed by this record.",
+  "meaning": "The five-loop pack covered by the sealed native graph identity v2 receipt (640 masters, publication 3510ceb7c199) was replaced by the current five-loop publication (f88d6849d93f, 131 masters) with tools/replace_five_loop.py stage + install. The sealed receipt, its proof and the preserved originals are unchanged; each superseded row still replays from its preserved original to its sealed native projection. The live 5L master graphs are authenticated by replace_five_loop.validate_graph_bindings (routing witness + model binding); each live family graph by being byte-identical to its stage-rule representative master graph (the family's master with the largest (number of positive powers, powers), as replace_five_loop.stage copies it), which the patched model_identity check requires; neither is authenticated by this record. Data only: no graph, model, rule or coefficient is changed by this record.",
   "identity_receipt": {
     "path": "provenance/native-graph-identity-v2/migration.json",
     "sha256": "be2a65f6fa6f24670d8247cffcc3543c169a5fb9724e9d1b79ec7af308ca4633",
@@ -7071,12 +7071,12 @@
   },
   "successor": {
     "publication": {
-      "terminal_definitions_sha256": "2f17f375e28dbd33d0cdeab05d2dec1789831c4f8701f6d7209ce89f6a484402",
+      "terminal_definitions_sha256": "f88d6849d93fd6af7bd1f2c0fdcc4db63909acc4ebff01c0e279166502a5d1eb",
       "terminal_count": 131,
       "graph_model_fingerprint": "33e1a05ba506e56b808f4a3318338cf0a02c4761d3d6523c07989f955faeebeb"
     },
     "graph_momentum_head": "gammalooprs::K",
-    "naming": "P1..Pn in lexicographic full-family-fingerprint/signed-index order; native identities remain family-qualified",
+    "naming": "stable display names from provenance/display-names.json: a name keeps its integral across releases, names of former masters are retired and never reused; native identities remain family-qualified",
     "masters": [
       {
         "master_id": "L5_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b_m1_p1_m1_p0_p1_p1_p1_p1_p1_p1_p0_p1_p0_p1_p1",
@@ -7852,32 +7852,6 @@
           1,
           1,
           0,
-          1,
-          1,
-          0,
-          0
-        ]
-      },
-      {
-        "master_id": "L5_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b_p0_p1_p1_p1_p0_p1_p1_p1_p1_p1_p1_p1_p1_p0_p0",
-        "name": "P31",
-        "path": "5L/masters/P31/graph.dot",
-        "sha256": "79ae1ad8e598b2f4c139a7e6e35461f5690de1b188010dfebd8e2b4cf9bd51cc",
-        "change": "renumbered",
-        "previous": "5L/masters/P171/graph.dot",
-        "previous_name": "P171",
-        "powers": [
-          0,
-          1,
-          1,
-          1,
-          0,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
           1,
           1,
           0,
@@ -8821,6 +8795,32 @@
         ]
       },
       {
+        "master_id": "L5_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b_p1_p1_p1_m1_p1_p1_p1_p0_m1_p1_p1_p1_p1_p1_p1",
+        "name": "P132",
+        "path": "5L/masters/P132/graph.dot",
+        "sha256": "a6255a085540aa9044f61e3c8ca0f73184652510c8a2242c54d80eb8d98c3642",
+        "change": "new",
+        "previous": null,
+        "previous_name": null,
+        "powers": [
+          1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          1,
+          0,
+          -1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
         "master_id": "L5_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b_p1_p1_p1_m1_p1_p1_p1_p0_p0_p1_p1_p1_p1_p1_p1",
         "name": "P68",
         "path": "5L/masters/P68/graph.dot",
@@ -9367,6 +9367,32 @@
         ]
       },
       {
+        "master_id": "L5_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b_p1_p1_p1_p0_p1_p1_p1_p1_p1_p2_p0_p1_p0_p1_p0",
+        "name": "P133",
+        "path": "5L/masters/P133/graph.dot",
+        "sha256": "f22ed59ca6d49a998da4e1645c60bf9227a9c3e4943ed62784aead416a38e1ce",
+        "change": "new",
+        "previous": null,
+        "previous_name": null,
+        "powers": [
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          0,
+          1,
+          0,
+          1,
+          0
+        ]
+      },
+      {
         "master_id": "L5_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b_p1_p1_p1_p0_p2_p1_p1_p0_m1_p1_p1_p1_p1_p1_p1",
         "name": "P89",
         "path": "5L/masters/P89/graph.dot",
@@ -9390,6 +9416,32 @@
           1,
           1,
           1
+        ]
+      },
+      {
+        "master_id": "L5_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b_p1_p1_p1_p1_m1_p1_p1_p1_p1_p1_p1_p1_p1_p0_m1",
+        "name": "P134",
+        "path": "5L/masters/P134/graph.dot",
+        "sha256": "07a87e248538d60e06fe9b41808358f3c5319de33fe3be36917954469bb3b391",
+        "change": "new",
+        "previous": null,
+        "previous_name": null,
+        "powers": [
+          1,
+          1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          -1
         ]
       },
       {
@@ -9627,6 +9679,32 @@
         ]
       },
       {
+        "master_id": "L5_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b_p1_p1_p1_p1_p0_p1_p1_p1_p1_p1_p1_p1_p1_m1_m1",
+        "name": "P135",
+        "path": "5L/masters/P135/graph.dot",
+        "sha256": "0c185fa75bfddaabf8854c2c77ee1906e7fbe58a9a17ce7cfbbafdd711d26aec",
+        "change": "new",
+        "previous": null,
+        "previous_name": null,
+        "powers": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1
+        ]
+      },
+      {
         "master_id": "L5_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b_p1_p1_p1_p1_p0_p1_p1_p1_p1_p1_p1_p1_p1_p0_p0",
         "name": "P99",
         "path": "5L/masters/P99/graph.dot",
@@ -9857,32 +9935,6 @@
           1,
           0,
           1,
-          1
-        ]
-      },
-      {
-        "master_id": "L5_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b_p1_p1_p2_p1_p0_p0_p1_p1_p1_p1_p0_p1_p0_p0_p1",
-        "name": "P108",
-        "path": "5L/masters/P108/graph.dot",
-        "sha256": "c18cda5ad8bf4ca8e9b5193c8c8bb9cf012ef39fe48b112ec97ea82b71abd5ad",
-        "change": "renumbered",
-        "previous": "5L/masters/P477/graph.dot",
-        "previous_name": "P477",
-        "powers": [
-          1,
-          1,
-          2,
-          1,
-          0,
-          0,
-          1,
-          1,
-          1,
-          1,
-          0,
-          1,
-          0,
-          0,
           1
         ]
       },
@@ -10303,32 +10355,6 @@
         ]
       },
       {
-        "master_id": "L5_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b_p2_p1_p1_p0_p1_p1_p1_p0_p0_p1_p1_p1_p1_p1_p1",
-        "name": "P125",
-        "path": "5L/masters/P125/graph.dot",
-        "sha256": "3c2ad71d8e2e0c9c509c4f050a56bfd594a6caa0e8c61a9c48d0ba7d7947cc43",
-        "change": "renumbered",
-        "previous": "5L/masters/P551/graph.dot",
-        "previous_name": "P551",
-        "powers": [
-          2,
-          1,
-          1,
-          0,
-          1,
-          1,
-          1,
-          0,
-          0,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1
-        ]
-      },
-      {
         "master_id": "L5_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b_p2_p1_p1_p0_p1_p1_p1_p1_p1_p1_p0_p1_p0_p1_p0",
         "name": "P126",
         "path": "5L/masters/P126/graph.dot",
@@ -10457,39 +10483,13 @@
           1,
           1
         ]
-      },
-      {
-        "master_id": "L5_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b_p3_p1_p1_p1_p0_p1_p1_p1_p1_p1_p1_p1_p1_p0_p0",
-        "name": "P131",
-        "path": "5L/masters/P131/graph.dot",
-        "sha256": "808d0182b8c88e3ad3f8cedd0c9d9a174b5696911d920233537f48470bfa48ed",
-        "change": "renumbered",
-        "previous": "5L/masters/P634/graph.dot",
-        "previous_name": "P634",
-        "powers": [
-          3,
-          1,
-          1,
-          1,
-          0,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          0,
-          0
-        ]
       }
     ],
     "families": [
       {
         "family_sha256": "44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b",
         "path": "5L/graphs/44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b.dot",
-        "sha256": "808d0182b8c88e3ad3f8cedd0c9d9a174b5696911d920233537f48470bfa48ed",
+        "sha256": "58a66fba557817ba660cc003e01241deab4a59793b9be7657baafa0629ebb1ae",
         "previous": "5L/graphs/44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b.dot"
       }
     ]
@@ -10637,6 +10637,7 @@
     "5L/masters/P166/graph.dot",
     "5L/masters/P167/graph.dot",
     "5L/masters/P168/graph.dot",
+    "5L/masters/P171/graph.dot",
     "5L/masters/P173/graph.dot",
     "5L/masters/P174/graph.dot",
     "5L/masters/P175/graph.dot",
@@ -10869,6 +10870,7 @@
     "5L/masters/P474/graph.dot",
     "5L/masters/P475/graph.dot",
     "5L/masters/P476/graph.dot",
+    "5L/masters/P477/graph.dot",
     "5L/masters/P479/graph.dot",
     "5L/masters/P481/graph.dot",
     "5L/masters/P482/graph.dot",
@@ -10927,6 +10929,7 @@
     "5L/masters/P547/graph.dot",
     "5L/masters/P548/graph.dot",
     "5L/masters/P549/graph.dot",
+    "5L/masters/P551/graph.dot",
     "5L/masters/P552/graph.dot",
     "5L/masters/P554/graph.dot",
     "5L/masters/P555/graph.dot",
@@ -11005,6 +11008,7 @@
     "5L/masters/P629/graph.dot",
     "5L/masters/P630/graph.dot",
     "5L/masters/P633/graph.dot",
+    "5L/masters/P634/graph.dot",
     "5L/masters/P635/graph.dot",
     "5L/masters/P636/graph.dot",
     "5L/masters/P637/graph.dot",
@@ -11018,9 +11022,9 @@
     "superseded_family_graphs": 1,
     "successor_masters": 131,
     "retained": 0,
-    "renumbered": 124,
-    "new": 7,
-    "removed": 516,
+    "renumbered": 120,
+    "new": 11,
+    "removed": 520,
     "successor_families": 1,
     "families_with_previous_graph": 1
   }
