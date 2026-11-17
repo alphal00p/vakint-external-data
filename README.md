@@ -1,8 +1,41 @@
 # Vakint external data
 
-The `main` branch declares v0.3.0: the unreleased line that follows the v0.2.3
-release. There is no v0.3.0 release. For published, checksummed data, use the
-v0.2.3 release or `data-latest`.
+Release v0.3.0 (17 November 2026) is the current release and `data-latest` points to it.
+Earlier releases stay available unchanged.
+
+## v0.3.0: five-loop basis BASIS-v3 with exact poles
+
+Release v0.3.0 (17 November 2026) changes the five-loop master basis (a minor release) and makes every
+five-loop pole coefficient exact. Since v0.2.3:
+
+- 5L master basis BASIS-v3 (131 masters): As1-16359-0 (5L/P132), y-ent-3071-111011111201010
+  (5L/P133), y-8175-num4_14 (5L/P134) and T1-8175 (5L/P135) replace the former masters
+  P31, P108, P125 and P131. The 127 other masters keep their names, master_ids and values;
+  names are stable (5L/provenance/display-names.json): the four former names are retired and
+  never reused. The former masters are reduced like any other input (they are not published).
+  The composed pack has no spurious d = 4 pole on any reduced top-sector integral.
+- Poles: eps^-5..eps^-1 of all 131 masters are exact. 88 pole coefficients become exact in
+  this release (2 at eps^-3, 24 at eps^-2, 62 at eps^-1): 79 from the R-operation with the overall counterterm by R*,
+  5 from the R-operation without counterterm (omega < 0), 3 derived from the structural orders of
+  the former masters, 1 by PSLQ with an R* counterterm check; each was checked against the
+  numerical value it replaces (agreement within 1 digit of that value's claim). eps^-5..eps^-2
+  use classical constants only; eps^-1 is exact in classical constants and 4L finite-part
+  constants (49 of the new forms; 4L/constants.json).
+- eps^0: 21 exact, 110 numerical. Published digit claims of numerical
+  coefficients are the measured claim minus one digit (value strings rounded accordingly);
+  exception: P132 at eps^0, P89 at eps^0:
+  these two coefficients are quoted at their measured accuracy, without the safety digit;
+  the smallest published claim is 32 digits.
+- 5L/route-preparation.rrbin regenerated for the BASIS-v3 saved application.
+- Traditional constants (documentation only): provenance/traditional-constants-v1 gives the
+  constant names of this repository as exact expressions in traditional constants, the integral
+  definitions of those that do not reduce, and an optional machine-readable rewrite table
+  (D5bar3 undecided). No symbol or coefficient file changes; a later release may rewrite the
+  3L/4L files in these constants and keep the old names as aliases.
+
+Per order (5L, 131 masters): eps^-5: 0 78, S 53; eps^-4: 0 72, S 59; eps^-3: 0 60, S 71; eps^-2: 0 51, S 80; eps^-1: 0 28, S 33, S* 70; eps^0: N 110, S 6, S* 15.
+
+A new managed install of `v0.3.0` or `data-latest` receives this release; `data-latest` moves to it.
 
 ## v0.2.3: five-loop values
 
