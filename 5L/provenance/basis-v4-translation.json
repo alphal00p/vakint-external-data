@@ -119,7 +119,7 @@
     }
   },
   "summary": {
-    "forms": 187,
+    "forms": 186,
     "product_orders": 126,
     "not_evaluated": [],
     "classes": {
@@ -133,7 +133,10 @@
         "S": 106,
         "S*": 20
       }
-    }
+    },
+    "dropped_master_forms": 1,
+    "dropped_master_product_orders": 0,
+    "dropped_master_symp_v4_forms": 0
   },
   "forms": {
     "P100|-2": {
@@ -201,14 +204,6 @@
       "finite_constants": [],
       "kind": "pslq-form",
       "verified_digits_vs_periods_side": 260.4
-    },
-    "P108|-2": {
-      "order": -2,
-      "class": "S",
-      "numerical_identities_of_main": [],
-      "finite_constants": [],
-      "kind": "pslq-form",
-      "verified_digits_vs_periods_side": 260.1
     },
     "P109|-1": {
       "order": -1,
@@ -4123,5 +4118,26 @@
         "two_evaluations_agree_digits": 261.1
       }
     }
+  },
+  "dropped_masters": {
+    "meaning": "entries of v0.3.0 masters that are not masters of v0.3.0 (BASIS-v3 dropped them; their integrals are refinement-layer rows), keyed master_id|order; v2_name = their display name in v0.3.0",
+    "forms": {
+      "L5_44b030daa664fca0c71f4bb930624b098348f6184bfe46ca3ad83b86ef71df3b_p1_p1_p2_p1_p0_p0_p1_p1_p1_p1_p0_p1_p0_p0_p1|-2": {
+        "order": -2,
+        "class": "S",
+        "numerical_identities_of_main": [],
+        "finite_constants": [],
+        "kind": "pslq-form",
+        "verified_digits_vs_periods_side": 260.1,
+        "v2_name": "P108"
+      }
+    },
+    "products": {},
+    "symp_v4_forms": {}
+  },
+  "display_names": {
+    "release": "v0.3.0",
+    "from": "v0.3.0",
+    "rule": "'name|order' keys use the 5L display names of v0.3.0; re-keyed from v0.3.0 by master_id (basis_release.py translate, v5lpar W3)"
   }
 }

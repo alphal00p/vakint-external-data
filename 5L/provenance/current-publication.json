@@ -6,12 +6,12 @@
   "source_scope_binding": "de1391c89ff7e81253a6dfadd9e10599fb6f27e69b64023a2a19b0fa1d4adb00",
   "source_generation": 119,
   "terminal_count": 131,
-  "naming": "P1..Pn in lexicographic full-family-fingerprint/signed-index order; native identities remain family-qualified",
+  "naming": "stable display names from provenance/display-names.json: a name keeps its integral across releases, names of former masters are retired and never reused; native identities remain family-qualified",
   "rustred_revision": "b82aa2cf+b2p-8ddbd2f960fe",
   "vakint_revision": "64090b527e07bb947c38c925458a0b7b214de9c3",
   "consumer_rustred_revision": "3e83ae912367b19944a167cc076ea3efb6658932",
-  "application_sha256": "4d98f012ec560945f8dc021e0330d6bd09eafe06327666b5ad9447bfbc19323b",
-  "terminal_definitions_sha256": "2f17f375e28dbd33d0cdeab05d2dec1789831c4f8701f6d7209ce89f6a484402",
+  "application_sha256": "dd614810555fb4b3f03ac0b2a6f811bce05f4c5b36dd05d2f2eded582a084c2e",
+  "terminal_definitions_sha256": "f88d6849d93fd6af7bd1f2c0fdcc4db63909acc4ebff01c0e279166502a5d1eb",
   "graph_model_fingerprint": "33e1a05ba506e56b808f4a3318338cf0a02c4761d3d6523c07989f955faeebeb",
   "numerical_work_performed": false,
   "graph_momentum_head": "gammalooprs::K",
@@ -19,10 +19,10 @@
   "minimality_claim": false,
   "refinement_layer": {
     "path": "provenance/refinement-layer.json",
-    "sha256": "1472f524b9541a1b457cae5020647fad219b200e2ae337141d3e90955a3de68a",
-    "layer_blake3": "ce159fc0cd8a06679cf11d440f7bf15c950776d911f70327c4f39b26caa670e0",
+    "sha256": "b0fbd1671115d0b1ae35db7bee605a9f44b3b7f2b85fd42f9aa89c6d17f23bb2",
+    "layer_blake3": "2ada9b8477647f2d5d448bb48fd0abb3d2f630fb2f359796fcbfbeb5942405e1",
     "row_provenance_counts": {
-      "basis-change": 20,
+      "basis-change": 24,
       "kira-stopgap": 47,
       "rustred": 437,
       "two-stage": 2,
@@ -30,6 +30,7 @@
     },
     "verification_counts": {
       "basis-change:BASIS-v2;exact Q(d) inverse;recomposed mod 2 primes + exact Q;G-POLE": 20,
+      "basis-change:BASIS-v3;exact Q(d) inverse;recomposed mod 2 primes + exact Q;G-POLE": 4,
       "counted-by-ruling:kira-3d;v-direct-54d;box-4pt;not-ii;not-table-in-d;ruling-2026-11-03": 1,
       "counted-by-ruling:kira-6d;not-ii;not-table-in-d;ruling-2026-11-03": 1,
       "factorized:selfcheck+kira-ii": 7,
@@ -48,10 +49,10 @@
     },
     "kira_stopgap_rows": 47,
     "factorized_sources_rr11_p1": 13,
-    "basis_producer": "RustRed saved application + RR-11 layer with 20 basis-change, 47 kira-stopgap, 437 rustred, 2 two-stage, 10 xspace-banana rows",
+    "basis_producer": "RustRed saved application + RR-11 layer with 24 basis-change, 47 kira-stopgap, 437 rustred, 2 two-stage, 10 xspace-banana rows",
     "manifest_sha256": "fcfd7445cc988421df7c547cc2d0a85c0cbc7cb3af274421d61d057756c649a3",
     "row_tag_counts_binary": {
-      "basis-change": 20,
+      "basis-change": 24,
       "kira-stopgap": 47,
       "rustred": 437,
       "two-stage": 2,
@@ -59,7 +60,7 @@
     },
     "row_provenance_counts_note": "row_provenance_counts: row tags written by the compose binary, xspace-banana rows under their own tag (= row_tag_counts_binary)",
     "row_origin_counts": {
-      "basis-change": 20,
+      "basis-change": 24,
       "kira-stopgap": 47,
       "rustred": 437,
       "two-stage": 2,
@@ -67,7 +68,7 @@
     },
     "xspace_banana_rows": 10,
     "flagged_sources_to_reproduce": {
-      "basis-change": 20,
+      "basis-change": 24,
       "kira-stopgap": 47,
       "two-stage": 2,
       "xspace-banana": 10
@@ -75,9 +76,9 @@
     "two_stage_rows": 2,
     "two_stage_ruling": "user ruling of 2026-11-03",
     "basis_change": {
-      "tag": "BASIS-v2",
-      "basis_sha256": "5da52b655abdc9980cf1db99668ca94edd648aff440f5dd71db8e39d28f53b9c",
-      "rows": 20
+      "tag": "BASIS-v3",
+      "basis_sha256": "47703b2de8868d2b23cc6922a63a05e1f97b5b04b33d3989cbf87c56eade470f",
+      "rows": 4
     },
     "compose_binary": {
       "path": "provenance/compose-binary/record.json",
@@ -85,5 +86,7 @@
       "binary_sha256": "25f067fe674fb7543d9795440fca5a9655a0e9581e3bec6e7ca213e7c1064f04",
       "merged_upstream": false
     }
-  }
+  },
+  "display_names": "provenance/display-names.json",
+  "display_names_sha256": "6650beb639f9817dafeac0930a8eb8a12e1c58312023f832071620e3edb09bc9"
 }

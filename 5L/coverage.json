@@ -5,9 +5,9 @@
   "known_master_basis_complete": false,
   "cache_completion_is_coverage_certificate": false,
   "kind": "saved-scope",
-  "authority": "inherits the saved owners and published terminal substitutions; no certification upgrade; refinement layer ce159fc0cd8a0667: 437 RustRed relation rows, 47 kira-stopgap rows (exact results of an external Kira process, user-approved stopgap, to be reproduced by RustRed), 10 xspace-banana rows (exact relations from the Rust+Symbolica configuration-space generator for the 5L banana class; an own route, neither RustRed relations nor a Kira stopgap; to be reproduced by RustRed), 2 two-stage rows (exact relations reconstructed in d from the own banana/kite two-stage route of 5L class 2806: banana and kite IBPs, kite symmetry and dilation relations on top of low RustRed t2-run rows; counted by the user ruling of 2026-11-03 without whole-row check (ii) and without an independent table in d, not strict; neither RustRed relations nor a Kira stopgap; to be reproduced by RustRed), 20 basis-change rows (former masters expressed exactly in the pole-free basis by linear algebra over Q(d) on rows of this package; option B, user ruling of 2026-11-03; no new relation, not an independent derivation); composition checked mod p at compose time",
+  "authority": "inherits the saved owners and published terminal substitutions; no certification upgrade; refinement layer 2ada9b8477647f2d: 437 RustRed relation rows, 47 kira-stopgap rows (exact results of an external Kira process, user-approved stopgap, to be reproduced by RustRed), 10 xspace-banana rows (exact relations from the Rust+Symbolica configuration-space generator for the 5L banana class; an own route, neither RustRed relations nor a Kira stopgap; to be reproduced by RustRed), 2 two-stage rows (exact relations reconstructed in d from the own banana/kite two-stage route of 5L class 2806: banana and kite IBPs, kite symmetry and dilation relations on top of low RustRed t2-run rows; counted by the user ruling of 2026-11-03 without whole-row check (ii) and without an independent table in d, not strict; neither RustRed relations nor a Kira stopgap; to be reproduced by RustRed), 24 basis-change rows (former masters expressed exactly in the pole-free basis by linear algebra over Q(d) on rows of this package; option B, user ruling of 2026-11-03; no new relation, not an independent derivation); composition checked mod p at compose time",
   "metadata": {
-    "authority": "inherits the saved owners and published terminal substitutions; no certification upgrade; refinement layer ce159fc0cd8a0667: 437 RustRed relation rows, 47 kira-stopgap rows (exact results of an external Kira process, user-approved stopgap, to be reproduced by RustRed), 10 xspace-banana rows (exact relations from the Rust+Symbolica configuration-space generator for the 5L banana class; an own route, neither RustRed relations nor a Kira stopgap; to be reproduced by RustRed), 2 two-stage rows (exact relations reconstructed in d from the own banana/kite two-stage route of 5L class 2806: banana and kite IBPs, kite symmetry and dilation relations on top of low RustRed t2-run rows; counted by the user ruling of 2026-11-03 without whole-row check (ii) and without an independent table in d, not strict; neither RustRed relations nor a Kira stopgap; to be reproduced by RustRed), 20 basis-change rows (former masters expressed exactly in the pole-free basis by linear algebra over Q(d) on rows of this package; option B, user ruling of 2026-11-03; no new relation, not an independent derivation); composition checked mod p at compose time",
+    "authority": "inherits the saved owners and published terminal substitutions; no certification upgrade; refinement layer 2ada9b8477647f2d: 437 RustRed relation rows, 47 kira-stopgap rows (exact results of an external Kira process, user-approved stopgap, to be reproduced by RustRed), 10 xspace-banana rows (exact relations from the Rust+Symbolica configuration-space generator for the 5L banana class; an own route, neither RustRed relations nor a Kira stopgap; to be reproduced by RustRed), 2 two-stage rows (exact relations reconstructed in d from the own banana/kite two-stage route of 5L class 2806: banana and kite IBPs, kite symmetry and dilation relations on top of low RustRed t2-run rows; counted by the user ruling of 2026-11-03 without whole-row check (ii) and without an independent table in d, not strict; neither RustRed relations nor a Kira stopgap; to be reproduced by RustRed), 24 basis-change rows (former masters expressed exactly in the pole-free basis by linear algebra over Q(d) on rows of this package; option B, user ruling of 2026-11-03; no new relation, not an independent derivation); composition checked mod p at compose time",
     "coefficient_convention": "stored unit mass and common formal loop measure; external mass and measure factors remain caller-owned",
     "empty_starting_domains": 54,
     "family_closure_claim": false,
@@ -38,25 +38,25 @@
       "base_remaining_terminals": 640,
       "base_terminal_maps_blake3": "82247ff6d7c1566161b1a20f093ba5ee4dfc0c2b7bb11058fbef2e5a84741ca4",
       "coefficient_table_blake3": null,
-      "composed_decoded_bytes": 661200069,
+      "composed_decoded_bytes": 645796793,
       "composition": {
         "base_remaining": 640,
         "composed_remaining": 131,
-        "conditions_added_rows": 673,
+        "conditions_added_rows": 684,
         "masters": 127,
         "max_terms_after": 108,
         "max_terms_before": 25,
-        "new_master_keys": 7,
+        "new_master_keys": 11,
         "raw_rows": 939,
-        "rows_touched": 689,
-        "source_occurrences": 720,
-        "sources": 516,
-        "terms_after": 46587,
+        "rows_touched": 700,
+        "source_occurrences": 731,
+        "sources": 520,
+        "terms_after": 47658,
         "terms_before": 1122,
         "unreduced": 4
       },
       "consistency": {
-        "masters_with_raw_rows_composing_to_identity": 120,
+        "masters_with_raw_rows_composing_to_identity": 116,
         "sources_without_raw_row": 0
       },
       "factorized_sources": {
@@ -627,6 +627,74 @@
             1,
             0,
             1,
+            1
+          ],
+          [
+            2,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            3,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            2,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
             1
           ]
         ],
@@ -1640,7 +1708,7 @@
           ]
         ]
       },
-      "layer_blake3": "ce159fc0cd8a06679cf11d440f7bf15c950776d911f70327c4f39b26caa670e0",
+      "layer_blake3": "2ada9b8477647f2d5d448bb48fd0abb3d2f630fb2f359796fcbfbeb5942405e1",
       "masters": 127,
       "minimality": null,
       "minimality_reference": {
@@ -1653,10 +1721,10 @@
       "provenance": {
         "base_application_sha256": "976d574c4ad8b4021ac7a1914c624095a77f5975b98e243c7a20a9396a86ff03",
         "basis_change": {
-          "basis": "/shared/vhirschi/t3code/vakint/scratchpad/5l-pilot/basis-b/b3/BASIS-v2.json",
-          "basis_sha256": "5da52b655abdc9980cf1db99668ca94edd648aff440f5dd71db8e39d28f53b9c",
-          "bc_input_sha256": "557b6f8af5af5e2d1096984b8a7cadab0071301b29b2ffd80d70e2ce5c4ceb86",
-          "bc_output_sha256": "f1f469f808f24c7fc78d1690a571538eb27e8402eb7be72e4d744b1b7ee0c0c0",
+          "basis": "/shared/vhirschi/t3code/vakint/scratchpad/5l-pilot/basis-b/topbasis/v3build/BASIS-v3.json",
+          "basis_sha256": "47703b2de8868d2b23cc6922a63a05e1f97b5b04b33d3989cbf87c56eade470f",
+          "bc_input_sha256": "2262b4163064154f7b80c67f18385db7a509c104aef8d74ace6b8a290671a642",
+          "bc_output_sha256": "d3ed0e83542b65b6d822e68275ba5a2a35aade979503cf57f02e36b2ce5da15a",
           "checks": {
             "exact_q": [
               [
@@ -1670,16 +1738,17 @@
             ],
             "exact_recomposition": "PASS: A_NR X_N == 1 and A_NR X_K == -A_NK exactly over Q(d) (Symbolica)",
             "g_pole": {
-              "coefficients": 35030,
+              "coefficients": 35388,
               "n_polar": 0,
               "passed": true,
               "polar": [],
               "valuation_histogram": {
-                "0": 20062,
-                "1": 10106,
-                "2": 4144,
-                "3": 670,
-                "4": 48
+                "0": 20273,
+                "1": 10037,
+                "2": 4088,
+                "3": 884,
+                "4": 98,
+                "5": 8
               },
               "worst_valuation": 0
             },
@@ -1711,519 +1780,84 @@
               ]
             ]
           },
-          "design": "basis-b/b3/BASIS-v2.json: CANDIDATE v2 (track B3-CB; exact proof on all held integrals; not staged, not reviewed); new basis = 111 kept current masters + 20 new integrals; every generator has coefficients regular at d = 4 (exact proof); exact proof: 2336 / 2336 generators regular at d = 4 (det valuation -31); search: block lower-triangular A_NR: blocks 9+3+2+1x7 (v1: 16+1x4); every pole-free basis in this pool has a block mixing heavy (>= 10-line) new masters (no acyclic heavy assignment exists) (tools basis-b/b3/cb/tools (modstruct.py, prodinfo.py, model.py, anneal3.py, scan.py, lsx.py, fastobj.py, finalize.sh, recheck.sh, writeout.py))",
+          "design": "BASIS-v3 = BASIS-v2 with 4 swaps (design S2, basisv3-1108 SELECT: smallest exact v3 layer among the passing designs, 130.5 MB coefficients = 0.786x BASIS-v2): As1-16359-0 -> P125 (16359, double pole D_16359), T1-8175 -> P131 (8175, D_8175), y-8175-num4_14 -> P31 (D_4079), y-ent-3071-111011111201010 -> P108 (D_A, 11-line dotted 3071 corner = 16119 R11 grid-vector entry); exact proof: 2443 held generators + 134 top-sector reductions regular at d = 4 over Q and mod 3 primes, v(det C) = -5 = -length(N); sampled module only (topbasis coverage: out/coverage.txt), sampling continues (user Q1 2026-11-08)",
           "dropped": [
             [
-              0,
-              0,
-              1,
-              0,
-              0,
-              1,
-              0,
-              0,
-              0,
-              1,
-              0,
-              1,
-              1,
-              1,
-              1
-            ],
-            [
-              1,
-              0,
-              1,
-              0,
-              1,
-              1,
-              1,
-              1,
-              1,
-              0,
-              0,
-              1,
-              0,
-              1,
-              0
-            ],
-            [
-              -1,
-              1,
-              0,
-              1,
-              1,
-              1,
-              0,
-              1,
-              1,
-              0,
-              0,
-              0,
-              0,
-              0,
-              1
-            ],
-            [
-              1,
-              1,
-              1,
-              0,
-              0,
-              0,
-              1,
-              0,
-              0,
-              0,
-              1,
-              2,
-              1,
-              0,
-              1
-            ],
-            [
-              0,
-              1,
-              1,
-              0,
-              1,
-              1,
-              1,
-              0,
-              1,
-              1,
-              0,
-              1,
-              0,
-              0,
-              1
-            ],
-            [
               2,
               1,
               1,
               0,
-              0,
-              0,
-              1,
-              0,
-              0,
               1,
               1,
               1,
               0,
               0,
-              1
-            ],
-            [
-              -1,
-              -1,
               1,
-              0,
-              0,
-              0,
               1,
-              0,
-              0,
-              1,
-              0,
               1,
               1,
               1,
               1
             ],
             [
-              0,
-              1,
-              0,
-              1,
               3,
               1,
-              0,
-              1,
-              1,
-              0,
-              0,
-              0,
-              0,
-              0,
-              1
-            ],
-            [
-              1,
-              1,
-              1,
-              -1,
-              0,
-              0,
-              1,
-              0,
-              0,
-              0,
-              1,
-              1,
-              1,
-              0,
-              1
-            ],
-            [
-              0,
-              1,
               1,
               1,
               0,
               1,
               1,
               1,
+              1,
+              1,
+              1,
+              1,
+              1,
               0,
-              1,
-              1,
-              1,
-              0,
-              -2,
               0
             ],
             [
-              1,
-              1,
-              1,
-              0,
-              0,
-              1,
-              0,
-              0,
-              0,
-              0,
-              0,
-              1,
-              1,
-              1,
-              1
-            ],
-            [
-              0,
-              1,
-              1,
-              0,
-              0,
-              1,
-              0,
-              0,
-              0,
-              0,
-              0,
-              1,
-              1,
-              1,
-              1
-            ],
-            [
-              0,
-              0,
-              1,
-              1,
-              0,
-              0,
-              1,
               0,
               1,
               1,
               1,
               0,
-              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
               0,
               0
             ],
             [
               1,
               1,
-              1,
-              0,
-              0,
-              0,
-              0,
-              1,
-              0,
-              1,
-              0,
-              1,
-              0,
-              0,
-              1
-            ],
-            [
-              1,
-              1,
-              0,
-              -1,
-              1,
-              0,
-              1,
-              0,
-              1,
-              1,
-              0,
-              1,
-              -1,
-              1,
-              1
-            ],
-            [
-              1,
-              1,
-              1,
-              0,
-              1,
-              1,
-              0,
-              0,
-              0,
-              1,
-              0,
-              1,
-              0,
-              0,
-              1
-            ],
-            [
-              1,
-              1,
-              1,
-              0,
-              1,
-              1,
-              0,
-              0,
-              1,
-              1,
-              0,
-              1,
-              0,
-              0,
-              1
-            ],
-            [
-              0,
-              1,
+              2,
               1,
               0,
               0,
               1,
               1,
               1,
-              0,
-              1,
-              1,
-              0,
-              1,
-              -2,
-              0
-            ],
-            [
-              0,
-              0,
-              1,
-              0,
-              0,
-              1,
-              1,
-              0,
-              0,
-              1,
-              0,
-              1,
-              1,
-              1,
-              1
-            ],
-            [
-              1,
-              1,
-              -1,
-              0,
               1,
               0,
               1,
               0,
-              1,
-              1,
               0,
-              1,
-              0,
-              1,
               1
             ]
           ],
           "dropped_names": [
-            "P12/P75[478]",
-            "P54/P355[2807]",
-            "P3/P26[506]",
-            "P78/P416[1014]",
-            "P30/P141[959]",
-            "P122/P534[1020]",
-            "P1/P16[953]",
-            "P20/P112[506]",
-            "P72/P397[1014]",
-            "P35/P166[3066]",
-            "P80/P421[955]",
-            "P25/P130[379]",
-            "P15/P80[126]",
-            "P76/P409[956]",
-            "P60/P366[3023]",
-            "P91/P438[507]",
-            "P92/P439[511]",
-            "P27/P133[2806]",
-            "P14/P77[957]",
-            "P58/P360[3023]"
+            "P125/P551[16359]",
+            "P131/P634[8175]",
+            "P31/P171[4079]",
+            "P108/P477[3063]"
           ],
-          "dropped_products": [
-            {
-              "class": 478,
-              "design_partner": [
-                {
-                  "class": 478,
-                  "key": [
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                    2,
-                    0,
-                    0,
-                    0,
-                    2,
-                    0,
-                    1,
-                    1,
-                    1,
-                    1
-                  ],
-                  "product": true
-                }
-              ],
-              "key": [
-                0,
-                0,
-                1,
-                0,
-                0,
-                1,
-                0,
-                0,
-                0,
-                1,
-                0,
-                1,
-                1,
-                1,
-                1
-              ],
-              "leaves_product_route": false,
-              "name640": "P75",
-              "non_product_masters": 0,
-              "non_product_new_master_classes": [],
-              "row_terms": 2
-            },
-            {
-              "class": 379,
-              "design_partner": [
-                {
-                  "class": 955,
-                  "key": [
-                    1,
-                    1,
-                    1,
-                    0,
-                    0,
-                    1,
-                    0,
-                    -1,
-                    0,
-                    0,
-                    0,
-                    1,
-                    1,
-                    2,
-                    2
-                  ],
-                  "product": false
-                }
-              ],
-              "key": [
-                0,
-                1,
-                1,
-                0,
-                0,
-                1,
-                0,
-                0,
-                0,
-                0,
-                0,
-                1,
-                1,
-                1,
-                1
-              ],
-              "leaves_product_route": true,
-              "name640": "P130",
-              "non_product_masters": 7,
-              "non_product_new_master_classes": [
-                955
-              ],
-              "row_terms": 12
-            },
-            {
-              "class": 126,
-              "design_partner": [
-                {
-                  "class": 126,
-                  "key": [
-                    0,
-                    0,
-                    1,
-                    1,
-                    0,
-                    0,
-                    2,
-                    0,
-                    2,
-                    2,
-                    1,
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  "product": true
-                }
-              ],
-              "key": [
-                0,
-                0,
-                1,
-                1,
-                0,
-                0,
-                1,
-                0,
-                1,
-                1,
-                1,
-                0,
-                0,
-                0,
-                0
-              ],
-              "leaves_product_route": false,
-              "name640": "P80",
-              "non_product_masters": 0,
-              "non_product_new_master_classes": [],
-              "row_terms": 2
-            }
-          ],
+          "dropped_products": [],
           "factorized_sources_off_product_route": [
             {
               "meaning": "genuine 5L masters enter at O(eps^1) or higher: the product integral through eps^K needs them only through eps^(K-1)",
@@ -2848,426 +2482,236 @@
             "n": 4,
             "one_line": "4 factorized sources leave the product route: 2 with genuine-master coefficients of valuation 0, i.e. O(eps^0) (P586 P592; 6 genuine 5L masters each at valuation 0: the finite part needs those masters' eps^0 (and lower) values at full weight); 2 with genuine-master coefficients O(eps^1) (P240 P130)"
           },
-          "factorized_sources_rule": "RR-11 P1 extended by the B2-P compose binary: in a layer that declares this basis_change block the \"onto factorized masters only\" restriction is lifted for factorized sources (verification level still required). Reason (computed from this basis): the basis drops the product master P130 and its row has non-product masters (new masters of class 955), so P130 and every product relation through it leave the product route (factorized_sources_off_product_route); P75 P80 map onto product masters only (they stay on the product route)",
+          "factorized_sources_rule": "RR-11 P1 extended by the B2-P compose binary: in a layer that declares this basis_change block the \"onto factorized masters only\" restriction is lifted for factorized sources (verification level still required). Reason (computed from this basis): no dropped product master leaves the product route. BASIS-v3 composes on BASIS-v2, whose rule stands: RR-11 P1 extended by the B2-P compose binary: in a layer that declares this basis_change block the \"onto factorized masters only\" restriction is lifted for factorized sources (verification level still required). Reason (computed from this basis): the basis drops the product master P130 and its row has non-product masters (new masters of class 955), so P130 and every product relation through it leave the product route (factorized_sources_off_product_route); P75 P80 map onto product masters only (they stay on the product route)",
+          "inherited_dropped_products": {
+            "from": "BASIS-v2",
+            "records": [
+              {
+                "class": 478,
+                "design_partner": [
+                  {
+                    "class": 478,
+                    "key": [
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      2,
+                      0,
+                      0,
+                      0,
+                      2,
+                      0,
+                      1,
+                      1,
+                      1,
+                      1
+                    ],
+                    "product": true
+                  }
+                ],
+                "key": [
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                  0,
+                  1,
+                  0,
+                  1,
+                  1,
+                  1,
+                  1
+                ],
+                "leaves_product_route": false,
+                "name640": "P75",
+                "non_product_masters": 0,
+                "non_product_new_master_classes": [],
+                "row_terms": 2
+              },
+              {
+                "class": 379,
+                "design_partner": [
+                  {
+                    "class": 955,
+                    "key": [
+                      1,
+                      1,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      -1,
+                      0,
+                      0,
+                      0,
+                      1,
+                      1,
+                      2,
+                      2
+                    ],
+                    "product": false
+                  }
+                ],
+                "key": [
+                  0,
+                  1,
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  1,
+                  1,
+                  1
+                ],
+                "leaves_product_route": true,
+                "name640": "P130",
+                "non_product_masters": 7,
+                "non_product_new_master_classes": [
+                  955
+                ],
+                "row_terms": 12
+              },
+              {
+                "class": 126,
+                "design_partner": [
+                  {
+                    "class": 126,
+                    "key": [
+                      0,
+                      0,
+                      1,
+                      1,
+                      0,
+                      0,
+                      2,
+                      0,
+                      2,
+                      2,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "product": true
+                  }
+                ],
+                "key": [
+                  0,
+                  0,
+                  1,
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  1,
+                  1,
+                  1,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "leaves_product_route": false,
+                "name640": "P80",
+                "non_product_masters": 0,
+                "non_product_new_master_classes": [],
+                "row_terms": 2
+              }
+            ],
+            "replaced_products": [
+              "P130"
+            ]
+          },
+          "layer_fix": {
+            "before": {
+              "factorized_sources_off_product_route_summary": {
+                "by_min_valuation_non_product": {
+                  "0": [
+                    "P586",
+                    "P592"
+                  ],
+                  "1": [
+                    "P240"
+                  ]
+                },
+                "n": 3,
+                "one_line": "3 factorized sources leave the product route: 2 with genuine-master coefficients of valuation 0, i.e. O(eps^0) (P586 P592; 7 genuine 5L masters each at valuation 0: the finite part needs those masters' eps^0 (and lower) values at full weight); 1 with genuine-master coefficients O(eps^1) (P240)"
+              },
+              "needs_user_acceptance": []
+            },
+            "factorized_sources_added": [
+              "P130",
+              "P75",
+              "P80"
+            ],
+            "factorized_sources_without_row": [],
+            "make_layer_output_sha256": "cf95b2355ea8eb981f071dd2b9d4df0536894736733ec5d6e660131def98cb79",
+            "product_masters_added": [
+              "0_0_1_0_0_2_0_0_0_2_0_1_1_1_1",
+              "0_0_1_1_0_0_2_0_2_2_1_0_0_0_0"
+            ],
+            "tool": "/shared/vhirschi/t3code/vakint/scratchpad/5l-pilot/basis-b/topbasis/v3build/tools/layer_fix.py"
+          },
           "needs_user_acceptance": [],
           "new": [
             {
-              "class": 126,
-              "key": [
-                0,
-                0,
-                1,
-                1,
-                0,
-                0,
-                2,
-                0,
-                2,
-                2,
-                1,
-                0,
-                0,
-                0,
-                0
-              ],
-              "kind": "comp",
-              "row_source": "composed-pack reduction (sp_dump reduce) tmp/sp-a/red-run2/comp-7.jsonl"
-            },
-            {
-              "class": 478,
-              "key": [
-                0,
-                0,
-                1,
-                0,
-                0,
-                2,
-                0,
-                0,
-                0,
-                2,
-                0,
-                1,
-                1,
-                1,
-                1
-              ],
-              "kind": "comp",
-              "row_source": "composed-pack reduction (sp_dump reduce) basis-b/b1d/out/red-s1L-0.jsonl"
-            },
-            {
-              "class": 955,
+              "class": 16359,
               "key": [
                 1,
                 1,
                 1,
-                0,
-                0,
-                1,
-                0,
                 -1,
-                0,
-                0,
-                0,
-                1,
-                1,
-                2,
-                2
-              ],
-              "kind": "comp",
-              "row_source": "composed-pack reduction (sp_dump reduce) basis-b/b1d/out/red-s1L-4.jsonl"
-            },
-            {
-              "class": 506,
-              "key": [
-                0,
-                2,
-                0,
-                2,
-                3,
-                1,
-                0,
-                1,
-                1,
-                0,
-                0,
-                0,
-                0,
-                0,
-                1
-              ],
-              "kind": "row",
-              "row_source": "old layer row (provenance rustred, verification independent-full)"
-            },
-            {
-              "class": 1022,
-              "key": [
-                1,
-                2,
-                2,
-                0,
-                0,
-                1,
-                1,
-                0,
-                0,
                 1,
                 1,
                 1,
                 0,
-                0,
-                1
-              ],
-              "kind": "row",
-              "row_source": "old layer row (provenance rustred, verification independent-full)"
-            },
-            {
-              "class": 2023,
-              "key": [
-                1,
-                2,
-                1,
-                1,
-                0,
-                1,
-                0,
-                1,
-                0,
-                0,
-                2,
-                1,
-                1,
-                0,
-                0
-              ],
-              "kind": "row",
-              "row_source": "old layer row (provenance rustred, verification ii-whole-row)"
-            },
-            {
-              "class": 1020,
-              "key": [
-                1,
-                1,
-                1,
-                0,
-                0,
-                0,
-                1,
-                0,
-                0,
-                2,
-                2,
-                1,
-                0,
-                0,
-                1
-              ],
-              "kind": "comp",
-              "row_source": "composed-pack reduction (sp_dump reduce) basis-b/b1d/out/red-s1L-3.jsonl"
-            },
-            {
-              "class": 3023,
-              "key": [
-                1,
-                2,
-                0,
-                0,
-                2,
-                0,
-                1,
-                0,
-                2,
-                1,
-                0,
-                1,
-                0,
-                1,
-                1
-              ],
-              "kind": "row",
-              "row_source": "old layer row (provenance rustred, verification ii-whole-row)"
-            },
-            {
-              "class": 3067,
-              "key": [
-                1,
-                1,
-                0,
-                1,
-                2,
                 -1,
                 1,
                 1,
                 1,
                 1,
-                0,
                 1,
-                0,
-                0,
-                1
-              ],
-              "kind": "row",
-              "row_source": "old layer row (provenance rustred, verification ii-whole-row)"
-            },
-            {
-              "class": 3067,
-              "key": [
-                1,
-                1,
-                0,
-                1,
-                1,
-                0,
-                1,
-                1,
-                2,
-                1,
-                0,
-                1,
-                0,
-                0,
-                1
-              ],
-              "kind": "row",
-              "row_source": "old layer row (provenance rustred, verification ii-whole-row)"
-            },
-            {
-              "class": 955,
-              "key": [
-                1,
-                2,
-                1,
-                0,
-                0,
-                1,
-                0,
-                0,
-                0,
-                0,
-                0,
-                1,
-                1,
-                2,
                 1
               ],
               "kind": "comp",
-              "row_source": "composed-pack reduction (sp_dump reduce) tmp/sp-a/red-run4/comp-7.jsonl"
+              "row_source": "exact RustRed ordered_replay reduction through the composed BASIS-v2 pack (5L/ibps = published v0.2.2): values/topsector/out/As1-16359-0.terms.json"
             },
             {
-              "class": 3066,
+              "class": 8175,
               "key": [
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
                 -1,
-                3,
-                1,
-                1,
-                0,
-                1,
-                1,
-                1,
-                0,
-                1,
-                1,
-                1,
-                0,
-                0,
-                0
-              ],
-              "kind": "row",
-              "row_source": "old layer row (provenance rustred, verification independent-full)"
-            },
-            {
-              "class": 3055,
-              "key": [
-                1,
-                2,
-                1,
-                0,
-                1,
-                0,
-                1,
-                1,
-                1,
-                1,
-                0,
-                0,
-                0,
-                1,
-                1
-              ],
-              "kind": "row",
-              "row_source": "old layer row (provenance rustred, verification independent-full)"
-            },
-            {
-              "class": 4079,
-              "key": [
-                0,
-                2,
-                1,
-                1,
-                0,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                0,
-                0
-              ],
-              "kind": "row",
-              "row_source": "old layer row (provenance rustred, verification ii-whole-row)"
-            },
-            {
-              "class": 3071,
-              "key": [
-                1,
-                2,
-                1,
-                0,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                0,
-                1,
-                0,
-                1,
-                0
-              ],
-              "kind": "row",
-              "row_source": "old layer row (provenance rustred, verification ii-whole-row)"
-            },
-            {
-              "class": 3023,
-              "key": [
-                1,
-                2,
-                0,
-                0,
-                2,
-                0,
-                1,
-                0,
-                1,
-                1,
-                0,
-                1,
-                0,
-                1,
-                1
-              ],
-              "kind": "row",
-              "row_source": "old layer row (provenance rustred, verification ii-whole-row)"
-            },
-            {
-              "class": 955,
-              "key": [
-                1,
-                1,
-                1,
-                0,
-                0,
-                2,
-                0,
-                0,
-                0,
-                0,
-                0,
-                1,
-                1,
-                2,
-                1
+                -1
               ],
               "kind": "comp",
-              "row_source": "composed-pack reduction (sp_dump reduce) tmp/sp-a/red5/comp-3.jsonl"
-            },
-            {
-              "class": 956,
-              "key": [
-                2,
-                2,
-                1,
-                0,
-                0,
-                -1,
-                0,
-                1,
-                0,
-                1,
-                0,
-                2,
-                0,
-                0,
-                2
-              ],
-              "kind": "comp",
-              "row_source": "composed-pack reduction (sp_dump reduce) basis-b/b1d/out/red-s1L-3.jsonl"
-            },
-            {
-              "class": 14071,
-              "key": [
-                1,
-                1,
-                2,
-                0,
-                0,
-                1,
-                1,
-                1,
-                1,
-                1,
-                0,
-                1,
-                0,
-                1,
-                1
-              ],
-              "kind": "row",
-              "row_source": "old layer row (provenance rustred, verification ii-whole-row)"
+              "row_source": "exact RustRed ordered_replay reduction through the composed BASIS-v2 pack (5L/ibps = published v0.2.2): values/topsector/out/T1-8175.terms.json"
             },
             {
               "class": 8175,
@@ -3286,32 +2730,1713 @@
                 1,
                 1,
                 0,
+                -1
+              ],
+              "kind": "comp",
+              "row_source": "exact RustRed ordered_replay reduction through the composed BASIS-v2 pack (5L/ibps = published v0.2.2): basis-b/topbasis/out/y-8175-num4_14.terms.json"
+            },
+            {
+              "class": 3071,
+              "key": [
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                0,
+                1,
+                0,
+                1,
                 0
               ],
-              "kind": "row",
-              "row_source": "old layer row (provenance rustred, verification ii-whole-row)"
+              "kind": "comp",
+              "row_source": "exact RustRed ordered_replay reduction through the composed BASIS-v2 pack (5L/ibps = published v0.2.2): basis-b/topbasis/out/y-ent-3071-111011111201010.terms.json"
             }
           ],
-          "new_master_rows_from_old_layer": 13,
-          "old_layer": "/shared/vhirschi/t3code/vakint/scratchpad/5l-pilot/rustred-dev/layer/runs/intermediate/20261103T0246Z-fcfd7445cc98/manifest-bindable/layer.json",
-          "old_layer_sha256": "da8c5d51b1d519c7f2222914203eb5cf4d685f79a8c92e0a13903eb63ca4a1b6",
-          "old_rows_removed_as_new_masters": 13,
-          "ruling": "user 2026-11-04 ~00:00Z (question tool; reports/user-decisions.md, entry \"WAVE B3 RESULT\" USER ANSWERS (1); restated in the B4-SW brief 2026-11-04): switch to BASIS-v2 (basis-b/b3/BASIS-v2.json), accepting that P586, P592, P240, P130 leave the exact lower-loop route and that P130 is replaced by a numerical class-955 master; standing rulings: user 2026-11-03 14:40Z/14:50Z: option B, a spurious-pole-free basis for everything vakint admits (DRAFT PR held); 17:30Z: full scope (20 changes, the exact minimum), basis need not be sector-pure, T1 to eps^5 exact in the 1L data, target data line v0.1.2 (dev pins dd7de300b / 0066b166); 19:05Z: no new lower-loop data",
+          "new_master_rows_from_old_layer": 0,
+          "old_layer": "/shared/vhirschi/t3code/vakint/scratchpad/5l-pilot/basis-b/b2/pack/runs/v2/manifest-bindable/layer.json",
+          "old_layer_sha256": "52d4f8db814ab3d87237c3237e22530a84a8d07ac43cd44851b1c7a0bd8fb246",
+          "old_rows_removed_as_new_masters": 0,
+          "previous_basis_change": {
+            "basis": "/shared/vhirschi/t3code/vakint/scratchpad/5l-pilot/basis-b/b3/BASIS-v2.json",
+            "basis_sha256": "5da52b655abdc9980cf1db99668ca94edd648aff440f5dd71db8e39d28f53b9c",
+            "bc_input_sha256": "557b6f8af5af5e2d1096984b8a7cadab0071301b29b2ffd80d70e2ce5c4ceb86",
+            "bc_output_sha256": "f1f469f808f24c7fc78d1690a571538eb27e8402eb7be72e4d744b1b7ee0c0c0",
+            "checks": {
+              "exact_q": [
+                [
+                  "37/7",
+                  0
+                ],
+                [
+                  "-113/5",
+                  0
+                ]
+              ],
+              "exact_recomposition": "PASS: A_NR X_N == 1 and A_NR X_K == -A_NK exactly over Q(d) (Symbolica)",
+              "g_pole": {
+                "coefficients": 35030,
+                "n_polar": 0,
+                "passed": true,
+                "polar": [],
+                "valuation_histogram": {
+                  "0": 20062,
+                  "1": 10106,
+                  "2": 4144,
+                  "3": 670,
+                  "4": 48
+                },
+                "worst_valuation": 0
+              },
+              "identity_rows_compose_to_themselves": true,
+              "mod_p": [
+                [
+                  2305843009213693951,
+                  0
+                ],
+                [
+                  2305843009213693951,
+                  0
+                ],
+                [
+                  2305843009213693951,
+                  0
+                ],
+                [
+                  4611686018427387847,
+                  0
+                ],
+                [
+                  4611686018427387847,
+                  0
+                ],
+                [
+                  4611686018427387847,
+                  0
+                ]
+              ]
+            },
+            "design": "basis-b/b3/BASIS-v2.json: CANDIDATE v2 (track B3-CB; exact proof on all held integrals; not staged, not reviewed); new basis = 111 kept current masters + 20 new integrals; every generator has coefficients regular at d = 4 (exact proof); exact proof: 2336 / 2336 generators regular at d = 4 (det valuation -31); search: block lower-triangular A_NR: blocks 9+3+2+1x7 (v1: 16+1x4); every pole-free basis in this pool has a block mixing heavy (>= 10-line) new masters (no acyclic heavy assignment exists) (tools basis-b/b3/cb/tools (modstruct.py, prodinfo.py, model.py, anneal3.py, scan.py, lsx.py, fastobj.py, finalize.sh, recheck.sh, writeout.py))",
+            "dropped": [
+              [
+                0,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1
+              ],
+              [
+                1,
+                0,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                1,
+                0,
+                1,
+                0
+              ],
+              [
+                -1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                1,
+                2,
+                1,
+                0,
+                1
+              ],
+              [
+                0,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                1
+              ],
+              [
+                2,
+                1,
+                1,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                1,
+                1,
+                1,
+                0,
+                0,
+                1
+              ],
+              [
+                -1,
+                -1,
+                1,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1
+              ],
+              [
+                0,
+                1,
+                0,
+                1,
+                3,
+                1,
+                0,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                1,
+                1,
+                1,
+                -1,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                0,
+                1
+              ],
+              [
+                0,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                0,
+                -2,
+                0
+              ],
+              [
+                1,
+                1,
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1
+              ],
+              [
+                0,
+                1,
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1
+              ],
+              [
+                0,
+                0,
+                1,
+                1,
+                0,
+                0,
+                1,
+                0,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                0,
+                1
+              ],
+              [
+                1,
+                1,
+                0,
+                -1,
+                1,
+                0,
+                1,
+                0,
+                1,
+                1,
+                0,
+                1,
+                -1,
+                1,
+                1
+              ],
+              [
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                0,
+                0,
+                0,
+                1,
+                0,
+                1,
+                0,
+                0,
+                1
+              ],
+              [
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                0,
+                0,
+                1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                1,
+                1,
+                0,
+                0,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                0,
+                1,
+                -2,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                0,
+                0,
+                1,
+                1,
+                0,
+                0,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1
+              ],
+              [
+                1,
+                1,
+                -1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                1,
+                0,
+                1,
+                0,
+                1,
+                1
+              ]
+            ],
+            "dropped_names": [
+              "P12/P75[478]",
+              "P54/P355[2807]",
+              "P3/P26[506]",
+              "P78/P416[1014]",
+              "P30/P141[959]",
+              "P122/P534[1020]",
+              "P1/P16[953]",
+              "P20/P112[506]",
+              "P72/P397[1014]",
+              "P35/P166[3066]",
+              "P80/P421[955]",
+              "P25/P130[379]",
+              "P15/P80[126]",
+              "P76/P409[956]",
+              "P60/P366[3023]",
+              "P91/P438[507]",
+              "P92/P439[511]",
+              "P27/P133[2806]",
+              "P14/P77[957]",
+              "P58/P360[3023]"
+            ],
+            "dropped_products": [
+              {
+                "class": 478,
+                "design_partner": [
+                  {
+                    "class": 478,
+                    "key": [
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      2,
+                      0,
+                      0,
+                      0,
+                      2,
+                      0,
+                      1,
+                      1,
+                      1,
+                      1
+                    ],
+                    "product": true
+                  }
+                ],
+                "key": [
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                  0,
+                  1,
+                  0,
+                  1,
+                  1,
+                  1,
+                  1
+                ],
+                "leaves_product_route": false,
+                "name640": "P75",
+                "non_product_masters": 0,
+                "non_product_new_master_classes": [],
+                "row_terms": 2
+              },
+              {
+                "class": 379,
+                "design_partner": [
+                  {
+                    "class": 955,
+                    "key": [
+                      1,
+                      1,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      -1,
+                      0,
+                      0,
+                      0,
+                      1,
+                      1,
+                      2,
+                      2
+                    ],
+                    "product": false
+                  }
+                ],
+                "key": [
+                  0,
+                  1,
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  1,
+                  1,
+                  1
+                ],
+                "leaves_product_route": true,
+                "name640": "P130",
+                "non_product_masters": 7,
+                "non_product_new_master_classes": [
+                  955
+                ],
+                "row_terms": 12
+              },
+              {
+                "class": 126,
+                "design_partner": [
+                  {
+                    "class": 126,
+                    "key": [
+                      0,
+                      0,
+                      1,
+                      1,
+                      0,
+                      0,
+                      2,
+                      0,
+                      2,
+                      2,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "product": true
+                  }
+                ],
+                "key": [
+                  0,
+                  0,
+                  1,
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  1,
+                  1,
+                  1,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "leaves_product_route": false,
+                "name640": "P80",
+                "non_product_masters": 0,
+                "non_product_new_master_classes": [],
+                "row_terms": 2
+              }
+            ],
+            "factorized_sources_off_product_route": [
+              {
+                "meaning": "genuine 5L masters enter at O(eps^1) or higher: the product integral through eps^K needs them only through eps^(K-1)",
+                "min_valuation_non_product": 1,
+                "min_valuation_product": 0,
+                "name640": "P240",
+                "non_product_masters": 7,
+                "non_product_masters_at_min_valuation": [
+                  {
+                    "key": [
+                      0,
+                      -1,
+                      1,
+                      0,
+                      0,
+                      -1,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      1,
+                      1,
+                      1,
+                      1
+                    ],
+                    "name640": "P60"
+                  },
+                  {
+                    "key": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      1,
+                      1
+                    ],
+                    "name640": "P67"
+                  },
+                  {
+                    "key": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      3,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      1,
+                      1
+                    ],
+                    "name640": "P69"
+                  },
+                  {
+                    "key": [
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      1,
+                      1,
+                      1,
+                      1
+                    ],
+                    "name640": "P73"
+                  },
+                  {
+                    "key": [
+                      1,
+                      1,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      -1,
+                      0,
+                      0,
+                      0,
+                      1,
+                      1,
+                      2,
+                      2
+                    ],
+                    "name640": null
+                  },
+                  {
+                    "key": [
+                      1,
+                      1,
+                      1,
+                      0,
+                      0,
+                      2,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      1,
+                      2,
+                      1
+                    ],
+                    "name640": null
+                  }
+                ],
+                "non_product_valuation_histogram": {
+                  "1": 6,
+                  "2": 1
+                },
+                "provenance": "rustred",
+                "source": [
+                  0,
+                  2,
+                  1,
+                  0,
+                  0,
+                  0,
+                  1,
+                  0,
+                  1,
+                  1,
+                  0,
+                  1,
+                  0,
+                  1,
+                  1
+                ],
+                "terms": 14
+              },
+              {
+                "meaning": "6 genuine 5L masters enter at O(eps^0) (valuation 0): the product integral through eps^K needs their eps^(K) values at full weight",
+                "min_valuation_non_product": 0,
+                "min_valuation_product": 0,
+                "name640": "P586",
+                "non_product_masters": 7,
+                "non_product_masters_at_min_valuation": [
+                  {
+                    "key": [
+                      0,
+                      -1,
+                      1,
+                      0,
+                      0,
+                      -1,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      1,
+                      1,
+                      1,
+                      1
+                    ],
+                    "name640": "P60"
+                  },
+                  {
+                    "key": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      1,
+                      1
+                    ],
+                    "name640": "P67"
+                  },
+                  {
+                    "key": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      3,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      1,
+                      1
+                    ],
+                    "name640": "P69"
+                  },
+                  {
+                    "key": [
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      1,
+                      1,
+                      1,
+                      1
+                    ],
+                    "name640": "P73"
+                  },
+                  {
+                    "key": [
+                      1,
+                      1,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      -1,
+                      0,
+                      0,
+                      0,
+                      1,
+                      1,
+                      2,
+                      2
+                    ],
+                    "name640": null
+                  },
+                  {
+                    "key": [
+                      1,
+                      1,
+                      1,
+                      0,
+                      0,
+                      2,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      1,
+                      2,
+                      1
+                    ],
+                    "name640": null
+                  }
+                ],
+                "non_product_valuation_histogram": {
+                  "0": 6,
+                  "1": 1
+                },
+                "provenance": "rustred",
+                "source": [
+                  2,
+                  2,
+                  0,
+                  0,
+                  0,
+                  1,
+                  1,
+                  0,
+                  1,
+                  1,
+                  0,
+                  1,
+                  0,
+                  0,
+                  1
+                ],
+                "terms": 17
+              },
+              {
+                "meaning": "6 genuine 5L masters enter at O(eps^0) (valuation 0): the product integral through eps^K needs their eps^(K) values at full weight",
+                "min_valuation_non_product": 0,
+                "min_valuation_product": 0,
+                "name640": "P592",
+                "non_product_masters": 7,
+                "non_product_masters_at_min_valuation": [
+                  {
+                    "key": [
+                      0,
+                      -1,
+                      1,
+                      0,
+                      0,
+                      -1,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      1,
+                      1,
+                      1,
+                      1
+                    ],
+                    "name640": "P60"
+                  },
+                  {
+                    "key": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      1,
+                      1
+                    ],
+                    "name640": "P67"
+                  },
+                  {
+                    "key": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      3,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      1,
+                      1
+                    ],
+                    "name640": "P69"
+                  },
+                  {
+                    "key": [
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      1,
+                      1,
+                      1,
+                      1
+                    ],
+                    "name640": "P73"
+                  },
+                  {
+                    "key": [
+                      1,
+                      1,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      -1,
+                      0,
+                      0,
+                      0,
+                      1,
+                      1,
+                      2,
+                      2
+                    ],
+                    "name640": null
+                  },
+                  {
+                    "key": [
+                      1,
+                      1,
+                      1,
+                      0,
+                      0,
+                      2,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      1,
+                      2,
+                      1
+                    ],
+                    "name640": null
+                  }
+                ],
+                "non_product_valuation_histogram": {
+                  "0": 6,
+                  "1": 1
+                },
+                "provenance": "rustred",
+                "source": [
+                  2,
+                  2,
+                  0,
+                  1,
+                  0,
+                  1,
+                  1,
+                  0,
+                  1,
+                  1,
+                  0,
+                  1,
+                  0,
+                  0,
+                  1
+                ],
+                "terms": 20
+              },
+              {
+                "meaning": "genuine 5L masters enter at O(eps^1) or higher: the product integral through eps^K needs them only through eps^(K-1)",
+                "min_valuation_non_product": 1,
+                "min_valuation_product": 0,
+                "name640": "P130",
+                "non_product_masters": 7,
+                "non_product_masters_at_min_valuation": [
+                  {
+                    "key": [
+                      0,
+                      -1,
+                      1,
+                      0,
+                      0,
+                      -1,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      1,
+                      1,
+                      1,
+                      1
+                    ],
+                    "name640": "P60"
+                  },
+                  {
+                    "key": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      1,
+                      1
+                    ],
+                    "name640": "P67"
+                  },
+                  {
+                    "key": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      3,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      1,
+                      1
+                    ],
+                    "name640": "P69"
+                  },
+                  {
+                    "key": [
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      1,
+                      1,
+                      1,
+                      1
+                    ],
+                    "name640": "P73"
+                  },
+                  {
+                    "key": [
+                      1,
+                      1,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      -1,
+                      0,
+                      0,
+                      0,
+                      1,
+                      1,
+                      2,
+                      2
+                    ],
+                    "name640": null
+                  },
+                  {
+                    "key": [
+                      1,
+                      1,
+                      1,
+                      0,
+                      0,
+                      2,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      1,
+                      2,
+                      1
+                    ],
+                    "name640": null
+                  }
+                ],
+                "non_product_valuation_histogram": {
+                  "1": 6,
+                  "2": 1
+                },
+                "provenance": "basis-change",
+                "source": [
+                  0,
+                  1,
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  1,
+                  1,
+                  1
+                ],
+                "terms": 12
+              }
+            ],
+            "factorized_sources_off_product_route_summary": {
+              "by_min_valuation_non_product": {
+                "0": [
+                  "P586",
+                  "P592"
+                ],
+                "1": [
+                  "P240",
+                  "P130"
+                ]
+              },
+              "n": 4,
+              "one_line": "4 factorized sources leave the product route: 2 with genuine-master coefficients of valuation 0, i.e. O(eps^0) (P586 P592; 6 genuine 5L masters each at valuation 0: the finite part needs those masters' eps^0 (and lower) values at full weight); 2 with genuine-master coefficients O(eps^1) (P240 P130)"
+            },
+            "factorized_sources_rule": "RR-11 P1 extended by the B2-P compose binary: in a layer that declares this basis_change block the \"onto factorized masters only\" restriction is lifted for factorized sources (verification level still required). Reason (computed from this basis): the basis drops the product master P130 and its row has non-product masters (new masters of class 955), so P130 and every product relation through it leave the product route (factorized_sources_off_product_route); P75 P80 map onto product masters only (they stay on the product route)",
+            "needs_user_acceptance": [],
+            "new": [
+              {
+                "class": 126,
+                "key": [
+                  0,
+                  0,
+                  1,
+                  1,
+                  0,
+                  0,
+                  2,
+                  0,
+                  2,
+                  2,
+                  1,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "kind": "comp",
+                "row_source": "composed-pack reduction (sp_dump reduce) tmp/sp-a/red-run2/comp-7.jsonl"
+              },
+              {
+                "class": 478,
+                "key": [
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                  2,
+                  0,
+                  0,
+                  0,
+                  2,
+                  0,
+                  1,
+                  1,
+                  1,
+                  1
+                ],
+                "kind": "comp",
+                "row_source": "composed-pack reduction (sp_dump reduce) basis-b/b1d/out/red-s1L-0.jsonl"
+              },
+              {
+                "class": 955,
+                "key": [
+                  1,
+                  1,
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  -1,
+                  0,
+                  0,
+                  0,
+                  1,
+                  1,
+                  2,
+                  2
+                ],
+                "kind": "comp",
+                "row_source": "composed-pack reduction (sp_dump reduce) basis-b/b1d/out/red-s1L-4.jsonl"
+              },
+              {
+                "class": 506,
+                "key": [
+                  0,
+                  2,
+                  0,
+                  2,
+                  3,
+                  1,
+                  0,
+                  1,
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                "kind": "row",
+                "row_source": "old layer row (provenance rustred, verification independent-full)"
+              },
+              {
+                "class": 1022,
+                "key": [
+                  1,
+                  2,
+                  2,
+                  0,
+                  0,
+                  1,
+                  1,
+                  0,
+                  0,
+                  1,
+                  1,
+                  1,
+                  0,
+                  0,
+                  1
+                ],
+                "kind": "row",
+                "row_source": "old layer row (provenance rustred, verification independent-full)"
+              },
+              {
+                "class": 2023,
+                "key": [
+                  1,
+                  2,
+                  1,
+                  1,
+                  0,
+                  1,
+                  0,
+                  1,
+                  0,
+                  0,
+                  2,
+                  1,
+                  1,
+                  0,
+                  0
+                ],
+                "kind": "row",
+                "row_source": "old layer row (provenance rustred, verification ii-whole-row)"
+              },
+              {
+                "class": 1020,
+                "key": [
+                  1,
+                  1,
+                  1,
+                  0,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                  2,
+                  2,
+                  1,
+                  0,
+                  0,
+                  1
+                ],
+                "kind": "comp",
+                "row_source": "composed-pack reduction (sp_dump reduce) basis-b/b1d/out/red-s1L-3.jsonl"
+              },
+              {
+                "class": 3023,
+                "key": [
+                  1,
+                  2,
+                  0,
+                  0,
+                  2,
+                  0,
+                  1,
+                  0,
+                  2,
+                  1,
+                  0,
+                  1,
+                  0,
+                  1,
+                  1
+                ],
+                "kind": "row",
+                "row_source": "old layer row (provenance rustred, verification ii-whole-row)"
+              },
+              {
+                "class": 3067,
+                "key": [
+                  1,
+                  1,
+                  0,
+                  1,
+                  2,
+                  -1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  0,
+                  1,
+                  0,
+                  0,
+                  1
+                ],
+                "kind": "row",
+                "row_source": "old layer row (provenance rustred, verification ii-whole-row)"
+              },
+              {
+                "class": 3067,
+                "key": [
+                  1,
+                  1,
+                  0,
+                  1,
+                  1,
+                  0,
+                  1,
+                  1,
+                  2,
+                  1,
+                  0,
+                  1,
+                  0,
+                  0,
+                  1
+                ],
+                "kind": "row",
+                "row_source": "old layer row (provenance rustred, verification ii-whole-row)"
+              },
+              {
+                "class": 955,
+                "key": [
+                  1,
+                  2,
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  1,
+                  2,
+                  1
+                ],
+                "kind": "comp",
+                "row_source": "composed-pack reduction (sp_dump reduce) tmp/sp-a/red-run4/comp-7.jsonl"
+              },
+              {
+                "class": 3066,
+                "key": [
+                  -1,
+                  3,
+                  1,
+                  1,
+                  0,
+                  1,
+                  1,
+                  1,
+                  0,
+                  1,
+                  1,
+                  1,
+                  0,
+                  0,
+                  0
+                ],
+                "kind": "row",
+                "row_source": "old layer row (provenance rustred, verification independent-full)"
+              },
+              {
+                "class": 3055,
+                "key": [
+                  1,
+                  2,
+                  1,
+                  0,
+                  1,
+                  0,
+                  1,
+                  1,
+                  1,
+                  1,
+                  0,
+                  0,
+                  0,
+                  1,
+                  1
+                ],
+                "kind": "row",
+                "row_source": "old layer row (provenance rustred, verification independent-full)"
+              },
+              {
+                "class": 4079,
+                "key": [
+                  0,
+                  2,
+                  1,
+                  1,
+                  0,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  0,
+                  0
+                ],
+                "kind": "row",
+                "row_source": "old layer row (provenance rustred, verification ii-whole-row)"
+              },
+              {
+                "class": 3071,
+                "key": [
+                  1,
+                  2,
+                  1,
+                  0,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  0,
+                  1,
+                  0,
+                  1,
+                  0
+                ],
+                "kind": "row",
+                "row_source": "old layer row (provenance rustred, verification ii-whole-row)"
+              },
+              {
+                "class": 3023,
+                "key": [
+                  1,
+                  2,
+                  0,
+                  0,
+                  2,
+                  0,
+                  1,
+                  0,
+                  1,
+                  1,
+                  0,
+                  1,
+                  0,
+                  1,
+                  1
+                ],
+                "kind": "row",
+                "row_source": "old layer row (provenance rustred, verification ii-whole-row)"
+              },
+              {
+                "class": 955,
+                "key": [
+                  1,
+                  1,
+                  1,
+                  0,
+                  0,
+                  2,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  1,
+                  2,
+                  1
+                ],
+                "kind": "comp",
+                "row_source": "composed-pack reduction (sp_dump reduce) tmp/sp-a/red5/comp-3.jsonl"
+              },
+              {
+                "class": 956,
+                "key": [
+                  2,
+                  2,
+                  1,
+                  0,
+                  0,
+                  -1,
+                  0,
+                  1,
+                  0,
+                  1,
+                  0,
+                  2,
+                  0,
+                  0,
+                  2
+                ],
+                "kind": "comp",
+                "row_source": "composed-pack reduction (sp_dump reduce) basis-b/b1d/out/red-s1L-3.jsonl"
+              },
+              {
+                "class": 14071,
+                "key": [
+                  1,
+                  1,
+                  2,
+                  0,
+                  0,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  0,
+                  1,
+                  0,
+                  1,
+                  1
+                ],
+                "kind": "row",
+                "row_source": "old layer row (provenance rustred, verification ii-whole-row)"
+              },
+              {
+                "class": 8175,
+                "key": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  -1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  0,
+                  0
+                ],
+                "kind": "row",
+                "row_source": "old layer row (provenance rustred, verification ii-whole-row)"
+              }
+            ],
+            "new_master_rows_from_old_layer": 13,
+            "old_layer": "/shared/vhirschi/t3code/vakint/scratchpad/5l-pilot/rustred-dev/layer/runs/intermediate/20261103T0246Z-fcfd7445cc98/manifest-bindable/layer.json",
+            "old_layer_sha256": "da8c5d51b1d519c7f2222914203eb5cf4d685f79a8c92e0a13903eb63ca4a1b6",
+            "old_rows_removed_as_new_masters": 13,
+            "ruling": "user 2026-11-04 ~00:00Z (question tool; reports/user-decisions.md, entry \"WAVE B3 RESULT\" USER ANSWERS (1); restated in the B4-SW brief 2026-11-04): switch to BASIS-v2 (basis-b/b3/BASIS-v2.json), accepting that P586, P592, P240, P130 leave the exact lower-loop route and that P130 is replaced by a numerical class-955 master; standing rulings: user 2026-11-03 14:40Z/14:50Z: option B, a spurious-pole-free basis for everything vakint admits (DRAFT PR held); 17:30Z: full scope (20 changes, the exact minimum), basis need not be sector-pure, T1 to eps^5 exact in the 1L data, target data line v0.1.2 (dev pins dd7de300b / 0066b166); 19:05Z: no new lower-loop data",
+            "ruling_coverage": {
+              "off_route": {
+                "P130": "coordinator ruling file /shared/vhirschi/t3code/vakint/scratchpad/5l-pilot/basis-b/b2/pack/runs/v2/ruling.json",
+                "P240": "user 2026-11-03 20:30Z (2): accept that 9 product integrals (P359 P240 P346 P348 P349 P350 P351 P586 P592) leave the exact lower-loop route",
+                "P586": "user 2026-11-03 20:30Z (2): accept that 9 product integrals (P359 P240 P346 P348 P349 P350 P351 P586 P592) leave the exact lower-loop route",
+                "P592": "user 2026-11-03 20:30Z (2): accept that 9 product integrals (P359 P240 P346 P348 P349 P350 P351 P586 P592) leave the exact lower-loop route"
+              },
+              "replaced_products": {
+                "P130": "coordinator ruling file /shared/vhirschi/t3code/vakint/scratchpad/5l-pilot/basis-b/b2/pack/runs/v2/ruling.json"
+              }
+            },
+            "ruling_facts": "this basis (basis-b/b3/BASIS-v2.json): 20 changes; dropped product masters P75 P130 P80: P75 P80 stay on the product route, P130 leaves it (numerical replacement); off-route factorized sources P130 P240 P586 P592",
+            "ruling_source": "coordinator ruling file /shared/vhirschi/t3code/vakint/scratchpad/5l-pilot/basis-b/b2/pack/runs/v2/ruling.json",
+            "tag": "BASIS-v2",
+            "verify": "/shared/vhirschi/t3code/vakint/scratchpad/5l-pilot/basis-b/b2/pack/runs/v2/verify-bc.json"
+          },
+          "ruling": "user 2026-11-08 ~01:30Z (reports/user-decisions.md; RESUME R addendum 2026-11-08 01:30Z): Q1 build the pole-free top-sector basis now on the 4-swap design while the top-sector sampling keeps running (a new pole direction found later = one more swap folded in before release); Q2 one design, the most promising for layer size / 5L runtime by <= ~2 h of minimal tests (basisv3-1108 SELECT: S2, basis-b/topbasis/v3sel/SELECTION.json); Q3 the new 16359 master is under the same >= 16 d waiver as the five 16359 masters (aim 32-50 d). BASIS-v3 is composed on BASIS-v2, whose ruling stands: user 2026-11-04 ~00:00Z (question tool; reports/user-decisions.md, entry \"WAVE B3 RESULT\" USER ANSWERS (1); restated in the B4-SW brief 2026-11-04): switch to BASIS-v2 (basis-b/b3/BASIS-v2.json), accepting that P586, P592, P240, P130 leave the exact lower-loop route and that P130 is replaced by a numerical class-955 master; standing rulings: user 2026-11-03 14:40Z/14:50Z: option B, a spurious-pole-free basis for everything vakint admits (DRAFT PR held); 17:30Z: full scope (20 changes, the exact minimum), basis need not be sector-pure, T1 to eps^5 exact in the 1L data, target data line v0.1.2 (dev pins dd7de300b / 0066b166); 19:05Z: no new lower-loop data",
           "ruling_coverage": {
             "off_route": {
-              "P130": "coordinator ruling file /shared/vhirschi/t3code/vakint/scratchpad/5l-pilot/basis-b/b2/pack/runs/v2/ruling.json",
+              "P130": "coordinator ruling file /shared/vhirschi/t3code/vakint/scratchpad/5l-pilot/basis-b/topbasis/v3build/ruling-v3.json",
               "P240": "user 2026-11-03 20:30Z (2): accept that 9 product integrals (P359 P240 P346 P348 P349 P350 P351 P586 P592) leave the exact lower-loop route",
               "P586": "user 2026-11-03 20:30Z (2): accept that 9 product integrals (P359 P240 P346 P348 P349 P350 P351 P586 P592) leave the exact lower-loop route",
               "P592": "user 2026-11-03 20:30Z (2): accept that 9 product integrals (P359 P240 P346 P348 P349 P350 P351 P586 P592) leave the exact lower-loop route"
             },
-            "replaced_products": {
-              "P130": "coordinator ruling file /shared/vhirschi/t3code/vakint/scratchpad/5l-pilot/basis-b/b2/pack/runs/v2/ruling.json"
-            }
+            "replaced_products": {}
           },
-          "ruling_facts": "this basis (basis-b/b3/BASIS-v2.json): 20 changes; dropped product masters P75 P130 P80: P75 P80 stay on the product route, P130 leaves it (numerical replacement); off-route factorized sources P130 P240 P586 P592",
-          "ruling_source": "coordinator ruling file /shared/vhirschi/t3code/vakint/scratchpad/5l-pilot/basis-b/b2/pack/runs/v2/ruling.json",
-          "tag": "BASIS-v2",
-          "verify": "/shared/vhirschi/t3code/vakint/scratchpad/5l-pilot/basis-b/b2/pack/runs/v2/verify-bc.json"
+          "ruling_facts": "this basis (basis-b/topbasis/v3build/BASIS-v3.json): 4 changes; dropped product masters none: none stay on the product route, none leave it (numerical replacement); off-route factorized sources P130 P240 P586 P592",
+          "ruling_source": "coordinator ruling file /shared/vhirschi/t3code/vakint/scratchpad/5l-pilot/basis-b/topbasis/v3build/ruling-v3.json",
+          "tag": "BASIS-v3",
+          "verify": "/shared/vhirschi/t3code/vakint/scratchpad/5l-pilot/basis-b/topbasis/v3build/run/verify-bc.json"
         },
         "factorized_sources": {
           "names": [
@@ -3971,7 +5096,7 @@
           "updated_utc": "2026-11-03T02:29:48+00:00"
         },
         "policy": "bindable",
-        "producer": "track B2-P basis-b/b2/pack/tools/make_layer.py: the C3 layer /shared/vhirschi/t3code/vakint/scratchpad/5l-pilot/rustred-dev/layer/runs/intermediate/20261103T0246Z-fcfd7445cc98/manifest-bindable/layer.json composed exactly with the basis change BASIS-v2 (pack/rr-src examples/rust/b2_basis.rs, exact Q(d)); old rows keep their provenance and verification token (the same relation written in the new basis)",
+        "producer": "track B2-P basis-b/b2/pack/tools/make_layer.py: the C3 layer /shared/vhirschi/t3code/vakint/scratchpad/5l-pilot/basis-b/b2/pack/runs/v2/manifest-bindable/layer.json composed exactly with the basis change BASIS-v3 (pack/rr-src examples/rust/b2_basis.rs, exact Q(d)); old rows keep their provenance and verification token (the same relation written in the new basis)",
         "provenance_agreement": {
           "agree": 3,
           "compared": 3,
@@ -3981,7 +5106,7 @@
           }
         },
         "provenance_counts": {
-          "basis-change": 20,
+          "basis-change": 24,
           "kira-stopgap": 47,
           "rustred": 437,
           "two-stage": 2,
@@ -4231,6 +5356,7 @@
         },
         "verification_levels": {
           "basis-change:BASIS-v2;exact Q(d) inverse;recomposed mod 2 primes + exact Q;G-POLE": 20,
+          "basis-change:BASIS-v3;exact Q(d) inverse;recomposed mod 2 primes + exact Q;G-POLE": 4,
           "counted-by-ruling:kira-3d;v-direct-54d;box-4pt;not-ii;not-table-in-d;ruling-2026-11-03": 1,
           "counted-by-ruling:kira-6d;not-ii;not-table-in-d;ruling-2026-11-03": 1,
           "factorized:selfcheck+kira-ii": 7,
@@ -4646,7 +5772,7 @@
         }
       },
       "provenance_counts": {
-        "basis-change": 20,
+        "basis-change": 24,
         "identity": 0,
         "kira-stopgap": 47,
         "rustred": 437,
@@ -4659,13 +5785,13 @@
         "passed": true,
         "points": [
           [
-            2198401248390414701
+            1142750732938248645
           ],
           [
-            1534176089800752959
+            109603146071787463
           ],
           [
-            1254403001243783705
+            1816124606184047876
           ]
         ],
         "prime": 2305843009213693951,
@@ -4673,17 +5799,17 @@
       },
       "size_gate": {
         "base_decoded_bytes": 581031505,
-        "composed_blake3": "1d1a7b75a4c7ac6d368f390350db25e16362acb21ed0024f9d91520872df01dc",
-        "composed_decoded_bytes": 661200069,
+        "composed_blake3": "6cad6058c174026144ae6a46817097f6bb25f1d28c96e47d6e07dff432095948",
+        "composed_decoded_bytes": 645796793,
         "consumer_limits": {
           "layout": {
-            "atom_entries": 175553,
-            "atom_table_bytes": 125162070,
-            "max_atom_bytes": 9722,
+            "atom_entries": 176016,
+            "atom_table_bytes": 109732004,
+            "max_atom_bytes": 8746,
             "remaining": 131,
             "rows": 939,
             "state_bytes": 1482,
-            "total_bytes": 661200069
+            "total_bytes": 645796793
           },
           "limits": {
             "max_atom_bytes": 18446744073709551615,
@@ -4700,10 +5826,10 @@
         "effective_max_ratio": 31748268234.972134,
         "gate": 1e+18,
         "passed": true,
-        "ratio": 1.1379762772072057,
+        "ratio": 1.1114660520861084,
         "ratio_passed": true
       },
-      "sources": 516,
+      "sources": 520,
       "unreduced": [
         {
           "key": [
@@ -4789,6 +5915,7 @@
       "unreduced_filled": [],
       "verification_counts": {
         "basis-change:BASIS-v2;exact Q(d) inverse;recomposed mod 2 primes + exact Q;G-POLE": 20,
+        "basis-change:BASIS-v3;exact Q(d) inverse;recomposed mod 2 primes + exact Q;G-POLE": 4,
         "counted-by-ruling:kira-3d;v-direct-54d;box-4pt;not-ii;not-table-in-d;ruling-2026-11-03": 1,
         "counted-by-ruling:kira-6d;not-ii;not-table-in-d;ruling-2026-11-03": 1,
         "factorized:selfcheck+kira-ii": 7,
