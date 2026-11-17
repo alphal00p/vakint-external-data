@@ -1,0 +1,33 @@
+{
+ "schema": "vakint.external-data.release-gates.v1",
+ "version": "v0.3.0",
+ "purpose": "The commits the v0.3.0 release gates ran on (repository record only: not part of any release archive or manifest).",
+ "gated_tree": {
+  "root_manifest_sha256": "8e3700d27e146cd834bbc353ec6f1d30d106ee7637a0dcadf3e5f707e80a2386",
+  "five_loop_manifest_sha256": "ec431789f9783bede9076db76fcb91c7e6224569bf38d7eaaedf5da030b12e7b",
+  "data_commit": "3c0b874d47c1fa4cdade9a5beba0244fe74c270c (the data tree; this record is added on top of it and changes no data file)"
+ },
+ "base": {
+  "repository": "alphal00p/vakint-external-data",
+  "commit": "4caa08a0e34aefca6707f877b6880c3c973b6d9b",
+  "note": "v0.2.3 (1be01449) + the p_integral batches 4-6"
+ },
+ "consumer": {
+  "repository": "alphal00p/gammaloop",
+  "branch": "p_integral",
+  "commit": "738d60e873e7a09112c0ae5dda205ae7df8013e5",
+  "rustred": {
+   "repository": "alphal00p/rustred",
+   "commit": "cb7b67c205918eacfa4909782da3dd43ab07973e",
+   "note": "batch 10 on rustred main; contains 876988940f6ee8bde58ccdf075882e63f071a8f1 (PR #36, the eta-DE engine)"
+  }
+ },
+ "reference_loader": {
+  "repository": "alphal00p/gammaloop",
+  "branch": "vakint_rustred",
+  "commit": "fd8b446410a047035aac5136b0e4475ca26a8973",
+  "note": "the reference of the COMPAT lanes and of the DROPPED probe; an ancestor of the consumer (157 commits)"
+ },
+ "compat_note": "Consumers containing vakint PR #257 (60e8b8c7671ff4ea02eaabfe7ec170e6cd5aa53e, Numerical-mode exact zeros) return values for the dropped former masters P31, P125 and P131 where the reference loader fails closed; the values agree with v0.2.3 (>= 28 digits) and every other output is byte-identical. This is consumer behaviour, not a data change.",
+ "five_loop_recorded_revisions": "5L/package.json and 5L/provenance/current-publication.json keep vakint 64090b527e07bb947c38c925458a0b7b214de9c3 and rustred 3e83ae912367b19944a167cc076ea3efb6658932: the revisions that produced and authenticated the five-loop IBP application, unchanged in v0.3.0. They are left as they are because both files are inside the gated five-loop archive."
+}
