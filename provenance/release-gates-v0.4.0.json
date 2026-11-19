@@ -48,7 +48,14 @@
  },
  "acceptance": {
   "result": "{{TO FILL FROM pins: pin.acceptance}}",
-  "source": "{{TO FILL FROM pins: pin.acceptance_source}}"
+  "source": "{{TO FILL FROM pins: pin.acceptance_source}}",
+  "stage_15": {
+   "note": "one T266 integral served by the shipped relations, compared with a reference package; it may finish after the release date and does not block the release (coordinator ruling 2026-11-19)",
+   "status_at_release": "{{TO FILL FROM the stage-15 record: pin.acceptance_stage15}}",
+   "raw_judge_output": "{{TO FILL FROM the stage-15 record (raw judge output, verbatim): pin.acceptance_stage15_raw_judge}}",
+   "ruling": "{{TO FILL FROM the coordinator's ruling as applied to that output: pin.acceptance_stage15_ruling}}",
+   "ruling_rule": "a judge FAIL whose only reason is the shipped-relation counter of a resumed final attempt, with equal result digests of both legs and at least one shipped-relation use in an earlier attempt, is recorded as PASS; the judge is unchanged and its raw output is kept beside the ruling"
+  }
  },
  "repository_checks": "the workflow .github/workflows/validate.yml run locally on the filled tree: python3 tools/data.py validate; python3 -m unittest discover -s tests; python3 tools/data.py pack --runtime-only; and python3 tools/p_integral_area.py validate"
 }
