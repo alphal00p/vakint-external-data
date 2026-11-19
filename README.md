@@ -17,8 +17,8 @@ release). Since v0.3.0:
 - The library: {{TO FILL FROM revision: rev.counts.classes}} owner classes over
   {{TO FILL FROM revision: rev.counts.tops}} top families and {{TO FILL FROM revision: rev.counts.sectors}}
   sectors; 266 named nodes, the caller families T002e ... T283 (129 five-loop, 88 four-loop, 39
-  three-loop, 10 two-loop), each with its own stored owner table; {{TO FILL FROM revision: rev.counts.terminals}}
-  terminals (the unit and the residual terminals), which the catalogue maps onto masters (Known limits); the
+  three-loop, 10 two-loop), each with its own stored owner table; {{TO FILL FROM revision: rev.residual_terminals}}
+  residual terminals, which the catalogue maps onto masters (Known limits); the
   saved route verification `routes.rrbin`; the explicit key relations of node T266 (`relations/`).
 - Not in this repository: the library is {{TO FILL FROM revision: rev.library_files}} files,
   {{TO FILL FROM revision: rev.library_bytes|gb}} (single files up to {{TO FILL FROM revision: rev.largest_bytes|gb}}, far above the
@@ -30,10 +30,9 @@ release). Since v0.3.0:
 - Changes since the last five-loop candidate (vk5l-s12349d-r2, 18 November 2026, never released), per node:
   {{TO FILL FROM notes/r3/RELEASE_NOTES_CONTENT.md section C at the freeze: pin.changes_since_r2}}
 - Master catalogue v4 (`{{TO FILL FROM revision: catalogue.data_version}}`, sha256
-  `{{TO FILL FROM revision: catalogue.sha256}}`): {{TO FILL FROM revision: catalogue.masters}} masters,
-  {{TO FILL FROM revision: catalogue.placeholders}} placeholders; of {{TO FILL FROM revision: catalogue.terminals}}
-  terminal rows, {{TO FILL FROM revision: catalogue.terminals_mapped}} map onto catalogue masters and
-  {{TO FILL FROM revision: catalogue.terminals_placeholder}} onto a placeholder.
+  `{{TO FILL FROM revision: catalogue.sha256}}`): {{TO FILL FROM revision: catalogue.masters}} GGPPSS masters,
+  {{TO FILL FROM revision: catalogue.placeholders}} placeholder masters, and the map of the package's residual terminals
+  onto them, onto Forcer masters and onto Γ factors (Known limits).
 
 {{TO FILL FROM tools/r3/package_content.py <final r3> --base <r2> (.short.md): include:content_short}}
 
@@ -51,7 +50,7 @@ release). Since v0.3.0:
   cat "$D"/{{TO FILL FROM DATASET.json: ds.archive.name}}.part-* | {{TO FILL FROM DATASET.json: ds.decompress}} | tar -xf - --strip-components=1 -C .
   sha256sum -c "$D"/SHA256SUMS.files                       # every restored file (paths relative to the checkout)
   ```
-{{TO FILL FROM notes/r3/DATASET_LAYOUT.md (compare the commands above; then an empty value): pin.check_restore_commands}}
+
   Then load the checkout as a directory: `Vakint::load_external_data(<checkout>, n)` (Python:
   `engine.load_external_data("/path/to/vakint-external-data", max_loop_count=n)`, any n from 1 to 5: the p library is
   found through the same root; n decides which vacuum loop packs are loaded). Vakint checks every listed library file
@@ -86,79 +85,83 @@ release). Since v0.3.0:
 
 Known limits:
 
-- Unknown master coefficients ship as `UNKNOWN(master, k)`. Catalogue v4
-  (`{{TO FILL FROM revision: catalogue.data_version}}`, sha256 `{{TO FILL FROM revision: catalogue.sha256}}`) holds the
-  {{TO FILL FROM revision: catalogue.masters}} GGPPSS masters, each exact from its leading order through its last
-  published order (eps^0: 68 masters, eps^1: 46, eps^2: 63, eps^3: 22, eps^4: 24, eps^5: 24, eps^6: 13,
-  eps^7: 8, eps^8: 5, eps^9: 6, eps^10: 1, eps^14: 1). The orders after that, through eps^12, are
-  `UNKNOWN(<symbol>, k)` (e.g. `UNKNOWN(ggppss_int_53,7)`); from eps^13 on (eps^15 for ggppss_int(23)) an
-  order is an ALARM order, which no request is expected to need.
-- 39 unknown orders on 31 masters are dependent: a known part plus rational multiples of free `UNKNOWN`
-  symbols (the 38 dependences printed in GGPPSS's MasterExpansions.m and the identity
-  Int[74][6] = 18 Int[53][7] + C, C exact). Two further identities (Int[88][6], Int[99][5]) are not in it.
-- Of the package's {{TO FILL FROM revision: catalogue.terminals}} residual terminals (193 nodes),
-  {{TO FILL FROM revision: catalogue.terminals_mapped}} map onto GGPPSS / Forcer masters and Gamma factors and
-  {{TO FILL FROM revision: catalogue.terminals_placeholder}} onto placeholder masters `X(<node>:<key>)` without
-  coefficients (one dotted corner each of T266, T267, T270, T271, T273, T275, T276, T278, T282): all their
-  orders eps^-10..eps^12 are UNKNOWN (eps^-10: at most one UV and one IR pole per loop; this floor is an
-  argument, not a computation).
-- Vakint (gammaloop `p_integral` {{TO FILL FROM pins: pin.vakint}}) carries `UNKNOWN` symbols exactly; they
-  cancel only where their exact coefficient cancels. By default a result that still contains one is
-  refused with `UnknownMasterCoefficients` (Python: `ValueError`), for example (printed on catalogue
-  candidate rc3):
+- Unknown master coefficients ship as `UNKNOWN(master, k)`. Catalogue v4 ({{TO FILL FROM catalogue: catalogue.data_version}},
+  sha256 {{TO FILL FROM catalogue: catalogue.sha256}}) holds the 281 GGPPSS masters, each known exactly from its leading order
+  through eps^k (masters per k: eps^0 68, eps^1 46, eps^2 63, eps^3 22, eps^4 24, eps^5 24, eps^6 13, eps^7 8, eps^8 5,
+  eps^9 6, eps^10 1, eps^14 1). Its later orders through eps^12 are expected but not known: vakint writes them
+  `UNKNOWN(<symbol>, k)` (e.g. `UNKNOWN(ggppss_int_53,7)`), except the dependent orders of the next item. From eps^13 on an
+  order is an ALARM order, which no request is expected to need; ggppss_int(23), known through eps^14, has no UNKNOWN order
+  and ALARM from eps^15. The eps^12 ceiling is a provisional limit, not shown to suffice for every six-loop use.
+- 39 of these orders, on 31 masters, are dependent: an exact part plus rational multiples of free `UNKNOWN` symbols. 38 are the
+  dependences printed in GGPPSS's MasterExpansions.m. The 39th is an identity derived here by an IBP recurrence and checked on
+  the printed orders: eps^6 of ggppss_int(74) = 18 x eps^7 of ggppss_int(53) + C, C exact. Two further identities of this kind
+  (eps^6 of ggppss_int(88), eps^5 of ggppss_int(99)) are not used: those orders stay free.
+- Of the package's 231 residual terminals, 222 map onto GGPPSS or Forcer masters and Γ factors and 9 onto placeholder masters
+  `X(<node>:<key>)` without coefficients (one key with one dotted line in each of T266, T267, T270, T271, T273, T275, T276,
+  T278 and T282): all their orders eps^-10..eps^12 are UNKNOWN (no five-loop massless propagator integral has a pole below
+  eps^-10: at most one UV and one IR pole per loop; this floor is an argument, not a computation).
+- vakint (gammaloop `p_integral` {{TO FILL FROM pins: pin.vakint}}) carries `UNKNOWN` symbols exactly; they cancel only where
+  their exact coefficient cancels. By default a result that still contains one is refused with `UnknownMasterCoefficients`
+  (Python: `ValueError`); the pinned vakint prints, for the placeholder key of T278:
 
-      the result through 𝒪(ε^0) depends on 1 expected master coefficient(s) that are not known yet
-      (RustRed, p master data ggppss-5L-v4-rc3; request: ...); set allow_unknown_master_coefficients
-      to keep them as UNKNOWN(master, k) symbols:
-        - master X(T278:1,2,1,1,1,1,1,1,1,1,1,1,1,1) coefficient ε^-10 (affects the result from ε^0)
+      {{TO FILL FROM notes/r3/LOAD_<rev>.md (strict-mode refusal on the T278 placeholder key, verbatim, at the final pin): pin.refusal_message}}
 
   With `allow_unknown_master_coefficients` (setting, Python keyword, or environment
-  `VAKINT_ALLOW_UNKNOWN_MASTER_COEFFICIENTS=1`) the result keeps the symbols, and
-  `Vakint::unknown_master_coefficients` lists them for callers that combine results. A needed ALARM
-  order is always `MissingMasterOrders` (Python: `MissingMasterOrdersError`); Retain mode substitutes no
-  masters. The catalogue is the package's `p-master-catalogue.json` (`VAKINT_P_MASTER_CATALOGUE=<file>|off`
-  overrides it); without the five-loop package, Vakint's built-in catalogue v3.2 has no UNKNOWN orders.
-- Not feasible on today's machines: the hardest five-loop inputs of the six-loop beta function (the
-  14-line physical top shapes, such as the (14,3,7) key of graph 630 and the box edge (4,7) that every
-  node T265-T283 reaches) cost about x100 or more beyond the largest finished record (T278's (14,1,0)
-  corner: 14.37 G ops, 8.5 h, 174 GiB). Larger machines do not change this, because the record pass of
-  one request runs on one core: one such key needs weeks to months and tens of TB of trace
-  (FEASIBILITY-5L.md, sections F.0 and F.5; {{TO FILL FROM the user's decision: pin.feasibility_location}}).
-- Memory and time: the library loads lazily ({{TO FILL FROM notes/r3/LOAD_<rev>.md: pin.load_library}}; r2: 21-28 s,
-  5.7 GB). A process builds each large owner once, at its first use:
-  - T162: {{TO FILL FROM notes/r3/LOAD_<rev>.md: pin.load_T162}} (r2: one key 56 s-2.4 min, peak 7.9-22 GB by engine build);
+  `VAKINT_ALLOW_UNKNOWN_MASTER_COEFFICIENTS=1`) the result keeps the symbols, and `Vakint::unknown_master_coefficients` lists
+  them for callers that combine results. A needed ALARM order is always `MissingMasterOrders` (Python:
+  `MissingMasterOrdersError`, a `ValueError`); Retain mode substitutes no masters. The catalogue is the package's
+  `p-master-catalogue.json` (`VAKINT_P_MASTER_CATALOGUE=<file>|off` overrides it); without the five-loop package, vakint's
+  built-in catalogue v3.2 has no UNKNOWN orders.
+- Not workable with the current engine: the hardest five-loop reductions of the six-loop beta function (the 14-line top shapes,
+  such as the (14,3,7) key of graph 630 and the box edge (4,7) that every node T265-T283 reaches) are estimated, as lower
+  bounds, at about x100 or more the largest reduction finished so far (T278's (14,1,0) corner: 14.37 G operations, 8.5 h,
+  174 GiB). More cores do not change this: the recording pass of one request runs on one core, so one such key needs weeks to
+  months and tens of TB of trace. What could change it is fewer dots and ranks on the input side, or an engine that records
+  without a full trace.
+- Memory and time: the library loads lazily ({{TO FILL FROM notes/r3/LOAD_<rev>.md: pin.load_library}}; r2: 21-28 s, 5.7 GB).
+  A process builds each large owner once, at its first use:
+  - T162: {{TO FILL FROM notes/r3/LOAD_<rev>.md: pin.load_T162}} (r2: one key 56 s-2.4 min, peak 7.9-22 GB depending on the engine build);
   - T178: {{TO FILL FROM notes/r3/LOAD_<rev>.md: pin.load_T178}} (r2: one key 42-45 min, peak 7.4-8.9 GB);
-  - T266: {{TO FILL FROM notes/r3/LOAD_<rev>.md: pin.load_T266}} (with r2's table the owner build peaked at
-    72-106 GB and one T266 key took hours).
-  `census.json` (1.47 GB) is not in the dataset: a verified load (descent certificate) needs it fetched
-  separately.
-- Acceptance: r2 (vk5l-s12349d-r2) is provisional, 14 of 15 stages PASS. The open stage is one key served
-  by the shipped T266 relation root, recorded in two sampled legs; each leg needs more than 2 h 40 min of
-  uninterrupted ~70 GB in one phase, and the host-memory guard stopped both; it never finished. r3
-  (`{{TO FILL FROM revision: rev.revision}}`): {{TO FILL FROM the Sunday acceptance record: pin.acceptance}}
-  ({{TO FILL FROM the Sunday acceptance record: pin.acceptance_source}}).
-- Evidence. Checksums certify that the files are the listed ones; they say nothing about the
-  correctness of the reductions. Further:
-  - Ten catalogue rows were derived by this effort from its own five-loop reductions, most of them
-    reconstructed from finite-field samples; only R:114 and R:207 were reproduced by a second reduction
-    and R:105 matched an outside reviewer's value at the needed order; R:24, R:118 and R:134 (and, as far
-    as found, the older T178 / T182 / T205 / T223 rows) are NOT independently confirmed.
-  - Ten more rows (basis-census route 3) also come from finite-field (sampled) reconstruction, without a
-    second route.
-  - The changed tables were compared with r2 on a few keys only: T180p2 on two production keys (measured
-    on an earlier build of the same records), T162 on four key sets with sampled replay, T266 through
-    prime-weighted symmetry images; no changed table was re-checked on all reductions.
-  - T167: {{TO FILL FROM HANDINS.tsv at the content freeze: pin.evidence_T167}}
-  - T266 half-size table: {{TO FILL FROM HANDINS.tsv at the T266 freeze: pin.evidence_T266_table}}
-  - Speed figures are per-rule probes or partial runs (T167 compared through phase 10 only); no
+  - T266: {{TO FILL FROM notes/r3/LOAD_<rev>.md: pin.load_T266}} (with r2's table the owner build peaked at up to about 106 GB,
+    and the T266 acceptance key did not finish, see Acceptance).
+  `census.json` (1.47 GB) is not shipped. Loading and reductions do not need it; only a verified load (descent certificate,
+  `VAKINT_P_LIBRARY_VERIFY=1`) does, so that is not possible from the dataset alone. Do not add files to the shipped library
+  directory: vakint then refuses it (unlisted file).
+- Acceptance: r2 (vk5l-s12349d-r2) is accepted provisionally. 14 of its 15 checks passed: 11 file, layout and format checks;
+  reductions of one light T162 integral and one light T178 integral, each identical to an earlier independent result; and one
+  vakint evaluation through the released directory, identical to a value checked against an independent result to 39 digits.
+  The 15th check, one T266 integral served by the shipped T266 relations, did not finish and has no result: one step of its
+  reduction needs more than 2 h 40 min without interruption (no state is saved inside the step; the run peaks at about
+  70 GB), and on our shared host both attempts were stopped when free memory fell below our safety limit; it is not resumed.
+  r3 ({{TO FILL FROM revision: rev.revision}}): {{TO FILL FROM the Sunday acceptance record: pin.acceptance}}.
+- Evidence. Checksums show that the files are the listed ones; they say nothing about the correctness of the reductions.
+  vakint checks them at load; it does not verify the package's descent certificate, which is not part of the release.
+  - Descent (that each rule leads to simpler integrals) was re-checked only for the owners changed since the previous
+    package; the rest is carried from the checked earlier package.
+  - Ten catalogue rows (nodes T178, T182, T205, T222, T223, T238, T241, T255, T269, T277) were derived by this effort from its
+    own five-loop reductions; at least nine of them by reconstruction from finite-field samples. The rows of T222 and T238
+    were reproduced by a second reduction on another package; for T255 an outside reviewer's value agrees at the order
+    needed; for T178 a second integral of the same package gave identical terms. The other six were not reproduced by a
+    second reduction.
+  - Ten further rows (T128e, T129e, T130p1, T131e, T132e, T133e, T135e, T140e, T142e, T144p5) come from one reduction each,
+    reconstructed from finite-field samples, without a second route.
+  - The changed tables were compared on a few integrals only. T180p2: two production integrals gave identical results on an
+    earlier build sharing the records they pass through; the three records no production integral had passed at writing:
+    {{TO FILL FROM the T180p2 production run at the content freeze: pin.evidence_T180p2_restored}}. T162: identical results on
+    four sets of integrals by sampled replay, on the table before its last three-piece replacement; on the shipped table:
+    {{TO FILL FROM the T162 results at the content freeze: pin.evidence_T162_shipped}}. T266:
+    {{TO FILL FROM the T266 hand-ins at the T266 freeze: pin.evidence_T266_table}} No changed table was re-checked on all
+    reductions.
+  - T167: one record is replaced by two pieces whose proof is an outside review's; this effort's own generator could not
+    reproduce them. Value check: {{TO FILL FROM the two T167 identity runs: pin.evidence_T167_values}}.
+  - The T162 table, unchanged in its kept records since r2, contains a few records whose validity was checked on sampled
+    integrals only ({{TO FILL FROM the shipped T162 table: pin.evidence_T162_sampled_records}}).
+  - Speed figures are per-record probes or partial runs (the T167 comparison stops before the end of the reduction); no
     end-to-end five-loop speed-up is claimed.
-- Deferred, each with a write-up (paths in the effort's workspace):
-  - P7 orbit files per node (Apply-only): plan/auto-campaign/reports/DEFERRED/rulecost-orbits.md
-  - P11 no-dot-raising relations: plan/auto-campaign/reports/DEFERRED/rulecost-no-raise-relations.md
-  - objective 4, unknown master orders of the six-loop beta (O1, O2): helper notes/O4_DEFERRED.md
-  - E5 learned-denominator replay, E6 trace-free batched application: notes/engine-line.T2XX.md section L
-  - abandoned: E7 closed forms for seven- / eight-line template recursions (< 1.05x): same section L
-  - r3 content items not ready by their cut-off: {{TO FILL FROM WS/plan/consolidation/phase1.json at the content freeze: pin.deferred_content}}
+- Deferred (written up in the development notes, not part of v0.4.0): orbit files per node; relations that raise no dots; in
+  the engine, a learned-denominator replay and a trace-free batched application; the determination of the unknown master
+  coefficients that the six-loop beta function needs. Abandoned: closed forms for the seven- and eight-line template
+  recursions (estimated gain below x1.05). Not in r3: {{TO FILL FROM HANDINS.tsv at the content freeze (Sat 21 Nov, noon UTC): pin.deferred_content}}
 
 Every loop pack (1L-5L vacuum data) is that of v0.3.0; only the release identities change
 (`tools/data.py set-version`: loop manifest versions, manifest hashes, archive names). The
