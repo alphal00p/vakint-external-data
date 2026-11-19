@@ -1,0 +1,54 @@
+{
+ "schema": "vakint.external-data.release-gates.v1",
+ "version": "v0.4.0",
+ "purpose": "The commits, pins and dataset the v0.4.0 release gates ran on (repository record only: not part of any release archive or manifest).",
+ "gated_tree": {
+  "root_manifest_sha256": "{{TO FILL FROM the checkout: repo.root_manifest_sha256}}",
+  "five_loop_manifest_sha256": "{{TO FILL FROM the checkout: repo.five_loop_manifest_sha256}}",
+  "prepared_commit": "{{TO FILL FROM the checkout: repo.head}}",
+  "data_commit": "the commit that fills this record (its parent is prepared_commit); it changes no loop pack"
+ },
+ "base": {
+  "repository": "alphal00p/vakint-external-data",
+  "commit": "8f9c6b43581b06d05243c5ffd05356ef5a8144d7",
+  "note": "v0.3.0"
+ },
+ "consumer": {
+  "repository": "alphal00p/gammaloop",
+  "branch": "p_integral",
+  "commit": "{{TO FILL FROM pins: pin.vakint}}",
+  "rustred": {
+   "repository": "alphal00p/rustred",
+   "main": "{{TO FILL FROM pins: pin.rustred_main}}",
+   "p_integral": "{{TO FILL FROM pins: pin.rustred_p_integral}}"
+  }
+ },
+ "engine": {
+  "p5l_library": "{{TO FILL FROM pins: pin.engine}}",
+  "note": "the RustRed binary that assembled the five-loop library of the dataset"
+ },
+ "dataset": {
+  "description": "datasets/{{TO FILL FROM revision: rev.name}}/",
+  "revision": "{{TO FILL FROM revision: rev.revision}}",
+  "identity": "{{TO FILL FROM revision: rev.identity}}",
+  "root_manifest_sha256": "{{TO FILL FROM revision: rev.root_manifest_sha256}}",
+  "area_manifest_sha256": "{{TO FILL FROM revision: rev.area_manifest_sha256}}",
+  "library_files": "{{TO FILL FROM revision: rev.library_files}}",
+  "library_bytes": "{{TO FILL FROM revision: rev.library_bytes}}",
+  "archive": "{{TO FILL FROM DATASET.json: ds.archive.name}}",
+  "archive_sha256": "{{TO FILL FROM DATASET.json: ds.archive.sha256}}",
+  "archive_bytes": "{{TO FILL FROM DATASET.json: ds.archive.bytes}}",
+  "parts": "{{TO FILL FROM DATASET.json: ds.parts}}",
+  "dataset_json_sha256": "{{TO FILL FROM DATASET.json: ds.dataset_json_sha256}}",
+  "location": "{{TO FILL FROM dataset dir: ds.location}}"
+ },
+ "catalogue": {
+  "data_version": "{{TO FILL FROM revision: catalogue.data_version}}",
+  "sha256": "{{TO FILL FROM revision: catalogue.sha256}}"
+ },
+ "acceptance": {
+  "result": "{{TO FILL FROM pins: pin.acceptance}}",
+  "source": "{{TO FILL FROM pins: pin.acceptance_source}}"
+ },
+ "repository_checks": "the workflow .github/workflows/validate.yml run locally on the filled tree: python3 tools/data.py validate; python3 -m unittest discover -s tests; python3 tools/data.py pack --runtime-only; and python3 tools/p_integral_area.py validate"
+}
