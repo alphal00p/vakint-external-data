@@ -91,7 +91,7 @@ Known limits:
   eps^9 6, eps^10 1, eps^14 1). Its later orders through eps^12 are expected but not known: vakint writes them
   `UNKNOWN(<symbol>, k)` (e.g. `UNKNOWN(ggppss_int_53,7)`), except the dependent orders of the next item. From eps^13 on an
   order is an ALARM order, which no request is expected to need; ggppss_int(23), known through eps^14, has no UNKNOWN order
-  and ALARM from eps^15. The eps^12 ceiling is a provisional limit, not shown to suffice for every six-loop use.
+  and ALARM from eps^15.
 - 39 of these orders, on 31 masters, are dependent: an exact part plus rational multiples of free `UNKNOWN` symbols. 38 are the
   dependences printed in GGPPSS's MasterExpansions.m. The 39th is an identity derived here by an IBP recurrence and checked on
   the printed orders: eps^6 of ggppss_int(74) = 18 x eps^7 of ggppss_int(53) + C, C exact. Two further identities of this kind
@@ -99,7 +99,7 @@ Known limits:
 - Of the package's 231 residual terminals, 222 map onto GGPPSS or Forcer masters and Γ factors and 9 onto placeholder masters
   `X(<node>:<key>)` without coefficients (one key with one dotted line in each of T266, T267, T270, T271, T273, T275, T276,
   T278 and T282): all their orders eps^-10..eps^12 are UNKNOWN (no five-loop massless propagator integral has a pole below
-  eps^-10: at most one UV and one IR pole per loop; this floor is an argument, not a computation).
+  eps^-10: at most one UV and one IR pole per loop).
 - vakint (gammaloop `p_integral` {{TO FILL FROM pins: pin.vakint}}) carries `UNKNOWN` symbols exactly; they cancel only where
   their exact coefficient cancels. By default a result that still contains one is refused with `UnknownMasterCoefficients`
   (Python: `ValueError`); the pinned vakint prints, for the placeholder key of T278:
@@ -127,41 +127,67 @@ Known limits:
   `census.json` (1.47 GB) is not shipped. Loading and reductions do not need it; only a verified load (descent certificate,
   `VAKINT_P_LIBRARY_VERIFY=1`) does, so that is not possible from the dataset alone. Do not add files to the shipped library
   directory: vakint then refuses it (unlisted file).
-- Acceptance: r2 (vk5l-s12349d-r2) is accepted provisionally. 14 of its 15 checks passed: 11 file, layout and format checks;
-  reductions of one light T162 integral and one light T178 integral, each identical to an earlier independent result; and one
-  vakint evaluation through the released directory, identical to a value checked against an independent result to 39 digits.
-  The 15th check, one T266 integral served by the shipped T266 relations, did not finish and has no result: one step of its
-  reduction needs more than 2 h 40 min without interruption (no state is saved inside the step; the run peaks at about
-  70 GB), and on our shared host both attempts were stopped when free memory fell below our safety limit; it is not resumed.
-  r3 ({{TO FILL FROM revision: rev.revision}}): {{TO FILL FROM the Sunday acceptance record: pin.acceptance}}.
-- Evidence. Checksums show that the files are the listed ones; they say nothing about the correctness of the reductions.
-  vakint checks them at load; it does not verify the package's descent certificate, which is not part of the release.
-  - Descent (that each rule leads to simpler integrals) was re-checked only for the owners changed since the previous
-    package; the rest is carried from the checked earlier package.
-  - Ten catalogue rows (nodes T178, T182, T205, T222, T223, T238, T241, T255, T269, T277) were derived by this effort from its
-    own five-loop reductions; at least nine of them by reconstruction from finite-field samples. The rows of T222 and T238
-    were reproduced by a second reduction on another package; for T255 an outside reviewer's value agrees at the order
-    needed; for T178 a second integral of the same package gave identical terms. The other six were not reproduced by a
-    second reduction.
-  - Ten further rows (T128e, T129e, T130p1, T131e, T132e, T133e, T135e, T140e, T142e, T144p5) come from one reduction each,
-    reconstructed from finite-field samples, without a second route.
-  - The changed tables were compared on a few integrals only. T180p2: two production integrals gave identical results on an
-    earlier build sharing the records they pass through; the three records no production integral had passed at writing:
-    {{TO FILL FROM the T180p2 production run at the content freeze: pin.evidence_T180p2_restored}}. T162: identical results on
-    four sets of integrals by sampled replay, on the table before its last three-piece replacement; on the shipped table:
-    {{TO FILL FROM the T162 results at the content freeze: pin.evidence_T162_shipped}}. T266:
-    {{TO FILL FROM the T266 hand-ins at the T266 freeze: pin.evidence_T266_table}} No changed table was re-checked on all
-    reductions.
+- Acceptance. Package r2's acceptance is provisional. 14 of its 15 checks passed: 11 file, layout and format checks;
+  reductions of one light T162 integral and one light T178 integral, each identical to an earlier independent result; and
+  one vakint evaluation through the released directory, identical to a value checked against an independent result to
+  39 digits. The 15th check, one T266 integral served by the shipped relations, was stopped after repeated host-memory
+  interruptions and has no result; it will not be resumed. Package r3 (`{{TO FILL FROM revision: rev.revision}}`):
+  {{TO FILL FROM the Sunday acceptance record: pin.acceptance}}.
+  r3's 15th check (the same kind of T266 integral, compared with a reference package) may finish after this release and
+  does not block it; at the release: {{TO FILL FROM the stage-15 record: pin.acceptance_stage15}}. A judge verdict that fails
+  only on the count of shipped-relation uses of a resumed final attempt, while the results of both packages have equal
+  digests (and an earlier attempt counted at least one use), is recorded as a pass; the raw judge output and that ruling
+  stand side by side:
+
+      {{TO FILL FROM the stage-15 record (raw judge output, verbatim): pin.acceptance_stage15_raw_judge}}
+
+  Ruling: {{TO FILL FROM the coordinator's ruling as applied to that output: pin.acceptance_stage15_ruling}}
+- Evidence (never stated stronger than here):
+  - {{TO FILL FROM catalogue: catalogue.terminals_placeholder}} of the {{TO FILL FROM catalogue: catalogue.terminals}}
+    catalogued terminal integrals have no published value; they map onto placeholder masters whose coefficients are
+    carried as UNKNOWN(master, k) for orders eps^{{TO FILL FROM catalogue: catalogue.placeholder_leading_order}} through
+    eps^{{TO FILL FROM catalogue: catalogue.unknown_through}}. Published masters are known only through the order printed in
+    arXiv:2104.08272; their later orders are UNKNOWN as well, and 38 printed linear dependences plus one derived identity
+    tie some of them together. Strict mode refuses any result that still contains an UNKNOWN symbol; allow mode returns it
+    with the symbol. The eps^{{TO FILL FROM catalogue: catalogue.placeholder_leading_order}} floor is an argument (at most
+    one UV and one IR pole per loop), not a computation; the eps^{{TO FILL FROM catalogue: catalogue.unknown_through}}
+    ceiling is a provisional limit, not shown to suffice for every six-loop use.
+  - Ten catalogue rows (nodes T178, T182, T205, T222, T223, T238, T241, T255, T269, T277) were derived by this effort from
+    its own five-loop reductions; at least nine of them by reconstruction from finite-field samples. The rows of T222 and
+    T238 were reproduced by a second reduction on another package; for T255 an outside reviewer's value agrees at the
+    order needed; for T178 a second integral of the same package gave identical terms. The other six were not reproduced
+    by a second reduction. Ten further rows (T128e, T129e, T130p1, T131e, T132e, T133e, T135e, T140e, T142e, T144p5) come
+    from one reduction each, reconstructed from finite-field samples, without a second route.
+  - The changed tables were compared on a few integrals only. T180p2: two production integrals gave identical results on
+    an earlier build sharing the records they pass through; three of its thirteen replaced records had not been passed by
+    any production integral at writing ({{TO FILL FROM the pending T180p2 runs: pin.evidence_T180p2_pending}}). T162:
+    identical results on four sets of integrals by sampled replay, on the table before its last three-piece replacement
+    ({{TO FILL FROM the shipped T162 table's value check: pin.evidence_T162_shipped}}). T266 reduced table (if shipped):
+    ten integrals checked against the values predicted by the graph's symmetry, on the full table with the symmetry file
+    and a pre-release engine build, plus one integral on the reduced table
+    ({{TO FILL FROM the T266 hand-in at its freeze: pin.evidence_T266_reduced}}). T266 changed relations (if shipped): no
+    value comparison (operation counts on one integral). No changed table was re-checked on all reductions.
   - T167: one record is replaced by two pieces whose proof is an outside review's; this effort's own generator could not
     reproduce them. Value check: {{TO FILL FROM the two T167 identity runs: pin.evidence_T167_values}}.
-  - The T162 table, unchanged in its kept records since r2, contains a few records whose validity was checked on sampled
-    integrals only ({{TO FILL FROM the shipped T162 table: pin.evidence_T162_sampled_records}}).
+  - The reduced T266 table (if shipped) omits records for integrals that the engine maps by a symmetry onto integrals kept
+    in the table. It is complete only with rustred {{TO FILL FROM the gated engine at the T266 freeze: pin.rustred_symmetry_rule}}
+    or later, which applies only such maps, and it must not load without its symmetry file:
+    {{TO FILL FROM the refusal check on that commit: pin.symmetry_refusal_check}}.
   - Speed figures are per-record probes or partial runs (the T167 comparison stops before the end of the reduction); no
     end-to-end five-loop speed-up is claimed.
-- Deferred (written up in the development notes, not part of v0.4.0): orbit files per node; relations that raise no dots; in
-  the engine, a learned-denominator replay and a trace-free batched application; the determination of the unknown master
-  coefficients that the six-loop beta function needs. Abandoned: closed forms for the seven- and eight-line template
-  recursions (estimated gain below x1.05). Not in r3: {{TO FILL FROM HANDINS.tsv at the content freeze (Sat 21 Nov, noon UTC): pin.deferred_content}}
+  - Checksums show that the files are the listed ones; they say nothing about the correctness of the reductions. vakint
+    checks them at load; it does not verify the package's descent certificate, which is not part of the release. Descent
+    (that each rule leads to simpler integrals) was re-checked only for the owners changed since the previous package; the
+    rest is carried from the checked earlier package.
+  - The T162 table, unchanged in its kept records since r2, contains a few records whose validity was checked on sampled
+    integrals only ({{TO FILL FROM the shipped T162 table: pin.evidence_T162_sampled_records}}).
+- Deferred (written up in the development notes, not part of v0.4.0): in the engine, a learned-denominator replay and a
+  trace-free batched application. Abandoned: closed forms for the seven- and eight-line template recursions (estimated
+  gain below x1.05). Not in r3: the size-reduced records of
+  {{TO FILL FROM HANDINS.tsv at the content freeze (Sat 21 Nov, noon UTC): pin.size_reduced_not_in_r3}} (their base tables
+  could not be reproduced); further T162 record replacements and drops (1355, 1522, 1903, five drops without whole-domain
+  fallbacks) and the 1885 replacement; T282 2436 and the T265 packet; re-solved T266 K_a relations; symmetry files for
+  other nodes; relations that avoid raising dots; unknown master coefficients beyond the published depth.
 
 Every loop pack (1L-5L vacuum data) is that of v0.3.0; only the release identities change
 (`tools/data.py set-version`: loop manifest versions, manifest hashes, archive names). The
