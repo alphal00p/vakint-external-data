@@ -21,13 +21,15 @@ Its identity (`library.json`, `p_integral/manifest.json`):
 - Master catalogue (`p-master-catalogue.json`, copy here): data version
   `{{TO FILL FROM revision: catalogue.data_version}}`, sha256 `{{TO FILL FROM revision: catalogue.sha256}}`,
   {{TO FILL FROM revision: catalogue.masters}} masters and {{TO FILL FROM revision: catalogue.placeholders}}
-  placeholders; {{TO FILL FROM revision: catalogue.terminals}} terminal rows, {{TO FILL FROM revision: catalogue.terminals_mapped}}
-  on catalogue masters, {{TO FILL FROM revision: catalogue.terminals_placeholder}} on a placeholder and
+  placeholders; {{TO FILL FROM revision: catalogue.terminals}} terminal rows: {{TO FILL FROM revision: catalogue.terminals_mapped}}
+  mapped without a placeholder (onto GGPPSS and / or Forcer masters and Γ factors),
+  {{TO FILL FROM revision: catalogue.terminals_placeholder}} onto a placeholder and
   {{TO FILL FROM revision: catalogue.terminals_other}} with another status.
   Master basis data `masters/MANIFEST.json` sha256 `{{TO FILL FROM revision: masters.manifest_sha256}}`
   (catalogue version `{{TO FILL FROM revision: masters.catalogue_version}}`).
 - Library counts: {{TO FILL FROM revision: rev.counts.tops}} tops, {{TO FILL FROM revision: rev.counts.presentations}}
-  presentations, {{TO FILL FROM revision: rev.counts.classes}} classes, {{TO FILL FROM revision: rev.counts.terminals}} terminals,
+  presentations, {{TO FILL FROM revision: rev.counts.classes}} classes, {{TO FILL FROM revision: rev.residual_terminals}} residual
+  terminals (and the unit),
   {{TO FILL FROM revision: rev.counts.sectors}} sectors ({{TO FILL FROM revision: rev.counts.zero_sectors}} zero).
 
 Largest files:
@@ -52,9 +54,10 @@ it is not in this repository and not part of a release archive.
 
 ## Restore and use
 
-In the dataset directory, then in a checkout of this repository at v0.4.0:
+In the dataset directory (`--ignore-missing`: `SHA256SUMS` also lists the whole archive, which is
+not present as one file), then in a checkout of this repository at v0.4.0:
 
-    sha256sum -c SHA256SUMS
+    sha256sum -c --ignore-missing SHA256SUMS
     cat {{TO FILL FROM DATASET.json: ds.archive.name}}.part-* | {{TO FILL FROM DATASET.json: ds.decompress}} | tar -x --strip-components=1 -C <checkout>
 
 then, in `<checkout>`, check every restored library file against the area manifest:
