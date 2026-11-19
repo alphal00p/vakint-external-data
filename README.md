@@ -1,7 +1,8 @@
 # Vakint external data
 
-Release v0.3.0 (17 November 2026) is the current release and `data-latest` points to it.
-Earlier releases stay available unchanged.
+The branch `release/v0.4.0-prep` declares v0.4.0: the unreleased line that follows the
+v0.3.0 release. There is no v0.4.0 release. For published, checksummed data, use the
+v0.3.0 release or `data-latest`.
 
 ## v0.3.0: five-loop basis BASIS-v3 with exact poles
 
