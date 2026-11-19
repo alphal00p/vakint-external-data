@@ -22,7 +22,8 @@ Its identity (`library.json`, `p_integral/manifest.json`):
   `{{TO FILL FROM revision: catalogue.data_version}}`, sha256 `{{TO FILL FROM revision: catalogue.sha256}}`,
   {{TO FILL FROM revision: catalogue.masters}} masters and {{TO FILL FROM revision: catalogue.placeholders}}
   placeholders; {{TO FILL FROM revision: catalogue.terminals}} terminal rows, {{TO FILL FROM revision: catalogue.terminals_mapped}}
-  on catalogue masters and {{TO FILL FROM revision: catalogue.terminals_placeholder}} on a placeholder.
+  on catalogue masters, {{TO FILL FROM revision: catalogue.terminals_placeholder}} on a placeholder and
+  {{TO FILL FROM revision: catalogue.terminals_other}} with another status.
   Master basis data `masters/MANIFEST.json` sha256 `{{TO FILL FROM revision: masters.manifest_sha256}}`
   (catalogue version `{{TO FILL FROM revision: masters.catalogue_version}}`).
 - Library counts: {{TO FILL FROM revision: rev.counts.tops}} tops, {{TO FILL FROM revision: rev.counts.presentations}}
