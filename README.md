@@ -4,6 +4,44 @@ The branch `release/v0.4.0-prep` declares v0.4.0: the unreleased line that follo
 v0.3.0 release. There is no v0.4.0 release. For published, checksummed data, use the
 v0.3.0 release or `data-latest`.
 
+## v0.4.0: the five-loop p library as a checksummed dataset
+
+Release v0.4.0 ({{TO FILL FROM pins: pin.release_date}}) adds the RustRed p library of one to five loops
+(`p-library-1-5`, package revision `{{TO FILL FROM revision: rev.revision}}`) as a dataset: one compressed,
+checksummed archive kept outside this repository and described in
+[`datasets/{{TO FILL FROM revision: rev.name}}/`](datasets/{{TO FILL FROM revision: rev.name}}/README.md)
+({{TO FILL FROM revision: rev.library_files}} files, {{TO FILL FROM revision: rev.library_bytes|gb}};
+archive {{TO FILL FROM DATASET.json: ds.archive.bytes|gb}} in {{TO FILL FROM DATASET.json: ds.parts}} parts). Since v0.3.0:
+
+{{TO FILL FROM notes/r3/RELEASE_NOTES_CONTENT.md: text.what-is-new}}
+
+- Per node (content and sizes): {{TO FILL FROM notes/r3/RELEASE_NOTES_CONTENT.md: text.per-node}}
+- Master catalogue v4 (`{{TO FILL FROM revision: catalogue.data_version}}`, sha256
+  `{{TO FILL FROM revision: catalogue.sha256}}`): {{TO FILL FROM revision: catalogue.masters}} masters,
+  {{TO FILL FROM revision: catalogue.placeholders}} placeholders; of {{TO FILL FROM revision: catalogue.terminals}}
+  terminal rows, {{TO FILL FROM revision: catalogue.terminals_mapped}} map onto catalogue masters and
+  {{TO FILL FROM revision: catalogue.terminals_placeholder}} onto a placeholder.
+- Obtain and restore: {{TO FILL FROM notes/r3/RELEASE_NOTES_CONTENT.md: text.obtain-restore}}
+- Compatibility: Vakint from gammaloop `p_integral` {{TO FILL FROM pins: pin.vakint}} (RustRed main
+  {{TO FILL FROM pins: pin.rustred_main}}, RustRed `p_integral` {{TO FILL FROM pins: pin.rustred_p_integral}});
+  {{TO FILL FROM notes/r3/RELEASE_NOTES_CONTENT.md: text.compatibility}}
+
+Known limits:
+
+{{TO FILL FROM notes/r3/RELEASE_NOTES_LIMITS.md: text.known-limits}}
+
+- Acceptance: {{TO FILL FROM pins: pin.acceptance}} ({{TO FILL FROM pins: pin.acceptance_source}}).
+- Evidence that is indirect, sampled or provisional: {{TO FILL FROM notes/r3/EVIDENCE_REGISTER.md: text.summary}}
+
+Every loop pack (1L-5L vacuum data) is that of v0.3.0; only the release identities change
+(`tools/data.py set-version`: loop manifest versions, manifest hashes, archive names). The
+`p_integral/` area is unchanged (the 1L-4L library `p-library-1-4` and its light cache).
+
+A new managed install of `v0.4.0` or `data-latest` receives this release: the loop packs,
+unchanged in content. The five-loop p library is not part of a managed install or of a
+release archive: restore its dataset into a checkout of v0.4.0 and load that directory
+(`datasets/README.md`).
+
 ## v0.3.0: five-loop basis BASIS-v3 with exact poles
 
 Release v0.3.0 (17 November 2026) changes the five-loop master basis (a minor release) and makes every
