@@ -4,27 +4,85 @@ The branch `release/v0.4.0-prep` declares v0.4.0: the unreleased line that follo
 v0.3.0 release. There is no v0.4.0 release. For published, checksummed data, use the
 v0.3.0 release or `data-latest`.
 
-## v0.4.0: the five-loop p library as a checksummed dataset
+## v0.4.0: five-loop p-integral package (library 1-5) as a checksummed dataset
 
-Release v0.4.0 ({{TO FILL FROM pins: pin.release_date}}) adds the RustRed p library of one to five loops
-(`p-library-1-5`, package revision `{{TO FILL FROM revision: rev.revision}}`) as a dataset: one compressed,
-checksummed archive kept outside this repository and described in
-[`datasets/{{TO FILL FROM revision: rev.name}}/`](datasets/{{TO FILL FROM revision: rev.name}}/README.md)
-({{TO FILL FROM revision: rev.library_files}} files, {{TO FILL FROM revision: rev.library_bytes|gb}};
-archive {{TO FILL FROM DATASET.json: ds.archive.bytes|gb}} in {{TO FILL FROM DATASET.json: ds.parts}} parts). Since v0.3.0:
+Release v0.4.0 ({{TO FILL FROM pins: pin.release_date}}) adds the five-loop p-integral package (a minor
+release). Since v0.3.0:
 
-{{TO FILL FROM notes/r3/RELEASE_NOTES_CONTENT.md: text.what-is-new}}
-
-- Per node (content and sizes): {{TO FILL FROM notes/r3/RELEASE_NOTES_CONTENT.md: text.per-node}}
+- Five-loop p-integrals: the RustRed p library of scope 1-5 (`p-library-1-5`, package revision
+  `{{TO FILL FROM revision: rev.revision}}`) for massless propagator integrals (p-integrals) with one to five loops. With it,
+  Vakint reduces one- to five-loop p-integrals of the library's families with RustRed and expands them in ε with the
+  five-loop master catalogue v4 (exact coefficients where they are known, `UNKNOWN(master, k)` where they are not: see
+  Known limits). v0.3.0's p library (`p-library-1-4`) reaches four loops; it stays in the `p_integral/` area unchanged.
+- The library: {{TO FILL FROM revision: rev.counts.classes}} owner classes over
+  {{TO FILL FROM revision: rev.counts.tops}} top families and {{TO FILL FROM revision: rev.counts.sectors}}
+  sectors; 266 named nodes, the caller families T002e ... T283 (129 five-loop, 88 four-loop, 39
+  three-loop, 10 two-loop), each with its own stored owner table; {{TO FILL FROM revision: rev.counts.terminals}}
+  terminals (the unit and the residual terminals), which the catalogue maps onto masters (Known limits); the
+  saved route verification `routes.rrbin`; the explicit key relations of node T266 (`relations/`).
+- Not in this repository: the library is {{TO FILL FROM revision: rev.library_files}} files,
+  {{TO FILL FROM revision: rev.library_bytes|gb}} (single files up to {{TO FILL FROM revision: rev.largest_bytes|gb}}, far above the
+  100 MB per-file limit of the `p_integral/` area), so it is one compressed, checksummed dataset kept on the producing host,
+  {{TO FILL FROM DATASET.json: ds.archive.bytes|gb}} in {{TO FILL FROM DATASET.json: ds.parts}} parts below 2 GiB. This
+  repository records it in [`datasets/{{TO FILL FROM revision: rev.name}}/`](datasets/{{TO FILL FROM revision: rev.name}}/README.md):
+  its checksums, the area manifest it restores (every library file with sha256 and size), the master catalogue and the
+  restore commands. Nothing of it is in a release archive or a managed install.
+- Changes since the last five-loop candidate (vk5l-s12349d-r2, 18 November 2026, never released), per node:
+  {{TO FILL FROM notes/r3/RELEASE_NOTES_CONTENT.md section C at the freeze: pin.changes_since_r2}}
 - Master catalogue v4 (`{{TO FILL FROM revision: catalogue.data_version}}`, sha256
   `{{TO FILL FROM revision: catalogue.sha256}}`): {{TO FILL FROM revision: catalogue.masters}} masters,
   {{TO FILL FROM revision: catalogue.placeholders}} placeholders; of {{TO FILL FROM revision: catalogue.terminals}}
   terminal rows, {{TO FILL FROM revision: catalogue.terminals_mapped}} map onto catalogue masters and
   {{TO FILL FROM revision: catalogue.terminals_placeholder}} onto a placeholder.
-- Obtain and restore: {{TO FILL FROM notes/r3/RELEASE_NOTES_CONTENT.md: text.obtain-restore}}
-- Compatibility: Vakint from gammaloop `p_integral` {{TO FILL FROM pins: pin.vakint}} (RustRed main
-  {{TO FILL FROM pins: pin.rustred_main}}, RustRed `p_integral` {{TO FILL FROM pins: pin.rustred_p_integral}});
-  {{TO FILL FROM notes/r3/RELEASE_NOTES_CONTENT.md: text.compatibility}}
+
+{{TO FILL FROM tools/r3/package_content.py <final r3> --base <r2> (.short.md): include:content_short}}
+
+- Obtain and restore. The dataset is the directory `{{TO FILL FROM DATASET.json: ds.location}}` on the producing host
+  (`DATASET.json`, `SHA256SUMS`, `SHA256SUMS.files` and the parts `{{TO FILL FROM DATASET.json: ds.archive.name}}.part-000`,
+  ...); copy that directory as it is. The parts' concatenation is the archive (sha256
+  `{{TO FILL FROM DATASET.json: ds.archive.sha256}}`); it unpacks to `{{TO FILL FROM revision: rev.name}}/`, an overlay
+  of a checkout of this repository at v0.4.0. In a fresh checkout:
+
+  ```sh
+  git clone https://github.com/alphal00p/vakint-external-data && cd vakint-external-data && git checkout v0.4.0
+  D=/path/to/{{TO FILL FROM revision: rev.name}}            # the copied dataset directory
+  (cd "$D" && sha256sum -c --ignore-missing SHA256SUMS)    # every part
+  cat "$D"/{{TO FILL FROM DATASET.json: ds.archive.name}}.part-* | sha256sum   # = the archive sha256 above
+  cat "$D"/{{TO FILL FROM DATASET.json: ds.archive.name}}.part-* | {{TO FILL FROM DATASET.json: ds.decompress}} | tar -xf - --strip-components=1 -C .
+  sha256sum -c "$D"/SHA256SUMS.files                       # every restored file (paths relative to the checkout)
+  ```
+{{TO FILL FROM notes/r3/DATASET_LAYOUT.md (compare the commands above; then an empty value): pin.check_restore_commands}}
+  Then load the checkout as a directory: `Vakint::load_external_data(<checkout>, n)` (Python:
+  `engine.load_external_data("/path/to/vakint-external-data", max_loop_count=n)`, any n from 1 to 5: the p library is
+  found through the same root; n decides which vacuum loop packs are loaded). Vakint checks every listed library file
+  (sha256 and size) when it loads the library, says once on stderr that the listed library supersedes the built-in one,
+  and ignores the unlisted `p_integral/p-library-1-4/` with one stderr line.
+- Without a checkout: restore the dataset into an empty directory (`tar -xf -` without `--strip-components`)
+  and set `VAKINT_P_LIBRARY=<dir>/{{TO FILL FROM revision: rev.name}}/p_integral/p-library-1-5` for the Vakint process:
+  the library, its catalogue and its relations are then used directly, whatever external data are loaded (the variable
+  comes first). In this mode Vakint does not check the files against the area manifest: run the `sha256sum -c` steps
+  above first. Leave `VAKINT_P_LIBRARY_VERIFY` unset: a verified load needs `census.json` (1.47 GB), which the dataset
+  does not carry.
+- Compatibility: Vakint from gammaloop `p_integral` {{TO FILL FROM pins: pin.vakint}}, built with the
+  five-loop feature, five-loop p families having 20 slots:
+  `RUSTRED_RUNTIME_ARITIES=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,20 cargo build --features vakint/five-loop-p` (the
+  default build compiles arities 1-16 and refuses a 20-slot chart). Its RustRed is {{TO FILL FROM pins (the rustred revision in that gammaloop's Cargo.lock): pin.vakint_rustred}};
+  RustRed main {{TO FILL FROM pins: pin.rustred_main}}, RustRed `p_integral`
+  {{TO FILL FROM pins: pin.rustred_p_integral}}. The library is bound to its RustRed by its identity
+  (`p-library:scope=1-5:...,P_PACKAGE_REVISION={{TO FILL FROM revision: rev.revision}}`: scope and every `P_*` version
+  constant): a build with other constants refuses it with one error ("the library ... is not the one its entry records").
+- Older Vakint builds and this release: a managed install of v0.4.0 holds the loop packs only, identical in content to
+  v0.3.0's, and loads in every build that read v0.3.0 (the release manifest schema is unchanged; the version is compared
+  only with the requested one). A checkout of v0.4.0 without the dataset behaves as v0.3.0. With the dataset restored:
+  builds without the `p_integral/` area (the `vakint_rustred` line) ignore it; gammaloop `p_integral` builds before
+  72632d50f do not load the five-loop library: they read only master catalogues of schema `vakint.p-master-catalogue.v1`
+  and stop with "schema vakint.p-master-catalogue.v2, this vakint reads vakint.p-master-catalogue.v1" (every p-integral
+  of the library fails with that error; vacuum integrals are unaffected).
+  {{TO FILL FROM notes/r3/LOAD_<final r3>.md (one run of the pinned Vakint on the final r3): pin.compat_final_r3}}
+- This Vakint and older data: a managed install of v0.3.0 or earlier loads as before. A checkout of v0.3.0 gives the
+  1L-4L p library `p-library-1-4` (its identity is the one this Vakint's RustRed computes for scope 1-4) and no
+  five-loop p-integrals; the five-loop dataset needs a checkout of v0.4.0 (its root manifest carries v0.4.0's release
+  identities: restored over a v0.3.0 checkout, every load stops with a loop-manifest SHA256 mismatch).
 
 Known limits:
 
@@ -106,10 +164,8 @@ Every loop pack (1L-5L vacuum data) is that of v0.3.0; only the release identiti
 (`tools/data.py set-version`: loop manifest versions, manifest hashes, archive names). The
 `p_integral/` area is unchanged (the 1L-4L library `p-library-1-4` and its light cache).
 
-A new managed install of `v0.4.0` or `data-latest` receives this release: the loop packs,
-unchanged in content. The five-loop p library is not part of a managed install or of a
-release archive: restore its dataset into a checkout of v0.4.0 and load that directory
-(`datasets/README.md`).
+A new managed install of `v0.4.0` or `data-latest` receives this release; `data-latest` moves to it. A managed install
+holds the loop packs only: restore the five-loop dataset into a checkout of v0.4.0 (above).
 
 ## v0.3.0: five-loop basis BASIS-v3 with exact poles
 
