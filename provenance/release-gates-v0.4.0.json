@@ -161,7 +161,7 @@
   ],
   "stage_15": {
    "note": "the 15th check: one T266 integral served by the shipped relations, run on this package and on a reference package and compared by the frozen judge",
-   "status_at_release": "{{TO FILL FROM the maintainers' ruling on the 15th check: pin.acceptance_stage15}}",
+   "status_at_release": "deferred: no result. The two runs were stopped by the maintainers with their saved states kept, and no judge output exists; the maintainers' ruling: not blocking for this release. They were stopped because the run has no finite forecast (about 16 thousand million recorded operations in 10 of about 25 phases after about 14 hours on the reference package) and each state save needs memory of about a base plus 2.4 times the state, which had reached 168 GB and was growing; resuming needs one process with more than 300 GB of memory or a streaming state write in the engine. The evidence for the reduced T266 table in this release is the added check above (the symmetry file is required; the two relation entries are present and reproduce the producer's operation counts; one T266 integral through Vakint's own loader equals the reference), with its stated limit: that check compares two Vakint paths, and that Vakint's path uses the symmetry file is shown only on the engine's path.",
    "judge_output": "none: the check is deferred and no judge output exists",
    "ruling": "the maintainers' ruling: not blocking for this release",
    "reading_rule_for_a_later_run": "a judge FAIL whose only reason is the shipped-relation counter of a resumed final attempt, with equal result digests of both legs and at least one shipped-relation use in an earlier attempt, is recorded as PASS; the judge is unchanged and its raw output is kept beside the ruling"
