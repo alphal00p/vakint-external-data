@@ -95,8 +95,10 @@ Other 257 nodes: full table in [datasets/vk5l-s12349d-r3/CONTENT.md](datasets/vk
   ```
 
   and set `VAKINT_P_LIBRARY=<dir>/vk5l-s12349d-r3/p_integral/p-library-1-5` for the Vakint process:
-  with the Vakint this release needs (below), the library, its relations, its master catalogue and its master basis data
-  (`masters/`) all come from that one variable, whatever external data are loaded. Older builds need all three variables:
+  with the Vakint this release needs (below), the library, its relations and its master catalogue come from that one
+  variable, whatever external data are loaded (shown by a run on this package: its refusal names the package's catalogue,
+  as with all three variables set); the master basis data (`masters/`, read only by the pole-bounded basis) is found the
+  same way, as the loader's own test on synthetic packages shows. Older builds need all three variables:
   also `VAKINT_P_MASTER_CATALOGUE=<dir>/vk5l-s12349d-r3/p_integral/p-library-1-5/p-master-catalogue.json`
   and `VAKINT_P_MASTERS_DIRECTORY=<dir>/vk5l-s12349d-r3/p_integral/p-library-1-5/masters` (without them
   they use the built-in catalogue `ggppss-5L-v3.2`, which lacks rows of this release, and refuse the pole-bounded basis). In this mode Vakint does not check the files against the area manifest: run the `sha256sum -c` steps
@@ -120,11 +122,12 @@ Other 257 nodes: full table in [datasets/vk5l-s12349d-r3/CONTENT.md](datasets/vk
 - Older Vakint builds and this release: a managed install of v0.4.0 holds the loop packs only, identical to v0.3.0's
   except the release version recorded in each loop manifest, and loads in every build that read v0.3.0 (the release manifest schema is unchanged; the version is compared
   only with the requested one). A checkout of v0.4.0 without the dataset behaves as v0.3.0. With the dataset restored:
-  Vakint builds that do not read the `p_integral/` area ignore it. The dataset loads only with Vakint at gammaloop
-  `p_integral` fe5fd3e8237219849eaf701226d7fb060ff73fac or later (RustRed 727c73d6f45346586ac16b74c30d959ef298483f
-  or later); older builds refuse it at the first p-integral with "unknown field" when their RustRed has the library's `P_*`
-  constants (gammaloop `p_integral` 98dc89353, RustRed 19cf126a9: "malformed p library: library.json: unknown field
-  `orbit_required_digests`"), and with a RustRed version mismatch otherwise (gammaloop `vakint_rustred` builds among them).
+  Vakint builds that do not read the `p_integral/` area ignore it. The dataset requires a Vakint whose RustRed is
+  727c73d6f45346586ac16b74c30d959ef298483f or later (first on gammaloop's `p_integral` branch at fe5fd3e8237219849eaf701226d7fb060ff73fac): its library.json carries the
+  symmetry-file fields. Builds whose RustRed has the library's `P_*` constants but does not know these fields refuse it at
+  the first p-integral with "unknown field" (gammaloop `p_integral` 98dc89353, RustRed 19cf126a9: "malformed p library:
+  library.json: unknown field `orbit_required_digests`"); builds with other constants refuse it with a RustRed version
+  mismatch (gammaloop `vakint_rustred` builds among them).
   Vacuum integrals are unaffected.
 - This Vakint and older data: a managed install of v0.3.0 or earlier loads as before. A checkout of v0.3.0 gives the
   1L-4L p library `p-library-1-4` (its identity is the one this Vakint's RustRed computes for scope 1-4) and no
@@ -254,9 +257,8 @@ Known limits:
     table. It is complete only with rustred 2d97db789b5b1fb9d484e8c1cbe9b5062411477d or later,
     which applies only such maps, and it does not load without its symmetry file (verified on that commit: a missing,
     switched-off or wrong-scope symmetry file is refused at load with exit code 6). Its library.json names that requirement,
-    so this package loads only with vakint at gammaloop p_integral >= fe5fd3e8237219849eaf701226d7fb060ff73fac (RustRed >=
-    727c73d6f45346586ac16b74c30d959ef298483f); older builds refuse
-    it with 'unknown field'.
+    so this package requires a Vakint whose RustRed is 727c73d6f45346586ac16b74c30d959ef298483f or later (first on gammaloop's p_integral
+    branch at fe5fd3e8237219849eaf701226d7fb060ff73fac); builds whose RustRed does not know these fields refuse it with 'unknown field'.
   - Speed figures are per-record probes or partial runs (the T167 comparison stops before the end of the reduction); no
     end-to-end five-loop speed-up is claimed.
   - Checksums show that the files are the listed ones; they say nothing about the correctness of the reductions. vakint
@@ -265,9 +267,10 @@ Known limits:
     package, and loaded and checked with the gated engine rustred 2d97db789b5b1fb9d484e8c1cbe9b5062411477d;
     descent (that each rule leads to simpler integrals) was re-checked only for the owners changed since the previous
     package, the rest is carried from the checked earlier package. Loading the library directly with VAKINT_P_LIBRARY uses
-    the package's own master catalogue and masters with the Vakint this release needs; older builds need all three
-    variables (VAKINT_P_MASTER_CATALOGUE and VAKINT_P_MASTERS_DIRECTORY pointing at the package's own), else they use
-    vakint's built-in catalogue.
+    the package's own master catalogue with the Vakint this release needs (shown by a run on this package; the package's
+    masters directory is found the same way, shown by the loader's own test on synthetic packages); older builds need all
+    three variables (VAKINT_P_MASTER_CATALOGUE and VAKINT_P_MASTERS_DIRECTORY pointing at the package's own), else they
+    use vakint's built-in catalogue (shown on two older builds).
   - The T162 table, unchanged in its kept records since r2, contains a few records whose validity was checked on sampled
     integrals only.
 - Differences in Vakint / gammaloop behaviour of the Vakint this release needs, against earlier builds (not data

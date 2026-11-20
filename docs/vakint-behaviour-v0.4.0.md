@@ -1,7 +1,7 @@
 # Vakint behaviour with release v0.4.0
 
-Release v0.4.0 needs Vakint from gammaloop `p_integral` fe5fd3e8237219849eaf701226d7fb060ff73fac or later (README, "v0.4.0").
-That build differs from earlier gammaloop `p_integral` builds in the following ways. None of them is a change of the
+Release v0.4.0 needs a Vakint whose RustRed is 727c73d6f45346586ac16b74c30d959ef298483f or later, first on gammaloop's `p_integral` branch
+at fe5fd3e8237219849eaf701226d7fb060ff73fac (README, "v0.4.0"). That gammaloop build differs from earlier gammaloop `p_integral` builds in the following ways. None of them is a change of the
 data in this repository; the numbers are gammaloop pull requests.
 
 1. Dot-power opening (#261): vakint now opens powers of dot products in one pass by default. Results have the same value
