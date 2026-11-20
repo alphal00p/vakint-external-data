@@ -107,25 +107,33 @@ release). Since v0.3.0:
 Known limits:
 
 - Unknown master coefficients ship as `UNKNOWN(master, k)`. Catalogue v4 ({{TO FILL FROM catalogue: catalogue.data_version}},
-  sha256 {{TO FILL FROM catalogue: catalogue.sha256}}) holds the 281 GGPPSS masters, each known exactly from its leading order
-  through eps^k (masters per k: eps^0 68, eps^1 46, eps^2 63, eps^3 22, eps^4 24, eps^5 24, eps^6 13, eps^7 8, eps^8 5,
-  eps^9 6, eps^10 1, eps^14 1). Its later orders through eps^12 are expected but not known: vakint writes them
-  `UNKNOWN(<symbol>, k)` (e.g. `UNKNOWN(ggppss_int_53,7)`), except the dependent orders of the next item. From eps^13 on an
-  order is an ALARM order, which no request is expected to need; ggppss_int(23), known through eps^14, has no UNKNOWN order
-  and ALARM from eps^15.
-- 39 of these orders, on 31 masters, are dependent: an exact part plus rational multiples of free `UNKNOWN` symbols. 38 are the
-  dependences printed in GGPPSS's MasterExpansions.m. The 39th is an identity derived here by an IBP recurrence and checked on
-  the printed orders: eps^6 of ggppss_int(74) = 18 x eps^7 of ggppss_int(53) + C, C exact. Two further identities of this kind
-  (eps^6 of ggppss_int(88), eps^5 of ggppss_int(99)) are not used: those orders stay free.
-- Of the package's 231 residual terminals, 222 map onto GGPPSS or Forcer masters and Γ factors and 9 onto placeholder masters
-  `X(<node>:<key>)` without coefficients (one key with one dotted line in each of T266, T267, T270, T271, T273, T275, T276,
-  T278 and T282): all their orders eps^-10..eps^12 are UNKNOWN (no five-loop massless propagator integral has a pole below
-  eps^-10: at most one UV and one IR pole per loop).
+  sha256 {{TO FILL FROM catalogue: catalogue.sha256}}) holds the {{TO FILL FROM catalogue_counts.py: cc.ggppss_masters}} GGPPSS
+  masters, each known exactly from its leading order through eps^k (masters per k:
+  {{TO FILL FROM catalogue_counts.py: cc.known_through_list}}). Its later orders through
+  eps^{{TO FILL FROM catalogue_counts.py: cc.unknown_through}} are expected but not known: vakint writes them
+  `UNKNOWN(<symbol>, k)` (e.g. `UNKNOWN(ggppss_int_53,7)`), except the dependent orders of the next item. From
+  eps^{{TO FILL FROM catalogue_counts.py: cc.alarm_from}} on an order is an ALARM order, which no request is expected to need;
+  {{TO FILL FROM catalogue_counts.py: cc.exception_master}}, known through eps^{{TO FILL FROM catalogue_counts.py: cc.exception_known_through}},
+  has no UNKNOWN order and ALARM from eps^{{TO FILL FROM catalogue_counts.py: cc.exception_alarm_from}}.
+- {{TO FILL FROM catalogue_counts.py: cc.dependent_orders}} of these orders, on {{TO FILL FROM catalogue_counts.py: cc.dependent_masters}}
+  masters, are dependent: an exact part plus rational multiples of free `UNKNOWN` symbols.
+  {{TO FILL FROM catalogue_counts.py: cc.printed_dependences}} are the dependences printed in GGPPSS's MasterExpansions.m.
+  The remaining one is an identity derived here by an IBP recurrence and checked on the printed orders: eps^6 of
+  ggppss_int(74) = 18 x eps^7 of ggppss_int(53) + C, C exact. Two further identities of this kind (eps^6 of ggppss_int(88),
+  eps^5 of ggppss_int(99)) are not used: those orders stay free.
+- Of the package's {{TO FILL FROM revision: rev.residual_terminals}} residual terminals,
+  {{TO FILL FROM revision and catalogue: rev.residual_mapped}} map onto GGPPSS or Forcer masters and Γ factors and
+  {{TO FILL FROM revision and catalogue: rev.residual_on_placeholder}} onto placeholder masters `X(<node>:<key>)` without
+  coefficients (one key with one dotted line in each of {{TO FILL FROM catalogue_counts.py: cc.placeholder_nodes}}): all
+  their orders eps^{{TO FILL FROM catalogue_counts.py: cc.placeholder_leading_order}}..eps^{{TO FILL FROM catalogue_counts.py: cc.unknown_through}}
+  are UNKNOWN (no five-loop massless propagator integral has a pole below
+  eps^{{TO FILL FROM catalogue_counts.py: cc.placeholder_leading_order}}: at most one UV and one IR pole per loop).
 - vakint (gammaloop `p_integral` {{TO FILL FROM pins: pin.vakint}}) carries `UNKNOWN` symbols exactly; they cancel only where
   their exact coefficient cancels. By default a result that still contains one is refused with `UnknownMasterCoefficients`
-  (Python: `ValueError`); the pinned vakint prints, for the placeholder key of T278:
+  (Python: `ValueError`); the pinned vakint prints, for the placeholder key of
+  {{TO FILL FROM notes/r3/LOAD_<rev>.md (the placeholder node the load check used): pin.refusal_example_node}}:
 
-      {{TO FILL FROM notes/r3/LOAD_<rev>.md (strict-mode refusal on the T278 placeholder key, verbatim, at the final pin): pin.refusal_message}}
+      {{TO FILL FROM notes/r3/LOAD_<rev>.md (strict-mode refusal on that placeholder key, verbatim, at the final pin): pin.refusal_message}}
 
   With `allow_unknown_master_coefficients` (setting, Python keyword, or environment
   `VAKINT_ALLOW_UNKNOWN_MASTER_COEFFICIENTS=1`) the result keeps the symbols, and `Vakint::unknown_master_coefficients` lists
@@ -168,7 +176,8 @@ Known limits:
     residual terminal integrals have no published value; they map onto placeholder masters whose coefficients are
     carried as UNKNOWN(master, k) for orders eps^{{TO FILL FROM catalogue: catalogue.placeholder_leading_order}} through
     eps^{{TO FILL FROM catalogue: catalogue.unknown_through}}. Published masters are known only through the order printed in
-    arXiv:2104.08272; their later orders are UNKNOWN as well, and 38 printed linear dependences plus one derived identity
+    arXiv:2104.08272; their later orders are UNKNOWN as well, and {{TO FILL FROM catalogue_counts.py: cc.printed_dependences}}
+    printed linear dependences plus one derived identity
     tie some of them together. Strict mode refuses any result that still contains an UNKNOWN symbol; allow mode returns it
     with the symbol. The eps^{{TO FILL FROM catalogue: catalogue.placeholder_leading_order}} floor is an argument (at most
     one UV and one IR pole per loop), not a computation; the eps^{{TO FILL FROM catalogue: catalogue.unknown_through}}
