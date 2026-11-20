@@ -8,7 +8,7 @@ directory per dataset revision, `datasets/<revision>/`, with
   sha256), its parts in order (each below 2 GiB; their concatenation is the archive), the
   content (files, bytes, the sha256 of the per-file checksum list, the sha256 of the root
   and area manifests it restores) and the restore command;
-- `SHA256SUMS`: the sha256 of every part and of the whole archive (`sha256sum -c` format);
+- `SHA256SUMS`: the sha256 of every part (`sha256sum -c` format; the whole archive's sha256 is in `DATASET.json`);
 - `p_integral-manifest.json`: a byte copy of the `p_integral/manifest.json` the dataset
   restores, which lists every library file with its sha256 and size;
 - `p-master-catalogue.json`: the p master catalogue the library ships
@@ -24,7 +24,7 @@ archive holds `<revision>/manifest.json` (this release's `manifest.json` with on
 `p_integral` changed), `<revision>/p_integral/manifest.json` (the area manifest, listing
 the dataset's library instead of `p-library-1-4`) and the library directory. Restored over
 a checkout of that release, it makes the checkout a root for
-`Vakint::load_external_data(<checkout>, n)` (Python: `vakint.load_external_data`), whose
+`Vakint::load_external_data(<checkout>, n)` (Python: `engine.load_external_data(path, max_loop_count=n)`), whose
 p library is then the dataset's library: Vakint checks every listed file (sha256 and size)
 when it loads it, says once on stderr that the listed library supersedes the built-in one,
 and ignores the unlisted `p-library-1-4/` with one stderr line. A restored checkout is a

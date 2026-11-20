@@ -21,10 +21,9 @@ Its identity (`library.json`, `p_integral/manifest.json`):
 - Master catalogue (`p-master-catalogue.json`, copy here): data version
   `{{TO FILL FROM revision: catalogue.data_version}}`, sha256 `{{TO FILL FROM revision: catalogue.sha256}}`,
   {{TO FILL FROM revision: catalogue.masters}} masters and {{TO FILL FROM revision: catalogue.placeholders}}
-  placeholders; {{TO FILL FROM revision: catalogue.terminals}} terminal rows: {{TO FILL FROM revision: catalogue.terminals_mapped}}
-  mapped without a placeholder (onto GGPPSS and / or Forcer masters and Γ factors),
-  {{TO FILL FROM revision: catalogue.terminals_placeholder}} onto a placeholder and
-  {{TO FILL FROM revision: catalogue.terminals_other}} with another status.
+  placeholders, and the map of the package's {{TO FILL FROM revision: rev.residual_terminals}} residual terminals onto
+  GGPPSS or Forcer masters and Γ factors ({{TO FILL FROM revision: catalogue.terminals_placeholder}} of them onto a
+  placeholder).
   Master basis data `masters/MANIFEST.json` sha256 `{{TO FILL FROM revision: masters.manifest_sha256}}`
   (catalogue version `{{TO FILL FROM revision: masters.catalogue_version}}`).
 - Library counts: {{TO FILL FROM revision: rev.counts.tops}} tops, {{TO FILL FROM revision: rev.counts.presentations}}
@@ -49,16 +48,21 @@ codec {{TO FILL FROM DATASET.json: ds.codec}} level {{TO FILL FROM DATASET.json:
 |---|---|---|
 {{TO FILL FROM DATASET.json: ds.parts_table}}
 
-The archive is kept on the host where it was built, in `{{TO FILL FROM dataset dir: ds.location}}`;
-it is not in this repository and not part of a release archive.
+The archive is kept by the maintainers: obtain it on request.
+{{TO FILL FROM the user's decision on release assets: pin.dataset_release_assets}} It is not in this repository and not in a
+loop-pack archive.
 
 ## Restore and use
 
-In the dataset directory (`--ignore-missing`: `SHA256SUMS` also lists the whole archive, which is
-not present as one file), then in a checkout of this repository at v0.4.0:
+Recommended: the maintainers' restore tool, provided with the dataset, over a checkout of this repository at v0.4.0:
 
-    sha256sum -c --ignore-missing SHA256SUMS
-    cat {{TO FILL FROM DATASET.json: ds.archive.name}}.part-* | {{TO FILL FROM DATASET.json: ds.decompress}} | tar -x --strip-components=1 -C <checkout>
+    dataset_restore.sh <dataset dir> <checkout> --overlay
+
+It checks every part, the whole archive and `SHA256SUMS.files` before anything is written, refuses a checkout of another
+release or one already overlaid, and checks every restored file. Without the tool, in the dataset directory (`SHA256SUMS`
+lists every part; the archive's own sha256 is in `DATASET.json`):
+
+    sha256sum -c SHA256SUMS && cat {{TO FILL FROM DATASET.json: ds.archive.name}}.part-* | {{TO FILL FROM DATASET.json: ds.decompress}} | tar -x --strip-components=1 -C <checkout>
 
 then, in `<checkout>`, check every restored library file against the area manifest:
 
@@ -66,4 +70,5 @@ then, in `<checkout>`, check every restored library file against the area manife
 
 which prints `{{TO FILL FROM revision: rev.revision}} {{TO FILL FROM revision: rev.library_files|raw}} files, 0 bad`
 (it reads each file whole: the largest needs about {{TO FILL FROM revision: rev.largest_bytes|gb}} of memory). Use:
-`Vakint::load_external_data(<checkout>, n)` (Python: `vakint.load_external_data`); see `datasets/README.md`.
+`Vakint::load_external_data(<checkout>, n)` (Python: `engine.load_external_data(path, max_loop_count=n)`); see
+`datasets/README.md`.
