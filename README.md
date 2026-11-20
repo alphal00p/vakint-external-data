@@ -139,10 +139,12 @@ Known limits:
   eps^{{TO FILL FROM catalogue_counts.py: cc.placeholder_leading_order}}: at most one UV and one IR pole per loop).
 - vakint (gammaloop `p_integral` {{TO FILL FROM pins: pin.vakint}}) carries `UNKNOWN` symbols exactly; they cancel only where
   their exact coefficient cancels. By default a result that still contains one is refused with `UnknownMasterCoefficients`
-  (Python: `ValueError`); the pinned vakint prints, for the placeholder key of
-  {{TO FILL FROM notes/r3/LOAD_<rev>.md (the placeholder node the load check used): pin.refusal_example_node}}:
+  (Python: `ValueError`); the pinned vakint prints, for the input
+  `{{TO FILL FROM the load check json of the final revision: pin.refusal_example_input}}` in
+  {{TO FILL FROM the load check json of the final revision: pin.refusal_example_mode}} mode, which reaches the placeholder
+  master of {{TO FILL FROM the load check json of the final revision: pin.refusal_example_node}}:
 
-      {{TO FILL FROM notes/r3/LOAD_<rev>.md (strict-mode refusal on that placeholder key, verbatim, at the final pin): pin.refusal_message}}
+      {{TO FILL FROM the load check json of the final revision (verbatim): pin.refusal_message}}
 
   With `allow_unknown_master_coefficients` (setting, Python keyword, or environment
   `VAKINT_ALLOW_UNKNOWN_MASTER_COEFFICIENTS=1`) the result keeps the symbols, and `Vakint::unknown_master_coefficients` lists
@@ -156,11 +158,11 @@ Known limits:
   174 GiB). More cores do not change this: the recording pass of one request runs on one core, so one such key needs weeks to
   months and tens of TB of trace. What could change it is fewer dots and ranks on the input side, or an engine that records
   without a full trace.
-- Memory and time: the library loads lazily ({{TO FILL FROM notes/r3/LOAD_<rev>.md: pin.load_library}}; r2: 21-28 s, 5.7 GB).
+- Memory and time: the library loads lazily ({{TO FILL FROM the evidence register H2 (row L.5c): pin.load_library}}; r2: 21-28 s, 5.7 GB).
   A process builds each large owner once, at its first use:
-  - T162: {{TO FILL FROM notes/r3/LOAD_<rev>.md: pin.load_T162}} (r2: one key 56 s-2.4 min, peak 7.9-22 GB depending on the engine build);
-  - T178: {{TO FILL FROM notes/r3/LOAD_<rev>.md: pin.load_T178}} (r2: one key 42-45 min, peak 7.4-8.9 GB);
-  - T266: {{TO FILL FROM notes/r3/LOAD_<rev>.md: pin.load_T266}} (with r2's table the owner build peaked at up to about 106 GB,
+  - T162: {{TO FILL FROM the evidence register H2 (row L.5c): pin.load_T162}} (r2: one key 56 s-2.4 min, peak 7.9-22 GB depending on the engine build);
+  - T178: {{TO FILL FROM the evidence register H2 (row L.5c): pin.load_T178}} (r2: one key 42-45 min, peak 7.4-8.9 GB);
+  - T266: {{TO FILL FROM the evidence register H2 (row L.5c): pin.load_T266}} (with r2's table the owner build peaked at up to about 106 GB,
     and the T266 acceptance key did not finish, see Acceptance).
   `census.json` (1.47 GB) is not shipped. Loading and reductions do not need it; only a verified load (descent certificate,
   `VAKINT_P_LIBRARY_VERIFY=1`) does, so that is not possible from the dataset alone. Do not add files to the shipped library
@@ -206,37 +208,42 @@ Known limits:
     of the reduction that reaches this table) gave identical results with the shipped table and with the previous one
     (sampled reconstruction); an outside reviewer's trace on an earlier build shows three of them passing through the
     three records changed last, which was not re-traced on the shipped table. T162: identical results on five sets of
-    integrals by sampled replay on the shipped table, one set passing through its newest replacement.
-    T266 reduced table (if shipped): ten integrals checked against the values predicted by the graph's symmetry, on the
-    reduced and on the full table with the symmetry file and a pre-release engine build; no comparison with a reduction
-    without the symmetry
-    file ({{TO FILL FROM the T266 hand-in at its freeze: pin.evidence_T266_reduced}}). T266 changed relations (if shipped):
-    no value comparison (operation counts on one integral). No changed table was re-checked on all reductions.
+    integrals by sampled replay on the shipped table, one set passing through its newest replacement. T225: the record was
+    re-applied to a base table recovered from the previous package (its re-import is byte-identical to the previous one);
+    the record's first match is unchanged on 286 integrals of its pattern and a light replay on four integrals gave equal
+    results; the authors' own generator could not certify the new record (its proof is the outside review's). T266
+    reduced table: ten integrals checked against the values predicted by the graph's symmetry, on the reduced and on the
+    full table with the symmetry file; an integral that the symmetry maps onto a declared terminal gives exactly that
+    terminal on the shipped package; there is no comparison with a reduction without the symmetry file. The two changed
+    T266 relations inside it: no value comparison (operation counts at an early stage of one integral). No changed table
+    was re-checked on all reductions.
   - T167: one record is replaced by two pieces whose proof is an outside review's; the authors' own generator could not
-    reproduce them. Value check: {{TO FILL FROM the T167 identity runs: pin.evidence_T167_identical}} of the two integrals
-    through the replaced record gave identical results; the other: {{TO FILL FROM the second T167 identity run (retry queued): pin.evidence_T167_second}}.
-  - The reduced T266 table (if shipped) omits records for integrals that the engine maps by a symmetry onto integrals kept
-    in the table. It is complete only with rustred {{TO FILL FROM the gated engine at the T266 freeze: pin.rustred_symmetry_rule}}
-    or later, which applies only such maps, and it must not load without its symmetry file:
-    {{TO FILL FROM the refusal check on that commit: pin.symmetry_refusal_check}}. Its library.json names that requirement,
+    reproduce them. Value check: both integrals through the replaced record gave identical results in the producer's
+    runs; one of them was reproduced independently on the final package build.
+  - The reduced T266 table omits records for integrals that the engine maps by a symmetry onto integrals kept in the
+    table. It is complete only with rustred {{TO FILL FROM pins (the gated engine): pin.rustred_symmetry_rule}} or later,
+    which applies only such maps, and it does not load without its symmetry file (verified on that commit: a missing,
+    switched-off or wrong-scope symmetry file is refused at load with exit code 6). Its library.json names that requirement,
     so this package loads only with vakint at gammaloop p_integral >= {{TO FILL FROM pins: pin.vakint}} (RustRed >=
     {{TO FILL FROM pins (the rustred revision in that gammaloop's Cargo.lock): pin.vakint_rustred}}); older builds refuse
     it with 'unknown field'.
   - Speed figures are per-record probes or partial runs (the T167 comparison stops before the end of the reduction); no
     end-to-end five-loop speed-up is claimed.
   - Checksums show that the files are the listed ones; they say nothing about the correctness of the reductions. vakint
-    checks them at load; it does not verify the package's descent certificate, which is not part of the release. Descent
-    (that each rule leads to simpler integrals) was re-checked only for the owners changed since the previous package; the
-    rest is carried from the checked earlier package. Loading the library directly with VAKINT_P_LIBRARY uses vakint's
+    checks them at load; it does not verify the package's descent certificate, which is not part of the release. The
+    package was assembled (census, descent of the changed owners, saved routes) with the same binaries as the previous
+    package, and loaded and checked with the gated engine rustred {{TO FILL FROM pins (the gated engine): pin.rustred_gated_engine}};
+    descent (that each rule leads to simpler integrals) was re-checked only for the owners changed since the previous
+    package, the rest is carried from the checked earlier package. Loading the library directly with VAKINT_P_LIBRARY uses vakint's
     built-in master catalogue unless VAKINT_P_MASTER_CATALOGUE and VAKINT_P_MASTERS_DIRECTORY point at the package's own.
   - The T162 table, unchanged in its kept records since r2, contains a few records whose validity was checked on sampled
     integrals only ({{TO FILL FROM the shipped T162 table: pin.evidence_T162_sampled_records}}).
 - Deferred (written up in the development notes, not part of v0.4.0): in the engine, a learned-denominator replay and a
   trace-free batched application. Abandoned: closed forms for the seven- and eight-line template recursions (estimated
-  gain below x1.05). Not in r3: the size-reduced records of T183 and T282 (their base tables could not be reproduced)
-  and of T225 {{TO FILL FROM HANDINS.tsv and work package W-E at the content freeze: pin.size_reduced_T225}}; further T162 record replacements and drops (1355, 1522, 1903, five drops without whole-domain
-  fallbacks) and the 1885 replacement; T282 2436 and the T265 packet; re-solved T266 K_a relations; symmetry files for
-  other nodes; relations that avoid raising dots; unknown master coefficients beyond the published depth.
+  gain below x1.05). Not in r3: the size-reduced records of T183 and T282 (their base tables could not be reproduced);
+  further T162 record replacements and drops (1355, 1522, 1903, five drops without whole-domain fallbacks) and the 1885
+  replacement; T282 2436 and the T265 packet; re-solved T266 K_a relations; symmetry files for other nodes; relations that
+  avoid raising dots; an engine change to weighted lowering; unknown master coefficients beyond the published depth.
 
 Every loop pack (1L-5L vacuum data) is that of v0.3.0; only the release identities change
 (`tools/data.py set-version`: loop manifest versions, manifest hashes, archive names). The
