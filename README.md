@@ -184,7 +184,7 @@ Known limits:
     with the symbol. The eps^{{TO FILL FROM catalogue: catalogue.placeholder_leading_order}} floor is a bound adopted by
     argument (at most one UV and one IR pole per loop), not derived per master; the eps^{{TO FILL FROM catalogue: catalogue.unknown_through}}
     ceiling is a provisional limit, not shown to suffice for every six-loop use.
-  - The catalogue rows of nodes {{TO FILL FROM catalogue_counts.py (rows noted 'derived:'): cc.derived_nodes}} were derived
+  - The catalogue rows of nodes {{TO FILL FROM catalogue_counts.py (rows noted as derived): cc.derived_nodes}} were derived
     by the authors from their own five-loop reductions, all of them except T178 (arithmetic not recorded) by
     reconstruction from finite-field samples. The rows of T222 and T238 were reproduced by a second reduction on another
     package; for T255 an outside reviewer's value agrees at the order needed; for T178 a second integral of the same
@@ -199,9 +199,10 @@ Known limits:
     of the reduction that reaches this table) gave identical results with the shipped table and with the previous one
     (sampled reconstruction); an outside reviewer's trace on an earlier build shows three of them passing through the
     three records changed last, which was not re-traced on the shipped table. T162: identical results on five sets of
-    integrals by sampled replay on the shipped table, one set passing through its newest replacement. T266 reduced table
-    (if shipped): ten integrals checked against the values predicted by the graph's symmetry, on the reduced and on the
-    full table with the symmetry file and a pre-release engine build; no comparison with a reduction without the symmetry
+    integrals by sampled replay on the shipped table, one set passing through its newest replacement.
+    T266 reduced table (if shipped): ten integrals checked against the values predicted by the graph's symmetry, on the
+    reduced and on the full table with the symmetry file and a pre-release engine build; no comparison with a reduction
+    without the symmetry
     file ({{TO FILL FROM the T266 hand-in at its freeze: pin.evidence_T266_reduced}}). T266 changed relations (if shipped):
     no value comparison (operation counts on one integral). No changed table was re-checked on all reductions.
   - T167: one record is replaced by two pieces whose proof is an outside review's; the authors' own generator could not
