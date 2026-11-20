@@ -201,9 +201,10 @@ Known limits:
   one vakint evaluation through the released directory, identical to a value checked against an independent result to
   39 digits. The 15th check, one T266 integral served by the shipped relations, was stopped after repeated host-memory
   interruptions and has no result; it will not be resumed. Package r3 (`vk5l-s12349d-r3`):
-  {{TO FILL FROM the Sunday acceptance record: pin.acceptance}}.
-  r3's 15th check (the same kind of T266 integral, compared with a reference package) may finish after this release and
-  does not block it; at the release: {{TO FILL FROM the stage-15 record: pin.acceptance_stage15}}. A judge verdict that fails
+  {{TO FILL FROM the acceptance record of the final package: pin.acceptance}}
+  r3's 15th check (the T266 integral served by the shipped relations, run on this package and on a reference package and
+  compared by the frozen judge) may finish after this release and does not block it; at the release:
+  {{TO FILL FROM the stage-15 record (now running on both packages; the release does not wait for it): pin.acceptance_stage15}}. A judge verdict that fails
   only on the count of shipped-relation uses of a resumed final attempt, while the results of both packages have equal
   digests (and an earlier attempt counted at least one use), is recorded as a pass; the raw judge output and that ruling
   stand side by side:

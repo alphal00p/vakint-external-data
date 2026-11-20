@@ -51,6 +51,114 @@
  "acceptance": {
   "result": "{{TO FILL FROM pins: pin.acceptance}}",
   "source": "{{TO FILL FROM pins: pin.acceptance_source}}",
+  "run": {
+   "stages_1_14_utc": "2026-11-20T13:50:23Z / 2026-11-20T14:24:59Z",
+   "added_checks_utc": "2026-11-20T13:50Z / 2026-11-20T14:19Z",
+   "engine": "the gated engine (rustred 2d97db789, binary sha256 802a013e072595341ba5f94359205f0dffc0735a223df7fc588e80dd80ead11c)",
+   "vakint": "gammaloop p_integral fe5fd3e8237219849eaf701226d7fb060ff73fac plus one test-only commit (the external-root test)"
+  },
+  "stages": [
+   {
+    "stage": "1",
+    "check": "layout",
+    "result": "PASS",
+    "wall": "< 1 s"
+   },
+   {
+    "stage": "2",
+    "check": "perms",
+    "result": "PASS",
+    "wall": "< 1 s"
+   },
+   {
+    "stage": "3",
+    "check": "rootkey",
+    "result": "PASS",
+    "wall": "< 1 s"
+   },
+   {
+    "stage": "4",
+    "check": "listed",
+    "result": "PASS",
+    "wall": "< 1 s"
+   },
+   {
+    "stage": "5",
+    "check": "inventory",
+    "result": "PASS",
+    "wall": "22 s"
+   },
+   {
+    "stage": "6",
+    "check": "source",
+    "result": "PASS",
+    "wall": "< 1 s"
+   },
+   {
+    "stage": "7",
+    "check": "revision",
+    "result": "PASS",
+    "wall": "1 s"
+   },
+   {
+    "stage": "8",
+    "check": "T162 (light reduction == pinned value)",
+    "result": "PASS",
+    "wall": "41.32 s",
+    "peak": "7.98 GB"
+   },
+   {
+    "stage": "9",
+    "check": "T178 (light reduction == pinned value)",
+    "result": "PASS",
+    "wall": "30 min 19.56 s",
+    "peak": "7.85 GB"
+   },
+   {
+    "stage": "10",
+    "check": "old reader, T162 (refuses the package)",
+    "result": "PASS",
+    "wall": "seconds"
+   },
+   {
+    "stage": "11",
+    "check": "old reader, T178 (refuses the package)",
+    "result": "PASS",
+    "wall": "seconds"
+   },
+   {
+    "stage": "12",
+    "check": "unpack (the dataset archive over the base checkout: identical files)",
+    "result": "PASS",
+    "wall": "29 s (tar)"
+   },
+   {
+    "stage": "13",
+    "check": "vakint (one evaluation through the restored data == pinned value)",
+    "result": "PASS",
+    "wall": "59.03 s",
+    "peak": "6.49 GB"
+   },
+   {
+    "stage": "14",
+    "check": "unchanged (the revision re-hashed after all stages)",
+    "result": "PASS",
+    "wall": "19 s"
+   }
+  ],
+  "stage_T266": "skipped in this table by design: judged as the 15th check (stage_15)",
+  "added_checks": [
+   {
+    "check": "the reduced T266 table needs its symmetry file",
+    "result": "PASS",
+    "detail": "loads with it (21.7 s, 5.75 GB); refused at load with exit code 6: no file, symmetry switched off, a wrong-scope file, verify mode with the file missing, no file declared"
+   },
+   {
+    "check": "the two relation entries carried inside the reduced T266 table",
+    "result": "PASS",
+    "detail": "present (one entry of 298 terms at each of the two point keys) and reproduce the producer's operation counts (155 steps / 214,408 and 9,060 / 2,332,011 operations); one T266 integral through Vakint's own loader equals the reference"
+   }
+  ],
   "stage_15": {
    "note": "one T266 integral served by the shipped relations, compared with a reference package; it may finish after the release date and does not block the release (maintainers' ruling, 2026-11-19)",
    "status_at_release": "{{TO FILL FROM the stage-15 record: pin.acceptance_stage15}}",
