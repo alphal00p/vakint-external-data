@@ -54,13 +54,19 @@ loop-pack archive.
 
 ## Restore and use
 
-Recommended: the maintainers' restore tool, provided with the dataset, over a checkout of this repository at v0.4.0:
+First check with your own `sha256sum` that `DATASET.json` has the sha256 given above (it records the sha256 of every part,
+of the archive and of the shipped tools `dataset_restore.sh`, `dataset_verify.sh`, `dataset_index.py`; the tools check
+against it, which finds damage, not tampering). The archive is an overlay of a checkout of this repository at
+{{TO FILL FROM DATASET.json: ds.base_version}}; a bare revision directory is not a root for `load_external_data` (it has no
+loop packs). Recommended, in the dataset directory (the tools and a `README.txt` sit beside the parts):
 
-    dataset_restore.sh <dataset dir> <checkout> --overlay
+    git clone --depth 1 --branch {{TO FILL FROM DATASET.json: ds.base_version}} https://github.com/alphal00p/vakint-external-data <checkout>
+    bash dataset_restore.sh . <checkout> --overlay
 
 It checks every part, the whole archive and `SHA256SUMS.files` before anything is written, refuses a checkout of another
-release or one already overlaid, and checks every restored file. Without the tool, in the dataset directory (`SHA256SUMS`
-lists every part; the archive's own sha256 is in `DATASET.json`):
+release or one already overlaid, unpacks (the files keep the modes of your umask), checks every restored file and prints the
+root manifest sha256: it must be `{{TO FILL FROM DATASET.json: ds.root_manifest_sha256}}`. Without the tools, in the dataset
+directory (`SHA256SUMS` lists every part; the archive's own sha256 is in `DATASET.json`):
 
     sha256sum -c SHA256SUMS && cat {{TO FILL FROM DATASET.json: ds.archive.name}}.part-* | {{TO FILL FROM DATASET.json: ds.decompress}} | tar -x --strip-components=1 -C <checkout>
 
