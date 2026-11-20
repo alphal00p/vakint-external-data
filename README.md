@@ -80,21 +80,25 @@ release). Since v0.3.0:
   sha256sum -c SHA256SUMS && cat {{TO FILL FROM DATASET.json: ds.archive.name}}.part-* | {{TO FILL FROM DATASET.json: ds.decompress}} | tar -x -C <dir>
   ```
 
-  and set, for the Vakint process,
-  `VAKINT_P_LIBRARY=<dir>/{{TO FILL FROM revision: rev.name}}/p_integral/p-library-1-5`,
-  `VAKINT_P_MASTER_CATALOGUE=<dir>/{{TO FILL FROM revision: rev.name}}/p_integral/p-library-1-5/p-master-catalogue.json` and
-  `VAKINT_P_MASTERS_DIRECTORY=<dir>/{{TO FILL FROM revision: rev.name}}/p_integral/p-library-1-5/masters`:
-  the library and its relations come from the first variable, whatever external data are loaded; the five-loop master
-  catalogue and the master basis data come from the other two (without them this Vakint uses its built-in catalogue
-  `ggppss-5L-v3.2`, which lacks rows of this release, and refuses the pole-bounded basis). In this mode Vakint does not check the files against the area manifest: run the `sha256sum -c` steps
+  and set `VAKINT_P_LIBRARY=<dir>/{{TO FILL FROM revision: rev.name}}/p_integral/p-library-1-5` for the Vakint process:
+  with the Vakint this release needs (below), the library, its relations, its master catalogue and its master basis data
+  (`masters/`) all come from that one variable, whatever external data are loaded. Older builds need all three variables:
+  also `VAKINT_P_MASTER_CATALOGUE=<dir>/{{TO FILL FROM revision: rev.name}}/p_integral/p-library-1-5/p-master-catalogue.json`
+  and `VAKINT_P_MASTERS_DIRECTORY=<dir>/{{TO FILL FROM revision: rev.name}}/p_integral/p-library-1-5/masters` (without them
+  they use the built-in catalogue `ggppss-5L-v3.2`, which lacks rows of this release, and refuse the pole-bounded basis). In this mode Vakint does not check the files against the area manifest: run the `sha256sum -c` steps
   above first. Leave `VAKINT_P_LIBRARY_VERIFY` unset: a verified load needs `census.json` (1.47 GB), which the dataset
   does not carry.
 - Compatibility: Vakint from gammaloop `p_integral` {{TO FILL FROM pins: pin.vakint}}, built with the
   five-loop feature, five-loop p families having 20 slots:
   `RUSTRED_RUNTIME_ARITIES=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,20 cargo build --features vakint/five-loop-p` (the
-  default build compiles arities 1-16 and refuses a 20-slot chart). Its RustRed is {{TO FILL FROM pins (the rustred revision in that gammaloop's Cargo.lock): pin.vakint_rustred}};
+  default build compiles arities 1-16 and refuses a 20-slot chart). Its RustRed is {{TO FILL FROM pins (the rustred revision in that gammaloop's Cargo.lock): pin.vakint_rustred}}
+  (whose engine source is that of the gated engine {{TO FILL FROM pins (the gated engine): pin.rustred_gated_engine}}) and its
+  Symbolica {{TO FILL FROM pins (the Symbolica revision in that gammaloop's Cargo.toml): pin.vakint_symbolica}};
   RustRed main {{TO FILL FROM pins: pin.rustred_main}}, RustRed `p_integral`
-  {{TO FILL FROM pins: pin.rustred_p_integral}} (both carry the same `P_*` constants). The library is bound to its RustRed
+  {{TO FILL FROM pins: pin.rustred_p_integral}} (both carry the same `P_*` constants). Symbolica
+  {{TO FILL FROM pins (the Symbolica revision in that gammaloop's Cargo.toml): pin.vakint_symbolica}}, which gammaloop
+  references through `https://github.com/symbolica-dev/symbolica`, is reachable only through the fork branch
+  `pin-mapped-buildrs`: do not delete that branch. The library is bound to its RustRed
   by its identity (`p-library:scope=1-5:...,P_PACKAGE_REVISION={{TO FILL FROM revision: rev.revision}}`: scope and every
   `P_*` version constant): a RustRed with other constants refuses it at the first p-integral with one error ("p library
   generated with <P_NAME>=<value>, this RustRed has <value>; regenerate with rustred p-package"); a library that differs
@@ -234,8 +238,10 @@ Known limits:
     package was assembled (census, descent of the changed owners, saved routes) with the same binaries as the previous
     package, and loaded and checked with the gated engine rustred {{TO FILL FROM pins (the gated engine): pin.rustred_gated_engine}};
     descent (that each rule leads to simpler integrals) was re-checked only for the owners changed since the previous
-    package, the rest is carried from the checked earlier package. Loading the library directly with VAKINT_P_LIBRARY uses vakint's
-    built-in master catalogue unless VAKINT_P_MASTER_CATALOGUE and VAKINT_P_MASTERS_DIRECTORY point at the package's own.
+    package, the rest is carried from the checked earlier package. Loading the library directly with VAKINT_P_LIBRARY uses
+    the package's own master catalogue and masters with the Vakint this release needs; older builds need all three
+    variables (VAKINT_P_MASTER_CATALOGUE and VAKINT_P_MASTERS_DIRECTORY pointing at the package's own), else they use
+    vakint's built-in catalogue.
   - The T162 table, unchanged in its kept records since r2, contains a few records whose validity was checked on sampled
     integrals only ({{TO FILL FROM the shipped T162 table: pin.evidence_T162_sampled_records}}).
 - Deferred (written up in the development notes, not part of v0.4.0): in the engine, a learned-denominator replay and a
