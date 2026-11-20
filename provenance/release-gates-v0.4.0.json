@@ -6,7 +6,7 @@
   "root_manifest_sha256": "a30e276af1044e9caf0b884dd7483d4081c444fd3324beeedd5673c2ef91fa21",
   "five_loop_manifest_sha256": "ad9e8e571b3dbdf98f78af5befef4a3c0c35abcd7ac00ae8e4565cb56c52df03",
   "prepared_commit": "bdb55a3b872bf438cf6e3d882654c9ba0c408351",
-  "data_commit": "the prepared fill commit (its parent is prepared_commit) fills this record except the date, the dataset release-assets decision and the acceptance results; the release-day commit after it fills those; neither changes a loop pack"
+  "data_commit": "the commits after prepared_commit (the prepared fill and its corrections) fill this record and the README except the release date and the dataset release-assets decision; the release-day commit fills those two; none of them changes a loop pack, the root manifest or the p_integral area"
  },
  "base": {
   "repository": "alphal00p/vakint-external-data",
