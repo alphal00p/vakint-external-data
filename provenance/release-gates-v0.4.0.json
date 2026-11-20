@@ -6,7 +6,7 @@
   "root_manifest_sha256": "{{TO FILL FROM the checkout: repo.root_manifest_sha256}}",
   "five_loop_manifest_sha256": "{{TO FILL FROM the checkout: repo.five_loop_manifest_sha256}}",
   "prepared_commit": "{{TO FILL FROM the checkout: repo.head}}",
-  "data_commit": "the commit that fills this record (its parent is prepared_commit); it changes no loop pack"
+  "data_commit": "the prepared fill commit (its parent is prepared_commit) fills this record except the date, the dataset release-assets decision and the acceptance results; the release-day commit after it fills those; neither changes a loop pack"
  },
  "base": {
   "repository": "alphal00p/vakint-external-data",
