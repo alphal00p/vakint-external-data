@@ -49,8 +49,8 @@
   "sha256": "fa3b6d3f3bd7598500a128abe87ce72c639583c9992ed8e5bd1d9afabc9a6ae6"
  },
  "acceptance": {
-  "result": "{{TO FILL FROM pins: pin.acceptance}}",
-  "source": "{{TO FILL FROM pins: pin.acceptance_source}}",
+  "result": "one acceptance run on this package passed all 14 checks of the first kind: 8 file, layout and format checks; reductions of one light T162 integral and one light T178 integral, each equal to its pinned value; two older readers refuse the package; the dataset archive unpacks to identical files; and one vakint evaluation through the restored data equals its pinned value. Two added checks passed: the reduced T266 table needs its symmetry file (the package loads with it, and five faulty forms are refused at load with exit code 6: no file, symmetry switched off, a wrong-scope file, verify mode with the file missing, no file declared); and the two relation entries carried inside the reduced table are present and reproduce the producer's operation counts, and one T266 integral through Vakint's own loader equals the reference. No check found a blocking condition.",
+  "source": "the acceptance run on the final package, 2026-11-20 (stages 13:50-14:25 UTC; the stage table is in this record)",
   "run": {
    "stages_1_14_utc": "2026-11-20T13:50:23Z / 2026-11-20T14:24:59Z",
    "added_checks_utc": "2026-11-20T13:50Z / 2026-11-20T14:19Z",
