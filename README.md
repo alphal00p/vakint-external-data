@@ -243,7 +243,7 @@ Known limits:
     variables (VAKINT_P_MASTER_CATALOGUE and VAKINT_P_MASTERS_DIRECTORY pointing at the package's own), else they use
     vakint's built-in catalogue.
   - The T162 table, unchanged in its kept records since r2, contains a few records whose validity was checked on sampled
-    integrals only ({{TO FILL FROM the shipped T162 table: pin.evidence_T162_sampled_records}}).
+    integrals only.
 - Differences in Vakint / gammaloop behaviour of the Vakint this release needs, against earlier builds (not data
   changes): [`docs/vakint-behaviour-v0.4.0.md`](docs/vakint-behaviour-v0.4.0.md).
 - Deferred (written up in the development notes, not part of v0.4.0): in the engine, a learned-denominator replay and a
