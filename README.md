@@ -29,13 +29,13 @@ release). Since v0.3.0:
   its checksums, the area manifest it restores (every library file with sha256 and size), the master catalogue and the
   restore commands. None of it is in a loop-pack archive or in a managed install.
 - Changes since the last five-loop candidate (vk5l-s12349d-r2, 18 November 2026, never released), per node:
-  {{TO FILL FROM notes/r3/RELEASE_NOTES_CONTENT.md section C at the freeze: pin.changes_since_r2}}
+  {{TO FILL FROM notes/r3/RELEASE_NOTES_CONTENT.md section C.1 (public form) at the freeze: pin.changes_since_r2}}
 - Master catalogue v4 (`{{TO FILL FROM revision: catalogue.data_version}}`, sha256
   `{{TO FILL FROM revision: catalogue.sha256}}`): {{TO FILL FROM revision: catalogue.masters}} GGPPSS masters,
   {{TO FILL FROM revision: catalogue.placeholders}} placeholder masters, and the map of the package's residual terminals
   onto them, onto Forcer masters and onto Γ factors (Known limits).
 
-{{TO FILL FROM tools/r3/package_content.py <final r3> --base <r2> (.short.md): include:content_short}}
+{{TO FILL FROM tools/r3/package_content.py <final r3> --base <r2> --public (.short.md): include:content_short}}
 
 - Obtain and restore. The dataset (the directory `{{TO FILL FROM revision: rev.name}}/` with `DATASET.json`, `SHA256SUMS`,
   `SHA256SUMS.files` and the parts `{{TO FILL FROM DATASET.json: ds.archive.name}}.part-000`, ...) is not part of this
@@ -93,13 +93,12 @@ release). Since v0.3.0:
 - Older Vakint builds and this release: a managed install of v0.4.0 holds the loop packs only, identical to v0.3.0's
   except the release version recorded in each loop manifest, and loads in every build that read v0.3.0 (the release manifest schema is unchanged; the version is compared
   only with the requested one). A checkout of v0.4.0 without the dataset behaves as v0.3.0. With the dataset restored:
-  Vakint builds that do not read the `p_integral/` area ignore it; gammaloop `vakint_rustred` builds read it and refuse
-  the listed library at the first p-integral with a RustRed version mismatch, as they refuse v0.3.0's `p-library-1-4`;
-  earlier gammaloop `p_integral` builds are not supported with the dataset: builds before d8c8e8b6a (19 November 2026)
-  read only master catalogues of schema `vakint.p-master-catalogue.v1` and stop at the first p-integral with "schema
-  vakint.p-master-catalogue.v2, this vakint reads vakint.p-master-catalogue.v1" (every p-integral fails, one to five
-  loops; vacuum integrals are unaffected).
-  {{TO FILL FROM notes/r3/LOAD_<final r3>.md (one run of the pinned Vakint on the final r3): pin.compat_final_r3}}
+  Vakint builds that do not read the `p_integral/` area ignore it. The dataset loads only with Vakint at gammaloop
+  `p_integral` {{TO FILL FROM pins: pin.vakint}} or later (RustRed {{TO FILL FROM pins (the rustred revision in that gammaloop's Cargo.lock): pin.vakint_rustred}}
+  or later); older builds refuse it at the first p-integral with "unknown field" when their RustRed has the library's `P_*`
+  constants (gammaloop `p_integral` 98dc89353, RustRed 19cf126a9: "malformed p library: library.json: unknown field
+  `orbit_required_digests`"), and with a RustRed version mismatch otherwise (gammaloop `vakint_rustred` builds among them).
+  Vacuum integrals are unaffected.
 - This Vakint and older data: a managed install of v0.3.0 or earlier loads as before. A checkout of v0.3.0 gives the
   1L-4L p library `p-library-1-4` (its identity is the one this Vakint's RustRed computes for scope 1-4) and no
   five-loop p-integrals; the five-loop dataset needs a checkout of v0.4.0 (its root manifest carries v0.4.0's release
