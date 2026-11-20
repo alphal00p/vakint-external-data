@@ -181,43 +181,52 @@ Known limits:
     arXiv:2104.08272; their later orders are UNKNOWN as well, and {{TO FILL FROM catalogue_counts.py: cc.printed_dependences}}
     printed linear dependences plus one derived identity
     tie some of them together. Strict mode refuses any result that still contains an UNKNOWN symbol; allow mode returns it
-    with the symbol. The eps^{{TO FILL FROM catalogue: catalogue.placeholder_leading_order}} floor is an argument (at most
-    one UV and one IR pole per loop), not a computation; the eps^{{TO FILL FROM catalogue: catalogue.unknown_through}}
+    with the symbol. The eps^{{TO FILL FROM catalogue: catalogue.placeholder_leading_order}} floor is a bound adopted by
+    argument (at most one UV and one IR pole per loop), not derived per master; the eps^{{TO FILL FROM catalogue: catalogue.unknown_through}}
     ceiling is a provisional limit, not shown to suffice for every six-loop use.
-  - Ten catalogue rows (nodes T178, T182, T205, T222, T223, T238, T241, T255, T269, T277) were derived by the authors from
-    its own five-loop reductions; at least nine of them by reconstruction from finite-field samples. The rows of T222 and
-    T238 were reproduced by a second reduction on another package; for T255 an outside reviewer's value agrees at the
-    order needed; for T178 a second integral of the same package gave identical terms. The other six were not reproduced
-    by a second reduction. Ten further rows (T128e, T129e, T130p1, T131e, T132e, T133e, T135e, T140e, T142e, T144p5) come
-    from one reduction each, reconstructed from finite-field samples, without a second route.
-  - The changed tables were compared on a few integrals only. T180p2: two production integrals gave identical results on
-    an earlier build sharing the records they pass through; three of its thirteen replaced records had not been passed by
-    any production integral at writing ({{TO FILL FROM the pending T180p2 runs: pin.evidence_T180p2_pending}}). T162:
-    identical results on four sets of integrals by sampled replay, on the table before its last three-piece replacement
-    ({{TO FILL FROM the shipped T162 table's value check: pin.evidence_T162_shipped}}). T266 reduced table (if shipped):
-    ten integrals checked against the values predicted by the graph's symmetry, on the full table with the symmetry file
-    and a pre-release engine build, plus one integral on the reduced table
-    ({{TO FILL FROM the T266 hand-in at its freeze: pin.evidence_T266_reduced}}). T266 changed relations (if shipped): no
-    value comparison (operation counts on one integral). No changed table was re-checked on all reductions.
+  - The catalogue rows of nodes {{TO FILL FROM catalogue_counts.py (rows noted 'derived:'): cc.derived_nodes}} were derived
+    by the authors from their own five-loop reductions, all of them except T178 (arithmetic not recorded) by
+    reconstruction from finite-field samples. The rows of T222 and T238 were reproduced by a second reduction on another
+    package; for T255 an outside reviewer's value agrees at the order needed; for T178 a second integral of the same
+    package gave identical terms; the rows of {{TO FILL FROM catalogue_counts.py and the confirmations above: cc.derived_unconfirmed}}
+    were not reproduced by a second reduction. The T278 row is known only through eps^-1: a result that needs its eps^0
+    coefficient carries UNKNOWN orders of published masters. The rows of nodes
+    {{TO FILL FROM catalogue_counts.py (rows noted 'basis-census route 3'): cc.census_nodes}} come from one reduction each,
+    reconstructed from finite-field samples, without a second route. Of the rows matched to published masters by graph
+    isomorphism, the all-ones corner rows agree with an independent reading of the published values; the others rest on
+    that one match (numerical identities on a few nodes are consistent with it).
+  - The changed tables were compared on a few integrals only. T180p2: 68 production integrals (in runs pruned to the part
+    of the reduction that reaches this table) gave identical results with the shipped table and with the previous one
+    (sampled reconstruction); an outside reviewer's trace on an earlier build shows three of them passing through the
+    three records changed last, which was not re-traced on the shipped table. T162: identical results on five sets of
+    integrals by sampled replay on the shipped table, one set passing through its newest replacement. T266 reduced table
+    (if shipped): ten integrals checked against the values predicted by the graph's symmetry, on the reduced and on the
+    full table with the symmetry file and a pre-release engine build; no comparison with a reduction without the symmetry
+    file ({{TO FILL FROM the T266 hand-in at its freeze: pin.evidence_T266_reduced}}). T266 changed relations (if shipped):
+    no value comparison (operation counts on one integral). No changed table was re-checked on all reductions.
   - T167: one record is replaced by two pieces whose proof is an outside review's; the authors' own generator could not
-    reproduce them. Value check: {{TO FILL FROM the two T167 identity runs: pin.evidence_T167_values}}.
+    reproduce them. Value check: {{TO FILL FROM the T167 identity runs: pin.evidence_T167_identical}} of the two integrals
+    through the replaced record gave identical results; the other: {{TO FILL FROM the second T167 identity run (retry queued): pin.evidence_T167_second}}.
   - The reduced T266 table (if shipped) omits records for integrals that the engine maps by a symmetry onto integrals kept
     in the table. It is complete only with rustred {{TO FILL FROM the gated engine at the T266 freeze: pin.rustred_symmetry_rule}}
     or later, which applies only such maps, and it must not load without its symmetry file:
-    {{TO FILL FROM the refusal check on that commit: pin.symmetry_refusal_check}}.
+    {{TO FILL FROM the refusal check on that commit: pin.symmetry_refusal_check}}. Its library.json names that requirement,
+    so this package loads only with vakint at gammaloop p_integral >= {{TO FILL FROM pins: pin.vakint}} (RustRed >=
+    {{TO FILL FROM pins (the rustred revision in that gammaloop's Cargo.lock): pin.vakint_rustred}}); older builds refuse
+    it with 'unknown field'.
   - Speed figures are per-record probes or partial runs (the T167 comparison stops before the end of the reduction); no
     end-to-end five-loop speed-up is claimed.
   - Checksums show that the files are the listed ones; they say nothing about the correctness of the reductions. vakint
     checks them at load; it does not verify the package's descent certificate, which is not part of the release. Descent
     (that each rule leads to simpler integrals) was re-checked only for the owners changed since the previous package; the
-    rest is carried from the checked earlier package.
+    rest is carried from the checked earlier package. Loading the library directly with VAKINT_P_LIBRARY uses vakint's
+    built-in master catalogue unless VAKINT_P_MASTER_CATALOGUE and VAKINT_P_MASTERS_DIRECTORY point at the package's own.
   - The T162 table, unchanged in its kept records since r2, contains a few records whose validity was checked on sampled
     integrals only ({{TO FILL FROM the shipped T162 table: pin.evidence_T162_sampled_records}}).
 - Deferred (written up in the development notes, not part of v0.4.0): in the engine, a learned-denominator replay and a
   trace-free batched application. Abandoned: closed forms for the seven- and eight-line template recursions (estimated
-  gain below x1.05). Not in r3: the size-reduced records of
-  {{TO FILL FROM HANDINS.tsv at the content freeze (Sat 21 Nov, noon UTC): pin.size_reduced_not_in_r3}} (their base tables
-  could not be reproduced); further T162 record replacements and drops (1355, 1522, 1903, five drops without whole-domain
+  gain below x1.05). Not in r3: the size-reduced records of T183 and T282 (their base tables could not be reproduced)
+  and of T225 {{TO FILL FROM HANDINS.tsv and work package W-E at the content freeze: pin.size_reduced_T225}}; further T162 record replacements and drops (1355, 1522, 1903, five drops without whole-domain
   fallbacks) and the 1885 replacement; T282 2436 and the T265 packet; re-solved T266 K_a relations; symmetry files for
   other nodes; relations that avoid raising dots; unknown master coefficients beyond the published depth.
 
