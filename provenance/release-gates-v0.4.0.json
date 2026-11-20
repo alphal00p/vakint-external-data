@@ -24,8 +24,10 @@
   }
  },
  "engine": {
-  "p5l_library": "{{TO FILL FROM pins: pin.engine}}",
-  "note": "the RustRed binary that assembled the five-loop library of the dataset"
+  "assembly": "census, descent of the changed owners and saved routes with the same binaries as the previous package (vk5l-s12349d-r2)",
+  "load_and_checks": "{{TO FILL FROM pins (the gated engine): pin.rustred_gated_engine}}",
+  "symmetry_rule_from": "{{TO FILL FROM pins (the gated engine): pin.rustred_symmetry_rule}}",
+  "note": "the gated RustRed engine that loaded and checked the five-loop library; the reduced T266 table is complete only with it or later"
  },
  "dataset": {
   "description": "datasets/{{TO FILL FROM revision: rev.name}}/",
