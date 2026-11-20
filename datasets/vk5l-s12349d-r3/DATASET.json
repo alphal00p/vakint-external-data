@@ -1,0 +1,72 @@
+{
+ "schema": "vakint.external-data.dataset.v1",
+ "format_version": 1,
+ "revision": "vk5l-s12349d-r3",
+ "created_utc": "2026-11-20T13:32:43Z",
+ "codec": "gzip",
+ "level": 6,
+ "threads": 1,
+ "long": 0,
+ "part_bytes": 1900000000,
+ "archive": {
+  "name": "vk5l-s12349d-r3.tar.gz",
+  "bytes": 5332711180,
+  "sha256": "1c46b32c7965e318631bcede9c06333adb161e3dc55fb7ad4982332345f0e059",
+  "members_root": "vk5l-s12349d-r3/"
+ },
+ "parts": [
+  {
+   "name": "vk5l-s12349d-r3.tar.gz.part-000",
+   "bytes": 1900000000,
+   "sha256": "8d3a869b71a4bf19dba8bcbd13fb0dde752d263999d4427c0ed0e1389c2b13a8"
+  },
+  {
+   "name": "vk5l-s12349d-r3.tar.gz.part-001",
+   "bytes": 1900000000,
+   "sha256": "09818989aa21264268338a73f7574a18e7861cb8bb38576b8a878dcf89cd5142"
+  },
+  {
+   "name": "vk5l-s12349d-r3.tar.gz.part-002",
+   "bytes": 1532711180,
+   "sha256": "1e2f7ae6312a9d925bbeb9ed57d4f2952db938b392dd9bb3ad1d357ab3fb4250"
+  }
+ ],
+ "content": {
+  "files": 6948,
+  "bytes": 10120561274,
+  "files_sha256": "02192f07c3bf5f880f4cd2a4954ffd6dca8bbf10308c6c9bd93a3dfaf0d2de47",
+  "root_manifest_sha256": "281cb35e9fdc7f86ce8d1cf15185c13af81d1d0ea9a3a09ea43ec9a9b1e65867",
+  "area_manifest_sha256": "81b1b5f7ce884c31a12cb04ca0f4b39c98ce383d7a7fae46694936fb622ed3a2",
+  "base_version": "v0.4.0",
+  "loop_packs": {
+   "1L/manifest.json": "e0888c9cd0b009d82ae73a787d2e6e781261f8a14626af8c5961d1b9ffc88253",
+   "2L/manifest.json": "95f33c6ef1f63811a9ef609ff8c5ecfe4d62584dfb538bee52ec5c158dc9855d",
+   "3L/manifest.json": "dda9b2cadd4f34e32142ee9386b03a9e1f92bf8e561f9019f9b328a04120b038",
+   "4L/manifest.json": "5b46002a7a00cb56aa65ec55cf461e7460c85942996dd6c94690578256f9d35b",
+   "5L/manifest.json": "ad9e8e571b3dbdf98f78af5befef4a3c0c35abcd7ac00ae8e4565cb56c52df03"
+  }
+ },
+ "tools": {
+  "dataset_restore.sh": "824fc178c59e15707d4f4b3cdd1b8314717f384a2459cf966fa1a20f70dce56e",
+  "dataset_verify.sh": "b53d225caf6d4545ed8c2650d16e29568b041be961c4ac0fb2c9523e419f9a0f",
+  "dataset_index.py": "b2f8a39520b2777aea39ea5568cefcd557e0545c5a24c8e4b92a95d82e0f16ec",
+  "README.txt": "268cc60bbbe8005f4e122633b6777b0d85c00fa999520340f78e6b1c64f8d71d"
+ },
+ "restore": {
+  "command": "bash dataset_restore.sh <this dataset dir> <vakint-external-data checkout at v0.4.0> --overlay   (bare revision directory: bash dataset_restore.sh <this dataset dir> <dir>)",
+  "manual": "sha256sum -c SHA256SUMS && cat vk5l-s12349d-r3.tar.gz.part-* | gzip -dc | tar -x -C <dest>   (then dirs 2777, files 666; over a checkout: tar -x --strip-components=1 -C <checkout>; one file: cat vk5l-s12349d-r3.tar.gz.part-* > vk5l-s12349d-r3.tar.gz, its sha256 = archive.sha256)",
+  "dirs_mode": "2777",
+  "files_mode": "666"
+ },
+ "made_by": {
+  "tool": "tools/r3/dataset_pack.sh (helper VH 2, lane R3-DATASET)",
+  "tar": "tar (GNU tar) 1.35",
+  "codec_version": "gzip 1.14",
+  "host": "itphlies",
+  "seconds": {
+   "file_sums": 13,
+   "pack": 320,
+   "checksums": 9
+  }
+ }
+}

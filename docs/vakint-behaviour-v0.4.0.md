@@ -1,6 +1,6 @@
 # Vakint behaviour with release v0.4.0
 
-Release v0.4.0 needs Vakint from gammaloop `p_integral` {{TO FILL FROM pins: pin.vakint}} or later (README, "v0.4.0").
+Release v0.4.0 needs Vakint from gammaloop `p_integral` fe5fd3e8237219849eaf701226d7fb060ff73fac or later (README, "v0.4.0").
 That build differs from earlier gammaloop `p_integral` builds in the following ways. None of them is a change of the
 data in this repository; the numbers are gammaloop pull requests.
 

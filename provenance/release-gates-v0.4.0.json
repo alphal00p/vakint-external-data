@@ -3,9 +3,9 @@
  "version": "v0.4.0",
  "purpose": "The commits, pins and dataset the v0.4.0 release gates ran on (repository record only: not part of any release archive or manifest).",
  "gated_tree": {
-  "root_manifest_sha256": "{{TO FILL FROM the checkout: repo.root_manifest_sha256}}",
-  "five_loop_manifest_sha256": "{{TO FILL FROM the checkout: repo.five_loop_manifest_sha256}}",
-  "prepared_commit": "{{TO FILL FROM the checkout: repo.head}}",
+  "root_manifest_sha256": "a30e276af1044e9caf0b884dd7483d4081c444fd3324beeedd5673c2ef91fa21",
+  "five_loop_manifest_sha256": "ad9e8e571b3dbdf98f78af5befef4a3c0c35abcd7ac00ae8e4565cb56c52df03",
+  "prepared_commit": "dec41ec3347f98754aaea421f6dbca8ddf3c586f",
   "data_commit": "the prepared fill commit (its parent is prepared_commit) fills this record except the date, the dataset release-assets decision and the acceptance results; the release-day commit after it fills those; neither changes a loop pack"
  },
  "base": {
@@ -16,37 +16,37 @@
  "consumer": {
   "repository": "alphal00p/gammaloop",
   "branch": "p_integral",
-  "commit": "{{TO FILL FROM pins: pin.vakint}}",
+  "commit": "fe5fd3e8237219849eaf701226d7fb060ff73fac",
   "rustred": {
    "repository": "alphal00p/rustred",
-   "main": "{{TO FILL FROM pins: pin.rustred_main}}",
-   "p_integral": "{{TO FILL FROM pins: pin.rustred_p_integral}}"
+   "main": "727c73d6f45346586ac16b74c30d959ef298483f",
+   "p_integral": "727c73d6f45346586ac16b74c30d959ef298483f"
   }
  },
  "engine": {
   "assembly": "census, descent of the changed owners and saved routes with the same binaries as the previous package (vk5l-s12349d-r2)",
-  "load_and_checks": "{{TO FILL FROM pins (the gated engine): pin.rustred_gated_engine}}",
-  "symmetry_rule_from": "{{TO FILL FROM pins (the gated engine): pin.rustred_symmetry_rule}}",
+  "load_and_checks": "2d97db789b5b1fb9d484e8c1cbe9b5062411477d",
+  "symmetry_rule_from": "2d97db789b5b1fb9d484e8c1cbe9b5062411477d",
   "note": "the gated RustRed engine that loaded and checked the five-loop library; the reduced T266 table is complete only with it or later"
  },
  "dataset": {
-  "description": "datasets/{{TO FILL FROM revision: rev.name}}/",
-  "revision": "{{TO FILL FROM revision: rev.revision}}",
-  "identity": "{{TO FILL FROM revision: rev.identity}}",
-  "root_manifest_sha256": "{{TO FILL FROM revision: rev.root_manifest_sha256}}",
-  "area_manifest_sha256": "{{TO FILL FROM revision: rev.area_manifest_sha256}}",
-  "library_files": "{{TO FILL FROM revision: rev.library_files}}",
-  "library_bytes": "{{TO FILL FROM revision: rev.library_bytes}}",
-  "archive": "{{TO FILL FROM DATASET.json: ds.archive.name}}",
-  "archive_sha256": "{{TO FILL FROM DATASET.json: ds.archive.sha256}}",
-  "archive_bytes": "{{TO FILL FROM DATASET.json: ds.archive.bytes}}",
-  "parts": "{{TO FILL FROM DATASET.json: ds.parts}}",
-  "dataset_json_sha256": "{{TO FILL FROM DATASET.json: ds.dataset_json_sha256}}",
-  "location": "{{TO FILL FROM dataset dir: ds.location}}"
+  "description": "datasets/vk5l-s12349d-r3/",
+  "revision": "vk5l-s12349d-r3",
+  "identity": "p-library:scope=1-5:P_OWNER_LIBRARY_SEMANTICS=rustred-p-owner-library-2026-11-05,P_CLASS_KEY_VERSION=1,P_CENSUS_VERSION=2,P_PRESENTATION_VERSION=4,P_FAMILIES_VERSION=1,P_GAMMA_TAG_VERSION=1,P_GAMMA_TAG_MAX_M=8,P_GAMMA_TAG_WIDTH=16,P_INSERTION_KERNEL_VERSION=1,P_CARPET_KERNEL_VERSION=1,P_TRIANGLE_TEMPLATE_VERSION=1,P_DIAMOND_TEMPLATE_VERSION=1,P_SCHEME_TEMPLATE_VERSION=5,P_CUSTOM_OWNER_VERSION=2,P_LIBRARY_SCHEMA=rustred.p-owner-library.v1,P_FAMILIES_SCHEMA=rustred.p-families.v1,P_BASIS_LAYER_SCHEMA=rustred.p-basis-layer.v1,P_TOPOLOGY_VERSION=1,P_FAMILIES_5L_VERSION=1,P_PACKAGE_REVISION=vk5l-s12349d-r3",
+  "root_manifest_sha256": "281cb35e9fdc7f86ce8d1cf15185c13af81d1d0ea9a3a09ea43ec9a9b1e65867",
+  "area_manifest_sha256": "81b1b5f7ce884c31a12cb04ca0f4b39c98ce383d7a7fae46694936fb622ed3a2",
+  "library_files": 6946,
+  "library_bytes": 10118887925,
+  "archive": "vk5l-s12349d-r3.tar.gz",
+  "archive_sha256": "1c46b32c7965e318631bcede9c06333adb161e3dc55fb7ad4982332345f0e059",
+  "archive_bytes": 5332711180,
+  "parts": 3,
+  "dataset_json_sha256": "89915461e1571bf1cac39d830a3e40674e1d500de23c297f8ee64a9eb7e3e4f3",
+  "location": "/common/VAKINT_EXTERNAL_DATA_REPO/datasets/vk5l-s12349d-r3"
  },
  "catalogue": {
-  "data_version": "{{TO FILL FROM revision: catalogue.data_version}}",
-  "sha256": "{{TO FILL FROM revision: catalogue.sha256}}"
+  "data_version": "ggppss-5L-v4-rc4a",
+  "sha256": "fa3b6d3f3bd7598500a128abe87ce72c639583c9992ed8e5bd1d9afabc9a6ae6"
  },
  "acceptance": {
   "result": "{{TO FILL FROM pins: pin.acceptance}}",
@@ -61,7 +61,7 @@
  },
  "compat_note": "Vakint at the pinned gammaloop p_integral commit differs from earlier builds in four ways that are consumer behaviour, not data changes (gammaloop #261 dummy-index labels with equal values; #249 applied in part; #253 two tests and the pole-only epsilon depth not carried): docs/vakint-behaviour-v0.4.0.md.",
  "symbolica": {
-  "revision": "{{TO FILL FROM pins (the Symbolica revision in that gammaloop's Cargo.toml): pin.vakint_symbolica}}",
+  "revision": "394f6e16d97823ac3920e95a5537741a26622dcd",
   "note": "referenced through https://github.com/symbolica-dev/symbolica; reachable only through the fork branch pin-mapped-buildrs: do not delete that branch"
  },
  "repository_checks": "the workflow .github/workflows/validate.yml run locally on the filled tree: python3 tools/data.py validate; python3 -m unittest discover -s tests; python3 tools/data.py pack --runtime-only; and python3 tools/p_integral_area.py validate"

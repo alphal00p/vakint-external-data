@@ -10,48 +10,62 @@ Release v0.4.0 ({{TO FILL FROM pins: pin.release_date}}) adds the five-loop p-in
 release). Since v0.3.0:
 
 - Five-loop p-integrals: the RustRed p library of scope 1-5 (`p-library-1-5`, package revision
-  `{{TO FILL FROM revision: rev.revision}}`) for massless propagator integrals (p-integrals) with one to five loops. With it,
+  `vk5l-s12349d-r3`) for massless propagator integrals (p-integrals) with one to five loops. With it,
   Vakint reduces one- to five-loop p-integrals of the library's families with RustRed and expands them in ε with the
   five-loop master catalogue v4 (exact coefficients where they are known, `UNKNOWN(master, k)` where they are not: see
   Known limits). v0.3.0's p library (`p-library-1-4`) reaches four loops; it stays in the `p_integral/` area unchanged.
-- The library: {{TO FILL FROM revision: rev.counts.classes}} owner classes over
-  {{TO FILL FROM revision: rev.counts.tops}} top families and {{TO FILL FROM revision: rev.counts.sectors}}
-  sectors; {{TO FILL FROM the generated per-node table: content.nodes}} named nodes, the caller families
-  {{TO FILL FROM the generated per-node table: content.node_range}} ({{TO FILL FROM the generated per-node table: content.nodes_per_loop}}),
-  each with its own stored owner table; {{TO FILL FROM revision: rev.residual_terminals}}
+- The library: 3,797 owner classes over
+  80 top families and 13,254,053
+  sectors; 266 named nodes, the caller families
+  T002e ... T283 (129 five-loop, 88 four-loop, 39 three-loop, 10 two-loop),
+  each with its own stored owner table; 231
   residual terminals, which the catalogue maps onto masters (Known limits); the
   saved route verification `routes.rrbin`; the explicit key relations of node T266 (`relations/`).
-- Not in this repository: the library is {{TO FILL FROM revision: rev.library_files}} files,
-  {{TO FILL FROM revision: rev.library_bytes|gb}} (single files up to {{TO FILL FROM revision: rev.largest_bytes|gb}}, far above the
+- Not in this repository: the library is 6,946 files,
+  10.12 GB (single files up to 3.88 GB, far above the
   100 MB per-file limit of the `p_integral/` area), so it is one compressed, checksummed dataset kept by the maintainers,
-  {{TO FILL FROM DATASET.json: ds.archive.bytes|gb}} in {{TO FILL FROM DATASET.json: ds.parts}} parts below 2 GiB (archive sha256
-  `{{TO FILL FROM DATASET.json: ds.archive.sha256}}`; `DATASET.json` sha256 `{{TO FILL FROM DATASET.json: ds.dataset_json_sha256}}`;
-  the root manifest it restores has sha256 `{{TO FILL FROM DATASET.json: ds.root_manifest_sha256}}`). This
-  repository records it in [`datasets/{{TO FILL FROM revision: rev.name}}/`](datasets/{{TO FILL FROM revision: rev.name}}/README.md):
+  5.33 GB in 3 parts below 2 GiB (archive sha256
+  `1c46b32c7965e318631bcede9c06333adb161e3dc55fb7ad4982332345f0e059`; `DATASET.json` sha256 `89915461e1571bf1cac39d830a3e40674e1d500de23c297f8ee64a9eb7e3e4f3`;
+  the root manifest it restores has sha256 `281cb35e9fdc7f86ce8d1cf15185c13af81d1d0ea9a3a09ea43ec9a9b1e65867`). This
+  repository records it in [`datasets/vk5l-s12349d-r3/`](datasets/vk5l-s12349d-r3/README.md):
   its checksums, the area manifest it restores (every library file with sha256 and size), the master catalogue and the
   restore commands. None of it is in a loop-pack archive or in a managed install.
 - Changes since the last five-loop candidate (vk5l-s12349d-r2, 18 November 2026, never released), per node:
-  {{TO FILL FROM notes/r3/RELEASE_NOTES_CONTENT.md section C.1 (public form) at the freeze: pin.changes_since_r2}}
-- Master catalogue v4 (`{{TO FILL FROM revision: catalogue.data_version}}`, sha256
-  `{{TO FILL FROM revision: catalogue.sha256}}`): {{TO FILL FROM revision: catalogue.masters}} GGPPSS masters,
-  {{TO FILL FROM revision: catalogue.placeholders}} placeholder masters, and the map of the package's residual terminals
+  T180p2: 13 records of its owner table replaced (owner payload 0.21 GB -> 0.13 GB); T167p1: one oversized record replaced by two smaller ones (1.30 GB -> 0.66 GB); T162: 24 records dropped (14 never used, 10 shadowed) and one replaced by three pieces (1,908 records; 0.46 GB -> 0.42 GB); T225: one size-reduced record re-applied to a base table recovered from the previous package (85.3 MB -> 45.8 MB); T266: a table without the records that the engine maps by a symmetry onto kept integrals, with its symmetry file and two point relation entries replaced by cheaper ones (owner payload 2.00 GB -> 0.47 GB, relation entries 12,897 -> 4,560); the master catalogue v4 and its master basis data (masters/). Every other owner table, the census, the routes and the families are unchanged.
+- Master catalogue v4 (`ggppss-5L-v4-rc4a`, sha256
+  `fa3b6d3f3bd7598500a128abe87ce72c639583c9992ed8e5bd1d9afabc9a6ae6`): 281 GGPPSS masters,
+  8 placeholder masters, and the map of the package's residual terminals
   onto them, onto Forcer masters and onto Γ factors (Known limits).
 
-{{TO FILL FROM tools/r3/package_content.py <final r3> --base <r2> --public (.short.md): include:content_short}}
+Package `vk5l-s12349d-r3` (library `p-library-1-5`, scope 1-5): 6,946 files, 10.12 GB; 3,797 owner classes, 266 named nodes (5L 129, 4L 88, 3L 39, 2L 10), 231 residual terminals; catalogue `ggppss-5L-v4-rc4a` (281 masters + 8 placeholders).
 
-- Obtain and restore. The dataset (the directory `{{TO FILL FROM revision: rev.name}}/` with the parts
-  `{{TO FILL FROM DATASET.json: ds.archive.name}}.part-000`, ..., `DATASET.json`, `SHA256SUMS`, `SHA256SUMS.files`, the restore
+| node | owner payload | relation entries | vs vk5l-s12349d-r2 |
+|---|---:|---|---|
+| T108p4 | 1.13 GB | - | unchanged |
+| T167p1 | 0.66 GB | - | owner payload changed (1.30 GB -> 0.66 GB) |
+| T211 | 0.49 GB | - | unchanged |
+| T266 | 0.47 GB | 4,560 (`relations/`) | owner payload changed (2.00 GB -> 0.47 GB); relation root relations/ added+removed (5.15 GB -> 3.88 GB) |
+| T162 | 0.42 GB | - | owner payload changed (0.46 GB -> 0.42 GB) |
+| T077e | 0.36 GB | - | unchanged |
+| T062e | 0.15 GB | - | unchanged |
+| T180p2 | 0.13 GB | - | owner payload changed (0.21 GB -> 0.13 GB) |
+| T225 | 45.8 MB | - | owner payload changed (85.3 MB -> 45.8 MB) |
+
+Other 257 nodes: full table in [datasets/vk5l-s12349d-r3/CONTENT.md](datasets/vk5l-s12349d-r3/CONTENT.md). Largest groups: `owners` 4.85 GB, `relations` 3.88 GB, `routes.rrbin` 1.13 GB, `census.rrbin` 0.14 GB, `library.json` 39.1 MB, `topology` 34.3 MB. Also changed: `library.json`, `masters`, `p-master-catalogue.json`, `orbits.rrbin`.
+
+- Obtain and restore. The dataset (the directory `vk5l-s12349d-r3/` with the parts
+  `vk5l-s12349d-r3.tar.gz.part-000`, ..., `DATASET.json`, `SHA256SUMS`, `SHA256SUMS.files`, the restore
   tools `dataset_restore.sh`, `dataset_verify.sh`, `dataset_index.py` and a `README.txt`) is not part of this repository; it
   is kept by the maintainers: obtain it on request.
   {{TO FILL FROM the user's decision on release assets: pin.dataset_release_assets}} Copy the directory as it is. Before
   running anything from it, check with your own `sha256sum` that `DATASET.json` has the sha256 given above: it records the
   sha256 of every part, of the archive and of the three tools, and the tools check the parts and the restored files against
-  it, which finds damage, not tampering. The archive unpacks to `{{TO FILL FROM revision: rev.name}}/`, an overlay of a
-  checkout of this repository at {{TO FILL FROM DATASET.json: ds.base_version}}: a bare revision directory is not a root for
+  it, which finds damage, not tampering. The archive unpacks to `vk5l-s12349d-r3/`, an overlay of a
+  checkout of this repository at v0.4.0: a bare revision directory is not a root for
   `load_external_data` (it has no loop packs; the load fails). Recommended, in the dataset directory:
 
   ```sh
-  git clone --depth 1 --branch {{TO FILL FROM DATASET.json: ds.base_version}} https://github.com/alphal00p/vakint-external-data <checkout>
+  git clone --depth 1 --branch v0.4.0 https://github.com/alphal00p/vakint-external-data <checkout>
   bash dataset_restore.sh . <checkout> --overlay
   ```
 
@@ -62,7 +76,7 @@ release). Since v0.3.0:
   dataset directory, then in the checkout:
 
   ```sh
-  sha256sum -c SHA256SUMS && cat {{TO FILL FROM DATASET.json: ds.archive.name}}.part-* | {{TO FILL FROM DATASET.json: ds.decompress}} | tar -x --strip-components=1 -C <checkout>
+  sha256sum -c SHA256SUMS && cat vk5l-s12349d-r3.tar.gz.part-* | gzip -dc | tar -x --strip-components=1 -C <checkout>
   sha256sum -c <dataset dir>/SHA256SUMS.files     # in <checkout>: every restored file
   ```
 
@@ -77,29 +91,29 @@ release). Since v0.3.0:
   existing directory `<dir>` (`bash dataset_restore.sh . <dir>`, or in the dataset directory:)
 
   ```sh
-  sha256sum -c SHA256SUMS && cat {{TO FILL FROM DATASET.json: ds.archive.name}}.part-* | {{TO FILL FROM DATASET.json: ds.decompress}} | tar -x -C <dir>
+  sha256sum -c SHA256SUMS && cat vk5l-s12349d-r3.tar.gz.part-* | gzip -dc | tar -x -C <dir>
   ```
 
-  and set `VAKINT_P_LIBRARY=<dir>/{{TO FILL FROM revision: rev.name}}/p_integral/p-library-1-5` for the Vakint process:
+  and set `VAKINT_P_LIBRARY=<dir>/vk5l-s12349d-r3/p_integral/p-library-1-5` for the Vakint process:
   with the Vakint this release needs (below), the library, its relations, its master catalogue and its master basis data
   (`masters/`) all come from that one variable, whatever external data are loaded. Older builds need all three variables:
-  also `VAKINT_P_MASTER_CATALOGUE=<dir>/{{TO FILL FROM revision: rev.name}}/p_integral/p-library-1-5/p-master-catalogue.json`
-  and `VAKINT_P_MASTERS_DIRECTORY=<dir>/{{TO FILL FROM revision: rev.name}}/p_integral/p-library-1-5/masters` (without them
+  also `VAKINT_P_MASTER_CATALOGUE=<dir>/vk5l-s12349d-r3/p_integral/p-library-1-5/p-master-catalogue.json`
+  and `VAKINT_P_MASTERS_DIRECTORY=<dir>/vk5l-s12349d-r3/p_integral/p-library-1-5/masters` (without them
   they use the built-in catalogue `ggppss-5L-v3.2`, which lacks rows of this release, and refuse the pole-bounded basis). In this mode Vakint does not check the files against the area manifest: run the `sha256sum -c` steps
   above first. Leave `VAKINT_P_LIBRARY_VERIFY` unset: a verified load needs `census.json` (1.47 GB), which the dataset
   does not carry.
-- Compatibility: Vakint from gammaloop `p_integral` {{TO FILL FROM pins: pin.vakint}}, built with the
+- Compatibility: Vakint from gammaloop `p_integral` fe5fd3e8237219849eaf701226d7fb060ff73fac, built with the
   five-loop feature, five-loop p families having 20 slots:
   `RUSTRED_RUNTIME_ARITIES=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,20 cargo build --features vakint/five-loop-p` (the
-  default build compiles arities 1-16 and refuses a 20-slot chart). Its RustRed is {{TO FILL FROM pins (the rustred revision in that gammaloop's Cargo.lock): pin.vakint_rustred}}
-  (whose engine source is that of the gated engine {{TO FILL FROM pins (the gated engine): pin.rustred_gated_engine}}) and its
-  Symbolica {{TO FILL FROM pins (the Symbolica revision in that gammaloop's Cargo.toml): pin.vakint_symbolica}};
-  RustRed main {{TO FILL FROM pins: pin.rustred_main}}, RustRed `p_integral`
-  {{TO FILL FROM pins: pin.rustred_p_integral}} (both carry the same `P_*` constants). Symbolica
-  {{TO FILL FROM pins (the Symbolica revision in that gammaloop's Cargo.toml): pin.vakint_symbolica}}, which gammaloop
+  default build compiles arities 1-16 and refuses a 20-slot chart). Its RustRed is 727c73d6f45346586ac16b74c30d959ef298483f
+  (whose engine source is that of the gated engine 2d97db789b5b1fb9d484e8c1cbe9b5062411477d) and its
+  Symbolica 394f6e16d97823ac3920e95a5537741a26622dcd;
+  RustRed main 727c73d6f45346586ac16b74c30d959ef298483f, RustRed `p_integral`
+  727c73d6f45346586ac16b74c30d959ef298483f (both carry the same `P_*` constants). Symbolica
+  394f6e16d97823ac3920e95a5537741a26622dcd, which gammaloop
   references through `https://github.com/symbolica-dev/symbolica`, is reachable only through the fork branch
   `pin-mapped-buildrs`: do not delete that branch. The library is bound to its RustRed
-  by its identity (`p-library:scope=1-5:...,P_PACKAGE_REVISION={{TO FILL FROM revision: rev.revision}}`: scope and every
+  by its identity (`p-library:scope=1-5:...,P_PACKAGE_REVISION=vk5l-s12349d-r3`: scope and every
   `P_*` version constant): a RustRed with other constants refuses it at the first p-integral with one error ("p library
   generated with <P_NAME>=<value>, this RustRed has <value>; regenerate with rustred p-package"); a library that differs
   from its `p_integral/manifest.json` entry is refused ("the library ... is not the one its entry records").
@@ -107,7 +121,7 @@ release). Since v0.3.0:
   except the release version recorded in each loop manifest, and loads in every build that read v0.3.0 (the release manifest schema is unchanged; the version is compared
   only with the requested one). A checkout of v0.4.0 without the dataset behaves as v0.3.0. With the dataset restored:
   Vakint builds that do not read the `p_integral/` area ignore it. The dataset loads only with Vakint at gammaloop
-  `p_integral` {{TO FILL FROM pins: pin.vakint}} or later (RustRed {{TO FILL FROM pins (the rustred revision in that gammaloop's Cargo.lock): pin.vakint_rustred}}
+  `p_integral` fe5fd3e8237219849eaf701226d7fb060ff73fac or later (RustRed 727c73d6f45346586ac16b74c30d959ef298483f
   or later); older builds refuse it at the first p-integral with "unknown field" when their RustRed has the library's `P_*`
   constants (gammaloop `p_integral` 98dc89353, RustRed 19cf126a9: "malformed p library: library.json: unknown field
   `orbit_required_digests`"), and with a RustRed version mismatch otherwise (gammaloop `vakint_rustred` builds among them).
@@ -119,36 +133,47 @@ release). Since v0.3.0:
 
 Known limits:
 
-- Unknown master coefficients ship as `UNKNOWN(master, k)`. Catalogue v4 ({{TO FILL FROM catalogue: catalogue.data_version}},
-  sha256 {{TO FILL FROM catalogue: catalogue.sha256}}) holds the {{TO FILL FROM catalogue_counts.py: cc.ggppss_masters}} GGPPSS
+- Unknown master coefficients ship as `UNKNOWN(master, k)`. Catalogue v4 (ggppss-5L-v4-rc4a,
+  sha256 fa3b6d3f3bd7598500a128abe87ce72c639583c9992ed8e5bd1d9afabc9a6ae6) holds the 281 GGPPSS
   masters, each known exactly from its leading order through eps^k (masters per k:
-  {{TO FILL FROM catalogue_counts.py: cc.known_through_list}}). Its later orders through
-  eps^{{TO FILL FROM catalogue_counts.py: cc.unknown_through}} are expected but not known: vakint writes them
+  eps^0 68, eps^1 46, eps^2 63, eps^3 22, eps^4 24, eps^5 24, eps^6 13, eps^7 8, eps^8 5, eps^9 6, eps^10 1, eps^14 1). Its later orders through
+  eps^12 are expected but not known: vakint writes them
   `UNKNOWN(<symbol>, k)` (e.g. `UNKNOWN(ggppss_int_53,7)`), except the dependent orders of the next item. From
-  eps^{{TO FILL FROM catalogue_counts.py: cc.alarm_from}} on an order is an ALARM order, which no request is expected to need;
-  {{TO FILL FROM catalogue_counts.py: cc.exception_master}}, known through eps^{{TO FILL FROM catalogue_counts.py: cc.exception_known_through}},
-  has no UNKNOWN order and ALARM from eps^{{TO FILL FROM catalogue_counts.py: cc.exception_alarm_from}}.
-- {{TO FILL FROM catalogue_counts.py: cc.dependent_orders}} of these orders, on {{TO FILL FROM catalogue_counts.py: cc.dependent_masters}}
+  eps^13 on an order is an ALARM order, which no request is expected to need;
+  ggppss_int(23), known through eps^14,
+  has no UNKNOWN order and ALARM from eps^15.
+- 39 of these orders, on 31
   masters, are dependent: an exact part plus rational multiples of free `UNKNOWN` symbols.
-  {{TO FILL FROM catalogue_counts.py: cc.printed_dependences}} are the dependences printed in GGPPSS's MasterExpansions.m.
+  38 are the dependences printed in GGPPSS's MasterExpansions.m.
   The remaining one is an identity derived here by an IBP recurrence and checked on the printed orders: eps^6 of
   ggppss_int(74) = 18 x eps^7 of ggppss_int(53) + C, C exact. Two further identities of this kind (eps^6 of ggppss_int(88),
   eps^5 of ggppss_int(99)) are not used: those orders stay free.
-- Of the package's {{TO FILL FROM revision: rev.residual_terminals}} residual terminals,
-  {{TO FILL FROM revision and catalogue: rev.residual_mapped}} map onto GGPPSS or Forcer masters and Γ factors and
-  {{TO FILL FROM revision and catalogue: rev.residual_on_placeholder}} onto placeholder masters `X(<node>:<key>)` without
-  coefficients (one key with one dotted line in each of {{TO FILL FROM catalogue_counts.py: cc.placeholder_nodes}}): all
-  their orders eps^{{TO FILL FROM catalogue_counts.py: cc.placeholder_leading_order}}..eps^{{TO FILL FROM catalogue_counts.py: cc.unknown_through}}
+- Of the package's 231 residual terminals,
+  223 map onto GGPPSS or Forcer masters and Γ factors and
+  8 onto placeholder masters `X(<node>:<key>)` without
+  coefficients (one key with one dotted line in each of T266, T267, T270, T271, T273, T275, T276 and T282): all
+  their orders eps^-10..eps^12
   are UNKNOWN (no five-loop massless propagator integral has a pole below
-  eps^{{TO FILL FROM catalogue_counts.py: cc.placeholder_leading_order}}: at most one UV and one IR pole per loop).
-- vakint (gammaloop `p_integral` {{TO FILL FROM pins: pin.vakint}}) carries `UNKNOWN` symbols exactly; they cancel only where
+  eps^-10: at most one UV and one IR pole per loop).
+- vakint (gammaloop `p_integral` fe5fd3e8237219849eaf701226d7fb060ff73fac) carries `UNKNOWN` symbols exactly; they cancel only where
   their exact coefficient cancels. By default a result that still contains one is refused with `UnknownMasterCoefficients`
   (Python: `ValueError`); the pinned vakint prints, for the input
-  `{{TO FILL FROM the load check json of the final revision: pin.refusal_example_input}}` in
-  {{TO FILL FROM the load check json of the final revision: pin.refusal_example_mode}} mode, which reaches the placeholder
-  master of {{TO FILL FROM the load check json of the final revision: pin.refusal_example_node}}:
+  `topo(P94d07569bd0c1afa_e1(p(1),1,2,1,1,1,1,1,1,1,1,1,1,1,1))` in
+  numerical mode, which reaches the placeholder
+  master of T282:
 
-      {{TO FILL FROM the load check json of the final revision (verbatim): pin.refusal_message}}
+      the requested result depends on 11 expected master coefficient(s) that are not known yet (vakint, p master data ggppss-5L-v4-rc4a; request: public result); set allow_unknown_master_coefficients to keep them as UNKNOWN(master, k) symbols:
+        - master X(T282:1,1,1,1,1,1,1,1,1,1,1,1,1,2) coefficient ε^-10 (affects the result from ε^-10)
+        - master X(T282:1,1,1,1,1,1,1,1,1,1,1,1,1,2) coefficient ε^-9 (affects the result from ε^-9)
+        - master X(T282:1,1,1,1,1,1,1,1,1,1,1,1,1,2) coefficient ε^-8 (affects the result from ε^-8)
+        - master X(T282:1,1,1,1,1,1,1,1,1,1,1,1,1,2) coefficient ε^-7 (affects the result from ε^-7)
+        - master X(T282:1,1,1,1,1,1,1,1,1,1,1,1,1,2) coefficient ε^-6 (affects the result from ε^-6)
+        - master X(T282:1,1,1,1,1,1,1,1,1,1,1,1,1,2) coefficient ε^-5 (affects the result from ε^-5)
+        - master X(T282:1,1,1,1,1,1,1,1,1,1,1,1,1,2) coefficient ε^-4 (affects the result from ε^-4)
+        - master X(T282:1,1,1,1,1,1,1,1,1,1,1,1,1,2) coefficient ε^-3 (affects the result from ε^-3)
+        - master X(T282:1,1,1,1,1,1,1,1,1,1,1,1,1,2) coefficient ε^-2 (affects the result from ε^-2)
+        - master X(T282:1,1,1,1,1,1,1,1,1,1,1,1,1,2) coefficient ε^-1 (affects the result from ε^-1)
+        - master X(T282:1,1,1,1,1,1,1,1,1,1,1,1,1,2) coefficient ε^0 (affects the result from ε^0)
 
   With `allow_unknown_master_coefficients` (setting, Python keyword, or environment
   `VAKINT_ALLOW_UNKNOWN_MASTER_COEFFICIENTS=1`) the result keeps the symbols, and `Vakint::unknown_master_coefficients` lists
@@ -162,11 +187,11 @@ Known limits:
   174 GiB). More cores do not change this: the recording pass of one request runs on one core, so one such key needs weeks to
   months and tens of TB of trace. What could change it is fewer dots and ranks on the input side, or an engine that records
   without a full trace.
-- Memory and time: the library loads lazily ({{TO FILL FROM the evidence register H2 (row L.5c): pin.load_library}}; r2: 21-28 s, 5.7 GB).
+- Memory and time: the library loads lazily (18-23 s, peak 5.8 GB; r2: 21-28 s, 5.7 GB).
   A process builds each large owner once, at its first use:
-  - T162: {{TO FILL FROM the evidence register H2 (row L.5c): pin.load_T162}} (r2: one key 56 s-2.4 min, peak 7.9-22 GB depending on the engine build);
-  - T178: {{TO FILL FROM the evidence register H2 (row L.5c): pin.load_T178}} (r2: one key 42-45 min, peak 7.4-8.9 GB);
-  - T266: {{TO FILL FROM the evidence register H2 (row L.5c): pin.load_T266}} (with r2's table the owner build peaked at up to about 106 GB,
+  - T162: one key: 19-21 s to build the owner + 18-20 s to reduce, peak 8.0-8.1 GB (r2: one key 56 s-2.4 min, peak 7.9-22 GB depending on the engine build);
+  - T178: one key: 20-21 s + 9-12 s, peak 6.4 GB (r2: one key 42-45 min, peak 7.4-8.9 GB);
+  - T266: one key that the symmetry maps onto a declared terminal: 20 s + 34 s, peak 9.8 GB (half-size table); a full box-edge key did not finish within 42 GB and 42 minutes (with r2's table the owner build peaked at up to about 106 GB,
     and the T266 acceptance key did not finish, see Acceptance).
   `census.json` (1.47 GB) is not shipped. Loading and reductions do not need it; only a verified load (descent certificate,
   `VAKINT_P_LIBRARY_VERIFY=1`) does, so that is not possible from the dataset alone. Do not add files to the shipped library
@@ -175,7 +200,7 @@ Known limits:
   reductions of one light T162 integral and one light T178 integral, each identical to an earlier independent result; and
   one vakint evaluation through the released directory, identical to a value checked against an independent result to
   39 digits. The 15th check, one T266 integral served by the shipped relations, was stopped after repeated host-memory
-  interruptions and has no result; it will not be resumed. Package r3 (`{{TO FILL FROM revision: rev.revision}}`):
+  interruptions and has no result; it will not be resumed. Package r3 (`vk5l-s12349d-r3`):
   {{TO FILL FROM the Sunday acceptance record: pin.acceptance}}.
   r3's 15th check (the same kind of T266 integral, compared with a reference package) may finish after this release and
   does not block it; at the release: {{TO FILL FROM the stage-15 record: pin.acceptance_stage15}}. A judge verdict that fails
@@ -187,24 +212,24 @@ Known limits:
 
   Ruling: {{TO FILL FROM the coordinator's ruling as applied to that output: pin.acceptance_stage15_ruling}}
 - Evidence (never stated stronger than here):
-  - {{TO FILL FROM catalogue: catalogue.terminals_placeholder}} of the package's {{TO FILL FROM revision: rev.residual_terminals}}
+  - 8 of the package's 231
     residual terminal integrals have no published value; they map onto placeholder masters whose coefficients are
-    carried as UNKNOWN(master, k) for orders eps^{{TO FILL FROM catalogue: catalogue.placeholder_leading_order}} through
-    eps^{{TO FILL FROM catalogue: catalogue.unknown_through}}. Published masters are known only through the order printed in
-    arXiv:2104.08272; their later orders are UNKNOWN as well, and {{TO FILL FROM catalogue_counts.py: cc.printed_dependences}}
+    carried as UNKNOWN(master, k) for orders eps^-10 through
+    eps^12. Published masters are known only through the order printed in
+    arXiv:2104.08272; their later orders are UNKNOWN as well, and 38
     printed linear dependences plus one derived identity
     tie some of them together. Strict mode refuses any result that still contains an UNKNOWN symbol; allow mode returns it
-    with the symbol. The eps^{{TO FILL FROM catalogue: catalogue.placeholder_leading_order}} floor is a bound adopted by
-    argument (at most one UV and one IR pole per loop), not derived per master; the eps^{{TO FILL FROM catalogue: catalogue.unknown_through}}
+    with the symbol. The eps^-10 floor is a bound adopted by
+    argument (at most one UV and one IR pole per loop), not derived per master; the eps^12
     ceiling is a provisional limit, not shown to suffice for every six-loop use.
-  - The catalogue rows of nodes {{TO FILL FROM catalogue_counts.py (rows noted as derived): cc.derived_nodes}} were derived
+  - The catalogue rows of nodes T178, T182, T205, T222, T223, T238, T241, T255, T269, T277 and T278 were derived
     by the authors from their own five-loop reductions, all of them except T178 (arithmetic not recorded) by
     reconstruction from finite-field samples. The rows of T222 and T238 were reproduced by a second reduction on another
     package; for T255 an outside reviewer's value agrees at the order needed; for T178 a second integral of the same
-    package gave identical terms; the rows of {{TO FILL FROM catalogue_counts.py and the confirmations above: cc.derived_unconfirmed}}
+    package gave identical terms; the rows of T182, T205, T223, T241, T269, T277 and T278
     were not reproduced by a second reduction. The T278 row is known only through eps^-1: a result that needs its eps^0
     coefficient carries UNKNOWN orders of published masters. The rows of nodes
-    {{TO FILL FROM catalogue_counts.py (rows noted 'basis-census route 3'): cc.census_nodes}} come from one reduction each,
+    T128e, T129e, T130p1, T131e, T132e, T133e, T135e, T140e, T142e and T144p5 come from one reduction each,
     reconstructed from finite-field samples, without a second route. Of the rows matched to published masters by graph
     isomorphism, the all-ones corner rows agree with an independent reading of the published values; the others rest on
     that one match (numerical identities on a few nodes are consistent with it).
@@ -225,18 +250,18 @@ Known limits:
     reproduce them. Value check: both integrals through the replaced record gave identical results in the producer's
     runs; one of them was reproduced independently on the final package build.
   - The reduced T266 table omits records for integrals that the engine maps by a symmetry onto integrals kept in the
-    table. It is complete only with rustred {{TO FILL FROM pins (the gated engine): pin.rustred_symmetry_rule}} or later,
+    table. It is complete only with rustred 2d97db789b5b1fb9d484e8c1cbe9b5062411477d or later,
     which applies only such maps, and it does not load without its symmetry file (verified on that commit: a missing,
     switched-off or wrong-scope symmetry file is refused at load with exit code 6). Its library.json names that requirement,
-    so this package loads only with vakint at gammaloop p_integral >= {{TO FILL FROM pins: pin.vakint}} (RustRed >=
-    {{TO FILL FROM pins (the rustred revision in that gammaloop's Cargo.lock): pin.vakint_rustred}}); older builds refuse
+    so this package loads only with vakint at gammaloop p_integral >= fe5fd3e8237219849eaf701226d7fb060ff73fac (RustRed >=
+    727c73d6f45346586ac16b74c30d959ef298483f); older builds refuse
     it with 'unknown field'.
   - Speed figures are per-record probes or partial runs (the T167 comparison stops before the end of the reduction); no
     end-to-end five-loop speed-up is claimed.
   - Checksums show that the files are the listed ones; they say nothing about the correctness of the reductions. vakint
     checks them at load; it does not verify the package's descent certificate, which is not part of the release. The
     package was assembled (census, descent of the changed owners, saved routes) with the same binaries as the previous
-    package, and loaded and checked with the gated engine rustred {{TO FILL FROM pins (the gated engine): pin.rustred_gated_engine}};
+    package, and loaded and checked with the gated engine rustred 2d97db789b5b1fb9d484e8c1cbe9b5062411477d;
     descent (that each rule leads to simpler integrals) was re-checked only for the owners changed since the previous
     package, the rest is carried from the checked earlier package. Loading the library directly with VAKINT_P_LIBRARY uses
     the package's own master catalogue and masters with the Vakint this release needs; older builds need all three
