@@ -206,15 +206,12 @@ Known limits:
   interruptions and has no result; it will not be resumed. Package r3 (`vk5l-s12349d-r3`):
   one acceptance run on this package passed all 14 checks of the first kind: 8 file, layout and format checks; reductions of one light T162 integral and one light T178 integral, each equal to its pinned value; two older readers refuse the package; the dataset archive unpacks to identical files; and one vakint evaluation through the restored data equals its pinned value. Two added checks passed: the reduced T266 table needs its symmetry file (the package loads with it, and five faulty forms are refused at load with exit code 6: no file, symmetry switched off, a wrong-scope file, verify mode with the file missing, no file declared); and the two relation entries carried inside the reduced table are present and reproduce the producer's operation counts, and one T266 integral through Vakint's own loader equals the reference. That check compares two Vakint paths: that Vakint's path uses the symmetry file is shown only on the engine's path. The Vakint of these runs is the pinned gammaloop plus one test-only commit (the external-data-root test). No check found a blocking condition.
   r3's 15th check (the T266 integral served by the shipped relations, run on this package and on a reference package and
-  compared by the frozen judge) may finish after this release and does not block it; at the release:
-  {{TO FILL FROM the stage-15 record (now running on both packages; the release does not wait for it): pin.acceptance_stage15}}. A judge verdict that fails
-  only on the count of shipped-relation uses of a resumed final attempt, while the results of both packages have equal
-  digests (and an earlier attempt counted at least one use), is recorded as a pass; the raw judge output and that ruling
-  stand side by side:
-
-      {{TO FILL FROM the stage-15 record (raw judge output, verbatim): pin.acceptance_stage15_raw_judge}}
-
-  Ruling: {{TO FILL FROM the maintainers' ruling as applied to that output: pin.acceptance_stage15_ruling}}
+  compared by the frozen judge) is {{TO FILL FROM the maintainers' ruling on the 15th check: pin.acceptance_stage15}}
+  For a later run of that check: a judge verdict that fails only on the count of shipped-relation uses of a resumed final
+  attempt, while the results of both packages have equal digests (and an earlier attempt counted at least one use), is
+  read as a pass, with the raw judge output and that ruling side by side.
+- Deferred acceptance check: the 15th check (above) has no result in this release; the reduced T266 table rests on the
+  added check and its stated limit.
 - Evidence (never stated stronger than here):
   - 8 of the package's 231
     residual terminal integrals have no published value; they map onto placeholder masters whose coefficients are

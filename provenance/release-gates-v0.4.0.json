@@ -160,11 +160,11 @@
    }
   ],
   "stage_15": {
-   "note": "one T266 integral served by the shipped relations, compared with a reference package; it may finish after the release date and does not block the release (maintainers' ruling, 2026-11-19)",
-   "status_at_release": "{{TO FILL FROM the stage-15 record: pin.acceptance_stage15}}",
-   "raw_judge_output": "{{TO FILL FROM the stage-15 record (raw judge output, verbatim): pin.acceptance_stage15_raw_judge}}",
-   "ruling": "{{TO FILL FROM the maintainers' ruling as applied to that output: pin.acceptance_stage15_ruling}}",
-   "ruling_rule": "a judge FAIL whose only reason is the shipped-relation counter of a resumed final attempt, with equal result digests of both legs and at least one shipped-relation use in an earlier attempt, is recorded as PASS; the judge is unchanged and its raw output is kept beside the ruling"
+   "note": "the 15th check: one T266 integral served by the shipped relations, run on this package and on a reference package and compared by the frozen judge",
+   "status_at_release": "{{TO FILL FROM the maintainers' ruling on the 15th check: pin.acceptance_stage15}}",
+   "judge_output": "none: the check is deferred and no judge output exists",
+   "ruling": "the maintainers' ruling: not blocking for this release",
+   "reading_rule_for_a_later_run": "a judge FAIL whose only reason is the shipped-relation counter of a resumed final attempt, with equal result digests of both legs and at least one shipped-relation use in an earlier attempt, is recorded as PASS; the judge is unchanged and its raw output is kept beside the ruling"
   }
  },
  "compat_note": "Vakint at the pinned gammaloop p_integral commit differs from earlier builds in four ways that are consumer behaviour, not data changes (gammaloop #261 dummy-index labels with equal values; #249 applied in part; #253 two tests and the pole-only epsilon depth not carried): docs/vakint-behaviour-v0.4.0.md.",
