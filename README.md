@@ -244,6 +244,8 @@ Known limits:
     vakint's built-in catalogue.
   - The T162 table, unchanged in its kept records since r2, contains a few records whose validity was checked on sampled
     integrals only ({{TO FILL FROM the shipped T162 table: pin.evidence_T162_sampled_records}}).
+- Differences in Vakint / gammaloop behaviour of the Vakint this release needs, against earlier builds (not data
+  changes): [`docs/vakint-behaviour-v0.4.0.md`](docs/vakint-behaviour-v0.4.0.md).
 - Deferred (written up in the development notes, not part of v0.4.0): in the engine, a learned-denominator replay and a
   trace-free batched application. Abandoned: closed forms for the seven- and eight-line template recursions (estimated
   gain below x1.05). Not in r3: the size-reduced records of T183 and T282 (their base tables could not be reproduced);

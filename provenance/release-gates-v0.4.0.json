@@ -59,5 +59,10 @@
    "ruling_rule": "a judge FAIL whose only reason is the shipped-relation counter of a resumed final attempt, with equal result digests of both legs and at least one shipped-relation use in an earlier attempt, is recorded as PASS; the judge is unchanged and its raw output is kept beside the ruling"
   }
  },
+ "compat_note": "Vakint at the pinned gammaloop p_integral commit differs from earlier builds in four ways that are consumer behaviour, not data changes (gammaloop #261 dummy-index labels with equal values; #249 applied in part; #253 two tests and the pole-only epsilon depth not carried): docs/vakint-behaviour-v0.4.0.md.",
+ "symbolica": {
+  "revision": "{{TO FILL FROM pins (the Symbolica revision in that gammaloop's Cargo.toml): pin.vakint_symbolica}}",
+  "note": "referenced through https://github.com/symbolica-dev/symbolica; reachable only through the fork branch pin-mapped-buildrs: do not delete that branch"
+ },
  "repository_checks": "the workflow .github/workflows/validate.yml run locally on the filled tree: python3 tools/data.py validate; python3 -m unittest discover -s tests; python3 tools/data.py pack --runtime-only; and python3 tools/p_integral_area.py validate"
 }
