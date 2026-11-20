@@ -24,7 +24,9 @@ release). Since v0.3.0:
 - Not in this repository: the library is {{TO FILL FROM revision: rev.library_files}} files,
   {{TO FILL FROM revision: rev.library_bytes|gb}} (single files up to {{TO FILL FROM revision: rev.largest_bytes|gb}}, far above the
   100 MB per-file limit of the `p_integral/` area), so it is one compressed, checksummed dataset kept by the maintainers,
-  {{TO FILL FROM DATASET.json: ds.archive.bytes|gb}} in {{TO FILL FROM DATASET.json: ds.parts}} parts below 2 GiB. This
+  {{TO FILL FROM DATASET.json: ds.archive.bytes|gb}} in {{TO FILL FROM DATASET.json: ds.parts}} parts below 2 GiB (archive sha256
+  `{{TO FILL FROM DATASET.json: ds.archive.sha256}}`; the root manifest it restores has sha256
+  `{{TO FILL FROM DATASET.json: ds.root_manifest_sha256}}`). This
   repository records it in [`datasets/{{TO FILL FROM revision: rev.name}}/`](datasets/{{TO FILL FROM revision: rev.name}}/README.md):
   its checksums, the area manifest it restores (every library file with sha256 and size), the master catalogue and the
   restore commands. None of it is in a loop-pack archive or in a managed install.
