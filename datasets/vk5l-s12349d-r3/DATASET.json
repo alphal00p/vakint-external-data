@@ -47,9 +47,9 @@
   }
  },
  "tools": {
-  "dataset_restore.sh": "824fc178c59e15707d4f4b3cdd1b8314717f384a2459cf966fa1a20f70dce56e",
-  "dataset_verify.sh": "b53d225caf6d4545ed8c2650d16e29568b041be961c4ac0fb2c9523e419f9a0f",
-  "dataset_index.py": "b2f8a39520b2777aea39ea5568cefcd557e0545c5a24c8e4b92a95d82e0f16ec",
+  "dataset_restore.sh": "69095c62a03a38d0b591f11f2c643423ea06a6cb10ce78256ca408b34abe5c6d",
+  "dataset_verify.sh": "0ab38d7c21042b68efe377b2deb59ae193d3dfa673cb0501759c4264cbe66fda",
+  "dataset_index.py": "6a452abd17c1f857bd690c104b91ebe645e2d80af94082dd04914b70cbf5c97c",
   "README.txt": "268cc60bbbe8005f4e122633b6777b0d85c00fa999520340f78e6b1c64f8d71d"
  },
  "restore": {
@@ -59,10 +59,9 @@
   "files_mode": "666"
  },
  "made_by": {
-  "tool": "tools/r3/dataset_pack.sh (helper VH 2, lane R3-DATASET)",
+  "tool": "dataset_pack.sh + dataset_index.py (vakint-external-data dataset tools, DATASET.json format 1)",
   "tar": "tar (GNU tar) 1.35",
   "codec_version": "gzip 1.14",
-  "host": "itphlies",
   "seconds": {
    "file_sums": 13,
    "pack": 320,

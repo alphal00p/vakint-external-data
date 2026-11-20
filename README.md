@@ -25,7 +25,7 @@ release). Since v0.3.0:
   10.12 GB (single files up to 3.88 GB, far above the
   100 MB per-file limit of the `p_integral/` area), so it is one compressed, checksummed dataset kept by the maintainers,
   5.33 GB in 3 parts below 2 GiB (archive sha256
-  `1c46b32c7965e318631bcede9c06333adb161e3dc55fb7ad4982332345f0e059`; `DATASET.json` sha256 `89915461e1571bf1cac39d830a3e40674e1d500de23c297f8ee64a9eb7e3e4f3`;
+  `1c46b32c7965e318631bcede9c06333adb161e3dc55fb7ad4982332345f0e059`; `DATASET.json` sha256 `dc129895b8d56809399d8bdac47e75d1b0b9248e9e9618e0d38ae65af853855d`;
   the root manifest it restores has sha256 `281cb35e9fdc7f86ce8d1cf15185c13af81d1d0ea9a3a09ea43ec9a9b1e65867`). This
   repository records it in [`datasets/vk5l-s12349d-r3/`](datasets/vk5l-s12349d-r3/README.md):
   its checksums, the area manifest it restores (every library file with sha256 and size), the master catalogue and the
