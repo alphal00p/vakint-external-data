@@ -42,7 +42,7 @@
   "archive_bytes": 5332711180,
   "parts": 3,
   "dataset_json_sha256": "89915461e1571bf1cac39d830a3e40674e1d500de23c297f8ee64a9eb7e3e4f3",
-  "location": "/common/VAKINT_EXTERNAL_DATA_REPO/datasets/vk5l-s12349d-r3"
+  "location": "kept by the maintainers (obtain on request)"
  },
  "catalogue": {
   "data_version": "ggppss-5L-v4-rc4a",
@@ -52,10 +52,10 @@
   "result": "{{TO FILL FROM pins: pin.acceptance}}",
   "source": "{{TO FILL FROM pins: pin.acceptance_source}}",
   "stage_15": {
-   "note": "one T266 integral served by the shipped relations, compared with a reference package; it may finish after the release date and does not block the release (coordinator ruling 2026-11-19)",
+   "note": "one T266 integral served by the shipped relations, compared with a reference package; it may finish after the release date and does not block the release (maintainers' ruling, 2026-11-19)",
    "status_at_release": "{{TO FILL FROM the stage-15 record: pin.acceptance_stage15}}",
    "raw_judge_output": "{{TO FILL FROM the stage-15 record (raw judge output, verbatim): pin.acceptance_stage15_raw_judge}}",
-   "ruling": "{{TO FILL FROM the coordinator's ruling as applied to that output: pin.acceptance_stage15_ruling}}",
+   "ruling": "{{TO FILL FROM the maintainers' ruling as applied to that output: pin.acceptance_stage15_ruling}}",
    "ruling_rule": "a judge FAIL whose only reason is the shipped-relation counter of a resumed final attempt, with equal result digests of both legs and at least one shipped-relation use in an earlier attempt, is recorded as PASS; the judge is unchanged and its raw output is kept beside the ruling"
   }
  },

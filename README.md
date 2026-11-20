@@ -210,7 +210,7 @@ Known limits:
 
       {{TO FILL FROM the stage-15 record (raw judge output, verbatim): pin.acceptance_stage15_raw_judge}}
 
-  Ruling: {{TO FILL FROM the coordinator's ruling as applied to that output: pin.acceptance_stage15_ruling}}
+  Ruling: {{TO FILL FROM the maintainers' ruling as applied to that output: pin.acceptance_stage15_ruling}}
 - Evidence (never stated stronger than here):
   - 8 of the package's 231
     residual terminal integrals have no published value; they map onto placeholder masters whose coefficients are
