@@ -89,3 +89,4 @@ which prints `vk5l-s12349d-r3 6946 files, 0 bad`
 (it reads each file whole: the largest needs about 3.88 GB of memory). Use:
 `Vakint::load_external_data(<checkout>, n)` (Python: `engine.load_external_data(path, max_loop_count=n)`); see
 `datasets/README.md`.
+The 1-5 library needs its master catalogue also for one- to four-loop integrals that `p-library-1-4` served alone; Vakint loads it with the library; a program that uses RustRed directly must load `p-master-catalogue.json` itself.

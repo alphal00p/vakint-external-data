@@ -119,6 +119,7 @@ Other 257 nodes: full table in [datasets/vk5l-s12349d-r3/CONTENT.md](datasets/vk
   `P_*` version constant): a RustRed with other constants refuses it at the first p-integral with one error ("p library
   generated with <P_NAME>=<value>, this RustRed has <value>; regenerate with rustred p-package"); a library that differs
   from its `p_integral/manifest.json` entry is refused ("the library ... is not the one its entry records").
+  The 1-5 library needs its master catalogue also for one- to four-loop integrals that `p-library-1-4` served alone; Vakint loads it with the library; a program that uses RustRed directly must load `p-master-catalogue.json` itself.
 - Older Vakint builds and this release: a managed install of v0.4.0 holds the loop packs only, identical to v0.3.0's
   except the release version recorded in each loop manifest, and loads in every build that read v0.3.0 (the release manifest schema is unchanged; the version is compared
   only with the requested one). A checkout of v0.4.0 without the dataset behaves as v0.3.0. With the dataset restored:
