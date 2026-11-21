@@ -1,12 +1,11 @@
 # Vakint external data
 
-The branch `release/v0.4.0-prep` declares v0.4.0: the unreleased line that follows the
-v0.3.0 release. There is no v0.4.0 release. For published, checksummed data, use the
-v0.3.0 release or `data-latest`.
+Release v0.4.0 (21 November 2026) is the current release and `data-latest` points to it.
+Earlier releases stay available unchanged.
 
 ## v0.4.0: five-loop p-integral package (library 1-5) as a checksummed dataset
 
-Release v0.4.0 ({{TO FILL FROM pins: pin.release_date}}) adds the five-loop p-integral package (a minor
+Release v0.4.0 (21 November 2026) adds the five-loop p-integral package (a minor
 release). Since v0.3.0:
 
 - Five-loop p-integrals: the RustRed p library of scope 1-5 (`p-library-1-5`, package revision
@@ -25,7 +24,7 @@ release). Since v0.3.0:
   10.12 GB (single files up to 3.88 GB, far above the
   100 MB per-file limit of the `p_integral/` area), so it is one compressed, checksummed dataset, published on its own release `data-5l-vk5l-s12349d-r3`,
   5.33 GB in 3 parts below 2 GiB (archive sha256
-  `1c46b32c7965e318631bcede9c06333adb161e3dc55fb7ad4982332345f0e059`; `DATASET.json` sha256 `{{TO FILL FROM DATASET.json: ds.dataset_json_sha256}}`;
+  `1c46b32c7965e318631bcede9c06333adb161e3dc55fb7ad4982332345f0e059`; `DATASET.json` sha256 `c6ecae24652f0a502781dd14e5b22b4e0c3431ae6be37780db5cc90124edf508`;
   the root manifest it restores has sha256 `281cb35e9fdc7f86ce8d1cf15185c13af81d1d0ea9a3a09ea43ec9a9b1e65867`). This
   repository records it in [`datasets/vk5l-s12349d-r3/`](datasets/vk5l-s12349d-r3/README.md):
   its checksums, the area manifest it restores (every library file with sha256 and size), the master catalogue and the
@@ -56,7 +55,7 @@ Other 257 nodes: full table in [datasets/vk5l-s12349d-r3/CONTENT.md](datasets/vk
 - Obtain and restore. The dataset (the directory `vk5l-s12349d-r3/` with the parts
   `vk5l-s12349d-r3.tar.gz.part-000`, ..., `DATASET.json`, `SHA256SUMS`, `SHA256SUMS.files`, the restore
   tools `dataset_restore.sh`, `dataset_verify.sh`, `dataset_index.py` and a `README.txt`) is not part of this repository.
-  {{TO FILL FROM the user's decision on release assets: pin.dataset_release_assets}} Download its ten files into one
+  Its files are published as the assets of this repository's GitHub release [`data-5l-vk5l-s12349d-r3`](https://github.com/alphal00p/vakint-external-data/releases/tag/data-5l-vk5l-s12349d-r3). Download its ten files into one
   directory, with the GitHub CLI or, without an account, with curl:
 
   ```sh

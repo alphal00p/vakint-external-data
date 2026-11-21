@@ -51,7 +51,7 @@ Largest files:
 codec gzip level 6, in
 3 parts of at most 1,900,000,000 bytes
 (the archive is their concatenation in order). `DATASET.json` sha256
-`{{TO FILL FROM DATASET.json: ds.dataset_json_sha256}}`, `SHA256SUMS` sha256 `5ff5e435057a876aae9185975bb5950ebe5cad0cc0140aef203260a3817146be`.
+`c6ecae24652f0a502781dd14e5b22b4e0c3431ae6be37780db5cc90124edf508`, `SHA256SUMS` sha256 `5ff5e435057a876aae9185975bb5950ebe5cad0cc0140aef203260a3817146be`.
 
 | part | bytes | sha256 |
 |---|---|---|
@@ -59,7 +59,7 @@ codec gzip level 6, in
 | `vk5l-s12349d-r3.tar.gz.part-001` | 1,900,000,000 | `09818989aa21264268338a73f7574a18e7861cb8bb38576b8a878dcf89cd5142` |
 | `vk5l-s12349d-r3.tar.gz.part-002` | 1,532,711,180 | `1e2f7ae6312a9d925bbeb9ed57d4f2952db938b392dd9bb3ad1d357ab3fb4250` |
 
-{{TO FILL FROM the user's decision on release assets: pin.dataset_release_assets}} It is not in the repository tree and not in a
+Its files are published as the assets of this repository's GitHub release [`data-5l-vk5l-s12349d-r3`](https://github.com/alphal00p/vakint-external-data/releases/tag/data-5l-vk5l-s12349d-r3). It is not in the repository tree and not in a
 loop-pack archive. Download its ten files into one directory, with the GitHub CLI or, without an account, with curl:
 
     gh release download data-5l-vk5l-s12349d-r3 --repo alphal00p/vakint-external-data --dir vk5l-s12349d-r3
