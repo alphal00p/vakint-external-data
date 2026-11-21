@@ -6,7 +6,7 @@
   "root_manifest_sha256": "a30e276af1044e9caf0b884dd7483d4081c444fd3324beeedd5673c2ef91fa21",
   "five_loop_manifest_sha256": "ad9e8e571b3dbdf98f78af5befef4a3c0c35abcd7ac00ae8e4565cb56c52df03",
   "prepared_commit": "bdb55a3b872bf438cf6e3d882654c9ba0c408351",
-  "data_commit": "the commits after prepared_commit (the prepared fill and its corrections) fill this record and the README except the release date and the dataset release-assets decision; the release-day commit fills those two; none of them changes a loop pack, the root manifest or the p_integral area"
+  "data_commit": "the commits after prepared_commit (the prepared fill and its corrections, the re-pin of gammaloop with its re-run results among them) fill this record and the README except the release date and the dataset release-assets decision; the release-day commit fills those two; none of them changes a loop pack, the root manifest or the p_integral area"
  },
  "base": {
   "repository": "alphal00p/vakint-external-data",
@@ -16,7 +16,11 @@
  "consumer": {
   "repository": "alphal00p/gammaloop",
   "branch": "p_integral",
-  "commit": "fe5fd3e8237219849eaf701226d7fb060ff73fac",
+  "commit": "{{TO FILL FROM pins (the gammaloop p_integral commit of the release): pin.vakint}}",
+  "cargo_lock": {
+   "rustred": "{{TO FILL FROM pins (the rustred revision in that gammaloop's Cargo.lock): pin.vakint_rustred}}",
+   "symbolica": "{{TO FILL FROM pins (the Symbolica revision in that gammaloop's Cargo.lock): pin.vakint_symbolica}}"
+  },
   "rustred": {
    "repository": "alphal00p/rustred",
    "main": "727c73d6f45346586ac16b74c30d959ef298483f",
@@ -167,9 +171,9 @@
    "reading_rule_for_a_later_run": "a judge FAIL whose only reason is the shipped-relation counter of a resumed final attempt, with equal result digests of both legs and at least one shipped-relation use in an earlier attempt, is recorded as PASS; the judge is unchanged and its raw output is kept beside the ruling"
   }
  },
- "compat_note": "Vakint at the pinned gammaloop p_integral commit differs from earlier builds in four ways that are consumer behaviour, not data changes (gammaloop #261 dummy-index labels with equal values; #249 applied in part; #253 two tests and the pole-only epsilon depth not carried): docs/vakint-behaviour-v0.4.0.md.",
+ "compat_note": "Vakint at the pinned gammaloop p_integral commit differs from earlier builds in five ways that are consumer behaviour, not data changes (gammaloop #261 dummy-index labels with equal values; #249 applied in part; #253 two tests and the pole-only epsilon depth not carried; and, against fe5fd3e8237219849eaf701226d7fb060ff73fac to 072f9952cb3122ec12cc57d7ead8ffc9f41483a0, three- and four-loop p-integrals with the 1-5 library finalised through its master catalogue): docs/vakint-behaviour-v0.4.0.md.",
  "symbolica": {
-  "revision": "394f6e16d97823ac3920e95a5537741a26622dcd",
+  "revision": "{{TO FILL FROM pins (the Symbolica revision in that gammaloop's Cargo.lock): pin.vakint_symbolica}}",
   "note": "referenced through https://github.com/symbolica-dev/symbolica; reachable only through the fork branch pin-mapped-buildrs: do not delete that branch"
  },
  "repository_checks": "the workflow .github/workflows/validate.yml run locally on the filled tree: python3 tools/data.py validate; python3 -m unittest discover -s tests; python3 tools/data.py pack --runtime-only; and python3 tools/p_integral_area.py validate"

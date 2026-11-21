@@ -104,15 +104,15 @@ Other 257 nodes: full table in [datasets/vk5l-s12349d-r3/CONTENT.md](datasets/vk
   they use the built-in catalogue `ggppss-5L-v3.2`, which lacks rows of this release, and refuse the pole-bounded basis). In this mode Vakint does not check the files against the area manifest: run the `sha256sum -c` steps
   above first. Leave `VAKINT_P_LIBRARY_VERIFY` unset: a verified load needs `census.json` (1.47 GB), which the dataset
   does not carry.
-- Compatibility: Vakint from gammaloop `p_integral` fe5fd3e8237219849eaf701226d7fb060ff73fac, built with the
+- Compatibility: Vakint from gammaloop `p_integral` {{TO FILL FROM pins (the gammaloop p_integral commit of the release): pin.vakint}}, built with the
   five-loop feature, five-loop p families having 20 slots:
   `RUSTRED_RUNTIME_ARITIES=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,20 cargo build --features vakint/five-loop-p` (the
-  default build compiles arities 1-16 and refuses a 20-slot chart). Its RustRed is 727c73d6f45346586ac16b74c30d959ef298483f
+  default build compiles arities 1-16 and refuses a 20-slot chart). Its RustRed is {{TO FILL FROM pins (the rustred revision in that gammaloop's Cargo.lock): pin.vakint_rustred}}
   (whose engine source is that of the gated engine 2d97db789b5b1fb9d484e8c1cbe9b5062411477d) and its
-  Symbolica 394f6e16d97823ac3920e95a5537741a26622dcd;
+  Symbolica {{TO FILL FROM pins (the Symbolica revision in that gammaloop's Cargo.lock): pin.vakint_symbolica}};
   RustRed main 727c73d6f45346586ac16b74c30d959ef298483f, RustRed `p_integral`
   727c73d6f45346586ac16b74c30d959ef298483f (both carry the same `P_*` constants). Symbolica
-  394f6e16d97823ac3920e95a5537741a26622dcd, which gammaloop
+  {{TO FILL FROM pins (the Symbolica revision in that gammaloop's Cargo.lock): pin.vakint_symbolica}}, which gammaloop
   references through `https://github.com/symbolica-dev/symbolica`, is reachable only through the fork branch
   `pin-mapped-buildrs`: do not delete that branch. The library is bound to its RustRed
   by its identity (`p-library:scope=1-5:...,P_PACKAGE_REVISION=vk5l-s12349d-r3`: scope and every
@@ -159,7 +159,7 @@ Known limits:
   their orders eps^-10..eps^12
   are UNKNOWN (no five-loop massless propagator integral has a pole below
   eps^-10: at most one UV and one IR pole per loop).
-- vakint (gammaloop `p_integral` fe5fd3e8237219849eaf701226d7fb060ff73fac) carries `UNKNOWN` symbols exactly; they cancel only where
+- vakint (gammaloop `p_integral` {{TO FILL FROM pins (the gammaloop p_integral commit of the release): pin.vakint}}) carries `UNKNOWN` symbols exactly; they cancel only where
   their exact coefficient cancels. By default a result that still contains one is refused with `UnknownMasterCoefficients`
   (Python: `ValueError`); the pinned vakint prints, for the input
   `topo(P94d07569bd0c1afa_e1(p(1),1,2,1,1,1,1,1,1,1,1,1,1,1,1))` in
