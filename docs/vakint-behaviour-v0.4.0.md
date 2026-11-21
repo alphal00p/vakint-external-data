@@ -1,7 +1,7 @@
 # Vakint behaviour with release v0.4.0
 
-Release v0.4.0 needs Vakint from gammaloop `p_integral` {{TO FILL FROM pins (the gammaloop p_integral commit of the release): pin.vakint}} or later (README, "v0.4.0"); its RustRed is
-{{TO FILL FROM pins (the rustred revision in that gammaloop's Cargo.lock): pin.vakint_rustred}}. That gammaloop build differs from earlier gammaloop `p_integral` builds in the following ways (items 1-4 since
+Release v0.4.0 needs Vakint from gammaloop `p_integral` 624c8b573040b7a606031453a61f00bbfde842b9 or later (README, "v0.4.0"); its RustRed is
+727c73d6f45346586ac16b74c30d959ef298483f. That gammaloop build differs from earlier gammaloop `p_integral` builds in the following ways (items 1-4 since
 fe5fd3e8237219849eaf701226d7fb060ff73fac, item 5 since that build). None of them is a change of the data in this repository; the numbers are gammaloop pull
 requests.
 
@@ -21,4 +21,4 @@ requests.
    merged commit ("Fix UV child boundary routing and pole-only epsilon depth") still names both. As a consequence, the
    new massive-vacuum counterterm route of #252 (`massive_vacuum_counterterm`) refuses at four loops until a corrected
    depth change lands.
-5. Three- and four-loop p-integrals with the 1-5 library: gammaloop `p_integral` builds from fe5fd3e8237219849eaf701226d7fb060ff73fac to 072f9952cb3122ec12cc57d7ead8ffc9f41483a0 refuse, with the 1-5 library, every three- and four-loop p-integral whose reduction ends on a master, in numerical and symbolic mode ("no p master catalogue (vakint.p-master-catalogue.v2) is loaded", although the catalogue is loaded); from {{TO FILL FROM pins (the gammaloop p_integral commit of the release): pin.vakint}} on they work; one- and two-loop p-integrals are not affected.
+5. Three- and four-loop p-integrals with the 1-5 library: gammaloop `p_integral` builds from fe5fd3e8237219849eaf701226d7fb060ff73fac to 072f9952cb3122ec12cc57d7ead8ffc9f41483a0 refuse, with the 1-5 library, every three- and four-loop p-integral whose reduction ends on a master, in numerical and symbolic mode ("no p master catalogue (vakint.p-master-catalogue.v2) is loaded", although the catalogue is loaded); from 624c8b573040b7a606031453a61f00bbfde842b9 on they work; one- and two-loop p-integrals are not affected.

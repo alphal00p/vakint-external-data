@@ -104,15 +104,15 @@ Other 257 nodes: full table in [datasets/vk5l-s12349d-r3/CONTENT.md](datasets/vk
   they use the built-in catalogue `ggppss-5L-v3.2`, which lacks rows of this release, and refuse the pole-bounded basis). In this mode Vakint does not check the files against the area manifest: run the `sha256sum -c` steps
   above first. Leave `VAKINT_P_LIBRARY_VERIFY` unset: a verified load needs `census.json` (1.47 GB), which the dataset
   does not carry.
-- Compatibility: Vakint from gammaloop `p_integral` {{TO FILL FROM pins (the gammaloop p_integral commit of the release): pin.vakint}}, built with the
+- Compatibility: Vakint from gammaloop `p_integral` 624c8b573040b7a606031453a61f00bbfde842b9, built with the
   five-loop feature, five-loop p families having 20 slots:
   `RUSTRED_RUNTIME_ARITIES=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,20 cargo build --features vakint/five-loop-p` (the
-  default build compiles arities 1-16 and refuses a 20-slot chart). Its RustRed is {{TO FILL FROM pins (the rustred revision in that gammaloop's Cargo.lock): pin.vakint_rustred}}
+  default build compiles arities 1-16 and refuses a 20-slot chart). Its RustRed is 727c73d6f45346586ac16b74c30d959ef298483f
   (whose engine source is that of the gated engine 2d97db789b5b1fb9d484e8c1cbe9b5062411477d) and its
-  Symbolica {{TO FILL FROM pins (the Symbolica revision in that gammaloop's Cargo.lock): pin.vakint_symbolica}};
+  Symbolica 394f6e16d97823ac3920e95a5537741a26622dcd;
   RustRed main 727c73d6f45346586ac16b74c30d959ef298483f, RustRed `p_integral`
   727c73d6f45346586ac16b74c30d959ef298483f (both carry the same `P_*` constants). Symbolica
-  {{TO FILL FROM pins (the Symbolica revision in that gammaloop's Cargo.lock): pin.vakint_symbolica}}, which gammaloop
+  394f6e16d97823ac3920e95a5537741a26622dcd, which gammaloop
   references through `https://github.com/symbolica-dev/symbolica`, is reachable only through the fork branch
   `pin-mapped-buildrs`: do not delete that branch. The library is bound to its RustRed
   by its identity (`p-library:scope=1-5:...,P_PACKAGE_REVISION=vk5l-s12349d-r3`: scope and every
@@ -130,7 +130,7 @@ Other 257 nodes: full table in [datasets/vk5l-s12349d-r3/CONTENT.md](datasets/vk
   the first p-integral with "unknown field" (gammaloop `p_integral` 98dc89353, RustRed 19cf126a9: "malformed p library:
   library.json: unknown field `orbit_required_digests`"); builds with other constants refuse it with a RustRed version
   mismatch (gammaloop `vakint_rustred` builds among them).
-  Gammaloop `p_integral` builds from fe5fd3e8237219849eaf701226d7fb060ff73fac to 072f9952cb3122ec12cc57d7ead8ffc9f41483a0 refuse, with the 1-5 library, every three- and four-loop p-integral whose reduction ends on a master, in numerical and symbolic mode ("no p master catalogue (vakint.p-master-catalogue.v2) is loaded", although the catalogue is loaded); from {{TO FILL FROM pins (the gammaloop p_integral commit of the release): pin.vakint}} on they work; one- and two-loop p-integrals are not affected.
+  Gammaloop `p_integral` builds from fe5fd3e8237219849eaf701226d7fb060ff73fac to 072f9952cb3122ec12cc57d7ead8ffc9f41483a0 refuse, with the 1-5 library, every three- and four-loop p-integral whose reduction ends on a master, in numerical and symbolic mode ("no p master catalogue (vakint.p-master-catalogue.v2) is loaded", although the catalogue is loaded); from 624c8b573040b7a606031453a61f00bbfde842b9 on they work; one- and two-loop p-integrals are not affected.
   Vacuum integrals are unaffected.
 - This Vakint and older data: a managed install of v0.3.0 or earlier loads as before. A checkout of v0.3.0 gives the
   1L-4L p library `p-library-1-4` (its identity is the one this Vakint's RustRed computes for scope 1-4) and no
@@ -161,14 +161,25 @@ Known limits:
   their orders eps^-10..eps^12
   are UNKNOWN (no five-loop massless propagator integral has a pole below
   eps^-10: at most one UV and one IR pole per loop).
-- vakint (gammaloop `p_integral` {{TO FILL FROM pins (the gammaloop p_integral commit of the release): pin.vakint}}) carries `UNKNOWN` symbols exactly; they cancel only where
+- vakint (gammaloop `p_integral` 624c8b573040b7a606031453a61f00bbfde842b9) carries `UNKNOWN` symbols exactly; they cancel only where
   their exact coefficient cancels. By default a result that still contains one is refused with `UnknownMasterCoefficients`
   (Python: `ValueError`); the pinned vakint prints, for the input
-  `{{TO FILL FROM the load check json of the final revision: pin.refusal_example_input}}` in
-  {{TO FILL FROM the load check json of the final revision: pin.refusal_example_mode}} mode, which reaches the placeholder
-  master of {{TO FILL FROM the load check json of the final revision: pin.refusal_example_node}}:
+  `topo(P94d07569bd0c1afa_e1(p(1),1,2,1,1,1,1,1,1,1,1,1,1,1,1))` in
+  numerical mode, which reaches the placeholder
+  master of T282:
 
-      {{TO FILL FROM the load check json of the final revision (verbatim): pin.refusal_message}}
+      the requested result depends on 11 expected master coefficient(s) that are not known yet (vakint, p master data ggppss-5L-v4-rc4a; request: public result); set allow_unknown_master_coefficients to keep them as UNKNOWN(master, k) symbols:
+        - master X(T282:1,1,1,1,1,1,1,1,1,1,1,1,1,2) coefficient ε^-10 (affects the result from ε^-10)
+        - master X(T282:1,1,1,1,1,1,1,1,1,1,1,1,1,2) coefficient ε^-9 (affects the result from ε^-9)
+        - master X(T282:1,1,1,1,1,1,1,1,1,1,1,1,1,2) coefficient ε^-8 (affects the result from ε^-8)
+        - master X(T282:1,1,1,1,1,1,1,1,1,1,1,1,1,2) coefficient ε^-7 (affects the result from ε^-7)
+        - master X(T282:1,1,1,1,1,1,1,1,1,1,1,1,1,2) coefficient ε^-6 (affects the result from ε^-6)
+        - master X(T282:1,1,1,1,1,1,1,1,1,1,1,1,1,2) coefficient ε^-5 (affects the result from ε^-5)
+        - master X(T282:1,1,1,1,1,1,1,1,1,1,1,1,1,2) coefficient ε^-4 (affects the result from ε^-4)
+        - master X(T282:1,1,1,1,1,1,1,1,1,1,1,1,1,2) coefficient ε^-3 (affects the result from ε^-3)
+        - master X(T282:1,1,1,1,1,1,1,1,1,1,1,1,1,2) coefficient ε^-2 (affects the result from ε^-2)
+        - master X(T282:1,1,1,1,1,1,1,1,1,1,1,1,1,2) coefficient ε^-1 (affects the result from ε^-1)
+        - master X(T282:1,1,1,1,1,1,1,1,1,1,1,1,1,2) coefficient ε^0 (affects the result from ε^0)
 
   With `allow_unknown_master_coefficients` (setting, Python keyword, or environment
   `VAKINT_ALLOW_UNKNOWN_MASTER_COEFFICIENTS=1`) the result keeps the symbols, and `Vakint::unknown_master_coefficients` lists
@@ -196,9 +207,9 @@ Known limits:
   one vakint evaluation through the released directory, identical to a value checked against an independent result to
   39 digits. The 15th check, one T266 integral served by the shipped relations, was stopped after repeated host-memory
   interruptions and has no result; it will not be resumed. Package r3 (`vk5l-s12349d-r3`):
-  {{TO FILL FROM the acceptance re-run on the pinned gammaloop: pin.acceptance}}
-  {{TO FILL FROM the P14 stage record: pin.acceptance_p14}}
-  {{TO FILL FROM the re-run record: pin.acceptance_rerun}} The first run of the load check and of these checks, on
+  one acceptance run on this package on the pinned gammaloop commit passed the checks of the first kind, 14 of 14; the host revision is in its final read-only mode set (it was in the working set at the first run). They are 8 file, layout and format checks; reductions of one light T162 integral and one light T178 integral, each equal to its pinned value; two older readers refuse the package; the dataset archive unpacks to identical files; and one vakint evaluation through the restored data equals its pinned value. Two added checks passed: the reduced T266 table needs its symmetry file (the package loads with it, and five faulty forms are refused at load with exit code 6: no file, symmetry switched off, a wrong-scope file, verify mode with the file missing, no file declared); and the two relation entries carried inside the reduced table are present and reproduce the producer's operation counts, and one T266 integral through Vakint's own loader equals the reference. That check compares two Vakint paths: that Vakint's path uses the symmetry file is shown only on the engine's path. The Vakint of these runs is the pinned gammaloop plus one test-only commit (the external-data-root test). No check found a blocking condition.
+  A further check evaluated 22 one-, two-, three- and four-loop p-integrals from Vakint's Forcer test batteries on Vakint's ordinary path, in numerical, symbolic and retained form, on a checkout without the dataset, with the dataset restored over a checkout, and through `VAKINT_P_LIBRARY`: all 198 values equal those of `p-library-1-4` (164 with identical text; the 34 retained three- and four-loop values of the 1-5 library are combinations of `PMaster` symbols, equal in value). At gammaloop `p_integral` fe5fd3e8237219849eaf701226d7fb060ff73fac the same three- and four-loop integrals were refused in numerical and symbolic mode.
+  The load check of the final package (its Vakint steps), the massive-closure graph 828 and the acceptance checks above ran again on the pinned gammaloop commit on 2026-11-21 and passed. The first run of the load check and of these checks, on
   gammaloop `p_integral` fe5fd3e8237219849eaf701226d7fb060ff73fac, is kept in `provenance/release-gates-v0.4.0.json`
   (`acceptance.superseded_runs`).
   r3's 15th check (the T266 integral served by the shipped relations, run on this package and on a reference package and
