@@ -120,7 +120,7 @@ Other 257 nodes: full table in [datasets/vk5l-s12349d-r3/CONTENT.md](datasets/vk
   generated with <P_NAME>=<value>, this RustRed has <value>; regenerate with rustred p-package"); a library that differs
   from its `p_integral/manifest.json` entry is refused ("the library ... is not the one its entry records").
   The 1-5 library needs its master catalogue also for three- and four-loop integrals, which `p-library-1-4` served alone; Vakint loads it with the library and, from the pinned gammaloop commit on, uses it at every loop count; a program that uses RustRed directly must load `p-master-catalogue.json` itself.
-  A program that loads the library through RustRed and hands it to Vakint gives Vakint no catalogue with it: from the pinned gammaloop commit on, Vakint resolves its residual terminals at every loop count with the catalogue it has (the one set by the program or by `VAKINT_P_MASTER_CATALOGUE`, else its built-in `ggppss-5L-v3.2`, whose three- and four-loop rows equal this release's but which lacks five-loop rows of this release), and nothing checks that a catalogue belongs to its library.
+  A program that loads the library through RustRed and hands it to Vakint gives Vakint no catalogue with it: from the pinned gammaloop commit on, Vakint consults the catalogue it has at five loops, as before, and at every loop count wherever a value carries a residual terminal (the catalogue set by the program or by `VAKINT_P_MASTER_CATALOGUE`, else its built-in `ggppss-5L-v3.2`, which lacks five-loop rows of this release; see Known limits). Retain mode then returns three- and four-loop results as combinations of `PMaster` symbols, the same kind as its five-loop results.
 - Older Vakint builds and this release: a managed install of v0.4.0 holds the loop packs only, identical to v0.3.0's
   except the release version recorded in each loop manifest, and loads in every build that read v0.3.0 (the release manifest schema is unchanged; the version is compared
   only with the requested one). A checkout of v0.4.0 without the dataset behaves as v0.3.0. With the dataset restored:
@@ -208,6 +208,9 @@ Known limits:
   read as a pass, with the raw judge output and that ruling side by side.
 - Deferred acceptance check: the 15th check (above) has no result in this release; the reduced T266 table rests on the
   added check and its stated limit.
+- Catalogue and library: nothing binds a catalogue to its library; the 17 one- to four-loop rows of the built-in catalogue
+  (`ggppss-5L-v3.2`) and of this package (`ggppss-5L-v4-rc4a`) are identical, pinned by a test (Vakint's
+  `one_to_four_loop_integrals_through_the_1_5_package_equal_the_1_4_library`).
 - Evidence (never stated stronger than here):
   - 8 of the package's 231
     residual terminal integrals have no published value; they map onto placeholder masters whose coefficients are
