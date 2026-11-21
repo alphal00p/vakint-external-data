@@ -119,7 +119,8 @@ Other 257 nodes: full table in [datasets/vk5l-s12349d-r3/CONTENT.md](datasets/vk
   `P_*` version constant): a RustRed with other constants refuses it at the first p-integral with one error ("p library
   generated with <P_NAME>=<value>, this RustRed has <value>; regenerate with rustred p-package"); a library that differs
   from its `p_integral/manifest.json` entry is refused ("the library ... is not the one its entry records").
-  The 1-5 library needs its master catalogue also for one- to four-loop integrals that `p-library-1-4` served alone; Vakint loads it with the library; a program that uses RustRed directly must load `p-master-catalogue.json` itself.
+  The 1-5 library needs its master catalogue also for three- and four-loop integrals, which `p-library-1-4` served alone; Vakint loads it with the library and, from the pinned gammaloop commit on, uses it at every loop count; a program that uses RustRed directly must load `p-master-catalogue.json` itself.
+  A program that loads the library through RustRed and hands it to Vakint gives Vakint no catalogue with it: from the pinned gammaloop commit on, Vakint resolves its residual terminals at every loop count with the catalogue it has (the one set by the program or by `VAKINT_P_MASTER_CATALOGUE`, else its built-in `ggppss-5L-v3.2`, whose three- and four-loop rows equal this release's but which lacks five-loop rows of this release), and nothing checks that a catalogue belongs to its library.
 - Older Vakint builds and this release: a managed install of v0.4.0 holds the loop packs only, identical to v0.3.0's
   except the release version recorded in each loop manifest, and loads in every build that read v0.3.0 (the release manifest schema is unchanged; the version is compared
   only with the requested one). A checkout of v0.4.0 without the dataset behaves as v0.3.0. With the dataset restored:
@@ -129,6 +130,7 @@ Other 257 nodes: full table in [datasets/vk5l-s12349d-r3/CONTENT.md](datasets/vk
   the first p-integral with "unknown field" (gammaloop `p_integral` 98dc89353, RustRed 19cf126a9: "malformed p library:
   library.json: unknown field `orbit_required_digests`"); builds with other constants refuse it with a RustRed version
   mismatch (gammaloop `vakint_rustred` builds among them).
+  Gammaloop `p_integral` builds from fe5fd3e8237219849eaf701226d7fb060ff73fac to 072f9952cb3122ec12cc57d7ead8ffc9f41483a0 refuse, with the 1-5 library, every three- and four-loop p-integral whose reduction ends on a master, in numerical and symbolic mode ("no p master catalogue (vakint.p-master-catalogue.v2) is loaded", although the catalogue is loaded); from {{TO FILL FROM pins (the gammaloop p_integral commit of the release): pin.vakint}} on they work; one- and two-loop p-integrals are not affected.
   Vacuum integrals are unaffected.
 - This Vakint and older data: a managed install of v0.3.0 or earlier loads as before. A checkout of v0.3.0 gives the
   1L-4L p library `p-library-1-4` (its identity is the one this Vakint's RustRed computes for scope 1-4) and no

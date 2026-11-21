@@ -89,4 +89,5 @@ which prints `vk5l-s12349d-r3 6946 files, 0 bad`
 (it reads each file whole: the largest needs about 3.88 GB of memory). Use:
 `Vakint::load_external_data(<checkout>, n)` (Python: `engine.load_external_data(path, max_loop_count=n)`); see
 `datasets/README.md`.
-The 1-5 library needs its master catalogue also for one- to four-loop integrals that `p-library-1-4` served alone; Vakint loads it with the library; a program that uses RustRed directly must load `p-master-catalogue.json` itself.
+The 1-5 library needs its master catalogue also for three- and four-loop integrals, which `p-library-1-4` served alone; Vakint loads it with the library and, from gammaloop `p_integral` {{TO FILL FROM pins (the gammaloop p_integral commit of the release): pin.vakint}} on, uses it at every loop count; a program that uses RustRed directly must load `p-master-catalogue.json` itself.
+A program that loads the library through RustRed and hands it to Vakint gives Vakint no catalogue with it: from that commit on, Vakint resolves its residual terminals at every loop count with the catalogue it has (the one set by the program or by `VAKINT_P_MASTER_CATALOGUE`, else its built-in `ggppss-5L-v3.2`, whose three- and four-loop rows equal this release's but which lacks five-loop rows of this release), and nothing checks that a catalogue belongs to its library.

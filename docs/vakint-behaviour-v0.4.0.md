@@ -21,3 +21,4 @@ requests.
    merged commit ("Fix UV child boundary routing and pole-only epsilon depth") still names both. As a consequence, the
    new massive-vacuum counterterm route of #252 (`massive_vacuum_counterterm`) refuses at four loops until a corrected
    depth change lands.
+5. Three- and four-loop p-integrals with the 1-5 library: gammaloop `p_integral` builds from fe5fd3e8237219849eaf701226d7fb060ff73fac to 072f9952cb3122ec12cc57d7ead8ffc9f41483a0 refuse, with the 1-5 library, every three- and four-loop p-integral whose reduction ends on a master, in numerical and symbolic mode ("no p master catalogue (vakint.p-master-catalogue.v2) is loaded", although the catalogue is loaded); from {{TO FILL FROM pins (the gammaloop p_integral commit of the release): pin.vakint}} on they work; one- and two-loop p-integrals are not affected.
