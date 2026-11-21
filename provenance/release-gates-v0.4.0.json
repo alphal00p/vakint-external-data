@@ -6,7 +6,7 @@
   "root_manifest_sha256": "a30e276af1044e9caf0b884dd7483d4081c444fd3324beeedd5673c2ef91fa21",
   "five_loop_manifest_sha256": "ad9e8e571b3dbdf98f78af5befef4a3c0c35abcd7ac00ae8e4565cb56c52df03",
   "prepared_commit": "bdb55a3b872bf438cf6e3d882654c9ba0c408351",
-  "data_commit": "the commits after prepared_commit (the prepared fill and its corrections, the re-pin of gammaloop with its re-run results among them) fill this record and the README except the release date and the dataset release-assets decision; the release-day commit fills those two; none of them changes a loop pack, the root manifest or the p_integral area"
+  "data_commit": "the commits after prepared_commit (the prepared fill and its corrections, the re-pin of gammaloop with its re-run results among them) fill this record and the README except the release date and the dataset release-assets decision; the release-day commits fill those two and quote the sha256 of the re-indexed DATASET.json (its dataset_index.py lost two comment lines; parts and archive unchanged); none of them changes a loop pack, the root manifest or the p_integral area"
  },
  "base": {
   "repository": "alphal00p/vakint-external-data",
@@ -45,8 +45,9 @@
   "archive_sha256": "1c46b32c7965e318631bcede9c06333adb161e3dc55fb7ad4982332345f0e059",
   "archive_bytes": 5332711180,
   "parts": 3,
-  "dataset_json_sha256": "dc129895b8d56809399d8bdac47e75d1b0b9248e9e9618e0d38ae65af853855d",
-  "location": "kept by the maintainers (obtain on request)"
+  "dataset_json_sha256": "{{TO FILL FROM DATASET.json: ds.dataset_json_sha256}}",
+  "location": "the assets of the GitHub release data-5l-vk5l-s12349d-r3 of alphal00p/vakint-external-data (https://github.com/alphal00p/vakint-external-data/releases/tag/data-5l-vk5l-s12349d-r3)",
+  "known_cosmetic_items": ["Some provenance notes inside the package name build directories and internal labels of the machine it was produced on; they carry no meaning for users. (the notes of the master catalogue, three records of the T266 relation segment and two files under masters/: provenance text bound into the revision's digests, no secret)"]
  },
  "catalogue": {
   "data_version": "ggppss-5L-v4-rc4a",

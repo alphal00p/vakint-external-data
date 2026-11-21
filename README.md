@@ -23,9 +23,9 @@ release). Since v0.3.0:
   saved route verification `routes.rrbin`; the explicit key relations of node T266 (`relations/`).
 - Not in this repository: the library is 6,946 files,
   10.12 GB (single files up to 3.88 GB, far above the
-  100 MB per-file limit of the `p_integral/` area), so it is one compressed, checksummed dataset kept by the maintainers,
+  100 MB per-file limit of the `p_integral/` area), so it is one compressed, checksummed dataset, published on its own release `data-5l-vk5l-s12349d-r3`,
   5.33 GB in 3 parts below 2 GiB (archive sha256
-  `1c46b32c7965e318631bcede9c06333adb161e3dc55fb7ad4982332345f0e059`; `DATASET.json` sha256 `dc129895b8d56809399d8bdac47e75d1b0b9248e9e9618e0d38ae65af853855d`;
+  `1c46b32c7965e318631bcede9c06333adb161e3dc55fb7ad4982332345f0e059`; `DATASET.json` sha256 `{{TO FILL FROM DATASET.json: ds.dataset_json_sha256}}`;
   the root manifest it restores has sha256 `281cb35e9fdc7f86ce8d1cf15185c13af81d1d0ea9a3a09ea43ec9a9b1e65867`). This
   repository records it in [`datasets/vk5l-s12349d-r3/`](datasets/vk5l-s12349d-r3/README.md):
   its checksums, the area manifest it restores (every library file with sha256 and size), the master catalogue and the
@@ -55,10 +55,25 @@ Other 257 nodes: full table in [datasets/vk5l-s12349d-r3/CONTENT.md](datasets/vk
 
 - Obtain and restore. The dataset (the directory `vk5l-s12349d-r3/` with the parts
   `vk5l-s12349d-r3.tar.gz.part-000`, ..., `DATASET.json`, `SHA256SUMS`, `SHA256SUMS.files`, the restore
-  tools `dataset_restore.sh`, `dataset_verify.sh`, `dataset_index.py` and a `README.txt`) is not part of this repository; it
-  is kept by the maintainers: obtain it on request.
-  {{TO FILL FROM the user's decision on release assets: pin.dataset_release_assets}} Copy the directory as it is. Before
-  running anything from it, check with your own `sha256sum` that `DATASET.json` has the sha256 given above: it records the
+  tools `dataset_restore.sh`, `dataset_verify.sh`, `dataset_index.py` and a `README.txt`) is not part of this repository.
+  {{TO FILL FROM the user's decision on release assets: pin.dataset_release_assets}} Download its ten files into one
+  directory, with the GitHub CLI or, without an account, with curl:
+
+  ```sh
+  gh release download data-5l-vk5l-s12349d-r3 --repo alphal00p/vakint-external-data --dir vk5l-s12349d-r3
+  ```
+
+  ```sh
+  mkdir vk5l-s12349d-r3 && cd vk5l-s12349d-r3
+  u=https://github.com/alphal00p/vakint-external-data/releases/download/data-5l-vk5l-s12349d-r3
+  for f in vk5l-s12349d-r3.tar.gz.part-000 vk5l-s12349d-r3.tar.gz.part-001 vk5l-s12349d-r3.tar.gz.part-002 DATASET.json \
+           SHA256SUMS SHA256SUMS.files dataset_restore.sh dataset_verify.sh dataset_index.py README.txt; do
+    curl -fL --retry 3 -o "$f" "$u/$f"
+  done
+  ```
+
+  Before running anything from it, check with your own `sha256sum` that `DATASET.json` has the sha256 given above
+  (`sha256sum DATASET.json`) and that `sha256sum -c SHA256SUMS` passes (the three parts): `DATASET.json` records the
   sha256 of every part, of the archive and of the three tools, and the tools check the parts and the restored files against
   it, which finds damage, not tampering. The archive unpacks to `vk5l-s12349d-r3/`, an overlay of a
   checkout of this repository at v0.4.0: a bare revision directory is not a root for
