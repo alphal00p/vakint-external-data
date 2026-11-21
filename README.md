@@ -164,22 +164,11 @@ Known limits:
 - vakint (gammaloop `p_integral` {{TO FILL FROM pins (the gammaloop p_integral commit of the release): pin.vakint}}) carries `UNKNOWN` symbols exactly; they cancel only where
   their exact coefficient cancels. By default a result that still contains one is refused with `UnknownMasterCoefficients`
   (Python: `ValueError`); the pinned vakint prints, for the input
-  `topo(P94d07569bd0c1afa_e1(p(1),1,2,1,1,1,1,1,1,1,1,1,1,1,1))` in
-  numerical mode, which reaches the placeholder
-  master of T282:
+  `{{TO FILL FROM the load check json of the final revision: pin.refusal_example_input}}` in
+  {{TO FILL FROM the load check json of the final revision: pin.refusal_example_mode}} mode, which reaches the placeholder
+  master of {{TO FILL FROM the load check json of the final revision: pin.refusal_example_node}}:
 
-      the requested result depends on 11 expected master coefficient(s) that are not known yet (vakint, p master data ggppss-5L-v4-rc4a; request: public result); set allow_unknown_master_coefficients to keep them as UNKNOWN(master, k) symbols:
-        - master X(T282:1,1,1,1,1,1,1,1,1,1,1,1,1,2) coefficient ε^-10 (affects the result from ε^-10)
-        - master X(T282:1,1,1,1,1,1,1,1,1,1,1,1,1,2) coefficient ε^-9 (affects the result from ε^-9)
-        - master X(T282:1,1,1,1,1,1,1,1,1,1,1,1,1,2) coefficient ε^-8 (affects the result from ε^-8)
-        - master X(T282:1,1,1,1,1,1,1,1,1,1,1,1,1,2) coefficient ε^-7 (affects the result from ε^-7)
-        - master X(T282:1,1,1,1,1,1,1,1,1,1,1,1,1,2) coefficient ε^-6 (affects the result from ε^-6)
-        - master X(T282:1,1,1,1,1,1,1,1,1,1,1,1,1,2) coefficient ε^-5 (affects the result from ε^-5)
-        - master X(T282:1,1,1,1,1,1,1,1,1,1,1,1,1,2) coefficient ε^-4 (affects the result from ε^-4)
-        - master X(T282:1,1,1,1,1,1,1,1,1,1,1,1,1,2) coefficient ε^-3 (affects the result from ε^-3)
-        - master X(T282:1,1,1,1,1,1,1,1,1,1,1,1,1,2) coefficient ε^-2 (affects the result from ε^-2)
-        - master X(T282:1,1,1,1,1,1,1,1,1,1,1,1,1,2) coefficient ε^-1 (affects the result from ε^-1)
-        - master X(T282:1,1,1,1,1,1,1,1,1,1,1,1,1,2) coefficient ε^0 (affects the result from ε^0)
+      {{TO FILL FROM the load check json of the final revision (verbatim): pin.refusal_message}}
 
   With `allow_unknown_master_coefficients` (setting, Python keyword, or environment
   `VAKINT_ALLOW_UNKNOWN_MASTER_COEFFICIENTS=1`) the result keeps the symbols, and `Vakint::unknown_master_coefficients` lists
@@ -207,7 +196,11 @@ Known limits:
   one vakint evaluation through the released directory, identical to a value checked against an independent result to
   39 digits. The 15th check, one T266 integral served by the shipped relations, was stopped after repeated host-memory
   interruptions and has no result; it will not be resumed. Package r3 (`vk5l-s12349d-r3`):
-  one acceptance run on this package passed all 14 checks of the first kind: 8 file, layout and format checks; reductions of one light T162 integral and one light T178 integral, each equal to its pinned value; two older readers refuse the package; the dataset archive unpacks to identical files; and one vakint evaluation through the restored data equals its pinned value. Two added checks passed: the reduced T266 table needs its symmetry file (the package loads with it, and five faulty forms are refused at load with exit code 6: no file, symmetry switched off, a wrong-scope file, verify mode with the file missing, no file declared); and the two relation entries carried inside the reduced table are present and reproduce the producer's operation counts, and one T266 integral through Vakint's own loader equals the reference. That check compares two Vakint paths: that Vakint's path uses the symmetry file is shown only on the engine's path. The Vakint of these runs is the pinned gammaloop plus one test-only commit (the external-data-root test). No check found a blocking condition.
+  {{TO FILL FROM the acceptance re-run on the pinned gammaloop: pin.acceptance}}
+  {{TO FILL FROM the P14 stage record: pin.acceptance_p14}}
+  {{TO FILL FROM the re-run record: pin.acceptance_rerun}} The first run of the load check and of these checks, on
+  gammaloop `p_integral` fe5fd3e8237219849eaf701226d7fb060ff73fac, is kept in `provenance/release-gates-v0.4.0.json`
+  (`acceptance.superseded_runs`).
   r3's 15th check (the T266 integral served by the shipped relations, run on this package and on a reference package and
   compared by the frozen judge) is deferred: no result. The two runs were stopped by the maintainers with their saved states kept, the run on this package after its tenth phase (about 5.3 thousand million operations), and no judge output exists; the maintainers' ruling: not blocking for this release. They were stopped because the run has no finite forecast (about 21.5 thousand million recorded operations in 10 of about 25 phases after about 15 hours on the reference package) and each state save needs memory of about a base plus 2.4 times the state, which had reached 191 GB and was growing; resuming needs one process with more than 300 GB of memory or a streaming state write in the engine. The evidence for the reduced T266 table in this release is the added check above (the symmetry file is required; the two relation entries are present and reproduce the producer's operation counts; one T266 integral through Vakint's own loader equals the reference), with its stated limit: that check compares two Vakint paths, and that Vakint's path uses the symmetry file is shown only on the engine's path.
   For a later run of that check: a judge verdict that fails only on the count of shipped-relation uses of a resumed final
